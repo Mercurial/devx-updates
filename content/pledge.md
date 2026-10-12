@@ -121,4 +121,5 @@ Let's build the developer experience Cardano deserves, together.
 | [Marko Kungla](https://github.com/mkungla) | Independent Cardano Contributor |
 | [Angel Castillo](https://github.com/AngelCastilloB) | Software Engineer - [Biglup Labs](https://github.com/Biglup) |
 | [Chris Gianelloni](https://github.com/wolf31o2) | CEO & Co-Founder - [Blink Labs](https://blinklabs.io) |
+| [Sebastian Nagel](https://github.com/ch1bo) | Technical Architect - [Input Output Global](https://iog.io) |
 | [](https://github.com/) | []() |
