@@ -305,12 +305,21 @@
   status: in-progress
   statusUpdatedAt: 2026-07-06
   updates:
+    - date: "2026-06-13"
+      description: Fixed environment-variable inheritance in Yaci DevKit's npm launcher so child processes receive the parent environment.
+      week: "2026-W24"
+    - date: "2026-06-15"
+      description: Updated the setup-aiken GitHub Action from Node.js 20 to 24, improving shared CI tooling for Aiken projects.
+      week: "2026-W25"
     - date: "2026-06-22"
       description: Contributed a per-command context flag to cardano-up.
       week: "2026-W26"
     - date: "2026-08-13"
-      description: Contributed sources and skills to cardano-dev-skills.
+      description: Added the complete Plinth user guide with embedded code examples and Tx3 documentation and transaction-building guidance to cardano-dev-skills.
       week: "2026-W33"
+    - date: "2026-08-17"
+      description: Added a scalability-advice skill to cardano-dev-skills, helping coding agents assess whether Layer 2 is needed and choose an approach and Hydra topology.
+      week: "2026-W34"
   summary: >-
     Address high-ROI opportunities surfaced through ecosystem alignment, with
     transparent reporting of what we picked and why.
