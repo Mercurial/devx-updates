@@ -138,6 +138,7 @@ Results from stale input packets are rejected. Unrelated tools' updates do not i
 ```sh
 npm run readiness -- replay
 npm run readiness -- diff --before previous-snapshot.json --output changes.json
+npm run readiness -- diff --before-ref <git-ref> --output data/readiness/changes.json
 npm run test:readiness
 ```
 
@@ -145,6 +146,8 @@ npm run test:readiness
 - `evidence/*.json.gz` retains content-addressed inputs with checksums. Keep these files with every published snapshot; do not prune referenced evidence.
 - `report.json` contains coverage gaps and an ecosystem backlog.
 - `impact.json` contains distinct downstream tools and explanatory paths per scope/profile.
+- `projects.json` unions downstream tools across package versions within known source namespaces. Forks and ambiguous sources stay separate.
+- `changes.json`, when generated for the current snapshot, supplies the website's snapshot comparison.
 - `replay` reconstructs native graph records from retained evidence, without network access.
 - Semantic digests exclude operational timestamps. Resolver inputs, command/toolchain, profile, and native output remain part of profile identity.
 - A single-writer lock prevents concurrent collection commands from overwriting each other. Interrupted same-host locks are recovered when their process no longer exists.

@@ -10,7 +10,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 1: validated catalog inventory, coverage records, release discovery, and ecosystem detection.
 - [x] Phase 2: native-resolution import, evidence retention, context-aware graph, impact calculation, and pilot verification.
 - [ ] Phase 3: catalog-wide discovery, explicit unresolved frontiers, manual packet export, and validated review import.
-- [ ] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
+- [x] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
 - [ ] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 
@@ -26,6 +26,15 @@ This checklist records delivered behavior and verification, not just code starte
 - Discovery now normalizes GitHub URLs and records repository redirects as identity questions. A follow-up run discovers 227 tools; 42 retain unresolved source/discovery coverage. Original catalog references are preserved.
 - Operations: a single-writer lock protects snapshot updates. The weekly read-only workflow refreshes discovery, validates/replays retained evidence, and uploads a review artifact with a comparison. Native-profile refresh is still explicitly invoked. `docs/READINESS-OPERATIONS.md` documents the commands and current adapter boundaries.
 - Verification expanded to 15 passing behavior tests, including citation rejection, stale packets, suggestion promotion, idempotent review import, and writer exclusion. Catalog-wide native resolution, capability classification, and returned manual integration reviews remain open work within phase 3.
+- Dashboard milestone: `/map/readiness/` and 269 statically generated tool pages expose coverage, next actions, release/configuration graphs, evidence references, scope-specific reach, version-grouped project reach, snapshot comparisons, and filtered/tool JSON exports. Unknown compatibility remains explicit throughout.
+- Browser verification: Chromium desktop/mobile checks passed for filtering, empty results, profile selection, impact paths, version grouping, work queue navigation, dependency expansion, exports, base-path links, horizontal layout, and console errors. Light/dark screenshots were inspected. The static build passes both at root and with `/devx-updates` as the base path.
+- Verification now includes 16 passing behavior tests. New/changed readiness code passes lint and type checking. Repository-wide lint reports 12 pre-existing errors and one warning in the map table, graph, site header, and Markdown renderer. Collection checkouts are excluded from project lint/type checking.
+
+### Remaining rollout work
+
+- Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.
+- Complete phase 5 automation: native profile refresh and supported-profile policy are still explicitly operated. Scheduled discovery produces review artifacts; publication remains a separate reviewed change.
+- Phase 6 remains gated on hardfork-specific change analysis and the target test environment.
 
 ## 1. Objective
 

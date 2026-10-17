@@ -11,13 +11,14 @@ const LINKS: { href: string; label: string }[] = [
   { href: "/map/graph", label: "Graph" },
   { href: "/map/table", label: "Table" },
   { href: "/map/analysis", label: "Analysis" },
+  { href: "/map/readiness", label: "Readiness" },
 ];
 
 // Normalize the trailing slash that `trailingSlash: true` (static export) adds,
 // so the active state matches whether or not the slash is present.
 function isActive(pathname: string, href: string): boolean {
   const path = pathname.replace(/\/+$/, "") || "/";
-  return path === href;
+  return path === href || (href === "/map/readiness" && path.startsWith(`${href}/`));
 }
 
 export default function Nav() {

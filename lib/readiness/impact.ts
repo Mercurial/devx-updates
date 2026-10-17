@@ -1,4 +1,5 @@
 import type { Edge, Impact, Snapshot } from "./types";
+import { canonical, digest } from "./core";
 
 /** Each walk stays within one resolution profile, even when artifacts are shared. */
 export function calculateImpact(snapshot: Snapshot): Impact[] {
@@ -44,14 +45,34 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
 export function compareSnapshots(before: Snapshot, after: Snapshot) {
   const change = <T extends { id: string }>(left: T[], right: T[]) => {
     const old = new Set(left.map((v) => v.id)); const next = new Set(right.map((v) => v.id));
-    return { added: [...next].filter((id) => !old.has(id)).sort(), removed: [...old].filter((id) => !next.has(id)).sort() };
+    const previous = new Map(left.map((v) => [v.id, canonical(v)]));
+    return { added: [...next].filter((id) => !old.has(id)).sort(), removed: [...old].filter((id) => !next.has(id)).sort(), changed: right.filter((v) => previous.has(v.id) && previous.get(v.id) !== canonical(v)).map((v) => v.id).sort() };
   };
   return {
     from: before.semanticDigest, to: after.semanticDigest,
-    artifacts: change(before.artifacts, after.artifacts), edges: change(before.edges, after.edges),
+    artifacts: change(before.artifacts, after.artifacts), edges: change(before.edges, after.edges), profiles: change(before.profiles, after.profiles),
     coverage: after.tools.filter((tool) => {
       const previous = before.tools.find((t) => t.id === tool.id);
-      return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError"].some((key) => previous[key as keyof typeof previous] !== tool[key as keyof typeof tool]);
+      return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError", "gaps"].some((key) => canonical(previous[key as keyof typeof previous]) !== canonical(tool[key as keyof typeof tool]));
     }).map((tool) => ({ toolId: tool.id, artifact: tool.artifact, resolution: tool.resolution, integration: tool.integration, revision: tool.revision, discoveryError: tool.discoveryError })),
   };
+}
+
+export function aggregateProjects(snapshot: Snapshot, impacts = calculateImpact(snapshot)) {
+  const artifacts = new Map(snapshot.artifacts.map((a) => [a.id, a]));
+  const groups = new Map<string, { id: string; name: string; ecosystem: string; source: string; artifactIds: string[]; versions: string[]; impact: Impact }>();
+  for (const impact of impacts) {
+    const artifact = artifacts.get(impact.artifactId)!;
+    // Only collapse version-bearing sources where the package namespace is known.
+    const source = artifact.ecosystem === "npm" && artifact.source.startsWith("https://registry.npmjs.org/") ? "https://registry.npmjs.org" : artifact.source.startsWith("git+") ? artifact.source.split("#")[0] : artifact.source;
+    const id = `project:${digest({ ecosystem: artifact.ecosystem, name: artifact.name, source })}`;
+    const group = groups.get(id) ?? { id, name: artifact.name, ecosystem: artifact.ecosystem, source, artifactIds: [], versions: [], impact: { artifactId: id, required: [], optional: [], build: [], development: [], potential: [], paths: {} } };
+    group.artifactIds.push(artifact.id);
+    if (!group.versions.includes(artifact.version ?? "unknown")) group.versions.push(artifact.version ?? "unknown");
+    for (const bucket of ["required", "optional", "build", "development", "potential"] as const) group.impact[bucket] = [...new Set([...group.impact[bucket], ...impact[bucket]])].sort();
+    for (const [key, path] of Object.entries(impact.paths)) group.impact.paths[`${key}:${artifact.id}`] = path;
+    groups.set(id, group);
+  }
+  for (const group of groups.values()) { group.impact.optional = group.impact.optional.filter((id) => !group.impact.required.includes(id)); group.versions.sort(); }
+  return [...groups.values()].sort((a, b) => b.impact.required.length - a.impact.required.length || a.name.localeCompare(b.name));
 }

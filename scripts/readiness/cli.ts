@@ -7,7 +7,7 @@ import { canonical, finalize, inventory, object, text } from "../../lib/readines
 import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover, github } from "../../lib/readiness/discovery";
 import { collect } from "../../lib/readiness/collect";
-import { calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
+import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
 import { acquireLock, addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview } from "../../lib/readiness/review";
 
@@ -19,6 +19,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   profile: { type: "string" }, input: { type: "string" }, output: { type: "string" }, before: { type: "string" },
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
   packet: { type: "string" }, decisions: { type: "string" },
+  "before-ref": { type: "string" },
 } });
 
 const store = new Store(resolve(values.directory!));
@@ -45,7 +46,7 @@ replay          Reconstruct native profiles from retained evidence and compare g
 capture-source  --tool id --path source-file (retain pinned source for citations)
 export-review   --tools id,id --output .readiness/reviews/name
 import-review   --packet packet.json --input result.json [--decisions decisions.json]
-diff            --before old-snapshot.json [--output changes.json]
+diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json]
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
 Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
@@ -105,6 +106,7 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     };
     writeJson(join(store.directory, "report.json"), report);
     writeJson(join(store.directory, "impact.json"), calculateImpact(snapshot));
+    writeJson(join(store.directory, "projects.json"), aggregateProjects(snapshot));
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
     console.log(JSON.stringify(snapshot.tools.filter((t) => t.manifests.includes("package-lock.json") || t.manifests.includes("Cargo.lock")).map((t) => ({ id: t.id, packageHint: t.packageHint, release: t.release, locks: t.manifests.filter((p) => ["package-lock.json", "Cargo.lock"].includes(p)) })), null, 2));
@@ -151,7 +153,7 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     }
     console.log(`Replayed ${snapshot.profiles.length} native profiles with identical graph records.`);
   } else if (command === "diff") {
-    const before = readJson(required("before")) as typeof snapshot;
+    const before = values["before-ref"] ? JSON.parse(execFileSync("git", ["show", `${values["before-ref"]}:data/readiness/snapshot.json`], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 })) as typeof snapshot : readJson(required("before")) as typeof snapshot;
     const changes = compareSnapshots(before, snapshot);
     if (values.output) writeJson(values.output, changes); else console.log(JSON.stringify(changes, null, 2));
   } else throw new Error(`Unknown command ${command}; use help`);

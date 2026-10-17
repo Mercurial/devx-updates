@@ -1,0 +1,357 @@
+{
+  "from": "b85b010fd1a26c7a238d82be59a2ce09bd18529e6c85a0e18cea0549ec4fba42",
+  "to": "da93ebc82c9c6ecf47e11855010415c1220cd5076db52a5bad142521751d74c8",
+  "artifacts": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "edges": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "profiles": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "coverage": [
+    {
+      "toolId": "1694-io",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: 1694.io"
+    },
+    {
+      "toolId": "ada-handle",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: adahandle.com"
+    },
+    {
+      "toolId": "anvil",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: ada-anvil.io/services/api"
+    },
+    {
+      "toolId": "argus-cardano-sync",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "37a648d8d5f010526f4b4656d34559bf4c2e9eae"
+    },
+    {
+      "toolId": "balius",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.txpipe.io/balius"
+    },
+    {
+      "toolId": "begin",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: begin.is"
+    },
+    {
+      "toolId": "blockfrost",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/blockfrost"
+    },
+    {
+      "toolId": "cardaminal",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "c8d1380abee5c78fb8326b102d822716af3b5329"
+    },
+    {
+      "toolId": "cardano-client-bindings",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1"
+    },
+    {
+      "toolId": "cardano-name-service-cns",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.cns.space"
+    },
+    {
+      "toolId": "cardano-on-bigquery",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: blockchain-applied.com"
+    },
+    {
+      "toolId": "cardano-web3-js",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "21aa0802533f9052b6d4bcbdc934acbbd482a006"
+    },
+    {
+      "toolId": "cardanopress",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: cardanopress.io"
+    },
+    {
+      "toolId": "cardanoscan-api",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.cardanoscan.io"
+    },
+    {
+      "toolId": "cardanovsc",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: marketplace.visualstudio.com/CardanoVSC"
+    },
+    {
+      "toolId": "catalyst-core",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "a3a7f635c663b639d0c348f30e523c3290c70657"
+    },
+    {
+      "toolId": "catalyst-toolbox",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "4b06205f35d95a9b19b1fcec82e3668158a7b1eb"
+    },
+    {
+      "toolId": "charli3",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: Charli3-Official"
+    },
+    {
+      "toolId": "demeter",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: demeter.run"
+    },
+    {
+      "toolId": "elm-cardano",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "dd6e0ff14f571fc66ca28abf88335c10db9b9c97"
+    },
+    {
+      "toolId": "eternl",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: eternl.io"
+    },
+    {
+      "toolId": "frankenwallet",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: frankenwallet.com"
+    },
+    {
+      "toolId": "gero-wallet",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: gerowallet.io"
+    },
+    {
+      "toolId": "getblock",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: getblock.io"
+    },
+    {
+      "toolId": "gimbalabs",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: gimbalabs.com"
+    },
+    {
+      "toolId": "gnark-cardano",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: developers.cardano.org/tools/gnark-cardano"
+    },
+    {
+      "toolId": "keria",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "bc3b878b12e98c459a8a8d5ca1b81697205a8eb3"
+    },
+    {
+      "toolId": "kuberide",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: kuberide.com"
+    },
+    {
+      "toolId": "leios-peras",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: leios.cardano-scaling.org"
+    },
+    {
+      "toolId": "maestro",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/maestro-org"
+    },
+    {
+      "toolId": "marlowe-playground",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: marlowe.iohk.io"
+    },
+    {
+      "toolId": "mesh-mimir",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/MeshJS"
+    },
+    {
+      "toolId": "midnight",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: midnight.network"
+    },
+    {
+      "toolId": "milkomeda-c1",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.milkomeda.com"
+    },
+    {
+      "toolId": "mithril",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "3f6cb73f491eb3195d02318643e40836fb093acc"
+    },
+    {
+      "toolId": "nftcdn",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: nftcdn.io"
+    },
+    {
+      "toolId": "nownodes",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: nownodes.io"
+    },
+    {
+      "toolId": "odatano",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "72954d36d871595345338c76da9956a775521062"
+    },
+    {
+      "toolId": "partner-chains",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: interchains.iog.io"
+    },
+    {
+      "toolId": "plinth-plutus-tx",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "152220ae3da8cd6ceaf2688094af541ac1245f58"
+    },
+    {
+      "toolId": "plu-ts",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "d6a5a75575d6091bc0bd3f63d5daa225d6772677"
+    },
+    {
+      "toolId": "plutus-playground",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: playground.plutus.iohkdev.io"
+    },
+    {
+      "toolId": "plutus-plutus-core",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "152220ae3da8cd6ceaf2688094af541ac1245f58"
+    },
+    {
+      "toolId": "tangocrypto",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/tango-crypto"
+    },
+    {
+      "toolId": "typhon",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: typhonwallet.io"
+    },
+    {
+      "toolId": "utxos",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: utxos.dev"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "artifact": "partial",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "revision": "e93a56f54451cc386ba54dd1e8e5564a884b3593"
+    },
+    {
+      "toolId": "vespr",
+      "artifact": "unresolved",
+      "resolution": "unresolved",
+      "integration": "unresolved",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: vespr.xyz"
+    }
+  ]
+}

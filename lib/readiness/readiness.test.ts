@@ -6,7 +6,7 @@ import { join } from "node:path";
 import type { Graph } from "../map-types";
 import { finalize, inventory, validate } from "./core";
 import { parseNativeInput, resolveNative } from "./adapters";
-import { calculateImpact } from "./impact";
+import { aggregateProjects, calculateImpact, compareSnapshots } from "./impact";
 import { detectManifests, repositoryReference } from "./discovery";
 import { addEvidence, mergeResolution, Store } from "./store";
 import type { NativeInput } from "./types";
@@ -160,4 +160,21 @@ test("repository normalization accepts GitHub URLs without guessing repositories
   assert.equal(repositoryReference("https://github.com/owner/repo.git"), "owner/repo");
   assert.equal(repositoryReference("github.com/MeshJS"), null);
   assert.equal(repositoryReference("docs.txpipe.io/balius"), null);
+});
+
+test("project reach unions versions instead of summing them, and snapshot diffs include changed verification", () => {
+  const { directory, snapshot, evidence } = setup();
+  try {
+    mergeResolution(snapshot, resolveNative(lock, base, [evidence.id]));
+    const other = structuredClone(lock);
+    other.packages["node_modules/left"].version = "2.0.0";
+    other.packages["node_modules/left"].resolved = "https://registry.npmjs.org/left/-/left-2.0.0.tgz";
+    mergeResolution(snapshot, resolveNative(other, { ...base, release: "2.0.0" }, [evidence.id]));
+    const project = aggregateProjects(snapshot).find((p) => p.name === "left")!;
+    assert.equal(project.artifactIds.length, 2);
+    assert.deepEqual(project.impact.required, ["one"]);
+    const before = structuredClone(snapshot);
+    snapshot.edges[0].verification = "disputed";
+    assert.deepEqual(compareSnapshots(before, snapshot).edges.changed, [snapshot.edges[0].id]);
+  } finally { rmSync(directory, { recursive: true }); }
 });
