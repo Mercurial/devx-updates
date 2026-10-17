@@ -1,0 +1,146 @@
+export type Coverage = "complete" | "partial" | "unresolved" | "not-applicable";
+export type Verification = "verified" | "suggested" | "disputed" | "rejected";
+export type Scope = "runtime" | "build" | "development";
+export type Ecosystem = "npm" | "cargo" | "cabal" | "go" | "python" | "nix" | "container" | "other";
+
+export interface Evidence {
+  id: string;
+  digest: string;
+  path: string;
+  description: string;
+  sourceUrl?: string;
+}
+
+export interface Gap {
+  id: string;
+  area: "artifact" | "resolution" | "integration" | "capability" | "discovery";
+  reason: string;
+  nextAction: string;
+  profileId?: string;
+}
+
+export interface Profile {
+  id: string;
+  toolId: string;
+  release: string;
+  revision: string;
+  platform: string;
+  features: string[];
+  command: string;
+  toolchain: string;
+  origin: "release-build" | "source-reconstruction";
+  roots: string[];
+  inputDigest: string;
+  evidenceIds: string[];
+  coverage: Coverage;
+}
+
+export interface Tool {
+  id: string;
+  name: string;
+  repo: string | null;
+  maintainer: string;
+  registryHint: string | null;
+  packageHint: string | null;
+  ecosystems: Ecosystem[];
+  artifact: Coverage;
+  resolution: Coverage;
+  integration: Coverage;
+  capability: Coverage;
+  readiness: "unassessed";
+  release?: string;
+  revision?: string;
+  releaseUrl?: string;
+  manifests: string[];
+  evidenceIds: string[];
+  gaps: Gap[];
+  lastAttempt?: string;
+  lastSuccess?: string;
+  discoveryError?: string;
+}
+
+export interface Artifact {
+  id: string;
+  ecosystem: string;
+  name: string;
+  version: string | null;
+  source: string;
+  integrity: string | null;
+}
+
+export interface Occurrence {
+  id: string;
+  artifactId: string;
+  profileId: string;
+  locator: string;
+  evidenceIds: string[];
+}
+
+export interface Edge {
+  id: string;
+  from: string;
+  to: string;
+  type: "package" | "service" | "protocol" | "bundled" | "code-generation";
+  scope: Scope;
+  optional: boolean;
+  condition: string | null;
+  constraint: string | null;
+  verification: Verification;
+  evidenceIds: string[];
+}
+
+export interface Decision {
+  id: string;
+  packetId: string;
+  edgeId: string;
+  verification: Verification;
+  rationale: string;
+  method: string;
+  evidenceIds: string[];
+}
+
+export interface Snapshot {
+  schemaVersion: 1;
+  catalogDigest: string;
+  catalogRevision: string;
+  semanticDigest: string;
+  generatedAt: string;
+  tools: Tool[];
+  profiles: Profile[];
+  artifacts: Artifact[];
+  occurrences: Occurrence[];
+  edges: Edge[];
+  evidence: Evidence[];
+  decisions: Decision[];
+}
+
+export interface NativeInput {
+  toolId: string;
+  release: string;
+  revision: string;
+  platform: string;
+  features: string[];
+  command: string;
+  toolchain: string;
+  origin: Profile["origin"];
+  adapter: "npm-lock" | "cargo-metadata" | "cabal-plan";
+  rootNames: string[];
+}
+
+export interface Resolution {
+  profile: Profile;
+  artifacts: Artifact[];
+  occurrences: Occurrence[];
+  edges: Edge[];
+  gaps: Gap[];
+}
+
+export interface Impact {
+  artifactId: string;
+  required: string[];
+  optional: string[];
+  build: string[];
+  development: string[];
+  potential: string[];
+  paths: Record<string, string[]>;
+}

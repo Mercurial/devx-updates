@@ -7,8 +7,8 @@ Status: implementation in progress. Commits remain local; no pushes.
 This checklist records delivered behavior and verification, not just code started.
 
 - [x] Planning baseline and manually launched review task briefs.
-- [ ] Phase 1: validated catalog inventory, coverage records, release discovery, and ecosystem detection.
-- [ ] Phase 2: native-resolution import, evidence retention, context-aware graph, impact calculation, and pilot verification.
+- [x] Phase 1: validated catalog inventory, coverage records, release discovery, and ecosystem detection.
+- [x] Phase 2: native-resolution import, evidence retention, context-aware graph, impact calculation, and pilot verification.
 - [ ] Phase 3: catalog-wide discovery, explicit unresolved frontiers, manual packet export, and validated review import.
 - [ ] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
 - [ ] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection.
@@ -17,6 +17,11 @@ This checklist records delivered behavior and verification, not just code starte
 ### Implementation log
 
 - Planning baseline: documented features, assumptions, architecture, phased acceptance criteria, and manual review assignments. Existing invitation-script edits are outside this work.
+- Inventory and graph foundation: all 269 catalog entries have coverage records; the first run discovered source revisions/manifests for 226 entries. Website/organization-only entries and failed lookups remain explicit gaps. Ecosystem detection covers nested workspaces, including unsupported build systems.
+- Native pilot: imported pinned npm locks for Ouroboros Miniprotocols TS and Mesh, and executed locked, platform-filtered Cargo metadata for Oura and Dolos. Mesh exercises a monorepo root. Package artifacts are shared while occurrence edges retain consumer/profile context. npm lock coverage is deliberately partial because it does not establish an installed platform selection.
+- Cabal plan import is implemented and fixture-tested; a real Haskell pilot remains follow-up work because Cabal is unavailable in the current environment. Other ecosystems are detected and queued rather than treated as resolved.
+- Evidence storage decision: retain content-addressed compressed JSON evidence in `data/readiness/evidence/`, alongside the normalized snapshot. Local resumable state and source checkouts live in ignored `.readiness/`. This initial implementation uses repository retention rather than an external artifact store.
+- Foundation verification: 10 behavior tests cover closure/context separation, workspace links, missing dependencies, cycles, diamond paths, evidence replay, optional/build/test scope, and suggested reach. Type checking and scoped lint pass. CLI `replay` reconstructs native graph records from retained inputs.
 
 ## 1. Objective
 

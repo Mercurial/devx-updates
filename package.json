@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "readiness": "tsx scripts/readiness/cli.ts",
+    "test:readiness": "tsx --test lib/readiness/*.test.ts"
   },
   "dependencies": {
     "d3-force": "^3.0.0",
