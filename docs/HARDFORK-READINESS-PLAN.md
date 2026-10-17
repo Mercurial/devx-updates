@@ -1,6 +1,6 @@
 # Dependency mapping and hardfork readiness
 
-Status: implementation in progress. Commits remain local; no pushes.
+Status: operational collection and reporting are implemented; catalog-wide dependency coverage is still being expanded. Commits remain local; no pushes.
 
 ## Implementation progress
 
@@ -11,7 +11,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 2: native-resolution import, evidence retention, context-aware graph, impact calculation, and pilot verification.
 - [ ] Phase 3: catalog-wide discovery, explicit unresolved frontiers, manual packet export, and validated review import.
 - [x] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
-- [ ] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection.
+- [x] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection for registered profiles.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 
 ### Implementation log
@@ -29,11 +29,23 @@ This checklist records delivered behavior and verification, not just code starte
 - Dashboard milestone: `/map/readiness/` and 269 statically generated tool pages expose coverage, next actions, release/configuration graphs, evidence references, scope-specific reach, version-grouped project reach, snapshot comparisons, and filtered/tool JSON exports. Unknown compatibility remains explicit throughout.
 - Browser verification: Chromium desktop/mobile checks passed for filtering, empty results, profile selection, impact paths, version grouping, work queue navigation, dependency expansion, exports, base-path links, horizontal layout, and console errors. Light/dark screenshots were inspected. The static build passes both at root and with `/devx-updates` as the base path.
 - Verification now includes 16 passing behavior tests. New/changed readiness code passes lint and type checking. Repository-wide lint reports 12 pre-existing errors and one warning in the map table, graph, site header, and Markdown renderer. Collection checkouts are excluded from project lint/type checking.
+- Review corrections: incomplete Cargo resolution-node sets now produce partial coverage; feature-optional and renamed/library-target dependencies retain their conditions; required exposure suppresses optional exposure only within the same profile. Real native profiles were rebuilt from retained inputs and replayed after the corrections.
+- Evidence and review hardening: native output/configuration roles and collection request keys are explicit, operational gaps have stable codes, and the website and review packets share one subgraph selector. Pending packets whose evidence context changes are marked for revalidation. Native rebuild refuses to overwrite manual graph decisions.
+- Recurring native refresh now runs registered npm/Cargo requests after source discovery. Cargo cache keys include compiler versions and configuration/environment fingerprints; unchanged requests were verified to reuse all four pilot results. Failures retain evidence and are surfaced without stopping other profile attempts. Source discovery checkpoints its queue and writes the shared snapshot atomically at batch completion.
+- Final local verification uses the repository's locked dependencies, including Next.js 16.3.4: 23 behavior tests pass, type checking and scoped lint pass, all four native profiles replay identically, and 471 retained evidence objects validate. The production static build exports 311 routes with the `/devx-updates` base path. Desktop/mobile browser flows and console checks pass on the locked version.
+
+### Standards review
+
+No documented-standard breaches were found. Three maintainability findings were addressed: explicit evidence roles/collection identity, stable operational gap codes, and shared tool-subgraph selection. Follow-up review confirmed all three refinements.
+
+### Specification review
+
+Three correctness findings were fixed and regression-tested: missing Cargo resolution nodes, feature-optional dependency classification, and cross-profile exposure precedence. Follow-up review found no new blocking correctness issues in those fixes. Broader coverage gaps remain tracked below.
 
 ### Remaining rollout work
 
 - Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.
-- Complete phase 5 automation: native profile refresh and supported-profile policy are still explicitly operated. Scheduled discovery produces review artifacts; publication remains a separate reviewed change.
+- Extend registered profiles as supported release/platform/feature policies are verified. The current npm/Cargo registrations refresh automatically; custom imported profiles require their ecosystem collector or explicit reimport. Publication remains a separate reviewed change.
 - Phase 6 remains gated on hardfork-specific change analysis and the target test environment.
 
 ## 1. Objective

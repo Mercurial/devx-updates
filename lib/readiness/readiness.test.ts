@@ -10,6 +10,7 @@ import { aggregateProjects, calculateImpact, compareSnapshots } from "./impact";
 import { detectManifests, repositoryReference } from "./discovery";
 import { addEvidence, mergeResolution, Store } from "./store";
 import type { NativeInput } from "./types";
+import { nativeEvidence, rebuildNative } from "./rebuild";
 
 const catalog = { nodes: [{ id: "one", name: "One", repo: "owner/one", team: "Team" }, { id: "two", name: "Two", repo: null, team: "Team" }] } as Graph;
 const base: NativeInput = { toolId: "one", release: "1.0.0", revision: "a".repeat(40), platform: "linux-x64", features: [], command: "npm install --package-lock-only --ignore-scripts", toolchain: "npm 10", origin: "source-reconstruction", adapter: "npm-lock", rootNames: ["app"] };
@@ -46,7 +47,7 @@ test("inventory accounts for source-unavailable tools without treating absence a
 test("diamond paths and cycles count tools once, required reach takes precedence over optional", () => {
   const { directory, snapshot, evidence } = setup();
   try {
-    for (const toolId of ["one", "two"]) mergeResolution(snapshot, resolveNative(lock, { ...base, toolId }, [evidence.id]));
+    for (const toolId of ["one", "two"]) mergeResolution(snapshot, resolveNative(lock, { ...base, toolId }, { native: evidence.id, configuration: evidence.id }));
     finalize(snapshot);
     const shared = snapshot.artifacts.find((a) => a.name === "shared")!;
     assert.equal(snapshot.artifacts.filter((a) => a.name === "shared").length, 1);
@@ -61,12 +62,12 @@ test("diamond paths and cycles count tools once, required reach takes precedence
 test("separate consumer contexts do not leak upstream outgoing dependencies", () => {
   const { directory, snapshot, evidence } = setup();
   try {
-    mergeResolution(snapshot, resolveNative(lock, base, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(lock, base, { native: evidence.id, configuration: evidence.id }));
     const other = structuredClone(lock);
     other.packages["node_modules/shared"].dependencies = { left: "2" };
     other.packages["node_modules/left"].version = "2.0.0";
     other.packages["node_modules/left"].resolved = "https://registry.npmjs.org/left/-/left-2.0.0.tgz";
-    mergeResolution(snapshot, resolveNative(other, { ...base, toolId: "two", features: ["alternate"] }, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(other, { ...base, toolId: "two", features: ["alternate"] }, { native: evidence.id, configuration: evidence.id }));
     const v2 = snapshot.artifacts.find((a) => a.name === "left" && a.version === "2.0.0")!;
     assert.deepEqual(calculateImpact(snapshot).find((i) => i.artifactId === v2.id)!.required, ["two"]);
     assert.equal(snapshot.artifacts.filter((a) => a.name === "shared").length, 1);
@@ -76,7 +77,7 @@ test("separate consumer contexts do not leak upstream outgoing dependencies", ()
 test("suggested edges affect potential reach only", () => {
   const { directory, snapshot, evidence } = setup();
   try {
-    const result = resolveNative(lock, base, [evidence.id]);
+    const result = resolveNative(lock, base, { native: evidence.id, configuration: evidence.id });
     result.edges.forEach((e) => { if (e.from === result.profile.roots[0]) e.verification = "suggested"; });
     mergeResolution(snapshot, result);
     const impacts = calculateImpact(snapshot);
@@ -91,7 +92,7 @@ test("npm workspace links resolve in consumer context and missing dependencies c
     "node_modules/child": { link: true, resolved: "packages/child" },
     "packages/child": { name: "child", version: "1", dependencies: { hoisted: "1" } },
     "node_modules/hoisted": { version: "1" },
-  } }, { ...base, rootNames: ["workspace"] }, ["test"]);
+  } }, { ...base, rootNames: ["workspace"] }, { native: "test", configuration: "test" });
   assert.equal(result.occurrences.length, 3);
   assert.equal(result.edges.length, 2);
   assert.equal(result.profile.coverage, "partial");
@@ -100,14 +101,14 @@ test("npm workspace links resolve in consumer context and missing dependencies c
 
 test("Cargo metadata preserves target conditions and build/test kinds", () => {
   const result = resolveNative({ workspace_root: "/src", workspace_members: ["app"], packages: [
-    { id: "app", name: "app", version: "1", source: null, manifest_path: "/src/Cargo.toml" },
+    { id: "app", name: "app", version: "1", source: null, manifest_path: "/src/Cargo.toml", dependencies: [{ name: "dep", kind: "build", target: null, optional: false }, { name: "dep", kind: "dev", target: "cfg(unix)", optional: false }] },
     { id: "dep", name: "dep", version: "2", source: "registry+https://example.org", manifest_path: "/cache/dep/Cargo.toml" },
-  ], resolve: { nodes: [{ id: "app", deps: [{ pkg: "dep", dep_kinds: [{ kind: "build", target: null }, { kind: "dev", target: "cfg(unix)" }] }] }, { id: "dep", deps: [] }] } }, { ...base, adapter: "cargo-metadata", command: "cargo metadata --locked --filter-platform x86_64-unknown-linux-gnu" }, ["test"]);
+  ], resolve: { nodes: [{ id: "app", deps: [{ name: "dep", pkg: "dep", dep_kinds: [{ kind: "build", target: null }, { kind: "dev", target: "cfg(unix)" }] }] }, { id: "dep", deps: [] }] } }, { ...base, adapter: "cargo-metadata", command: "cargo metadata --locked --filter-platform x86_64-unknown-linux-gnu" }, { native: "test", configuration: "test" });
   assert.equal(result.edges[0].scope, "build");
   assert.equal(result.edges[1].scope, "development");
   assert.equal(result.edges[1].optional, true);
   assert.equal(result.profile.coverage, "complete");
-  assert.throws(() => resolveNative({ packages: [], workspace_members: [], resolve: null }, { ...base, adapter: "cargo-metadata" }, ["test"]), /resolve/);
+  assert.throws(() => resolveNative({ packages: [], workspace_members: [], resolve: null }, { ...base, adapter: "cargo-metadata" }, { native: "test", configuration: "test" }), /resolve/);
 });
 
 test("Cabal plans retain pre-existing units and executable build dependencies", () => {
@@ -115,7 +116,7 @@ test("Cabal plans retain pre-existing units and executable build dependencies", 
     { id: "app", "pkg-name": "app", "pkg-version": "1", style: "local", components: { lib: { depends: ["base"], "exe-depends": ["generator"] } } },
     { id: "base", "pkg-name": "base", "pkg-version": "4.18", type: "pre-existing", depends: [] },
     { id: "generator", "pkg-name": "generator", "pkg-version": "1", style: "global", depends: ["base"] },
-  ] }, { ...base, adapter: "cabal-plan" }, ["test"]);
+  ] }, { ...base, adapter: "cabal-plan" }, { native: "test", configuration: "test" });
   assert.equal(result.occurrences.length, 3);
   assert.equal(result.edges.filter((e) => e.scope === "build").length, 1);
   assert.equal(result.profile.roots.length, 1);
@@ -124,7 +125,7 @@ test("Cabal plans retain pre-existing units and executable build dependencies", 
 test("snapshot replay ignores timestamps and evidence survives round trips", () => {
   const { directory, store, snapshot, evidence } = setup();
   try {
-    mergeResolution(snapshot, resolveNative(lock, base, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(lock, base, { native: evidence.id, configuration: evidence.id }));
     store.save(snapshot); const before = snapshot.semanticDigest;
     snapshot.generatedAt = "later"; snapshot.tools[0].lastAttempt = "later";
     store.save(snapshot);
@@ -138,11 +139,11 @@ test("snapshot replay ignores timestamps and evidence survives round trips", () 
 
 test("imports reject ambiguous revisions, unknown roots, and cross-profile edges", () => {
   assert.throws(() => parseNativeInput({ ...base, revision: "main" }), /immutable/);
-  assert.throws(() => resolveNative(lock, { ...base, rootNames: ["missing"] }, ["test"]), /No roots/);
+  assert.throws(() => resolveNative(lock, { ...base, rootNames: ["missing"] }, { native: "test", configuration: "test" }), /No roots/);
   const { directory, snapshot, evidence } = setup();
   try {
-    mergeResolution(snapshot, resolveNative(lock, base, [evidence.id]));
-    mergeResolution(snapshot, resolveNative(lock, { ...base, toolId: "two" }, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(lock, base, { native: evidence.id, configuration: evidence.id }));
+    mergeResolution(snapshot, resolveNative(lock, { ...base, toolId: "two" }, { native: evidence.id, configuration: evidence.id }));
     snapshot.edges[0].to = snapshot.profiles[1].roots[0];
     assert.throws(() => validate(snapshot), /cross resolution/);
   } finally { rmSync(directory, { recursive: true }); }
@@ -165,16 +166,82 @@ test("repository normalization accepts GitHub URLs without guessing repositories
 test("project reach unions versions instead of summing them, and snapshot diffs include changed verification", () => {
   const { directory, snapshot, evidence } = setup();
   try {
-    mergeResolution(snapshot, resolveNative(lock, base, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(lock, base, { native: evidence.id, configuration: evidence.id }));
     const other = structuredClone(lock);
     other.packages["node_modules/left"].version = "2.0.0";
     other.packages["node_modules/left"].resolved = "https://registry.npmjs.org/left/-/left-2.0.0.tgz";
-    mergeResolution(snapshot, resolveNative(other, { ...base, release: "2.0.0" }, [evidence.id]));
+    mergeResolution(snapshot, resolveNative(other, { ...base, release: "2.0.0" }, { native: evidence.id, configuration: evidence.id }));
     const project = aggregateProjects(snapshot).find((p) => p.name === "left")!;
     assert.equal(project.artifactIds.length, 2);
     assert.deepEqual(project.impact.required, ["one"]);
     const before = structuredClone(snapshot);
     snapshot.edges[0].verification = "disputed";
     assert.deepEqual(compareSnapshots(before, snapshot).edges.changed, [snapshot.edges[0].id]);
+  } finally { rmSync(directory, { recursive: true }); }
+});
+
+test("Cargo missing resolution nodes cannot become complete leaf graphs", () => {
+  const root = { id: "app", name: "app", version: "1", source: null, manifest_path: "/src/Cargo.toml", dependencies: [{ name: "dep", optional: false, kind: null, target: null }] };
+  const output = { workspace_root: "/src", workspace_members: ["app"], packages: [root, { id: "dep", name: "dep", version: "1", source: "registry+https://example.org", manifest_path: "/cache/dep/Cargo.toml", dependencies: [] }], resolve: { nodes: [] as unknown[] } };
+  const input = { ...base, adapter: "cargo-metadata" as const, command: "cargo metadata --locked --filter-platform x86_64-unknown-linux-gnu" };
+  const refs = { native: "test", configuration: "test" };
+  const absentRoot = resolveNative(output, input, refs);
+  assert.equal(absentRoot.profile.coverage, "partial");
+  assert.ok(absentRoot.gaps.some((g) => g.reason.includes("app is missing")));
+  output.resolve.nodes.push({ id: "app", deps: [{ name: "dep", pkg: "dep", dep_kinds: [{ kind: null, target: null }] }] });
+  const absentTransitive = resolveNative(output, input, refs);
+  assert.equal(absentTransitive.profile.coverage, "partial");
+  assert.ok(absentTransitive.gaps.some((g) => g.reason.includes("dep is missing")));
+});
+
+test("Cargo optional declarations survive default-feature activation and renamed bindings", () => {
+  const output = { workspace_root: "/src", workspace_members: ["app"], packages: [
+    { id: "app", name: "app", version: "1", source: null, manifest_path: "/src/Cargo.toml", features: { default: ["dep:provider"] }, dependencies: [{ name: "provider-impl", rename: "provider", optional: true, kind: null, target: null }] },
+    { id: "provider", name: "provider-impl", version: "1", source: "registry+https://example.org", manifest_path: "/cache/provider/Cargo.toml", dependencies: [] },
+  ], resolve: { nodes: [{ id: "app", features: ["default", "provider"], deps: [{ name: "provider", pkg: "provider", dep_kinds: [{ kind: null, target: null }] }] }, { id: "provider", deps: [] }] } };
+  const result = resolveNative(output, { ...base, adapter: "cargo-metadata", command: "cargo metadata --locked --filter-platform x86_64-unknown-linux-gnu" }, { native: "test", configuration: "test" });
+  assert.equal(result.profile.coverage, "complete");
+  assert.equal(result.edges[0].optional, true);
+  assert.match(result.edges[0].condition!, /feature-gated dependency provider/);
+});
+
+test("optional exposure survives required exposure in a different profile at both artifact and project levels", () => {
+  const { directory, snapshot, evidence } = setup();
+  try {
+    const required = { name: "app", lockfileVersion: 3, packages: { "": { name: "app", version: "1", dependencies: { shared: "1" } }, "node_modules/shared": { version: "1", resolved: "https://registry.npmjs.org/shared/-/shared-1.tgz" } } };
+    const optional = { ...required, packages: { ...required.packages, "": { name: "app", version: "1", optionalDependencies: { shared: "1" } } } };
+    const refs = { native: evidence.id, configuration: evidence.id };
+    mergeResolution(snapshot, resolveNative(required, base, refs));
+    mergeResolution(snapshot, resolveNative(optional, { ...base, features: ["optional-provider"] }, refs));
+    const impact = calculateImpact(snapshot)[0];
+    assert.deepEqual(impact.required, ["one"]); assert.deepEqual(impact.optional, ["one"]);
+    const project = aggregateProjects(snapshot)[0];
+    assert.deepEqual(project.impact.required, ["one"]); assert.deepEqual(project.impact.optional, ["one"]);
+  } finally { rmSync(directory, { recursive: true }); }
+});
+
+test("Cargo library target names can differ from dependency package names", () => {
+  const output = { workspace_root: "/src", workspace_members: ["app"], packages: [
+    { id: "app", name: "app", version: "1", source: null, manifest_path: "/src/Cargo.toml", dependencies: [{ name: "md-5", rename: null, optional: false, kind: null, target: null }] },
+    { id: "md-5", name: "md-5", version: "1", source: "registry+https://example.org", manifest_path: "/cache/md-5/Cargo.toml", dependencies: [], targets: [{ name: "md5", kind: ["lib"] }] },
+  ], resolve: { nodes: [{ id: "app", deps: [{ name: "md5", pkg: "md-5", dep_kinds: [{ kind: null, target: null }] }] }, { id: "md-5", deps: [] }] } };
+  const result = resolveNative(output, { ...base, adapter: "cargo-metadata", command: "cargo metadata --locked --filter-platform x86_64-unknown-linux-gnu" }, { native: "test", configuration: "test" });
+  assert.equal(result.profile.coverage, "complete"); assert.equal(result.edges[0].optional, false);
+});
+
+test("named evidence roles survive reordering and native rebuilds preserve source evidence", () => {
+  const { directory, snapshot, evidence, store } = setup();
+  try {
+    const configuration = store.evidence(base, "Collection profile"); addEvidence(snapshot, configuration);
+    mergeResolution(snapshot, resolveNative(lock, base, { native: evidence.id, configuration: configuration.id }));
+    snapshot.profiles[0].evidenceIds.reverse();
+    const refs = nativeEvidence(snapshot.profiles[0]);
+    assert.equal(refs.native, evidence.id); assert.equal(refs.configuration, configuration.id);
+    const next = rebuildNative(snapshot, store);
+    assert.equal(next.profiles.length, 1); assert.equal(next.profiles[0].id, snapshot.profiles[0].id);
+    assert.equal(next.edges.length, snapshot.edges.length);
+    assert.deepEqual(next.evidence, snapshot.evidence.sort((a, b) => a.id.localeCompare(b.id)));
+    const edge = next.edges[0]; edge.type = "service";
+    assert.throws(() => rebuildNative(next, store), /invalidate manual/);
   } finally { rmSync(directory, { recursive: true }); }
 });

@@ -12,6 +12,8 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
   const nodes = new Map(snapshot.occurrences.map((n) => [n.id, n]));
   const results = new Map<string, Impact>();
   for (const profile of snapshot.profiles) {
+    const requiredInProfile = new Set<string>();
+    const optionalInProfile = new Set<string>();
     const ownArtifacts = new Set(profile.roots.map((id) => nodes.get(id)!.artifactId));
     const queue = profile.roots.map((id) => ({ id, path: [id], scope: "runtime", optional: false, potential: false }));
     const visited = new Set<string>();
@@ -24,7 +26,9 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
       if (!ownArtifacts.has(artifactId) && current.path.length > 1) {
         const impact = results.get(artifactId) ?? { artifactId, required: [], optional: [], build: [], development: [], potential: [], paths: {} };
         const bucket = current.potential ? "potential" : current.scope === "development" ? "development" : current.scope === "build" ? "build" : current.optional ? "optional" : "required";
-        if (!impact[bucket].includes(profile.toolId)) impact[bucket].push(profile.toolId);
+        if (bucket === "required") requiredInProfile.add(artifactId);
+        if (bucket === "optional") optionalInProfile.add(artifactId);
+        else if (!impact[bucket].includes(profile.toolId)) impact[bucket].push(profile.toolId);
         const pathKey = `${profile.toolId}:${bucket}:${profile.id}`;
         if (!impact.paths[pathKey]) impact.paths[pathKey] = current.path;
         results.set(artifactId, impact);
@@ -34,15 +38,20 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
         queue.push({ id: edge.to, path: [...current.path, edge.to], scope, optional: current.optional || edge.optional, potential: current.potential || edge.verification !== "verified" });
       }
     }
+    for (const artifactId of optionalInProfile) {
+      const impact = results.get(artifactId)!;
+      if (requiredInProfile.has(artifactId)) delete impact.paths[`${profile.toolId}:optional:${profile.id}`];
+      else if (!impact.optional.includes(profile.toolId)) impact.optional.push(profile.toolId);
+    }
   }
   for (const impact of results.values()) {
-    impact.optional = impact.optional.filter((id) => !impact.required.includes(id));
     for (const key of ["required", "optional", "build", "development", "potential"] as const) impact[key].sort();
   }
   return [...results.values()].sort((a, b) => b.required.length - a.required.length || b.potential.length - a.potential.length || a.artifactId.localeCompare(b.artifactId));
 }
 
 export function compareSnapshots(before: Snapshot, after: Snapshot) {
+  const coverageValue = (tool: Snapshot["tools"][number], key: keyof Snapshot["tools"][number]) => key === "gaps" ? tool.gaps.map(({ area, reason, nextAction, profileId }) => canonical({ area, reason, nextAction, profileId })).sort() : tool[key];
   const change = <T extends { id: string }>(left: T[], right: T[]) => {
     const old = new Set(left.map((v) => v.id)); const next = new Set(right.map((v) => v.id));
     const previous = new Map(left.map((v) => [v.id, canonical(v)]));
@@ -53,7 +62,7 @@ export function compareSnapshots(before: Snapshot, after: Snapshot) {
     artifacts: change(before.artifacts, after.artifacts), edges: change(before.edges, after.edges), profiles: change(before.profiles, after.profiles),
     coverage: after.tools.filter((tool) => {
       const previous = before.tools.find((t) => t.id === tool.id);
-      return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError", "gaps"].some((key) => canonical(previous[key as keyof typeof previous]) !== canonical(tool[key as keyof typeof tool]));
+      return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError", "gaps"].some((key) => canonical(coverageValue(previous, key as keyof typeof previous)) !== canonical(coverageValue(tool, key as keyof typeof tool)));
     }).map((tool) => ({ toolId: tool.id, artifact: tool.artifact, resolution: tool.resolution, integration: tool.integration, revision: tool.revision, discoveryError: tool.discoveryError })),
   };
 }
@@ -73,6 +82,18 @@ export function aggregateProjects(snapshot: Snapshot, impacts = calculateImpact(
     for (const [key, path] of Object.entries(impact.paths)) group.impact.paths[`${key}:${artifact.id}`] = path;
     groups.set(id, group);
   }
-  for (const group of groups.values()) { group.impact.optional = group.impact.optional.filter((id) => !group.impact.required.includes(id)); group.versions.sort(); }
+  for (const group of groups.values()) {
+    const requiredProfiles = new Set<string>();
+    const optionalProfiles: { key: string; context: string; toolId: string }[] = [];
+    for (const key of Object.keys(group.impact.paths)) {
+      const [toolId, bucket, ...parts] = key.split(":");
+      const context = `${toolId}:${parts.slice(0, -2).join(":")}`;
+      if (bucket === "required") requiredProfiles.add(context);
+      if (bucket === "optional") optionalProfiles.push({ key, context, toolId });
+    }
+    group.impact.optional = [...new Set(optionalProfiles.filter((p) => !requiredProfiles.has(p.context)).map((p) => p.toolId))].sort();
+    for (const p of optionalProfiles) if (requiredProfiles.has(p.context)) delete group.impact.paths[p.key];
+    group.versions.sort();
+  }
   return [...groups.values()].sort((a, b) => b.impact.required.length - a.impact.required.length || a.name.localeCompare(b.name));
 }

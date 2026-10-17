@@ -56,21 +56,21 @@ interface Job {
   result?: Discovery;
 }
 
-async function discoverRepo(repo: string, store: Store, shared: Map<string, Promise<Discovery>>): Promise<Discovery> {
+async function discoverRepo(repo: string, store: Store, shared: Map<string, Promise<Discovery>>, request: typeof github): Promise<Discovery> {
   const reference = repositoryReference(repo);
   if (!reference) throw new Error(`No GitHub source repository in catalog reference: ${repo}`);
-  const metadata = object(await github(`repos/${reference}`));
+  const metadata = object(await request(`repos/${reference}`));
   const canonicalRepo = text(metadata.full_name);
   const cached = shared.get(canonicalRepo.toLowerCase());
   if (cached) return cached;
   const pending = (async () => {
   let release: Record<string, unknown> | undefined;
-  try { release = object(await github(`repos/${canonicalRepo}/releases/latest`)); }
+  try { release = object(await request(`repos/${canonicalRepo}/releases/latest`)); }
   catch (error) { if (!String(error).includes("404")) throw error; }
   const ref = release ? text(release.tag_name) : text(metadata.default_branch);
-  const commit = object(await github(`repos/${canonicalRepo}/commits/${encodeURIComponent(ref)}`));
+  const commit = object(await request(`repos/${canonicalRepo}/commits/${encodeURIComponent(ref)}`));
   const revision = text(commit.sha);
-  const tree = object(await github(`repos/${canonicalRepo}/git/trees/${revision}?recursive=1`));
+  const tree = object(await request(`repos/${canonicalRepo}/git/trees/${revision}?recursive=1`));
   const paths = list(tree.tree).map((entry) => object(entry)).filter((e) => e.type === "blob").map((e) => text(e.path));
   const sourceUrl = `https://github.com/${canonicalRepo}/tree/${revision}`;
   const evidence = [
@@ -111,7 +111,7 @@ function applyDiscovery(tool: Tool, job: Job, snapshot: Snapshot) {
   for (const evidence of result.evidence) { addEvidence(snapshot, evidence); tool.evidenceIds.push(evidence.id); }
 }
 
-export async function discover(snapshot: Snapshot, store: Store, options: { stateDir: string; toolIds?: string[]; refresh?: boolean; limit?: number }) {
+export async function discover(snapshot: Snapshot, store: Store, options: { stateDir: string; toolIds?: string[]; refresh?: boolean; limit?: number; request?: typeof github }) {
   const path = join(options.stateDir, "discovery.json");
   const jobs = existsSync(path) ? readJson(path) as Record<string, Job> : {};
   const selected = snapshot.tools.filter((t) => !options.toolIds?.length || options.toolIds.includes(t.id));
@@ -131,7 +131,7 @@ export async function discover(snapshot: Snapshot, store: Store, options: { stat
       const job: Job = { status: "running", attemptedAt: new Date().toISOString(), ...(cached?.result ? { result: cached.result, succeededAt: cached.succeededAt } : {}) };
       jobs[repo] = job; writeJson(path, jobs);
       try {
-        job.result = await discoverRepo(repo, store, shared);
+        job.result = await discoverRepo(repo, store, shared, options.request ?? github);
         job.status = "succeeded"; job.succeededAt = new Date().toISOString();
         console.log(`Discovered ${repo}: ${job.result.ecosystems.join(", ") || "unrecognized"}`);
       } catch (error) {
@@ -139,7 +139,7 @@ export async function discover(snapshot: Snapshot, store: Store, options: { stat
         console.error(`Discovery failed for ${repo}: ${job.error}`);
       }
       for (const t of groups.get(repo)!) applyDiscovery(t, job, snapshot);
-      writeJson(path, jobs); store.save(snapshot);
+      writeJson(path, jobs);
     }
   }
   await Promise.all(Array.from({ length: 3 }, worker));

@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, renameSync, existsSync, writeFileSync, unlinkS
 import { hostname } from "node:os";
 import { dirname, join } from "node:path";
 import { gzipSync, gunzipSync } from "node:zlib";
-import { canonical, digest, finalize, validate } from "./core";
+import { canonical, digest, finalize, upgradeOperationalGap, validate } from "./core";
 import type { Evidence, Resolution, Snapshot } from "./types";
 
 export function writeJson(path: string, data: unknown) {
@@ -43,6 +43,7 @@ export class Store {
   }
 
   save(snapshot: Snapshot) {
+    snapshot.generatedAt = new Date().toISOString();
     finalize(snapshot);
     writeJson(join(this.directory, "snapshot.json"), snapshot);
   }
@@ -82,7 +83,7 @@ export function mergeResolution(snapshot: Snapshot, result: Resolution) {
   snapshot.occurrences.push(...result.occurrences);
   snapshot.edges.push(...result.edges);
   tool.resolution = "partial";
-  tool.gaps = tool.gaps.filter((g) => g.reason !== "No native dependency resolution has been imported.");
+  tool.gaps = tool.gaps.map(upgradeOperationalGap).filter((g) => g.code !== "native-resolution-missing");
   tool.gaps.push(...result.gaps);
   tool.evidenceIds.push(...result.profile.evidenceIds);
 }

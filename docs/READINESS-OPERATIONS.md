@@ -38,7 +38,9 @@ npm collection reads a committed v2/v3 lockfile, including workspace links and h
 
 Cargo collection checks out the pinned revision in `.readiness/sources/`, then runs `cargo metadata --locked --format-version 1 --filter-platform <target>`. It retains the command, toolchain, metadata, lockfile, and root manifest. Cargo must be installed. A missing/outdated lock or failed resolver produces a retryable resolution gap. Default features are used; custom feature profiles can be imported separately.
 
-Results are reused for unchanged requests. Use `--refresh` to deliberately rerun a collector, for example after changing the local toolchain. Source checkouts and job caches are disposable; retained evidence is not.
+Results are reused for unchanged requests. Cargo cache keys include the toolchain and configuration/environment fingerprints; changed resolver inputs invalidate reuse. Use `--refresh` to deliberately rerun a collector. Source checkouts and job caches are disposable; retained evidence is not.
+
+`npm run readiness -- refresh-native` refreshes all registered `collect` requests against the currently discovered source revisions. Unchanged inputs reuse retained profiles. One failed profile does not stop the others; failures remain gaps and the command exits unsuccessfully. Imported custom profiles are not converted into executable commands automatically.
 
 ### Import other native output
 
@@ -149,13 +151,15 @@ npm run test:readiness
 - `projects.json` unions downstream tools across package versions within known source namespaces. Forks and ambiguous sources stay separate.
 - `changes.json`, when generated for the current snapshot, supplies the website's snapshot comparison.
 - `replay` reconstructs native graph records from retained evidence, without network access.
+- Native output and configuration evidence have explicit roles. `rebuild-native` upgrades native graph records after an adapter change using retained evidence, and marks affected review packets for revalidation. It refuses to overwrite graphs containing manual relationships or decisions that need reconciliation.
 - Semantic digests exclude operational timestamps. Resolver inputs, command/toolchain, profile, and native output remain part of profile identity.
+- Required exposure takes precedence over optional exposure within a profile. A tool may still appear in both columns when it has different exposure in different profiles; project totals union tools rather than summing version counts.
 - A single-writer lock prevents concurrent collection commands from overwriting each other. Interrupted same-host locks are recovered when their process no longer exists.
 
 Profiles are historical, release-specific records. Refreshing discovery does not silently change old graphs or declare the newest release resolved. Collect a new profile for the new release. Tool-level resolution stays partial until supported configuration coverage has been established; a complete native profile does not establish complete tool coverage.
 
 ## Scheduled collection
 
-`.github/workflows/readiness.yml` refreshes discovery weekly and on manual dispatch. It validates data and uploads a review artifact with a snapshot comparison. It has read-only repository permission and does not commit, push, or create pull requests. Accepted snapshots and evidence are committed separately after review.
+`.github/workflows/readiness.yml` refreshes discovery and registered native profiles weekly and on manual dispatch. It validates data and uploads a review artifact with a snapshot comparison, including resolution failures. It has read-only repository permission and does not commit, push, or create pull requests. Accepted snapshots and evidence are committed separately after review.
 
-Scheduled jobs currently refresh source discovery only. Native collection and review passes are explicit tasks. Download review artifacts within their 90-day retention window; merged evidence is retained in git.
+Adding a new native profile and launching review passes remain explicit tasks. Download review artifacts within their 90-day retention window; merged evidence is retained in git.

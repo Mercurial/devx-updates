@@ -12,18 +12,21 @@ export function parseNativeInput(value: unknown): NativeInput {
   return v as unknown as NativeInput;
 }
 
-export function resolveNative(raw: unknown, input: NativeInput, evidenceIds: string[]): Resolution {
+export function resolveNative(raw: unknown, input: NativeInput, evidence: { native: string; configuration: string; supporting?: string[] }): Resolution {
   const data = object(raw, "native output");
-  const inputDigest = digest({ raw, input, adapterVersion: 1 });
+  const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: 2 });
+  const evidenceIds = [...new Set([evidence.native, evidence.configuration, ...(evidence.supporting ?? [])])].sort();
   const profileId = `profile:${input.toolId}:${inputDigest.slice(0, 24)}`;
   const result: Resolution = {
-    profile: { id: profileId, toolId: input.toolId, release: input.release, revision: input.revision, platform: input.platform, features: input.features, command: input.command, toolchain: input.toolchain, origin: input.origin, roots: [], inputDigest, evidenceIds, coverage: "complete" },
+    profile: { id: profileId, toolId: input.toolId, release: input.release, revision: input.revision, platform: input.platform, features: input.features, command: input.command, toolchain: input.toolchain, origin: input.origin, roots: [], inputDigest, evidenceIds, nativeEvidenceId: evidence.native, configurationEvidenceId: evidence.configuration, coverage: "complete" },
     artifacts: [], occurrences: [], edges: [], gaps: [],
   };
   const locators = new Map<string, string>();
+  const artifactIds = new Set<string>();
+  const edgeIds = new Set<string>();
   const addNode = (locator: string, name: string, version: string | null, source: string, integrity: string | null) => {
     const a = artifact({ ecosystem: input.adapter.split("-")[0], name, version, source, integrity });
-    if (!result.artifacts.some((existing) => existing.id === a.id)) result.artifacts.push(a);
+    if (!artifactIds.has(a.id)) { result.artifacts.push(a); artifactIds.add(a.id); }
     const id = `occurrence:${digest({ profileId, locator })}`;
     if (locators.has(locator)) throw new Error(`Duplicate native locator ${locator}`);
     result.occurrences.push({ id, artifactId: a.id, profileId, locator, evidenceIds }); locators.set(locator, id);
@@ -37,7 +40,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidenceIds: str
     if (!locators.has(to)) { missing(`Unresolved dependency ${to} from ${from}`); return; }
     const fields: Omit<Edge, "id"> = { from: locators.get(from)!, to: locators.get(to)!, type: "package", scope, optional, condition, constraint, verification: "verified", evidenceIds };
     const id = `edge:${digest(fields)}`;
-    if (!result.edges.some((e) => e.id === id)) result.edges.push({ id, ...fields });
+    if (!edgeIds.has(id)) { result.edges.push({ id, ...fields }); edgeIds.add(id); }
   };
 
   if (input.adapter === "npm-lock") {
@@ -84,6 +87,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidenceIds: str
     missing("Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.");
   } else if (input.adapter === "cargo-metadata") {
     const packages = list(data.packages, "packages").map((p) => object(p));
+    const packageById = new Map(packages.map((p) => [text(p.id), p]));
     const resolve = object(data.resolve, "resolve (do not use --no-deps)");
     const nodes = list(resolve.nodes, "resolve.nodes").map((n) => object(n));
     const members = new Set(list(data.workspace_members, "workspace_members").map((id) => text(id)));
@@ -96,12 +100,36 @@ export function resolveNative(raw: unknown, input: NativeInput, evidenceIds: str
       const from = text(node.id);
       for (const rawDep of list(node.deps, "node.deps")) {
         const dep = object(rawDep);
+        const dependencyName = text(dep.name, "dependency name");
+        const declarations = list(packageById.get(from)?.dependencies ?? []).map((d) => object(d));
+        const targetPackage = packageById.get(text(dep.pkg));
+        const libraryNames = list(targetPackage?.targets ?? []).map((t) => object(t)).filter((t) => list(t.kind ?? []).some((kind) => ["lib", "rlib", "proc-macro"].includes(String(kind)))).map((t) => text(t.name));
         for (const rawKind of list(dep.dep_kinds, "dep_kinds")) {
           const kind = object(rawKind);
           const scope = kind.kind === "build" ? "build" : kind.kind === "dev" ? "development" : "runtime";
-          addEdge(from, text(dep.pkg), scope, kind.target !== null, typeof kind.target === "string" ? kind.target : null);
+          const matching = declarations.filter((d) => {
+            const declaredName = text(d.rename ?? d.name).replace(/-/g, "_");
+            const nameMatches = declaredName === dependencyName.replace(/-/g, "_") || (!d.rename && d.name === targetPackage?.name && libraryNames.includes(dependencyName));
+            return nameMatches && (d.kind ?? null) === (kind.kind ?? null) && (d.target ?? null) === (kind.target ?? null);
+          });
+          const featureOptional = matching.length > 0 && matching.every((d) => d.optional === true);
+          const conditions = [typeof kind.target === "string" ? kind.target : null, featureOptional ? `feature-gated dependency ${dependencyName}` : null, !matching.length ? "dependency declaration unavailable; optionality unverified" : null].filter(Boolean);
+          if (!matching.length) missing(`Dependency declaration for ${dependencyName} from ${from} is absent; feature optionality is unverified.`);
+          addEdge(from, text(dep.pkg), scope, kind.target !== null || featureOptional || !matching.length, conditions.length ? conditions.join("; ") : null);
         }
       }
+    }
+    const resolutionIds = new Set(nodes.map((n) => text(n.id)));
+    const occurrenceById = new Map(result.occurrences.map((n) => [n.id, n]));
+    const outgoing = new Map<string, string[]>();
+    for (const edge of result.edges) outgoing.set(edge.from, [...(outgoing.get(edge.from) ?? []), edge.to]);
+    const reachable = [...result.profile.roots];
+    const visited = new Set<string>();
+    for (let i = 0; i < reachable.length; i++) {
+      const id = reachable[i]; if (visited.has(id)) continue; visited.add(id);
+      const occurrence = occurrenceById.get(id)!;
+      if (!resolutionIds.has(occurrence.locator)) missing(`Reachable package ${occurrence.locator} is missing its Cargo resolution node.`);
+      reachable.push(...(outgoing.get(id) ?? []));
     }
     if (!input.command.includes("--filter-platform")) missing("Cargo metadata has no declared --filter-platform; target applicability requires review.");
   } else {

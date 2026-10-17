@@ -6,10 +6,11 @@ import type { Graph } from "../../lib/map-types";
 import { canonical, finalize, inventory, object, text } from "../../lib/readiness/core";
 import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover, github } from "../../lib/readiness/discovery";
-import { collect } from "../../lib/readiness/collect";
+import { collect, refreshNative } from "../../lib/readiness/collect";
 import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
 import { acquireLock, addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
-import { exportPacket, importReview } from "../../lib/readiness/review";
+import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
+import { nativeEvidence, rebuildNative } from "../../lib/readiness/rebuild";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -38,11 +39,13 @@ discover        Discover pinned source and manifests via gh (resumes by default)
 import-native   --profile profile.json --input native-output.json
 collect         --tool id --adapter npm-lock|cargo-metadata --roots package,package
                 --platform target [--path manifest-path] [--refresh]
+refresh-native  Refresh registered collection profiles against discovered source revisions
 report          Emit coverage and impact reports in the data directory
 show            --tool id (coverage, manifests, and profiles)
 candidates      List discovered root npm locks and Cargo lockfiles for pilot collection
 validate        Validate snapshot, references, semantic digest, and evidence checksums
 replay          Reconstruct native profiles from retained evidence and compare graph records
+rebuild-native  Upgrade native graph records using retained inputs (no network)
 capture-source  --tool id --path source-file (retain pinned source for citations)
 export-review   --tools id,id --output .readiness/reviews/name
 import-review   --packet packet.json --input result.json [--decisions decisions.json]
@@ -67,7 +70,7 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
           Object.assign(tool, existing, { name: tool.name, maintainer: tool.maintainer, catalogRepo: tool.catalogRepo, registryHint: tool.registryHint, packageHint: tool.packageHint, ...(changedSource ? { repo: tool.repo } : {}) });
         }
       }
-      Object.assign(next, { profiles: previous.profiles, artifacts: previous.artifacts, occurrences: previous.occurrences, edges: previous.edges, evidence: previous.evidence, decisions: previous.decisions });
+      Object.assign(next, { profiles: previous.profiles, artifacts: previous.artifacts, occurrences: previous.occurrences, edges: previous.edges, evidence: previous.evidence, decisions: previous.decisions, ...(previous.collections ? { collections: previous.collections } : {}) });
       if (previous.catalogDigest === next.catalogDigest) next.catalogRevision = previous.catalogRevision;
     }
     store.save(next);
@@ -82,17 +85,23 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
   } else if (command === "collect") {
     if (!values.tool || !values.roots || !values.platform || !["npm-lock", "cargo-metadata"].includes(values.adapter ?? "")) throw new Error("collect requires --tool, --adapter npm-lock|cargo-metadata, --roots, and --platform");
     await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as "npm-lock" | "cargo-metadata", roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh });
+  } else if (command === "refresh-native") {
+    const summary = await refreshNative(snapshot, store, values.state!, values.refresh);
+    console.log(JSON.stringify(summary));
+    if (summary.failed) process.exitCode = 1;
   } else if (command === "import-native") {
     const input = parseNativeInput(readJson(required("profile")));
     const raw = readJson(required("input"));
     const nativeEvidence = store.evidence(raw, `${input.adapter} for ${input.toolId} ${input.release}`);
     const profileEvidence = store.evidence(input, "Native collection profile and command");
-    const result = resolveNative(raw, input, [nativeEvidence.id, profileEvidence.id]);
+    const result = resolveNative(raw, input, { native: nativeEvidence.id, configuration: profileEvidence.id });
     addEvidence(snapshot, nativeEvidence); addEvidence(snapshot, profileEvidence);
     mergeResolution(snapshot, result); store.save(snapshot);
     console.log(`Imported ${result.occurrences.length} occurrences and ${result.edges.length} edges; profile coverage ${result.profile.coverage}`);
   } else if (command === "report") {
     finalize(snapshot);
+    const reviewPath = join(store.directory, "reviews.json");
+    if (existsSync(reviewPath)) writeJson(reviewPath, reconcileReviewQueue(snapshot, readJson(reviewPath) as ReviewQueueEntry[]));
     const report = {
       snapshot: snapshot.semanticDigest,
       tools: snapshot.tools.length,
@@ -144,14 +153,23 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     store.verify(snapshot); console.log(`Validated ${snapshot.tools.length} tools, ${snapshot.profiles.length} profiles, ${snapshot.evidence.length} evidence objects.`);
   } else if (command === "replay") {
     for (const profile of snapshot.profiles) {
-      const evidence = profile.evidenceIds.map((id) => snapshot.evidence.find((e) => e.id === id)!);
-      const replayed = resolveNative(store.readEvidence(evidence[0]), parseNativeInput(store.readEvidence(evidence[1])), profile.evidenceIds);
+      const roles = nativeEvidence(profile);
+      const evidence = (id: string) => store.readEvidence(snapshot.evidence.find((e) => e.id === id)!);
+      const replayed = resolveNative(evidence(roles.native), parseNativeInput(evidence(roles.configuration)), roles);
       if (canonical(replayed.profile) !== canonical(profile)) throw new Error(`Profile replay mismatch ${profile.id}`);
       for (const key of ["artifacts", "occurrences", "edges"] as const) for (const record of replayed[key]) {
         if (canonical(snapshot[key].find((r) => r.id === record.id)) !== canonical(record)) throw new Error(`Replay mismatch ${record.id}`);
       }
     }
     console.log(`Replayed ${snapshot.profiles.length} native profiles with identical graph records.`);
+  } else if (command === "rebuild-native") {
+    const next = rebuildNative(snapshot, store);
+    store.save(next);
+    const path = join(store.directory, "reviews.json");
+    if (existsSync(path)) {
+      writeJson(path, reconcileReviewQueue(next, readJson(path) as ReviewQueueEntry[]));
+    }
+    console.log("Rebuilt native graphs from retained evidence. Export fresh review packets for changed contexts.");
   } else if (command === "diff") {
     const before = values["before-ref"] ? JSON.parse(execFileSync("git", ["show", `${values["before-ref"]}:data/readiness/snapshot.json`], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 })) as typeof snapshot : readJson(required("before")) as typeof snapshot;
     const changes = compareSnapshots(before, snapshot);

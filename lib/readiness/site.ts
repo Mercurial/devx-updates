@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import { calculateImpact, type compareSnapshots } from "./impact";
 import { readJson, Store } from "./store";
 import type { Snapshot } from "./types";
+import { reconcileReviewQueue, type ReviewQueueEntry } from "./review";
 
 let cached: Snapshot | undefined;
 let impacts: ReturnType<typeof calculateImpact> | undefined;
@@ -19,7 +20,7 @@ export function readinessImpacts() {
 
 export function reviewQueue(): { packetId: string; toolIds: string[]; status: string }[] {
   const path = join(process.cwd(), "data/readiness/reviews.json");
-  return existsSync(path) ? readJson(path) as ReturnType<typeof reviewQueue> : [];
+  return existsSync(path) ? reconcileReviewQueue(readinessSnapshot(), readJson(path) as ReviewQueueEntry[]) : [];
 }
 
 export function readinessChanges(): ReturnType<typeof compareSnapshots> | null {

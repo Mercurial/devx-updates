@@ -30,8 +30,20 @@ export function list(value: unknown, label = "value"): unknown[] {
   return value;
 }
 
-export function gap(area: Gap["area"], reason: string, nextAction: string, profileId?: string): Gap {
-  return { id: `gap:${digest({ area, reason, profileId }).slice(0, 24)}`, area, reason, nextAction, ...(profileId ? { profileId } : {}) };
+export function gap(area: Gap["area"], reason: string, nextAction: string, profileId?: string, code?: string): Gap {
+  return { id: `gap:${digest({ area, ...(code ? { code } : { reason }), profileId }).slice(0, 24)}`, area, reason, nextAction, ...(profileId ? { profileId } : {}), ...(code ? { code } : {}) };
+}
+
+/** Upgrade identifiers used by the initial committed snapshot without rewriting its evidence. */
+export function upgradeOperationalGap(value: Gap): Gap {
+  const codes: Record<string, string> = {
+    "gap:184fa78848aac8ee996bf356": "native-resolution-missing",
+    "gap:08a4850a1570505e3dd508a0": "integration-unreviewed",
+    "gap:e0b80a82a98d351ea1a5699b": "capabilities-unreviewed",
+  };
+  const oldFailure = value.reason.match(/^Collection failed \(([^)]+)\):/);
+  const code = value.code ?? codes[value.id] ?? (oldFailure ? `native-collection-failed:${oldFailure[1]}` : undefined);
+  return code ? gap(value.area, value.reason, value.nextAction, value.profileId, code) : value;
 }
 
 export function artifact(fields: Omit<Artifact, "id">): Artifact {
@@ -46,9 +58,9 @@ export function inventory(catalog: Graph, revision: string, now = new Date().toI
     readiness: "unassessed", manifests: [], evidenceIds: [],
     gaps: [
       gap("artifact", node.repo ? "Release and source identity have not been verified." : "No repository is identified in the catalog.", "Discover published artifacts and pin the release source."),
-      gap("resolution", "No native dependency resolution has been imported.", "Collect a native resolution for a declared release/profile."),
-      gap("integration", "Runtime, bundled, and service dependencies have not been reviewed.", "Export a discovery review packet."),
-      gap("capability", "Chain-facing capabilities have not been reviewed.", "Review production entry points and integration behavior."),
+      gap("resolution", "No native dependency resolution has been imported.", "Collect a native resolution for a declared release/profile.", undefined, "native-resolution-missing"),
+      gap("integration", "Runtime, bundled, and service dependencies have not been reviewed.", "Export a discovery review packet.", undefined, "integration-unreviewed"),
+      gap("capability", "Chain-facing capabilities have not been reviewed.", "Review production entry points and integration behavior.", undefined, "capabilities-unreviewed"),
     ],
   }));
   const snapshot: Snapshot = { schemaVersion: 1, catalogDigest: digest(catalog), catalogRevision: revision, semanticDigest: "", generatedAt: now, tools, profiles: [], artifacts: [], occurrences: [], edges: [], evidence: [], decisions: [] };
@@ -56,6 +68,7 @@ export function inventory(catalog: Graph, revision: string, now = new Date().toI
 }
 
 export function finalize(snapshot: Snapshot): Snapshot {
+  snapshot.collections?.sort((a, b) => `${a.toolId}:${a.key}`.localeCompare(`${b.toolId}:${b.key}`, "en"));
   for (const values of [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions]) {
     values.sort((a, b) => a.id.localeCompare(b.id, "en"));
   }
@@ -82,6 +95,7 @@ export function validate(snapshot: Snapshot): void {
     return ids;
   });
   const [tools, profiles, artifacts, occurrences, edges, evidence] = indexes;
+  const occurrenceById = new Map(snapshot.occurrences.map((n) => [n.id, n]));
   function refs(ids: string[], index: Set<string>, label: string) {
     for (const id of ids) if (!index.has(id)) throw new Error(`Unknown ${label}: ${id}`);
   }
@@ -94,8 +108,10 @@ export function validate(snapshot: Snapshot): void {
   }
   for (const p of snapshot.profiles) {
     refs([p.toolId], tools, "tool"); refs(p.roots, occurrences, "root"); refs(p.evidenceIds, evidence, "evidence");
+    if (p.nativeEvidenceId) refs([p.nativeEvidenceId], evidence, "native evidence");
+    if (p.configurationEvidenceId) refs([p.configurationEvidenceId], evidence, "configuration evidence");
     if (!p.roots.length) throw new Error("A resolved profile must have roots");
-    for (const root of p.roots) if (snapshot.occurrences.find((n) => n.id === root)?.profileId !== p.id) throw new Error("Root belongs to another profile");
+    for (const root of p.roots) if (occurrenceById.get(root)?.profileId !== p.id) throw new Error("Root belongs to another profile");
   }
   for (const n of snapshot.occurrences) {
     refs([n.artifactId], artifacts, "artifact"); refs([n.profileId], profiles, "profile"); refs(n.evidenceIds, evidence, "evidence");
@@ -106,9 +122,10 @@ export function validate(snapshot: Snapshot): void {
     if (!["verified", "suggested", "disputed", "rejected"].includes(e.verification)) throw new Error("Invalid verification state");
     if (!["runtime", "build", "development"].includes(e.scope)) throw new Error("Invalid dependency scope");
     if (typeof e.optional !== "boolean") throw new Error("Invalid optionality");
-    const from = snapshot.occurrences.find((n) => n.id === e.from)!;
-    const to = snapshot.occurrences.find((n) => n.id === e.to)!;
+    const from = occurrenceById.get(e.from)!;
+    const to = occurrenceById.get(e.to)!;
     if (from.profileId !== to.profileId) throw new Error("Edges cannot cross resolution profiles");
   }
   for (const d of snapshot.decisions) { refs([d.edgeId], edges, "edge"); refs(d.evidenceIds, evidence, "evidence"); }
+  for (const c of snapshot.collections ?? []) { refs([c.toolId], tools, "tool"); refs([c.profileId], profiles, "profile"); refs([c.evidenceId], evidence, "evidence"); }
 }

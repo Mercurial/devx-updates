@@ -3,21 +3,21 @@ import { join } from "node:path";
 import { artifact, canonical, digest, finalize, gap, list, object, text } from "./core";
 import { addEvidence, readJson, Store, writeJson } from "./store";
 import type { Edge, Snapshot, Verification } from "./types";
+import { toolSubgraph } from "./graph";
+
+export interface ReviewQueueEntry { packetId: string; toolIds: string[]; status: string }
+
+export function reconcileReviewQueue(snapshot: Snapshot, entries: ReviewQueueEntry[]): ReviewQueueEntry[] {
+  return entries.map((entry) => entry.status === "pending" && entry.packetId !== reviewPacket(snapshot, entry.toolIds).packetId ? { ...entry, status: "needs-revalidation" } : entry);
+}
 
 export function reviewPacket(snapshot: Snapshot, toolIds: string[]) {
-  const tools = snapshot.tools.filter((t) => toolIds.includes(t.id)).map(({ lastAttempt, lastSuccess, ...tool }) => {
+  const graph = toolSubgraph(snapshot, toolIds);
+  const tools = graph.tools.map(({ lastAttempt, lastSuccess, ...tool }) => {
     void lastAttempt; void lastSuccess; return tool;
   });
   if (!tools.length || new Set(toolIds).size !== tools.length) throw new Error("Select unique known tools for review");
-  const profiles = snapshot.profiles.filter((p) => toolIds.includes(p.toolId));
-  const profileIds = new Set(profiles.map((p) => p.id));
-  const occurrences = snapshot.occurrences.filter((n) => profileIds.has(n.profileId));
-  const nodeIds = new Set(occurrences.map((n) => n.id));
-  const artifactIds = new Set(occurrences.map((n) => n.artifactId));
-  const edges = snapshot.edges.filter((e) => nodeIds.has(e.from));
-  const evidenceIds = new Set([...tools.flatMap((t) => t.evidenceIds), ...profiles.flatMap((p) => p.evidenceIds), ...edges.flatMap((e) => e.evidenceIds)]);
-  const evidence = snapshot.evidence.filter((e) => evidenceIds.has(e.id));
-  const context = { tools, profiles, occurrences, artifacts: snapshot.artifacts.filter((a) => artifactIds.has(a.id)), edges, evidence };
+  const context = { ...graph, tools };
   const inputDigest = digest(context);
   return { schemaVersion: 1, taskBriefVersion: 1, packetId: `packet:${inputDigest}`, inputDigest, toolIds: [...toolIds].sort(), context };
 }
@@ -30,8 +30,10 @@ export function exportPacket(snapshot: Snapshot, store: Store, toolIds: string[]
   writeJson(join(output, "result-template.json"), { packetId: packet.packetId, inputDigest: packet.inputDigest, completion: "partial", inspectedAreas: [], unreviewedAreas: ["Fill in remaining coverage"], findings: [] });
   writeFileSync(join(output, "TASKS.md"), readFileSync("docs/DEPENDENCY-REVIEW-TASKS.md", "utf8"));
   const indexPath = join(store.directory, "reviews.json");
-  const index = existsSync(indexPath) ? readJson(indexPath) as { packetId: string; toolIds: string[]; status: string }[] : [];
-  if (!index.some((r) => r.packetId === packet.packetId)) index.push({ packetId: packet.packetId, toolIds: packet.toolIds, status: "pending" });
+  const index = reconcileReviewQueue(snapshot, existsSync(indexPath) ? readJson(indexPath) as ReviewQueueEntry[] : []);
+  const existing = index.find((r) => r.packetId === packet.packetId);
+  if (!existing) index.push({ packetId: packet.packetId, toolIds: packet.toolIds, status: "pending" });
+  else if (existing.status === "needs-revalidation") existing.status = "pending";
   writeJson(indexPath, index);
   return packet;
 }

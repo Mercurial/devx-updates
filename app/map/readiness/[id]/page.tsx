@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Download from "@/components/readiness/Download";
 import DependencyTree from "@/components/readiness/DependencyTree";
 import { readinessSnapshot } from "@/lib/readiness/site";
+import { toolSubgraph } from "@/lib/readiness/graph";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return readinessSnapshot().tools.map((t) => ({ id: t.id })); }
@@ -17,15 +18,9 @@ export default async function ToolReadinessPage({ params }: { params: Promise<{ 
   const snapshot = readinessSnapshot();
   const tool = snapshot.tools.find((t) => t.id === id);
   if (!tool) notFound();
-  const profiles = snapshot.profiles.filter((p) => p.toolId === id);
-  const occurrences = snapshot.occurrences.filter((n) => profiles.some((p) => p.id === n.profileId));
-  const occurrenceIds = new Set(occurrences.map((n) => n.id));
-  const artifactIds = new Set(occurrences.map((n) => n.artifactId));
-  const artifacts = snapshot.artifacts.filter((a) => artifactIds.has(a.id));
-  const edges = snapshot.edges.filter((e) => occurrenceIds.has(e.from));
-  const evidenceIds = new Set([...tool.evidenceIds, ...profiles.flatMap((p) => p.evidenceIds), ...edges.flatMap((e) => e.evidenceIds)]);
-  const evidence = snapshot.evidence.filter((e) => evidenceIds.has(e.id));
-  const graph = { profiles, occurrences, artifacts, edges, evidence };
+  const { tools: _tools, ...graph } = toolSubgraph(snapshot, [id]);
+  void _tools;
+  const { evidence } = graph;
   return <div className="map-view" style={{ overflow: "visible" }}><div className="mx-auto max-w-6xl space-y-7 px-4 py-7 sm:px-8">
     <div className="flex flex-wrap items-center justify-between gap-3"><Link href="/map/readiness">← All tool coverage</Link><Nav /></div>
     <header><p className="mb-2 text-sm text-muted">{tool.maintainer} · {tool.ecosystems.join(" / ") || "Ecosystem unresolved"}</p><h1 className="break-words font-display text-3xl font-semibold">{tool.name}</h1><p className="mt-3 text-muted">Hardfork readiness: <strong className="text-foreground">unassessed</strong>. Dependency evidence below does not establish compatibility.</p></header>

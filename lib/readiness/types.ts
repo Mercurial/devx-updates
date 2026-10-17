@@ -17,6 +17,7 @@ export interface Gap {
   reason: string;
   nextAction: string;
   profileId?: string;
+  code?: string;
 }
 
 export interface Profile {
@@ -32,6 +33,8 @@ export interface Profile {
   roots: string[];
   inputDigest: string;
   evidenceIds: string[];
+  nativeEvidenceId?: string;
+  configurationEvidenceId?: string;
   coverage: Coverage;
 }
 
@@ -113,6 +116,7 @@ export interface Snapshot {
   edges: Edge[];
   evidence: Evidence[];
   decisions: Decision[];
+  collections?: { key: string; toolId: string; profileId: string; evidenceId: string }[];
 }
 
 export interface NativeInput {

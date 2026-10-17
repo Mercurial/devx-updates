@@ -8,7 +8,7 @@ import { inventory } from "./core";
 import { resolveNative } from "./adapters";
 import { acquireLock, addEvidence, mergeResolution, Store } from "./store";
 import { calculateImpact } from "./impact";
-import { importReview, reviewPacket } from "./review";
+import { importReview, reconcileReviewQueue, reviewPacket } from "./review";
 
 function fixture() {
   const directory = mkdtempSync(join(tmpdir(), "readiness-review-"));
@@ -18,7 +18,7 @@ function fixture() {
   addEvidence(snapshot, source); snapshot.tools[0].evidenceIds.push(source.id);
   const native = { name: "tool", lockfileVersion: 3, packages: { "": { name: "tool", version: "1.0.0" } } };
   const nativeEvidence = store.evidence(native, "Native lock"); addEvidence(snapshot, nativeEvidence);
-  mergeResolution(snapshot, resolveNative(native, { toolId: "tool", adapter: "npm-lock", release: "1.0.0", revision: "a".repeat(40), command: "npm", toolchain: "npm 10", platform: "all", features: [], rootNames: ["tool"], origin: "source-reconstruction" }, [nativeEvidence.id]));
+  mergeResolution(snapshot, resolveNative(native, { toolId: "tool", adapter: "npm-lock", release: "1.0.0", revision: "a".repeat(40), command: "npm", toolchain: "npm 10", platform: "all", features: [], rootNames: ["tool"], origin: "source-reconstruction" }, { native: nativeEvidence.id, configuration: nativeEvidence.id }));
   const packet = reviewPacket(snapshot, ["tool"]);
   const finding = { id: "f1", toolId: "tool", kind: "relationship", rationale: "Production entry point connects to provider", from: snapshot.profiles[0].roots[0], target: { ecosystem: "service", name: "Provider", version: null, source: "https://provider.example/api", integrity: null }, type: "service", scope: "runtime", optional: false, condition: null, citations: [{ evidenceId: source.id, pointer: "/content", quote: "connect('https://provider.example/api')" }] };
   const result = { packetId: packet.packetId, inputDigest: packet.inputDigest, completion: "complete", inspectedAreas: ["entry point"], unreviewedAreas: ["provider deployment"], findings: [finding] };
@@ -76,5 +76,16 @@ test("a single writer protects shared snapshot state", () => {
     const release = acquireLock(directory);
     assert.throws(() => acquireLock(directory), /in use/);
     release(); acquireLock(directory)();
+  } finally { rmSync(directory, { recursive: true }); }
+});
+
+test("pending review packets are marked stale when their evidence context changes", () => {
+  const { directory, snapshot, packet } = fixture();
+  try {
+    const index = [{ packetId: packet.packetId, toolIds: ["tool"], status: "pending" }];
+    assert.equal(reconcileReviewQueue(snapshot, index)[0].status, "pending");
+    snapshot.tools[0].revision = "b".repeat(40);
+    assert.equal(reconcileReviewQueue(snapshot, index)[0].status, "needs-revalidation");
+    assert.equal(index[0].status, "pending", "queue reconciliation does not mutate the input");
   } finally { rmSync(directory, { recursive: true }); }
 });

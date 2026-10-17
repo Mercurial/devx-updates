@@ -32,6 +32,14 @@ jobs:
         run: |
           npm run readiness -- inventory
           npm run readiness -- discover --refresh
+      - name: Refresh registered native profiles
+        id: native
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: npm run readiness -- refresh-native
+      - name: Validate and compare collected evidence
+        run: |
           npm run readiness -- report
           npm run readiness -- diff --before /tmp/readiness-before.json --output data/readiness/changes.json
           npm run readiness -- validate
@@ -43,3 +51,6 @@ jobs:
           name: readiness-discovery-${{ github.run_id }}
           path: data/readiness/
           retention-days: 90
+      - name: Surface native resolution failures
+        if: steps.native.outcome == 'failure'
+        run: exit 1
