@@ -22,6 +22,10 @@ This checklist records delivered behavior and verification, not just code starte
 - Cabal plan import is implemented and fixture-tested; a real Haskell pilot remains follow-up work because Cabal is unavailable in the current environment. Other ecosystems are detected and queued rather than treated as resolved.
 - Evidence storage decision: retain content-addressed compressed JSON evidence in `data/readiness/evidence/`, alongside the normalized snapshot. Local resumable state and source checkouts live in ignored `.readiness/`. This initial implementation uses repository retention rather than an external artifact store.
 - Foundation verification: 10 behavior tests cover closure/context separation, workspace links, missing dependencies, cycles, diamond paths, evidence replay, optional/build/test scope, and suggested reach. Type checking and scoped lint pass. CLI `replay` reconstructs native graph records from retained inputs.
+- Review and refresh milestone: packet export, pinned source capture, checked JSON citations, transactional result import, decision history, and stale-input rejection are implemented. The Oura discovery packet is prepared locally. Manual review findings remain pending until returned; no review service is invoked.
+- Discovery now normalizes GitHub URLs and records repository redirects as identity questions. A follow-up run discovers 227 tools; 42 retain unresolved source/discovery coverage. Original catalog references are preserved.
+- Operations: a single-writer lock protects snapshot updates. The weekly read-only workflow refreshes discovery, validates/replays retained evidence, and uploads a review artifact with a comparison. Native-profile refresh is still explicitly invoked. `docs/READINESS-OPERATIONS.md` documents the commands and current adapter boundaries.
+- Verification expanded to 15 passing behavior tests, including citation rejection, stale packets, suggestion promotion, idempotent review import, and writer exclusion. Catalog-wide native resolution, capability classification, and returned manual integration reviews remain open work within phase 3.
 
 ## 1. Objective
 

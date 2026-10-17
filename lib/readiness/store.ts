@@ -1,4 +1,5 @@
-import { mkdirSync, readFileSync, renameSync, existsSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, renameSync, existsSync, writeFileSync, unlinkSync } from "node:fs";
+import { hostname } from "node:os";
 import { dirname, join } from "node:path";
 import { gzipSync, gunzipSync } from "node:zlib";
 import { canonical, digest, finalize, validate } from "./core";
@@ -13,6 +14,21 @@ export function writeJson(path: string, data: unknown) {
 
 export function readJson(path: string): unknown {
   return JSON.parse(readFileSync(path, "utf8"));
+}
+
+export function acquireLock(directory: string): () => void {
+  mkdirSync(directory, { recursive: true });
+  const path = join(directory, ".writer-lock.json");
+  if (existsSync(path)) {
+    const lock = readJson(path) as { pid: number; host: string };
+    if (lock.host !== hostname()) throw new Error("Collection directory is locked on another host");
+    let running = true;
+    try { process.kill(lock.pid, 0); } catch (error) { if ((error as NodeJS.ErrnoException).code === "ESRCH") running = false; }
+    if (running) throw new Error(`Collection directory is in use by process ${lock.pid}`);
+    unlinkSync(path);
+  }
+  writeFileSync(path, JSON.stringify({ pid: process.pid, host: hostname() }), { flag: "wx" });
+  return () => unlinkSync(path);
 }
 
 export class Store {

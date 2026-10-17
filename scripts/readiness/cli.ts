@@ -3,12 +3,13 @@ import { existsSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { parseArgs } from "node:util";
 import type { Graph } from "../../lib/map-types";
-import { canonical, finalize, inventory } from "../../lib/readiness/core";
+import { canonical, finalize, inventory, object, text } from "../../lib/readiness/core";
 import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
-import { discover } from "../../lib/readiness/discovery";
+import { discover, github } from "../../lib/readiness/discovery";
 import { collect } from "../../lib/readiness/collect";
 import { calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
-import { addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
+import { acquireLock, addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
+import { exportPacket, importReview } from "../../lib/readiness/review";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -17,6 +18,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   tools: { type: "string" }, limit: { type: "string" }, refresh: { type: "boolean" },
   profile: { type: "string" }, input: { type: "string" }, output: { type: "string" }, before: { type: "string" },
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
+  packet: { type: "string" }, decisions: { type: "string" },
 } });
 
 const store = new Store(resolve(values.directory!));
@@ -40,6 +42,9 @@ show            --tool id (coverage, manifests, and profiles)
 candidates      List discovered root npm locks and Cargo lockfiles for pilot collection
 validate        Validate snapshot, references, semantic digest, and evidence checksums
 replay          Reconstruct native profiles from retained evidence and compare graph records
+capture-source  --tool id --path source-file (retain pinned source for citations)
+export-review   --tools id,id --output .readiness/reviews/name
+import-review   --packet packet.json --input result.json [--decisions decisions.json]
 diff            --before old-snapshot.json [--output changes.json]
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
@@ -56,7 +61,10 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
       if (previous.tools.some((t) => !next.tools.some((n) => n.id === t.id))) throw new Error("Catalog removed tools; archive the previous snapshot and reconcile removals explicitly.");
       for (const tool of next.tools) {
         const existing = previous.tools.find((t) => t.id === tool.id);
-        if (existing) Object.assign(tool, existing, { name: tool.name, maintainer: tool.maintainer });
+        if (existing) {
+          const changedSource = existing.catalogRepo !== undefined && existing.catalogRepo !== tool.catalogRepo;
+          Object.assign(tool, existing, { name: tool.name, maintainer: tool.maintainer, catalogRepo: tool.catalogRepo, registryHint: tool.registryHint, packageHint: tool.packageHint, ...(changedSource ? { repo: tool.repo } : {}) });
+        }
       }
       Object.assign(next, { profiles: previous.profiles, artifacts: previous.artifacts, occurrences: previous.occurrences, edges: previous.edges, evidence: previous.evidence, decisions: previous.decisions });
       if (previous.catalogDigest === next.catalogDigest) next.catalogRevision = previous.catalogRevision;
@@ -100,6 +108,32 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
     console.log(JSON.stringify(snapshot.tools.filter((t) => t.manifests.includes("package-lock.json") || t.manifests.includes("Cargo.lock")).map((t) => ({ id: t.id, packageHint: t.packageHint, release: t.release, locks: t.manifests.filter((p) => ["package-lock.json", "Cargo.lock"].includes(p)) })), null, 2));
+  } else if (command === "capture-source") {
+    const tool = snapshot.tools.find((t) => t.id === values.tool);
+    const path = values.path;
+    if (!tool?.revision || !tool.repo || !path || path.split("/").some((p) => !p || p === "." || p === "..")) throw new Error("Select a discovered --tool and a relative --path");
+    const blob = object(await github(`repos/${tool.repo}/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${tool.revision}`));
+    if (blob.encoding !== "base64") throw new Error("Expected a source file with base64 content");
+    const evidence = store.evidence({ repo: tool.repo, revision: tool.revision, path, content: Buffer.from(text(blob.content), "base64").toString("utf8") }, `Source ${tool.id}/${path}`, `https://github.com/${tool.repo}/blob/${tool.revision}/${path}`);
+    addEvidence(snapshot, evidence); tool.evidenceIds.push(evidence.id); store.save(snapshot);
+    console.log(`Captured ${evidence.id}; cite /content with an exact excerpt`);
+  } else if (command === "export-review") {
+    if (!values.tools) throw new Error("--tools is required");
+    const packet = exportPacket(snapshot, store, values.tools.split(","), required("output"));
+    console.log(`Exported ${packet.packetId}; manual tasks and result template are in ${values.output}`);
+  } else if (command === "import-review") {
+    if (!values.packet) throw new Error("--packet is required");
+    const packet = readJson(values.packet);
+    const next = importReview(snapshot, store, packet, readJson(required("input")), values.decisions ? readJson(values.decisions) : undefined);
+    store.save(next);
+    const path = join(store.directory, "reviews.json");
+    if (existsSync(path)) {
+      const index = readJson(path) as { packetId: string; status: string }[];
+      const entry = index.find((r) => r.packetId === object(packet).packetId);
+      if (entry) entry.status = values.decisions ? "decisions-recorded" : "findings-returned";
+      writeJson(path, index);
+    }
+    console.log(`Imported review; compatibility remains unassessed`);
   } else if (command === "show") {
     const tool = snapshot.tools.find((t) => t.id === values.tool);
     if (!tool) throw new Error("Select a known --tool");
@@ -123,4 +157,10 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
   } else throw new Error(`Unknown command ${command}; use help`);
 }
 
-main().catch((error) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
+async function run() {
+  const readOnly = ["help", "show", "candidates", "validate", "replay", "diff"].includes(positionals[0] ?? "help");
+  const release = readOnly ? () => {} : acquireLock(store.directory);
+  try { await main(); } finally { release(); }
+}
+
+run().catch((error) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });

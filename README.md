@@ -6,3 +6,4 @@ This website contains the information and updates IOG's Developer Proposal Initi
 
 - [Dependency mapping and hardfork readiness](docs/HARDFORK-READINESS-PLAN.md): features, assumptions, architecture, and development milestones.
 - [Dependency review task briefs](docs/DEPENDENCY-REVIEW-TASKS.md): manually launched discovery, challenge, and evidence-verification tasks.
+- [Readiness operations](docs/READINESS-OPERATIONS.md): collection, native profiles, review packets, evidence replay, and scheduled discovery.

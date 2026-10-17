@@ -40,7 +40,7 @@ export function artifact(fields: Omit<Artifact, "id">): Artifact {
 
 export function inventory(catalog: Graph, revision: string, now = new Date().toISOString()): Snapshot {
   const tools: Tool[] = catalog.nodes.map((node) => ({
-    id: node.id, name: node.name, repo: node.repo, maintainer: node.team,
+    id: node.id, name: node.name, repo: node.repo, catalogRepo: node.repo, maintainer: node.team,
     registryHint: node.packageRegistry ?? null, packageHint: node.packageName ?? null,
     ecosystems: [], artifact: "unresolved", resolution: "unresolved", integration: "unresolved", capability: "unresolved",
     readiness: "unassessed", manifests: [], evidenceIds: [],

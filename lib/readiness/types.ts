@@ -39,6 +39,7 @@ export interface Tool {
   id: string;
   name: string;
   repo: string | null;
+  catalogRepo?: string | null;
   maintainer: string;
   registryHint: string | null;
   packageHint: string | null;

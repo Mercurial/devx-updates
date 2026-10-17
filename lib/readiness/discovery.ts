@@ -8,6 +8,11 @@ import type { Ecosystem, Evidence, Snapshot, Tool } from "./types";
 
 const exec = promisify(execFile);
 
+export function repositoryReference(raw: string): string | null {
+  const candidate = raw.replace(/^https?:\/\/(www\.)?github\.com\//i, "").replace(/^github\.com\//i, "").replace(/\/$/, "").replace(/\.git$/, "");
+  return /^[a-z\d-]+\/[\w.-]+$/i.test(candidate) ? candidate : null;
+}
+
 export function detectManifests(paths: string[]): { manifests: string[]; ecosystems: Ecosystem[]; reviewFiles: string[] } {
   const patterns: [Ecosystem, RegExp][] = [
     ["npm", /(^|\/)(package\.json|package-lock\.json|yarn\.lock|pnpm-lock\.yaml)$/],
@@ -51,10 +56,14 @@ interface Job {
   result?: Discovery;
 }
 
-async function discoverRepo(repo: string, store: Store): Promise<Discovery> {
-  if (!/^[\w.-]+\/[\w.-]+$/.test(repo)) throw new Error(`Unsupported repository identity: ${repo}`);
-  const metadata = object(await github(`repos/${repo}`));
+async function discoverRepo(repo: string, store: Store, shared: Map<string, Promise<Discovery>>): Promise<Discovery> {
+  const reference = repositoryReference(repo);
+  if (!reference) throw new Error(`No GitHub source repository in catalog reference: ${repo}`);
+  const metadata = object(await github(`repos/${reference}`));
   const canonicalRepo = text(metadata.full_name);
+  const cached = shared.get(canonicalRepo.toLowerCase());
+  if (cached) return cached;
+  const pending = (async () => {
   let release: Record<string, unknown> | undefined;
   try { release = object(await github(`repos/${canonicalRepo}/releases/latest`)); }
   catch (error) { if (!String(error).includes("404")) throw error; }
@@ -69,6 +78,9 @@ async function discoverRepo(repo: string, store: Store): Promise<Discovery> {
     store.evidence(tree, "Pinned repository tree for manifest and integration discovery", sourceUrl),
   ];
   return { repo: canonicalRepo, release: release ? ref : `unreleased:${ref}`, releaseUrl: release ? text(release.html_url) : sourceUrl, revision, stable: !!release, truncated: tree.truncated === true, ...detectManifests(paths), evidence };
+  })();
+  shared.set(canonicalRepo.toLowerCase(), pending);
+  return pending;
 }
 
 function applyDiscovery(tool: Tool, job: Job, snapshot: Snapshot) {
@@ -83,11 +95,14 @@ function applyDiscovery(tool: Tool, job: Job, snapshot: Snapshot) {
   tool.lastSuccess = job.succeededAt;
   delete tool.discoveryError;
   const previousRevision = tool.revision;
+  tool.catalogRepo ??= tool.repo;
   tool.repo = result.repo; tool.release = result.release; tool.revision = result.revision; tool.releaseUrl = result.releaseUrl;
   tool.manifests = result.manifests; tool.ecosystems = result.ecosystems;
   tool.artifact = "partial";
   tool.gaps = tool.gaps.filter((g) => g.area !== "artifact" && g.area !== "discovery");
   tool.gaps.push(gap("artifact", result.stable ? "Source release identified; published package/binary correspondence and supported profiles need verification." : "No GitHub stable release was found; default-branch source is discovery evidence only.", "Confirm distribution artifacts and production configuration with release evidence."));
+  const original = tool.catalogRepo && repositoryReference(tool.catalogRepo);
+  if (original && original.toLowerCase() !== result.repo.toLowerCase()) tool.gaps.push(gap("artifact", `Catalog source ${original} redirects to ${result.repo}; tool/package identity may have changed.`, "Verify the release and artifact mapping before merging tool identities."));
   if (result.truncated) tool.gaps.push(gap("discovery", "GitHub returned a truncated repository tree.", "Inspect omitted subtrees before claiming manifest discovery is complete."));
   if (!result.manifests.length) tool.gaps.push(gap("discovery", "No recognized manifests were found; source may use an unsupported build system.", "Review the pinned repository and identify its distribution/build process."));
   if (previousRevision && previousRevision !== result.revision && snapshot.profiles.some((p) => p.toolId === tool.id)) {
@@ -102,26 +117,28 @@ export async function discover(snapshot: Snapshot, store: Store, options: { stat
   const selected = snapshot.tools.filter((t) => !options.toolIds?.length || options.toolIds.includes(t.id));
   if (options.toolIds?.some((id) => !snapshot.tools.some((t) => t.id === id))) throw new Error("Unknown tool selection");
   const repos = [...new Set(selected.map((t) => t.repo).filter((repo): repo is string => !!repo))].sort().slice(0, options.limit);
+  const groups = new Map(repos.map((repo) => [repo, selected.filter((t) => t.repo === repo)]));
+  const shared = new Map<string, Promise<Discovery>>();
   let cursor = 0;
   async function worker() {
     while (cursor < repos.length) {
       const repo = repos[cursor++];
       const cached = jobs[repo];
       if (cached?.status === "succeeded" && !options.refresh) {
-        for (const t of selected.filter((t) => t.repo === repo)) applyDiscovery(t, cached, snapshot);
+        for (const t of groups.get(repo)!) applyDiscovery(t, cached, snapshot);
         continue;
       }
       const job: Job = { status: "running", attemptedAt: new Date().toISOString(), ...(cached?.result ? { result: cached.result, succeededAt: cached.succeededAt } : {}) };
       jobs[repo] = job; writeJson(path, jobs);
       try {
-        job.result = await discoverRepo(repo, store);
+        job.result = await discoverRepo(repo, store, shared);
         job.status = "succeeded"; job.succeededAt = new Date().toISOString();
         console.log(`Discovered ${repo}: ${job.result.ecosystems.join(", ") || "unrecognized"}`);
       } catch (error) {
         job.status = "failed"; job.error = String(error).slice(0, 1500);
         console.error(`Discovery failed for ${repo}: ${job.error}`);
       }
-      for (const t of selected.filter((t) => t.repo === repo)) applyDiscovery(t, job, snapshot);
+      for (const t of groups.get(repo)!) applyDiscovery(t, job, snapshot);
       writeJson(path, jobs); store.save(snapshot);
     }
   }

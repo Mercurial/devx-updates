@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
   "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-  "semanticDigest": "b85b010fd1a26c7a238d82be59a2ce09bd18529e6c85a0e18cea0549ec4fba42",
-  "generatedAt": "2026-10-17T16:53:29.373Z",
+  "semanticDigest": "da93ebc82c9c6ecf47e11855010415c1220cd5076db52a5bad142521751d74c8",
+  "generatedAt": "2026-10-17T17:05:11.001Z",
   "tools": [
     {
       "id": "1694-io",
       "name": "1694.io",
       "repo": "1694.io",
+      "catalogRepo": "1694.io",
       "maintainer": "Governance community",
       "registryHint": "Service",
       "packageHint": null,
@@ -34,9 +35,9 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:4c7f9aa73bc8c558f271a1d5",
+          "id": "gap:379707b99388cd610767c051",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: 1694.io",
+          "reason": "Error: No GitHub source repository in catalog reference: 1694.io",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -52,13 +53,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:50:59.086Z",
-      "discoveryError": "Error: Unsupported repository identity: 1694.io"
+      "lastAttempt": "2026-10-17T17:04:47.273Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: 1694.io"
     },
     {
       "id": "ada-handle",
       "name": "ADA Handle",
       "repo": "adahandle.com",
+      "catalogRepo": "adahandle.com",
       "maintainer": "ADA Handle",
       "registryHint": "Service",
       "packageHint": null,
@@ -78,6 +80,12 @@
           "nextAction": "Export a discovery review packet."
         },
         {
+          "id": "gap:0c1e6fad95c8ec91885c4d2f",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: adahandle.com",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -90,25 +98,20 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:74fe88be72fb70e3a549d154",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: adahandle.com",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:43.089Z",
-      "discoveryError": "Error: Unsupported repository identity: adahandle.com"
+      "lastAttempt": "2026-10-17T17:04:50.365Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: adahandle.com"
     },
     {
       "id": "adalite",
       "name": "AdaLite",
       "repo": "vacuumlabs/adalite",
+      "catalogRepo": "vacuumlabs/adalite",
       "maintainer": "Vacuumlabs",
       "registryHint": null,
       "packageHint": null,
@@ -166,6 +169,7 @@
       "id": "adapools-xyz",
       "name": "adapools.xyz",
       "repo": "schmidko/adapools",
+      "catalogRepo": "schmidko/adapools",
       "maintainer": "schmidko",
       "registryHint": null,
       "packageHint": null,
@@ -223,6 +227,7 @@
       "id": "adastat-api",
       "name": "AdaStat",
       "repo": "CardanoExplorer/adastat",
+      "catalogRepo": "CardanoExplorer/adastat",
       "maintainer": "Community",
       "registryHint": "Service",
       "packageHint": null,
@@ -282,6 +287,7 @@
       "id": "adder",
       "name": "Adder",
       "repo": "blinklabs-io/adder",
+      "catalogRepo": "blinklabs-io/adder",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -342,6 +348,7 @@
       "id": "aicone",
       "name": "Aicone",
       "repo": "SundaeSwap-finance/aicone",
+      "catalogRepo": "SundaeSwap-finance/aicone",
       "maintainer": "Sundae Labs",
       "registryHint": null,
       "packageHint": null,
@@ -397,6 +404,7 @@
       "id": "aiken",
       "name": "Aiken",
       "repo": "aiken-lang/aiken",
+      "catalogRepo": "aiken-lang/aiken",
       "maintainer": "TxPipe + Cardano Foundation",
       "registryHint": "crates.io",
       "packageHint": "aiken",
@@ -611,6 +619,7 @@
       "id": "aiken-linked-list",
       "name": "Aiken Linked List",
       "repo": "Anastasia-Labs/aiken-linked-list",
+      "catalogRepo": "Anastasia-Labs/aiken-linked-list",
       "maintainer": "Anastasia Labs",
       "registryHint": null,
       "packageHint": null,
@@ -666,6 +675,7 @@
       "id": "aiken-stdlib",
       "name": "Aiken Standard Library",
       "repo": "aiken-lang/stdlib",
+      "catalogRepo": "aiken-lang/stdlib",
       "maintainer": "aiken-lang",
       "registryHint": null,
       "packageHint": null,
@@ -721,6 +731,7 @@
       "id": "amaru",
       "name": "Amaru",
       "repo": "pragma-org/amaru",
+      "catalogRepo": "pragma-org/amaru",
       "maintainer": "PRAGMA",
       "registryHint": null,
       "packageHint": null,
@@ -826,6 +837,7 @@
       "id": "anvil",
       "name": "Anvil",
       "repo": "ada-anvil.io/services/api",
+      "catalogRepo": "ada-anvil.io/services/api",
       "maintainer": "Ada Anvil",
       "registryHint": null,
       "packageHint": null,
@@ -851,16 +863,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:2f3c0c97af2435fde83a14a4",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: ada-anvil.io/services/api",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
+        },
+        {
+          "id": "gap:b6dbd8b2509ffb80237e257c",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: ada-anvil.io/services/api",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -869,13 +881,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:43.060Z",
-      "discoveryError": "Error: Unsupported repository identity: ada-anvil.io/services/api"
+      "lastAttempt": "2026-10-17T17:04:50.063Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: ada-anvil.io/services/api"
     },
     {
       "id": "apollo",
       "name": "Apollo",
       "repo": "Salvionied/apollo",
+      "catalogRepo": "Salvionied/apollo",
       "maintainer": "Salvionied",
       "registryHint": "Go",
       "packageHint": "github.com/Salvionied/apollo",
@@ -931,6 +944,7 @@
       "id": "argus-cardano-sync",
       "name": "Argus (Cardano.Sync)",
       "repo": "SAIB-Inc/Argus",
+      "catalogRepo": "SAIB-Inc/Cardano.Sync",
       "maintainer": "SAIB Inc",
       "registryHint": "NuGet",
       "packageHint": "Argus.Sync",
@@ -975,10 +989,16 @@
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:e46b550f6155c5535dadba68",
+          "area": "artifact",
+          "reason": "Catalog source SAIB-Inc/Cardano.Sync redirects to SAIB-Inc/Argus; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:32.595Z",
-      "lastSuccess": "2026-10-17T16:51:34.706Z",
+      "lastAttempt": "2026-10-17T17:04:49.681Z",
+      "lastSuccess": "2026-10-17T17:04:53.073Z",
       "release": "unreleased:main",
       "revision": "37a648d8d5f010526f4b4656d34559bf4c2e9eae",
       "releaseUrl": "https://github.com/SAIB-Inc/Argus/tree/37a648d8d5f010526f4b4656d34559bf4c2e9eae"
@@ -987,6 +1007,7 @@
       "id": "atlas",
       "name": "Atlas",
       "repo": "geniusyield/atlas",
+      "catalogRepo": "geniusyield/atlas",
       "maintainer": "GeniusYield (+Well-Typed, MLabs, Plank)",
       "registryHint": "Hackage",
       "packageHint": "atlas",
@@ -1051,6 +1072,7 @@
       "id": "balius",
       "name": "Balius",
       "repo": "docs.txpipe.io/balius",
+      "catalogRepo": "docs.txpipe.io/balius",
       "maintainer": "TxPipe",
       "registryHint": "crates.io",
       "packageHint": "balius",
@@ -1063,6 +1085,12 @@
       "manifests": [],
       "evidenceIds": [],
       "gaps": [
+        {
+          "id": "gap:04696b9c78d538b29bbe1b0f",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: docs.txpipe.io/balius",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
         {
           "id": "gap:08a4850a1570505e3dd508a0",
           "area": "integration",
@@ -1082,25 +1110,20 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:9b5c83a6fe09c9fffc0243c7",
-          "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/docs.txpipe.io/balius\ngh: Not Found (HTTP 404)\n",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.643Z",
-      "discoveryError": "Error: Command failed: gh api repos/docs.txpipe.io/balius\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:04:56.821Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.txpipe.io/balius"
     },
     {
       "id": "bech32",
       "name": "bech32",
       "repo": "IntersectMBO/bech32",
+      "catalogRepo": "IntersectMBO/bech32",
       "maintainer": "IntersectMBO",
       "registryHint": "Hackage",
       "packageHint": "bech32",
@@ -1161,6 +1184,7 @@
       "id": "begin",
       "name": "Begin",
       "repo": "begin.is",
+      "catalogRepo": "begin.is",
       "maintainer": "Begin",
       "registryHint": "Service",
       "packageHint": null,
@@ -1192,9 +1216,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:bb8ecfe59dda0eedf3ca15c3",
+          "id": "gap:894251cd6efdb247911018db",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: begin.is",
+          "reason": "Error: No GitHub source repository in catalog reference: begin.is",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -1204,13 +1228,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:46.483Z",
-      "discoveryError": "Error: Unsupported repository identity: begin.is"
+      "lastAttempt": "2026-10-17T17:04:50.774Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: begin.is"
     },
     {
       "id": "bip32ed25519",
       "name": "bip32ed25519",
       "repo": "StricaHQ/bip32ed25519",
+      "catalogRepo": "StricaHQ/bip32ed25519",
       "maintainer": "StricaHQ",
       "registryHint": null,
       "packageHint": null,
@@ -1266,6 +1291,7 @@
       "id": "blaze",
       "name": "Blaze",
       "repo": "butaneprotocol/blaze-cardano",
+      "catalogRepo": "butaneprotocol/blaze-cardano",
       "maintainer": "Butane Protocol",
       "registryHint": "npm",
       "packageHint": "@blaze-cardano/sdk",
@@ -1358,6 +1384,7 @@
       "id": "blockfrost",
       "name": "Blockfrost",
       "repo": "github.com/blockfrost",
+      "catalogRepo": "github.com/blockfrost",
       "maintainer": "Blockfrost (blockfrost.io)",
       "registryHint": "Service",
       "packageHint": "blockfrost-backend-ryo",
@@ -1383,9 +1410,9 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:322bffcb7efb72e9b05ed26b",
+          "id": "gap:22d16830721fa041101676ca",
           "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/github.com/blockfrost\ngh: Not Found (HTTP 404)\n",
+          "reason": "Error: No GitHub source repository in catalog reference: github.com/blockfrost",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -1401,13 +1428,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:32.102Z",
-      "discoveryError": "Error: Command failed: gh api repos/github.com/blockfrost\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:05:01.331Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/blockfrost"
     },
     {
       "id": "blockfrost-backend-ryo",
       "name": "Blockfrost Backend (RYO)",
       "repo": "blockfrost/blockfrost-backend-ryo",
+      "catalogRepo": "blockfrost/blockfrost-backend-ryo",
       "maintainer": "Blockfrost",
       "registryHint": "Service",
       "packageHint": null,
@@ -1475,6 +1503,7 @@
       "id": "blockfrost-cardano-cli",
       "name": "Blockfrost cardano-cli",
       "repo": "blockfrost/blockfrost-cardano-cli",
+      "catalogRepo": "blockfrost/blockfrost-cardano-cli",
       "maintainer": "Blockfrost",
       "registryHint": null,
       "packageHint": null,
@@ -1536,6 +1565,7 @@
       "id": "blockfrost-go",
       "name": "Blockfrost Go SDK",
       "repo": "blockfrost/blockfrost-go",
+      "catalogRepo": "blockfrost/blockfrost-go",
       "maintainer": "Blockfrost",
       "registryHint": "Go",
       "packageHint": null,
@@ -1591,6 +1621,7 @@
       "id": "blockfrost-js",
       "name": "Blockfrost JS SDK",
       "repo": "blockfrost/blockfrost-js",
+      "catalogRepo": "blockfrost/blockfrost-js",
       "maintainer": "Blockfrost",
       "registryHint": "npm",
       "packageHint": "@blockfrost/blockfrost-js",
@@ -1650,6 +1681,7 @@
       "id": "blockfrost-python",
       "name": "Blockfrost Python SDK",
       "repo": "blockfrost/blockfrost-python",
+      "catalogRepo": "blockfrost/blockfrost-python",
       "maintainer": "Blockfrost",
       "registryHint": "PyPI",
       "packageHint": "blockfrost-python",
@@ -1707,6 +1739,7 @@
       "id": "bloxbean-cardano-client-library",
       "name": "Bloxbean Cardano Client Library",
       "repo": "bloxbean/cardano-client-lib",
+      "catalogRepo": "bloxbean/cardano-client-lib",
       "maintainer": "BloxBean",
       "registryHint": "Maven",
       "packageHint": "com.bloxbean.cardano:cardano-client-lib",
@@ -1797,6 +1830,7 @@
       "id": "boros",
       "name": "Boros",
       "repo": "txpipe/boros",
+      "catalogRepo": "txpipe/boros",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -1860,6 +1894,7 @@
       "id": "bot-plutus-interface",
       "name": "Bot Plutus Interface",
       "repo": "mlabs-haskell/bot-plutus-interface",
+      "catalogRepo": "mlabs-haskell/bot-plutus-interface",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -1924,6 +1959,7 @@
       "id": "buildooor",
       "name": "buildooor",
       "repo": "HarmonicLabs/buildooor",
+      "catalogRepo": "HarmonicLabs/buildooor",
       "maintainer": "Harmonic Labs",
       "registryHint": null,
       "packageHint": null,
@@ -1979,6 +2015,7 @@
       "id": "bursa",
       "name": "Bursa",
       "repo": "blinklabs-io/bursa",
+      "catalogRepo": "blinklabs-io/bursa",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -2047,6 +2084,7 @@
       "id": "cab",
       "name": "CAB (Cardano App Backend)",
       "repo": "WingRiders/cab",
+      "catalogRepo": "WingRiders/cab",
       "maintainer": "WingRiders",
       "registryHint": null,
       "packageHint": null,
@@ -2101,6 +2139,7 @@
       "id": "cardaminal",
       "name": "Cardaminal",
       "repo": "IntersectMBO/cardaminal",
+      "catalogRepo": "txpipe/cardaminal",
       "maintainer": "TxPipe / IntersectMBO",
       "registryHint": null,
       "packageHint": null,
@@ -2128,6 +2167,12 @@
       ],
       "gaps": [
         {
+          "id": "gap:050176b2f020751388d7ec0a",
+          "area": "artifact",
+          "reason": "Catalog source txpipe/cardaminal redirects to IntersectMBO/cardaminal; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:08a4850a1570505e3dd508a0",
           "area": "integration",
           "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -2152,8 +2197,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:14.151Z",
-      "lastSuccess": "2026-10-17T16:53:16.271Z",
+      "lastAttempt": "2026-10-17T17:04:47.285Z",
+      "lastSuccess": "2026-10-17T17:04:49.348Z",
       "release": "unreleased:main",
       "revision": "c8d1380abee5c78fb8326b102d822716af3b5329",
       "releaseUrl": "https://github.com/IntersectMBO/cardaminal/tree/c8d1380abee5c78fb8326b102d822716af3b5329"
@@ -2162,6 +2207,7 @@
       "id": "cardano-academy",
       "name": "Cardano Academy",
       "repo": "cardano-foundation/cardano-academy",
+      "catalogRepo": "cardano-foundation/cardano-academy",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -2218,6 +2264,7 @@
       "id": "cardano-addresses",
       "name": "cardano-addresses",
       "repo": "IntersectMBO/cardano-addresses",
+      "catalogRepo": "IntersectMBO/cardano-addresses",
       "maintainer": "IntersectMBO",
       "registryHint": "Hackage",
       "packageHint": "cardano-addresses",
@@ -2292,6 +2339,7 @@
       "id": "cardano-c",
       "name": "Cardano-C",
       "repo": "Biglup/cardano-c",
+      "catalogRepo": "Biglup/cardano-c",
       "maintainer": "Biglup",
       "registryHint": null,
       "packageHint": null,
@@ -2346,6 +2394,7 @@
       "id": "cardano-caniuse",
       "name": "Cardano CanIUse",
       "repo": "dcSpark/cardano-caniuse",
+      "catalogRepo": "dcSpark/cardano-caniuse",
       "maintainer": "dcSpark",
       "registryHint": null,
       "packageHint": null,
@@ -2401,6 +2450,7 @@
       "id": "cardano-cli",
       "name": "cardano-cli",
       "repo": "IntersectMBO/cardano-cli",
+      "catalogRepo": "IntersectMBO/cardano-cli",
       "maintainer": "IntersectMBO",
       "registryHint": null,
       "packageHint": null,
@@ -2459,6 +2509,7 @@
       "id": "cardano-cli-guru",
       "name": "Cardano CLI Guru",
       "repo": "ajnabi-workshop/cardano-cli-guru",
+      "catalogRepo": "ajnabi-workshop/cardano-cli-guru",
       "maintainer": "Community (ajnabi-workshop)",
       "registryHint": null,
       "packageHint": null,
@@ -2515,6 +2566,7 @@
       "id": "cardano-client-bindings",
       "name": "Cardano Client Lib Native Bindings",
       "repo": "bloxbean/mesmo",
+      "catalogRepo": "bloxbean/cardano-client-bindings",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -2571,6 +2623,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:587a9f719652a4d67944b74c",
+          "area": "artifact",
+          "reason": "Catalog source bloxbean/cardano-client-bindings redirects to bloxbean/mesmo; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -2583,8 +2641,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:55.634Z",
-      "lastSuccess": "2026-10-17T16:51:57.650Z",
+      "lastAttempt": "2026-10-17T17:04:51.560Z",
+      "lastSuccess": "2026-10-17T17:04:54.010Z",
       "release": "v0.1.0-pre8",
       "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
       "releaseUrl": "https://github.com/bloxbean/mesmo/releases/tag/v0.1.0-pre8"
@@ -2593,6 +2651,7 @@
       "id": "cardano-connect-with-wallet",
       "name": "Cardano Connect with Wallet",
       "repo": "cardano-foundation/cardano-connect-with-wallet",
+      "catalogRepo": "cardano-foundation/cardano-connect-with-wallet",
       "maintainer": "Cardano Foundation",
       "registryHint": "npm",
       "packageHint": "@cardano-foundation/cardano-connect-with-wallet",
@@ -2650,6 +2709,7 @@
       "id": "cardano-crypto-js",
       "name": "cardano-crypto.js",
       "repo": "vacuumlabs/cardano-crypto.js",
+      "catalogRepo": "vacuumlabs/cardano-crypto.js",
       "maintainer": "Vacuumlabs",
       "registryHint": "npm",
       "packageHint": "cardano-crypto.js",
@@ -2705,6 +2765,7 @@
       "id": "cardano-ctf",
       "name": "Cardano CTF",
       "repo": "Invariant-0/cardano-ctf",
+      "catalogRepo": "Invariant-0/cardano-ctf",
       "maintainer": "Vacuumlabs (Invariant0)",
       "registryHint": null,
       "packageHint": null,
@@ -2813,6 +2874,7 @@
       "id": "cardano-dapp-wallet-connector",
       "name": "cardano-dapp-wallet-connector",
       "repo": "projectNEWM/cardano-dapp-wallet-connector",
+      "catalogRepo": "projectNEWM/cardano-dapp-wallet-connector",
       "maintainer": "projectNEWM",
       "registryHint": "npm",
       "packageHint": "@newm.io/cardano-dapp-wallet-connector",
@@ -2868,6 +2930,7 @@
       "id": "cardano-data-lite",
       "name": "cardano-data-lite",
       "repo": "mlabs-haskell/cardano-data-lite",
+      "catalogRepo": "mlabs-haskell/cardano-data-lite",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -2923,6 +2986,7 @@
       "id": "cardano-db-sync",
       "name": "cardano-db-sync",
       "repo": "IntersectMBO/cardano-db-sync",
+      "catalogRepo": "IntersectMBO/cardano-db-sync",
       "maintainer": "IntersectMBO",
       "registryHint": "Hackage",
       "packageHint": "cardano-db-sync",
@@ -2998,6 +3062,7 @@
       "id": "cardano-dev-wallet",
       "name": "Cardano Dev Wallet",
       "repo": "mlabs-haskell/cardano-dev-wallet",
+      "catalogRepo": "mlabs-haskell/cardano-dev-wallet",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -3056,6 +3121,7 @@
       "id": "cardano-go",
       "name": "cardano-go",
       "repo": "echovl/cardano-go",
+      "catalogRepo": "echovl/cardano-go",
       "maintainer": "echovl",
       "registryHint": null,
       "packageHint": null,
@@ -3111,6 +3177,7 @@
       "id": "cardano-graphql",
       "name": "cardano-graphql",
       "repo": "cardano-foundation/cardano-graphql",
+      "catalogRepo": "cardano-foundation/cardano-graphql",
       "maintainer": "Cardano Foundation",
       "registryHint": "npm",
       "packageHint": "@cardano-graphql/client-ts",
@@ -3220,6 +3287,7 @@
       "id": "cardano-hw-cli",
       "name": "cardano-hw-cli",
       "repo": "vacuumlabs/cardano-hw-cli",
+      "catalogRepo": "vacuumlabs/cardano-hw-cli",
       "maintainer": "Vacuumlabs",
       "registryHint": "npm",
       "packageHint": "cardano-hw-cli",
@@ -3275,6 +3343,7 @@
       "id": "cardano-hw-interop-lib",
       "name": "cardano-hw-interop-lib",
       "repo": "vacuumlabs/cardano-hw-interop-lib",
+      "catalogRepo": "vacuumlabs/cardano-hw-interop-lib",
       "maintainer": "Vacuumlabs",
       "registryHint": "npm",
       "packageHint": "@cardano-foundation/cardano-hw-interop-lib",
@@ -3330,6 +3399,7 @@
       "id": "cardano-ibc-incubator",
       "name": "Cardano IBC Incubator",
       "repo": "cardano-foundation/cardano-ibc-incubator",
+      "catalogRepo": "cardano-foundation/cardano-ibc-incubator",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -3453,6 +3523,7 @@
       "id": "cardano-js-sdk",
       "name": "cardano-js-sdk",
       "repo": "input-output-hk/cardano-js-sdk",
+      "catalogRepo": "input-output-hk/cardano-js-sdk",
       "maintainer": "Input Output (IOG)",
       "registryHint": "npm",
       "packageHint": "@cardano-sdk/core",
@@ -3535,6 +3606,7 @@
       "id": "cardano-launcher",
       "name": "cardano-launcher",
       "repo": "IntersectMBO/cardano-launcher",
+      "catalogRepo": "IntersectMBO/cardano-launcher",
       "maintainer": "IntersectMBO",
       "registryHint": null,
       "packageHint": null,
@@ -3594,6 +3666,7 @@
       "id": "cardano-mcp",
       "name": "Cardano MCP",
       "repo": "lidonation/Cardano-mcp",
+      "catalogRepo": "lidonation/Cardano-mcp",
       "maintainer": "Lidonation",
       "registryHint": null,
       "packageHint": null,
@@ -3653,6 +3726,7 @@
       "id": "cardano-multiplatform-lib-cml",
       "name": "cardano-multiplatform-lib (CML)",
       "repo": "dcSpark/cardano-multiplatform-lib",
+      "catalogRepo": "dcSpark/cardano-multiplatform-lib",
       "maintainer": "dcSpark",
       "registryHint": "crates.io",
       "packageHint": "cardano-multiplatform-lib",
@@ -3738,6 +3812,7 @@
       "id": "cardano-name-service-cns",
       "name": "Cardano Name Service (CNS)",
       "repo": "docs.cns.space",
+      "catalogRepo": "docs.cns.space",
       "maintainer": "Emurgo (Adaverse)",
       "registryHint": "Service",
       "packageHint": null,
@@ -3757,12 +3832,6 @@
           "nextAction": "Export a discovery review packet."
         },
         {
-          "id": "gap:11927bab03db3a0bf0e2b401",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: docs.cns.space",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -3775,19 +3844,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
+          "id": "gap:751eba46697ba98fe5365f9d",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: docs.cns.space",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.604Z",
-      "discoveryError": "Error: Unsupported repository identity: docs.cns.space"
+      "lastAttempt": "2026-10-17T17:04:56.065Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.cns.space"
     },
     {
       "id": "cardano-node",
       "name": "cardano-node",
       "repo": "IntersectMBO/cardano-node",
+      "catalogRepo": "IntersectMBO/cardano-node",
       "maintainer": "IntersectMBO",
       "registryHint": "Hackage",
       "packageHint": "cardano-node",
@@ -3925,6 +4001,7 @@
       "id": "cardano-node-api",
       "name": "Cardano Node API",
       "repo": "blinklabs-io/cardano-node-api",
+      "catalogRepo": "blinklabs-io/cardano-node-api",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -3984,6 +4061,7 @@
       "id": "cardano-node-audit",
       "name": "Cardano Node Audit",
       "repo": "Kirael12/cardano-node-audit",
+      "catalogRepo": "Kirael12/cardano-node-audit",
       "maintainer": "Community (Kirael12)",
       "registryHint": null,
       "packageHint": null,
@@ -4040,6 +4118,7 @@
       "id": "cardano-on-bigquery",
       "name": "Cardano on BigQuery",
       "repo": "blockchain-applied.com",
+      "catalogRepo": "blockchain-applied.com",
       "maintainer": "Blockchain Applied",
       "registryHint": "Service",
       "packageHint": null,
@@ -4059,6 +4138,12 @@
           "nextAction": "Export a discovery review packet."
         },
         {
+          "id": "gap:0af7dc6b80afa694bb486ab9",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: blockchain-applied.com",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -4071,25 +4156,20 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:b7d4e477bc9fe21a1e3ee907",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: blockchain-applied.com",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:51.777Z",
-      "discoveryError": "Error: Unsupported repository identity: blockchain-applied.com"
+      "lastAttempt": "2026-10-17T17:04:51.184Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: blockchain-applied.com"
     },
     {
       "id": "cardano-open-oracle-protocol",
       "name": "Cardano Open Oracle Protocol (COOP)",
       "repo": "mlabs-haskell/cardano-open-oracle-protocol",
+      "catalogRepo": "mlabs-haskell/cardano-open-oracle-protocol",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -4175,6 +4255,7 @@
       "id": "cardano-peer-connect",
       "name": "Cardano Peer Connect",
       "repo": "fabianbormann/cardano-peer-connect",
+      "catalogRepo": "fabianbormann/cardano-peer-connect",
       "maintainer": "fabianbormann / community",
       "registryHint": "npm",
       "packageHint": "@fabianbormann/cardano-peer-connect",
@@ -4232,6 +4313,7 @@
       "id": "cardano-python-emesik",
       "name": "cardano-python (emesik)",
       "repo": "emesik/cardano-python",
+      "catalogRepo": "emesik/cardano-python",
       "maintainer": "emesik",
       "registryHint": null,
       "packageHint": null,
@@ -4287,6 +4369,7 @@
       "id": "cardano-rosetta-java",
       "name": "cardano-rosetta-java",
       "repo": "cardano-foundation/cardano-rosetta-java",
+      "catalogRepo": "cardano-foundation/cardano-rosetta-java",
       "maintainer": "Cardano Foundation",
       "registryHint": "Maven",
       "packageHint": "org.cardanofoundation:cardano-rosetta-java",
@@ -4381,6 +4464,7 @@
       "id": "cardano-rosetta-legacy",
       "name": "cardano-rosetta (legacy)",
       "repo": "cardano-foundation/cardano-rosetta",
+      "catalogRepo": "cardano-foundation/cardano-rosetta",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -4461,6 +4545,7 @@
       "id": "cardano-serialization-lib-csl",
       "name": "cardano-serialization-lib (CSL)",
       "repo": "Emurgo/cardano-serialization-lib",
+      "catalogRepo": "Emurgo/cardano-serialization-lib",
       "maintainer": "Emurgo",
       "registryHint": "npm",
       "packageHint": "@emurgo/cardano-serialization-lib-nodejs",
@@ -4535,6 +4620,7 @@
       "id": "cardano-signer",
       "name": "cardano-signer",
       "repo": "gitmachtl/cardano-signer",
+      "catalogRepo": "gitmachtl/cardano-signer",
       "maintainer": "Martin Lang (gitmachtl)",
       "registryHint": null,
       "packageHint": null,
@@ -4595,6 +4681,7 @@
       "id": "cardano-submit-api",
       "name": "cardano-submit-api",
       "repo": "IntersectMBO/cardano-node",
+      "catalogRepo": "IntersectMBO/cardano-node",
       "maintainer": "IntersectMBO / Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -4732,6 +4819,7 @@
       "id": "cardano-testnet",
       "name": "cardano-testnet",
       "repo": "IntersectMBO/cardano-node",
+      "catalogRepo": "IntersectMBO/cardano-node",
       "maintainer": "IntersectMBO / community",
       "registryHint": null,
       "packageHint": null,
@@ -4869,6 +4957,7 @@
       "id": "cardano-token-registry",
       "name": "Cardano Token Registry",
       "repo": "cardano-foundation/cardano-token-registry",
+      "catalogRepo": "cardano-foundation/cardano-token-registry",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -4925,6 +5014,7 @@
       "id": "cardano-transaction-lib-ctl",
       "name": "cardano-transaction-lib (CTL)",
       "repo": "Plutonomicon/cardano-transaction-lib",
+      "catalogRepo": "Plutonomicon/cardano-transaction-lib",
       "maintainer": "MLabs / Plutonomicon",
       "registryHint": null,
       "packageHint": null,
@@ -4996,6 +5086,7 @@
       "id": "cardano-up",
       "name": "cardano-up",
       "repo": "blinklabs-io/cardano-up",
+      "catalogRepo": "blinklabs-io/cardano-up",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -5053,6 +5144,7 @@
       "id": "cardano-wallet",
       "name": "cardano-wallet",
       "repo": "cardano-foundation/cardano-wallet",
+      "catalogRepo": "cardano-foundation/cardano-wallet",
       "maintainer": "Cardano Foundation",
       "registryHint": "Hackage",
       "packageHint": "cardano-wallet",
@@ -5189,6 +5281,7 @@
       "id": "cardano-wallet-interface",
       "name": "cardano-wallet-interface",
       "repo": "HarmonicPool/cardano-wallet-interface",
+      "catalogRepo": "HarmonicPool/cardano-wallet-interface",
       "maintainer": "HarmonicPool",
       "registryHint": null,
       "packageHint": null,
@@ -5248,6 +5341,7 @@
       "id": "cardano-wallet-js",
       "name": "cardano-wallet-js",
       "repo": "tango-crypto/cardano-wallet-js",
+      "catalogRepo": "tango-crypto/cardano-wallet-js",
       "maintainer": "Tango Crypto",
       "registryHint": "npm",
       "packageHint": "cardano-wallet-js",
@@ -5303,6 +5397,7 @@
       "id": "cardano-wallet-sdk-dart",
       "name": "Cardano Wallet SDK (Dart)",
       "repo": "reaster/cardano_wallet_sdk",
+      "catalogRepo": "reaster/cardano_wallet_sdk",
       "maintainer": "reaster",
       "registryHint": null,
       "packageHint": null,
@@ -5358,6 +5453,7 @@
       "id": "cardano-web3-js",
       "name": "cardano-web3-js",
       "repo": "xray-network/xray-js",
+      "catalogRepo": "xray-network/cardano-web3-js",
       "maintainer": "XRAY Network",
       "registryHint": "npm",
       "packageHint": "cardano-web3-js",
@@ -5409,10 +5505,16 @@
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:eb4f01d161836df9ab543ba8",
+          "area": "artifact",
+          "reason": "Catalog source xray-network/cardano-web3-js redirects to xray-network/xray-js; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:27.235Z",
-      "lastSuccess": "2026-10-17T16:53:29.339Z",
+      "lastAttempt": "2026-10-17T17:05:08.339Z",
+      "lastSuccess": "2026-10-17T17:05:10.510Z",
       "release": "v2.3.4",
       "revision": "21aa0802533f9052b6d4bcbdc934acbbd482a006",
       "releaseUrl": "https://github.com/xray-network/xray-js/releases/tag/v2.3.4"
@@ -5421,6 +5523,7 @@
       "id": "cardanocli-js",
       "name": "cardanocli-js",
       "repo": "miguelaeh/cardanocli-js",
+      "catalogRepo": "miguelaeh/cardanocli-js",
       "maintainer": "Community (miguelaeh)",
       "registryHint": "npm",
       "packageHint": "cardanocli-js",
@@ -5476,6 +5579,7 @@
       "id": "cardanokit",
       "name": "CardanoKit",
       "repo": "TokeoPay/CardanoKit",
+      "catalogRepo": "TokeoPay/CardanoKit",
       "maintainer": "Tokeo",
       "registryHint": "SPM",
       "packageHint": null,
@@ -5532,6 +5636,7 @@
       "id": "cardanopress",
       "name": "Cardanopress",
       "repo": "cardanopress.io",
+      "catalogRepo": "cardanopress.io",
       "maintainer": "Cardanopress",
       "registryHint": "Service",
       "packageHint": null,
@@ -5557,6 +5662,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:37ac42195a07102ecade5893",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: cardanopress.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
@@ -5567,21 +5678,16 @@
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
-        },
-        {
-          "id": "gap:ecbfb2a614df01752e5c15d4",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: cardanopress.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:22.794Z",
-      "discoveryError": "Error: Unsupported repository identity: cardanopress.io"
+      "lastAttempt": "2026-10-17T17:04:54.477Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: cardanopress.io"
     },
     {
       "id": "cardanoscan-api",
       "name": "Cardanoscan API",
       "repo": "docs.cardanoscan.io",
+      "catalogRepo": "docs.cardanoscan.io",
       "maintainer": "Cardanoscan",
       "registryHint": "Service",
       "packageHint": null,
@@ -5613,25 +5719,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:85155b8c49168f9af1036dd7",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: docs.cardanoscan.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:faf3a9d1c3308768322895f4",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: docs.cardanoscan.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.585Z",
-      "discoveryError": "Error: Unsupported repository identity: docs.cardanoscan.io"
+      "lastAttempt": "2026-10-17T17:04:55.671Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.cardanoscan.io"
     },
     {
       "id": "cardanosharp",
       "name": "CardanoSharp",
       "repo": "CardanoSharp/cardanosharp-wallet",
+      "catalogRepo": "CardanoSharp/cardanosharp-wallet",
       "maintainer": "CardanoSharp / community",
       "registryHint": "NuGet",
       "packageHint": "CardanoSharp.Wallet",
@@ -5688,6 +5795,7 @@
       "id": "cardanosharp-blazor",
       "name": "CardanoSharp Blazor",
       "repo": "CardanoSharp/cardanosharp-blazor",
+      "catalogRepo": "CardanoSharp/cardanosharp-blazor",
       "maintainer": "CardanoSharp",
       "registryHint": null,
       "packageHint": null,
@@ -5744,6 +5852,7 @@
       "id": "cardanosharp-koios",
       "name": "CardanoSharp.Koios",
       "repo": "cardano-community/cardanosharp-koios",
+      "catalogRepo": "cardano-community/cardanosharp-koios",
       "maintainer": "Cardano Community",
       "registryHint": "NuGet",
       "packageHint": null,
@@ -5798,6 +5907,7 @@
       "id": "cardanovsc",
       "name": "CardanoVSC",
       "repo": "marketplace.visualstudio.com/CardanoVSC",
+      "catalogRepo": "marketplace.visualstudio.com/CardanoVSC",
       "maintainer": "AIQUANT Technologies",
       "registryHint": "VS Code Marketplace",
       "packageHint": "AIQUANT-TECHNOLOGIES.cardanovsc",
@@ -5829,9 +5939,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:7b2e90b9b5ebbe4b06a5a49b",
+          "id": "gap:a3b7bbe8b9986e9ab98716a0",
           "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/marketplace.visualstudio.com/CardanoVSC\ngh: Not Found (HTTP 404)\n",
+          "reason": "Error: No GitHub source repository in catalog reference: marketplace.visualstudio.com/CardanoVSC",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -5841,13 +5951,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:47.214Z",
-      "discoveryError": "Error: Command failed: gh api repos/marketplace.visualstudio.com/CardanoVSC\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:05:03.605Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: marketplace.visualstudio.com/CardanoVSC"
     },
     {
       "id": "cardinal",
       "name": "Cardinal",
       "repo": "input-output-hk/cardinal-spec",
+      "catalogRepo": "input-output-hk/cardinal-spec",
       "maintainer": "Input Output",
       "registryHint": null,
       "packageHint": null,
@@ -5904,6 +6015,7 @@
       "id": "carp",
       "name": "Carp",
       "repo": "dcSpark/carp",
+      "catalogRepo": "dcSpark/carp",
       "maintainer": "dcSpark",
       "registryHint": null,
       "packageHint": null,
@@ -5986,6 +6098,7 @@
       "id": "catalyst-core",
       "name": "catalyst-core",
       "repo": "cardano-foundation/catalyst-core",
+      "catalogRepo": "input-output-hk/catalyst-core",
       "maintainer": "IOG / Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -6142,6 +6255,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:cc3bb0248caa48cea8527e63",
+          "area": "artifact",
+          "reason": "Catalog source input-output-hk/catalyst-core redirects to cardano-foundation/catalyst-core; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -6154,8 +6273,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:34.935Z",
-      "lastSuccess": "2026-10-17T16:52:37.531Z",
+      "lastAttempt": "2026-10-17T17:04:52.170Z",
+      "lastSuccess": "2026-10-17T17:04:57.259Z",
       "release": "wallet-cordova-0.8.6",
       "revision": "a3a7f635c663b639d0c348f30e523c3290c70657",
       "releaseUrl": "https://github.com/cardano-foundation/catalyst-core/releases/tag/wallet-cordova-0.8.6"
@@ -6164,6 +6283,7 @@
       "id": "catalyst-toolbox",
       "name": "catalyst-toolbox",
       "repo": "cardano-foundation/catalyst-toolbox",
+      "catalogRepo": "input-output-hk/catalyst-toolbox",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -6210,14 +6330,20 @@
           "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
         },
         {
+          "id": "gap:dfad720c26303e5db079e169",
+          "area": "artifact",
+          "reason": "Catalog source input-output-hk/catalyst-toolbox redirects to cardano-foundation/catalyst-toolbox; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:36.322Z",
-      "lastSuccess": "2026-10-17T16:52:38.486Z",
+      "lastAttempt": "2026-10-17T17:04:53.476Z",
+      "lastSuccess": "2026-10-17T17:05:00.921Z",
       "release": "v0.5.0",
       "revision": "4b06205f35d95a9b19b1fcec82e3668158a7b1eb",
       "releaseUrl": "https://github.com/cardano-foundation/catalyst-toolbox/releases/tag/v0.5.0"
@@ -6226,6 +6352,7 @@
       "id": "catalyst-voices",
       "name": "Catalyst Voices",
       "repo": "cardano-foundation/catalyst-voices",
+      "catalogRepo": "cardano-foundation/catalyst-voices",
       "maintainer": "IOG / Catalyst",
       "registryHint": null,
       "packageHint": null,
@@ -6312,6 +6439,7 @@
       "id": "cbor-app",
       "name": "cbor.app",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "Community",
       "registryHint": "Service",
       "packageHint": null,
@@ -6354,6 +6482,7 @@
       "id": "cddl-codegen",
       "name": "cddl-codegen",
       "repo": "dcSpark/cddl-codegen",
+      "catalogRepo": "dcSpark/cddl-codegen",
       "maintainer": "EMURGO / dcSpark",
       "registryHint": "crates.io",
       "packageHint": "cddl-codegen",
@@ -6430,6 +6559,7 @@
       "id": "cexplorer",
       "name": "Cexplorer",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "Cexplorer",
       "registryHint": "Service",
       "packageHint": null,
@@ -6472,6 +6602,7 @@
       "id": "cf-java-rewards-calculation",
       "name": "cf-java-rewards-calculation",
       "repo": "cardano-foundation/cf-java-rewards-calculation",
+      "catalogRepo": "cardano-foundation/cf-java-rewards-calculation",
       "maintainer": "Cardano Foundation",
       "registryHint": "Maven",
       "packageHint": "org.cardanofoundation:cf-rewards-calculation",
@@ -6528,6 +6659,7 @@
       "id": "cf-ledger-sync",
       "name": "cf-ledger-sync",
       "repo": "cardano-foundation/cf-ledger-sync",
+      "catalogRepo": "cardano-foundation/cf-ledger-sync",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -6604,6 +6736,7 @@
       "id": "charli3",
       "name": "Charli3",
       "repo": "Charli3-Official",
+      "catalogRepo": "Charli3-Official",
       "maintainer": "Charli3",
       "registryHint": "Service",
       "packageHint": null,
@@ -6635,9 +6768,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:84ebec6dbb5039205769a742",
+          "id": "gap:c2e8ac3578ded62f537fc400",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: Charli3-Official",
+          "reason": "Error: No GitHub source repository in catalog reference: Charli3-Official",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -6647,13 +6780,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:09.326Z",
-      "discoveryError": "Error: Unsupported repository identity: Charli3-Official"
+      "lastAttempt": "2026-10-17T17:04:47.280Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: Charli3-Official"
     },
     {
       "id": "chrysalis",
       "name": "Chrysalis",
       "repo": "SAIB-Inc/Chrysalis",
+      "catalogRepo": "SAIB-Inc/Chrysalis",
       "maintainer": "SAIB Inc",
       "registryHint": null,
       "packageHint": null,
@@ -6714,6 +6848,7 @@
       "id": "clb",
       "name": "CLB Emulator",
       "repo": "mlabs-haskell/clb",
+      "catalogRepo": "mlabs-haskell/clb",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -6774,6 +6909,7 @@
       "id": "cncli",
       "name": "cncli",
       "repo": "cardano-community/cncli",
+      "catalogRepo": "cardano-community/cncli",
       "maintainer": "Cardano Community",
       "registryHint": null,
       "packageHint": null,
@@ -6836,6 +6972,7 @@
       "id": "cometa-js",
       "name": "Cometa.js",
       "repo": "Biglup/cometa.js",
+      "catalogRepo": "Biglup/cometa.js",
       "maintainer": "Biglup",
       "registryHint": "npm",
       "packageHint": "@biglup/cometa",
@@ -6893,6 +7030,7 @@
       "id": "cquisitor",
       "name": "CQuisitor",
       "repo": "cardananium/cquisitor",
+      "catalogRepo": "cardananium/cquisitor",
       "maintainer": "Cardananium",
       "registryHint": null,
       "packageHint": null,
@@ -6948,6 +7086,7 @@
       "id": "cquisitor-lib",
       "name": "cquisitor-lib",
       "repo": "cardananium/cquisitor-lib",
+      "catalogRepo": "cardananium/cquisitor-lib",
       "maintainer": "Cardananium",
       "registryHint": null,
       "packageHint": null,
@@ -7005,6 +7144,7 @@
       "id": "create-evolution-app",
       "name": "create-evolution-app",
       "repo": "Anastasia-Labs/create-evolution-app",
+      "catalogRepo": "Anastasia-Labs/create-evolution-app",
       "maintainer": "Anastasia Labs",
       "registryHint": null,
       "packageHint": null,
@@ -7061,6 +7201,7 @@
       "id": "cscli",
       "name": "cscli",
       "repo": "CardanoSharp/cscli",
+      "catalogRepo": "CardanoSharp/cscli",
       "maintainer": "CardanoSharp",
       "registryHint": null,
       "packageHint": null,
@@ -7117,6 +7258,7 @@
       "id": "cshell",
       "name": "CShell",
       "repo": "txpipe/cshell",
+      "catalogRepo": "txpipe/cshell",
       "maintainer": "TxPipe",
       "registryHint": "crates.io",
       "packageHint": "cshell",
@@ -7172,6 +7314,7 @@
       "id": "csl-mobile-bridge",
       "name": "CSL Mobile Bridge",
       "repo": "Emurgo/csl-mobile-bridge",
+      "catalogRepo": "Emurgo/csl-mobile-bridge",
       "maintainer": "Emurgo",
       "registryHint": null,
       "packageHint": null,
@@ -7232,6 +7375,7 @@
       "id": "dab",
       "name": "DAB",
       "repo": "cardano-foundation/dab",
+      "catalogRepo": "cardano-foundation/dab",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -7292,6 +7436,7 @@
       "id": "daedalus",
       "name": "Daedalus",
       "repo": "input-output-hk/daedalus",
+      "catalogRepo": "input-output-hk/daedalus",
       "maintainer": "IntersectMBO (IOG)",
       "registryHint": null,
       "packageHint": null,
@@ -7386,6 +7531,7 @@
       "id": "dandelion-apis",
       "name": "Dandelion APIs",
       "repo": "gimbalabs/kustomize-dandelion",
+      "catalogRepo": "gimbalabs/kustomize-dandelion",
       "maintainer": "Gimbalabs / La PEACEpool",
       "registryHint": null,
       "packageHint": null,
@@ -7442,6 +7588,7 @@
       "id": "datum-explorer",
       "name": "Datum Explorer",
       "repo": "WingRiders/datum-explorer",
+      "catalogRepo": "WingRiders/datum-explorer",
       "maintainer": "WingRiders",
       "registryHint": null,
       "packageHint": null,
@@ -7504,6 +7651,7 @@
       "id": "de-uplc",
       "name": "de-uplc",
       "repo": "cardananium/de-uplc",
+      "catalogRepo": "cardananium/de-uplc",
       "maintainer": "Cardananium",
       "registryHint": null,
       "packageHint": null,
@@ -7562,6 +7710,7 @@
       "id": "de-uplc-web",
       "name": "de-uplc-web",
       "repo": "cardananium/de-uplc-web",
+      "catalogRepo": "cardananium/de-uplc-web",
       "maintainer": "Cardananium",
       "registryHint": null,
       "packageHint": null,
@@ -7626,6 +7775,7 @@
       "id": "demeter",
       "name": "Demeter",
       "repo": "demeter.run",
+      "catalogRepo": "demeter.run",
       "maintainer": "TxPipe (CF-sponsored)",
       "registryHint": "Service",
       "packageHint": null,
@@ -7657,9 +7807,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:72b19790ab3c6a2c25bff35d",
+          "id": "gap:c3fcc6a3246db3424905275e",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: demeter.run",
+          "reason": "Error: No GitHub source repository in catalog reference: demeter.run",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -7669,13 +7819,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.544Z",
-      "discoveryError": "Error: Unsupported repository identity: demeter.run"
+      "lastAttempt": "2026-10-17T17:04:54.880Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: demeter.run"
     },
     {
       "id": "devx",
       "name": "devx",
       "repo": "input-output-hk/devx",
+      "catalogRepo": "input-output-hk/devx",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -7749,6 +7900,7 @@
       "id": "dexhunter",
       "name": "DexHunter",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "DexHunter",
       "registryHint": "Service",
       "packageHint": null,
@@ -7791,6 +7943,7 @@
       "id": "dexter",
       "name": "Dexter",
       "repo": "IndigoProtocol/dexter",
+      "catalogRepo": "IndigoProtocol/dexter",
       "maintainer": "Indigo Protocol / VyFi",
       "registryHint": null,
       "packageHint": null,
@@ -7846,6 +7999,7 @@
       "id": "dingo",
       "name": "Dingo",
       "repo": "blinklabs-io/dingo",
+      "catalogRepo": "blinklabs-io/dingo",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -7911,6 +8065,7 @@
       "id": "dolos",
       "name": "Dolos",
       "repo": "txpipe/dolos",
+      "catalogRepo": "txpipe/dolos",
       "maintainer": "TxPipe",
       "registryHint": "crates.io",
       "packageHint": "dolos",
@@ -7978,6 +8133,7 @@
       "id": "elm-cardano",
       "name": "Elm Cardano",
       "repo": "elm-cardano/elm-cardano",
+      "catalogRepo": "mpizenberg/elm-cardano",
       "maintainer": "elm-cardano",
       "registryHint": "Elm",
       "packageHint": null,
@@ -8029,6 +8185,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:5c0096ae42e9053905026c55",
+          "area": "artifact",
+          "reason": "Catalog source mpizenberg/elm-cardano redirects to elm-cardano/elm-cardano; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -8041,8 +8203,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:58.593Z",
-      "lastSuccess": "2026-10-17T16:53:00.715Z",
+      "lastAttempt": "2026-10-17T17:04:57.192Z",
+      "lastSuccess": "2026-10-17T17:05:06.226Z",
       "release": "v0.8.0",
       "revision": "dd6e0ff14f571fc66ca28abf88335c10db9b9c97",
       "releaseUrl": "https://github.com/elm-cardano/elm-cardano/releases/tag/v0.8.0"
@@ -8051,6 +8213,7 @@
       "id": "epora-wallet",
       "name": "Epora",
       "repo": "schaier-io/epora-wallet",
+      "catalogRepo": "schaier-io/epora-wallet",
       "maintainer": "schaier-io",
       "registryHint": null,
       "packageHint": null,
@@ -8113,6 +8276,7 @@
       "id": "eternl",
       "name": "Eternl",
       "repo": "eternl.io",
+      "catalogRepo": "eternl.io",
       "maintainer": "Eternl",
       "registryHint": "Service",
       "packageHint": null,
@@ -8138,16 +8302,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:382de3c788352156b8990fa9",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: eternl.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
-        },
-        {
-          "id": "gap:ce140a5b5efcb205b382a4d7",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: eternl.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -8156,13 +8320,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:28.182Z",
-      "discoveryError": "Error: Unsupported repository identity: eternl.io"
+      "lastAttempt": "2026-10-17T17:04:57.648Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: eternl.io"
     },
     {
       "id": "evolution-sdk",
       "name": "Evolution SDK",
       "repo": "IntersectMBO/evolution-sdk",
+      "catalogRepo": "IntersectMBO/evolution-sdk",
       "maintainer": "No Witness Labs / IntersectMBO",
       "registryHint": "npm",
       "packageHint": "@evolution-sdk/evolution",
@@ -8235,6 +8400,7 @@
       "id": "flint",
       "name": "Flint",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "dcSpark",
       "registryHint": "Service",
       "packageHint": null,
@@ -8277,6 +8443,7 @@
       "id": "frankenwallet",
       "name": "Frankenwallet",
       "repo": "frankenwallet.com",
+      "catalogRepo": "frankenwallet.com",
       "maintainer": "Community",
       "registryHint": "Service",
       "packageHint": null,
@@ -8302,16 +8469,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:39d22dcc1fe49964df4b07cc",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: frankenwallet.com",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
-        },
-        {
-          "id": "gap:dd135719298907758b6a0268",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: frankenwallet.com",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -8320,13 +8487,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:28.864Z",
-      "discoveryError": "Error: Unsupported repository identity: frankenwallet.com"
+      "lastAttempt": "2026-10-17T17:04:58.030Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: frankenwallet.com"
     },
     {
       "id": "gamechanger-gcscript",
       "name": "GameChanger / GCScript",
       "repo": "GameChangerFinance/gamechanger.wallet",
+      "catalogRepo": "GameChangerFinance/gamechanger.wallet",
       "maintainer": "GameChanger Finance",
       "registryHint": null,
       "packageHint": null,
@@ -8383,6 +8551,7 @@
       "id": "gastronomy",
       "name": "Gastronomy",
       "repo": "SundaeSwap-finance/gastronomy",
+      "catalogRepo": "SundaeSwap-finance/gastronomy",
       "maintainer": "Sundae Labs",
       "registryHint": null,
       "packageHint": null,
@@ -8447,6 +8616,7 @@
       "id": "geniusyield-sdk",
       "name": "GeniusYield SDK (dex-lucid)",
       "repo": "geniusyield/dex-lucid",
+      "catalogRepo": "geniusyield/dex-lucid",
       "maintainer": "GeniusYield",
       "registryHint": null,
       "packageHint": null,
@@ -8502,6 +8672,7 @@
       "id": "gero-wallet",
       "name": "Gero Wallet",
       "repo": "gerowallet.io",
+      "catalogRepo": "gerowallet.io",
       "maintainer": "Gero Labs",
       "registryHint": "Service",
       "packageHint": null,
@@ -8527,16 +8698,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:37b49daf8d125cf770c93a44",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: gerowallet.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
-        },
-        {
-          "id": "gap:9723ae36b10e4e633e374bcb",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: gerowallet.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -8545,13 +8716,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:30.948Z",
-      "discoveryError": "Error: Unsupported repository identity: gerowallet.io"
+      "lastAttempt": "2026-10-17T17:04:58.404Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: gerowallet.io"
     },
     {
       "id": "gerolamo",
       "name": "Gerolamo",
       "repo": "HarmonicLabs/gerolamo",
+      "catalogRepo": "HarmonicLabs/gerolamo",
       "maintainer": "Harmonic Labs",
       "registryHint": null,
       "packageHint": null,
@@ -8616,6 +8788,7 @@
       "id": "getblock",
       "name": "GetBlock",
       "repo": "getblock.io",
+      "catalogRepo": "getblock.io",
       "maintainer": "GetBlock",
       "registryHint": "Service",
       "packageHint": null,
@@ -8635,6 +8808,12 @@
           "nextAction": "Export a discovery review packet."
         },
         {
+          "id": "gap:0ce84b68a956b6a5fe23114a",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: getblock.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -8647,25 +8826,20 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:7a94308d8362b5c5ff64f4f5",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: getblock.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:30.967Z",
-      "discoveryError": "Error: Unsupported repository identity: getblock.io"
+      "lastAttempt": "2026-10-17T17:04:58.801Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: getblock.io"
     },
     {
       "id": "gimbalabs",
       "name": "Gimbalabs",
       "repo": "gimbalabs.com",
+      "catalogRepo": "gimbalabs.com",
       "maintainer": "Gimbalabs (community)",
       "registryHint": "Service",
       "packageHint": null,
@@ -8691,6 +8865,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:365fd9414795bba5e6ac0923",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: gimbalabs.com",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
@@ -8701,21 +8881,16 @@
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
-        },
-        {
-          "id": "gap:febb8a0c24e8172f0d2e4c84",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: gimbalabs.com",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:30.987Z",
-      "discoveryError": "Error: Unsupported repository identity: gimbalabs.com"
+      "lastAttempt": "2026-10-17T17:04:59.186Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: gimbalabs.com"
     },
     {
       "id": "gin",
       "name": "gin",
       "repo": "sidan-lab/gin",
+      "catalogRepo": "sidan-lab/gin",
       "maintainer": "sidan-lab",
       "registryHint": null,
       "packageHint": null,
@@ -8772,6 +8947,7 @@
       "id": "gnark-cardano",
       "name": "gnark-cardano",
       "repo": "developers.cardano.org/tools/gnark-cardano",
+      "catalogRepo": "developers.cardano.org/tools/gnark-cardano",
       "maintainer": "IO / community",
       "registryHint": null,
       "packageHint": null,
@@ -8797,16 +8973,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:2bcddabe624c2421b50a453c",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: developers.cardano.org/tools/gnark-cardano",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
+        },
+        {
+          "id": "gap:a4ad13e29da51a3d0a453787",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: developers.cardano.org/tools/gnark-cardano",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -8815,13 +8991,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.565Z",
-      "discoveryError": "Error: Unsupported repository identity: developers.cardano.org/tools/gnark-cardano"
+      "lastAttempt": "2026-10-17T17:04:55.281Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: developers.cardano.org/tools/gnark-cardano"
     },
     {
       "id": "go-cardano-serialization",
       "name": "go-cardano-serialization",
       "repo": "fivebinaries/go-cardano-serialization",
+      "catalogRepo": "fivebinaries/go-cardano-serialization",
       "maintainer": "Five Binaries",
       "registryHint": null,
       "packageHint": null,
@@ -8879,6 +9056,7 @@
       "id": "gouroboros",
       "name": "gOuroboros",
       "repo": "blinklabs-io/gouroboros",
+      "catalogRepo": "blinklabs-io/gouroboros",
       "maintainer": "Blink Labs",
       "registryHint": "Go",
       "packageHint": "github.com/blinklabs-io/gouroboros",
@@ -8938,6 +9116,7 @@
       "id": "govtool",
       "name": "GovTool",
       "repo": "IntersectMBO/govtool",
+      "catalogRepo": "IntersectMBO/govtool",
       "maintainer": "Intersect / IOG / CF",
       "registryHint": null,
       "packageHint": null,
@@ -9038,6 +9217,7 @@
       "id": "guild-operators-suite",
       "name": "Guild Operators Suite",
       "repo": "cardano-community/guild-operators",
+      "catalogRepo": "cardano-community/guild-operators",
       "maintainer": "Cardano Community",
       "registryHint": null,
       "packageHint": null,
@@ -9094,6 +9274,7 @@
       "id": "hebi",
       "name": "Hebi",
       "repo": "OpShin/hebi",
+      "catalogRepo": "OpShin/hebi",
       "maintainer": "OpShin community",
       "registryHint": null,
       "packageHint": null,
@@ -9149,6 +9330,7 @@
       "id": "helios",
       "name": "Helios",
       "repo": "HeliosLang/compiler",
+      "catalogRepo": "HeliosLang/compiler",
       "maintainer": "HeliosLang community",
       "registryHint": "npm",
       "packageHint": "@helios-lang/compiler",
@@ -9204,6 +9386,7 @@
       "id": "hydra",
       "name": "Hydra",
       "repo": "cardano-scaling/hydra",
+      "catalogRepo": "cardano-scaling/hydra",
       "maintainer": "IOG / cardano-scaling",
       "registryHint": "Hackage",
       "packageHint": "hydra-node",
@@ -9311,6 +9494,7 @@
       "id": "hydra-pay",
       "name": "Hydra Pay",
       "repo": "obsidiansystems/hydra-pay",
+      "catalogRepo": "obsidiansystems/hydra-pay",
       "maintainer": "Obsidian Systems",
       "registryHint": null,
       "packageHint": null,
@@ -9530,6 +9714,7 @@
       "id": "hydra-sdk",
       "name": "hydra-sdk",
       "repo": "Vtechcom/hydra-sdk",
+      "catalogRepo": "Vtechcom/hydra-sdk",
       "maintainer": "Community",
       "registryHint": "Service",
       "packageHint": null,
@@ -9607,6 +9792,7 @@
       "id": "hyperledger-identus",
       "name": "Hyperledger Identus",
       "repo": "hyperledger-identus/hyperledger-identus",
+      "catalogRepo": "hyperledger-identus/hyperledger-identus",
       "maintainer": "Hyperledger / IOG",
       "registryHint": null,
       "packageHint": null,
@@ -9670,6 +9856,7 @@
       "id": "imperator",
       "name": "Imperator",
       "repo": "OpShin/imperator",
+      "catalogRepo": "OpShin/imperator",
       "maintainer": "OpShin",
       "registryHint": null,
       "packageHint": null,
@@ -9724,6 +9911,7 @@
       "id": "intelliada",
       "name": "IntelliADA",
       "repo": "bloxbean/intelliada",
+      "catalogRepo": "bloxbean/intelliada",
       "maintainer": "BloxBean",
       "registryHint": "Service",
       "packageHint": null,
@@ -9778,6 +9966,7 @@
       "id": "iris",
       "name": "Iris",
       "repo": "IndigoProtocol/iris",
+      "catalogRepo": "IndigoProtocol/iris",
       "maintainer": "Indigo Protocol",
       "registryHint": null,
       "packageHint": null,
@@ -9833,6 +10022,7 @@
       "id": "jambhala",
       "name": "Jambhala",
       "repo": "ajnabi-workshop/jambhala",
+      "catalogRepo": "ajnabi-workshop/jambhala",
       "maintainer": "ajnabi-workshop",
       "registryHint": null,
       "packageHint": null,
@@ -9892,6 +10082,7 @@
       "id": "julc",
       "name": "JuLC",
       "repo": "bloxbean/julc",
+      "catalogRepo": "bloxbean/julc",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -9983,6 +10174,7 @@
       "id": "keria",
       "name": "KERIA",
       "repo": "veridian-id/keria",
+      "catalogRepo": "cardano-foundation/keria",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -10025,14 +10217,20 @@
           "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
         },
         {
+          "id": "gap:7f025bc308ca7683b9c83833",
+          "area": "artifact",
+          "reason": "Catalog source cardano-foundation/keria redirects to veridian-id/keria; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:20.344Z",
-      "lastSuccess": "2026-10-17T16:52:22.775Z",
+      "lastAttempt": "2026-10-17T17:05:06.207Z",
+      "lastSuccess": "2026-10-17T17:05:08.811Z",
       "release": "unreleased:main",
       "revision": "bc3b878b12e98c459a8a8d5ca1b81697205a8eb3",
       "releaseUrl": "https://github.com/veridian-id/keria/tree/bc3b878b12e98c459a8a8d5ca1b81697205a8eb3"
@@ -10041,6 +10239,7 @@
       "id": "kogmios",
       "name": "Kogmios",
       "repo": "projectNEWM/kogmios",
+      "catalogRepo": "projectNEWM/kogmios",
       "maintainer": "Project NEWM",
       "registryHint": null,
       "packageHint": null,
@@ -10097,6 +10296,7 @@
       "id": "koios",
       "name": "Koios",
       "repo": "cardano-community/koios-artifacts",
+      "catalogRepo": "cardano-community/koios-artifacts",
       "maintainer": "Cardano Community (Guild)",
       "registryHint": "Service",
       "packageHint": null,
@@ -10153,6 +10353,7 @@
       "id": "koios-cli",
       "name": "Koios CLI",
       "repo": "cardano-community/koios-cli",
+      "catalogRepo": "cardano-community/koios-cli",
       "maintainer": "Cardano Community",
       "registryHint": "Go",
       "packageHint": null,
@@ -10208,6 +10409,7 @@
       "id": "koios-go-client",
       "name": "Koios Go Client",
       "repo": "cardano-community/koios-go-client",
+      "catalogRepo": "cardano-community/koios-go-client",
       "maintainer": "Cardano Community",
       "registryHint": "Go",
       "packageHint": "github.com/cardano-community/koios-go-client",
@@ -10263,6 +10465,7 @@
       "id": "koios-java-client",
       "name": "Koios Java Client",
       "repo": "cardano-community/koios-java-client",
+      "catalogRepo": "cardano-community/koios-java-client",
       "maintainer": "Cardano Community",
       "registryHint": "Maven",
       "packageHint": null,
@@ -10317,6 +10520,7 @@
       "id": "koios-python",
       "name": "Koios Python",
       "repo": "cardano-community/koios-python",
+      "catalogRepo": "cardano-community/koios-python",
       "maintainer": "Cardano Community",
       "registryHint": "PyPI",
       "packageHint": "koios-api",
@@ -10371,6 +10575,7 @@
       "id": "kuber",
       "name": "Kuber",
       "repo": "dQuadrant/kuber",
+      "catalogRepo": "dQuadrant/kuber",
       "maintainer": "dQuadrant",
       "registryHint": "Hackage",
       "packageHint": "kuber",
@@ -10438,6 +10643,7 @@
       "id": "kuberide",
       "name": "KuberIDE",
       "repo": "kuberide.com",
+      "catalogRepo": "kuberide.com",
       "maintainer": "dQuadrant",
       "registryHint": "Service",
       "packageHint": null,
@@ -10469,9 +10675,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:b87c4645fb555a050b394521",
+          "id": "gap:6bd5d1ab6c9c90b84e4259c9",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: kuberide.com",
+          "reason": "Error: No GitHub source repository in catalog reference: kuberide.com",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -10481,13 +10687,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:46.570Z",
-      "discoveryError": "Error: Unsupported repository identity: kuberide.com"
+      "lastAttempt": "2026-10-17T17:05:02.983Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: kuberide.com"
     },
     {
       "id": "kupo",
       "name": "Kupo",
       "repo": "CardanoSolutions/kupo",
+      "catalogRepo": "CardanoSolutions/kupo",
       "maintainer": "CardanoSolutions",
       "registryHint": "Hackage",
       "packageHint": "kupo",
@@ -10546,6 +10753,7 @@
       "id": "lace",
       "name": "Lace",
       "repo": "input-output-hk/lace",
+      "catalogRepo": "input-output-hk/lace",
       "maintainer": "Input Output (IOG)",
       "registryHint": null,
       "packageHint": null,
@@ -10763,6 +10971,7 @@
       "id": "lace-anatomy",
       "name": "Lace Anatomy",
       "repo": "txpipe/laceanatomy",
+      "catalogRepo": "txpipe/laceanatomy",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -10828,6 +11037,7 @@
       "id": "lambda-buffers",
       "name": "LambdaBuffers",
       "repo": "mlabs-haskell/lambda-buffers",
+      "catalogRepo": "mlabs-haskell/lambda-buffers",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -10995,6 +11205,7 @@
       "id": "ledgerjs-hw-app-cardano",
       "name": "ledgerjs-hw-app-cardano",
       "repo": "cardano-foundation/ledgerjs-hw-app-cardano",
+      "catalogRepo": "cardano-foundation/ledgerjs-hw-app-cardano",
       "maintainer": "Cardano Foundation / Ledger",
       "registryHint": "npm",
       "packageHint": "@cardano-foundation/ledgerjs-hw-app-cardano",
@@ -11050,6 +11261,7 @@
       "id": "leios-peras",
       "name": "Leios / Peras",
       "repo": "leios.cardano-scaling.org",
+      "catalogRepo": "leios.cardano-scaling.org",
       "maintainer": "IOG Research",
       "registryHint": "Service",
       "packageHint": null,
@@ -11081,9 +11293,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:bdc03d4da3db1ed4b3abe60c",
+          "id": "gap:cd3d08a4dfd3a32ff96898e9",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: leios.cardano-scaling.org",
+          "reason": "Error: No GitHub source repository in catalog reference: leios.cardano-scaling.org",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -11093,13 +11305,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:46.597Z",
-      "discoveryError": "Error: Unsupported repository identity: leios.cardano-scaling.org"
+      "lastAttempt": "2026-10-17T17:05:03.295Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: leios.cardano-scaling.org"
     },
     {
       "id": "libcardano",
       "name": "libcardano",
       "repo": "ViperScience/libcardano",
+      "catalogRepo": "ViperScience/libcardano",
       "maintainer": "Viper Science",
       "registryHint": null,
       "packageHint": null,
@@ -11156,6 +11369,7 @@
       "id": "lucid",
       "name": "Lucid",
       "repo": "spacebudz/lucid",
+      "catalogRepo": "spacebudz/lucid",
       "maintainer": "SpaceBudz",
       "registryHint": "JSR",
       "packageHint": "@spacebudz/lucid",
@@ -11214,6 +11428,7 @@
       "id": "lucid-evolution",
       "name": "Lucid Evolution",
       "repo": "Anastasia-Labs/lucid-evolution",
+      "catalogRepo": "Anastasia-Labs/lucid-evolution",
       "maintainer": "Anastasia Labs",
       "registryHint": "npm",
       "packageHint": "@lucid-evolution/lucid",
@@ -11310,6 +11525,7 @@
       "id": "maestro",
       "name": "Maestro",
       "repo": "github.com/maestro-org",
+      "catalogRepo": "github.com/maestro-org",
       "maintainer": "Maestro Labs",
       "registryHint": "npm",
       "packageHint": "@maestro-org/typescript-sdk",
@@ -11335,16 +11551,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:421229a2ea96365023b5a7f3",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: github.com/maestro-org",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
-        },
-        {
-          "id": "gap:d261e54087e86dc0b32ed185",
-          "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/github.com/maestro-org\ngh: Not Found (HTTP 404)\n",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -11353,13 +11569,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:32.261Z",
-      "discoveryError": "Error: Command failed: gh api repos/github.com/maestro-org\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:05:01.798Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/maestro-org"
     },
     {
       "id": "marconi",
       "name": "Marconi",
       "repo": "input-output-hk/marconi",
+      "catalogRepo": "input-output-hk/marconi",
       "maintainer": "IOG",
       "registryHint": "Hackage",
       "packageHint": null,
@@ -11432,6 +11649,7 @@
       "id": "marlowe",
       "name": "Marlowe",
       "repo": "marlowe-lang/marlowe-cardano",
+      "catalogRepo": "marlowe-lang/marlowe-cardano",
       "maintainer": "Marlowe Language CIC",
       "registryHint": "Hackage",
       "packageHint": null,
@@ -11530,6 +11748,7 @@
       "id": "marlowe-playground",
       "name": "Marlowe Playground",
       "repo": "marlowe.iohk.io",
+      "catalogRepo": "marlowe.iohk.io",
       "maintainer": "IOG",
       "registryHint": "Service",
       "packageHint": null,
@@ -11549,6 +11768,12 @@
           "nextAction": "Export a discovery review packet."
         },
         {
+          "id": "gap:17ada475331e10ed3d81795f",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: marlowe.iohk.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -11561,25 +11786,20 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:bccffa5d988f30a31fe75120",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: marlowe.iohk.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:48.522Z",
-      "discoveryError": "Error: Unsupported repository identity: marlowe.iohk.io"
+      "lastAttempt": "2026-10-17T17:05:03.922Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: marlowe.iohk.io"
     },
     {
       "id": "marlowe-ts-sdk",
       "name": "Marlowe TS SDK",
       "repo": "marlowe-lang/marlowe-ts-sdk",
+      "catalogRepo": "marlowe-lang/marlowe-ts-sdk",
       "maintainer": "Marlowe Language CIC",
       "registryHint": null,
       "packageHint": null,
@@ -11656,6 +11876,7 @@
       "id": "masumi",
       "name": "Masumi",
       "repo": "masumi-network/masumi-payment-service",
+      "catalogRepo": "masumi-network/masumi-payment-service",
       "maintainer": "Masumi Network",
       "registryHint": null,
       "packageHint": null,
@@ -11739,6 +11960,7 @@
       "id": "masumi-registry-service",
       "name": "Masumi Registry Service",
       "repo": "masumi-network/masumi-registry-service",
+      "catalogRepo": "masumi-network/masumi-registry-service",
       "maintainer": "Masumi Network",
       "registryHint": null,
       "packageHint": null,
@@ -11796,6 +12018,7 @@
       "id": "merkle-patricia-forestry",
       "name": "Merkle Patricia Forestry",
       "repo": "Anastasia-Labs/merkle-patricia-forestry",
+      "catalogRepo": "Anastasia-Labs/merkle-patricia-forestry",
       "maintainer": "Anastasia Labs",
       "registryHint": null,
       "packageHint": null,
@@ -11854,6 +12077,7 @@
       "id": "mesh-mimir",
       "name": "Mesh Mimir",
       "repo": "github.com/MeshJS",
+      "catalogRepo": "github.com/MeshJS",
       "maintainer": "MeshJS",
       "registryHint": null,
       "packageHint": null,
@@ -11885,25 +12109,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:db0637c25c97861198071281",
-          "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/github.com/MeshJS\ngh: Not Found (HTTP 404)\n",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:f68b4a5f897391f98affa763",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: github.com/MeshJS",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:31.746Z",
-      "discoveryError": "Error: Command failed: gh api repos/github.com/MeshJS\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:04:59.572Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/MeshJS"
     },
     {
       "id": "meshjs-mesh-sdk",
       "name": "MeshJS (Mesh SDK)",
       "repo": "MeshJS/mesh",
+      "catalogRepo": "MeshJS/mesh",
       "maintainer": "MeshJS",
       "registryHint": "npm",
       "packageHint": "@meshsdk/core",
@@ -12291,6 +12516,7 @@
       "id": "metadraft",
       "name": "MetaDraft",
       "repo": "Cardano-Forge/MetaDraft",
+      "catalogRepo": "Cardano-Forge/MetaDraft",
       "maintainer": "Cardano Forge / Ada Anvil",
       "registryHint": null,
       "packageHint": null,
@@ -12352,6 +12578,7 @@
       "id": "metis",
       "name": "Metis",
       "repo": "txpipe/metis",
+      "catalogRepo": "txpipe/metis",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -12417,6 +12644,7 @@
       "id": "midgard",
       "name": "Midgard",
       "repo": "Anastasia-Labs/midgard",
+      "catalogRepo": "Anastasia-Labs/midgard",
       "maintainer": "Anastasia Labs (+IOG)",
       "registryHint": null,
       "packageHint": null,
@@ -12517,6 +12745,7 @@
       "id": "midnight",
       "name": "Midnight",
       "repo": "midnight.network",
+      "catalogRepo": "midnight.network",
       "maintainer": "IOG",
       "registryHint": "Service",
       "packageHint": null,
@@ -12529,12 +12758,6 @@
       "manifests": [],
       "evidenceIds": [],
       "gaps": [
-        {
-          "id": "gap:00a6dc04e4a3eb4929081dff",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: midnight.network",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
         {
           "id": "gap:08a4850a1570505e3dd508a0",
           "area": "integration",
@@ -12558,15 +12781,22 @@
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:ffe03b342dad968c978497a3",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: midnight.network",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:51.563Z",
-      "discoveryError": "Error: Unsupported repository identity: midnight.network"
+      "lastAttempt": "2026-10-17T17:05:04.252Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: midnight.network"
     },
     {
       "id": "milkomeda-c1",
       "name": "Milkomeda C1",
       "repo": "docs.milkomeda.com",
+      "catalogRepo": "docs.milkomeda.com",
       "maintainer": "dcSpark",
       "registryHint": "Service",
       "packageHint": null,
@@ -12586,12 +12816,6 @@
           "nextAction": "Export a discovery review packet."
         },
         {
-          "id": "gap:0c8d56f08f8f18d19a232a78",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: docs.milkomeda.com",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -12604,19 +12828,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
+          "id": "gap:726654ee9355b1784513136c",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: docs.milkomeda.com",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:26.623Z",
-      "discoveryError": "Error: Unsupported repository identity: docs.milkomeda.com"
+      "lastAttempt": "2026-10-17T17:04:56.450Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: docs.milkomeda.com"
     },
     {
       "id": "minswap-sdk",
       "name": "Minswap SDK",
       "repo": "minswap/sdk",
+      "catalogRepo": "minswap/sdk",
       "maintainer": "Minswap",
       "registryHint": null,
       "packageHint": null,
@@ -12675,6 +12906,7 @@
       "id": "mithril",
       "name": "Mithril",
       "repo": "IntersectMBO/mithril",
+      "catalogRepo": "input-output-hk/mithril",
       "maintainer": "IOG",
       "registryHint": "crates.io",
       "packageHint": "mithril-client",
@@ -12799,6 +13031,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:3a215ccf05ad30c18c371bfe",
+          "area": "artifact",
+          "reason": "Catalog source input-output-hk/mithril redirects to IntersectMBO/mithril; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -12811,8 +13049,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:39.451Z",
-      "lastSuccess": "2026-10-17T16:52:41.780Z",
+      "lastAttempt": "2026-10-17T17:04:47.673Z",
+      "lastSuccess": "2026-10-17T17:04:49.770Z",
       "release": "2630.1-hotfix",
       "revision": "3f6cb73f491eb3195d02318643e40836fb093acc",
       "releaseUrl": "https://github.com/IntersectMBO/mithril/releases/tag/2630.1-hotfix"
@@ -12821,6 +13059,7 @@
       "id": "mockfrost",
       "name": "Mockfrost",
       "repo": "OpShin/mockfrost",
+      "catalogRepo": "OpShin/mockfrost",
       "maintainer": "OpShin",
       "registryHint": null,
       "packageHint": null,
@@ -12886,6 +13125,7 @@
       "id": "mumak",
       "name": "Mumak",
       "repo": "txpipe/mumak",
+      "catalogRepo": "txpipe/mumak",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -12944,6 +13184,7 @@
       "id": "nami",
       "name": "Nami",
       "repo": "input-output-hk/nami",
+      "catalogRepo": "input-output-hk/nami",
       "maintainer": "Input Output (IOG)",
       "registryHint": null,
       "packageHint": null,
@@ -13002,6 +13243,7 @@
       "id": "naumachia",
       "name": "Naumachia",
       "repo": "free-honey/naumachia",
+      "catalogRepo": "free-honey/naumachia",
       "maintainer": "free-honey (community)",
       "registryHint": "crates.io",
       "packageHint": "naumachia",
@@ -13070,6 +13312,7 @@
       "id": "nftcdn",
       "name": "NFTCDN",
       "repo": "nftcdn.io",
+      "catalogRepo": "nftcdn.io",
       "maintainer": "NFTCDN",
       "registryHint": "Service",
       "packageHint": null,
@@ -13095,16 +13338,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:288afb8ac9bbc229362adbe2",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: nftcdn.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
+        },
+        {
+          "id": "gap:6895b115f6580fa064b0dfd7",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: nftcdn.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -13113,13 +13356,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:59.138Z",
-      "discoveryError": "Error: Unsupported repository identity: nftcdn.io"
+      "lastAttempt": "2026-10-17T17:05:04.587Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: nftcdn.io"
     },
     {
       "id": "nmkr-studio-api",
       "name": "NMKR Studio API",
       "repo": "nftmakerio/NMKR-Studio",
+      "catalogRepo": "nftmakerio/NMKR-Studio",
       "maintainer": "NMKR",
       "registryHint": null,
       "packageHint": null,
@@ -13176,6 +13420,7 @@
       "id": "nownodes",
       "name": "NOWNodes",
       "repo": "nownodes.io",
+      "catalogRepo": "nownodes.io",
       "maintainer": "NOWNodes",
       "registryHint": "Service",
       "packageHint": null,
@@ -13195,12 +13440,6 @@
           "nextAction": "Export a discovery review packet."
         },
         {
-          "id": "gap:0dbe609979fc86275d6b478f",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: nownodes.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -13213,19 +13452,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
+          "id": "gap:5b3cbd4e985e60c075c04fc6",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: nownodes.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:00.674Z",
-      "discoveryError": "Error: Unsupported repository identity: nownodes.io"
+      "lastAttempt": "2026-10-17T17:05:04.960Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: nownodes.io"
     },
     {
       "id": "nufi",
       "name": "NuFi",
       "repo": "nufi-official/nufi",
+      "catalogRepo": "nufi-official/nufi",
       "maintainer": "NuFi (ex-AdaLite)",
       "registryHint": null,
       "packageHint": null,
@@ -13282,6 +13528,7 @@
       "id": "nview",
       "name": "nview",
       "repo": "blinklabs-io/nview",
+      "catalogRepo": "blinklabs-io/nview",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -13338,18 +13585,33 @@
     {
       "id": "odatano",
       "name": "ODATANO",
-      "repo": "github.com/ODATANO/ODATANO",
+      "repo": "ODATANO/ODATANO",
+      "catalogRepo": "github.com/ODATANO/ODATANO",
       "maintainer": "ODATANO",
       "registryHint": "npm",
       "packageHint": "@odatano/core",
-      "ecosystems": [],
-      "artifact": "unresolved",
+      "ecosystems": [
+        "container",
+        "npm"
+      ],
+      "artifact": "partial",
       "resolution": "unresolved",
       "integration": "unresolved",
       "capability": "unresolved",
       "readiness": "unassessed",
-      "manifests": [],
-      "evidenceIds": [],
+      "manifests": [
+        "Dockerfile",
+        "app/router/package.json",
+        "app/wallet/package-lock.json",
+        "app/wallet/package.json",
+        "docker-compose.yml",
+        "package-lock.json",
+        "package.json"
+      ],
+      "evidenceIds": [
+        "evidence:382a2e46bacba36ab067b93c55200356dde934c4e26d7998b533eb9d941ea49b",
+        "evidence:3d03d6a725ad6b038e94f1d4b8e5df01974ba44cd30d7961b0a233f011ededd0"
+      ],
       "gaps": [
         {
           "id": "gap:08a4850a1570505e3dd508a0",
@@ -13364,31 +13626,29 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:526ab79e8b4a53f822a5fa08",
+          "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
-          "reason": "Release and source identity have not been verified.",
-          "nextAction": "Discover published artifacts and pin the release source."
+          "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
+          "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
-        },
-        {
-          "id": "gap:e1307c18d7c2f68cae302631",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: github.com/ODATANO/ODATANO",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:32.083Z",
-      "discoveryError": "Error: Unsupported repository identity: github.com/ODATANO/ODATANO"
+      "lastAttempt": "2026-10-17T17:04:59.937Z",
+      "lastSuccess": "2026-10-17T17:05:07.698Z",
+      "release": "v1.9.0",
+      "revision": "72954d36d871595345338c76da9956a775521062",
+      "releaseUrl": "https://github.com/ODATANO/ODATANO/releases/tag/v1.9.0"
     },
     {
       "id": "offchain-metadata-tools",
       "name": "offchain-metadata-tools",
       "repo": "input-output-hk/offchain-metadata-tools",
+      "catalogRepo": "input-output-hk/offchain-metadata-tools",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -13472,6 +13732,7 @@
       "id": "ogmios",
       "name": "Ogmios",
       "repo": "CardanoSolutions/ogmios",
+      "catalogRepo": "CardanoSolutions/ogmios",
       "maintainer": "CardanoSolutions",
       "registryHint": "Hackage",
       "packageHint": "ogmios",
@@ -13546,6 +13807,7 @@
       "id": "ogmiosdotnet",
       "name": "OgmiosDotnet",
       "repo": "ItsDaveB/OgmiosDotnet",
+      "catalogRepo": "ItsDaveB/OgmiosDotnet",
       "maintainer": "ItsDaveB",
       "registryHint": null,
       "packageHint": null,
@@ -13602,6 +13864,7 @@
       "id": "ogmiosdotnet-blockchainevents",
       "name": "OgmiosDotnet.BlockchainEvents",
       "repo": "ItsDaveB/OgmiosDotnet.BlockchainEvents",
+      "catalogRepo": "ItsDaveB/OgmiosDotnet.BlockchainEvents",
       "maintainer": "ItsDaveB",
       "registryHint": null,
       "packageHint": null,
@@ -13665,6 +13928,7 @@
       "id": "opshin",
       "name": "OpShin",
       "repo": "OpShin/opshin",
+      "catalogRepo": "OpShin/opshin",
       "maintainer": "OpShin community",
       "registryHint": "PyPI",
       "packageHint": "opshin",
@@ -13720,6 +13984,7 @@
       "id": "orcfax",
       "name": "Orcfax",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "Orcfax",
       "registryHint": "Service",
       "packageHint": null,
@@ -13762,6 +14027,7 @@
       "id": "oura",
       "name": "Oura",
       "repo": "txpipe/oura",
+      "catalogRepo": "txpipe/oura",
       "maintainer": "TxPipe",
       "registryHint": "crates.io",
       "packageHint": "oura",
@@ -13804,7 +14070,8 @@
         "evidence:1447135e0c6ff619b56c52ee4170fd16055bde05229207fb8588a0b825b5d00d",
         "evidence:51dc30bb0c80cdd98532083107e7284c13f35f71b93bc3b851a08256b00e0471",
         "evidence:a701221f6779738971b7a640585fd3681d6addc3f21a84f7ce9dbfad8df7e2cf",
-        "evidence:af1cc5d90bea8699f3e56d3a0bd266cc6dd201d749c43cbaded17aad7f2bfe0e"
+        "evidence:af1cc5d90bea8699f3e56d3a0bd266cc6dd201d749c43cbaded17aad7f2bfe0e",
+        "evidence:c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6"
       ],
       "gaps": [
         {
@@ -13836,6 +14103,7 @@
       "id": "ouroboros-miniprotocols-ts",
       "name": "ouroboros-miniprotocols-ts",
       "repo": "HarmonicLabs/ouroboros-miniprotocols-ts",
+      "catalogRepo": "HarmonicLabs/ouroboros-miniprotocols-ts",
       "maintainer": "Harmonic Labs",
       "registryHint": null,
       "packageHint": null,
@@ -13936,6 +14204,7 @@
       "id": "ouroboros-network-js",
       "name": "ouroboros-network-js",
       "repo": "StricaHQ/ouroboros-network-js",
+      "catalogRepo": "StricaHQ/ouroboros-network-js",
       "maintainer": "StricaHQ",
       "registryHint": null,
       "packageHint": null,
@@ -13991,6 +14260,7 @@
       "id": "pallas",
       "name": "Pallas",
       "repo": "txpipe/pallas",
+      "catalogRepo": "txpipe/pallas",
       "maintainer": "TxPipe",
       "registryHint": "crates.io",
       "packageHint": "pallas",
@@ -14073,6 +14343,7 @@
       "id": "partner-chains",
       "name": "Partner Chains",
       "repo": "interchains.iog.io",
+      "catalogRepo": "interchains.iog.io",
       "maintainer": "IOG",
       "registryHint": "Service",
       "packageHint": null,
@@ -14098,16 +14369,16 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
-          "id": "gap:39d80b67db86c9786032389f",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: interchains.iog.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:526ab79e8b4a53f822a5fa08",
           "area": "artifact",
           "reason": "Release and source identity have not been verified.",
           "nextAction": "Discover published artifacts and pin the release source."
+        },
+        {
+          "id": "gap:8ff1e4b9d0a27fa3c6d787f1",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: interchains.iog.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
           "id": "gap:e0b80a82a98d351ea1a5699b",
@@ -14116,13 +14387,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:46.545Z",
-      "discoveryError": "Error: Unsupported repository identity: interchains.iog.io"
+      "lastAttempt": "2026-10-17T17:05:02.618Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: interchains.iog.io"
     },
     {
       "id": "pebble",
       "name": "Pebble",
       "repo": "HarmonicLabs/pebble",
+      "catalogRepo": "HarmonicLabs/pebble",
       "maintainer": "Harmonic Labs",
       "registryHint": "npm",
       "packageHint": "@harmoniclabs/pebble",
@@ -14184,6 +14456,7 @@
       "id": "pg-cardano",
       "name": "pg_cardano",
       "repo": "cardano-community/pg_cardano",
+      "catalogRepo": "cardano-community/pg_cardano",
       "maintainer": "cardano-community",
       "registryHint": "PostgreSQL",
       "packageHint": null,
@@ -14239,6 +14512,7 @@
       "id": "pix",
       "name": "Pix",
       "repo": "txpipe/pix",
+      "catalogRepo": "txpipe/pix",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -14294,6 +14568,7 @@
       "id": "plinth-plutus-tx",
       "name": "Plinth (Plutus Tx)",
       "repo": "IntersectMBO/plutus",
+      "catalogRepo": "input-output-hk/plutus",
       "maintainer": "IntersectMBO (IOG)",
       "registryHint": "Hackage",
       "packageHint": "plutus-tx",
@@ -14362,6 +14637,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:431fe1823601fe6e31515d08",
+          "area": "artifact",
+          "reason": "Catalog source input-output-hk/plutus redirects to IntersectMBO/plutus; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -14374,8 +14655,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:41.809Z",
-      "lastSuccess": "2026-10-17T16:52:44.681Z",
+      "lastAttempt": "2026-10-17T17:04:47.984Z",
+      "lastSuccess": "2026-10-17T17:04:51.786Z",
       "release": "1.72.0.0",
       "revision": "152220ae3da8cd6ceaf2688094af541ac1245f58",
       "releaseUrl": "https://github.com/IntersectMBO/plutus/releases/tag/1.72.0.0"
@@ -14384,6 +14665,7 @@
       "id": "plu-ts",
       "name": "plu-ts",
       "repo": "HarmonicLabs/pebble",
+      "catalogRepo": "HarmonicLabs/plu-ts",
       "maintainer": "Harmonic Labs",
       "registryHint": "npm",
       "packageHint": "@harmoniclabs/plu-ts",
@@ -14429,14 +14711,20 @@
           "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
         },
         {
+          "id": "gap:801f279dc55fa92b3c95daf7",
+          "area": "artifact",
+          "reason": "Catalog source HarmonicLabs/plu-ts redirects to HarmonicLabs/pebble; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:51:15.287Z",
-      "lastSuccess": "2026-10-17T16:51:17.245Z",
+      "lastAttempt": "2026-10-17T16:51:13.867Z",
+      "lastSuccess": "2026-10-17T16:51:15.791Z",
       "release": "unreleased:main",
       "revision": "d6a5a75575d6091bc0bd3f63d5daa225d6772677",
       "releaseUrl": "https://github.com/HarmonicLabs/pebble/tree/d6a5a75575d6091bc0bd3f63d5daa225d6772677"
@@ -14445,6 +14733,7 @@
       "id": "plutarch",
       "name": "Plutarch",
       "repo": "Plutonomicon/plutarch-plutus",
+      "catalogRepo": "Plutonomicon/plutarch-plutus",
       "maintainer": "Plutonomicon community",
       "registryHint": "Hackage",
       "packageHint": "plutarch",
@@ -14514,6 +14803,7 @@
       "id": "pluthon",
       "name": "Pluthon",
       "repo": "OpShin/pluthon",
+      "catalogRepo": "OpShin/pluthon",
       "maintainer": "OpShin",
       "registryHint": null,
       "packageHint": null,
@@ -14569,6 +14859,7 @@
       "id": "plutigo",
       "name": "Plutigo",
       "repo": "blinklabs-io/plutigo",
+      "catalogRepo": "blinklabs-io/plutigo",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -14624,6 +14915,7 @@
       "id": "plutip",
       "name": "Plutip",
       "repo": "mlabs-haskell/plutip",
+      "catalogRepo": "mlabs-haskell/plutip",
       "maintainer": "MLabs",
       "registryHint": "Hackage",
       "packageHint": "plutip",
@@ -14684,6 +14976,7 @@
       "id": "pluto",
       "name": "Pluto",
       "repo": "Plutonomicon/pluto",
+      "catalogRepo": "Plutonomicon/pluto",
       "maintainer": "Plutonomicon community",
       "registryHint": null,
       "packageHint": null,
@@ -14748,6 +15041,7 @@
       "id": "plutonomy",
       "name": "Plutonomy",
       "repo": "well-typed/plutonomy",
+      "catalogRepo": "well-typed/plutonomy",
       "maintainer": "Well-Typed",
       "registryHint": null,
       "packageHint": null,
@@ -14803,6 +15097,7 @@
       "id": "plutus-cborhex-automation",
       "name": "plutus-cborhex-automation",
       "repo": "sidan-lab/plutus-cborhex-automation",
+      "catalogRepo": "sidan-lab/plutus-cborhex-automation",
       "maintainer": "sidan-lab",
       "registryHint": null,
       "packageHint": null,
@@ -14860,6 +15155,7 @@
       "id": "plutus-halo2-verifier-gen",
       "name": "plutus-halo2-verifier-gen",
       "repo": "input-output-hk/plutus-halo2-verifier-gen",
+      "catalogRepo": "input-output-hk/plutus-halo2-verifier-gen",
       "maintainer": "IO Research",
       "registryHint": null,
       "packageHint": null,
@@ -14921,6 +15217,7 @@
       "id": "plutus-pioneer-program",
       "name": "Plutus Pioneer Program",
       "repo": "input-output-hk/plutus-pioneer-program",
+      "catalogRepo": "input-output-hk/plutus-pioneer-program",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -14999,6 +15296,7 @@
       "id": "plutus-playground",
       "name": "Plutus Playground",
       "repo": "playground.plutus.iohkdev.io",
+      "catalogRepo": "playground.plutus.iohkdev.io",
       "maintainer": "IOG",
       "registryHint": "Service",
       "packageHint": null,
@@ -15030,9 +15328,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:d755f58152d335fe87c8afb6",
+          "id": "gap:98d5c29a89dbf6a5bdca924f",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: playground.plutus.iohkdev.io",
+          "reason": "Error: No GitHub source repository in catalog reference: playground.plutus.iohkdev.io",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -15042,13 +15340,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:01.633Z",
-      "discoveryError": "Error: Unsupported repository identity: playground.plutus.iohkdev.io"
+      "lastAttempt": "2026-10-17T17:05:05.268Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: playground.plutus.iohkdev.io"
     },
     {
       "id": "plutus-plutus-core",
       "name": "Plutus / Plutus Core",
       "repo": "IntersectMBO/plutus",
+      "catalogRepo": "input-output-hk/plutus",
       "maintainer": "IntersectMBO (IOG)",
       "registryHint": "Hackage",
       "packageHint": "plutus",
@@ -15117,6 +15416,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:431fe1823601fe6e31515d08",
+          "area": "artifact",
+          "reason": "Catalog source input-output-hk/plutus redirects to IntersectMBO/plutus; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -15129,8 +15434,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:41.809Z",
-      "lastSuccess": "2026-10-17T16:52:44.681Z",
+      "lastAttempt": "2026-10-17T17:04:47.984Z",
+      "lastSuccess": "2026-10-17T17:04:51.786Z",
       "release": "1.72.0.0",
       "revision": "152220ae3da8cd6ceaf2688094af541ac1245f58",
       "releaseUrl": "https://github.com/IntersectMBO/plutus/releases/tag/1.72.0.0"
@@ -15139,6 +15444,7 @@
       "id": "plutus-simple-model",
       "name": "plutus-simple-model",
       "repo": "mlabs-haskell/plutus-simple-model",
+      "catalogRepo": "mlabs-haskell/plutus-simple-model",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -15198,6 +15504,7 @@
       "id": "pool-pm",
       "name": "pool.pm",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "pool.pm",
       "registryHint": "Service",
       "packageHint": null,
@@ -15240,6 +15547,7 @@
       "id": "purus",
       "name": "Purus",
       "repo": "mlabs-haskell/purus",
+      "catalogRepo": "mlabs-haskell/purus",
       "maintainer": "MLabs",
       "registryHint": null,
       "packageHint": null,
@@ -15364,6 +15672,7 @@
       "id": "pycardano",
       "name": "PyCardano",
       "repo": "Python-Cardano/pycardano",
+      "catalogRepo": "Python-Cardano/pycardano",
       "maintainer": "Python-Cardano community",
       "registryHint": "PyPI",
       "packageHint": "pycardano",
@@ -15427,6 +15736,7 @@
       "id": "pyth-lazer-cardano",
       "name": "Pyth Lazer (Cardano)",
       "repo": "pyth-network/pyth-lazer-cardano",
+      "catalogRepo": "pyth-network/pyth-lazer-cardano",
       "maintainer": "Pyth Network",
       "registryHint": null,
       "packageHint": null,
@@ -15482,6 +15792,7 @@
       "id": "quickcheck-contractmodel",
       "name": "quickcheck-contractmodel",
       "repo": "input-output-hk/quickcheck-contractmodel",
+      "catalogRepo": "input-output-hk/quickcheck-contractmodel",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -15541,6 +15852,7 @@
       "id": "quickcheck-dynamic",
       "name": "quickcheck-dynamic",
       "repo": "input-output-hk/quickcheck-dynamic",
+      "catalogRepo": "input-output-hk/quickcheck-dynamic",
       "maintainer": "QuviQ / IOG",
       "registryHint": "Hackage",
       "packageHint": "quickcheck-dynamic",
@@ -15601,6 +15913,7 @@
       "id": "rum",
       "name": "rum",
       "repo": "sidan-lab/rum",
+      "catalogRepo": "sidan-lab/rum",
       "maintainer": "sidan-lab",
       "registryHint": null,
       "packageHint": null,
@@ -15656,6 +15969,7 @@
       "id": "sc-tools",
       "name": "sc-tools (Convex)",
       "repo": "input-output-hk/sc-tools",
+      "catalogRepo": "input-output-hk/sc-tools",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -15717,6 +16031,7 @@
       "id": "scalus",
       "name": "Scalus",
       "repo": "scalus3/scalus",
+      "catalogRepo": "scalus3/scalus",
       "maintainer": "Alexander Nemish (scalus3)",
       "registryHint": "Maven",
       "packageHint": "org.scalus:scalus_3",
@@ -15783,6 +16098,7 @@
       "id": "scrolls",
       "name": "Scrolls",
       "repo": "txpipe/scrolls",
+      "catalogRepo": "txpipe/scrolls",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -15847,6 +16163,7 @@
       "id": "shrinker",
       "name": "Shrinker",
       "repo": "Plutonomicon/Shrinker",
+      "catalogRepo": "Plutonomicon/Shrinker",
       "maintainer": "Plutonomicon",
       "registryHint": null,
       "packageHint": null,
@@ -15912,6 +16229,7 @@
       "id": "smartcode-verifier",
       "name": "SmartCode Verifier",
       "repo": "input-output-hk/smartcode-verifier",
+      "catalogRepo": "input-output-hk/smartcode-verifier",
       "maintainer": "IOG",
       "registryHint": null,
       "packageHint": null,
@@ -15968,6 +16286,7 @@
       "id": "sokosumi",
       "name": "Sokosumi",
       "repo": "masumi-network/sokosumi",
+      "catalogRepo": "masumi-network/sokosumi",
       "maintainer": "Masumi Network",
       "registryHint": null,
       "packageHint": null,
@@ -16037,6 +16356,7 @@
       "id": "sorbet",
       "name": "Sorbet",
       "repo": "SundaeSwap-finance/Sorbet",
+      "catalogRepo": "SundaeSwap-finance/Sorbet",
       "maintainer": "SundaeSwap",
       "registryHint": null,
       "packageHint": null,
@@ -16091,6 +16411,7 @@
       "id": "spectrum-dex-sdk",
       "name": "Spectrum DEX SDK (Haskell)",
       "repo": "spectrum-finance/cardano-dex-sdk-haskell",
+      "catalogRepo": "spectrum-finance/cardano-dex-sdk-haskell",
       "maintainer": "Spectrum Finance",
       "registryHint": null,
       "packageHint": null,
@@ -16167,6 +16488,7 @@
       "id": "stakepool-operator-scripts",
       "name": "StakePool Operator Scripts",
       "repo": "gitmachtl/scripts",
+      "catalogRepo": "gitmachtl/scripts",
       "maintainer": "Martin Lang (gitmachtl)",
       "registryHint": null,
       "packageHint": null,
@@ -16223,6 +16545,7 @@
       "id": "sundae-sdk",
       "name": "SundaeSwap SDK",
       "repo": "SundaeSwap-finance/sundae-sdk",
+      "catalogRepo": "SundaeSwap-finance/sundae-sdk",
       "maintainer": "Sundae Labs",
       "registryHint": null,
       "packageHint": null,
@@ -16287,6 +16610,7 @@
       "id": "sutra",
       "name": "Sutra",
       "repo": "txbody-org/sutra-cardano",
+      "catalogRepo": "txbody-org/sutra-cardano",
       "maintainer": "txbody.org",
       "registryHint": null,
       "packageHint": null,
@@ -16350,6 +16674,7 @@
       "id": "tangocrypto",
       "name": "TangoCrypto",
       "repo": "github.com/tango-crypto",
+      "catalogRepo": "github.com/tango-crypto",
       "maintainer": "TangoCrypto",
       "registryHint": null,
       "packageHint": null,
@@ -16381,25 +16706,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:8acc0b9c3880464859895507",
-          "area": "discovery",
-          "reason": "Error: Command failed: gh api repos/github.com/tango-crypto\ngh: Not Found (HTTP 404)\n",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:f2335ac7b0e4c5c0f2f242a6",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: github.com/tango-crypto",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:32.444Z",
-      "discoveryError": "Error: Command failed: gh api repos/github.com/tango-crypto\ngh: Not Found (HTTP 404)\n"
+      "lastAttempt": "2026-10-17T17:05:02.244Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: github.com/tango-crypto"
     },
     {
       "id": "taptools-api",
       "name": "TapTools API",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "TapTools",
       "registryHint": "Service",
       "packageHint": null,
@@ -16442,6 +16768,7 @@
       "id": "telchar",
       "name": "Telchar",
       "repo": "txpipe/telchar",
+      "catalogRepo": "txpipe/telchar",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -16518,6 +16845,7 @@
       "id": "testnet-faucet",
       "name": "Testnet Faucet",
       "repo": null,
+      "catalogRepo": null,
       "maintainer": "IOG / Cardano Foundation",
       "registryHint": "Service",
       "packageHint": null,
@@ -16560,6 +16888,7 @@
       "id": "toolkit-for-cardano",
       "name": "Toolkit for Cardano",
       "repo": "SundaeSwap-finance/toolkit-for-cardano",
+      "catalogRepo": "SundaeSwap-finance/toolkit-for-cardano",
       "maintainer": "Sundae Labs",
       "registryHint": null,
       "packageHint": null,
@@ -16623,6 +16952,7 @@
       "id": "tx3",
       "name": "Tx3",
       "repo": "tx3-lang/tx3",
+      "catalogRepo": "tx3-lang/tx3",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -16697,6 +17027,7 @@
       "id": "txtop",
       "name": "txtop",
       "repo": "blinklabs-io/txtop",
+      "catalogRepo": "blinklabs-io/txtop",
       "maintainer": "Blink Labs",
       "registryHint": null,
       "packageHint": null,
@@ -16754,6 +17085,7 @@
       "id": "typhon",
       "name": "Typhon",
       "repo": "typhonwallet.io",
+      "catalogRepo": "typhonwallet.io",
       "maintainer": "StricaHQ",
       "registryHint": "Service",
       "packageHint": null,
@@ -16785,25 +17117,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:bec45839c9caf0f90d4ed76f",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: typhonwallet.io",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
+        },
+        {
+          "id": "gap:e791bb4673904924ae7762b7",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: typhonwallet.io",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:21.573Z",
-      "discoveryError": "Error: Unsupported repository identity: typhonwallet.io"
+      "lastAttempt": "2026-10-17T17:05:05.586Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: typhonwallet.io"
     },
     {
       "id": "typhonjs",
       "name": "Typhonjs",
       "repo": "StricaHQ/typhonjs",
+      "catalogRepo": "StricaHQ/typhonjs",
       "maintainer": "StricaHQ",
       "registryHint": "npm",
       "packageHint": "@stricahq/typhonjs",
@@ -16859,6 +17192,7 @@
       "id": "uplc-turbo",
       "name": "uplc-turbo",
       "repo": "txpipe/uplc-turbo",
+      "catalogRepo": "txpipe/uplc-turbo",
       "maintainer": "TxPipe",
       "registryHint": null,
       "packageHint": null,
@@ -16917,6 +17251,7 @@
       "id": "use-cardano",
       "name": "use-cardano",
       "repo": "use-cardano/use-cardano",
+      "catalogRepo": "use-cardano/use-cardano",
       "maintainer": "Community",
       "registryHint": "npm",
       "packageHint": "use-cardano",
@@ -16974,6 +17309,7 @@
       "id": "utxorpc",
       "name": "UTxORPC",
       "repo": "utxorpc/spec",
+      "catalogRepo": "utxorpc/spec",
       "maintainer": "Community",
       "registryHint": "crates.io",
       "packageHint": "utxorpc-spec",
@@ -17044,6 +17380,7 @@
       "id": "utxos",
       "name": "UTxOS",
       "repo": "utxos.dev",
+      "catalogRepo": "utxos.dev",
       "maintainer": "UTxOS",
       "registryHint": "Service",
       "packageHint": null,
@@ -17063,12 +17400,6 @@
           "nextAction": "Export a discovery review packet."
         },
         {
-          "id": "gap:0d32ef94e93ef83a2614edbe",
-          "area": "discovery",
-          "reason": "Error: Unsupported repository identity: utxos.dev",
-          "nextAction": "Retry discovery; inspect repository identity and API availability."
-        },
-        {
           "id": "gap:184fa78848aac8ee996bf356",
           "area": "resolution",
           "reason": "No native dependency resolution has been imported.",
@@ -17081,19 +17412,26 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
+          "id": "gap:b1c85c2d2403fece416b52c3",
+          "area": "discovery",
+          "reason": "Error: No GitHub source repository in catalog reference: utxos.dev",
+          "nextAction": "Retry discovery; inspect repository identity and API availability."
+        },
+        {
           "id": "gap:e0b80a82a98d351ea1a5699b",
           "area": "capability",
           "reason": "Chain-facing capabilities have not been reviewed.",
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:23.440Z",
-      "discoveryError": "Error: Unsupported repository identity: utxos.dev"
+      "lastAttempt": "2026-10-17T17:05:05.900Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: utxos.dev"
     },
     {
       "id": "veridian-wallet",
       "name": "Veridian Wallet",
       "repo": "veridian-id/veridian-wallet",
+      "catalogRepo": "cardano-foundation/veridian-wallet",
       "maintainer": "Cardano Foundation",
       "registryHint": null,
       "packageHint": null,
@@ -17149,6 +17487,12 @@
           "nextAction": "Collect a native resolution for a declared release/profile."
         },
         {
+          "id": "gap:6f36271bdf337d888bc72edd",
+          "area": "artifact",
+          "reason": "Catalog source cardano-foundation/veridian-wallet redirects to veridian-id/veridian-wallet; tool/package identity may have changed.",
+          "nextAction": "Verify the release and artifact mapping before merging tool identities."
+        },
+        {
           "id": "gap:ccd120d62205d2bd8fa69b2f",
           "area": "artifact",
           "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -17161,8 +17505,8 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:52:21.650Z",
-      "lastSuccess": "2026-10-17T16:52:23.810Z",
+      "lastAttempt": "2026-10-17T17:05:06.563Z",
+      "lastSuccess": "2026-10-17T17:05:09.194Z",
       "release": "1.2.2",
       "revision": "e93a56f54451cc386ba54dd1e8e5564a884b3593",
       "releaseUrl": "https://github.com/veridian-id/veridian-wallet/releases/tag/1.2.2"
@@ -17171,6 +17515,7 @@
       "id": "vespr",
       "name": "Vespr",
       "repo": "vespr.xyz",
+      "catalogRepo": "vespr.xyz",
       "maintainer": "VESPR",
       "registryHint": "Service",
       "packageHint": null,
@@ -17202,9 +17547,9 @@
           "nextAction": "Discover published artifacts and pin the release source."
         },
         {
-          "id": "gap:730c76d755bf9cd31ae1b708",
+          "id": "gap:6be0c2488d0a6efef7f647ac",
           "area": "discovery",
-          "reason": "Error: Unsupported repository identity: vespr.xyz",
+          "reason": "Error: No GitHub source repository in catalog reference: vespr.xyz",
           "nextAction": "Retry discovery; inspect repository identity and API availability."
         },
         {
@@ -17214,13 +17559,14 @@
           "nextAction": "Review production entry points and integration behavior."
         }
       ],
-      "lastAttempt": "2026-10-17T16:53:25.631Z",
-      "discoveryError": "Error: Unsupported repository identity: vespr.xyz"
+      "lastAttempt": "2026-10-17T17:05:08.035Z",
+      "discoveryError": "Error: No GitHub source repository in catalog reference: vespr.xyz"
     },
     {
       "id": "vodka",
       "name": "Vodka",
       "repo": "sidan-lab/vodka",
+      "catalogRepo": "sidan-lab/vodka",
       "maintainer": "sidan-lab",
       "registryHint": null,
       "packageHint": null,
@@ -17278,6 +17624,7 @@
       "id": "vscode-aiken",
       "name": "Aiken for VS Code",
       "repo": "aiken-lang/vscode-aiken",
+      "catalogRepo": "aiken-lang/vscode-aiken",
       "maintainer": "aiken-lang",
       "registryHint": null,
       "packageHint": null,
@@ -17333,6 +17680,7 @@
       "id": "weld",
       "name": "Weld",
       "repo": "Cardano-Forge/weld",
+      "catalogRepo": "Cardano-Forge/weld",
       "maintainer": "Cardano-Forge / Ada Anvil",
       "registryHint": "npm",
       "packageHint": "@ada-anvil/weld",
@@ -17394,6 +17742,7 @@
       "id": "whisky",
       "name": "whisky",
       "repo": "sidan-lab/whisky",
+      "catalogRepo": "sidan-lab/whisky",
       "maintainer": "sidan-lab",
       "registryHint": "crates.io",
       "packageHint": "whisky",
@@ -17464,6 +17813,7 @@
       "id": "x402-cardano",
       "name": "x402 Cardano",
       "repo": "masumi-network/x402-cardano",
+      "catalogRepo": "masumi-network/x402-cardano",
       "maintainer": "Masumi Network",
       "registryHint": null,
       "packageHint": null,
@@ -17606,6 +17956,7 @@
       "id": "xogmios",
       "name": "Xogmios",
       "repo": "wowica/xogmios",
+      "catalogRepo": "wowica/xogmios",
       "maintainer": "wowica",
       "registryHint": null,
       "packageHint": null,
@@ -17661,6 +18012,7 @@
       "id": "yaci",
       "name": "Yaci",
       "repo": "bloxbean/yaci",
+      "catalogRepo": "bloxbean/yaci",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -17717,6 +18069,7 @@
       "id": "yaci-bridge",
       "name": "Yaci Bridge",
       "repo": "bloxbean/yaci-bridge",
+      "catalogRepo": "bloxbean/yaci-bridge",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -17775,6 +18128,7 @@
       "id": "yaci-devkit",
       "name": "Yaci DevKit",
       "repo": "bloxbean/yaci-devkit",
+      "catalogRepo": "bloxbean/yaci-devkit",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -17857,6 +18211,7 @@
       "id": "yaci-store",
       "name": "Yaci Store",
       "repo": "bloxbean/yaci-store",
+      "catalogRepo": "bloxbean/yaci-store",
       "maintainer": "BloxBean (CF-backed)",
       "registryHint": "Maven",
       "packageHint": "com.bloxbean.cardano:yaci-store",
@@ -17998,6 +18353,7 @@
       "id": "yano",
       "name": "Yano",
       "repo": "bloxbean/yano",
+      "catalogRepo": "bloxbean/yano",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -18109,6 +18465,7 @@
       "id": "yoroi",
       "name": "Yoroi",
       "repo": "Emurgo/yoroi",
+      "catalogRepo": "Emurgo/yoroi",
       "maintainer": "Emurgo",
       "registryHint": null,
       "packageHint": null,
@@ -18211,6 +18568,7 @@
       "id": "zeroj",
       "name": "ZeroJ",
       "repo": "bloxbean/zeroj",
+      "catalogRepo": "bloxbean/zeroj",
       "maintainer": "BloxBean",
       "registryHint": null,
       "packageHint": null,
@@ -18303,6 +18661,7 @@
       "id": "zhuli",
       "name": "ZhuLi",
       "repo": "CardanoSolutions/zhuli",
+      "catalogRepo": "CardanoSolutions/zhuli",
       "maintainer": "CardanoSolutions",
       "registryHint": null,
       "packageHint": null,
@@ -149430,6 +149789,13 @@
       "sourceUrl": "https://github.com/txpipe/pallas/tree/aef0b5a060a0a020da6641576f588c890cd15f63"
     },
     {
+      "id": "evidence:382a2e46bacba36ab067b93c55200356dde934c4e26d7998b533eb9d941ea49b",
+      "digest": "382a2e46bacba36ab067b93c55200356dde934c4e26d7998b533eb9d941ea49b",
+      "path": "evidence/382a2e46bacba36ab067b93c55200356dde934c4e26d7998b533eb9d941ea49b.json.gz",
+      "description": "Pinned repository tree for manifest and integration discovery",
+      "sourceUrl": "https://github.com/ODATANO/ODATANO/tree/72954d36d871595345338c76da9956a775521062"
+    },
+    {
       "id": "evidence:38ab2a551c48d5f23b81d07e3eff818e733dd1f8520c48bf3f8d940871c4634e",
       "digest": "38ab2a551c48d5f23b81d07e3eff818e733dd1f8520c48bf3f8d940871c4634e",
       "path": "evidence/38ab2a551c48d5f23b81d07e3eff818e733dd1f8520c48bf3f8d940871c4634e.json.gz",
@@ -149484,6 +149850,13 @@
       "path": "evidence/3c140282d85bd1e0d0197639ebbc6865ed5262ca812e78907b6e16e87cd334a0.json.gz",
       "description": "Pinned repository tree for manifest and integration discovery",
       "sourceUrl": "https://github.com/IndigoProtocol/iris/tree/70449cccb5602dad948794ba26b3b8596cc332c9"
+    },
+    {
+      "id": "evidence:3d03d6a725ad6b038e94f1d4b8e5df01974ba44cd30d7961b0a233f011ededd0",
+      "digest": "3d03d6a725ad6b038e94f1d4b8e5df01974ba44cd30d7961b0a233f011ededd0",
+      "path": "evidence/3d03d6a725ad6b038e94f1d4b8e5df01974ba44cd30d7961b0a233f011ededd0.json.gz",
+      "description": "Release selection and immutable source identity",
+      "sourceUrl": "https://github.com/ODATANO/ODATANO/releases/tag/v1.9.0"
     },
     {
       "id": "evidence:3e0bdfa1d3ddf335e69d623f923f16578a96e792345334ba911123f8f53a976b",
@@ -151330,6 +151703,13 @@
       "path": "evidence/c617b5f3a02a06967710ac3db2e027b995112c6fd3c68dfd4a7c2bfebed0ded1.json.gz",
       "description": "Pinned repository tree for manifest and integration discovery",
       "sourceUrl": "https://github.com/sidan-lab/whisky/tree/a2e4bb1bb7da2e5333c783dcc0119a7ad8137ee2"
+    },
+    {
+      "id": "evidence:c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6",
+      "digest": "c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6",
+      "path": "evidence/c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6.json.gz",
+      "description": "Source oura/README.md",
+      "sourceUrl": "https://github.com/txpipe/oura/blob/6c326ddf3e010ee955cb45358dea7522dc75e331/README.md"
     },
     {
       "id": "evidence:c6baea237889e3874b26081bc456058a61d6938dccf9f0d9dd78da87d51a0af5",

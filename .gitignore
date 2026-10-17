@@ -42,3 +42,4 @@ next-env.d.ts
 
 # Resumable collection state and manual review working packets
 /.readiness/
+/data/readiness/.writer-lock.json

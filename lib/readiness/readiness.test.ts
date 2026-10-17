@@ -7,7 +7,7 @@ import type { Graph } from "../map-types";
 import { finalize, inventory, validate } from "./core";
 import { parseNativeInput, resolveNative } from "./adapters";
 import { calculateImpact } from "./impact";
-import { detectManifests } from "./discovery";
+import { detectManifests, repositoryReference } from "./discovery";
 import { addEvidence, mergeResolution, Store } from "./store";
 import type { NativeInput } from "./types";
 
@@ -153,4 +153,11 @@ test("manifest discovery includes nested workspaces and unsupported ecosystems",
   assert.deepEqual(found.ecosystems, ["cabal", "cargo", "nix", "npm", "other"]);
   assert.equal(found.manifests.length, 5);
   assert.equal(found.reviewFiles.length, 2);
+});
+
+test("repository normalization accepts GitHub URLs without guessing repositories for hosted services", () => {
+  assert.equal(repositoryReference("github.com/ODATANO/ODATANO"), "ODATANO/ODATANO");
+  assert.equal(repositoryReference("https://github.com/owner/repo.git"), "owner/repo");
+  assert.equal(repositoryReference("github.com/MeshJS"), null);
+  assert.equal(repositoryReference("docs.txpipe.io/balius"), null);
 });

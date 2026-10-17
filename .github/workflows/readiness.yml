@@ -1,0 +1,45 @@
+name: readiness-discovery
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * 2"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: readiness-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:readiness
+      - name: Save comparison baseline
+        run: cp data/readiness/snapshot.json /tmp/readiness-before.json
+      - name: Refresh public source discovery
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          npm run readiness -- inventory
+          npm run readiness -- discover --refresh
+          npm run readiness -- report
+          npm run readiness -- diff --before /tmp/readiness-before.json --output data/readiness/changes.json
+          npm run readiness -- validate
+          npm run readiness -- replay
+      - name: Retain results for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: readiness-discovery-${{ github.run_id }}
+          path: data/readiness/
+          retention-days: 90

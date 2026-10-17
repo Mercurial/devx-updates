@@ -1,7 +1,7 @@
 {
-  "snapshot": "b85b010fd1a26c7a238d82be59a2ce09bd18529e6c85a0e18cea0549ec4fba42",
+  "snapshot": "da93ebc82c9c6ecf47e11855010415c1220cd5076db52a5bad142521751d74c8",
   "tools": 269,
-  "discovered": 226,
+  "discovered": 227,
   "withProfiles": 4,
   "profiles": 4,
   "completeProfiles": 2,
@@ -23,9 +23,9 @@
     },
     {
       "toolId": "1694-io",
-      "id": "gap:4c7f9aa73bc8c558f271a1d5",
+      "id": "gap:379707b99388cd610767c051",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: 1694.io",
+      "reason": "Error: No GitHub source repository in catalog reference: 1694.io",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -51,6 +51,13 @@
     },
     {
       "toolId": "ada-handle",
+      "id": "gap:0c1e6fad95c8ec91885c4d2f",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: adahandle.com",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "ada-handle",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -65,13 +72,6 @@
     },
     {
       "toolId": "ada-handle",
-      "id": "gap:74fe88be72fb70e3a549d154",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: adahandle.com",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "ada-handle",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -342,13 +342,6 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "anvil",
-      "id": "gap:2f3c0c97af2435fde83a14a4",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: ada-anvil.io/services/api",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "anvil",
@@ -356,6 +349,13 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "anvil",
+      "id": "gap:b6dbd8b2509ffb80237e257c",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: ada-anvil.io/services/api",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "anvil",
@@ -428,6 +428,13 @@
       "nextAction": "Review production entry points and integration behavior."
     },
     {
+      "toolId": "argus-cardano-sync",
+      "id": "gap:e46b550f6155c5535dadba68",
+      "area": "artifact",
+      "reason": "Catalog source SAIB-Inc/Cardano.Sync redirects to SAIB-Inc/Argus; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
+    },
+    {
       "toolId": "atlas",
       "id": "gap:08a4850a1570505e3dd508a0",
       "area": "integration",
@@ -454,6 +461,13 @@
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "balius",
+      "id": "gap:04696b9c78d538b29bbe1b0f",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: docs.txpipe.io/balius",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "balius",
@@ -478,13 +492,6 @@
     },
     {
       "toolId": "balius",
-      "id": "gap:9b5c83a6fe09c9fffc0243c7",
-      "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/docs.txpipe.io/balius\ngh: Not Found (HTTP 404)\n",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "balius",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -541,9 +548,9 @@
     },
     {
       "toolId": "begin",
-      "id": "gap:bb8ecfe59dda0eedf3ca15c3",
+      "id": "gap:894251cd6efdb247911018db",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: begin.is",
+      "reason": "Error: No GitHub source repository in catalog reference: begin.is",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -625,9 +632,9 @@
     },
     {
       "toolId": "blockfrost",
-      "id": "gap:322bffcb7efb72e9b05ed26b",
+      "id": "gap:22d16830721fa041101676ca",
       "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/github.com/blockfrost\ngh: Not Found (HTTP 404)\n",
+      "reason": "Error: No GitHub source repository in catalog reference: github.com/blockfrost",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -951,6 +958,13 @@
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "cardaminal",
+      "id": "gap:050176b2f020751388d7ec0a",
+      "area": "artifact",
+      "reason": "Catalog source txpipe/cardaminal redirects to IntersectMBO/cardaminal; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "cardaminal",
@@ -1175,6 +1189,13 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "cardano-client-bindings",
+      "id": "gap:587a9f719652a4d67944b74c",
+      "area": "artifact",
+      "reason": "Catalog source bloxbean/cardano-client-bindings redirects to bloxbean/mesmo; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "cardano-client-bindings",
@@ -1647,13 +1668,6 @@
     },
     {
       "toolId": "cardano-name-service-cns",
-      "id": "gap:11927bab03db3a0bf0e2b401",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: docs.cns.space",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "cardano-name-service-cns",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -1665,6 +1679,13 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "cardano-name-service-cns",
+      "id": "gap:751eba46697ba98fe5365f9d",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: docs.cns.space",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "cardano-name-service-cns",
@@ -1773,6 +1794,13 @@
     },
     {
       "toolId": "cardano-on-bigquery",
+      "id": "gap:0af7dc6b80afa694bb486ab9",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: blockchain-applied.com",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "cardano-on-bigquery",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -1784,13 +1812,6 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "cardano-on-bigquery",
-      "id": "gap:b7d4e477bc9fe21a1e3ee907",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: blockchain-applied.com",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "cardano-on-bigquery",
@@ -2290,6 +2311,13 @@
       "nextAction": "Review production entry points and integration behavior."
     },
     {
+      "toolId": "cardano-web3-js",
+      "id": "gap:eb4f01d161836df9ab543ba8",
+      "area": "artifact",
+      "reason": "Catalog source xray-network/cardano-web3-js redirects to xray-network/xray-js; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
+    },
+    {
       "toolId": "cardanocli-js",
       "id": "gap:08a4850a1570505e3dd508a0",
       "area": "integration",
@@ -2368,6 +2396,13 @@
     },
     {
       "toolId": "cardanopress",
+      "id": "gap:37ac42195a07102ecade5893",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: cardanopress.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "cardanopress",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
@@ -2379,13 +2414,6 @@
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "cardanopress",
-      "id": "gap:ecbfb2a614df01752e5c15d4",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: cardanopress.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "cardanoscan-api",
@@ -2410,17 +2438,17 @@
     },
     {
       "toolId": "cardanoscan-api",
-      "id": "gap:85155b8c49168f9af1036dd7",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: docs.cardanoscan.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "cardanoscan-api",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "cardanoscan-api",
+      "id": "gap:faf3a9d1c3308768322895f4",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: docs.cardanoscan.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "cardanosharp",
@@ -2543,9 +2571,9 @@
     },
     {
       "toolId": "cardanovsc",
-      "id": "gap:7b2e90b9b5ebbe4b06a5a49b",
+      "id": "gap:a3b7bbe8b9986e9ab98716a0",
       "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/marketplace.visualstudio.com/CardanoVSC\ngh: Not Found (HTTP 404)\n",
+      "reason": "Error: No GitHub source repository in catalog reference: marketplace.visualstudio.com/CardanoVSC",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -2631,6 +2659,13 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "catalyst-core",
+      "id": "gap:cc3bb0248caa48cea8527e63",
+      "area": "artifact",
+      "reason": "Catalog source input-output-hk/catalyst-core redirects to cardano-foundation/catalyst-core; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "catalyst-core",
@@ -2666,6 +2701,13 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "catalyst-toolbox",
+      "id": "gap:dfad720c26303e5db079e169",
+      "area": "artifact",
+      "reason": "Catalog source input-output-hk/catalyst-toolbox redirects to cardano-foundation/catalyst-toolbox; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "catalyst-toolbox",
@@ -2865,9 +2907,9 @@
     },
     {
       "toolId": "charli3",
-      "id": "gap:84ebec6dbb5039205769a742",
+      "id": "gap:c2e8ac3578ded62f537fc400",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: Charli3-Official",
+      "reason": "Error: No GitHub source repository in catalog reference: Charli3-Official",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -3362,9 +3404,9 @@
     },
     {
       "toolId": "demeter",
-      "id": "gap:72b19790ab3c6a2c25bff35d",
+      "id": "gap:c3fcc6a3246db3424905275e",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: demeter.run",
+      "reason": "Error: No GitHub source repository in catalog reference: demeter.run",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -3523,6 +3565,13 @@
     },
     {
       "toolId": "elm-cardano",
+      "id": "gap:5c0096ae42e9053905026c55",
+      "area": "artifact",
+      "reason": "Catalog source mpizenberg/elm-cardano redirects to elm-cardano/elm-cardano; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
+    },
+    {
+      "toolId": "elm-cardano",
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -3579,17 +3628,17 @@
     },
     {
       "toolId": "eternl",
+      "id": "gap:382de3c788352156b8990fa9",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: eternl.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "eternl",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "eternl",
-      "id": "gap:ce140a5b5efcb205b382a4d7",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: eternl.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "eternl",
@@ -3670,6 +3719,13 @@
     },
     {
       "toolId": "frankenwallet",
+      "id": "gap:39d22dcc1fe49964df4b07cc",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: frankenwallet.com",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "frankenwallet",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
@@ -3677,13 +3733,6 @@
     },
     {
       "toolId": "frankenwallet",
-      "id": "gap:dd135719298907758b6a0268",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: frankenwallet.com",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "frankenwallet",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -3796,17 +3845,17 @@
     },
     {
       "toolId": "gero-wallet",
+      "id": "gap:37b49daf8d125cf770c93a44",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: gerowallet.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "gero-wallet",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "gero-wallet",
-      "id": "gap:9723ae36b10e4e633e374bcb",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: gerowallet.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "gero-wallet",
@@ -3852,6 +3901,13 @@
     },
     {
       "toolId": "getblock",
+      "id": "gap:0ce84b68a956b6a5fe23114a",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: getblock.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "getblock",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -3863,13 +3919,6 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "getblock",
-      "id": "gap:7a94308d8362b5c5ff64f4f5",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: getblock.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "getblock",
@@ -3894,6 +3943,13 @@
     },
     {
       "toolId": "gimbalabs",
+      "id": "gap:365fd9414795bba5e6ac0923",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: gimbalabs.com",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "gimbalabs",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
@@ -3905,13 +3961,6 @@
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "gimbalabs",
-      "id": "gap:febb8a0c24e8172f0d2e4c84",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: gimbalabs.com",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "gin",
@@ -3957,17 +4006,17 @@
     },
     {
       "toolId": "gnark-cardano",
-      "id": "gap:2bcddabe624c2421b50a453c",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: developers.cardano.org/tools/gnark-cardano",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "gnark-cardano",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "gnark-cardano",
+      "id": "gap:a4ad13e29da51a3d0a453787",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: developers.cardano.org/tools/gnark-cardano",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "gnark-cardano",
@@ -4426,6 +4475,13 @@
     },
     {
       "toolId": "keria",
+      "id": "gap:7f025bc308ca7683b9c83833",
+      "area": "artifact",
+      "reason": "Catalog source cardano-foundation/keria redirects to veridian-id/keria; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
+    },
+    {
+      "toolId": "keria",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -4664,9 +4720,9 @@
     },
     {
       "toolId": "kuberide",
-      "id": "gap:b87c4645fb555a050b394521",
+      "id": "gap:6bd5d1ab6c9c90b84e4259c9",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: kuberide.com",
+      "reason": "Error: No GitHub source repository in catalog reference: kuberide.com",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -4839,9 +4895,9 @@
     },
     {
       "toolId": "leios-peras",
-      "id": "gap:bdc03d4da3db1ed4b3abe60c",
+      "id": "gap:cd3d08a4dfd3a32ff96898e9",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: leios.cardano-scaling.org",
+      "reason": "Error: No GitHub source repository in catalog reference: leios.cardano-scaling.org",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -4951,17 +5007,17 @@
     },
     {
       "toolId": "maestro",
+      "id": "gap:421229a2ea96365023b5a7f3",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: github.com/maestro-org",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "maestro",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "maestro",
-      "id": "gap:d261e54087e86dc0b32ed185",
-      "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/github.com/maestro-org\ngh: Not Found (HTTP 404)\n",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "maestro",
@@ -5035,6 +5091,13 @@
     },
     {
       "toolId": "marlowe-playground",
+      "id": "gap:17ada475331e10ed3d81795f",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: marlowe.iohk.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "marlowe-playground",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -5046,13 +5109,6 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "marlowe-playground",
-      "id": "gap:bccffa5d988f30a31fe75120",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: marlowe.iohk.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "marlowe-playground",
@@ -5196,17 +5252,17 @@
     },
     {
       "toolId": "mesh-mimir",
-      "id": "gap:db0637c25c97861198071281",
-      "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/github.com/MeshJS\ngh: Not Found (HTTP 404)\n",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "mesh-mimir",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "mesh-mimir",
+      "id": "gap:f68b4a5f897391f98affa763",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: github.com/MeshJS",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "meshjs-mesh-sdk",
@@ -5635,13 +5691,6 @@
     },
     {
       "toolId": "midnight",
-      "id": "gap:00a6dc04e4a3eb4929081dff",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: midnight.network",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "midnight",
       "id": "gap:08a4850a1570505e3dd508a0",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -5669,18 +5718,18 @@
       "nextAction": "Review production entry points and integration behavior."
     },
     {
+      "toolId": "midnight",
+      "id": "gap:ffe03b342dad968c978497a3",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: midnight.network",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
       "toolId": "milkomeda-c1",
       "id": "gap:08a4850a1570505e3dd508a0",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "milkomeda-c1",
-      "id": "gap:0c8d56f08f8f18d19a232a78",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: docs.milkomeda.com",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "milkomeda-c1",
@@ -5695,6 +5744,13 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "milkomeda-c1",
+      "id": "gap:726654ee9355b1784513136c",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: docs.milkomeda.com",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "milkomeda-c1",
@@ -5744,6 +5800,13 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "mithril",
+      "id": "gap:3a215ccf05ad30c18c371bfe",
+      "area": "artifact",
+      "reason": "Catalog source input-output-hk/mithril redirects to IntersectMBO/mithril; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "mithril",
@@ -5887,17 +5950,17 @@
     },
     {
       "toolId": "nftcdn",
-      "id": "gap:288afb8ac9bbc229362adbe2",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: nftcdn.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "nftcdn",
       "id": "gap:526ab79e8b4a53f822a5fa08",
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "nftcdn",
+      "id": "gap:6895b115f6580fa064b0dfd7",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: nftcdn.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "nftcdn",
@@ -5950,13 +6013,6 @@
     },
     {
       "toolId": "nownodes",
-      "id": "gap:0dbe609979fc86275d6b478f",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: nownodes.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
-    },
-    {
-      "toolId": "nownodes",
       "id": "gap:184fa78848aac8ee996bf356",
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
@@ -5968,6 +6024,13 @@
       "area": "artifact",
       "reason": "Release and source identity have not been verified.",
       "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "nownodes",
+      "id": "gap:5b3cbd4e985e60c075c04fc6",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: nownodes.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "nownodes",
@@ -6055,10 +6118,10 @@
     },
     {
       "toolId": "odatano",
-      "id": "gap:526ab79e8b4a53f822a5fa08",
+      "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
-      "reason": "Release and source identity have not been verified.",
-      "nextAction": "Discover published artifacts and pin the release source."
+      "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
+      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
     },
     {
       "toolId": "odatano",
@@ -6066,13 +6129,6 @@
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "odatano",
-      "id": "gap:e1307c18d7c2f68cae302631",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: github.com/ODATANO/ODATANO",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "offchain-metadata-tools",
@@ -6419,20 +6475,20 @@
     },
     {
       "toolId": "partner-chains",
-      "id": "gap:39d80b67db86c9786032389f",
+      "id": "gap:526ab79e8b4a53f822a5fa08",
+      "area": "artifact",
+      "reason": "Release and source identity have not been verified.",
+      "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "partner-chains",
+      "id": "gap:8ff1e4b9d0a27fa3c6d787f1",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: interchains.iog.io",
+      "reason": "Error: No GitHub source repository in catalog reference: interchains.iog.io",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "partner-chains",
-      "id": "gap:526ab79e8b4a53f822a5fa08",
-      "area": "artifact",
-      "reason": "Release and source identity have not been verified.",
-      "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "partner-chains",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -6538,6 +6594,13 @@
     },
     {
       "toolId": "plinth-plutus-tx",
+      "id": "gap:431fe1823601fe6e31515d08",
+      "area": "artifact",
+      "reason": "Catalog source input-output-hk/plutus redirects to IntersectMBO/plutus; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
+    },
+    {
+      "toolId": "plinth-plutus-tx",
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -6570,6 +6633,13 @@
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "plu-ts",
+      "id": "gap:801f279dc55fa92b3c95daf7",
+      "area": "artifact",
+      "reason": "Catalog source HarmonicLabs/plu-ts redirects to HarmonicLabs/pebble; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "plu-ts",
@@ -6853,9 +6923,9 @@
     },
     {
       "toolId": "plutus-playground",
-      "id": "gap:d755f58152d335fe87c8afb6",
+      "id": "gap:98d5c29a89dbf6a5bdca924f",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: playground.plutus.iohkdev.io",
+      "reason": "Error: No GitHub source repository in catalog reference: playground.plutus.iohkdev.io",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -6878,6 +6948,13 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "plutus-plutus-core",
+      "id": "gap:431fe1823601fe6e31515d08",
+      "area": "artifact",
+      "reason": "Catalog source input-output-hk/plutus redirects to IntersectMBO/plutus; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "plutus-plutus-core",
@@ -7462,17 +7539,17 @@
     },
     {
       "toolId": "tangocrypto",
-      "id": "gap:8acc0b9c3880464859895507",
-      "area": "discovery",
-      "reason": "Error: Command failed: gh api repos/github.com/tango-crypto\ngh: Not Found (HTTP 404)\n",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
     },
     {
       "toolId": "tangocrypto",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
+      "id": "gap:f2335ac7b0e4c5c0f2f242a6",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: github.com/tango-crypto",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "taptools-api",
@@ -7665,160 +7742,160 @@
     },
     {
       "toolId": "typhon",
-      "id": "gap:bec45839c9caf0f90d4ed76f",
-      "area": "discovery",
-      "reason": "Error: Unsupported repository identity: typhonwallet.io",
-      "nextAction": "Retry discovery; inspect repository identity and API availability."
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
     },
     {
       "toolId": "typhon",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "typhonjs",
-      "id": "gap:08a4850a1570505e3dd508a0",
-      "area": "integration",
-      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
-      "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "typhonjs",
-      "id": "gap:184fa78848aac8ee996bf356",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "typhonjs",
-      "id": "gap:ccd120d62205d2bd8fa69b2f",
-      "area": "artifact",
-      "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
-      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
-    },
-    {
-      "toolId": "typhonjs",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "uplc-turbo",
-      "id": "gap:08a4850a1570505e3dd508a0",
-      "area": "integration",
-      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
-      "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "uplc-turbo",
-      "id": "gap:184fa78848aac8ee996bf356",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "uplc-turbo",
-      "id": "gap:4abbaad672af9beef40f0088",
-      "area": "artifact",
-      "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
-      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
-    },
-    {
-      "toolId": "uplc-turbo",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "use-cardano",
-      "id": "gap:08a4850a1570505e3dd508a0",
-      "area": "integration",
-      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
-      "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "use-cardano",
-      "id": "gap:184fa78848aac8ee996bf356",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "use-cardano",
-      "id": "gap:ccd120d62205d2bd8fa69b2f",
-      "area": "artifact",
-      "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
-      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
-    },
-    {
-      "toolId": "use-cardano",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "utxorpc",
-      "id": "gap:08a4850a1570505e3dd508a0",
-      "area": "integration",
-      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
-      "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "utxorpc",
-      "id": "gap:184fa78848aac8ee996bf356",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "utxorpc",
-      "id": "gap:4abbaad672af9beef40f0088",
-      "area": "artifact",
-      "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
-      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
-    },
-    {
-      "toolId": "utxorpc",
-      "id": "gap:e0b80a82a98d351ea1a5699b",
-      "area": "capability",
-      "reason": "Chain-facing capabilities have not been reviewed.",
-      "nextAction": "Review production entry points and integration behavior."
-    },
-    {
-      "toolId": "utxos",
-      "id": "gap:08a4850a1570505e3dd508a0",
-      "area": "integration",
-      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
-      "nextAction": "Export a discovery review packet."
-    },
-    {
-      "toolId": "utxos",
-      "id": "gap:0d32ef94e93ef83a2614edbe",
+      "id": "gap:e791bb4673904924ae7762b7",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: utxos.dev",
+      "reason": "Error: No GitHub source repository in catalog reference: typhonwallet.io",
+      "nextAction": "Retry discovery; inspect repository identity and API availability."
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:08a4850a1570505e3dd508a0",
+      "area": "integration",
+      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
+      "nextAction": "Export a discovery review packet."
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:184fa78848aac8ee996bf356",
+      "area": "resolution",
+      "reason": "No native dependency resolution has been imported.",
+      "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:ccd120d62205d2bd8fa69b2f",
+      "area": "artifact",
+      "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
+      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "uplc-turbo",
+      "id": "gap:08a4850a1570505e3dd508a0",
+      "area": "integration",
+      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
+      "nextAction": "Export a discovery review packet."
+    },
+    {
+      "toolId": "uplc-turbo",
+      "id": "gap:184fa78848aac8ee996bf356",
+      "area": "resolution",
+      "reason": "No native dependency resolution has been imported.",
+      "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "uplc-turbo",
+      "id": "gap:4abbaad672af9beef40f0088",
+      "area": "artifact",
+      "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
+      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "uplc-turbo",
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "use-cardano",
+      "id": "gap:08a4850a1570505e3dd508a0",
+      "area": "integration",
+      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
+      "nextAction": "Export a discovery review packet."
+    },
+    {
+      "toolId": "use-cardano",
+      "id": "gap:184fa78848aac8ee996bf356",
+      "area": "resolution",
+      "reason": "No native dependency resolution has been imported.",
+      "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "use-cardano",
+      "id": "gap:ccd120d62205d2bd8fa69b2f",
+      "area": "artifact",
+      "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
+      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "use-cardano",
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "utxorpc",
+      "id": "gap:08a4850a1570505e3dd508a0",
+      "area": "integration",
+      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
+      "nextAction": "Export a discovery review packet."
+    },
+    {
+      "toolId": "utxorpc",
+      "id": "gap:184fa78848aac8ee996bf356",
+      "area": "resolution",
+      "reason": "No native dependency resolution has been imported.",
+      "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "utxorpc",
+      "id": "gap:4abbaad672af9beef40f0088",
+      "area": "artifact",
+      "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
+      "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "utxorpc",
+      "id": "gap:e0b80a82a98d351ea1a5699b",
+      "area": "capability",
+      "reason": "Chain-facing capabilities have not been reviewed.",
+      "nextAction": "Review production entry points and integration behavior."
+    },
+    {
+      "toolId": "utxos",
+      "id": "gap:08a4850a1570505e3dd508a0",
+      "area": "integration",
+      "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
+      "nextAction": "Export a discovery review packet."
+    },
+    {
+      "toolId": "utxos",
+      "id": "gap:184fa78848aac8ee996bf356",
+      "area": "resolution",
+      "reason": "No native dependency resolution has been imported.",
+      "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "utxos",
+      "id": "gap:526ab79e8b4a53f822a5fa08",
+      "area": "artifact",
+      "reason": "Release and source identity have not been verified.",
+      "nextAction": "Discover published artifacts and pin the release source."
+    },
+    {
+      "toolId": "utxos",
+      "id": "gap:b1c85c2d2403fece416b52c3",
+      "area": "discovery",
+      "reason": "Error: No GitHub source repository in catalog reference: utxos.dev",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
       "toolId": "utxos",
-      "id": "gap:184fa78848aac8ee996bf356",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile."
-    },
-    {
-      "toolId": "utxos",
-      "id": "gap:526ab79e8b4a53f822a5fa08",
-      "area": "artifact",
-      "reason": "Release and source identity have not been verified.",
-      "nextAction": "Discover published artifacts and pin the release source."
-    },
-    {
-      "toolId": "utxos",
       "id": "gap:e0b80a82a98d351ea1a5699b",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -7837,6 +7914,13 @@
       "area": "resolution",
       "reason": "No native dependency resolution has been imported.",
       "nextAction": "Collect a native resolution for a declared release/profile."
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:6f36271bdf337d888bc72edd",
+      "area": "artifact",
+      "reason": "Catalog source cardano-foundation/veridian-wallet redirects to veridian-id/veridian-wallet; tool/package identity may have changed.",
+      "nextAction": "Verify the release and artifact mapping before merging tool identities."
     },
     {
       "toolId": "veridian-wallet",
@@ -7875,9 +7959,9 @@
     },
     {
       "toolId": "vespr",
-      "id": "gap:730c76d755bf9cd31ae1b708",
+      "id": "gap:6be0c2488d0a6efef7f647ac",
       "area": "discovery",
-      "reason": "Error: Unsupported repository identity: vespr.xyz",
+      "reason": "Error: No GitHub source repository in catalog reference: vespr.xyz",
       "nextAction": "Retry discovery; inspect repository identity and API availability."
     },
     {
@@ -8281,13 +8365,13 @@
     }
   ],
   "ecosystemBacklog": {
-    "npm": 124,
+    "npm": 125,
     "cargo": 51,
     "cabal": 47,
     "go": 25,
     "python": 31,
     "nix": 62,
-    "container": 70,
+    "container": 71,
     "other": 53
   }
 }
