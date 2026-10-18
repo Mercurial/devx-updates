@@ -30,7 +30,8 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
     const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: "committed-lockfile" };
     const directory = options.adapter === "cargo-metadata" ? await pinnedCheckout(tool.repo, tool.revision, options.stateDir) : resolve(options.stateDir, "sources", tool.revision);
     if (options.adapter === "cargo-metadata") selection.resolverContext = (await cargoContext(directory)).fingerprint;
-    if (reuseCollection(snapshot, store, options, selection)) return;
+    const cached = reuseCollection(snapshot, store, options, selection);
+    if (cached) return cached;
     let raw: unknown; let command: string; let toolchain: string;
     const supporting: string[] = [];
     const sourceUrl = `https://github.com/${tool.repo}/tree/${tool.revision}`;
@@ -63,7 +64,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
       }
     }
     const profile: NativeInput = { toolId: tool.id, release: tool.release, revision: tool.revision, platform: options.platform, features: ["default"], command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots };
-    publishCollection(snapshot, store, selection, profile, raw, supporting, sourceUrl);
+    return publishCollection(snapshot, store, selection, profile, raw, supporting, sourceUrl).profile;
   } catch (error) {
     const failure = error as Error & { cmd?: string; code?: string | number; signal?: string; stdout?: string; stderr?: string };
     const evidence = store.evidence(normalizeNativePaths({

@@ -13,6 +13,7 @@ import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry
 import { nativeEvidence, rebuildNative } from "../../lib/readiness/rebuild";
 import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
 import { collectionCandidates } from "../../lib/readiness/candidates";
+import { collectBatch } from "../../lib/readiness/batch";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -45,6 +46,8 @@ collect         --tool id --adapter <collector> --roots package,package
                 uv-tree: --python-version 3.13; go-packages: --packages ./... --tags tag,tag
 refresh-native  Refresh registered collection profiles against discovered source revisions
                 --tools id,id --limit N --refresh (limit counts distinct requests)
+collect-batch   --input batch.json [--tools id,id] [--limit N] [--refresh]
+                Persist pinned requests and resume unfinished native collections
 report          Emit coverage and impact reports in the data directory
 show            --tool id (coverage, manifests, and profiles)
 candidates      List supported collection starting points, including nested workspaces [--tools id,id]
@@ -91,6 +94,10 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
   } else if (command === "collect") {
     if (!values.tool || !values.roots || !values.platform || !(COLLECT_ADAPTERS as readonly unknown[]).includes(values.adapter)) throw new Error(`collect requires --tool, --adapter (${COLLECT_ADAPTERS.join(", ")}), --roots, and --platform`);
     await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
+  } else if (command === "collect-batch") {
+    const summary = await collectBatch(snapshot, store, readJson(required("input")), { stateDir: values.state!, refresh: values.refresh, toolIds: values.tools?.split(","), limit: values.limit === undefined ? undefined : Number(values.limit) });
+    console.log(JSON.stringify(summary));
+    if (summary.failed || summary.deferred) process.exitCode = 1;
   } else if (command === "refresh-native") {
     const summary = await refreshNative(snapshot, store, values.state!, values.refresh, { toolIds: values.tools?.split(","), limit: values.limit === undefined ? undefined : Number(values.limit) });
     console.log(JSON.stringify(summary));

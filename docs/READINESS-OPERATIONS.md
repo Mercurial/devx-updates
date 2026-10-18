@@ -70,6 +70,51 @@ outer deadline and a kill grace period. The Node loader also works in restricted
 environments that disallow the `tsx` CLI's IPC socket. Replay logs each profile;
 a timeout is an unfinished check, never a successful validation.
 
+### Resumable catalog batches
+
+`collect-batch` adds explicitly selected requests before their first successful
+collection. Store the reviewed selection in a JSON file:
+
+```json
+{
+  "schemaVersion": 1,
+  "requests": [{
+    "toolId": "cardano-peer-connect",
+    "revision": "6fce1afe581da1009a81fe119ec83357150abab9",
+    "adapter": "npm-lock",
+    "roots": ["@fabianbormann/cardano-peer-connect"],
+    "platform": "all-lockfile-targets"
+  }]
+}
+```
+
+```sh
+npm run readiness -- collect-batch --input content/readiness/catalog-batch.json --limit 2
+```
+
+`data/readiness/collection-queue.json` retains pending, running, succeeded, failed,
+and deferred jobs, their pinned requests, attempts, errors, and successful profile
+IDs. The existing store writer lock covers queue and snapshot writes. Every
+transition is saved atomically; a killed run's running jobs become pending on the
+next selected run. The native cache recovers a profile saved just before interruption.
+New pending work runs before failed retries so a repeatedly failing request cannot
+starve the rest of a limited batch. Requests outside `--tools` remain queued.
+
+A successful job is skipped only while its profile and evidence bytes are retained.
+`--refresh` reruns selected successes and bypasses the native cache. Use it when
+deliberately changing toolchains or resolver inputs; ordinary batch resumption
+reuses the completed pinned capture. `refresh-native` remains the command for
+registered profiles against newly discovered releases and current resolver inputs.
+If discovery has moved beyond a batch's pinned revision, that job is deferred;
+verify and update the input file rather than silently collecting a different source.
+Failures and deferred requests cause a nonzero exit status. A bounded run may leave
+pending jobs without failing; inspect its summary and rerun to continue. Collection
+success means evidence was captured, not complete coverage or hardfork readiness.
+
+The checked catalog batch includes source-only/monorepo release caveats in
+`content/readiness/README.md`. Scheduled refresh handles successful registrations;
+unregistered batch failures require an explicit batch retry.
+
 ### Import other native output
 
 ```sh

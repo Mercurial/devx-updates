@@ -60,21 +60,21 @@ export interface CollectionSelection extends Omit<CollectionRequest, "toolId" | 
 
 export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(selection.adapter) ? 3 : 2 });
 
-export function reuseCollection(snapshot: Snapshot, store: Store, options: CollectOptions, selection: CollectionSelection): boolean {
-  if (options.refresh) return false;
+export function reuseCollection(snapshot: Snapshot, store: Store, options: CollectOptions, selection: CollectionSelection) {
+  if (options.refresh) return undefined;
   const key = collectionKey(selection);
   const request = snapshot.collections?.find((c) => c.key === key && c.toolId === options.toolId);
   const profile = request && snapshot.profiles.find((p) => p.id === request.profileId);
-  if (!profile) return false;
-  if (selection.adapter === "go-packages" && profile.coverage !== "complete") return false;
+  if (!profile) return undefined;
+  if (selection.adapter === "go-packages" && profile.coverage !== "complete") return undefined;
   // A cache hit must still have its retained input bytes, not just a graph reference.
   for (const id of profile.evidenceIds) {
     const evidence = snapshot.evidence.find((e) => e.id === id);
-    if (!evidence) return false;
-    try { store.readEvidence(evidence); } catch { return false; }
+    if (!evidence) return undefined;
+    try { store.readEvidence(evidence); } catch { return undefined; }
   }
   console.log(`Reused ${options.toolId} native collection ${key.slice(0, 12)}`);
-  return true;
+  return profile;
 }
 
 export function publishCollection(snapshot: Snapshot, store: Store, selection: CollectionSelection, profile: NativeInput, raw: unknown, supporting: string[], sourceUrl: string) {

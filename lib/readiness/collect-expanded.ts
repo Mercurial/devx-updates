@@ -25,7 +25,8 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   const diagnostics: { command: string; exitCode: number; stderr: string }[] = [];
   const normalization: Record<string, string> = { [root]: "/source" };
   if (options.adapter === "pnpm-lock") {
-    if (reuseCollection(snapshot, store, options, selection)) return;
+    const cached = reuseCollection(snapshot, store, options, selection);
+    if (cached) return cached;
     const lock = object(load(readFileSync(sourcePath(root, path), "utf8"), { schema: JSON_SCHEMA }));
     const manifests: Record<string, unknown> = {};
     supportPaths = [path, posix.join(posix.dirname(path), "pnpm-workspace.yaml"), posix.join(posix.dirname(path), ".npmrc")];
@@ -62,7 +63,8 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
     selection.patterns = options.patterns ?? ["./..."]; selection.tags = options.tags ?? [];
     if (!selection.patterns.length || selection.patterns.some((p) => !p || p.startsWith("-") || p.includes("..") && p !== "./..." && !p.endsWith("/..."))) throw new Error("Invalid Go package pattern");
     selection.resolverContext = digest({ effectiveEnvironment, toolchain });
-    if (reuseCollection(snapshot, store, options, selection)) return;
+    const cached = reuseCollection(snapshot, store, options, selection);
+    if (cached) return cached;
     const flags = ["list", "-e", "-deps", "-json", "-mod=readonly", ...(selection.tags.length ? [`-tags=${selection.tags.join(",")}`] : [])];
     const runtime = await run([...flags, ...selection.patterns]);
     const test = await run([...flags, "-test", ...selection.patterns]);
@@ -79,7 +81,8 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
     toolchain = (await execute("uv", ["--version"], { timeout: 30000, killSignal: "SIGKILL" })).stdout.trim();
     selection.pythonVersion = options.pythonVersion;
     selection.resolverContext = digest({ toolchain, targetPython: options.pythonVersion, platform: options.platform });
-    if (reuseCollection(snapshot, store, options, selection)) return;
+    const cached = reuseCollection(snapshot, store, options, selection);
+    if (cached) return cached;
     const args = ["tree", "--locked", "--offline", "--format", "json", "--all-groups", "--depth", "255", "--python-version", options.pythonVersion!, "--python-platform", options.platform, "--no-build", "--no-python-downloads", "--no-config"];
     const env = { ...process.env };
     for (const key of Object.keys(env)) if (key.startsWith("UV_")) delete env[key];
@@ -98,4 +101,5 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   const profile: NativeInput = { toolId: tool.id, release: tool.release!, revision: tool.revision!, platform: options.platform, features, command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots };
   const result = publishCollection(snapshot, store, selection, profile, normalizeNativePaths(raw, normalization), supporting, `https://github.com/${tool.repo}/tree/${tool.revision}`);
   if (options.adapter === "go-packages" && result.profile.coverage !== "complete") throw new Error("Go package loading was incomplete; retained the partial graph for inspection and retry.");
+  return result.profile;
 }

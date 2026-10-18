@@ -1,6 +1,6 @@
 # Dependency mapping and hardfork readiness
 
-Status: operational collection and reporting are implemented; catalog-wide dependency coverage is still being expanded. Commits remain local; no pushes.
+Status: operational collection and reporting are implemented; catalog-wide dependency coverage is still being expanded. The completed checkpoint through `933f819` was pushed to `origin/hardfork-readiness` at the owner's request. New work remains local until another push is requested.
 
 ## Implementation progress
 
@@ -79,6 +79,16 @@ Review completion: independent standards review found no actionable issues; spec
 - Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.
 - Extend registered profiles as supported release/platform/feature policies are verified. Registered npm, pnpm, Cargo, Go, and uv requests refresh automatically; custom imported profiles require their ecosystem collector or explicit reimport. Start subsequent collection work with `candidates --tools ...`, select pinned manifests and configurations, and commit validated batches. Publication remains a separate reviewed change.
 - Phase 6 remains gated on hardfork-specific change analysis and the target test environment.
+
+### Active continuation: catalog collection batches
+
+- [x] Add a persisted native work queue for explicitly selected, revision-pinned requests, including retryable failures and interrupted jobs (section 6.4; ADR-1/ADR-2).
+- [ ] Verify production roots and configurations for a small catalog batch, collect supported sources, and retain explicit gaps for unsupported inputs.
+- [ ] Validate/replay retained evidence, regenerate reports and comparison, run tests/build and implementation review, and commit milestones locally.
+
+Initial candidate inspection: Helios, Minswap SDK, Cardano Peer Connect, Weld, and Dingo have supported manifest candidates. Package names, lock formats, and release scope must be checked before requests are admitted. Helios currently has default-branch evidence only; Weld's discovered release belongs to a monorepo plugin, so neither may be presented as a verified stable package release. Cabal/GHC are still unavailable; a real Cabal pilot remains open.
+
+Batch implementation checkpoint: `collect-batch` persists pending/running/succeeded/failed/deferred jobs in `data/readiness/collection-queue.json`. Requests include immutable revisions; changed discovery defers them for renewed source review. Successful jobs require retained profile evidence before reuse, interrupted work resumes, and pending work precedes retries so repeated failures cannot starve a limited batch. Eight focused batch/cache tests, TypeScript, and readiness lint pass. The five requests in `content/readiness/catalog-batch.json` now have checked pinned package identities and supported lock formats; source/release/configuration caveats are documented alongside them. Real collection and final review follow.
 
 ## 1. Objective
 

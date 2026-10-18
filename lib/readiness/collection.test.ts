@@ -22,16 +22,16 @@ test("collection cache requires retained bytes and distinguishes Python and Go c
     const profile: NativeInput = { toolId: "tool", release: "v1", ...selection, features: [], command: "read lock", toolchain: "npm v3", origin: "source-reconstruction", rootNames: selection.roots };
     const options = { ...selection, toolId: "tool", stateDir: directory };
     publishCollection(snapshot, store, selection, profile, { lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } }, [], "https://github.com/owner/repo");
-    assert.equal(reuseCollection(snapshot, store, options, selection), true);
-    assert.equal(reuseCollection(snapshot, store, { ...options, refresh: true }, selection), false);
+    assert.equal(reuseCollection(snapshot, store, options, selection)?.id, snapshot.profiles[0].id);
+    assert.equal(reuseCollection(snapshot, store, { ...options, refresh: true }, selection), undefined);
     assert.notEqual(collectionKey({ ...selection, pythonVersion: "3.13" }), collectionKey({ ...selection, pythonVersion: "3.14" }));
     assert.notEqual(collectionKey({ ...selection, patterns: ["./cmd/tool"], tags: [] }), collectionKey({ ...selection, patterns: ["./cmd/tool"], tags: ["integration"] }));
     const native = snapshot.evidence.find((e) => e.id === snapshot.profiles[0].nativeEvidenceId)!;
     writeFileSync(join(directory, native.path), "corrupt bytes");
-    assert.equal(reuseCollection(snapshot, store, options, selection), false);
+    assert.equal(reuseCollection(snapshot, store, options, selection), undefined);
     assert.throws(() => store.evidence({ lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } }, "recollection"), /header|gzip|compression/i, "corrupt evidence cannot silently survive a successful recollection");
     unlinkSync(join(directory, native.path));
-    assert.equal(reuseCollection(snapshot, store, options, selection), false, "a cached graph cannot conceal missing evidence");
+    assert.equal(reuseCollection(snapshot, store, options, selection), undefined, "a cached graph cannot conceal missing evidence");
   } finally { rmSync(directory, { recursive: true }); }
 });
 
@@ -50,7 +50,7 @@ test("Go loading failures remain retryable with unchanged request inputs", (t) =
     const profile: NativeInput = { ...selection, toolId: "tool", release: "v1", features: [], command: "go list", toolchain: "go1.26.8", origin: "source-reconstruction", rootNames: selection.roots };
     publishCollection(snapshot, store, selection, profile, { formatVersion: 1, sourceRoot: "/source", environment: { GOOS: "linux", GOARCH: "amd64", CGO_ENABLED: "0", GOVERSION: "go1.26.8" }, packages: [{ ImportPath: "example.org/app", Module: { Main: true, Path: "example.org/app", Dir: "/source" }, Error: { Err: "module proxy unavailable" } }], tests: [] }, [], "https://github.com/owner/repo");
     assert.equal(snapshot.profiles[0].coverage, "partial");
-    assert.equal(reuseCollection(snapshot, store, { ...selection, toolId: "tool", stateDir: directory }, selection), false);
+    assert.equal(reuseCollection(snapshot, store, { ...selection, toolId: "tool", stateDir: directory }, selection), undefined);
   } finally { rmSync(directory, { recursive: true }); }
 });
 
