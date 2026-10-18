@@ -1,11 +1,11 @@
 {
-  "snapshot": "fb46044c8e180b5bedf26c81e116a4de85b88929f45e2f761f19d0b6fd5683da",
+  "snapshot": "abb229bb39659bdd3c6e3e1e772438eb9a9c3609f5ec0631d89f3d7e1f53cd3e",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 7,
-  "profiles": 10,
-  "completeProfiles": 4,
-  "unresolvedTools": 262,
+  "withProfiles": 12,
+  "profiles": 15,
+  "completeProfiles": 5,
+  "unresolvedTools": 257,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -2052,11 +2052,27 @@
     },
     {
       "toolId": "cardano-peer-connect",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:25917d3fadcf90570abd4be4",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies webpack-dev-server from node_modules/webpack-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
+    },
+    {
+      "toolId": "cardano-peer-connect",
+      "id": "gap:aa773707f2f413b32315754f",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
+    },
+    {
+      "toolId": "cardano-peer-connect",
+      "id": "gap:abafd5bca5f5caadd4011489",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
     },
     {
       "toolId": "cardano-peer-connect",
@@ -2064,6 +2080,30 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "cardano-peer-connect",
+      "id": "gap:cf6e1040cde931ba90bc0a8d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-bundle-analyzer from node_modules/webpack-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
+    },
+    {
+      "toolId": "cardano-peer-connect",
+      "id": "gap:cfedf2ded05588ee2ad00a24",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/babel-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
+    },
+    {
+      "toolId": "cardano-peer-connect",
+      "id": "gap:f2f7692d33503b4b4956f2ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d"
     },
     {
       "toolId": "cardano-python-emesik",
@@ -3871,14 +3911,6 @@
     },
     {
       "toolId": "dingo",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
-    },
-    {
-      "toolId": "dingo",
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -4607,11 +4639,11 @@
     },
     {
       "toolId": "helios",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:d2975340e749a5859e5c2359",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:helios:7ac457e6c9833f81ababb556"
     },
     {
       "toolId": "hydra",
@@ -6323,11 +6355,11 @@
     },
     {
       "toolId": "minswap-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:40b12aa84419902ab6c2ab22",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:minswap-sdk:5e3dc8b96df955e26d906fff"
     },
     {
       "toolId": "minswap-sdk",
@@ -8806,11 +8838,59 @@
     },
     {
       "toolId": "weld",
+      "id": "gap:0369f11c1dbcd237bdf7ef20",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:03966a0b7da51675fa4a248c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:0b2d69ef4d015bdc12c7a817",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:0c4cd316ce15e0e48b04842f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies terser from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:17d93feba07afb33b54766d7",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/aix-ppc64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:17ef0767cf77e9ed9eee7df2",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-darwin-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
     },
     {
       "toolId": "weld",
@@ -8822,11 +8902,363 @@
     },
     {
       "toolId": "weld",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:1f7fce46fcceb400c9e7430f",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-riscv64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:2625c3497d2597e26a8b0488",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-ppc64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:2da96571d8461db67cb90367",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-x64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:2f218c9399da749a11af956e",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/netbsd-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:3228c6658d4e0e845ba41a95",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:33e4a05fcb6df8b1c7564a19",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-s390x-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:3956bc717cc72bba664b6cd9",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:3a27aa76aaa6bb0a0b04fbb3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:40a23575585f97fd42423e70",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:42d41db9b778384eb5a75e96",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/android-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:4872f0f9cfa1e099ac41c3c4",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-ia32-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:4d9d49bcddc67d5813a07486",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-ppc64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:51c1bb0f4a194001c1113b14",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-arm64-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:53005e9b18c2b5acfc209ad2",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm-musleabihf from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:53ff1bbe74971f3927756fa0",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:545da9390e2d6847c158f5df",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-ia32 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:55bebc6b227f5279c036cacf",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-loong64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:5b6bc59ee194ced198bfa5a5",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-x64-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:65cd87827350e7e3b89bd136",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/openbsd-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:69a95f208da24f80af4d40f3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies yaml from node_modules/postcss-load-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:6b6c0fee6048cfeebe710145",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/darwin-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:7b0584cea1335e931548e141",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-loong64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:7e6dd76862f382298645484f",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/sunos-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:7ed847bef8e923166cb877e8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:832569bb84e692862cfc41c5",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-ppc64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:843f3a78f10eeb6ceb8905ab",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/postcss-load-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:87566d5e9aacdfbd219e9144",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-riscv64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:8c5390faa48f3fd01e43a172",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-arm from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:94f7c1cf4a79e737b1bcd435",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-riscv64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:9b192f6b22b0b1c8853a8d5e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:9e2636972635d5513b0f0cb8",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/win32-arm64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a036d3e7c10cbaf4b9135539",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-freebsd-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a157e9aeabce652c629a54a0",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a45987264e806f26761c2c27",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-arm64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a8559ff2aa921527a223952d",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-s390x from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a8b6feba9cba4244aeb14197",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/win32-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:a8c172bffe7e334044a08f10",
+      "area": "resolution",
+      "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:aa16c4a6f63709024ab43abf",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-loong64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:b1a2978b8cbefbd2b34c88a8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:b43b494059a71085ebdad0fa",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-x64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:b4fa94a5d6784357a5b614d8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:c0ebac7c7a6ede083d4d1a73",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:c356dd3a0718eb9293cf1051",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-openharmony-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:c4491898b74166a563bb62fa",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-android-arm-eabi from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:c79dde21ba155a87cfdc8664",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/win32-ia32 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
     },
     {
       "toolId": "weld",
@@ -8834,6 +9266,94 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:d6307d5d1d446650982277b1",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-mips64el from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:db1a852e2396a79848f87b54",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/android-arm64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:dc0bcd70e0f557600a41a053",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/freebsd-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:dcb172271c657c97b59ac1fc",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm-gnueabihf from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:e7afe33bd4dc20128f45114e",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-android-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:ef01fa8c7cff96979c209d5a",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/linux-x64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:ef905955c2dc91ddda500524",
+      "area": "resolution",
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:f1f13f88e4bf86727b549c10",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-freebsd-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:f4c7c592b380001970dd0997",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/android-arm from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:f6597b54057a2b176dfc33f9",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @esbuild/freebsd-arm64 from node_modules/esbuild has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
+    },
+    {
+      "toolId": "weld",
+      "id": "gap:feefe5ac9536bead3bcca0ee",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-openbsd-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795"
     },
     {
       "toolId": "whisky",

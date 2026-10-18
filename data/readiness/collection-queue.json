@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "jobs": [
+    {
+      "id": "collection:0ed26943e1017363e86fb506854c60ac5c347f81cb46e664e436ceb679f8bf1a",
+      "request": {
+        "toolId": "cardano-peer-connect",
+        "revision": "6fce1afe581da1009a81fe119ec83357150abab9",
+        "adapter": "npm-lock",
+        "roots": [
+          "@fabianbormann/cardano-peer-connect"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T13:16:30.206Z",
+      "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d",
+      "succeededAt": "2026-10-18T13:16:32.349Z"
+    },
+    {
+      "id": "collection:82d83de0fe122ae9ba5726c0121c03a8781b213c8f0faeba8efbe16bee77a2e9",
+      "request": {
+        "toolId": "helios",
+        "revision": "7364d795562b96d14b1e177b28c103eb240d0f54",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "@helios-lang/compiler"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T13:16:32.349Z",
+      "profileId": "profile:helios:7ac457e6c9833f81ababb556",
+      "succeededAt": "2026-10-18T13:16:34.130Z"
+    },
+    {
+      "id": "collection:b408cbee247a4aafc04d1202da4d7eb251d0c3f6747195a14327575301c6ce07",
+      "request": {
+        "toolId": "minswap-sdk",
+        "revision": "19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "@minswap/sdk"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T13:17:05.612Z",
+      "profileId": "profile:minswap-sdk:5e3dc8b96df955e26d906fff",
+      "succeededAt": "2026-10-18T13:17:07.874Z"
+    },
+    {
+      "id": "collection:3c999511b368e202985b6eebe97e93077276223cc579936e092ba99490abebbb",
+      "request": {
+        "toolId": "weld",
+        "revision": "ce6cf90d721358254e8b70c1e484a5f342be4e74",
+        "adapter": "npm-lock",
+        "roots": [
+          "@ada-anvil/weld"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T13:17:07.874Z",
+      "profileId": "profile:weld:32b11b5bffdf83144bf95795",
+      "succeededAt": "2026-10-18T13:17:09.802Z"
+    },
+    {
+      "id": "collection:77b3b838ba450810c35bf3bd769043b03463a64754265e450d076498876c82c3",
+      "request": {
+        "toolId": "dingo",
+        "revision": "e0630ddf8a72dc0280ed8845fb1d899fae2d1051",
+        "adapter": "go-packages",
+        "roots": [
+          "github.com/blinklabs-io/dingo"
+        ],
+        "platform": "linux/amd64",
+        "patterns": [
+          "./..."
+        ],
+        "tags": []
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T13:17:31.793Z",
+      "profileId": "profile:dingo:6f5b0ee506b45eb96bbe156f",
+      "succeededAt": "2026-10-18T13:18:04.985Z"
+    }
+  ]
+}
