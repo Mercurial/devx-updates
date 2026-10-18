@@ -118,6 +118,13 @@ export function resolveYarn(data: Record<string, unknown>, ctx: AdapterContext) 
       if (field === "devDependencies" && selected.workspace === undefined) continue;
       for (const [name, range] of Object.entries(object(manifest[field] ?? {}))) {
         if (field === "dependencies" && name in optional) continue;
+        if (modern && selected.workspace !== undefined) {
+          const lockedRange = object(selected.entry.dependencies ?? {})[name];
+          if (typeof lockedRange !== "string" || normalize(lockedRange) !== normalize(text(range))) {
+            ctx.gap(`Yarn workspace ${selected.workspace} manifest/lock selection disagrees for ${name}; no dependency edge was inferred.`);
+            continue;
+          }
+        }
         const optionalFlag = object(meta[name] ?? {}).optional;
         dependency(selected, name, range, scope, field === "optionalDependencies" || optionalFlag === true || optionalFlag === "true");
       }

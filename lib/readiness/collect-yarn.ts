@@ -8,8 +8,11 @@ import { publishCollection, reuseCollection, type CollectOptions, type Collectio
 import type { Snapshot, NativeInput } from "./types";
 import type { Store } from "./store";
 import { yarnWorkspaces } from "./yarn";
+import packageJson from "../../package.json";
 
-export const YARN_CAPTURE_CONTEXT = "committed-yarn-lock:v1;classic-parser:1.1.0;modern-parser:3.1.0";
+const classicParserVersion = packageJson.dependencies["@yarnpkg/lockfile"];
+const modernParserVersion = packageJson.dependencies["@yarnpkg/parsers"];
+export const YARN_CAPTURE_CONTEXT = `committed-yarn-lock:v1;classic-parser:${classicParserVersion};modern-parser:${modernParserVersion}`;
 
 export function parseYarnLock(content: string) {
   if (/^# yarn lockfile v1\r?$/m.test(content)) {
@@ -84,7 +87,7 @@ export async function collectYarn(snapshot: Snapshot, store: Store, options: Col
     toolId: tool.id, release: tool.release!, revision: tool.revision!, platform: options.platform,
     features: ["all-lockfile-targets", "peer-bindings:unresolved"],
     command: `Read committed ${path}, package manifests and repository configuration at ${tool.revision}`,
-    toolchain: `Yarn ${parsed.kind} lock; ${String(rootManifest.packageManager ?? "producing Yarn version unknown")}; parser ${parsed.kind === "classic" ? "@yarnpkg/lockfile 1.1.0" : "@yarnpkg/parsers 3.1.0"}`,
+    toolchain: `Yarn ${parsed.kind} lock; ${String(rootManifest.packageManager ?? "producing Yarn version unknown")}; parser ${parsed.kind === "classic" ? `@yarnpkg/lockfile ${classicParserVersion}` : `@yarnpkg/parsers ${modernParserVersion}`}`,
     origin: "source-reconstruction", adapter: "yarn-lock", rootNames: options.roots,
   };
   return publishCollection(snapshot, store, selection, profile, raw, supporting, `https://github.com/${tool.repo}/tree/${tool.revision}`).profile;

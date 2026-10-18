@@ -188,7 +188,7 @@ implements offline collection and retained evidence under ADR-1/ADR-2; it does
 not install consumer dependencies or execute project build scripts.
 
 - [x] Add evidence-backed Classic/modern Yarn capture, normalization, candidates, and recurring registration with explicit unsupported inputs.
-- [ ] Verify and attempt the five pinned production requests in bounded batches; retain failures and source/release/native/service boundary gaps.
+- [x] Verify and attempt the five pinned production requests in bounded batches; retain failures and source/release/native/service boundary gaps.
 - [ ] Validate/replay evidence, regenerate reports/comparison, check static export, review, and commit locally.
 
 Lock records will be treated as declared dependency selections. Peer bindings,
@@ -203,6 +203,18 @@ parsing, its lock is rejected because `js-tokens@npm:4.0.0` declares version
 `0.0.0-use.local`. This is a retained, retryable source-data failure, not a
 successful profile. Corrected source and renewed revision review are required.
 Other selected consumers continue independently.
+
+Collection/review checkpoint: Daedalus, TyphonJS, Cometa and Cardano Web3 now
+have partial source profiles; AdaLite remains failed and retryable. Four registered
+refreshes reuse retained evidence; rerunning those four completed requests attempts
+zero collections. Fourteen additional pinned source files and authored scope
+records document the lock conflict, release mappings and native/service boundaries.
+The first TyphonJS capture remains historical alongside its official-parser capture.
+Specification review found a stale workspace manifest could disagree with its
+locked selection; conflicting or absent workspace selections now produce gaps
+without inferred edges, with a regression test. Neither real TyphonJS capture had
+this mismatch. Standards review's optional parser-provenance refinement is also
+implemented: cache context and toolchain labels share the exact package pins.
 
 ## 1. Objective
 

@@ -123,6 +123,19 @@ test("local and patched Yarn sources remain distinct across nested consumer proj
   assert.ok(first.gaps.some((g) => g.reason.includes("patch/artifact verification")));
 });
 
+test("modern Yarn suppresses stale workspace selections even when a matching descriptor exists elsewhere", () => {
+  const raw = modern();
+  raw.lock["wallet@workspace:."].dependencies.test = "npm:^2";
+  Object.assign(raw.lock, { "test@npm:^2": { version: "2.0.0", resolution: "test@npm:2.0.0" } });
+  const result = resolveNative(raw, input, evidence);
+  const root = result.profile.roots[0];
+  const testIds = new Set(result.occurrences.filter((o) => o.locator.startsWith("lock:test@")).map((o) => o.id));
+  assert.ok(result.gaps.some((g) => g.reason.includes("manifest/lock selection disagrees for test")));
+  assert.ok(!result.edges.some((e) => e.from === root && testIds.has(e.to)));
+  delete (raw.lock["wallet@workspace:."].dependencies as Record<string, string>).test;
+  assert.ok(resolveNative(raw, input, evidence).gaps.some((g) => g.reason.includes("selection disagrees for test")));
+});
+
 test("Yarn candidates require a companion manifest and retain nested production paths", () => {
   const snapshot = inventory({ nodes: [{ id: "wallet", name: "Wallet" }] } as Graph, "catalog");
   snapshot.tools[0].manifests = ["sdk/package.json", "sdk/yarn.lock", "orphan/yarn.lock"];
