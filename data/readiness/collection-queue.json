@@ -469,6 +469,45 @@
       "attemptedAt": "2026-10-18T16:37:49.803Z",
       "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
       "succeededAt": "2026-10-18T16:37:57.927Z"
+    },
+    {
+      "id": "collection:035765f9e19ccc8f9db4f1d90aceb71c04b97118950e632ca3863e5ec5ee18b6",
+      "request": {
+        "toolId": "blaze",
+        "revision": "0499975bfa4fdb324f2185657a7f17e4cea35aa1",
+        "adapter": "bun-lock",
+        "roots": [
+          "@blaze-cardano/sdk",
+          "@blaze-cardano/tx",
+          "@blaze-cardano/wallet",
+          "@blaze-cardano/query"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "bun.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T17:16:05.048Z",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+      "succeededAt": "2026-10-18T17:16:13.622Z"
+    },
+    {
+      "id": "collection:dda15f60338576485173cdaa5d8a6d40183403863054e25b91fca1ff2df00116",
+      "request": {
+        "toolId": "pycardano",
+        "revision": "0445f3079cb8b356f48c13e040d00e25326ce59e",
+        "adapter": "poetry-lock",
+        "roots": [
+          "pycardano"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "poetry.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T17:16:13.623Z",
+      "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+      "succeededAt": "2026-10-18T17:16:20.955Z"
     }
   ]
 }

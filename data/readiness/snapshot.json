@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "ba13d59e1c1d8fdee1e60fc6717406bb7623be6fe8121595c9a0e75449afebf2",
-    "generatedAt": "2026-10-18T16:39:14.308Z",
+    "semanticDigest": "45783f18f3a4e238b2bc0a840143298bae0a333f0131b9ebda6e9339a498dd44",
+    "generatedAt": "2026-10-18T17:17:55.573Z",
     "tools": [
       {
         "id": "1694-io",
@@ -1383,11 +1383,13 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
         "manifests": [
+          "bun.lock",
+          "docs/bun.lock",
           "docs/catalyst/1200040/package.json",
           "docs/package.json",
           "examples/advanced-querying/package.json",
@@ -1397,7 +1399,9 @@
           "examples/script-deploy-aiken/aiken.toml",
           "examples/script-deploy-aiken/package.json",
           "examples/script-deploy-ci/package.json",
+          "examples/send-lovelace/bun.lock",
           "examples/send-lovelace/package.json",
+          "examples/u5c/bun.lock",
           "examples/u5c/package.json",
           "package.json",
           "packages/blaze-blueprint/package.json",
@@ -1427,16 +1431,97 @@
           "packages/e2e/package.json"
         ],
         "evidenceIds": [
+          "evidence:07e0b47df2a33b837e96c68cef3e85867329ea4305c48e6e06552c340e4dc8a1",
+          "evidence:0e993d6e1e9a3589e2b69b6283a444ff32f04da07726192ee62dfecbc03895f3",
+          "evidence:1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3",
+          "evidence:2351de0949091ddd6e0b1a69b93827ccc94e2585d324a1886421497cbf788305",
+          "evidence:2512040b7dfd706b2dfcce90dbf80cd5a1e5382b3328f0f20976a9b9fc8e3581",
+          "evidence:2643b6ae56885454e470715fcc96439df5673ed9a66e3800992bb6c34ea3a35b",
+          "evidence:3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
+          "evidence:39194785354523627f9ff909740cf4a5136b9ea0d15c1423fe723eb4b6885255",
+          "evidence:4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8",
+          "evidence:458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce",
+          "evidence:59fb6dd282fbc4d726cf8f0546292fe1ca7c52a81d5fe0e3f10a86b538d50c9f",
+          "evidence:5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195",
+          "evidence:654704ec79e0b5f6228bcceec29139c8a35815e8533bd0ecf8b2e304510d5776",
+          "evidence:6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
+          "evidence:864f57de6d5ec2d992f51dc156af2d3e6c9265805434fae6f8daac8dfdd185ed",
+          "evidence:886e77ceb9e03369b1dc52363120985e11ccacf5f5443eeb42507503f1609949",
+          "evidence:8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94",
+          "evidence:95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
           "evidence:983c263c119b084f4d51e64922e5b061c1c6031ae4f69a5a35de7ecb5d40691f",
-          "evidence:ae7b1bfb1bf2e86244c55b04d74b62ea2472f5d56c00520267d62e3d31129692"
+          "evidence:98e26ec48b42678e3e86f645fb4f56adb147b6c7d46e6099aa55f08ae047886b",
+          "evidence:9d6de578228b746812415412de6a67629c1c823d94e64bd7e37c08e413858453",
+          "evidence:ae7b1bfb1bf2e86244c55b04d74b62ea2472f5d56c00520267d62e3d31129692",
+          "evidence:c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556",
+          "evidence:cf086ee7d70a5dda741a49abd14823560b8900e7f663ee0d79dec90a992d5bb3",
+          "evidence:d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
+          "evidence:dc85e8ae2b0005d7c2ae9a6d93330b8be32f536873b2059e0009600a0471c917",
+          "evidence:dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab",
+          "evidence:e053062a6f1a37f35318986a78d4d88a7fdc83b9c66efa11466fe9a45c8871dd",
+          "evidence:e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200",
+          "evidence:f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
+          "evidence:f21e7e337519563de15649133be65ee743ed4279b6c58391d179385817b2e848",
+          "evidence:f5ed7a6768a79ea6e9ab824cb7ee5ba37da049ef0eab41e5ff1a45d821f62568",
+          "evidence:f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27",
+          "evidence:f9ac61e80422e5f6bab95270a002b5ab224447a745d5e306f6c92453c66bcd58"
         ],
         "gaps": [
+          {
+            "id": "gap:004b270d71bf157e04d15858",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-browser from package:@cardano-sdk/crypto has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:011226262a0cf92e15551db9",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @swc/wasm from package:ts-node has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:03a64ee646fd81c6f0de194c",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/browser-playwright from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:0a04f4c314629e31af397350",
+            "area": "resolution",
+            "reason": "Bun peerDependencies sass-embedded from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:0d5c3f4d7f5e1e3d1f9a2188",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/browser-preview from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:0f4e266ff9b753196fb98b68",
+            "area": "resolution",
+            "reason": "Bun peerDependencies stylus from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:116a1368368e0120d3d21e22",
+            "area": "resolution",
+            "reason": "Bun peerDependencies synckit from package:unrun has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -1446,17 +1531,293 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:231ae1a290b9401cc383221e",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Bun peerDependencies less from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:2635c5181056f35cc6419e52",
+            "area": "integration",
+            "reason": "Blaze source exports wallet and provider implementations including Maestro, Blockfrost and Kupmios. A lock graph does not select an active wallet, provider deployment, network, configured serialization backend or deployed script. No capability review or hardfork behavior is asserted.",
+            "nextAction": "Capture a production consumer configuration and provider/wallet deployment identities, then assign independent integration/capability review.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+            "code": "lock-sdk-scope:blaze:integration"
+          },
+          {
+            "id": "gap:2a6ca4c9387a2d0545ede73b",
+            "area": "resolution",
+            "reason": "Bun peerDependencies unplugin-unused from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:2c9d2eae95a564f84fc4fe65",
+            "area": "resolution",
+            "reason": "Bun peerDependencies msw from package:@vitest/mocker has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:326beb2050a71da9eacb8a00",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @opentelemetry/api from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:4546b8142b7fb30bb07c3c70",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @tsdown/css from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:4605132e2c0e21a23456276f",
+            "area": "resolution",
+            "reason": "Bun peerDependencies sugarss from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:47fd6cb55dc6b1103ea1ed82",
+            "area": "resolution",
+            "reason": "Bun lock includes all recorded workspaces, development and platform/optional packages. Installed peer bindings, lifecycle outputs, native/WASM artifacts and published release correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:4f6bfc60eb080fc1b5f86bab",
+            "area": "resolution",
+            "reason": "Bun peerDependencies bufferutil from package:ws has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:51640a00076efd29c6a73358",
+            "area": "resolution",
+            "reason": "Bun peerDependencies vue-tsc from package:rolldown-plugin-dts has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:52921e8505e2590df93f9374",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @arethetypeswrong/core from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:53f04d473ebd11219fe43df9",
+            "area": "resolution",
+            "reason": "Bun peerDependencies react-native-b4a from package:b4a has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:55ffcca2fdf7deaff2cd9c32",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @blaze-cardano/wallet from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:56c29d297930f9be98cc279c",
+            "area": "resolution",
+            "reason": "Bun peerDependencies oxc-resolver from package:dts-resolver has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:56cfb6f399f8e719ed67db29",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-nodejs from package:@cardano-sdk/crypto has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:5d4c57eaca2d76c53f48a1b5",
+            "area": "resolution",
+            "reason": "The Bun 1.3.14 text-v1 lock retains all packages and workspace manifests with matching dependency declarations. Missing optional peers and shadowed declarations remain explicit. UPLC declares separate Rust/WASM build outputs for node, browser and bundler; its retained Cargo files are supporting evidence, not a resolved Rust graph or verified distributed WASM inventory.",
+            "nextAction": "Collect the selected Rust/WASM native closure and output provenance, then verify installed peer bindings, overrides and platform selections in a concrete consumer environment.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+            "code": "lock-sdk-scope:blaze:resolution"
+          },
+          {
+            "id": "gap:61f5003c80adfa36059280dc",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-asmjs from package:@cardano-sdk/crypto has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:628bcb5eab6d1a1c3110fcb1",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/browser from package:@vitest/coverage-v8 has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:67f1ad5bd993a878b03c12ad",
+            "area": "resolution",
+            "reason": "Bun peerDependencies jsdom from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:74fc21f2c02bd55d0808bbbc",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @tsdown/exe from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:77e6afe80c105b1f4bcaf724",
+            "area": "resolution",
+            "reason": "Bun peerDependencies utf-8-validate from package:ws has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:7be0a69a2e31c30c89ce4ee8",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/browser-webdriverio from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:8b43dd2aebf095e204a967f1",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/ui from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:8bdea741ae8aea5a01e185d1",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @typescript/native-preview from package:rolldown-plugin-dts has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:8f053f18354ce6a6af13eea4",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @blaze-cardano/core from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:9e319541d72b4616f7cf8215",
+            "area": "resolution",
+            "reason": "Bun overrides retained; installed effects and patched content require verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:9eed2059537860be10291638",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @ts-macro/tsc from package:rolldown-plugin-dts has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:b1dd0e8b4e15ed9fc454b1a7",
+            "area": "resolution",
+            "reason": "Bun peerDependencies publint from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:b3c4f4b150f5f6178de9a106",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @edge-runtime/vm from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:bf7ad1e4b250143114b44f68",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @blaze-cardano/query from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:c5a1721122e3d9f9dcb95ccc",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @blaze-cardano/sdk from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:d7f49186aac78272fcce2fef",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @swc/core from package:ts-node has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:da84b47c1a69d3c3db1a60ad",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitest/coverage-istanbul from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:e233ed9724ea0fab3e1ce1a1",
+            "area": "resolution",
+            "reason": "Bun peerDependencies lightningcss from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:e2cbbb49d1c13b9cb8f51de3",
+            "area": "resolution",
+            "reason": "Bun peerDependencies jiti from package:eslint has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:e96544fd249016883873213c",
+            "area": "resolution",
+            "reason": "Bun peerDependencies sass from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:f07407dc6e368d7e899a60db",
+            "area": "resolution",
+            "reason": "Bun peerDependencies happy-dom from package:vitest has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:f152e5db9e383fae45d6aad2",
+            "area": "artifact",
+            "reason": "Blaze production roots are SDK 0.3.3, tx 0.15.4, wallet 0.6.3 and query 0.6.4. Their pinned source is the blueprint 0.9.1 repository tag, which does not verify the four independent published artifacts. All 21 locked workspaces remain retained, including development/examples/e2e packages outside selected roots.",
+            "nextAction": "Verify package publication provenance and map each selected SDK package version to its release artifact.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+            "code": "lock-sdk-scope:blaze:artifact"
+          },
+          {
+            "id": "gap:f29c779379d393c620a8566f",
+            "area": "resolution",
+            "reason": "Bun peerDependencies @vitejs/devtools from package:tsdown has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+          },
+          {
+            "id": "gap:f4635712b92c65cba4a68a61",
+            "area": "resolution",
+            "reason": "Bun peerDependencies jiti from package:vite has no locked target.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:02.319Z",
@@ -19548,7 +19909,7 @@
           "python"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -19563,10 +19924,28 @@
           "test/resources/haskell/PlutusData/plutus-data.cabal"
         ],
         "evidenceIds": [
+          "evidence:1cb000be642b658c8137354f4fc3af9dcece349c5db360246219f13a46a36f90",
+          "evidence:1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
           "evidence:2048de0e537c7a10aa9c96fe113aa52d88444d31695f4126dbfc85662a70c889",
-          "evidence:70777a4af5d7f8d32b233d950305c1f219bbb76c2aa4cc5e0906f7dd6320f439"
+          "evidence:2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
+          "evidence:70777a4af5d7f8d32b233d950305c1f219bbb76c2aa4cc5e0906f7dd6320f439",
+          "evidence:830463741b44d429173f0f4e975e3b81c51d37ebb41392c025486eca1831d65b",
+          "evidence:88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a",
+          "evidence:887953bae1a58b5e671dc9cec844b8a4ed472cd8f3ad925136094305dc3cfa18",
+          "evidence:c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228",
+          "evidence:cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725",
+          "evidence:d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba",
+          "evidence:ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67"
         ],
         "gaps": [
+          {
+            "id": "gap:00c38585194f1e1ec6a727ef",
+            "area": "artifact",
+            "reason": "PyCardano tag v0.19.2 and root manifest 0.19.2 agree; native Poetry verifies the root lock content hash. All 95 lock entries and their main/dev/docs groups, extras, markers and candidate distribution hashes remain retained. Package occurrences are separated by locked group. This does not verify a published wheel/sdist or installed Python environment; example/full-stack and Haskell integration-test projects are outside this production root.",
+            "nextAction": "Verify the published Python distribution provenance and collect an installed inventory for an explicitly selected Python/platform/extra configuration.",
+            "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+            "code": "lock-sdk-scope:pycardano:artifact"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
@@ -19582,17 +19961,33 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:6376973ea341d55caab6d7bc",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Poetry captures library dependency selections, not the build-backend closure or installed native cryptography/serialization libraries. Candidate wheel/sdist hashes do not identify the installed artifact; marker and optional activation remain conditional.",
+            "nextAction": "Capture build-backend and native library dependencies plus the selected wheel/sdist artifacts without treating all lock candidates as simultaneously installed.",
+            "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+            "code": "lock-sdk-scope:pycardano:resolution"
+          },
+          {
+            "id": "gap:a639a594789a74a6c4a4fce7",
+            "area": "resolution",
+            "reason": "Poetry lock retains all packages, groups, markers, extras and candidate distribution hashes. Target Python/platform and extra activation are not evaluated; installed wheel/sdist selection, build-backend dependencies, native libraries and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:pycardano:bb6954c174a05503413c3078"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:e785f8c032b9f679bba5b805",
+            "area": "integration",
+            "reason": "PyCardano source exposes Blockfrost, cardano-cli, Ogmios and Kupo backends. Its CBOR module defaults to cbor2pure and switches to cbor2 when CBOR_C_EXTENSION=1. The chosen backend, endpoint/network, node or service version and CBOR environment are unverified consumer configuration, not capability or hardfork findings.",
+            "nextAction": "Capture the production chain context and CBOR environment, identify service/native versions, then manually review transaction/serialization/query/submission behavior.",
+            "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+            "code": "lock-sdk-scope:pycardano:integration"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:32.325Z",
@@ -23729,6 +24124,55 @@
     ],
     "profiles": [
       {
+        "id": "profile:blaze:c617d45246dce15c6cd35d01",
+        "toolId": "blaze",
+        "release": "@blaze-cardano/blueprint@0.9.1",
+        "revision": "0499975bfa4fdb324f2185657a7f17e4cea35aa1",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets"
+        ],
+        "command": "Read committed bun.lock and package manifests at 0499975bfa4fdb324f2185657a7f17e4cea35aa1; no install/build",
+        "toolchain": "committed-bun-lock:v1;jsonc-parser:3.3.1; bun@1.3.14",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:72d4ef74cdcf86168c336a1cb4595b4689cf22a031e28ef9fc4e89569fe1ce22",
+          "occurrence:62f86cd75b2c8e30660721ee3b19fd830df046384d38c79267afeee1783ffdaf",
+          "occurrence:f05adce1d15277ea34d663f2733e20209938eb6f0c7c2dd8fedcfdb98d625ddd",
+          "occurrence:805da94e7572234b1b1a739e604663b8b7a0c35c6bd96eae9bbbcef33650bbc0"
+        ],
+        "inputDigest": "c617d45246dce15c6cd35d01cef6d6955a59469dbae5a0b6bd60c44324131906",
+        "evidenceIds": [
+          "evidence:07e0b47df2a33b837e96c68cef3e85867329ea4305c48e6e06552c340e4dc8a1",
+          "evidence:0e993d6e1e9a3589e2b69b6283a444ff32f04da07726192ee62dfecbc03895f3",
+          "evidence:1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3",
+          "evidence:2351de0949091ddd6e0b1a69b93827ccc94e2585d324a1886421497cbf788305",
+          "evidence:2512040b7dfd706b2dfcce90dbf80cd5a1e5382b3328f0f20976a9b9fc8e3581",
+          "evidence:3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
+          "evidence:39194785354523627f9ff909740cf4a5136b9ea0d15c1423fe723eb4b6885255",
+          "evidence:4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8",
+          "evidence:59fb6dd282fbc4d726cf8f0546292fe1ca7c52a81d5fe0e3f10a86b538d50c9f",
+          "evidence:6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
+          "evidence:886e77ceb9e03369b1dc52363120985e11ccacf5f5443eeb42507503f1609949",
+          "evidence:8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94",
+          "evidence:95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
+          "evidence:c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556",
+          "evidence:cf086ee7d70a5dda741a49abd14823560b8900e7f663ee0d79dec90a992d5bb3",
+          "evidence:d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
+          "evidence:dc85e8ae2b0005d7c2ae9a6d93330b8be32f536873b2059e0009600a0471c917",
+          "evidence:dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab",
+          "evidence:e053062a6f1a37f35318986a78d4d88a7fdc83b9c66efa11466fe9a45c8871dd",
+          "evidence:e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200",
+          "evidence:f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
+          "evidence:f5ed7a6768a79ea6e9ab824cb7ee5ba37da049ef0eab41e5ff1a45d821f62568",
+          "evidence:f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27",
+          "evidence:f9ac61e80422e5f6bab95270a002b5ab224447a745d5e306f6c92453c66bcd58"
+        ],
+        "nativeEvidenceId": "evidence:4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8",
+        "configurationEvidenceId": "evidence:d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:blockfrost-js:fd053be60979025fd54aac21",
         "toolId": "blockfrost-js",
         "release": "v6.2.0",
@@ -24818,6 +25262,32 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:pycardano:bb6954c174a05503413c3078",
+        "toolId": "pycardano",
+        "release": "v0.19.2",
+        "revision": "0445f3079cb8b356f48c13e040d00e25326ce59e",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets"
+        ],
+        "command": "Read committed poetry.lock and package manifests at 0445f3079cb8b356f48c13e040d00e25326ce59e; no install/build",
+        "toolchain": "Poetry native lock reader {\"packaging\":\"26.3\",\"poetry\":\"2.1.1\",\"poetry-core\":\"2.1.1\",\"python\":\"3.14.7\",\"tomlkit\":\"0.15.2\"}",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:7ade6982fa18ade7e0800a689527c351180c807ed522649ee6440e598c69fcbf"
+        ],
+        "inputDigest": "bb6954c174a05503413c3078c510faef4fd06f10d7bbc7bc3474614e62e2a883",
+        "evidenceIds": [
+          "evidence:1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
+          "evidence:2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
+          "evidence:cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725",
+          "evidence:d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba"
+        ],
+        "nativeEvidenceId": "evidence:2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
+        "configurationEvidenceId": "evidence:1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:typhonjs:0fa38ad96bdd38e0564d95d4",
         "toolId": "typhonjs",
         "release": "v4.0.0",
@@ -25184,6 +25654,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-toolbox/tree/4b06205f35d95a9b19b1fcec82e3668158a7b1eb"
       },
       {
+        "id": "evidence:07e0b47df2a33b837e96c68cef3e85867329ea4305c48e6e06552c340e4dc8a1",
+        "digest": "07e0b47df2a33b837e96c68cef3e85867329ea4305c48e6e06552c340e4dc8a1",
+        "path": "evidence/07e0b47df2a33b837e96c68cef3e85867329ea4305c48e6e06552c340e4dc8a1.json.gz",
+        "description": "Native input blaze/packages/blaze-emulator/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-emulator/package.json"
+      },
+      {
         "id": "evidence:081425bc7fe21e21cccc69b365e295ca65924e820d0139491365e307a3ad5c70",
         "digest": "081425bc7fe21e21cccc69b365e295ca65924e820d0139491365e307a3ad5c70",
         "path": "evidence/081425bc7fe21e21cccc69b365e295ca65924e820d0139491365e307a3ad5c70.json.gz",
@@ -25286,6 +25763,13 @@
         "digest": "0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
         "path": "evidence/0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f.json.gz",
         "description": "Collection request for dexter"
+      },
+      {
+        "id": "evidence:0e993d6e1e9a3589e2b69b6283a444ff32f04da07726192ee62dfecbc03895f3",
+        "digest": "0e993d6e1e9a3589e2b69b6283a444ff32f04da07726192ee62dfecbc03895f3",
+        "path": "evidence/0e993d6e1e9a3589e2b69b6283a444ff32f04da07726192ee62dfecbc03895f3.json.gz",
+        "description": "Native input blaze/packages/e2e/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/e2e/package.json"
       },
       {
         "id": "evidence:0ea7b08cc5156ebba3501af0de1d73b955998c3337d2da7eb581439e00bdcbc5",
@@ -25534,11 +26018,25 @@
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2"
       },
       {
+        "id": "evidence:1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3",
+        "digest": "1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3",
+        "path": "evidence/1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3.json.gz",
+        "description": "Native input blaze/packages/blaze-tsconfig/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-tsconfig/package.json"
+      },
+      {
         "id": "evidence:1bbe15dc06b154ab1c72a9b64efcc11c199c89a7bbd90b32e0b726276a28bdf2",
         "digest": "1bbe15dc06b154ab1c72a9b64efcc11c199c89a7bbd90b32e0b726276a28bdf2",
         "path": "evidence/1bbe15dc06b154ab1c72a9b64efcc11c199c89a7bbd90b32e0b726276a28bdf2.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-data-lite/tree/b099b3d11b009b971f918217bc15a769555be8fb"
+      },
+      {
+        "id": "evidence:1cb000be642b658c8137354f4fc3af9dcece349c5db360246219f13a46a36f90",
+        "digest": "1cb000be642b658c8137354f4fc3af9dcece349c5db360246219f13a46a36f90",
+        "path": "evidence/1cb000be642b658c8137354f4fc3af9dcece349c5db360246219f13a46a36f90.json.gz",
+        "description": "Native input pycardano/README.md",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/README.md"
       },
       {
         "id": "evidence:1cb92aef0fa5538484d0772744307baac590a0078c66d99bd66d534441d58eca",
@@ -25560,6 +26058,13 @@
         "path": "evidence/1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831.json.gz",
         "description": "Native input geniusyield-sdk/package.json",
         "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/package.json"
+      },
+      {
+        "id": "evidence:1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
+        "digest": "1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
+        "path": "evidence/1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/tree/0445f3079cb8b356f48c13e040d00e25326ce59e"
       },
       {
         "id": "evidence:1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
@@ -25726,6 +26231,13 @@
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/mobile/package-lock.json"
       },
       {
+        "id": "evidence:2351de0949091ddd6e0b1a69b93827ccc94e2585d324a1886421497cbf788305",
+        "digest": "2351de0949091ddd6e0b1a69b93827ccc94e2585d324a1886421497cbf788305",
+        "path": "evidence/2351de0949091ddd6e0b1a69b93827ccc94e2585d324a1886421497cbf788305.json.gz",
+        "description": "Native input blaze/packages/blaze-query/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-query/package.json"
+      },
+      {
         "id": "evidence:236a0110a29b11873f31a740071804ff939a0f750ae6167de0de765694e1e42c",
         "digest": "236a0110a29b11873f31a740071804ff939a0f750ae6167de0de765694e1e42c",
         "path": "evidence/236a0110a29b11873f31a740071804ff939a0f750ae6167de0de765694e1e42c.json.gz",
@@ -25761,6 +26273,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/pnpm-workspace.yaml"
       },
       {
+        "id": "evidence:2512040b7dfd706b2dfcce90dbf80cd5a1e5382b3328f0f20976a9b9fc8e3581",
+        "digest": "2512040b7dfd706b2dfcce90dbf80cd5a1e5382b3328f0f20976a9b9fc8e3581",
+        "path": "evidence/2512040b7dfd706b2dfcce90dbf80cd5a1e5382b3328f0f20976a9b9fc8e3581.json.gz",
+        "description": "Native input blaze/packages/blaze-sdk/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-sdk/package.json"
+      },
+      {
         "id": "evidence:254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069",
         "digest": "254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069",
         "path": "evidence/254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069.json.gz",
@@ -25787,6 +26306,13 @@
         "path": "evidence/26280aedbdb5ed07805290a46566eebb0aaa1acb679dd723475eb60686f1149b.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-academy/tree/5c0e71a3f009f3b567cfee6969a86e9c25352f33"
+      },
+      {
+        "id": "evidence:2643b6ae56885454e470715fcc96439df5673ed9a66e3800992bb6c34ea3a35b",
+        "digest": "2643b6ae56885454e470715fcc96439df5673ed9a66e3800992bb6c34ea3a35b",
+        "path": "evidence/2643b6ae56885454e470715fcc96439df5673ed9a66e3800992bb6c34ea3a35b.json.gz",
+        "description": "Native input blaze/packages/blaze-query/src/index.ts",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-query/src/index.ts"
       },
       {
         "id": "evidence:2699b1aaf52e38cbf9136acc0ca15dacde35b2df4ff0d8810cf267360f319ead",
@@ -25971,6 +26497,13 @@
         "description": "Collection request for dolos"
       },
       {
+        "id": "evidence:2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
+        "digest": "2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
+        "path": "evidence/2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48.json.gz",
+        "description": "poetry-lock for pycardano v0.19.2",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/tree/0445f3079cb8b356f48c13e040d00e25326ce59e"
+      },
+      {
         "id": "evidence:2e0d43bfd91cf8619a847a3d4eda7fbe39c336fc6db18fb53722a91eef40f9ca",
         "digest": "2e0d43bfd91cf8619a847a3d4eda7fbe39c336fc6db18fb53722a91eef40f9ca",
         "path": "evidence/2e0d43bfd91cf8619a847a3d4eda7fbe39c336fc6db18fb53722a91eef40f9ca.json.gz",
@@ -26110,6 +26643,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/yarn.lock"
       },
       {
+        "id": "evidence:3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
+        "digest": "3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
+        "path": "evidence/3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace.json.gz",
+        "description": "Native input blaze/packages/blaze-blueprint/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-blueprint/package.json"
+      },
+      {
         "id": "evidence:354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
         "digest": "354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
         "path": "evidence/354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194.json.gz",
@@ -26184,6 +26724,13 @@
         "path": "evidence/38ed25976a3687fb05ffe91ce8abc7e6ed490e7fc229c6ffb21cc8e2bad36a9f.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Plutonomicon/cardano-transaction-lib/tree/2ae739437420be191bca87fbe836eb999782b1ef"
+      },
+      {
+        "id": "evidence:39194785354523627f9ff909740cf4a5136b9ea0d15c1423fe723eb4b6885255",
+        "digest": "39194785354523627f9ff909740cf4a5136b9ea0d15c1423fe723eb4b6885255",
+        "path": "evidence/39194785354523627f9ff909740cf4a5136b9ea0d15c1423fe723eb4b6885255.json.gz",
+        "description": "Native input blaze/packages/blaze-plutus/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-plutus/package.json"
       },
       {
         "id": "evidence:399ec5fdda1807232eb997611358e0e4467b9649c6ba33c78d4aba3045c65f44",
@@ -26421,6 +26968,13 @@
         "sourceUrl": "https://github.com/OpShin/imperator/tree/d9e7464b39f5cd9dec57b680ad29d1f57b31a8c2"
       },
       {
+        "id": "evidence:4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8",
+        "digest": "4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8",
+        "path": "evidence/4385cecc6e6e6bfa35bc07f3bfa71569f1cc440680037242fc05a9bdf3acbae8.json.gz",
+        "description": "bun-lock for blaze @blaze-cardano/blueprint@0.9.1",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/tree/0499975bfa4fdb324f2185657a7f17e4cea35aa1"
+      },
+      {
         "id": "evidence:4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c",
         "digest": "4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c",
         "path": "evidence/4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c.json.gz",
@@ -26468,6 +27022,13 @@
         "path": "evidence/44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40.json.gz",
         "description": "Source adalite/.yarnrc.yml",
         "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/.yarnrc.yml"
+      },
+      {
+        "id": "evidence:458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce",
+        "digest": "458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce",
+        "path": "evidence/458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce.json.gz",
+        "description": "Native input blaze/packages/blaze-wallet/src/index.ts",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/src/index.ts"
       },
       {
         "id": "evidence:4639181d6851669242f904474da2deffe6e1f78ac032f554b1e983e5e3f4adb1",
@@ -26801,6 +27362,13 @@
         "sourceUrl": "https://github.com/use-cardano/use-cardano/tree/80ef0c4153caab5fc82da13249e8290e94aa3c41"
       },
       {
+        "id": "evidence:59fb6dd282fbc4d726cf8f0546292fe1ca7c52a81d5fe0e3f10a86b538d50c9f",
+        "digest": "59fb6dd282fbc4d726cf8f0546292fe1ca7c52a81d5fe0e3f10a86b538d50c9f",
+        "path": "evidence/59fb6dd282fbc4d726cf8f0546292fe1ca7c52a81d5fe0e3f10a86b538d50c9f.json.gz",
+        "description": "Native input blaze/bun.lock",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/bun.lock"
+      },
+      {
         "id": "evidence:5a2791106e23375b8d17e3e6b9de9c4b5ce6e9c77e81fbf7594f5e7b0834efd2",
         "digest": "5a2791106e23375b8d17e3e6b9de9c4b5ce6e9c77e81fbf7594f5e7b0834efd2",
         "path": "evidence/5a2791106e23375b8d17e3e6b9de9c4b5ce6e9c77e81fbf7594f5e7b0834efd2.json.gz",
@@ -26883,6 +27451,12 @@
         "path": "evidence/5db0d23219e635111c371d7b3c649c1b04ae5b691c92d4408a5499bcad83a9ff.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
+        "id": "evidence:5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195",
+        "digest": "5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195",
+        "path": "evidence/5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195.json.gz",
+        "description": "Collection request for blaze"
       },
       {
         "id": "evidence:5ee5218ea934e72360deab2a80babd0d366fe1d9c5e48247f80406ba3c3a371c",
@@ -26986,6 +27560,13 @@
         "path": "evidence/651d7d7cc067380348a6b2ca011bc9bf9250562f6702150286c5cc0904144a1e.json.gz",
         "description": "Source nami/src/wasm/cardano_message_signing/Cargo.toml",
         "sourceUrl": "https://github.com/input-output-hk/nami/blob/e52e0bdb02eb1ec224db26f48b0192685a30f99e/src/wasm/cardano_message_signing/Cargo.toml"
+      },
+      {
+        "id": "evidence:654704ec79e0b5f6228bcceec29139c8a35815e8533bd0ecf8b2e304510d5776",
+        "digest": "654704ec79e0b5f6228bcceec29139c8a35815e8533bd0ecf8b2e304510d5776",
+        "path": "evidence/654704ec79e0b5f6228bcceec29139c8a35815e8533bd0ecf8b2e304510d5776.json.gz",
+        "description": "Native input blaze/packages/blaze-uplc/wasm/build.sh",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/wasm/build.sh"
       },
       {
         "id": "evidence:65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
@@ -27143,6 +27724,13 @@
         "path": "evidence/6d5bb376c6b089b0629ac003ed9ea0ac54e9b87e954cfa4b55d18a567419b640.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardananium/cquisitor/tree/99346c2742c1b6c45b84f5f081f5e822833180ff"
+      },
+      {
+        "id": "evidence:6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
+        "digest": "6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
+        "path": "evidence/6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3.json.gz",
+        "description": "Native input blaze/packages/blaze-vm/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-vm/package.json"
       },
       {
         "id": "evidence:6ed60607365eab33e2e1ce3203b4a38c6f78a37eb99070e7fc0fe56ddd3f03be",
@@ -27580,6 +28168,12 @@
         "sourceUrl": "https://github.com/geniusyield/dex-lucid/tree/66a6ebcedd64979d02d1bb01c520185af1489f0d"
       },
       {
+        "id": "evidence:830463741b44d429173f0f4e975e3b81c51d37ebb41392c025486eca1831d65b",
+        "digest": "830463741b44d429173f0f4e975e3b81c51d37ebb41392c025486eca1831d65b",
+        "path": "evidence/830463741b44d429173f0f4e975e3b81c51d37ebb41392c025486eca1831d65b.json.gz",
+        "description": "Pinned Bun/Poetry production SDK scope for pycardano"
+      },
+      {
         "id": "evidence:83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc",
         "digest": "83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc",
         "path": "evidence/83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc.json.gz",
@@ -27713,6 +28307,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/nview/tree/bd56e11b0982756252babe734a66651443c440b1"
       },
       {
+        "id": "evidence:864f57de6d5ec2d992f51dc156af2d3e6c9265805434fae6f8daac8dfdd185ed",
+        "digest": "864f57de6d5ec2d992f51dc156af2d3e6c9265805434fae6f8daac8dfdd185ed",
+        "path": "evidence/864f57de6d5ec2d992f51dc156af2d3e6c9265805434fae6f8daac8dfdd185ed.json.gz",
+        "description": "Native input blaze/packages/blaze-uplc/wasm/Cargo.toml",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/wasm/Cargo.toml"
+      },
+      {
         "id": "evidence:86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
         "digest": "86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
         "path": "evidence/86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596.json.gz",
@@ -27755,6 +28356,13 @@
         "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/src/app/load-app.ts"
       },
       {
+        "id": "evidence:88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a",
+        "digest": "88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a",
+        "path": "evidence/88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a.json.gz",
+        "description": "Native input pycardano/pycardano/backend/__init__.py",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/pycardano/backend/__init__.py"
+      },
+      {
         "id": "evidence:881c34aeacd00f7657746004c124c4460ba8657b0f4caf84f1c31d1db5c9f662",
         "digest": "881c34aeacd00f7657746004c124c4460ba8657b0f4caf84f1c31d1db5c9f662",
         "path": "evidence/881c34aeacd00f7657746004c124c4460ba8657b0f4caf84f1c31d1db5c9f662.json.gz",
@@ -27767,6 +28375,20 @@
         "path": "evidence/884a0990502af7bf9a79dad3cfd93efbce6840c2a30887dd6aa36f0d5c99aa1e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/bloxbean/yaci-bridge/tree/aed55a0ad19002ebccb05997463306c26686d2d4"
+      },
+      {
+        "id": "evidence:886e77ceb9e03369b1dc52363120985e11ccacf5f5443eeb42507503f1609949",
+        "digest": "886e77ceb9e03369b1dc52363120985e11ccacf5f5443eeb42507503f1609949",
+        "path": "evidence/886e77ceb9e03369b1dc52363120985e11ccacf5f5443eeb42507503f1609949.json.gz",
+        "description": "Native input blaze/packages/blaze-deploy/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-deploy/package.json"
+      },
+      {
+        "id": "evidence:887953bae1a58b5e671dc9cec844b8a4ed472cd8f3ad925136094305dc3cfa18",
+        "digest": "887953bae1a58b5e671dc9cec844b8a4ed472cd8f3ad925136094305dc3cfa18",
+        "path": "evidence/887953bae1a58b5e671dc9cec844b8a4ed472cd8f3ad925136094305dc3cfa18.json.gz",
+        "description": "Native input pycardano/pycardano/backend/kupo.py",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/pycardano/backend/kupo.py"
       },
       {
         "id": "evidence:8917264abc5ca15977343d57b75172de68afb0b004c97cb59b37bc12b9122884",
@@ -27829,6 +28451,13 @@
         "path": "evidence/8ab445759d0146d914927228846a3bd862b175c2a42f85093366857748b0d87c.json.gz",
         "description": "Source yoroi/mobile/README.md",
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/mobile/README.md"
+      },
+      {
+        "id": "evidence:8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94",
+        "digest": "8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94",
+        "path": "evidence/8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94.json.gz",
+        "description": "Native input blaze/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/package.json"
       },
       {
         "id": "evidence:8acb25d57732a359518870fbd63d1cc896d8428e05f522307d5fabe79d531f13",
@@ -28071,6 +28700,13 @@
         "description": "Collection request for oura"
       },
       {
+        "id": "evidence:95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
+        "digest": "95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
+        "path": "evidence/95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f.json.gz",
+        "description": "Native input blaze/docs/catalyst/1200040/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/docs/catalyst/1200040/package.json"
+      },
+      {
         "id": "evidence:95eea82034552d64f7f65d3b62c9d60d8f9e405994260a485b9863f111e4eb71",
         "digest": "95eea82034552d64f7f65d3b62c9d60d8f9e405994260a485b9863f111e4eb71",
         "path": "evidence/95eea82034552d64f7f65d3b62c9d60d8f9e405994260a485b9863f111e4eb71.json.gz",
@@ -28135,6 +28771,12 @@
         "digest": "986f054550b16c97920c29f32fa883dcad75d2a77efde7d87757251041c6b16c",
         "path": "evidence/986f054550b16c97920c29f32fa883dcad75d2a77efde7d87757251041c6b16c.json.gz",
         "description": "Collection request for dolos"
+      },
+      {
+        "id": "evidence:98e26ec48b42678e3e86f645fb4f56adb147b6c7d46e6099aa55f08ae047886b",
+        "digest": "98e26ec48b42678e3e86f645fb4f56adb147b6c7d46e6099aa55f08ae047886b",
+        "path": "evidence/98e26ec48b42678e3e86f645fb4f56adb147b6c7d46e6099aa55f08ae047886b.json.gz",
+        "description": "Pinned Bun/Poetry production SDK scope for blaze"
       },
       {
         "id": "evidence:99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d",
@@ -28232,6 +28874,13 @@
         "path": "evidence/9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3.json.gz",
         "description": "Native input epora-wallet/code/dApp/package.json",
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/package.json"
+      },
+      {
+        "id": "evidence:9d6de578228b746812415412de6a67629c1c823d94e64bd7e37c08e413858453",
+        "digest": "9d6de578228b746812415412de6a67629c1c823d94e64bd7e37c08e413858453",
+        "path": "evidence/9d6de578228b746812415412de6a67629c1c823d94e64bd7e37c08e413858453.json.gz",
+        "description": "Native input blaze/README.md",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/README.md"
       },
       {
         "id": "evidence:9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
@@ -29326,6 +29975,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardinal-spec/tree/5e226ca6c5192ba396d0983323144a797b5d713c"
       },
       {
+        "id": "evidence:c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228",
+        "digest": "c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228",
+        "path": "evidence/c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228.json.gz",
+        "description": "Native input pycardano/pycardano/cbor.py",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/pycardano/cbor.py"
+      },
+      {
         "id": "evidence:c8cc2566496077c14cac754f597b9570ffa090b221cf609c096d1290f784c714",
         "digest": "c8cc2566496077c14cac754f597b9570ffa090b221cf609c096d1290f784c714",
         "path": "evidence/c8cc2566496077c14cac754f597b9570ffa090b221cf609c096d1290f784c714.json.gz",
@@ -29352,6 +30008,13 @@
         "path": "evidence/c9cb528ef5f3c5e2f635fffb6dd26ed4c5ca7c0781ace138cf3cbd341f97a89b.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IntersectMBO/cardano-node/tree/938cba990357ae7c4b7f95c8f75dd9d31174bbeb"
+      },
+      {
+        "id": "evidence:c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556",
+        "digest": "c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556",
+        "path": "evidence/c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556.json.gz",
+        "description": "Native input blaze/examples/script-deploy-aiken/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/examples/script-deploy-aiken/package.json"
       },
       {
         "id": "evidence:c9e6ad9288af81d423b349bf7239690b790c4c0e6ad654b548e76aec34943c6a",
@@ -29403,6 +30066,13 @@
         "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/.yarnrc.yml"
       },
       {
+        "id": "evidence:cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725",
+        "digest": "cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725",
+        "path": "evidence/cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725.json.gz",
+        "description": "Native input pycardano/poetry.lock",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/poetry.lock"
+      },
+      {
         "id": "evidence:cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9",
         "digest": "cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9",
         "path": "evidence/cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9.json.gz",
@@ -29435,6 +30105,13 @@
         "path": "evidence/ceadd5988cef1afffb3b08d3fae749799160cdbc1f32fe4d5e8625336ce038dd.json.gz",
         "description": "Source marlowe-ts-sdk/packages/runtime/lifecycle/Readme.md",
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/blob/93598c0f8e452d7679a44097c48e693d95bfd631/packages/runtime/lifecycle/Readme.md"
+      },
+      {
+        "id": "evidence:cf086ee7d70a5dda741a49abd14823560b8900e7f663ee0d79dec90a992d5bb3",
+        "digest": "cf086ee7d70a5dda741a49abd14823560b8900e7f663ee0d79dec90a992d5bb3",
+        "path": "evidence/cf086ee7d70a5dda741a49abd14823560b8900e7f663ee0d79dec90a992d5bb3.json.gz",
+        "description": "Native input blaze/packages/blaze-data/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-data/package.json"
       },
       {
         "id": "evidence:cf8be6ff3f415a5d0c208193f6fc81242154cbd62cc6089aa66b3fc9a3249266",
@@ -29477,6 +30154,13 @@
         "path": "evidence/d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20.json.gz",
         "description": "Native input cardano-js-sdk/packages/ogmios/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/ogmios/package.json"
+      },
+      {
+        "id": "evidence:d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
+        "digest": "d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
+        "path": "evidence/d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/tree/0499975bfa4fdb324f2185657a7f17e4cea35aa1"
       },
       {
         "id": "evidence:d22dc1d9607d4cd1fa885001ef8be58832feb016996db45964f813d8588babc0",
@@ -29568,6 +30252,13 @@
         "path": "evidence/d4b43a8a8e4249c3c7ea4b95df8b64d4425fc7c486e8c9836b3173eb03700273.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/HarmonicLabs/pebble/tree/d6a5a75575d6091bc0bd3f63d5daa225d6772677"
+      },
+      {
+        "id": "evidence:d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba",
+        "digest": "d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba",
+        "path": "evidence/d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba.json.gz",
+        "description": "Native input pycardano/pyproject.toml",
+        "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/pyproject.toml"
       },
       {
         "id": "evidence:d4c4b5cd2bc74fe44ae39676fea95ebb3245ccaa09aa6570c521fe407c324661",
@@ -29736,6 +30427,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/package.json"
       },
       {
+        "id": "evidence:dc85e8ae2b0005d7c2ae9a6d93330b8be32f536873b2059e0009600a0471c917",
+        "digest": "dc85e8ae2b0005d7c2ae9a6d93330b8be32f536873b2059e0009600a0471c917",
+        "path": "evidence/dc85e8ae2b0005d7c2ae9a6d93330b8be32f536873b2059e0009600a0471c917.json.gz",
+        "description": "Native input blaze/examples/script-deploy-ci/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/examples/script-deploy-ci/package.json"
+      },
+      {
         "id": "evidence:dc893e1ca216763e98adfa7c9033791b08d9265f55194d2242daccbce096adc9",
         "digest": "dc893e1ca216763e98adfa7c9033791b08d9265f55194d2242daccbce096adc9",
         "path": "evidence/dc893e1ca216763e98adfa7c9033791b08d9265f55194d2242daccbce096adc9.json.gz",
@@ -29762,6 +30460,13 @@
         "path": "evidence/dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d.json.gz",
         "description": "Source hydra-sdk/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/package.json"
+      },
+      {
+        "id": "evidence:dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab",
+        "digest": "dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab",
+        "path": "evidence/dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab.json.gz",
+        "description": "Native input blaze/packages/blaze-wallet/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/package.json"
       },
       {
         "id": "evidence:dda3efdf4d403164e2bc97524afb60d8a21a2c77ddc3309f8c15e72fe8b5f2db",
@@ -29827,6 +30532,13 @@
         "sourceUrl": "https://github.com/xray-network/xray-js/blob/21aa0802533f9052b6d4bcbdc934acbbd482a006/README.md"
       },
       {
+        "id": "evidence:e053062a6f1a37f35318986a78d4d88a7fdc83b9c66efa11466fe9a45c8871dd",
+        "digest": "e053062a6f1a37f35318986a78d4d88a7fdc83b9c66efa11466fe9a45c8871dd",
+        "path": "evidence/e053062a6f1a37f35318986a78d4d88a7fdc83b9c66efa11466fe9a45c8871dd.json.gz",
+        "description": "Native input blaze/packages/blaze-tx/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-tx/package.json"
+      },
+      {
         "id": "evidence:e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1",
         "digest": "e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1",
         "path": "evidence/e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1.json.gz",
@@ -29846,6 +30558,13 @@
         "path": "evidence/e1ebaaeca9c950991b07c51b7828b2dba81a4162e59ee9809cb8084e70d1ac99.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/plutip/releases/tag/plutip-w-node-8.1.1"
+      },
+      {
+        "id": "evidence:e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200",
+        "digest": "e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200",
+        "path": "evidence/e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200.json.gz",
+        "description": "Native input blaze/packages/blaze-ogmios/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-ogmios/package.json"
       },
       {
         "id": "evidence:e28226252a2fd583eca4657a624506346ad71ddf1c26f5c706bdd230804783bf",
@@ -30002,6 +30721,12 @@
         "sourceUrl": "https://github.com/txpipe/pix/tree/19e45ffade14177437fc760b14531cacd3e4d1a2"
       },
       {
+        "id": "evidence:ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67",
+        "digest": "ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67",
+        "path": "evidence/ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67.json.gz",
+        "description": "Collection request for pycardano"
+      },
+      {
         "id": "evidence:ea77428008f6696e831203de04e9e23ddcdcddfaaf63a73bf6746baaca35a5d3",
         "digest": "ea77428008f6696e831203de04e9e23ddcdcddfaaf63a73bf6746baaca35a5d3",
         "path": "evidence/ea77428008f6696e831203de04e9e23ddcdcddfaaf63a73bf6746baaca35a5d3.json.gz",
@@ -30141,6 +30866,13 @@
         "sourceUrl": "https://github.com/minswap/sdk/tree/19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528"
       },
       {
+        "id": "evidence:f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
+        "digest": "f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
+        "path": "evidence/f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0.json.gz",
+        "description": "Native input blaze/examples/advanced-querying/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/examples/advanced-querying/package.json"
+      },
+      {
         "id": "evidence:f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "digest": "f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "path": "evidence/f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe.json.gz",
@@ -30174,6 +30906,13 @@
         "path": "evidence/f1a64447c20ce6dab96d48d4ba22d4e9f000efaff8a3dc38f47a95d7df47977e.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/dcSpark/cddl-codegen/tree/24b866a4b063230edd4b047782fd8ab8d713ed18"
+      },
+      {
+        "id": "evidence:f21e7e337519563de15649133be65ee743ed4279b6c58391d179385817b2e848",
+        "digest": "f21e7e337519563de15649133be65ee743ed4279b6c58391d179385817b2e848",
+        "path": "evidence/f21e7e337519563de15649133be65ee743ed4279b6c58391d179385817b2e848.json.gz",
+        "description": "Native input blaze/packages/blaze-uplc/wasm/Cargo.lock",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/wasm/Cargo.lock"
       },
       {
         "id": "evidence:f2868d468641175029d613645b16748155878a18f02cb4a50210d7a74ca05b7d",
@@ -30238,6 +30977,13 @@
         "sourceUrl": "https://github.com/cardananium/de-uplc/releases/tag/v0.0.2"
       },
       {
+        "id": "evidence:f5ed7a6768a79ea6e9ab824cb7ee5ba37da049ef0eab41e5ff1a45d821f62568",
+        "digest": "f5ed7a6768a79ea6e9ab824cb7ee5ba37da049ef0eab41e5ff1a45d821f62568",
+        "path": "evidence/f5ed7a6768a79ea6e9ab824cb7ee5ba37da049ef0eab41e5ff1a45d821f62568.json.gz",
+        "description": "Native input blaze/packages/blaze-eslint-config/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-eslint-config/package.json"
+      },
+      {
         "id": "evidence:f60fb827ee0440c646d749cdfde03792dda3f6dbef7bed0fc14a0e674d601a05",
         "digest": "f60fb827ee0440c646d749cdfde03792dda3f6dbef7bed0fc14a0e674d601a05",
         "path": "evidence/f60fb827ee0440c646d749cdfde03792dda3f6dbef7bed0fc14a0e674d601a05.json.gz",
@@ -30287,6 +31033,13 @@
         "sourceUrl": "https://github.com/input-output-hk/marconi/tree/d39923eb7b81156f5783e6252469b321ad89a253"
       },
       {
+        "id": "evidence:f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27",
+        "digest": "f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27",
+        "path": "evidence/f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27.json.gz",
+        "description": "Native input blaze/packages/blaze-core/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-core/package.json"
+      },
+      {
         "id": "evidence:f7f9641ee8ddd0fc6d3692fb604996f62d000c23f71d4d03b530abd0c01878d8",
         "digest": "f7f9641ee8ddd0fc6d3692fb604996f62d000c23f71d4d03b530abd0c01878d8",
         "path": "evidence/f7f9641ee8ddd0fc6d3692fb604996f62d000c23f71d4d03b530abd0c01878d8.json.gz",
@@ -30313,6 +31066,13 @@
         "path": "evidence/f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899.json.gz",
         "description": "Native input hydra-sdk/apps/docs-v2/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs-v2/package.json"
+      },
+      {
+        "id": "evidence:f9ac61e80422e5f6bab95270a002b5ab224447a745d5e306f6c92453c66bcd58",
+        "digest": "f9ac61e80422e5f6bab95270a002b5ab224447a745d5e306f6c92453c66bcd58",
+        "path": "evidence/f9ac61e80422e5f6bab95270a002b5ab224447a745d5e306f6c92453c66bcd58.json.gz",
+        "description": "Native input blaze/packages/blaze-uplc/package.json",
+        "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/package.json"
       },
       {
         "id": "evidence:f9ee6c7e5f25a47bf6450f095dc1bfb11923ff81b85261401be1ea151a6667dc",
@@ -30408,6 +31168,12 @@
     ],
     "decisions": [],
     "collections": [
+      {
+        "key": "326d1b889c0aa6e7010b60c14b5aa0c34eea15fe93f6c34a59ce5d9b589d8150",
+        "toolId": "blaze",
+        "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+        "evidenceId": "evidence:5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195"
+      },
       {
         "key": "0bb3ed5ed55e3f489cbe1722fd8e5f98a784eab3d26dff608a40c2eb29d002ff",
         "toolId": "blockfrost-js",
@@ -30577,6 +31343,12 @@
         "evidenceId": "evidence:a9d1635eb2c8824cac83af6c7a81510555fcf318fbf761a5760ea08305cd60be"
       },
       {
+        "key": "e4a9c2c99b74866508b9151c4bb866d8b245d38968f430300792aac31c3030bc",
+        "toolId": "pycardano",
+        "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+        "evidenceId": "evidence:ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67"
+      },
+      {
         "key": "3e07331d410301bae662a14d8eddcaf2863d8d599cda6c165658758abc4c83a4",
         "toolId": "typhonjs",
         "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
@@ -30611,87 +31383,92 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/93b9f8b410c68e6e4066f0759b488fdeb1570549cb2e50a4baa64f187c628885.json",
-        "digest": "93b9f8b410c68e6e4066f0759b488fdeb1570549cb2e50a4baa64f187c628885",
-        "records": 1682
+        "path": "snapshots/artifacts/3a4a0fa56d0bf972667d30681f2c87875bfd09e6add1357d19b4dda07c8eaf83.json",
+        "digest": "3a4a0fa56d0bf972667d30681f2c87875bfd09e6add1357d19b4dda07c8eaf83",
+        "records": 1700
       },
       {
-        "path": "snapshots/artifacts/b077bb6daa4267363b045024da0e68eeff179df34ad098187e11503a5f91efe9.json",
-        "digest": "b077bb6daa4267363b045024da0e68eeff179df34ad098187e11503a5f91efe9",
-        "records": 1659
+        "path": "snapshots/artifacts/93f76e0f8d2302fbf68bed3559f3db63dd856274a4c5f45ff2ef2e4ee1c46f09.json",
+        "digest": "93f76e0f8d2302fbf68bed3559f3db63dd856274a4c5f45ff2ef2e4ee1c46f09",
+        "records": 1670
       },
       {
-        "path": "snapshots/artifacts/431f81e3903ae236d4d2158792d376b4693007f4512963de6ba1251b2ab14d44.json",
-        "digest": "431f81e3903ae236d4d2158792d376b4693007f4512963de6ba1251b2ab14d44",
-        "records": 1671
+        "path": "snapshots/artifacts/b7d42d5b4b0ce4774e2be805de9a5be47321262f95fe0972e621fc19f70f9afd.json",
+        "digest": "b7d42d5b4b0ce4774e2be805de9a5be47321262f95fe0972e621fc19f70f9afd",
+        "records": 1690
       },
       {
-        "path": "snapshots/artifacts/a7c485f64d6449a0c5ea0786a3052bc8105dd5222faf6171efb6d31bbb12285c.json",
-        "digest": "a7c485f64d6449a0c5ea0786a3052bc8105dd5222faf6171efb6d31bbb12285c",
-        "records": 1684
+        "path": "snapshots/artifacts/058deb8c5919e0367c9e88c58ef7a0374ed323110e513d4e93ce23a0f590a0be.json",
+        "digest": "058deb8c5919e0367c9e88c58ef7a0374ed323110e513d4e93ce23a0f590a0be",
+        "records": 1700
       },
       {
-        "path": "snapshots/artifacts/60bed744d6272ae865f711523700955303574dea48c380a20198623214bebd3b.json",
-        "digest": "60bed744d6272ae865f711523700955303574dea48c380a20198623214bebd3b",
-        "records": 1684
+        "path": "snapshots/artifacts/0d6f42f097f0dce8d084b394394ab2d37221c6f6d46250f777b3ad49bffe4cc8.json",
+        "digest": "0d6f42f097f0dce8d084b394394ab2d37221c6f6d46250f777b3ad49bffe4cc8",
+        "records": 1698
       },
       {
-        "path": "snapshots/artifacts/e2b48a0e496a39a58360ab5beb8706f571af4dc4e7802bca60e310e60daabc4f.json",
-        "digest": "e2b48a0e496a39a58360ab5beb8706f571af4dc4e7802bca60e310e60daabc4f",
-        "records": 1710
-      },
-      {
-        "path": "snapshots/artifacts/0d03cd4dcf27549a6f89e9855ba13318cae360973c2aa47cc576b2fc582056ce.json",
-        "digest": "0d03cd4dcf27549a6f89e9855ba13318cae360973c2aa47cc576b2fc582056ce",
-        "records": 1797
-      },
-      {
-        "path": "snapshots/artifacts/b28e9d1669e0ac65e1b38af016d80349dce085e36a5e1138df25715af2ace6a3.json",
-        "digest": "b28e9d1669e0ac65e1b38af016d80349dce085e36a5e1138df25715af2ace6a3",
-        "records": 1655
-      },
-      {
-        "path": "snapshots/artifacts/09705ff0ed56c3611afcec10395376fef1d9121bc523d7e4376cb4a0460b2e66.json",
-        "digest": "09705ff0ed56c3611afcec10395376fef1d9121bc523d7e4376cb4a0460b2e66",
-        "records": 1704
-      },
-      {
-        "path": "snapshots/artifacts/bafb2123b53e3a7650fd0d0df776ec5e08833ecdf44d01fc11dc9aab3c7657d3.json",
-        "digest": "bafb2123b53e3a7650fd0d0df776ec5e08833ecdf44d01fc11dc9aab3c7657d3",
-        "records": 1676
-      },
-      {
-        "path": "snapshots/artifacts/639a94be11d39616215c99e800dcd249ac5d66176d9e5fdf39f222f1dbd9e783.json",
-        "digest": "639a94be11d39616215c99e800dcd249ac5d66176d9e5fdf39f222f1dbd9e783",
+        "path": "snapshots/artifacts/a9bd12fd7ad14104a2528194d1dba25f90fbd49d77d919ba8f6d918d6ff4d044.json",
+        "digest": "a9bd12fd7ad14104a2528194d1dba25f90fbd49d77d919ba8f6d918d6ff4d044",
         "records": 1730
       },
       {
-        "path": "snapshots/artifacts/1f2eb24c9db2af92085b76979a8b8422967a80f9c1d9090decb3de3dd126b859.json",
-        "digest": "1f2eb24c9db2af92085b76979a8b8422967a80f9c1d9090decb3de3dd126b859",
-        "records": 1730
+        "path": "snapshots/artifacts/5f346b984faa16b22d9ed77abda1187663b8b6786279c3c8ee44675901d6238e.json",
+        "digest": "5f346b984faa16b22d9ed77abda1187663b8b6786279c3c8ee44675901d6238e",
+        "records": 1815
       },
       {
-        "path": "snapshots/artifacts/37fe1c48a3ec770b0f43bcd218c6b35c9370a37ac99b52a506bf0b45a229a28f.json",
-        "digest": "37fe1c48a3ec770b0f43bcd218c6b35c9370a37ac99b52a506bf0b45a229a28f",
-        "records": 1729
+        "path": "snapshots/artifacts/c5dcffa6e9214d87094d606622fa781fedf386d931b4e943c8f1f28ea206acec.json",
+        "digest": "c5dcffa6e9214d87094d606622fa781fedf386d931b4e943c8f1f28ea206acec",
+        "records": 1669
       },
       {
-        "path": "snapshots/artifacts/431a601c145e8d8fea567334b53cc795d5586f25c1f71bc62031ba9830c2e22f.json",
-        "digest": "431a601c145e8d8fea567334b53cc795d5586f25c1f71bc62031ba9830c2e22f",
-        "records": 1647
+        "path": "snapshots/artifacts/0bc3466b1fac5ec184e623be7387083be6a938f8c9187801b4163bdff00fca28.json",
+        "digest": "0bc3466b1fac5ec184e623be7387083be6a938f8c9187801b4163bdff00fca28",
+        "records": 1715
       },
       {
-        "path": "snapshots/artifacts/b1ea61216c7947574e0658635515162be11a0ffb3f08f178eb7d8654b0c5f520.json",
-        "digest": "b1ea61216c7947574e0658635515162be11a0ffb3f08f178eb7d8654b0c5f520",
-        "records": 1683
+        "path": "snapshots/artifacts/7a6bf02c65a777b205a10ae540e849f060ab0893cec78be5d8a0fcf32afa6823.json",
+        "digest": "7a6bf02c65a777b205a10ae540e849f060ab0893cec78be5d8a0fcf32afa6823",
+        "records": 1692
       },
       {
-        "path": "snapshots/artifacts/1e9d4cb5675780683c84bc0517ca238ecf5abf967a9c975ce3b8ec4720149ad5.json",
-        "digest": "1e9d4cb5675780683c84bc0517ca238ecf5abf967a9c975ce3b8ec4720149ad5",
-        "records": 1727
+        "path": "snapshots/artifacts/157eda5cb81d8376503abb58e0a3006f6b331ce30889f5f360d9c864923fb0db.json",
+        "digest": "157eda5cb81d8376503abb58e0a3006f6b331ce30889f5f360d9c864923fb0db",
+        "records": 1745
+      },
+      {
+        "path": "snapshots/artifacts/67eb75581e6a334b068b7aa4a8c06b8abd093ee18e869dd4352e6f1f24bc502c.json",
+        "digest": "67eb75581e6a334b068b7aa4a8c06b8abd093ee18e869dd4352e6f1f24bc502c",
+        "records": 1746
+      },
+      {
+        "path": "snapshots/artifacts/2772ab4a43bca3139181cf8925bff50f9c331741744ec3d163a12464a2867ac7.json",
+        "digest": "2772ab4a43bca3139181cf8925bff50f9c331741744ec3d163a12464a2867ac7",
+        "records": 1749
+      },
+      {
+        "path": "snapshots/artifacts/7a636e2a0c69f5d448b3143c9e199430c1fbbfc7330b7c7cf48f4a0d4055e5fd.json",
+        "digest": "7a636e2a0c69f5d448b3143c9e199430c1fbbfc7330b7c7cf48f4a0d4055e5fd",
+        "records": 1666
+      },
+      {
+        "path": "snapshots/artifacts/3e53ce118d5649af3e48ab4a8fb598de5285e170984e49f3d261fdc02e9bddf1.json",
+        "digest": "3e53ce118d5649af3e48ab4a8fb598de5285e170984e49f3d261fdc02e9bddf1",
+        "records": 1701
+      },
+      {
+        "path": "snapshots/artifacts/edf23a66a1ec89eac5fca6b303a0cf5dda899397cfd44d2b777f74e33f9a3b6b.json",
+        "digest": "edf23a66a1ec89eac5fca6b303a0cf5dda899397cfd44d2b777f74e33f9a3b6b",
+        "records": 1746
       }
     ],
     "occurrences": [
+      {
+        "path": "snapshots/occurrences/34c59146c63a02ac49ec49f3f983ad7705aabe6cf13954c072416cbc2eb11a0c.json",
+        "digest": "34c59146c63a02ac49ec49f3f983ad7705aabe6cf13954c072416cbc2eb11a0c",
+        "records": 613
+      },
       {
         "path": "snapshots/occurrences/ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa.json",
         "digest": "ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa",
@@ -30843,6 +31620,11 @@
         "records": 390
       },
       {
+        "path": "snapshots/occurrences/127f0b04764660ff4bd6389162ca4ea0a19b75eea4c12e8e029dbc30df13edee.json",
+        "digest": "127f0b04764660ff4bd6389162ca4ea0a19b75eea4c12e8e029dbc30df13edee",
+        "records": 129
+      },
+      {
         "path": "snapshots/occurrences/757a04c642f6e916fedeb015658b3650ff1780faa1cd9a0af4e257bc396e7752.json",
         "digest": "757a04c642f6e916fedeb015658b3650ff1780faa1cd9a0af4e257bc396e7752",
         "records": 369
@@ -30869,6 +31651,11 @@
       }
     ],
     "edges": [
+      {
+        "path": "snapshots/edges/e8559c360c47bc6e2104840d0d27e6f6c301025578adc977ba005506d0c614c1.json",
+        "digest": "e8559c360c47bc6e2104840d0d27e6f6c301025578adc977ba005506d0c614c1",
+        "records": 1126
+      },
       {
         "path": "snapshots/edges/a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225.json",
         "digest": "a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225",
@@ -31103,6 +31890,11 @@
         "path": "snapshots/edges/22c9199eecc9c7288178823a628baf8621aceafad448666cc8339ca5b0440028.json",
         "digest": "22c9199eecc9c7288178823a628baf8621aceafad448666cc8339ca5b0440028",
         "records": 957
+      },
+      {
+        "path": "snapshots/edges/732ffb15fb9a61d4d80978beff13cf07875758cd5ae35202adc7232f5a2ea533.json",
+        "digest": "732ffb15fb9a61d4d80978beff13cf07875758cd5ae35202adc7232f5a2ea533",
+        "records": 165
       },
       {
         "path": "snapshots/edges/5262bbef982f98fc4b980367c914fb2ed7a146f048d82332880ee29b46ecd776.json",

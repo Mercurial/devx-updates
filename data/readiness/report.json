@@ -1,12 +1,12 @@
 {
-  "snapshot": "ba13d59e1c1d8fdee1e60fc6717406bb7623be6fe8121595c9a0e75449afebf2",
+  "snapshot": "45783f18f3a4e238b2bc0a840143298bae0a333f0131b9ebda6e9339a498dd44",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 31,
-  "profiles": 35,
+  "withProfiles": 33,
+  "profiles": 37,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 238,
+  "unresolvedTools": 236,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -664,11 +664,67 @@
     },
     {
       "toolId": "blaze",
+      "id": "gap:004b270d71bf157e04d15858",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-browser from package:@cardano-sdk/crypto has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:011226262a0cf92e15551db9",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @swc/wasm from package:ts-node has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:03a64ee646fd81c6f0de194c",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/browser-playwright from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:0a04f4c314629e31af397350",
+      "area": "resolution",
+      "reason": "Bun peerDependencies sass-embedded from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:0d5c3f4d7f5e1e3d1f9a2188",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/browser-preview from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:0f4e266ff9b753196fb98b68",
+      "area": "resolution",
+      "reason": "Bun peerDependencies stylus from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:116a1368368e0120d3d21e22",
+      "area": "resolution",
+      "reason": "Bun peerDependencies synckit from package:unrun has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
     },
     {
       "toolId": "blaze",
@@ -680,11 +736,253 @@
     },
     {
       "toolId": "blaze",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:231ae1a290b9401cc383221e",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Bun peerDependencies less from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:2635c5181056f35cc6419e52",
+      "area": "integration",
+      "reason": "Blaze source exports wallet and provider implementations including Maestro, Blockfrost and Kupmios. A lock graph does not select an active wallet, provider deployment, network, configured serialization backend or deployed script. No capability review or hardfork behavior is asserted.",
+      "nextAction": "Capture a production consumer configuration and provider/wallet deployment identities, then assign independent integration/capability review.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+      "code": "lock-sdk-scope:blaze:integration"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:2a6ca4c9387a2d0545ede73b",
+      "area": "resolution",
+      "reason": "Bun peerDependencies unplugin-unused from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:2c9d2eae95a564f84fc4fe65",
+      "area": "resolution",
+      "reason": "Bun peerDependencies msw from package:@vitest/mocker has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:326beb2050a71da9eacb8a00",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @opentelemetry/api from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:4546b8142b7fb30bb07c3c70",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @tsdown/css from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:4605132e2c0e21a23456276f",
+      "area": "resolution",
+      "reason": "Bun peerDependencies sugarss from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:47fd6cb55dc6b1103ea1ed82",
+      "area": "resolution",
+      "reason": "Bun lock includes all recorded workspaces, development and platform/optional packages. Installed peer bindings, lifecycle outputs, native/WASM artifacts and published release correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:4f6bfc60eb080fc1b5f86bab",
+      "area": "resolution",
+      "reason": "Bun peerDependencies bufferutil from package:ws has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:51640a00076efd29c6a73358",
+      "area": "resolution",
+      "reason": "Bun peerDependencies vue-tsc from package:rolldown-plugin-dts has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:52921e8505e2590df93f9374",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @arethetypeswrong/core from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:53f04d473ebd11219fe43df9",
+      "area": "resolution",
+      "reason": "Bun peerDependencies react-native-b4a from package:b4a has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:55ffcca2fdf7deaff2cd9c32",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @blaze-cardano/wallet from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:56c29d297930f9be98cc279c",
+      "area": "resolution",
+      "reason": "Bun peerDependencies oxc-resolver from package:dts-resolver has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:56cfb6f399f8e719ed67db29",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-nodejs from package:@cardano-sdk/crypto has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:5d4c57eaca2d76c53f48a1b5",
+      "area": "resolution",
+      "reason": "The Bun 1.3.14 text-v1 lock retains all packages and workspace manifests with matching dependency declarations. Missing optional peers and shadowed declarations remain explicit. UPLC declares separate Rust/WASM build outputs for node, browser and bundler; its retained Cargo files are supporting evidence, not a resolved Rust graph or verified distributed WASM inventory.",
+      "nextAction": "Collect the selected Rust/WASM native closure and output provenance, then verify installed peer bindings, overrides and platform selections in a concrete consumer environment.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+      "code": "lock-sdk-scope:blaze:resolution"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:61f5003c80adfa36059280dc",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @dcspark/cardano-multiplatform-lib-asmjs from package:@cardano-sdk/crypto has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:628bcb5eab6d1a1c3110fcb1",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/browser from package:@vitest/coverage-v8 has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:67f1ad5bd993a878b03c12ad",
+      "area": "resolution",
+      "reason": "Bun peerDependencies jsdom from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:74fc21f2c02bd55d0808bbbc",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @tsdown/exe from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:77e6afe80c105b1f4bcaf724",
+      "area": "resolution",
+      "reason": "Bun peerDependencies utf-8-validate from package:ws has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:7be0a69a2e31c30c89ce4ee8",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/browser-webdriverio from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:8b43dd2aebf095e204a967f1",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/ui from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:8bdea741ae8aea5a01e185d1",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @typescript/native-preview from package:rolldown-plugin-dts has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:8f053f18354ce6a6af13eea4",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @blaze-cardano/core from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:9e319541d72b4616f7cf8215",
+      "area": "resolution",
+      "reason": "Bun overrides retained; installed effects and patched content require verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:9eed2059537860be10291638",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @ts-macro/tsc from package:rolldown-plugin-dts has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:b1dd0e8b4e15ed9fc454b1a7",
+      "area": "resolution",
+      "reason": "Bun peerDependencies publint from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:b3c4f4b150f5f6178de9a106",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @edge-runtime/vm from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:bf7ad1e4b250143114b44f68",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @blaze-cardano/query from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:c5a1721122e3d9f9dcb95ccc",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @blaze-cardano/sdk from workspace:packages/blaze-deploy is shadowed by devDependencies; production-only selection requires a separate capture.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
     },
     {
       "toolId": "blaze",
@@ -692,6 +990,79 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:d7f49186aac78272fcce2fef",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @swc/core from package:ts-node has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:da84b47c1a69d3c3db1a60ad",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitest/coverage-istanbul from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:e233ed9724ea0fab3e1ce1a1",
+      "area": "resolution",
+      "reason": "Bun peerDependencies lightningcss from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:e2cbbb49d1c13b9cb8f51de3",
+      "area": "resolution",
+      "reason": "Bun peerDependencies jiti from package:eslint has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:e96544fd249016883873213c",
+      "area": "resolution",
+      "reason": "Bun peerDependencies sass from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:f07407dc6e368d7e899a60db",
+      "area": "resolution",
+      "reason": "Bun peerDependencies happy-dom from package:vitest has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:f152e5db9e383fae45d6aad2",
+      "area": "artifact",
+      "reason": "Blaze production roots are SDK 0.3.3, tx 0.15.4, wallet 0.6.3 and query 0.6.4. Their pinned source is the blueprint 0.9.1 repository tag, which does not verify the four independent published artifacts. All 21 locked workspaces remain retained, including development/examples/e2e packages outside selected roots.",
+      "nextAction": "Verify package publication provenance and map each selected SDK package version to its release artifact.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01",
+      "code": "lock-sdk-scope:blaze:artifact"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:f29c779379d393c620a8566f",
+      "area": "resolution",
+      "reason": "Bun peerDependencies @vitejs/devtools from package:tsdown has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
+    },
+    {
+      "toolId": "blaze",
+      "id": "gap:f4635712b92c65cba4a68a61",
+      "area": "resolution",
+      "reason": "Bun peerDependencies jiti from package:vite has no locked target.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blaze:c617d45246dce15c6cd35d01"
     },
     {
       "toolId": "blockfrost",
@@ -11053,6 +11424,15 @@
     },
     {
       "toolId": "pycardano",
+      "id": "gap:00c38585194f1e1ec6a727ef",
+      "area": "artifact",
+      "reason": "PyCardano tag v0.19.2 and root manifest 0.19.2 agree; native Poetry verifies the root lock content hash. All 95 lock entries and their main/dev/docs groups, extras, markers and candidate distribution hashes remain retained. Package occurrences are separated by locked group. This does not verify a published wheel/sdist or installed Python environment; example/full-stack and Haskell integration-test projects are outside this production root.",
+      "nextAction": "Verify the published Python distribution provenance and collect an installed inventory for an explicitly selected Python/platform/extra configuration.",
+      "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+      "code": "lock-sdk-scope:pycardano:artifact"
+    },
+    {
+      "toolId": "pycardano",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -11069,11 +11449,20 @@
     },
     {
       "toolId": "pycardano",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:6376973ea341d55caab6d7bc",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Poetry captures library dependency selections, not the build-backend closure or installed native cryptography/serialization libraries. Candidate wheel/sdist hashes do not identify the installed artifact; marker and optional activation remain conditional.",
+      "nextAction": "Capture build-backend and native library dependencies plus the selected wheel/sdist artifacts without treating all lock candidates as simultaneously installed.",
+      "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+      "code": "lock-sdk-scope:pycardano:resolution"
+    },
+    {
+      "toolId": "pycardano",
+      "id": "gap:a639a594789a74a6c4a4fce7",
+      "area": "resolution",
+      "reason": "Poetry lock retains all packages, groups, markers, extras and candidate distribution hashes. Target Python/platform and extra activation are not evaluated; installed wheel/sdist selection, build-backend dependencies, native libraries and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:pycardano:bb6954c174a05503413c3078"
     },
     {
       "toolId": "pycardano",
@@ -11081,6 +11470,15 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "pycardano",
+      "id": "gap:e785f8c032b9f679bba5b805",
+      "area": "integration",
+      "reason": "PyCardano source exposes Blockfrost, cardano-cli, Ogmios and Kupo backends. Its CBOR module defaults to cbor2pure and switches to cbor2 when CBOR_C_EXTENSION=1. The chosen backend, endpoint/network, node or service version and CBOR environment are unverified consumer configuration, not capability or hardfork findings.",
+      "nextAction": "Capture the production chain context and CBOR environment, identify service/native versions, then manually review transaction/serialization/query/submission behavior.",
+      "profileId": "profile:pycardano:bb6954c174a05503413c3078",
+      "code": "lock-sdk-scope:pycardano:integration"
     },
     {
       "toolId": "pyth-lazer-cardano",

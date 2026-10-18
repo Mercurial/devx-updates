@@ -443,15 +443,64 @@ installed artifacts or hardfork compatibility from dependency collection.
 
 - [x] Inspect pinned sources and implement Bun text-v1 and Poetry lock-2.1
   collection, including native Poetry freshness/source/constraint checks.
-- [ ] Collect the two pinned requests in `content/readiness/lock-sdk-batch.json`,
+- [x] Collect the two pinned requests in `content/readiness/lock-sdk-batch.json`,
   recording release, platform, native-artifact and integration scope gaps.
-- [ ] Validate/replay, verify cache reuse, regenerate reports, review and build.
+- [x] Validate/replay, verify cache reuse, regenerate reports, review and build.
 
 The Bun reader checks workspace declarations and follows nested package keys.
 The Poetry reader runs isolated pinned tooling without invoking consumer code;
 legacy manifests and registry packages are its initial supported boundary.
 Unsupported formats/sources fail explicitly. Prepared capability reviews remain
 owner-launched; this milestone does not import review findings.
+
+Collection checkpoint: both requests succeeded. Blaze selects SDK 0.3.3, tx
+0.15.4, wallet 0.6.3 and query 0.6.4 while retaining all 21 locked workspaces:
+613 occurrences and 1,126 edges. Its original retained repository tree was
+reclassified to recognize `bun.lock`, without changing the pinned revision.
+PyCardano 0.19.2 retains all 95 locked package records across main/dev/docs groups:
+129 occurrences including the root and 165 edges. Source-backed scope notes
+preserve the blueprint-tag/SDK release distinction, separate Rust/WASM artifacts,
+chain backend configuration and PyCardano's CBOR environment selection.
+
+Review correction checkpoint: specification review found development selections
+could leak into production reach through Poetry groups or Bun duplicate dependency
+declarations. Poetry now uses separate occurrences per locked group and rejects
+cross-group edges, including transitive relationships. Bun follows native
+`dev → optional → prod → peer` precedence and records shadowed declarations as
+gaps. Regression tests cover both cases. Follow-up review confirms both resolved;
+standards review found no actionable issues. Implementation checkpoints `7ff8e26`
+and `c130ebe` remain local.
+
+Verification checkpoint: all 70 behavior tests pass, including the installed
+native Poetry reader (zero skipped tests). TypeScript and scoped lint pass.
+All 37 profiles replay identically and all 832 evidence records validate. The
+completed batch attempts zero requests; refresh reuses both profiles. The readiness
+workflow provisions the isolated Poetry reader before its tests and recurring
+refresh; no consumer dependency installation/build or plugin execution is added.
+Coverage rises from 31 to 33 tools, leaving 236 without native profiles; the
+snapshot contains 49,141 occurrences and 155,512 edges. All 269 tools remain
+hardfork-unassessed. Four prepared capability review packets remain unchanged
+and pending. Reports are regenerated against `97814ed`: 264 artifacts, 1,291 edges
+and two profiles added, with no prior graph records changed or removed.
+
+Static export checkpoint: `NEXT_PUBLIC_BASE_PATH=/devx-updates npm run build --
+--webpack` passes outside the sandbox and exports all 311 routes. Both generated
+SDK pages show exact production roots/versions, source-backed scope notes, the
+current snapshot digest, base-path links and unassessed status. Final specification
+and standards reviews found no remaining issues. No UI interactions were changed
+or re-tested; default Turbopack was not revalidated. The verified `out/` export is
+retained; disposable production server/cache intermediates were cleared afterward
+for disk headroom, preserving `.next/dev` and all canonical data/history.
+Sixteen never-committed intermediate chunks were moved into ignored recovery
+storage. Code, evidence and reports are committed locally; nothing was pushed.
+
+Next: inspect SundaeSwap's pinned production inputs for reuse of Bun support,
+and continue unsupported higher-level roots such as Lucid/Deno. Keep production
+package selection distinct from nested native/test/example projects. The owner
+can assign the four prepared capability reviews using
+[Run the prepared reviews](./RUN-PREPARED-REVIEWS.md). Target-specific compatibility
+testing still needs a selected hardfork target and environment.
+
 
 ## 1. Objective
 

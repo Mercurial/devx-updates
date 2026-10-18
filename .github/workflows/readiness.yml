@@ -30,6 +30,10 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.12.22'
+      - name: Prepare isolated Poetry lock reader
+        run: |
+          uv venv .readiness/toolchains/poetry --python 3.13
+          uv pip install --python .readiness/toolchains/poetry/bin/python poetry==2.1.1
       - run: npm run test:readiness
       - name: Save comparison baseline
         run: npm run readiness -- export-snapshot --output /tmp/readiness-before.json

@@ -366,7 +366,8 @@ to verify the manifest content hash and read all locked packages; native
 `Package.satisfies` checks names, constraints and sources. No Poetry CLI, plugin,
 consumer install, build, solver or backend runs. Replay needs retained JSON only,
 without Python or Poetry. A conditional integration test exercises the real reader
-when the tooling interpreter is available; install it to run that test in CI/local checks.
+when the tooling interpreter is available. The readiness workflow provisions this
+reader before tests and refresh; local checks should install it too.
 
 Every group, extra declaration, marker and candidate wheel/sdist hash is retained.
 The graph preserves matching alternatives with their conditions, without selecting
