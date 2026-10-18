@@ -1,5 +1,5 @@
 {
-  "snapshot": "45783f18f3a4e238b2bc0a840143298bae0a333f0131b9ebda6e9339a498dd44",
+  "snapshot": "ee5d740cd912f1bbc7a6f6af9df6c2b3b833cff36f4e66e42dea04e8d7f8dcd1",
   "tools": 269,
   "discovered": 227,
   "withProfiles": 33,
@@ -8838,11 +8838,29 @@
     },
     {
       "toolId": "lucid-evolution",
+      "id": "gap:2b0ddbfa56d173cd1376f1f7",
+      "area": "integration",
+      "reason": "Pinned production TypeScript sources for Lucid Evolution transaction building, signing, submission, providers, wallets and their local support packages are prepared for owner-run review. The configured provider endpoint/network, wallet implementation, script evaluator and consumer settings remain unknown. No source-derived capability findings or verified service relationships have been imported.",
+      "nextAction": "Assign discovery and independent challenge using the prepared Lucid Evolution packet; use the registered native profile and cite exact source evidence.",
+      "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+      "code": "evolution-review:integration"
+    },
+    {
+      "toolId": "lucid-evolution",
       "id": "gap:628ae020fe6252576239deeb",
       "area": "resolution",
       "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
       "nextAction": "Recollect a complete native build plan for this profile.",
       "profileId": "profile:lucid-evolution:837579d4ca1dcc6020f157ef"
+    },
+    {
+      "toolId": "lucid-evolution",
+      "id": "gap:7e194ac5e110b469fe13404f",
+      "area": "resolution",
+      "reason": "Lucid Evolution CML 0.1.2 and UPLC 0.4.0 manifests declare conditional browser/worker and node WASM bindings; UPLC also declares speed/size variants. The pnpm graph does not resolve the Rust closures, verify compiled WASM bytes against source/build inputs, or identify the selected consumer runtime variant.",
+      "nextAction": "Retain native Rust build closures and published binding/WASM provenance for the selected consumer target; keep source declarations distinct from verified distribution artifacts.",
+      "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+      "code": "evolution-review:resolution"
     },
     {
       "toolId": "lucid-evolution",
@@ -8858,6 +8876,15 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "lucid-evolution",
+      "id": "gap:e369d74ee5166147d7224fd8",
+      "area": "artifact",
+      "reason": "Lucid Evolution production package @lucid-evolution/lucid is manifest 0.8.3 at repository tag @lucid-evolution/core-types@0.5.2. The tag does not establish an independently published lucid 0.8.3 artifact. Both historical native profiles remain retained; use profile ending 82ef3bc2a8877a35a7fe4310 for new review findings.",
+      "nextAction": "Verify published package provenance for @lucid-evolution/lucid 0.8.3 before mapping this source reconstruction to a shipped SDK.",
+      "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+      "code": "evolution-review:artifact"
     },
     {
       "toolId": "maestro",
@@ -11912,6 +11939,22 @@
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet.",
       "code": "integration-unreviewed"
+    },
+    {
+      "toolId": "sundae-sdk",
+      "id": "gap:2c2daf313e2045a433d8a390",
+      "area": "resolution",
+      "reason": "SundaeSwap tag @sundaeswap/core@3.2.0 has a text-v1/config-v0 Bun lock with four stale dependency declarations: core requires math ^0.5.1 while the lock records ^0.5.0, and gummiworm requires core ^3.2.0 while the lock records ^3.0.0, each in runtime and development sections. Collection is failed/retryable; no native profile or review-ready capability scope is claimed. All eight locked workspace manifests, the lock and repository configuration are retained without modification.",
+      "nextAction": "Obtain an upstream revision with aligned production manifests and lock, rediscover its immutable source, and submit a new pinned request. Do not rewrite source inputs or weaken stale-lock validation to force coverage.",
+      "code": "sundae-lock-mismatch"
+    },
+    {
+      "toolId": "sundae-sdk",
+      "id": "gap:37af9df0fdb156cdca1488ff",
+      "area": "resolution",
+      "reason": "Collection failed (bun-lock): Error: Stale Bun workspace packages/core: dependencies differs from manifest",
+      "nextAction": "Inspect the native resolver error and retry this pinned profile.",
+      "code": "native-collection-failed:bun-lock"
     },
     {
       "toolId": "sundae-sdk",

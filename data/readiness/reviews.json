@@ -47,5 +47,12 @@
       "cometa-js"
     ],
     "status": "pending"
+  },
+  {
+    "packetId": "packet:cfa417287c47ce9e80abe5befb5ff3dda26cb9ae9546fd5498cd0868054d1d61",
+    "toolIds": [
+      "lucid-evolution"
+    ],
+    "status": "pending"
   }
 ]

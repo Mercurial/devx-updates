@@ -169,3 +169,23 @@ plus PyCardano's root library. It continues the higher-level consumer priority.
 See [operations](../../docs/READINESS-OPERATIONS.md#bun-and-poetry-production-sdk-inputs)
 for collector tooling. Both requests use `all-lockfile-targets`; neither executes
 consumer scripts nor claims hardfork compatibility.
+
+
+## SundaeSwap follow-up and Lucid Evolution handoff
+
+`sundae-batch.json` records the attempted production roots: core 3.2.0,
+gummiworm 2.0.16, taste-test 4.0.0 and yield-farming 4.0.0 at pinned revision
+`9f032253e0711e3a308068ed55cc85b5de71a348` (core 3.2.0 tag). Its text-v1 Bun lock
+uses config-version 0, now supported. Eight workspace manifests and configuration
+are retained, but **collection fails**: core's math ranges are `^0.5.0` in the
+lock versus `^0.5.1` in the manifest, and gummiworm's core ranges are `^3.0.0`
+versus `^3.2.0`, each in runtime/development declarations. No native profile was
+created. Keep the failed job retryable; select a new immutable upstream revision
+with aligned inputs before resubmitting. Do not edit its lock to force collection.
+
+Lucid Evolution's existing registered pnpm profile covers
+`@lucid-evolution/lucid` 0.8.3. Production sources are now prepared for owner-run
+review via [the handoff](./capability-reviews.md). This is Lucid Evolution,
+not original Lucid, which the owner excluded from active readiness work.
+No consumer reviews are launched automatically and no capability/compatibility
+claims are imported by preparation.

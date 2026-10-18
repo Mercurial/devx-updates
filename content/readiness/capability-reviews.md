@@ -1,8 +1,8 @@
 # Higher-level capability review handoff
 
-Four task-brief-v2 packets are prepared in `.readiness/reviews/capabilities/`.
+Five task-brief-v2 packets are prepared in `.readiness/reviews/capabilities/`.
 The [retained index](./capability-reviews.json) records exact packet IDs, source
-revisions, profile IDs and the 13 additional captured files. Every packet remains
+revisions, profile IDs and their captured production source files. Every packet remains
 pending; no discovery/challenge task has been launched and no capability claims
 have been imported. This is evidence preparation for plan sections 6.3 and 7.
 
@@ -15,6 +15,13 @@ LLM prompts, exact input/output paths, and the evidence-check/import procedure.
 | GovTool frontend | Trace voting form, wallet context and vote request behavior. Separate governance actions, signing delegated to connected wallets, and backend service calls. Frontend manifest 2.0.29 is retained at repository tag v2.0.36; do not equate those releases or infer backend coverage. |
 | TyphonJS | Inspect exported transaction APIs, builder and serialization paths. Preserve library context; do not infer a deployed Typhon wallet. Both historical parser captures describe the same pinned v4.0.0 source; use the official-parser profile ending `5958bba13a88b8790661b312` for new findings and retain the first capture as history. |
 | Cometa | Trace public exports, transaction builder and wallet wrappers into native/WASM boundaries. Separate direct JavaScript behavior, bindings and external providers. No runtime npm dependencies does not imply no native runtime. Source/build correspondence remains unverified. |
+| Lucid Evolution | Trace transaction construction, signing, submission, governance helpers and provider/wallet wiring through the retained production TypeScript packages. Source manifest `@lucid-evolution/lucid` 0.8.3 is at the `@lucid-evolution/core-types@0.5.2` repository tag; publication correspondence is unverified. Use registered profile ending `82ef3bc2a8877a35a7fe4310` for new findings; retain the other native profile as history. CML/UPLC conditional node/browser/worker bindings and speed/size variants need explicit consumer context and separate native artifact provenance. Provider endpoints, network, wallet configuration and selected evaluator remain unknown. |
+
+This Lucid Evolution packet refers to `Anastasia-Labs/lucid-evolution`.
+Original Lucid (`spacebudz/lucid`) is excluded from active work at the owner's
+request. `evolution-sdk` is a separate catalog project, not an alias for Lucid
+Evolution. SundaeSwap is not yet a prepared capability packet: its pinned
+manifest/lock mismatch must be resolved before native-profile-based findings.
 
 These questions guide review; the packet's retained tool/profile/evidence context
 defines importable scope. A selected file list is a starting point, not a claim
@@ -29,6 +36,7 @@ node --import tsx scripts/readiness/cli.ts export-review --tools lace --output .
 node --import tsx scripts/readiness/cli.ts export-review --tools govtool --output .readiness/reviews/capabilities/govtool
 node --import tsx scripts/readiness/cli.ts export-review --tools typhonjs --output .readiness/reviews/capabilities/typhonjs
 node --import tsx scripts/readiness/cli.ts export-review --tools cometa-js --output .readiness/reviews/capabilities/cometa-js
+node --import tsx scripts/readiness/cli.ts export-review --tools lucid-evolution --output .readiness/reviews/capabilities/lucid-evolution
 ```
 
 The owner can launch discovery with the template in

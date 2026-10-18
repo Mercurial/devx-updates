@@ -508,6 +508,26 @@
       "attemptedAt": "2026-10-18T17:16:13.623Z",
       "profileId": "profile:pycardano:bb6954c174a05503413c3078",
       "succeededAt": "2026-10-18T17:16:20.955Z"
+    },
+    {
+      "id": "collection:2b4ea758dd4754d817a8966d0d3a7f95c095983a28835b7a3e111dd5d6585ac8",
+      "request": {
+        "toolId": "sundae-sdk",
+        "revision": "9f032253e0711e3a308068ed55cc85b5de71a348",
+        "adapter": "bun-lock",
+        "roots": [
+          "@sundaeswap/core",
+          "@sundaeswap/gummiworm",
+          "@sundaeswap/taste-test",
+          "@sundaeswap/yield-farming"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "bun.lock"
+      },
+      "status": "failed",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T17:42:09.391Z",
+      "error": "Error: Stale Bun workspace packages/core: dependencies differs from manifest"
     }
   ]
 }

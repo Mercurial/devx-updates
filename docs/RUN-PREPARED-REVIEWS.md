@@ -1,8 +1,8 @@
 # Run the prepared dependency and capability reviews
 
-This guide is for the project owner and the LLMs you assign to review. The four
-prepared packets cover Lace mobile, GovTool frontend, TyphonJS and Cometa. The
-reviews investigate dependencies and behavior; they **do not assess hardfork
+This guide is for the project owner and the LLMs you assign to review. The five
+prepared packets cover Lace mobile, GovTool frontend, TyphonJS, Cometa and Lucid
+Evolution. The reviews investigate dependencies and behavior; they **do not assess hardfork
 compatibility**. Run discovery first, then an independent challenge in a fresh
 conversation or agent context. Keep final evidence decisions separate.
 
@@ -22,6 +22,7 @@ node --import tsx scripts/readiness/cli.ts export-review --tools lace --output .
 node --import tsx scripts/readiness/cli.ts export-review --tools govtool --output .readiness/reviews/capabilities/govtool
 node --import tsx scripts/readiness/cli.ts export-review --tools typhonjs --output .readiness/reviews/capabilities/typhonjs
 node --import tsx scripts/readiness/cli.ts export-review --tools cometa-js --output .readiness/reviews/capabilities/cometa-js
+node --import tsx scripts/readiness/cli.ts export-review --tools lucid-evolution --output .readiness/reviews/capabilities/lucid-evolution
 ```
 
 | Review | Packet directory | Result directory you create |
@@ -30,6 +31,7 @@ node --import tsx scripts/readiness/cli.ts export-review --tools cometa-js --out
 | GovTool frontend | `.readiness/reviews/capabilities/govtool` | `.readiness/review-results/govtool` |
 | TyphonJS | `.readiness/reviews/capabilities/typhonjs` | `.readiness/review-results/typhonjs` |
 | Cometa | `.readiness/reviews/capabilities/cometa-js` | `.readiness/review-results/cometa-js` |
+| Lucid Evolution | `.readiness/reviews/capabilities/lucid-evolution` | `.readiness/review-results/lucid-evolution` |
 
 For an LLM with repository access, provide the paths. For an LLM without it,
 attach the **entire chosen packet directory**, including `packet.json`,
@@ -47,7 +49,7 @@ do not edit their IDs to force an import.
 ## 2. Discovery prompt — send to the first LLM
 
 Copy this prompt and replace `<TOOL>`, `<PACKET>` and `<RESULTS>` using the table.
-You can run the four tools independently. Give each LLM one packet initially.
+You can run the five tools independently. Give each LLM one packet initially.
 
 ```text
 Perform pass one (discovery) for <TOOL>.

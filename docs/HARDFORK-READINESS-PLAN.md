@@ -514,14 +514,68 @@ and an owner-run review packet rather than duplicating its package collection.
 
 - [x] Support Bun config-version 0 and attempt the pinned SundaeSwap production
   SDK collection. Retain its inputs and retryable failure when manifests differ.
-- [ ] Retain production entry points and native/provider boundaries for
+- [x] Retain production entry points and native/provider boundaries for
   SundaeSwap and Lucid Evolution; prepare Lucid Evolution's pending review packet
   and update the LLM review handoff. SundaeSwap needs aligned native inputs first. Do not launch these consumer review tasks.
-- [ ] Validate/replay, verify cache reuse and packet reproduction, regenerate
+- [x] Validate/replay, verify cache reuse and packet reproduction, regenerate
   reports, review the milestone and verify the static export.
 
 Original Lucid is not part of this milestone or the active collection priority.
 No capability claims or hardfork compatibility assessments are imported.
+
+Collection boundary checkpoint: config-version 0 is supported without changing
+previous Bun profile identities or relaxing stale-input checks. SundaeSwap's
+pinned core 3.2.0 release fails native collection: core's math range is `^0.5.0`
+in the lock versus `^0.5.1` in the manifest, and gummiworm's core range is `^3.0.0`
+versus `^3.2.0`, each in runtime and development declarations. Eleven source files
+include all eight workspace manifests, lock, configuration and README. The four
+mismatches and failed/retryable request are retained after one attempt. No
+SundaeSwap profile was created. An aligned upstream revision and a new pinned
+request are needed; do not rewrite its source lock to manufacture coverage.
+
+Lucid Evolution handoff checkpoint: retained 118 production source files spanning
+transaction building, signing/submission, providers, wallets and local support
+packages, plus release/native scope notes. The new task-brief-v2 packet selects
+existing profile `82ef3bc2a8877a35a7fe4310` for new findings and keeps both native
+profiles as history. Its source is Lucid Evolution 0.8.3 at the core-types 0.5.2
+repository tag; published provenance, configured services and conditional CML/UPLC
+WASM variants remain unverified. Five packets are now prepared; the four earlier
+packet IDs are unchanged and pending. The handoff and LLM review guide include
+Lucid Evolution paths and questions. No consumer review tasks were launched.
+
+Verification checkpoint: all 71 behavior tests pass with zero skips; TypeScript
+and scoped lint pass. All 37 profiles replay identically, all 958 retained evidence
+records validate, and the complete new review packet reproduces byte-for-byte
+across 145 files offline. Existing Blaze and Lucid Evolution requests reuse their
+cached profiles. Coverage remains 33 tools with 37 profiles; this milestone does
+not inflate native coverage for the rejected SundaeSwap lock.
+
+Report and review checkpoint: comparison against `6c7a442` shows no added,
+removed or changed artifacts, edges, profiles or capability findings. Only Lucid
+Evolution and SundaeSwap coverage records changed. Independent specification and
+standards reviews found no actionable issues; all prior evidence records and
+the four earlier packet entries remain unchanged. Two unreferenced intermediate
+files from the rejected collection are preserved in ignored recovery storage.
+
+Static export checkpoint: the production webpack build passes for all 311 routes
+with `/devx-updates` as the base path. Generated Lucid Evolution and SundaeSwap
+pages show the current snapshot digest, expected profile state and explicit
+source/integration gaps; both remain hardfork-unassessed with no capability
+findings. No UI behavior changed, so browser interactions were not re-tested;
+default Turbopack was not revalidated. The verified `out/` export is retained.
+Reproducible inactive source checkouts and production build caches were cleared
+for disk headroom; canonical history, active review sources and `.next/dev` are
+preserved. Bun support is committed locally as `9e191de`; this evidence and
+handoff milestone is also committed locally. Nothing was pushed.
+
+Next priority: the owner can assign Lucid Evolution alongside the other four
+prepared reviews using [Run the prepared reviews](./RUN-PREPARED-REVIEWS.md), then
+validate and import the returned findings and decisions. SundaeSwap collection
+needs an upstream revision with aligned manifests and lock input. Continue
+prioritizing maintained higher-level consumers; original Lucid and a Lucid/Deno
+collector remain excluded. Hardfork compatibility still needs a selected target
+and test environment.
+
 
 ## 1. Objective
 

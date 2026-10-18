@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "45783f18f3a4e238b2bc0a840143298bae0a333f0131b9ebda6e9339a498dd44",
-    "generatedAt": "2026-10-18T17:17:55.573Z",
+    "semanticDigest": "ee5d740cd912f1bbc7a6f6af9df6c2b3b833cff36f4e66e42dea04e8d7f8dcd1",
+    "generatedAt": "2026-10-18T17:43:38.604Z",
     "tools": [
       {
         "id": "1694-io",
@@ -15179,31 +15179,144 @@
         ],
         "evidenceIds": [
           "evidence:0171d10c834379b267af48c9a570b10d941319a8d01549701f5e071a96a8d10c",
+          "evidence:01b31b49d631958461084c08109e6935a77a3643b99f70fe54e06dd7dbe24057",
+          "evidence:01f81bbfa879bae6ce58ee1872e88373b8592fed6022b188e6ce1879d7a96274",
+          "evidence:036be07cd7921c720847cfa022efd602b55a7e8edcc870a7cf791a36b803e27e",
           "evidence:04e994fdbaf73beba2276eb2692d9b6d4fb4664ade4b057e607ac18f0ddf5076",
+          "evidence:062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54",
+          "evidence:06d24f9f9ab3315c17f128744eeacfcc5fe78b23be769d8e80d0c4a84286a70b",
           "evidence:071aa632127bd600850f75eb29c8012048015bd3eba56f47cb4c1361685715ad",
+          "evidence:0745fe78c56cf22fed95390410f685839879843da82c055f4a4d8bff8d9bee63",
+          "evidence:07aecc93cb9d2952cdd291fd5358579a72d6c7dc340b592d2981a975228dcbf4",
+          "evidence:0faedbaa615c046347067d7d598240710ee9a0cb359d3674c126750e83dfe442",
+          "evidence:145617b528f6fac4459263adc6fbba340753b09729af240d6671c13f17a9cc60",
+          "evidence:17681d33645b3febf9ab4c991c93b9c023bb43833bb4d254aed9622375e8eebc",
           "evidence:197b6b230dd96cc4b69e870137abed968f4b802d8c9197c835337fe6d485e895",
+          "evidence:1a50fee98d02da48838d0e8878ab1cbf49aa221fafc43fd68fb4eeef1f9566c6",
+          "evidence:2263d6ad87c24788448b2a83a42b156fe5b5e04886e205d5ca18c199a4cf3e32",
+          "evidence:24415ae4296797d97fbe5be013787430876d27babb9bc6092192602241c4c185",
+          "evidence:25a9f61daba3f93d44b56b3caa51a4be9ebcf37bdc9c603de0993b2363bd4f2c",
+          "evidence:25fb7237eceded4ab7f61752e208f4673fdd1da1cf74942e4a594c68d6e8d063",
+          "evidence:26542bb5e8e3ee8d4470412f7c27b5f790eaa4a4d43bfa7355dc0219e312ff9d",
+          "evidence:26b2ff7813969e8af1bf13ddbef6174d123c4a789696ef259cc06339c1169c38",
+          "evidence:26fb9940cbb966ddaf8fb3fa5778b3d402113157bb0575a6d6181680779bc869",
+          "evidence:28a47aab9249858611ee9eb6208c8d347359e0280b87af83a4dfd0795c528ef4",
+          "evidence:293ddd07e7caca538dcb2bcd736ce418c7902a4c474c3f0d4bc273866175277c",
+          "evidence:29e5753165b24d648545a1169c85d4cd31612ea7003b0c30564ded8b570f27d2",
+          "evidence:2a0978a4da912783a9f5375f86ef6a3642c52bec0fee77f37a57a444946a1b37",
+          "evidence:2b15d01f59f2a60d767da7ccf68b984d2390cd2d5b41a69b9f285447b4a39754",
           "evidence:2b6ff86a7850dcdc72860b07ca7910d167ac8b3d605e5b380522e1644f06e322",
+          "evidence:2bf7365085ec4fb3b2a560ed696ce7ce05be309b99843f5e530dfb9d655c3d5e",
+          "evidence:2d63e70e426b766c561e5299164e3bbf4f347fb043c7cef9838aa1ef6a676209",
+          "evidence:2e961338062bf4330dee5c08a97008ec24b54139eaeff64c832bb203849cbc7d",
           "evidence:30080070f2e988045ae6ea7014b0126fe0cbb189a3b52e222aef583ccab6601a",
+          "evidence:30d6b116689c2451b7d0c069eb044313c0593366cf6f61490e3cf79fdf98c2df",
+          "evidence:311a9f6b5a5c8b349ca146891019ed700e54b1163826559326ab46b1e8f0a0bc",
           "evidence:3278436259c3c1acb3795820f13caf49a220c4e70fee098b875495c7088bbfb5",
+          "evidence:337e5bd133d7309fedab82f3168b20cb54be181fdf641b597ae200865831cdb7",
+          "evidence:33ec465424f1120089c7f136a714d81e7a38d43b931c59fb9e896444e5e690fc",
+          "evidence:38be70da1c39b905664a656fbb53c8bddc07b5b738b5f7bcb29cda93c5e7870b",
+          "evidence:3b2046f844843088a72a137c51c63c883251ad4c7c8faf2b8e3a48559696fcb8",
           "evidence:3e1bb705499afe3409d9849e77c211c6b3514ce1e040934a4b5f5d9cbd7d982e",
+          "evidence:3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6",
+          "evidence:4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec",
+          "evidence:4758287d4c3c17803a9a4e4a1f256945a44285cc5f2a51ee29cc92c37f088eb7",
+          "evidence:4965dc4a281f6cc16a4d24c226b2bb7d4ae1d4d88a6a356a58fbc5e51745a816",
+          "evidence:4cf2750d6b5a88c6b74c3bf6c90ee6f7ce8245005a0d23d89f0f0f0a677abc0a",
+          "evidence:590d598ad00fa378710833a6ab868c2b8b7def587f427443b62356dae69b16a7",
           "evidence:5a2791106e23375b8d17e3e6b9de9c4b5ce6e9c77e81fbf7594f5e7b0834efd2",
           "evidence:5aeda0115dce5f35c0254bcb405c5ad973a66f868e1453f90de04fef06f5bf82",
+          "evidence:5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3",
+          "evidence:5bb03b35b1e877db05f4b1685de6fcc1604758f9dc6ad611b44fe17989ab9f2c",
+          "evidence:5ce944cf29972502e0efb60ecf9dc54b867e37efa9b06b2d1de567ba743b5269",
+          "evidence:5db5d6559d8979e03a572666af7b8295b675c14e4f9b3d5a41ff5dbb51bd5435",
+          "evidence:5f092c0b66719652f662cc3e93d4fcae1ba2ea5b1a3a9850dc3325a6ebc615c6",
+          "evidence:64af7b17701976ba7a90d5e7b517832bf3bd3650c1745566b130b676ba171959",
+          "evidence:64b4e5f3cc7651dd7fa8b587ae58a3277848037bf091485d2e86f8f6f342d8d7",
+          "evidence:64bf6ca019955a39e93f7a12ff1daf5a46335fdaba9fb55e7fde78ef663f1263",
+          "evidence:667a521c4599fe5b0d15e75c060656b2f42f3f0928ecf6a54367b8f4378dd6b4",
           "evidence:68fff4dba9616dc1b1670f5240fe9a49c272b5df28a84d46e63d3facf5eccffa",
           "evidence:6938d5b729f5864ce860b8f9abfbfc6356f9580daff3a8cdc55f9cefcac28cff",
+          "evidence:6dc6300ac8d1bcf9498564e210be6a53178377949dd019f759a8ceba1294d2e8",
+          "evidence:6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9",
+          "evidence:6f059edb5df7c61627fc1e86afed352f69ff190367265f8cdbe8e2f6f919e60f",
+          "evidence:6f8785bc7838293d40f5e4b1dbb7629fc898b4ecb2c45e585f1031d78adf8e06",
+          "evidence:6fa4b25f4d889d66cb560b0b19e216fed32a62950e1a92ef6ad809f120431f76",
+          "evidence:708720f07aa45c55a2e59ac69d7484a3c7ef21f3cf6a15e5d3680c357f050367",
           "evidence:71335bcaf04fff4070ec8f3f8422511af292b70ca240ded23721374a3a1f8a7d",
+          "evidence:7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e",
+          "evidence:74aab679ee731eef5abf6709109145cc6331f23d680f451d9ce7e3fcd3d160fb",
+          "evidence:7504b3695c0427c621b03527dd41d57e43f57962065fc659ab9db014ee58215d",
+          "evidence:77e9eb271162548586e3e2e145994621cb68c766428791ce3e9c98cdbbb5dea4",
+          "evidence:792b793a9f713e985b04398169985f7da8213a9dd9e96f44717ae5fa0e38bb39",
+          "evidence:79aaa21292cf901a80e9afe3fc4ce252c97c481e33b4302686c63be8b25d0390",
+          "evidence:79d8976a1ca0f07698f554682d947a7d826691631f3147847c99e1fadc36d74f",
+          "evidence:7bdf1417e60b89495bdec942c5b6651381f33e1c0bb4d62e1d85c2aeb5d9ae76",
+          "evidence:7c3c5924ef86071c436a37e04ec9c2ce576cc8f4b5b7b3b7468047ed50092b7c",
+          "evidence:7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8",
+          "evidence:7ff32884bc0746131934aa9c970e498ae67b5e07f47ec41c874b1a398db5673d",
+          "evidence:844be4d6f65d3726e09053fa084fc6bb6475f7ec217385ba773b7e52ed4946b2",
+          "evidence:854dd004ecedded567c2aaaf25bcefdea81e72797e85824f49c0f4deea80aff6",
+          "evidence:85ba69582847d531230cfb0bcd3feed3384b6604067d91f086ba4bccfde8caed",
+          "evidence:8800cb79c6a82322dcb847cf5bee7d325d3b307339195442383edb93d3fd9f92",
+          "evidence:89ffd533074e19b207b5437e541c881b831b7ea71c85a4f45380ea39454dce4e",
+          "evidence:8b1ecc5bf000dd337366ba05269c845197701d2ad525094ff2c30d6947ca1515",
+          "evidence:8c399761dd154a05cd3f6857af018f7c2614555331a90de04115ef3dc6a80989",
           "evidence:8d912135d52131acfb00dc14f932ff5e77308cc69ec11b2f3e3b07faf6f40b1e",
+          "evidence:914d7970c8965ddf3e084117c57dd8b7fe79df84cf7c1e3a237a500b37d8d2db",
+          "evidence:9183cd535bd9fe396c9aa6f235eda2f6bf625d1ec18e7caffb303cb72b4617c6",
+          "evidence:92e5133c6d7f2f15357c0edf4dde21c12771dc8c9e9d21673f1fe3cd528ea519",
           "evidence:95eea82034552d64f7f65d3b62c9d60d8f9e405994260a485b9863f111e4eb71",
           "evidence:96a914b072217136b5c8d6908bd3780a3aba40b2e7c564431245ec7b9d1e1088",
+          "evidence:97e84b5649cbd16331ff9abfa6d8ff448629ac71eaadb21e603fdf56bccce3d4",
           "evidence:99d9d2b596cbddf83b4e05d56663c5cc51745b42dbf628537fb111ca2c370962",
+          "evidence:9a34cd30114e5e3204cc21a980dfb0a8df2ce9ac440bee77595d89957089beb4",
+          "evidence:9bef9dbcf822ddd1846658e55ad9469da474f12c8bbf518a80a159ead3219dff",
+          "evidence:9d74a8eed1a82d7206d51278c5944f2ece7c77644fe0027060d57fd12135f74e",
+          "evidence:9e1a5ece62326322e0950cb3cfe2daac24dc33fc1e50a7bc33d57f790ec5bb29",
+          "evidence:a12587f1f478caa72165c59a8a49b231bce6ad5d45764284884a41db9a8d879f",
+          "evidence:a2d938c90a93e2ee017944968717e225112318c3db76a82386682365154cf422",
+          "evidence:a9bd16bbbf3d827b6bff1cff5aab740d87b84f81398901e131c7e50257c8a799",
+          "evidence:adf00a9a66d1113c2e2cb2a8c785378725cc6c0716d7aa4a91deba693b7238e3",
+          "evidence:aff43f8753fd5e9770f75364fdc080db08eff3de0c9d075a20041272c728f5cd",
+          "evidence:b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8",
           "evidence:b52085cbdab40436ff6c0b5e720d26a3db55b6acbaf1ad082bf6c0451284c4aa",
           "evidence:b7852d55d178928f8080bcb045e568742b0670d311e51dbd9be18636b50ddc00",
+          "evidence:b7c17f5d691a24a9599315043181a87bfebe9f9339108637ab75c9ad3df4558a",
           "evidence:b8807fc771dc7fe3c7c317c39798eafac82701a238f39edc5fd4b1019b2680b2",
           "evidence:b9d15c8e3006a4bfd25ca4af0ab8683715821aa9c68ff3294a2cf728f4beaf98",
+          "evidence:baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c",
+          "evidence:bb88200f53459729829f1f77a3865565998a806d7dc4765261ca7955df24b6af",
+          "evidence:bd1937de70e9547743a9f22d0f554185e2b30e1d6d383bdb217c27fd029de063",
+          "evidence:bd23f0c7a95cae2f64a2c56cb9b148e3add6b6b2a357c080a2d2972c0796b6e9",
+          "evidence:c5496f5e3bbbae594cd3c45af1a182d497734d220356b1212c000501c199f2f6",
+          "evidence:c5e488d990987d116465e5bcdd955ad2956566a3a2b2c68b0a8dbde0cefa3427",
+          "evidence:c6abb9a491df0d69c61daca0b1e190dada7fff51617f56e65dc7d797df6b5688",
+          "evidence:cb22b644973c76cba835ae6f6ecfe7478b7bcd265c864b694c7599f52e7db849",
+          "evidence:cb9413d739c0294e45f50b7acb82a19e266f6088aa45cc42da2db8ac2756e2cc",
+          "evidence:ce7ada93e87ebd8a698284f69eb44d4b4868a20fec1b06ca7d5eb9c6ea577a7f",
           "evidence:cfc65d38808b107561c3d6f0d1baf557ac1dc0f0dda50f314033d93e79c3a873",
+          "evidence:d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a",
+          "evidence:d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204",
           "evidence:d4771c9979b0f35a6ef6077c50c043fcca597a36c3863852b1f38d49a5282588",
+          "evidence:dd632532eecdf06bae92779c9c83f5ae8281625f3a4cda96c0fa5c86b4f139dc",
+          "evidence:dfaaedaa68c42bab8a923da650ca4df5a570b6593e8713c428ff7a83d9ff3e72",
+          "evidence:e056ca57f5c596845e5d38860bab6c2fb3dd860349dc5ee00f9250ff26d3c10d",
+          "evidence:e0a8f2c68ccceb3f6dbc538bc4db951bdad93681c4d299fffcbc2d3adea0d614",
+          "evidence:e241786fe48b137c7b26572d0516a1045ca244098ff4a2b092499234e47f09d6",
+          "evidence:e2e0406bdad0a3a5f65ddd740a555b930050d0cd153e98d33c17e5d2b9340a50",
+          "evidence:e36d3de0aaf8c36da8aef44e4ba1fbc85c6afe4403e2e4196ed0bcd8f06dde78",
+          "evidence:e45bb2e9469b06e112322a6a770086ba7e0876bb6a4543198f74f30390e53038",
           "evidence:e6302aa191f0e7c005a45d1e338b1ae2e69c723aab04fbc69204f9b65a25ca2a",
           "evidence:ef85fcf2cdaeb6205bc2dc8cf33363d94ed0eafb3bea106496bc0c50f2e2942f",
+          "evidence:f0c8ce367175d68754f7fc93561bb659a6fddaa4c9aa8df763ec9647bca34e9e",
+          "evidence:f38c8b25b83991292ee09fbe9cebf2dc14e0d45019e903c90ce6decd2e96852c",
           "evidence:f478a2523f911a46e78515d061c2e131212e36c05159c8f9e6e4803aa497d9e9",
+          "evidence:f4e077db38c6022a79218bed09ee81b39209050522e625d03ae23e9858021ee7",
+          "evidence:f54a324b98f27d23beb29ec1a2c5abf356ee454f0c04a31c79354017ac73a31a",
+          "evidence:f70473873c9a98654a4f97c2d29b3fbd991730c35152ae9bbb6b1bc075ccaaf3",
+          "evidence:f7532ce9ae7f523700e655b7dcfe6dc521fe0d1f3fd9256d24a40d2a883ed953",
+          "evidence:f7580d440d7e9b0c3c0321b12d088a146de6f2b3b20a3e092c1de3b37fc6bfa6",
           "evidence:fd7b86573efb90a9364078c8a3c011bb0ea9601efd012235b880265da6a6153f",
           "evidence:ff7ef06f8497e3f6f84b38bb6147ff4281b910102d5f46e0cc363482a6a56351"
         ],
@@ -15223,11 +15336,27 @@
             "code": "integration-unreviewed"
           },
           {
+            "id": "gap:2b0ddbfa56d173cd1376f1f7",
+            "area": "integration",
+            "reason": "Pinned production TypeScript sources for Lucid Evolution transaction building, signing, submission, providers, wallets and their local support packages are prepared for owner-run review. The configured provider endpoint/network, wallet implementation, script evaluator and consumer settings remain unknown. No source-derived capability findings or verified service relationships have been imported.",
+            "nextAction": "Assign discovery and independent challenge using the prepared Lucid Evolution packet; use the registered native profile and cite exact source evidence.",
+            "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+            "code": "evolution-review:integration"
+          },
+          {
             "id": "gap:628ae020fe6252576239deeb",
             "area": "resolution",
             "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
             "nextAction": "Recollect a complete native build plan for this profile.",
             "profileId": "profile:lucid-evolution:837579d4ca1dcc6020f157ef"
+          },
+          {
+            "id": "gap:7e194ac5e110b469fe13404f",
+            "area": "resolution",
+            "reason": "Lucid Evolution CML 0.1.2 and UPLC 0.4.0 manifests declare conditional browser/worker and node WASM bindings; UPLC also declares speed/size variants. The pnpm graph does not resolve the Rust closures, verify compiled WASM bytes against source/build inputs, or identify the selected consumer runtime variant.",
+            "nextAction": "Retain native Rust build closures and published binding/WASM provenance for the selected consumer target; keep source declarations distinct from verified distribution artifacts.",
+            "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+            "code": "evolution-review:resolution"
           },
           {
             "id": "gap:88a9175d18cf6bbec12efbf3",
@@ -15241,6 +15370,14 @@
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:e369d74ee5166147d7224fd8",
+            "area": "artifact",
+            "reason": "Lucid Evolution production package @lucid-evolution/lucid is manifest 0.8.3 at repository tag @lucid-evolution/core-types@0.5.2. The tag does not establish an independently published lucid 0.8.3 artifact. Both historical native profiles remain retained; use profile ending 82ef3bc2a8877a35a7fe4310 for new review findings.",
+            "nextAction": "Verify published package provenance for @lucid-evolution/lucid 0.8.3 before mapping this source reconstruction to a shipped SDK.",
+            "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310",
+            "code": "evolution-review:artifact"
           }
         ],
         "lastAttempt": "2026-10-17T16:50:59.111Z",
@@ -20862,6 +20999,7 @@
         "capability": "unresolved",
         "readiness": "unassessed",
         "manifests": [
+          "bun.lock",
           "docs/Gemfile",
           "docs/package.json",
           "package.json",
@@ -20874,8 +21012,21 @@
           "packages/yield-farming/package.json"
         ],
         "evidenceIds": [
+          "evidence:0135865fb68425d063baffa02642d2ba78e8f3b9f2de11312e08930163ec049e",
+          "evidence:0385888b5287fbd6d535241f8004b4bf2609b68c0ce3a8a45cdcbbafa268b97c",
+          "evidence:17ab81032533246717621d9df6887e9233d3d51b60c24443d81343ed9836c7aa",
+          "evidence:1de31db268b8446bce87a3ed61061519656b829f9f4573e5a9de0dbd8e6da565",
+          "evidence:24f429f023f7ee2b828f439aebbffd9b95e73b7188b91571935b702d30d23447",
+          "evidence:4d6665a42e6ff71419724fbbb4738a083140c7f6f562942ea17fc58367b43a0a",
+          "evidence:6493e4b42d14e61907f52a676205418cbe398c6f63d65eda82f5f43281c5e394",
+          "evidence:a3fc47387b0b83ad7d32d93dbac74cc6d3524e64901ab5d75a43babaf09bd4bf",
+          "evidence:a473ca38880ad2b48cc007eb0fc61e8b621b7be5e1dce51257ac228e835b9ce9",
+          "evidence:a5106f31212cafc7a40a335dde7132e44a4e6e863f84d761ab7f1d2d44bb084e",
+          "evidence:ba1a88eaddbd4eadb3b029feecec015fdf4a3765ae60f1ac19324d9943f24551",
           "evidence:bc9f0f75b495c27a947736d19357678b71fe8b208d2de78e28c4f643e85d0621",
-          "evidence:d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29"
+          "evidence:cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
+          "evidence:d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29",
+          "evidence:e869883ddd24f7fa842b84021bb3484b191bfc7475c0d40f21eba5624ce07f3e"
         ],
         "gaps": [
           {
@@ -20891,6 +21042,20 @@
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
             "nextAction": "Export a discovery review packet.",
             "code": "integration-unreviewed"
+          },
+          {
+            "id": "gap:2c2daf313e2045a433d8a390",
+            "area": "resolution",
+            "reason": "SundaeSwap tag @sundaeswap/core@3.2.0 has a text-v1/config-v0 Bun lock with four stale dependency declarations: core requires math ^0.5.1 while the lock records ^0.5.0, and gummiworm requires core ^3.2.0 while the lock records ^3.0.0, each in runtime and development sections. Collection is failed/retryable; no native profile or review-ready capability scope is claimed. All eight locked workspace manifests, the lock and repository configuration are retained without modification.",
+            "nextAction": "Obtain an upstream revision with aligned production manifests and lock, rediscover its immutable source, and submit a new pinned request. Do not rewrite source inputs or weaken stale-lock validation to force coverage.",
+            "code": "sundae-lock-mismatch"
+          },
+          {
+            "id": "gap:37af9df0fdb156cdca1488ff",
+            "area": "resolution",
+            "reason": "Collection failed (bun-lock): Error: Stale Bun workspace packages/core: dependencies differs from manifest",
+            "nextAction": "Inspect the native resolver error and retry this pinned profile.",
+            "code": "native-collection-failed:bun-lock"
           },
           {
             "id": "gap:b33c4f9e67e77b9535e0f2cd",
@@ -25466,6 +25631,13 @@
         "sourceUrl": "https://github.com/use-cardano/use-cardano/releases/tag/v1.1.0"
       },
       {
+        "id": "evidence:0135865fb68425d063baffa02642d2ba78e8f3b9f2de11312e08930163ec049e",
+        "digest": "0135865fb68425d063baffa02642d2ba78e8f3b9f2de11312e08930163ec049e",
+        "path": "evidence/0135865fb68425d063baffa02642d2ba78e8f3b9f2de11312e08930163ec049e.json.gz",
+        "description": "Native input sundae-sdk/packages/gummiworm/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/gummiworm/package.json"
+      },
+      {
         "id": "evidence:015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
         "digest": "015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
         "path": "evidence/015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144.json.gz",
@@ -25484,6 +25656,20 @@
         "digest": "0198fe5f8c0fc5484414ff7d278e77bf923697970c16c1a412b049718cfec000",
         "path": "evidence/0198fe5f8c0fc5484414ff7d278e77bf923697970c16c1a412b049718cfec000.json.gz",
         "description": "Collection request for marlowe-ts-sdk"
+      },
+      {
+        "id": "evidence:01b31b49d631958461084c08109e6935a77a3643b99f70fe54e06dd7dbe24057",
+        "digest": "01b31b49d631958461084c08109e6935a77a3643b99f70fe54e06dd7dbe24057",
+        "path": "evidence/01b31b49d631958461084c08109e6935a77a3643b99f70fe54e06dd7dbe24057.json.gz",
+        "description": "Native input lucid-evolution/packages/core-utils/src/cml-scope.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-utils/src/cml-scope.ts"
+      },
+      {
+        "id": "evidence:01f81bbfa879bae6ce58ee1872e88373b8592fed6022b188e6ce1879d7a96274",
+        "digest": "01f81bbfa879bae6ce58ee1872e88373b8592fed6022b188e6ce1879d7a96274",
+        "path": "evidence/01f81bbfa879bae6ce58ee1872e88373b8592fed6022b188e6ce1879d7a96274.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/koios.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/koios.ts"
       },
       {
         "id": "evidence:0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05",
@@ -25535,11 +25721,25 @@
         "sourceUrl": "https://github.com/OpShin/hebi/tree/c598196f2d20b5a053d1a0dedd7e551d74299cac"
       },
       {
+        "id": "evidence:036be07cd7921c720847cfa022efd602b55a7e8edcc870a7cf791a36b803e27e",
+        "digest": "036be07cd7921c720847cfa022efd602b55a7e8edcc870a7cf791a36b803e27e",
+        "path": "evidence/036be07cd7921c720847cfa022efd602b55a7e8edcc870a7cf791a36b803e27e.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/json.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/json.ts"
+      },
+      {
         "id": "evidence:036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639",
         "digest": "036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639",
         "path": "evidence/036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639.json.gz",
         "description": "Source cardano-js-sdk/packages/tx-construction/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/tx-construction/package.json"
+      },
+      {
+        "id": "evidence:0385888b5287fbd6d535241f8004b4bf2609b68c0ce3a8a45cdcbbafa268b97c",
+        "digest": "0385888b5287fbd6d535241f8004b4bf2609b68c0ce3a8a45cdcbbafa268b97c",
+        "path": "evidence/0385888b5287fbd6d535241f8004b4bf2609b68c0ce3a8a45cdcbbafa268b97c.json.gz",
+        "description": "Native input sundae-sdk/bunfig.toml",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/bunfig.toml"
       },
       {
         "id": "evidence:03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693",
@@ -25626,6 +25826,13 @@
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2"
       },
       {
+        "id": "evidence:062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54",
+        "digest": "062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54",
+        "path": "evidence/062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Metadata.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Metadata.ts"
+      },
+      {
         "id": "evidence:063f425d05669d49f499a885574316a5b0d83edc7c37a8c87f7965d72cf590d3",
         "digest": "063f425d05669d49f499a885574316a5b0d83edc7c37a8c87f7965d72cf590d3",
         "path": "evidence/063f425d05669d49f499a885574316a5b0d83edc7c37a8c87f7965d72cf590d3.json.gz",
@@ -25640,11 +25847,32 @@
         "sourceUrl": "https://github.com/bloxbean/mesmo/releases/tag/v0.1.0-pre8"
       },
       {
+        "id": "evidence:06d24f9f9ab3315c17f128744eeacfcc5fe78b23be769d8e80d0c4a84286a70b",
+        "digest": "06d24f9f9ab3315c17f128744eeacfcc5fe78b23be769d8e80d0c4a84286a70b",
+        "path": "evidence/06d24f9f9ab3315c17f128744eeacfcc5fe78b23be769d8e80d0c4a84286a70b.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/koios.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/koios.ts"
+      },
+      {
         "id": "evidence:071aa632127bd600850f75eb29c8012048015bd3eba56f47cb4c1361685715ad",
         "digest": "071aa632127bd600850f75eb29c8012048015bd3eba56f47cb4c1361685715ad",
         "path": "evidence/071aa632127bd600850f75eb29c8012048015bd3eba56f47cb4c1361685715ad.json.gz",
         "description": "Native input lucid-evolution/packages/utils/package.json",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/package.json"
+      },
+      {
+        "id": "evidence:0745fe78c56cf22fed95390410f685839879843da82c055f4a4d8bff8d9bee63",
+        "digest": "0745fe78c56cf22fed95390410f685839879843da82c055f4a4d8bff8d9bee63",
+        "path": "evidence/0745fe78c56cf22fed95390410f685839879843da82c055f4a4d8bff8d9bee63.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/common.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/common.ts"
+      },
+      {
+        "id": "evidence:07aecc93cb9d2952cdd291fd5358579a72d6c7dc340b592d2981a975228dcbf4",
+        "digest": "07aecc93cb9d2952cdd291fd5358579a72d6c7dc340b592d2981a975228dcbf4",
+        "path": "evidence/07aecc93cb9d2952cdd291fd5358579a72d6c7dc340b592d2981a975228dcbf4.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/data-cbor-encode.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/data-cbor-encode.ts"
       },
       {
         "id": "evidence:07dc7fef4a295f19789594911eeb6993d5b8c58f6e90c4053414f57aeb1abad5",
@@ -25785,6 +26013,13 @@
         "description": "Pinned wallet/contract workflow scope for marlowe-ts-sdk"
       },
       {
+        "id": "evidence:0faedbaa615c046347067d7d598240710ee9a0cb359d3674c126750e83dfe442",
+        "digest": "0faedbaa615c046347067d7d598240710ee9a0cb359d3674c126750e83dfe442",
+        "path": "evidence/0faedbaa615c046347067d7d598240710ee9a0cb359d3674c126750e83dfe442.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/objects.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/objects.ts"
+      },
+      {
         "id": "evidence:0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94",
         "digest": "0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94",
         "path": "evidence/0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94.json.gz",
@@ -25901,6 +26136,13 @@
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331"
       },
       {
+        "id": "evidence:145617b528f6fac4459263adc6fbba340753b09729af240d6671c13f17a9cc60",
+        "digest": "145617b528f6fac4459263adc6fbba340753b09729af240d6671c13f17a9cc60",
+        "path": "evidence/145617b528f6fac4459263adc6fbba340753b09729af240d6671c13f17a9cc60.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/index.ts"
+      },
+      {
         "id": "evidence:14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
         "digest": "14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
         "path": "evidence/14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe.json.gz",
@@ -25983,6 +26225,20 @@
         "sourceUrl": "https://github.com/gitmachtl/scripts/releases/tag/Update-2026-04"
       },
       {
+        "id": "evidence:17681d33645b3febf9ab4c991c93b9c023bb43833bb4d254aed9622375e8eebc",
+        "digest": "17681d33645b3febf9ab4c991c93b9c023bb43833bb4d254aed9622375e8eebc",
+        "path": "evidence/17681d33645b3febf9ab4c991c93b9c023bb43833bb4d254aed9622375e8eebc.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-submit/TxSubmit.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-submit/TxSubmit.ts"
+      },
+      {
+        "id": "evidence:17ab81032533246717621d9df6887e9233d3d51b60c24443d81343ed9836c7aa",
+        "digest": "17ab81032533246717621d9df6887e9233d3d51b60c24443d81343ed9836c7aa",
+        "path": "evidence/17ab81032533246717621d9df6887e9233d3d51b60c24443d81343ed9836c7aa.json.gz",
+        "description": "Native input sundae-sdk/packages/math/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/math/package.json"
+      },
+      {
         "id": "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
         "digest": "196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
         "path": "evidence/196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75.json.gz",
@@ -26016,6 +26272,13 @@
         "path": "evidence/1a3838916c4c90750fc31bff61984780cbfe5f0d3c49fd1795c3fe4a3cb0b3cd.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2"
+      },
+      {
+        "id": "evidence:1a50fee98d02da48838d0e8878ab1cbf49aa221fafc43fd68fb4eeef1f9566c6",
+        "digest": "1a50fee98d02da48838d0e8878ab1cbf49aa221fafc43fd68fb4eeef1f9566c6",
+        "path": "evidence/1a50fee98d02da48838d0e8878ab1cbf49aa221fafc43fd68fb4eeef1f9566c6.json.gz",
+        "description": "Native input lucid-evolution/packages/sign_data/src/sign_data.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/sign_data/src/sign_data.ts"
       },
       {
         "id": "evidence:1acacbf64dc01786809acc13e939d5952f807709959fd4116e960a2c1ce714d3",
@@ -26071,6 +26334,13 @@
         "digest": "1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
         "path": "evidence/1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157.json.gz",
         "description": "Collection request for veridian-wallet"
+      },
+      {
+        "id": "evidence:1de31db268b8446bce87a3ed61061519656b829f9f4573e5a9de0dbd8e6da565",
+        "digest": "1de31db268b8446bce87a3ed61061519656b829f9f4573e5a9de0dbd8e6da565",
+        "path": "evidence/1de31db268b8446bce87a3ed61061519656b829f9f4573e5a9de0dbd8e6da565.json.gz",
+        "description": "Native input sundae-sdk/packages/cli/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/cli/package.json"
       },
       {
         "id": "evidence:1def7a3ba0d93329a33cf21b7afc51b6be6ff3fa48e86186bdc71b75327fb7ec",
@@ -26210,6 +26480,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/plutus/tree/152220ae3da8cd6ceaf2688094af541ac1245f58"
       },
       {
+        "id": "evidence:2263d6ad87c24788448b2a83a42b156fe5b5e04886e205d5ca18c199a4cf3e32",
+        "digest": "2263d6ad87c24788448b2a83a42b156fe5b5e04886e205d5ca18c199a4cf3e32",
+        "path": "evidence/2263d6ad87c24788448b2a83a42b156fe5b5e04886e205d5ca18c199a4cf3e32.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/data-cbor.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/data-cbor.ts"
+      },
+      {
         "id": "evidence:226baf3c5b8e1d9bd4bacc271b2698fb51d617a31c591c7d4943c6d1791cbca5",
         "digest": "226baf3c5b8e1d9bd4bacc271b2698fb51d617a31c591c7d4943c6d1791cbca5",
         "path": "evidence/226baf3c5b8e1d9bd4bacc271b2698fb51d617a31c591c7d4943c6d1791cbca5.json.gz",
@@ -26252,6 +26529,13 @@
         "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-sdk/src/sign-cardano-tx.ts"
       },
       {
+        "id": "evidence:24415ae4296797d97fbe5be013787430876d27babb9bc6092192602241c4c185",
+        "digest": "24415ae4296797d97fbe5be013787430876d27babb9bc6092192602241c4c185",
+        "path": "evidence/24415ae4296797d97fbe5be013787430876d27babb9bc6092192602241c4c185.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/cost_model.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/cost_model.ts"
+      },
+      {
         "id": "evidence:24638d7a6466c5061a4f09c5c3f304bf6512f0414999205cf8d0e04136857b6f",
         "digest": "24638d7a6466c5061a4f09c5c3f304bf6512f0414999205cf8d0e04136857b6f",
         "path": "evidence/24638d7a6466c5061a4f09c5c3f304bf6512f0414999205cf8d0e04136857b6f.json.gz",
@@ -26264,6 +26548,13 @@
         "path": "evidence/24bc43fb2b4a1b1c4ca01d353baf1908c451e57ac44654103e76613f0465e47a.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/bech32/releases/tag/v1.1.7"
+      },
+      {
+        "id": "evidence:24f429f023f7ee2b828f439aebbffd9b95e73b7188b91571935b702d30d23447",
+        "digest": "24f429f023f7ee2b828f439aebbffd9b95e73b7188b91571935b702d30d23447",
+        "path": "evidence/24f429f023f7ee2b828f439aebbffd9b95e73b7188b91571935b702d30d23447.json.gz",
+        "description": "Native input sundae-sdk/packages/demo/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/demo/package.json"
       },
       {
         "id": "evidence:250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a",
@@ -26294,11 +26585,25 @@
         "sourceUrl": "https://github.com/Biglup/cometa.js/releases/tag/v1.2.0"
       },
       {
+        "id": "evidence:25a9f61daba3f93d44b56b3caa51a4be9ebcf37bdc9c603de0993b2363bd4f2c",
+        "digest": "25a9f61daba3f93d44b56b3caa51a4be9ebcf37bdc9c603de0993b2363bd4f2c",
+        "path": "evidence/25a9f61daba3f93d44b56b3caa51a4be9ebcf37bdc9c603de0993b2363bd4f2c.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/redeemer.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/redeemer.ts"
+      },
+      {
         "id": "evidence:25d2b4e243df6ad8982c785c5462e463345dccdbba2a289b39171471d8929901",
         "digest": "25d2b4e243df6ad8982c785c5462e463345dccdbba2a289b39171471d8929901",
         "path": "evidence/25d2b4e243df6ad8982c785c5462e463345dccdbba2a289b39171471d8929901.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/koios-java-client/releases/tag/v1.22.0"
+      },
+      {
+        "id": "evidence:25fb7237eceded4ab7f61752e208f4673fdd1da1cf74942e4a594c68d6e8d063",
+        "digest": "25fb7237eceded4ab7f61752e208f4673fdd1da1cf74942e4a594c68d6e8d063",
+        "path": "evidence/25fb7237eceded4ab7f61752e208f4673fdd1da1cf74942e4a594c68d6e8d063.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/provider-wrapper.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/provider-wrapper.ts"
       },
       {
         "id": "evidence:26280aedbdb5ed07805290a46566eebb0aaa1acb679dd723475eb60686f1149b",
@@ -26315,11 +26620,25 @@
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-query/src/index.ts"
       },
       {
+        "id": "evidence:26542bb5e8e3ee8d4470412f7c27b5f790eaa4a4d43bfa7355dc0219e312ff9d",
+        "digest": "26542bb5e8e3ee8d4470412f7c27b5f790eaa4a4d43bfa7355dc0219e312ff9d",
+        "path": "evidence/26542bb5e8e3ee8d4470412f7c27b5f790eaa4a4d43bfa7355dc0219e312ff9d.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Governance.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Governance.ts"
+      },
+      {
         "id": "evidence:2699b1aaf52e38cbf9136acc0ca15dacde35b2df4ff0d8810cf267360f319ead",
         "digest": "2699b1aaf52e38cbf9136acc0ca15dacde35b2df4ff0d8810cf267360f319ead",
         "path": "evidence/2699b1aaf52e38cbf9136acc0ca15dacde35b2df4ff0d8810cf267360f319ead.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/clb/tree/867ff70b4d3086f728733f25509692cda41ea0ef"
+      },
+      {
+        "id": "evidence:26b2ff7813969e8af1bf13ddbef6174d123c4a789696ef259cc06339c1169c38",
+        "digest": "26b2ff7813969e8af1bf13ddbef6174d123c4a789696ef259cc06339c1169c38",
+        "path": "evidence/26b2ff7813969e8af1bf13ddbef6174d123c4a789696ef259cc06339c1169c38.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/ogmios.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/ogmios.ts"
       },
       {
         "id": "evidence:26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746",
@@ -26334,6 +26653,13 @@
         "path": "evidence/26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/koios-python/releases/tag/v2.0.0"
+      },
+      {
+        "id": "evidence:26fb9940cbb966ddaf8fb3fa5778b3d402113157bb0575a6d6181680779bc869",
+        "digest": "26fb9940cbb966ddaf8fb3fa5778b3d402113157bb0575a6d6181680779bc869",
+        "path": "evidence/26fb9940cbb966ddaf8fb3fa5778b3d402113157bb0575a6d6181680779bc869.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/semantic-format.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/semantic-format.ts"
       },
       {
         "id": "evidence:27825ad6ba248c3762b4180bd44fac5daf639361bdac62657cdcef522631f5a4",
@@ -26390,11 +26716,39 @@
         "sourceUrl": "https://github.com/lidonation/Cardano-mcp/tree/9fe85c6552770915b767c966b3663234b22674e2"
       },
       {
+        "id": "evidence:28a47aab9249858611ee9eb6208c8d347359e0280b87af83a4dfd0795c528ef4",
+        "digest": "28a47aab9249858611ee9eb6208c8d347359e0280b87af83a4dfd0795c528ef4",
+        "path": "evidence/28a47aab9249858611ee9eb6208c8d347359e0280b87af83a4dfd0795c528ef4.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/utxo.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/utxo.ts"
+      },
+      {
         "id": "evidence:28b6c5ed05ef247fb3e29c5efc779be18dae23ec0648323c745192bf3cef2e90",
         "digest": "28b6c5ed05ef247fb3e29c5efc779be18dae23ec0648323c745192bf3cef2e90",
         "path": "evidence/28b6c5ed05ef247fb3e29c5efc779be18dae23ec0648323c745192bf3cef2e90.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/txpipe/uplc-turbo/tree/da3e8c818f6ccc13cdf05821be1bbbc4fc3688ad"
+      },
+      {
+        "id": "evidence:293ddd07e7caca538dcb2bcd736ce418c7902a4c474c3f0d4bc273866175277c",
+        "digest": "293ddd07e7caca538dcb2bcd736ce418c7902a4c474c3f0d4bc273866175277c",
+        "path": "evidence/293ddd07e7caca538dcb2bcd736ce418c7902a4c474c3f0d4bc273866175277c.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/script-context/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/script-context/index.ts"
+      },
+      {
+        "id": "evidence:29e5753165b24d648545a1169c85d4cd31612ea7003b0c30564ded8b570f27d2",
+        "digest": "29e5753165b24d648545a1169c85d4cd31612ea7003b0c30564ded8b570f27d2",
+        "path": "evidence/29e5753165b24d648545a1169c85d4cd31612ea7003b0c30564ded8b570f27d2.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/kupmios.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/kupmios.ts"
+      },
+      {
+        "id": "evidence:2a0978a4da912783a9f5375f86ef6a3642c52bec0fee77f37a57a444946a1b37",
+        "digest": "2a0978a4da912783a9f5375f86ef6a3642c52bec0fee77f37a57a444946a1b37",
+        "path": "evidence/2a0978a4da912783a9f5375f86ef6a3642c52bec0fee77f37a57a444946a1b37.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Collect.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Collect.ts"
       },
       {
         "id": "evidence:2a3d61842ee28d44910dba47c1c315c9cec468af9824d9b2d1902a64147ba037",
@@ -26437,6 +26791,13 @@
         "sourceUrl": "https://github.com/tx3-lang/tx3/releases/tag/v0.25.0"
       },
       {
+        "id": "evidence:2b15d01f59f2a60d767da7ccf68b984d2390cd2d5b41a69b9f285447b4a39754",
+        "digest": "2b15d01f59f2a60d767da7ccf68b984d2390cd2d5b41a69b9f285447b4a39754",
+        "path": "evidence/2b15d01f59f2a60d767da7ccf68b984d2390cd2d5b41a69b9f285447b4a39754.json.gz",
+        "description": "Native input lucid-evolution/packages/core-types/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-types/src/index.ts"
+      },
+      {
         "id": "evidence:2b6dcd784b870f475c5c9792e089cb00bafd77c2b22bb808a8e00fd074c91382",
         "digest": "2b6dcd784b870f475c5c9792e089cb00bafd77c2b22bb808a8e00fd074c91382",
         "path": "evidence/2b6dcd784b870f475c5c9792e089cb00bafd77c2b22bb808a8e00fd074c91382.json.gz",
@@ -26458,6 +26819,13 @@
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/README.md"
       },
       {
+        "id": "evidence:2bf7365085ec4fb3b2a560ed696ce7ce05be309b99843f5e530dfb9d655c3d5e",
+        "digest": "2bf7365085ec4fb3b2a560ed696ce7ce05be309b99843f5e530dfb9d655c3d5e",
+        "path": "evidence/2bf7365085ec4fb3b2a560ed696ce7ce05be309b99843f5e530dfb9d655c3d5e.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/emulator-ledger.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/emulator-ledger.ts"
+      },
+      {
         "id": "evidence:2bf995992555ec05b5371df9bee16ac214d9d069187c6a783026d49ff2a6a869",
         "digest": "2bf995992555ec05b5371df9bee16ac214d9d069187c6a783026d49ff2a6a869",
         "path": "evidence/2bf995992555ec05b5371df9bee16ac214d9d069187c6a783026d49ff2a6a869.json.gz",
@@ -26475,6 +26843,13 @@
         "digest": "2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1",
         "path": "evidence/2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1.json.gz",
         "description": "Collection request for geniusyield-sdk"
+      },
+      {
+        "id": "evidence:2d63e70e426b766c561e5299164e3bbf4f347fb043c7cef9838aa1ef6a676209",
+        "digest": "2d63e70e426b766c561e5299164e3bbf4f347fb043c7cef9838aa1ef6a676209",
+        "path": "evidence/2d63e70e426b766c561e5299164e3bbf4f347fb043c7cef9838aa1ef6a676209.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Read.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Read.ts"
       },
       {
         "id": "evidence:2d84bf951b0e136c4615f56fcaf7950b4f6de30584c70abb6f589e7c681f42ec",
@@ -26531,6 +26906,13 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/releases/tag/11.5.0"
       },
       {
+        "id": "evidence:2e961338062bf4330dee5c08a97008ec24b54139eaeff64c832bb203849cbc7d",
+        "digest": "2e961338062bf4330dee5c08a97008ec24b54139eaeff64c832bb203849cbc7d",
+        "path": "evidence/2e961338062bf4330dee5c08a97008ec24b54139eaeff64c832bb203849cbc7d.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/emulator.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/emulator.ts"
+      },
+      {
         "id": "evidence:2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
         "digest": "2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
         "path": "evidence/2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c.json.gz",
@@ -26573,11 +26955,25 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/sign_data/package.json"
       },
       {
+        "id": "evidence:30d6b116689c2451b7d0c069eb044313c0593366cf6f61490e3cf79fdf98c2df",
+        "digest": "30d6b116689c2451b7d0c069eb044313c0593366cf6f61490e3cf79fdf98c2df",
+        "path": "evidence/30d6b116689c2451b7d0c069eb044313c0593366cf6f61490e3cf79fdf98c2df.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/constr.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/constr.ts"
+      },
+      {
         "id": "evidence:30f39e943b31ee64100a8c8f89ac6cfdf883dfbdbc8cfeda19ebf308a0ba8a0f",
         "digest": "30f39e943b31ee64100a8c8f89ac6cfdf883dfbdbc8cfeda19ebf308a0ba8a0f",
         "path": "evidence/30f39e943b31ee64100a8c8f89ac6cfdf883dfbdbc8cfeda19ebf308a0ba8a0f.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/blockfrost/blockfrost-python/releases/tag/0.7.0"
+      },
+      {
+        "id": "evidence:311a9f6b5a5c8b349ca146891019ed700e54b1163826559326ab46b1e8f0a0bc",
+        "digest": "311a9f6b5a5c8b349ca146891019ed700e54b1163826559326ab46b1e8f0a0bc",
+        "path": "evidence/311a9f6b5a5c8b349ca146891019ed700e54b1163826559326ab46b1e8f0a0bc.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/script-context/ScriptContext.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/script-context/ScriptContext.ts"
       },
       {
         "id": "evidence:31ad0dc2bc9766caba744de6a248638f31ed81a0909780fb7d610ce5c5de487d",
@@ -26622,11 +27018,25 @@
         "sourceUrl": "https://github.com/SAIB-Inc/Argus/tree/37a648d8d5f010526f4b4656d34559bf4c2e9eae"
       },
       {
+        "id": "evidence:337e5bd133d7309fedab82f3168b20cb54be181fdf641b597ae200865831cdb7",
+        "digest": "337e5bd133d7309fedab82f3168b20cb54be181fdf641b597ae200865831cdb7",
+        "path": "evidence/337e5bd133d7309fedab82f3168b20cb54be181fdf641b597ae200865831cdb7.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/blockfrost.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/blockfrost.ts"
+      },
+      {
         "id": "evidence:33872841ca6c3131198c8fff7256e30ae48e3419def9a1d74dd05f294d26710d",
         "digest": "33872841ca6c3131198c8fff7256e30ae48e3419def9a1d74dd05f294d26710d",
         "path": "evidence/33872841ca6c3131198c8fff7256e30ae48e3419def9a1d74dd05f294d26710d.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-connect-with-wallet/tree/47ceba88338f19b576bf72251e8158a7883a5e45"
+      },
+      {
+        "id": "evidence:33ec465424f1120089c7f136a714d81e7a38d43b931c59fb9e896444e5e690fc",
+        "digest": "33ec465424f1120089c7f136a714d81e7a38d43b931c59fb9e896444e5e690fc",
+        "path": "evidence/33ec465424f1120089c7f136a714d81e7a38d43b931c59fb9e896444e5e690fc.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/parse.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/parse.ts"
       },
       {
         "id": "evidence:347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
@@ -26719,6 +27129,13 @@
         "sourceUrl": "https://github.com/CardanoSolutions/kupo/releases/tag/v2.12"
       },
       {
+        "id": "evidence:38be70da1c39b905664a656fbb53c8bddc07b5b738b5f7bcb29cda93c5e7870b",
+        "digest": "38be70da1c39b905664a656fbb53c8bddc07b5b738b5f7bcb29cda93c5e7870b",
+        "path": "evidence/38be70da1c39b905664a656fbb53c8bddc07b5b738b5f7bcb29cda93c5e7870b.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-sign-builder/internal/CompleteTxSigner.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-sign-builder/internal/CompleteTxSigner.ts"
+      },
+      {
         "id": "evidence:38ed25976a3687fb05ffe91ce8abc7e6ed490e7fc229c6ffb21cc8e2bad36a9f",
         "digest": "38ed25976a3687fb05ffe91ce8abc7e6ed490e7fc229c6ffb21cc8e2bad36a9f",
         "path": "evidence/38ed25976a3687fb05ffe91ce8abc7e6ed490e7fc229c6ffb21cc8e2bad36a9f.json.gz",
@@ -26779,6 +27196,13 @@
         "path": "evidence/3b02fd52dd44c80c723cabe832d7548f506facaa9301c3c2432f7305e8fbe7d8.json.gz",
         "description": "npm-lock for veridian-wallet 1.2.2",
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/tree/e93a56f54451cc386ba54dd1e8e5564a884b3593"
+      },
+      {
+        "id": "evidence:3b2046f844843088a72a137c51c63c883251ad4c7c8faf2b8e3a48559696fcb8",
+        "digest": "3b2046f844843088a72a137c51c63c883251ad4c7c8faf2b8e3a48559696fcb8",
+        "path": "evidence/3b2046f844843088a72a137c51c63c883251ad4c7c8faf2b8e3a48559696fcb8.json.gz",
+        "description": "Native input lucid-evolution/packages/core-utils/src/core-utils.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-utils/src/core-utils.ts"
       },
       {
         "id": "evidence:3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6",
@@ -26870,6 +27294,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/govtool/tree/993d25ab42b6565a95aaa82ef297ac5053b3fb3e"
       },
       {
+        "id": "evidence:3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6",
+        "digest": "3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6",
+        "path": "evidence/3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Pay.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Pay.ts"
+      },
+      {
         "id": "evidence:3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
         "digest": "3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
         "path": "evidence/3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5.json.gz",
@@ -26910,6 +27341,13 @@
         "path": "evidence/40614e4942076f176a39c3ea4cb1ea4369c25243bca197148ae1efaa1b810ec1.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-core/tree/a3a7f635c663b639d0c348f30e523c3290c70657"
+      },
+      {
+        "id": "evidence:4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec",
+        "digest": "4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec",
+        "path": "evidence/4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/measure.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/measure.ts"
       },
       {
         "id": "evidence:410a427970c541b1d9f68f112b0ce710ce359b64bd1c305f5c22024ff2705f94",
@@ -27065,6 +27503,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/aiken-uplc/package.json"
       },
       {
+        "id": "evidence:4758287d4c3c17803a9a4e4a1f256945a44285cc5f2a51ee29cc92c37f088eb7",
+        "digest": "4758287d4c3c17803a9a4e4a1f256945a44285cc5f2a51ee29cc92c37f088eb7",
+        "path": "evidence/4758287d4c3c17803a9a4e4a1f256945a44285cc5f2a51ee29cc92c37f088eb7.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/time.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/time.ts"
+      },
+      {
         "id": "evidence:477792c1da611d0fa2a8414fb0a87a9f53ad410fa4172f56b0ed24465aee9cad",
         "digest": "477792c1da611d0fa2a8414fb0a87a9f53ad410fa4172f56b0ed24465aee9cad",
         "path": "evidence/477792c1da611d0fa2a8414fb0a87a9f53ad410fa4172f56b0ed24465aee9cad.json.gz",
@@ -27105,6 +27550,13 @@
         "path": "evidence/490d000f514d565bb177078f6a3345b625381d2afa89c1426f79e08e4c0b400f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/OpShin/mockfrost/tree/4338ae89412c1163be3587e7553258e5000d83d1"
+      },
+      {
+        "id": "evidence:4965dc4a281f6cc16a4d24c226b2bb7d4ae1d4d88a6a356a58fbc5e51745a816",
+        "digest": "4965dc4a281f6cc16a4d24c226b2bb7d4ae1d4d88a6a356a58fbc5e51745a816",
+        "path": "evidence/4965dc4a281f6cc16a4d24c226b2bb7d4ae1d4d88a6a356a58fbc5e51745a816.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Pool.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Pool.ts"
       },
       {
         "id": "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
@@ -27162,6 +27614,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/aiken-linked-list/releases/tag/0.0.1"
       },
       {
+        "id": "evidence:4cf2750d6b5a88c6b74c3bf6c90ee6f7ce8245005a0d23d89f0f0f0a677abc0a",
+        "digest": "4cf2750d6b5a88c6b74c3bf6c90ee6f7ce8245005a0d23d89f0f0f0a677abc0a",
+        "path": "evidence/4cf2750d6b5a88c6b74c3bf6c90ee6f7ce8245005a0d23d89f0f0f0a677abc0a.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/resolve.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/resolve.ts"
+      },
+      {
         "id": "evidence:4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
         "digest": "4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
         "path": "evidence/4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8.json.gz",
@@ -27174,6 +27633,13 @@
         "path": "evidence/4d2ddb7f8139f407118df103feae4cea4e6ac368e7c0fbc2b309b72f6dec15a5.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Kirael12/cardano-node-audit/releases/tag/8.0.0"
+      },
+      {
+        "id": "evidence:4d6665a42e6ff71419724fbbb4738a083140c7f6f562942ea17fc58367b43a0a",
+        "digest": "4d6665a42e6ff71419724fbbb4738a083140c7f6f562942ea17fc58367b43a0a",
+        "path": "evidence/4d6665a42e6ff71419724fbbb4738a083140c7f6f562942ea17fc58367b43a0a.json.gz",
+        "description": "Native input sundae-sdk/README.md",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/README.md"
       },
       {
         "id": "evidence:4d8425bb95cb228ab05a7071c1a0156130c786f8fe9ba891682e8001b66a41be",
@@ -27348,6 +27814,13 @@
         "sourceUrl": "https://github.com/OpShin/opshin/tree/515329f99b51e27c65492237200c8aafd802837d"
       },
       {
+        "id": "evidence:590d598ad00fa378710833a6ab868c2b8b7def587f427443b62356dae69b16a7",
+        "digest": "590d598ad00fa378710833a6ab868c2b8b7def587f427443b62356dae69b16a7",
+        "path": "evidence/590d598ad00fa378710833a6ab868c2b8b7def587f427443b62356dae69b16a7.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/TxConfig.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/TxConfig.ts"
+      },
+      {
         "id": "evidence:590dcd148b293c673bb4be3601724d364d51f2879f448af36d65ff4924a3d6d7",
         "digest": "590dcd148b293c673bb4be3601724d364d51f2879f448af36d65ff4924a3d6d7",
         "path": "evidence/590dcd148b293c673bb4be3601724d364d51f2879f448af36d65ff4924a3d6d7.json.gz",
@@ -27418,11 +27891,32 @@
         "sourceUrl": "https://github.com/txbody-org/sutra-cardano/tree/c35322c32439c250416943346211f48074ba31d1"
       },
       {
+        "id": "evidence:5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3",
+        "digest": "5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3",
+        "path": "evidence/5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3.json.gz",
+        "description": "Native input lucid-evolution/packages/core-utils/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-utils/src/index.ts"
+      },
+      {
+        "id": "evidence:5bb03b35b1e877db05f4b1685de6fcc1604758f9dc6ad611b44fe17989ab9f2c",
+        "digest": "5bb03b35b1e877db05f4b1685de6fcc1604758f9dc6ad611b44fe17989ab9f2c",
+        "path": "evidence/5bb03b35b1e877db05f4b1685de6fcc1604758f9dc6ad611b44fe17989ab9f2c.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/cbor.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/cbor.ts"
+      },
+      {
         "id": "evidence:5c492a4c1949ab7c0c112b83b01807172b7777fad680e4953c11c995ba5bee5b",
         "digest": "5c492a4c1949ab7c0c112b83b01807172b7777fad680e4953c11c995ba5bee5b",
         "path": "evidence/5c492a4c1949ab7c0c112b83b01807172b7777fad680e4953c11c995ba5bee5b.json.gz",
         "description": "npm-lock for cardano-peer-connect v1.2.21",
         "sourceUrl": "https://github.com/fabianbormann/cardano-peer-connect/tree/6fce1afe581da1009a81fe119ec83357150abab9"
+      },
+      {
+        "id": "evidence:5ce944cf29972502e0efb60ecf9dc54b867e37efa9b06b2d1de567ba743b5269",
+        "digest": "5ce944cf29972502e0efb60ecf9dc54b867e37efa9b06b2d1de567ba743b5269",
+        "path": "evidence/5ce944cf29972502e0efb60ecf9dc54b867e37efa9b06b2d1de567ba743b5269.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-sign-builder/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-sign-builder/index.ts"
       },
       {
         "id": "evidence:5cf940e6230d542b6a7dd5730f6f0ae45863d98e94ec3b98ca1dc1eeb40ccdbf",
@@ -27453,6 +27947,12 @@
         "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
       },
       {
+        "id": "evidence:5db5d6559d8979e03a572666af7b8295b675c14e4f9b3d5a41ff5dbb51bd5435",
+        "digest": "5db5d6559d8979e03a572666af7b8295b675c14e4f9b3d5a41ff5dbb51bd5435",
+        "path": "evidence/5db5d6559d8979e03a572666af7b8295b675c14e4f9b3d5a41ff5dbb51bd5435.json.gz",
+        "description": "Lucid Evolution production review scope"
+      },
+      {
         "id": "evidence:5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195",
         "digest": "5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195",
         "path": "evidence/5dccf173f331fca32d5d0360de6d5e640e31cc32f5848f8d112aa4a23f517195.json.gz",
@@ -27471,6 +27971,13 @@
         "path": "evidence/5ef22ad107599a41e04f96d237c7c53cfb5eb0d0b045a4919d7a734007c7560e.json.gz",
         "description": "Source daedalus/README.md",
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/README.md"
+      },
+      {
+        "id": "evidence:5f092c0b66719652f662cc3e93d4fcae1ba2ea5b1a3a9850dc3325a6ebc615c6",
+        "digest": "5f092c0b66719652f662cc3e93d4fcae1ba2ea5b1a3a9850dc3325a6ebc615c6",
+        "path": "evidence/5f092c0b66719652f662cc3e93d4fcae1ba2ea5b1a3a9850dc3325a6ebc615c6.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/model.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/model.ts"
       },
       {
         "id": "evidence:5f9590880f916af0797998e682ed1e84aa19e6ee82df23876248b58d82afd7ec",
@@ -27548,6 +28055,34 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs/package.json"
       },
       {
+        "id": "evidence:6493e4b42d14e61907f52a676205418cbe398c6f63d65eda82f5f43281c5e394",
+        "digest": "6493e4b42d14e61907f52a676205418cbe398c6f63d65eda82f5f43281c5e394",
+        "path": "evidence/6493e4b42d14e61907f52a676205418cbe398c6f63d65eda82f5f43281c5e394.json.gz",
+        "description": "Native input sundae-sdk/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/package.json"
+      },
+      {
+        "id": "evidence:64af7b17701976ba7a90d5e7b517832bf3bd3650c1745566b130b676ba171959",
+        "digest": "64af7b17701976ba7a90d5e7b517832bf3bd3650c1745566b130b676ba171959",
+        "path": "evidence/64af7b17701976ba7a90d5e7b517832bf3bd3650c1745566b130b676ba171959.json.gz",
+        "description": "Native input lucid-evolution/packages/wallet/src/core.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/core.ts"
+      },
+      {
+        "id": "evidence:64b4e5f3cc7651dd7fa8b587ae58a3277848037bf091485d2e86f8f6f342d8d7",
+        "digest": "64b4e5f3cc7651dd7fa8b587ae58a3277848037bf091485d2e86f8f6f342d8d7",
+        "path": "evidence/64b4e5f3cc7651dd7fa8b587ae58a3277848037bf091485d2e86f8f6f342d8d7.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/lucid-evolution/providerCapabilities.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/lucid-evolution/providerCapabilities.ts"
+      },
+      {
+        "id": "evidence:64bf6ca019955a39e93f7a12ff1daf5a46335fdaba9fb55e7fde78ef663f1263",
+        "digest": "64bf6ca019955a39e93f7a12ff1daf5a46335fdaba9fb55e7fde78ef663f1263",
+        "path": "evidence/64bf6ca019955a39e93f7a12ff1daf5a46335fdaba9fb55e7fde78ef663f1263.json.gz",
+        "description": "Native input lucid-evolution/packages/wallet/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/index.ts"
+      },
+      {
         "id": "evidence:64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
         "digest": "64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
         "path": "evidence/64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d.json.gz",
@@ -27581,6 +28116,13 @@
         "path": "evidence/65efbfa474ea5f33fcb6994d4a876b1c01cbb2f7866a46e44eb827fe7943b1ef.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-interop-lib/tree/ce8ccc5433302429222921d3fe4ff3f229653e80"
+      },
+      {
+        "id": "evidence:667a521c4599fe5b0d15e75c060656b2f42f3f0928ecf6a54367b8f4378dd6b4",
+        "digest": "667a521c4599fe5b0d15e75c060656b2f42f3f0928ecf6a54367b8f4378dd6b4",
+        "path": "evidence/667a521c4599fe5b0d15e75c060656b2f42f3f0928ecf6a54367b8f4378dd6b4.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/script-context/Schema.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/script-context/Schema.ts"
       },
       {
         "id": "evidence:669489a9a06dc53fe0a0f7f833b05b932df2b7ac1af25d5a200134fe65eefc25",
@@ -27726,6 +28268,20 @@
         "sourceUrl": "https://github.com/cardananium/cquisitor/tree/99346c2742c1b6c45b84f5f081f5e822833180ff"
       },
       {
+        "id": "evidence:6dc6300ac8d1bcf9498564e210be6a53178377949dd019f759a8ceba1294d2e8",
+        "digest": "6dc6300ac8d1bcf9498564e210be6a53178377949dd019f759a8ceba1294d2e8",
+        "path": "evidence/6dc6300ac8d1bcf9498564e210be6a53178377949dd019f759a8ceba1294d2e8.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/CompleteTxBuilder.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/CompleteTxBuilder.ts"
+      },
+      {
+        "id": "evidence:6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9",
+        "digest": "6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9",
+        "path": "evidence/6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9.json.gz",
+        "description": "Native input lucid-evolution/packages/sign_data/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/sign_data/src/index.ts"
+      },
+      {
         "id": "evidence:6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
         "digest": "6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3",
         "path": "evidence/6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3.json.gz",
@@ -27738,6 +28294,13 @@
         "path": "evidence/6ed60607365eab33e2e1ce3203b4a38c6f78a37eb99070e7fc0fe56ddd3f03be.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/plutus/releases/tag/1.72.0.0"
+      },
+      {
+        "id": "evidence:6f059edb5df7c61627fc1e86afed352f69ff190367265f8cdbe8e2f6f919e60f",
+        "digest": "6f059edb5df7c61627fc1e86afed352f69ff190367265f8cdbe8e2f6f919e60f",
+        "path": "evidence/6f059edb5df7c61627fc1e86afed352f69ff190367265f8cdbe8e2f6f919e60f.json.gz",
+        "description": "Native input lucid-evolution/packages/core-types/src/global.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-types/src/global.ts"
       },
       {
         "id": "evidence:6f160aa5a38debc7b9bdfbff0056613ceff765b36ac2e1b0b4ae0a70fc33b0bc",
@@ -27775,6 +28338,20 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/releases/tag/0.4.0-beta"
       },
       {
+        "id": "evidence:6f8785bc7838293d40f5e4b1dbb7629fc898b4ecb2c45e585f1031d78adf8e06",
+        "digest": "6f8785bc7838293d40f5e4b1dbb7629fc898b4ecb2c45e585f1031d78adf8e06",
+        "path": "evidence/6f8785bc7838293d40f5e4b1dbb7629fc898b4ecb2c45e585f1031d78adf8e06.json.gz",
+        "description": "Native input lucid-evolution/packages/core-types/src/types.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-types/src/types.ts"
+      },
+      {
+        "id": "evidence:6fa4b25f4d889d66cb560b0b19e216fed32a62950e1a92ef6ad809f120431f76",
+        "digest": "6fa4b25f4d889d66cb560b0b19e216fed32a62950e1a92ef6ad809f120431f76",
+        "path": "evidence/6fa4b25f4d889d66cb560b0b19e216fed32a62950e1a92ef6ad809f120431f76.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/lucid-evolution/LucidEvolution.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/lucid-evolution/LucidEvolution.ts"
+      },
+      {
         "id": "evidence:6fa5eade8ba80c9e99d06d8ef6846f5c62d4019a01e65b121141810cc0981703",
         "digest": "6fa5eade8ba80c9e99d06d8ef6846f5c62d4019a01e65b121141810cc0981703",
         "path": "evidence/6fa5eade8ba80c9e99d06d8ef6846f5c62d4019a01e65b121141810cc0981703.json.gz",
@@ -27794,6 +28371,13 @@
         "path": "evidence/70777a4af5d7f8d32b233d950305c1f219bbb76c2aa4cc5e0906f7dd6320f439.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Python-Cardano/pycardano/releases/tag/v0.19.2"
+      },
+      {
+        "id": "evidence:708720f07aa45c55a2e59ac69d7484a3c7ef21f3cf6a15e5d3680c357f050367",
+        "digest": "708720f07aa45c55a2e59ac69d7484a3c7ef21f3cf6a15e5d3680c357f050367",
+        "path": "evidence/708720f07aa45c55a2e59ac69d7484a3c7ef21f3cf6a15e5d3680c357f050367.json.gz",
+        "description": "Native input lucid-evolution/packages/wallet/src/wallet_selection.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/wallet_selection.ts"
       },
       {
         "id": "evidence:71335bcaf04fff4070ec8f3f8422511af292b70ca240ded23721374a3a1f8a7d",
@@ -27852,6 +28436,13 @@
         "sourceUrl": "https://github.com/HarmonicLabs/ouroboros-miniprotocols-ts/tree/9c26c7c24bdffb9af29d91cc59b2c5a65f98567d"
       },
       {
+        "id": "evidence:7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e",
+        "digest": "7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e",
+        "path": "evidence/7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/time.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/time.ts"
+      },
+      {
         "id": "evidence:7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc",
         "digest": "7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc",
         "path": "evidence/7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc.json.gz",
@@ -27859,11 +28450,25 @@
         "sourceUrl": "https://github.com/SundaeSwap-finance/aicone/tree/753436d6caea515a6be7e607e2181afc1fa99369"
       },
       {
+        "id": "evidence:74aab679ee731eef5abf6709109145cc6331f23d680f451d9ce7e3fcd3d160fb",
+        "digest": "74aab679ee731eef5abf6709109145cc6331f23d680f451d9ce7e3fcd3d160fb",
+        "path": "evidence/74aab679ee731eef5abf6709109145cc6331f23d680f451d9ce7e3fcd3d160fb.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/semantic.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/semantic.ts"
+      },
+      {
         "id": "evidence:74ea4b0c5a953ea3fca01f4523698474e32e8052d4491827a746189488a7a18d",
         "digest": "74ea4b0c5a953ea3fca01f4523698474e32e8052d4491827a746189488a7a18d",
         "path": "evidence/74ea4b0c5a953ea3fca01f4523698474e32e8052d4491827a746189488a7a18d.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/bot-plutus-interface/releases/tag/vasil-compliant-v1.1.0"
+      },
+      {
+        "id": "evidence:7504b3695c0427c621b03527dd41d57e43f57962065fc659ab9db014ee58215d",
+        "digest": "7504b3695c0427c621b03527dd41d57e43f57962065fc659ab9db014ee58215d",
+        "path": "evidence/7504b3695c0427c621b03527dd41d57e43f57962065fc659ab9db014ee58215d.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/index.ts"
       },
       {
         "id": "evidence:7529eb82130ff0571b0f16974ed101c469f969a9c73efd476d51d43e1dc97ac5",
@@ -27934,6 +28539,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/dingo/blob/e0630ddf8a72dc0280ed8845fb1d899fae2d1051/go.mod"
       },
       {
+        "id": "evidence:77e9eb271162548586e3e2e145994621cb68c766428791ce3e9c98cdbbb5dea4",
+        "digest": "77e9eb271162548586e3e2e145994621cb68c766428791ce3e9c98cdbbb5dea4",
+        "path": "evidence/77e9eb271162548586e3e2e145994621cb68c766428791ce3e9c98cdbbb5dea4.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Service.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Service.ts"
+      },
+      {
         "id": "evidence:79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88",
         "digest": "79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88",
         "path": "evidence/79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88.json.gz",
@@ -27941,10 +28553,24 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/scripts/rebuild-native-modules.sh"
       },
       {
+        "id": "evidence:792b793a9f713e985b04398169985f7da8213a9dd9e96f44717ae5fa0e38bb39",
+        "digest": "792b793a9f713e985b04398169985f7da8213a9dd9e96f44717ae5fa0e38bb39",
+        "path": "evidence/792b793a9f713e985b04398169985f7da8213a9dd9e96f44717ae5fa0e38bb39.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/svg.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/svg.ts"
+      },
+      {
         "id": "evidence:7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
         "digest": "7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
         "path": "evidence/7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07.json.gz",
         "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
+        "id": "evidence:79aaa21292cf901a80e9afe3fc4ce252c97c481e33b4302686c63be8b25d0390",
+        "digest": "79aaa21292cf901a80e9afe3fc4ce252c97c481e33b4302686c63be8b25d0390",
+        "path": "evidence/79aaa21292cf901a80e9afe3fc4ce252c97c481e33b4302686c63be8b25d0390.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/lucid-evolution/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/lucid-evolution/index.ts"
       },
       {
         "id": "evidence:79c816d392a8b3b31e22098049223ee2d273897529559e6c80b85fdd52a94d69",
@@ -27958,6 +28584,13 @@
         "path": "evidence/79cf2f9110ec1f749e0e48fa84e3a761aa419df46da7b0a5b9f43c1b8605ead6.json.gz",
         "description": "npm-lock for weld @ada-anvil/weld-plugin-hodei@0.0.10",
         "sourceUrl": "https://github.com/Cardano-Forge/weld/tree/ce6cf90d721358254e8b70c1e484a5f342be4e74"
+      },
+      {
+        "id": "evidence:79d8976a1ca0f07698f554682d947a7d826691631f3147847c99e1fadc36d74f",
+        "digest": "79d8976a1ca0f07698f554682d947a7d826691631f3147847c99e1fadc36d74f",
+        "path": "evidence/79d8976a1ca0f07698f554682d947a7d826691631f3147847c99e1fadc36d74f.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/dot.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/dot.ts"
       },
       {
         "id": "evidence:7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
@@ -28028,6 +28661,20 @@
         "description": "Cardano JS SDK collection disk-interruption recovery"
       },
       {
+        "id": "evidence:7bdf1417e60b89495bdec942c5b6651381f33e1c0bb4d62e1d85c2aeb5d9ae76",
+        "digest": "7bdf1417e60b89495bdec942c5b6651381f33e1c0bb4d62e1d85c2aeb5d9ae76",
+        "path": "evidence/7bdf1417e60b89495bdec942c5b6651381f33e1c0bb4d62e1d85c2aeb5d9ae76.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/node-renderer.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/node-renderer.ts"
+      },
+      {
+        "id": "evidence:7c3c5924ef86071c436a37e04ec9c2ce576cc8f4b5b7b3b7468047ed50092b7c",
+        "digest": "7c3c5924ef86071c436a37e04ec9c2ce576cc8f4b5b7b3b7468047ed50092b7c",
+        "path": "evidence/7c3c5924ef86071c436a37e04ec9c2ce576cc8f4b5b7b3b7468047ed50092b7c.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/Errors.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/Errors.ts"
+      },
+      {
         "id": "evidence:7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
         "digest": "7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
         "path": "evidence/7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c.json.gz",
@@ -28054,6 +28701,13 @@
         "path": "evidence/7cc85af410aef03445903e732a1025fe68dafc477f12fb60141c364e51b37203.json.gz",
         "description": "Source nami/package.json",
         "sourceUrl": "https://github.com/input-output-hk/nami/blob/e52e0bdb02eb1ec224db26f48b0192685a30f99e/package.json"
+      },
+      {
+        "id": "evidence:7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8",
+        "digest": "7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8",
+        "path": "evidence/7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8.json.gz",
+        "description": "Native input lucid-evolution/packages/wallet/src/root_key.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/root_key.ts"
       },
       {
         "id": "evidence:7d80eefe09ae025662ebd36c593273cb13a59ae176c84ea07796b4342b00cebd",
@@ -28096,6 +28750,13 @@
         "path": "evidence/7fc374e87623e2cdc00c1ad91f2a1c7c5306991ea7d1985f4e91439ced54cb5c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
+      },
+      {
+        "id": "evidence:7ff32884bc0746131934aa9c970e498ae67b5e07f47ec41c874b1a398db5673d",
+        "digest": "7ff32884bc0746131934aa9c970e498ae67b5e07f47ec41c874b1a398db5673d",
+        "path": "evidence/7ff32884bc0746131934aa9c970e498ae67b5e07f47ec41c874b1a398db5673d.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/network.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/network.ts"
       },
       {
         "id": "evidence:80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100",
@@ -28188,6 +28849,13 @@
         "sourceUrl": "https://github.com/gitmachtl/scripts/tree/85e783f6886b449fbb0bb85f33f8d3a84bb6303d"
       },
       {
+        "id": "evidence:844be4d6f65d3726e09053fa084fc6bb6475f7ec217385ba773b7e52ed4946b2",
+        "digest": "844be4d6f65d3726e09053fa084fc6bb6475f7ec217385ba773b7e52ed4946b2",
+        "path": "evidence/844be4d6f65d3726e09053fa084fc6bb6475f7ec217385ba773b7e52ed4946b2.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/index.ts"
+      },
+      {
         "id": "evidence:84a26a18a2caed7c1aae19e14260e0851adc6d75949544ec51014af30b327a61",
         "digest": "84a26a18a2caed7c1aae19e14260e0851adc6d75949544ec51014af30b327a61",
         "path": "evidence/84a26a18a2caed7c1aae19e14260e0851adc6d75949544ec51014af30b327a61.json.gz",
@@ -28251,6 +28919,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-toolbox/releases/tag/v0.5.0"
       },
       {
+        "id": "evidence:854dd004ecedded567c2aaaf25bcefdea81e72797e85824f49c0f4deea80aff6",
+        "digest": "854dd004ecedded567c2aaaf25bcefdea81e72797e85824f49c0f4deea80aff6",
+        "path": "evidence/854dd004ecedded567c2aaaf25bcefdea81e72797e85824f49c0f4deea80aff6.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/errors.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/errors.ts"
+      },
+      {
         "id": "evidence:859558dfee722a4dc35328c3a544bf39dd315477680314e21d54cc669f65e82d",
         "digest": "859558dfee722a4dc35328c3a544bf39dd315477680314e21d54cc669f65e82d",
         "path": "evidence/859558dfee722a4dc35328c3a544bf39dd315477680314e21d54cc669f65e82d.json.gz",
@@ -28270,6 +28945,13 @@
         "path": "evidence/85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8.json.gz",
         "description": "Source cometa-js/src/wallet/Wallet.ts",
         "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/src/wallet/Wallet.ts"
+      },
+      {
+        "id": "evidence:85ba69582847d531230cfb0bcd3feed3384b6604067d91f086ba4bccfde8caed",
+        "digest": "85ba69582847d531230cfb0bcd3feed3384b6604067d91f086ba4bccfde8caed",
+        "path": "evidence/85ba69582847d531230cfb0bcd3feed3384b6604067d91f086ba4bccfde8caed.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/index.ts"
       },
       {
         "id": "evidence:85ed7900a470690fe13c320e93d4fed00e744cdf9ab704754937f68fd20ed55f",
@@ -28356,6 +29038,13 @@
         "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/src/app/load-app.ts"
       },
       {
+        "id": "evidence:8800cb79c6a82322dcb847cf5bee7d325d3b307339195442383edb93d3fd9f92",
+        "digest": "8800cb79c6a82322dcb847cf5bee7d325d3b307339195442383edb93d3fd9f92",
+        "path": "evidence/8800cb79c6a82322dcb847cf5bee7d325d3b307339195442383edb93d3fd9f92.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Stake.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Stake.ts"
+      },
+      {
         "id": "evidence:88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a",
         "digest": "88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a",
         "path": "evidence/88042038d3e7a7ad97ec1fe351b0e034c309919a62e2c743582ad20586266a2a.json.gz",
@@ -28426,6 +29115,13 @@
         "sourceUrl": "https://github.com/vacuumlabs/cardano-crypto.js/tree/61adcedba42bb324456b96d60af3d4d46c2de328"
       },
       {
+        "id": "evidence:89ffd533074e19b207b5437e541c881b831b7ea71c85a4f45380ea39454dce4e",
+        "digest": "89ffd533074e19b207b5437e541c881b831b7ea71c85a4f45380ea39454dce4e",
+        "path": "evidence/89ffd533074e19b207b5437e541c881b831b7ea71c85a4f45380ea39454dce4e.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/lucid-evolution/utils.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/lucid-evolution/utils.ts"
+      },
+      {
         "id": "evidence:8a142a9ba8f1c5f0e321e277a767ee582e157ab226de98dc196523fb344e836e",
         "digest": "8a142a9ba8f1c5f0e321e277a767ee582e157ab226de98dc196523fb344e836e",
         "path": "evidence/8a142a9ba8f1c5f0e321e277a767ee582e157ab226de98dc196523fb344e836e.json.gz",
@@ -28467,6 +29163,13 @@
         "sourceUrl": "https://github.com/txpipe/metis/tree/4c07a40e26d22956bed5915ca09025073b7aa69e"
       },
       {
+        "id": "evidence:8b1ecc5bf000dd337366ba05269c845197701d2ad525094ff2c30d6947ca1515",
+        "digest": "8b1ecc5bf000dd337366ba05269c845197701d2ad525094ff2c30d6947ca1515",
+        "path": "evidence/8b1ecc5bf000dd337366ba05269c845197701d2ad525094ff2c30d6947ca1515.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/GovernanceAction.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/GovernanceAction.ts"
+      },
+      {
         "id": "evidence:8b29002d812b96b32972827fca39acb93b9807c890d6572ca13a70b7752af9fc",
         "digest": "8b29002d812b96b32972827fca39acb93b9807c890d6572ca13a70b7752af9fc",
         "path": "evidence/8b29002d812b96b32972827fca39acb93b9807c890d6572ca13a70b7752af9fc.json.gz",
@@ -28492,6 +29195,13 @@
         "path": "evidence/8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/tree/8e6fd820d21e901f019af71eec8150400b1e9669"
+      },
+      {
+        "id": "evidence:8c399761dd154a05cd3f6857af018f7c2614555331a90de04115ef3dc6a80989",
+        "digest": "8c399761dd154a05cd3f6857af018f7c2614555331a90de04115ef3dc6a80989",
+        "path": "evidence/8c399761dd154a05cd3f6857af018f7c2614555331a90de04115ef3dc6a80989.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/native.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/native.ts"
       },
       {
         "id": "evidence:8ca80632d475a280a1f309cbb8c082ddb84716040f05b84ae8e8f4c99ce459be",
@@ -28597,11 +29307,25 @@
         "sourceUrl": "https://github.com/cardano-foundation/cf-java-rewards-calculation/tree/7efbd08050668088bb55891cf5cf8890f82eda00"
       },
       {
+        "id": "evidence:914d7970c8965ddf3e084117c57dd8b7fe79df84cf7c1e3a237a500b37d8d2db",
+        "digest": "914d7970c8965ddf3e084117c57dd8b7fe79df84cf7c1e3a237a500b37d8d2db",
+        "path": "evidence/914d7970c8965ddf3e084117c57dd8b7fe79df84cf7c1e3a237a500b37d8d2db.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/layout.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/layout.ts"
+      },
+      {
         "id": "evidence:91753651fc4186d8bb7d6aa6c80eebe54ed351b2a6853be69b32d442143173f5",
         "digest": "91753651fc4186d8bb7d6aa6c80eebe54ed351b2a6853be69b32d442143173f5",
         "path": "evidence/91753651fc4186d8bb7d6aa6c80eebe54ed351b2a6853be69b32d442143173f5.json.gz",
         "description": "Native input dingo/go.sum",
         "sourceUrl": "https://github.com/blinklabs-io/dingo/blob/e0630ddf8a72dc0280ed8845fb1d899fae2d1051/go.sum"
+      },
+      {
+        "id": "evidence:9183cd535bd9fe396c9aa6f235eda2f6bf625d1ec18e7caffb303cb72b4617c6",
+        "digest": "9183cd535bd9fe396c9aa6f235eda2f6bf625d1ec18e7caffb303cb72b4617c6",
+        "path": "evidence/9183cd535bd9fe396c9aa6f235eda2f6bf625d1ec18e7caffb303cb72b4617c6.json.gz",
+        "description": "Native input lucid-evolution/README.md",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/README.md"
       },
       {
         "id": "evidence:928d5093296bec6b727a704be051e5a672ded03aa88820dc27bbfa44bb823c68",
@@ -28616,6 +29340,13 @@
         "path": "evidence/92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca.json.gz",
         "description": "npm-lock for cardano-dapp-wallet-connector unreleased:master",
         "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/tree/5d629436c7b7e7c2757355888a63cccd62fb1bca"
+      },
+      {
+        "id": "evidence:92e5133c6d7f2f15357c0edf4dde21c12771dc8c9e9d21673f1fe3cd528ea519",
+        "digest": "92e5133c6d7f2f15357c0edf4dde21c12771dc8c9e9d21673f1fe3cd528ea519",
+        "path": "evidence/92e5133c6d7f2f15357c0edf4dde21c12771dc8c9e9d21673f1fe3cd528ea519.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/RedeemerContext.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/RedeemerContext.ts"
       },
       {
         "id": "evidence:92eae4d74538a64657ccf7443bdebae974ff232deae09ce0375114f2ea7ef8ed",
@@ -28746,6 +29477,13 @@
         "sourceUrl": "https://github.com/tx3-lang/tx3/tree/f2cadfdb80dbdb72c111ec770e3f233fcbbff2db"
       },
       {
+        "id": "evidence:97e84b5649cbd16331ff9abfa6d8ff448629ac71eaadb21e603fdf56bccce3d4",
+        "digest": "97e84b5649cbd16331ff9abfa6d8ff448629ac71eaadb21e603fdf56bccce3d4",
+        "path": "evidence/97e84b5649cbd16331ff9abfa6d8ff448629ac71eaadb21e603fdf56bccce3d4.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/script-cache.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/script-cache.ts"
+      },
+      {
         "id": "evidence:982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
         "digest": "982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
         "path": "evidence/982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c.json.gz",
@@ -28814,6 +29552,13 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/yarn.lock"
       },
       {
+        "id": "evidence:9a34cd30114e5e3204cc21a980dfb0a8df2ce9ac440bee77595d89957089beb4",
+        "digest": "9a34cd30114e5e3204cc21a980dfb0a8df2ce9ac440bee77595d89957089beb4",
+        "path": "evidence/9a34cd30114e5e3204cc21a980dfb0a8df2ce9ac440bee77595d89957089beb4.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/scripts.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/scripts.ts"
+      },
+      {
         "id": "evidence:9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad",
         "digest": "9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad",
         "path": "evidence/9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad.json.gz",
@@ -28833,6 +29578,13 @@
         "path": "evidence/9b085ba3268d97639db58996ea7ce5049f13c0a2ab590592c006e59cb675af13.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
+      },
+      {
+        "id": "evidence:9bef9dbcf822ddd1846658e55ad9469da474f12c8bbf518a80a159ead3219dff",
+        "digest": "9bef9dbcf822ddd1846658e55ad9469da474f12c8bbf518a80a159ead3219dff",
+        "path": "evidence/9bef9dbcf822ddd1846658e55ad9469da474f12c8bbf518a80a159ead3219dff.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/TxBuilder.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/TxBuilder.ts"
       },
       {
         "id": "evidence:9c1b66d3c9ff8ed0c3255503ad2c78aa80ee77fd8a3be19a7aa8e4d7e3f9cfbe",
@@ -28883,11 +29635,25 @@
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/README.md"
       },
       {
+        "id": "evidence:9d74a8eed1a82d7206d51278c5944f2ece7c77644fe0027060d57fd12135f74e",
+        "digest": "9d74a8eed1a82d7206d51278c5944f2ece7c77644fe0027060d57fd12135f74e",
+        "path": "evidence/9d74a8eed1a82d7206d51278c5944f2ece7c77644fe0027060d57fd12135f74e.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-sign-builder/internal/Sign.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-sign-builder/internal/Sign.ts"
+      },
+      {
         "id": "evidence:9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
         "digest": "9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
         "path": "evidence/9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/SundaeSwap-finance/toolkit-for-cardano/tree/ffe889ac08450c5d9f1272cbdc8ffcd990af671b"
+      },
+      {
+        "id": "evidence:9e1a5ece62326322e0950cb3cfe2daac24dc33fc1e50a7bc33d57f790ec5bb29",
+        "digest": "9e1a5ece62326322e0950cb3cfe2daac24dc33fc1e50a7bc33d57f790ec5bb29",
+        "path": "evidence/9e1a5ece62326322e0950cb3cfe2daac24dc33fc1e50a7bc33d57f790ec5bb29.json.gz",
+        "description": "Native input lucid-evolution/packages/wallet/src/wallet.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/wallet.ts"
       },
       {
         "id": "evidence:9e948cdf599191edd8b7b97e6c587900e8b880df345b7c7b934aa44dc2398ebd",
@@ -28930,6 +29696,13 @@
         "path": "evidence/a0d170fc667c9473b409d98185a77be66a35cf64730957b1462436bcb8309fee.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/cardano-foundation/cf-ledger-sync/tree/c93dc4d81de8f6234811e2f0b43929531ec5905a"
+      },
+      {
+        "id": "evidence:a12587f1f478caa72165c59a8a49b231bce6ad5d45764284884a41db9a8d879f",
+        "digest": "a12587f1f478caa72165c59a8a49b231bce6ad5d45764284884a41db9a8d879f",
+        "path": "evidence/a12587f1f478caa72165c59a8a49b231bce6ad5d45764284884a41db9a8d879f.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/credential.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/credential.ts"
       },
       {
         "id": "evidence:a129845ab643eb92e9a2752b20f4bfc6ae94da2693be82d0a01a94b544cb0e60",
@@ -29001,6 +29774,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/cardano-launcher/tree/1fdd6be7540c3ac659943b9b1c13b34833277627"
       },
       {
+        "id": "evidence:a2d938c90a93e2ee017944968717e225112318c3db76a82386682365154cf422",
+        "digest": "a2d938c90a93e2ee017944968717e225112318c3db76a82386682365154cf422",
+        "path": "evidence/a2d938c90a93e2ee017944968717e225112318c3db76a82386682365154cf422.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/keys.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/keys.ts"
+      },
+      {
         "id": "evidence:a334531bdd4e75f1c9b8bc0f020b56d0224e4ce1099851be3cf572cef8b931fb",
         "digest": "a334531bdd4e75f1c9b8bc0f020b56d0224e4ce1099851be3cf572cef8b931fb",
         "path": "evidence/a334531bdd4e75f1c9b8bc0f020b56d0224e4ce1099851be3cf572cef8b931fb.json.gz",
@@ -29029,11 +29809,24 @@
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/README.md"
       },
       {
+        "id": "evidence:a3fc47387b0b83ad7d32d93dbac74cc6d3524e64901ab5d75a43babaf09bd4bf",
+        "digest": "a3fc47387b0b83ad7d32d93dbac74cc6d3524e64901ab5d75a43babaf09bd4bf",
+        "path": "evidence/a3fc47387b0b83ad7d32d93dbac74cc6d3524e64901ab5d75a43babaf09bd4bf.json.gz",
+        "description": "Failed native collection for sundae-sdk"
+      },
+      {
         "id": "evidence:a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
         "digest": "a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
         "path": "evidence/a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53.json.gz",
         "description": "Native input evolution-sdk/packages/scalus-uplc/package.json",
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/scalus-uplc/package.json"
+      },
+      {
+        "id": "evidence:a473ca38880ad2b48cc007eb0fc61e8b621b7be5e1dce51257ac228e835b9ce9",
+        "digest": "a473ca38880ad2b48cc007eb0fc61e8b621b7be5e1dce51257ac228e835b9ce9",
+        "path": "evidence/a473ca38880ad2b48cc007eb0fc61e8b621b7be5e1dce51257ac228e835b9ce9.json.gz",
+        "description": "Native input sundae-sdk/packages/core/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/core/package.json"
       },
       {
         "id": "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
@@ -29048,6 +29841,13 @@
         "path": "evidence/a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/WingRiders/datum-explorer/tree/9e4b74840c91ba95dd4f1c80cb87a17c02562eba"
+      },
+      {
+        "id": "evidence:a5106f31212cafc7a40a335dde7132e44a4e6e863f84d761ab7f1d2d44bb084e",
+        "digest": "a5106f31212cafc7a40a335dde7132e44a4e6e863f84d761ab7f1d2d44bb084e",
+        "path": "evidence/a5106f31212cafc7a40a335dde7132e44a4e6e863f84d761ab7f1d2d44bb084e.json.gz",
+        "description": "Native input sundae-sdk/packages/yield-farming/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/yield-farming/package.json"
       },
       {
         "id": "evidence:a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17",
@@ -29146,6 +29946,13 @@
         "path": "evidence/a979e48e56a659a3958241ce74c3b1ef796bad98a87ee7a5fe41bf5372cd980f.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/aiken-lang/stdlib/releases/tag/v4.0.0"
+      },
+      {
+        "id": "evidence:a9bd16bbbf3d827b6bff1cff5aab740d87b84f81398901e131c7e50257c8a799",
+        "digest": "a9bd16bbbf3d827b6bff1cff5aab740d87b84f81398901e131c7e50257c8a799",
+        "path": "evidence/a9bd16bbbf3d827b6bff1cff5aab740d87b84f81398901e131c7e50257c8a799.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Interval.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Interval.ts"
       },
       {
         "id": "evidence:a9d1635eb2c8824cac83af6c7a81510555fcf318fbf761a5760ea08305cd60be",
@@ -29266,6 +30073,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/cardano-ibc-incubator/releases/tag/cosmos/cardano-probabilistic-light-client-v10/v0.1.5"
       },
       {
+        "id": "evidence:adf00a9a66d1113c2e2cb2a8c785378725cc6c0716d7aa4a91deba693b7238e3",
+        "digest": "adf00a9a66d1113c2e2cb2a8c785378725cc6c0716d7aa4a91deba693b7238e3",
+        "path": "evidence/adf00a9a66d1113c2e2cb2a8c785378725cc6c0716d7aa4a91deba693b7238e3.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/core.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/core.ts"
+      },
+      {
         "id": "evidence:ae7b1bfb1bf2e86244c55b04d74b62ea2472f5d56c00520267d62e3d31129692",
         "digest": "ae7b1bfb1bf2e86244c55b04d74b62ea2472f5d56c00520267d62e3d31129692",
         "path": "evidence/ae7b1bfb1bf2e86244c55b04d74b62ea2472f5d56c00520267d62e3d31129692.json.gz",
@@ -29321,6 +30135,13 @@
         "sourceUrl": "https://github.com/bloxbean/julc/tree/a29e6c71c6e5bb58079b8b1c54eec60cbb2189e9"
       },
       {
+        "id": "evidence:aff43f8753fd5e9770f75364fdc080db08eff3de0c9d075a20041272c728f5cd",
+        "digest": "aff43f8753fd5e9770f75364fdc080db08eff3de0c9d075a20041272c728f5cd",
+        "path": "evidence/aff43f8753fd5e9770f75364fdc080db08eff3de0c9d075a20041272c728f5cd.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Signer.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Signer.ts"
+      },
+      {
         "id": "evidence:b00228ef2f9c8b299952970ab2f0f2b7f52658b9ca692f11f9e85022afeef600",
         "digest": "b00228ef2f9c8b299952970ab2f0f2b7f52658b9ca692f11f9e85022afeef600",
         "path": "evidence/b00228ef2f9c8b299952970ab2f0f2b7f52658b9ca692f11f9e85022afeef600.json.gz",
@@ -29374,6 +30195,13 @@
         "digest": "b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630",
         "path": "evidence/b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630.json.gz",
         "description": "Collection request for lace"
+      },
+      {
+        "id": "evidence:b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8",
+        "digest": "b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8",
+        "path": "evidence/b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/datum.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/datum.ts"
       },
       {
         "id": "evidence:b2cf374a9eabf082890a4f54c17fcbba3b586f4e1d05f445ab69e255fca1ab65",
@@ -29495,6 +30323,13 @@
         "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/releases/tag/v1.19.1"
       },
       {
+        "id": "evidence:b7c17f5d691a24a9599315043181a87bfebe9f9339108637ab75c9ad3df4558a",
+        "digest": "b7c17f5d691a24a9599315043181a87bfebe9f9339108637ab75c9ad3df4558a",
+        "path": "evidence/b7c17f5d691a24a9599315043181a87bfebe9f9339108637ab75c9ad3df4558a.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/graph.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/graph.ts"
+      },
+      {
         "id": "evidence:b7d870026180df4017b7608ea67ae556ee9841072e6ff05011db9b46006789ed",
         "digest": "b7d870026180df4017b7608ea67ae556ee9841072e6ff05011db9b46006789ed",
         "path": "evidence/b7d870026180df4017b7608ea67ae556ee9841072e6ff05011db9b46006789ed.json.gz",
@@ -29598,6 +30433,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/cardano-launcher/releases/tag/0.20220119.0"
       },
       {
+        "id": "evidence:ba1a88eaddbd4eadb3b029feecec015fdf4a3765ae60f1ac19324d9943f24551",
+        "digest": "ba1a88eaddbd4eadb3b029feecec015fdf4a3765ae60f1ac19324d9943f24551",
+        "path": "evidence/ba1a88eaddbd4eadb3b029feecec015fdf4a3765ae60f1ac19324d9943f24551.json.gz",
+        "description": "Native input sundae-sdk/bun.lock",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/bun.lock"
+      },
+      {
         "id": "evidence:ba55cc21383763acebd22082069ce306a25225daa920f0ad45946002553e0224",
         "digest": "ba55cc21383763acebd22082069ce306a25225daa920f0ad45946002553e0224",
         "path": "evidence/ba55cc21383763acebd22082069ce306a25225daa920f0ad45946002553e0224.json.gz",
@@ -29610,6 +30452,13 @@
         "path": "evidence/ba9fce3cda35907c416a555f18156a191412bdaf3f99bb11dda68bae28045c95.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/SundaeSwap-finance/aicone/tree/753436d6caea515a6be7e607e2181afc1fa99369"
+      },
+      {
+        "id": "evidence:baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c",
+        "digest": "baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c",
+        "path": "evidence/baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/html.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/html.ts"
       },
       {
         "id": "evidence:bb1aee51c2ce7968a99a1a0602fa3ad508ed867251f95d91b2dcfbd01b21ce2e",
@@ -29631,6 +30480,13 @@
         "path": "evidence/bb43ca6503611e85dc501058cbf8d8a080e2a86b10a31b0908706ae23f01d520.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-open-oracle-protocol/releases/tag/v1.0.0"
+      },
+      {
+        "id": "evidence:bb88200f53459729829f1f77a3865565998a806d7dc4765261ca7955df24b6af",
+        "digest": "bb88200f53459729829f1f77a3865565998a806d7dc4765261ca7955df24b6af",
+        "path": "evidence/bb88200f53459729829f1f77a3865565998a806d7dc4765261ca7955df24b6af.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Treasury.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Treasury.ts"
       },
       {
         "id": "evidence:bbf5837bc305ace6369a71cd837e9ec5e37606b447a60672debb5491c3a41b66",
@@ -29678,6 +30534,20 @@
         "digest": "bce381696968e924657c0c11bd53454834e6efd56e02133e0b4d6a1c0c30c89e",
         "path": "evidence/bce381696968e924657c0c11bd53454834e6efd56e02133e0b4d6a1c0c30c89e.json.gz",
         "description": "Collection request ouroboros-miniprotocols-ts 18ec5882172eaa4bf5a2d0920a7415c98d54fc047449e616dd4ca61f8e8170f4"
+      },
+      {
+        "id": "evidence:bd1937de70e9547743a9f22d0f554185e2b30e1d6d383bdb217c27fd029de063",
+        "digest": "bd1937de70e9547743a9f22d0f554185e2b30e1d6d383bdb217c27fd029de063",
+        "path": "evidence/bd1937de70e9547743a9f22d0f554185e2b30e1d6d383bdb217c27fd029de063.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/TxUtils.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/TxUtils.ts"
+      },
+      {
+        "id": "evidence:bd23f0c7a95cae2f64a2c56cb9b148e3add6b6b2a357c080a2d2972c0796b6e9",
+        "digest": "bd23f0c7a95cae2f64a2c56cb9b148e3add6b6b2a357c080a2d2972c0796b6e9",
+        "path": "evidence/bd23f0c7a95cae2f64a2c56cb9b148e3add6b6b2a357c080a2d2972c0796b6e9.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/index.ts"
       },
       {
         "id": "evidence:bd46c24b22d49e8f914d8364e8b2afb44955556a4624bed3fd3efc1d04af97f1",
@@ -29844,6 +30714,13 @@
         "sourceUrl": "https://github.com/nufi-official/nufi/tree/8527b8760716c93915779624e3f78124010cbf92"
       },
       {
+        "id": "evidence:c5496f5e3bbbae594cd3c45af1a182d497734d220356b1212c000501c199f2f6",
+        "digest": "c5496f5e3bbbae594cd3c45af1a182d497734d220356b1212c000501c199f2f6",
+        "path": "evidence/c5496f5e3bbbae594cd3c45af1a182d497734d220356b1212c000501c199f2f6.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/index.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/index.ts"
+      },
+      {
         "id": "evidence:c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55",
         "digest": "c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55",
         "path": "evidence/c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55.json.gz",
@@ -29863,6 +30740,13 @@
         "path": "evidence/c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7.json.gz",
         "description": "Native input evolution-sdk/package.json",
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/package.json"
+      },
+      {
+        "id": "evidence:c5e488d990987d116465e5bcdd955ad2956566a3a2b2c68b0a8dbde0cefa3427",
+        "digest": "c5e488d990987d116465e5bcdd955ad2956566a3a2b2c68b0a8dbde0cefa3427",
+        "path": "evidence/c5e488d990987d116465e5bcdd955ad2956566a3a2b2c68b0a8dbde0cefa3427.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/data.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/data.ts"
       },
       {
         "id": "evidence:c6123be32077ff37a50d32249d1af41066d21819eff44e23fc4f5d9d836b4f74",
@@ -29903,6 +30787,13 @@
         "path": "evidence/c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6.json.gz",
         "description": "Source oura/README.md",
         "sourceUrl": "https://github.com/txpipe/oura/blob/6c326ddf3e010ee955cb45358dea7522dc75e331/README.md"
+      },
+      {
+        "id": "evidence:c6abb9a491df0d69c61daca0b1e190dada7fff51617f56e65dc7d797df6b5688",
+        "digest": "c6abb9a491df0d69c61daca0b1e190dada7fff51617f56e65dc7d797df6b5688",
+        "path": "evidence/c6abb9a491df0d69c61daca0b1e190dada7fff51617f56e65dc7d797df6b5688.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/value.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/value.ts"
       },
       {
         "id": "evidence:c6baea237889e3874b26081bc456058a61d6938dccf9f0d9dd78da87d51a0af5",
@@ -30059,11 +30950,25 @@
         "sourceUrl": "https://github.com/ItsDaveB/OgmiosDotnet/tree/73c1aad5e99ac2266c99f19bd1cdf273d0cf796c"
       },
       {
+        "id": "evidence:cb22b644973c76cba835ae6f6ecfe7478b7bcd265c864b694c7599f52e7db849",
+        "digest": "cb22b644973c76cba835ae6f6ecfe7478b7bcd265c864b694c7599f52e7db849",
+        "path": "evidence/cb22b644973c76cba835ae6f6ecfe7478b7bcd265c864b694c7599f52e7db849.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/kupo.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/kupo.ts"
+      },
+      {
         "id": "evidence:cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
         "digest": "cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
         "path": "evidence/cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02.json.gz",
         "description": "Source typhonjs/.yarnrc.yml",
         "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/.yarnrc.yml"
+      },
+      {
+        "id": "evidence:cb9413d739c0294e45f50b7acb82a19e266f6088aa45cc42da2db8ac2756e2cc",
+        "digest": "cb9413d739c0294e45f50b7acb82a19e266f6088aa45cc42da2db8ac2756e2cc",
+        "path": "evidence/cb9413d739c0294e45f50b7acb82a19e266f6088aa45cc42da2db8ac2756e2cc.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/blockfrost.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/blockfrost.ts"
       },
       {
         "id": "evidence:cbb9035d0b0a3dfec7c1c92a4fdb63b2350ff7c6d25fd7bdc7200fe0339f3725",
@@ -30093,11 +30998,24 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/package.json"
       },
       {
+        "id": "evidence:cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
+        "digest": "cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
+        "path": "evidence/cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44.json.gz",
+        "description": "Pinned SundaeSwap manifest/lock mismatch audit"
+      },
+      {
         "id": "evidence:cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb",
         "digest": "cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb",
         "path": "evidence/cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb.json.gz",
         "description": "Source yoroi/mobile/app.config.js",
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/mobile/app.config.js"
+      },
+      {
+        "id": "evidence:ce7ada93e87ebd8a698284f69eb44d4b4868a20fec1b06ca7d5eb9c6ea577a7f",
+        "digest": "ce7ada93e87ebd8a698284f69eb44d4b4868a20fec1b06ca7d5eb9c6ea577a7f",
+        "path": "evidence/ce7ada93e87ebd8a698284f69eb44d4b4868a20fec1b06ca7d5eb9c6ea577a7f.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/HttpUtils.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/HttpUtils.ts"
       },
       {
         "id": "evidence:ceadd5988cef1afffb3b08d3fae749799160cdbc1f32fe4d5e8625336ce038dd",
@@ -30135,11 +31053,25 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/tree/93598c0f8e452d7679a44097c48e693d95bfd631"
       },
       {
+        "id": "evidence:d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a",
+        "digest": "d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a",
+        "path": "evidence/d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/address.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/address.ts"
+      },
+      {
         "id": "evidence:d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
         "digest": "d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
         "path": "evidence/d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c.json.gz",
         "description": "Source cardano-dapp-wallet-connector/package-lock.json",
         "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/blob/5d629436c7b7e7c2757355888a63cccd62fb1bca/package-lock.json"
+      },
+      {
+        "id": "evidence:d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204",
+        "digest": "d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204",
+        "path": "evidence/d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/options.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/options.ts"
       },
       {
         "id": "evidence:d1f56bf175d2bae3da9b6f06ed83837883eed9568e84c7c99adec0823e903eda",
@@ -30469,6 +31401,13 @@
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/package.json"
       },
       {
+        "id": "evidence:dd632532eecdf06bae92779c9c83f5ae8281625f3a4cda96c0fa5c86b4f139dc",
+        "digest": "dd632532eecdf06bae92779c9c83f5ae8281625f3a4cda96c0fa5c86b4f139dc",
+        "path": "evidence/dd632532eecdf06bae92779c9c83f5ae8281625f3a4cda96c0fa5c86b4f139dc.json.gz",
+        "description": "Native input lucid-evolution/packages/plutus/src/data-cml.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/plutus/src/data-cml.ts"
+      },
+      {
         "id": "evidence:dda3efdf4d403164e2bc97524afb60d8a21a2c77ddc3309f8c15e72fe8b5f2db",
         "digest": "dda3efdf4d403164e2bc97524afb60d8a21a2c77ddc3309f8c15e72fe8b5f2db",
         "path": "evidence/dda3efdf4d403164e2bc97524afb60d8a21a2c77ddc3309f8c15e72fe8b5f2db.json.gz",
@@ -30518,6 +31457,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/android/app/build.gradle"
       },
       {
+        "id": "evidence:dfaaedaa68c42bab8a923da650ca4df5a570b6593e8713c428ff7a83d9ff3e72",
+        "digest": "dfaaedaa68c42bab8a923da650ca4df5a570b6593e8713c428ff7a83d9ff3e72",
+        "path": "evidence/dfaaedaa68c42bab8a923da650ca4df5a570b6593e8713c428ff7a83d9ff3e72.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/core.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/core.ts"
+      },
+      {
         "id": "evidence:e036434806c07e1b586348c4ee03f01bd50bdc409e57a300eb79c2da4c348d2a",
         "digest": "e036434806c07e1b586348c4ee03f01bd50bdc409e57a300eb79c2da4c348d2a",
         "path": "evidence/e036434806c07e1b586348c4ee03f01bd50bdc409e57a300eb79c2da4c348d2a.json.gz",
@@ -30539,11 +31485,25 @@
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-tx/package.json"
       },
       {
+        "id": "evidence:e056ca57f5c596845e5d38860bab6c2fb3dd860349dc5ee00f9250ff26d3c10d",
+        "digest": "e056ca57f5c596845e5d38860bab6c2fb3dd860349dc5ee00f9250ff26d3c10d",
+        "path": "evidence/e056ca57f5c596845e5d38860bab6c2fb3dd860349dc5ee00f9250ff26d3c10d.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/labels.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/labels.ts"
+      },
+      {
         "id": "evidence:e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1",
         "digest": "e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1",
         "path": "evidence/e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/dcSpark/cardano-caniuse/tree/a8f49dda766c123f5e5954f15de30eb0cc368d23"
+      },
+      {
+        "id": "evidence:e0a8f2c68ccceb3f6dbc538bc4db951bdad93681c4d299fffcbc2d3adea0d614",
+        "digest": "e0a8f2c68ccceb3f6dbc538bc4db951bdad93681c4d299fffcbc2d3adea0d614",
+        "path": "evidence/e0a8f2c68ccceb3f6dbc538bc4db951bdad93681c4d299fffcbc2d3adea0d614.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/core.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/core.ts"
       },
       {
         "id": "evidence:e15ac3040508471dde48a96259142599ee9c27b231c77ba5a1ea2d921c2df650",
@@ -30558,6 +31518,13 @@
         "path": "evidence/e1ebaaeca9c950991b07c51b7828b2dba81a4162e59ee9809cb8084e70d1ac99.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/plutip/releases/tag/plutip-w-node-8.1.1"
+      },
+      {
+        "id": "evidence:e241786fe48b137c7b26572d0516a1045ca244098ff4a2b092499234e47f09d6",
+        "digest": "e241786fe48b137c7b26572d0516a1045ca244098ff4a2b092499234e47f09d6",
+        "path": "evidence/e241786fe48b137c7b26572d0516a1045ca244098ff4a2b092499234e47f09d6.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Attach.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Attach.ts"
       },
       {
         "id": "evidence:e27784daab24a02f303ce36c8b08c32c9ec2016af35131dbd0645193158d3200",
@@ -30581,11 +31548,25 @@
         "sourceUrl": "https://github.com/xray-network/xray-js/blob/21aa0802533f9052b6d4bcbdc934acbbd482a006/package.json"
       },
       {
+        "id": "evidence:e2e0406bdad0a3a5f65ddd740a555b930050d0cd153e98d33c17e5d2b9340a50",
+        "digest": "e2e0406bdad0a3a5f65ddd740a555b930050d0cd153e98d33c17e5d2b9340a50",
+        "path": "evidence/e2e0406bdad0a3a5f65ddd740a555b930050d0cd153e98d33c17e5d2b9340a50.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/mermaid.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/mermaid.ts"
+      },
+      {
         "id": "evidence:e327d140073e4b8f246f5842fb8949fb46638dcaa6e438a71747ae017c20c984",
         "digest": "e327d140073e4b8f246f5842fb8949fb46638dcaa6e438a71747ae017c20c984",
         "path": "evidence/e327d140073e4b8f246f5842fb8949fb46638dcaa6e438a71747ae017c20c984.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-cardano/releases/tag/runtime%40v1.0.0"
+      },
+      {
+        "id": "evidence:e36d3de0aaf8c36da8aef44e4ba1fbc85c6afe4403e2e4196ed0bcd8f06dde78",
+        "digest": "e36d3de0aaf8c36da8aef44e4ba1fbc85c6afe4403e2e4196ed0bcd8f06dde78",
+        "path": "evidence/e36d3de0aaf8c36da8aef44e4ba1fbc85c6afe4403e2e4196ed0bcd8f06dde78.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-sign-builder/TxSignBuilder.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-sign-builder/TxSignBuilder.ts"
       },
       {
         "id": "evidence:e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180",
@@ -30600,6 +31581,13 @@
         "path": "evidence/e455056222521ff87c3895e802b1aad406de15952855dbea4ed1077b5d73971e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/lidonation/Cardano-mcp/tree/9fe85c6552770915b767c966b3663234b22674e2"
+      },
+      {
+        "id": "evidence:e45bb2e9469b06e112322a6a770086ba7e0876bb6a4543198f74f30390e53038",
+        "digest": "e45bb2e9469b06e112322a6a770086ba7e0876bb6a4543198f74f30390e53038",
+        "path": "evidence/e45bb2e9469b06e112322a6a770086ba7e0876bb6a4543198f74f30390e53038.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/CanonicalTransaction.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/CanonicalTransaction.ts"
       },
       {
         "id": "evidence:e4d9f3960302ff0ee663d2618ab799714106ea78d4804f7cfc40f39efef68899",
@@ -30691,6 +31679,13 @@
         "path": "evidence/e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07.json.gz",
         "description": "Native input cardano-js-sdk/packages/dapp-connector/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/dapp-connector/package.json"
+      },
+      {
+        "id": "evidence:e869883ddd24f7fa842b84021bb3484b191bfc7475c0d40f21eba5624ce07f3e",
+        "digest": "e869883ddd24f7fa842b84021bb3484b191bfc7475c0d40f21eba5624ce07f3e",
+        "path": "evidence/e869883ddd24f7fa842b84021bb3484b191bfc7475c0d40f21eba5624ce07f3e.json.gz",
+        "description": "Native input sundae-sdk/packages/taste-test/package.json",
+        "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/taste-test/package.json"
       },
       {
         "id": "evidence:e8ab5767c7ab8d37605ca3a0908d8199cdc1cc60647659cbdc85cd62e1032ea6",
@@ -30866,6 +31861,13 @@
         "sourceUrl": "https://github.com/minswap/sdk/tree/19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528"
       },
       {
+        "id": "evidence:f0c8ce367175d68754f7fc93561bb659a6fddaa4c9aa8df763ec9647bca34e9e",
+        "digest": "f0c8ce367175d68754f7fc93561bb659a6fddaa4c9aa8df763ec9647bca34e9e",
+        "path": "evidence/f0c8ce367175d68754f7fc93561bb659a6fddaa4c9aa8df763ec9647bca34e9e.json.gz",
+        "description": "Native input lucid-evolution/packages/utils/src/label.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/label.ts"
+      },
+      {
         "id": "evidence:f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
         "digest": "f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0",
         "path": "evidence/f10c6cc77400fe18b7f02531d96717092a15fc316350a519e65a93d45d4ef4f0.json.gz",
@@ -30929,6 +31931,13 @@
         "sourceUrl": "https://github.com/gimbalabs/kustomize-dandelion/tree/f814f568b389f13e75230f1d3175210abfddb7e9"
       },
       {
+        "id": "evidence:f38c8b25b83991292ee09fbe9cebf2dc14e0d45019e903c90ce6decd2e96852c",
+        "digest": "f38c8b25b83991292ee09fbe9cebf2dc14e0d45019e903c90ce6decd2e96852c",
+        "path": "evidence/f38c8b25b83991292ee09fbe9cebf2dc14e0d45019e903c90ce6decd2e96852c.json.gz",
+        "description": "Native input lucid-evolution/packages/provider/src/internal/ed25519.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/internal/ed25519.ts"
+      },
+      {
         "id": "evidence:f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
         "digest": "f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
         "path": "evidence/f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660.json.gz",
@@ -30950,6 +31959,13 @@
         "sourceUrl": "https://github.com/MeshJS/mesh/tree/3df879e48f400f19eea0ebddfb00099b0809f484"
       },
       {
+        "id": "evidence:f4e077db38c6022a79218bed09ee81b39209050522e625d03ae23e9858021ee7",
+        "digest": "f4e077db38c6022a79218bed09ee81b39209050522e625d03ae23e9858021ee7",
+        "path": "evidence/f4e077db38c6022a79218bed09ee81b39209050522e625d03ae23e9858021ee7.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/types.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/types.ts"
+      },
+      {
         "id": "evidence:f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84",
         "digest": "f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84",
         "path": "evidence/f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84.json.gz",
@@ -30961,6 +31977,13 @@
         "path": "evidence/f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265.json.gz",
         "description": "yarn-lock for blockfrost-js v6.2.0",
         "sourceUrl": "https://github.com/blockfrost/blockfrost-js/tree/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba"
+      },
+      {
+        "id": "evidence:f54a324b98f27d23beb29ec1a2c5abf356ee454f0c04a31c79354017ac73a31a",
+        "digest": "f54a324b98f27d23beb29ec1a2c5abf356ee454f0c04a31c79354017ac73a31a",
+        "path": "evidence/f54a324b98f27d23beb29ec1a2c5abf356ee454f0c04a31c79354017ac73a31a.json.gz",
+        "description": "Native input lucid-evolution/packages/tx-graph/src/render/edge-renderer.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/edge-renderer.ts"
       },
       {
         "id": "evidence:f58a57f022608b908cc04eddf9e280980c5fad9700db12c3c48b61d51ac5796e",
@@ -31031,6 +32054,27 @@
         "path": "evidence/f6f5e3f0e4fd573051abc4722c55b3c59021fa8010bd02f2ef842c40aab43e4f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/input-output-hk/marconi/tree/d39923eb7b81156f5783e6252469b321ad89a253"
+      },
+      {
+        "id": "evidence:f70473873c9a98654a4f97c2d29b3fbd991730c35152ae9bbb6b1bc075ccaaf3",
+        "digest": "f70473873c9a98654a4f97c2d29b3fbd991730c35152ae9bbb6b1bc075ccaaf3",
+        "path": "evidence/f70473873c9a98654a4f97c2d29b3fbd991730c35152ae9bbb6b1bc075ccaaf3.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Mint.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Mint.ts"
+      },
+      {
+        "id": "evidence:f7532ce9ae7f523700e655b7dcfe6dc521fe0d1f3fd9256d24a40d2a883ed953",
+        "digest": "f7532ce9ae7f523700e655b7dcfe6dc521fe0d1f3fd9256d24a40d2a883ed953",
+        "path": "evidence/f7532ce9ae7f523700e655b7dcfe6dc521fe0d1f3fd9256d24a40d2a883ed953.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/core.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/core.ts"
+      },
+      {
+        "id": "evidence:f7580d440d7e9b0c3c0321b12d088a146de6f2b3b20a3e092c1de3b37fc6bfa6",
+        "digest": "f7580d440d7e9b0c3c0321b12d088a146de6f2b3b20a3e092c1de3b37fc6bfa6",
+        "path": "evidence/f7580d440d7e9b0c3c0321b12d088a146de6f2b3b20a3e092c1de3b37fc6bfa6.json.gz",
+        "description": "Native input lucid-evolution/packages/lucid/src/lucid-evolution/slotConfig.ts",
+        "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/lucid-evolution/slotConfig.ts"
       },
       {
         "id": "evidence:f7e81183cd0819b86d914946ce0659d83119f46d6285d5706f9d6e098d32fe27",
