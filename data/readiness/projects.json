@@ -300699,6 +300699,35 @@
     }
   },
   {
+    "id": "project:8879199e1a9e73c2539783b550ad0c0099981ba23336af01cef349beef4b77ba",
+    "name": "co.nstant.in:cbor",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:9c6a8de2b2ff94e0909e0f9bcb019d8e0ad6504f8b6fa133c52cfac30384dbfa"
+    ],
+    "versions": [
+      "0.9"
+    ],
+    "impact": {
+      "artifactId": "project:8879199e1a9e73c2539783b550ad0c0099981ba23336af01cef349beef4b77ba",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:9c6a8de2b2ff94e0909e0f9bcb019d8e0ad6504f8b6fa133c52cfac30384dbfa": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9",
+          "occurrence:d6b9016cc6eb50d5fdb1db3fd26101ec34ae0b1a71406331b8ef8f026c2906b3"
+        ]
+      }
+    }
+  },
+  {
     "id": "project:dabbb2652dea3692bbf933f60b4fd52b4e3eaf8434e3410f7b5f9e9b09811fa3",
     "name": "coa",
     "ecosystem": "npm",
@@ -301438,6 +301467,1076 @@
           "occurrence:b710b164dea4faf25f404632331b691d0fc75a900f340b440b753fc3c1d4e491",
           "occurrence:b1604a4213a87e4306b2b11656d36e3dc7aa523b3100faa574cfa90a65193016",
           "occurrence:4386ce72a5d8e706ce1d49cd719db8971fd1427802c429fcdbd2e483f2b0e432"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:1cec9facead2bd6d17fb5f053bae3f1a05bc3502f3d99f7ac8b6baf9d8b8c45e",
+    "name": "com.bloxbean.cardano:address",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:address",
+    "artifactIds": [
+      "artifact:fe7caa52204d04abb1122071a6a152fb1d219730d4081c5c297e9f7f7a462178"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:1cec9facead2bd6d17fb5f053bae3f1a05bc3502f3d99f7ac8b6baf9d8b8c45e",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:fe7caa52204d04abb1122071a6a152fb1d219730d4081c5c297e9f7f7a462178": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:8cb8919fd8ad2922c9722e708b7d57e4f7b1dcfc384d8618636cb5a972f95c15"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:63a6095657f13e171d87e28c67aa135f04a3975c7fa4b60856b3e24951626d16",
+    "name": "com.bloxbean.cardano:backend",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:backend",
+    "artifactIds": [
+      "artifact:8e2d6682fc335ef4195e5cc1176e1c808ea051ae25c4358b696dcbfe241ee7c6"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:63a6095657f13e171d87e28c67aa135f04a3975c7fa4b60856b3e24951626d16",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:8e2d6682fc335ef4195e5cc1176e1c808ea051ae25c4358b696dcbfe241ee7c6": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:be53d8f60d941f19841e7704034839d11dc746efcb9d2f20d47258e554c09641"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:b520a5c60e42047ae67d7cbb668a03828a762ab13bfebdb9a4fbb983e93f73c0",
+    "name": "com.bloxbean.cardano:cip",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip",
+    "artifactIds": [
+      "artifact:94b71d2d4a21fd5bead8e4ae28b711f37449f28c29fd40ae8bfb4ad970278909"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:b520a5c60e42047ae67d7cbb668a03828a762ab13bfebdb9a4fbb983e93f73c0",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:94b71d2d4a21fd5bead8e4ae28b711f37449f28c29fd40ae8bfb4ad970278909": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:3f8549df92f322ecb37866116adf0df7b222a0dc0862606eb0e23351d54cd73c",
+    "name": "com.bloxbean.cardano:cip20",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip20",
+    "artifactIds": [
+      "artifact:d892c6e0bf329178f3f79a8521be106af80a05c4d547f104516daa415db9d484"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:3f8549df92f322ecb37866116adf0df7b222a0dc0862606eb0e23351d54cd73c",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:d892c6e0bf329178f3f79a8521be106af80a05c4d547f104516daa415db9d484": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:6131743a0fbd5ffef6340d72bc427056f069fe5ab125e3750f2d9ac47767b9ad"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:67e1d641d6cb2be7148c2d1d1fa564ac79dba7eae87f9a7debacabcc52b58241",
+    "name": "com.bloxbean.cardano:cip25",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip25",
+    "artifactIds": [
+      "artifact:00442db64ee7539c014de7c3157ff3ddf8d04877623ff390e6b02f27701123e4"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:67e1d641d6cb2be7148c2d1d1fa564ac79dba7eae87f9a7debacabcc52b58241",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:00442db64ee7539c014de7c3157ff3ddf8d04877623ff390e6b02f27701123e4": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:842e7f1640910503fbb1db35f1a15dfda18641f222d526f277027147d37f4502"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:a9e9c7bee7202fec7bca8cc826dca0e1d8d0b9bf9c742cbc9513e2f4e3d3c6b8",
+    "name": "com.bloxbean.cardano:cip27",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip27",
+    "artifactIds": [
+      "artifact:204e30baf7d7f58e8bf1758a7a77b7f6c1598fc192332714c883b66107f413a4"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:a9e9c7bee7202fec7bca8cc826dca0e1d8d0b9bf9c742cbc9513e2f4e3d3c6b8",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:204e30baf7d7f58e8bf1758a7a77b7f6c1598fc192332714c883b66107f413a4": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:3f8b067b2305cfe5b08eb2099dfe507ded55c4e078264b7fb6b9f1bf91bfcc0a"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:5af3c54de5f49771acd5c8a34f643b553cb9936e92b528fc30f6a8568f666dfc",
+    "name": "com.bloxbean.cardano:cip30",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip30",
+    "artifactIds": [
+      "artifact:3075c821cfd9e976a008b1b070903f1a67b0e4adcde6f55b5f55c8732aa0aa72"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:5af3c54de5f49771acd5c8a34f643b553cb9936e92b528fc30f6a8568f666dfc",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:3075c821cfd9e976a008b1b070903f1a67b0e4adcde6f55b5f55c8732aa0aa72": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:7f22cdfc461fc00fb121ff36a436dc43af436a2082e2f3c20929fee13846471a"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:04309b760c24f07300d67195a176f41540704e2e34b225e63e974823cb9d1891",
+    "name": "com.bloxbean.cardano:cip67",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip67",
+    "artifactIds": [
+      "artifact:3d30218dafc4d4598431b3f5615171283559416f02e6a0437cafabf7ce462dd0"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:04309b760c24f07300d67195a176f41540704e2e34b225e63e974823cb9d1891",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:3d30218dafc4d4598431b3f5615171283559416f02e6a0437cafabf7ce462dd0": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:219f1cd32cedfabad1e76e32f0cb9f94f61cd2fe299467b8a0fc60a46720a3f3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:1fd8d9b81047c35e6519be92812a03bee3225b08e09202ccb7d19d7d296135eb",
+    "name": "com.bloxbean.cardano:cip68",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip68",
+    "artifactIds": [
+      "artifact:1d816ca4a335b44db9d72091cc245e41b3163de049376caf99334f872120c7de"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:1fd8d9b81047c35e6519be92812a03bee3225b08e09202ccb7d19d7d296135eb",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:1d816ca4a335b44db9d72091cc245e41b3163de049376caf99334f872120c7de": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:4add6e6670d6973d38120b3cd6c912bd331d7a038ddaba1e7c8a3c034daaaa93"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:df08d67a6167b979a1fb366a2fcf6176ef4bdfd88e1e76eac5660c6d5283c6cb",
+    "name": "com.bloxbean.cardano:cip8",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip8",
+    "artifactIds": [
+      "artifact:c16975ac9fcdd6a42e9437ba09814ea656ae7e8f2aab56e9546d5f1735028025"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:df08d67a6167b979a1fb366a2fcf6176ef4bdfd88e1e76eac5660c6d5283c6cb",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:c16975ac9fcdd6a42e9437ba09814ea656ae7e8f2aab56e9546d5f1735028025": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
+          "occurrence:ed33e2ab5ba916cf510e803353d94efa810387216c0a2b82736d203ef21880b7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:8f9abdbfb471f85696dd926fd58dc6b9e5ce8d3a47cf8b594c8f06eece060861",
+    "name": "com.bloxbean.cardano:coinselection",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:coinselection",
+    "artifactIds": [
+      "artifact:1c9ecff84c6086b46c5066d408209afc68eeaa52722f89795bee11dd70ebe230"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:8f9abdbfb471f85696dd926fd58dc6b9e5ce8d3a47cf8b594c8f06eece060861",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:1c9ecff84c6086b46c5066d408209afc68eeaa52722f89795bee11dd70ebe230": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:f397e9a34ef04e45ece7c07f38c0eacb7833ad4720b6951674cb90199ddc0be3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:0488f7c635f6324c73a925820dbb7ea04ded4a397f747306eaa1f3e3fdf73526",
+    "name": "com.bloxbean.cardano:common",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:common",
+    "artifactIds": [
+      "artifact:bd7f6ad287aa5eac398eb59c910c0b62e8abefb4a7b85916e419e62daf974ce1"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:0488f7c635f6324c73a925820dbb7ea04ded4a397f747306eaa1f3e3fdf73526",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:bd7f6ad287aa5eac398eb59c910c0b62e8abefb4a7b85916e419e62daf974ce1": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:5488274975474f2081bceca4cbb1e6c29bc58811cf79d8b26e0a8891cff56e6f",
+    "name": "com.bloxbean.cardano:common-spec",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:common-spec",
+    "artifactIds": [
+      "artifact:1f8e02000d39a5dd923089f5b46d6d8099ac395326310e78aaa80925647589ad"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:5488274975474f2081bceca4cbb1e6c29bc58811cf79d8b26e0a8891cff56e6f",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:1f8e02000d39a5dd923089f5b46d6d8099ac395326310e78aaa80925647589ad": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:c20b1722957a9bc5497c65aabfbf4a925a504198d9360f936f39dc9cab1b99ce"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:b871b828d5c8bc1b3754dab689408a094c3adc040f39daf4687044d29831791d",
+    "name": "com.bloxbean.cardano:core",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:core",
+    "artifactIds": [
+      "artifact:a5f509ab8071c984c4e688ce87314ca74ba714d86e1686da24bb99de50328af0"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:b871b828d5c8bc1b3754dab689408a094c3adc040f39daf4687044d29831791d",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:a5f509ab8071c984c4e688ce87314ca74ba714d86e1686da24bb99de50328af0": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:e278769b975919c51beb23333409217be846702dcc5ad7e4aa25fda5a988b86c",
+    "name": "com.bloxbean.cardano:core-api",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:core-api",
+    "artifactIds": [
+      "artifact:e955eed09eb99646aac4faf21cad4d283521bf63d8bda2c266cc5970841de027"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:e278769b975919c51beb23333409217be846702dcc5ad7e4aa25fda5a988b86c",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:e955eed09eb99646aac4faf21cad4d283521bf63d8bda2c266cc5970841de027": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:75b5fc939e1d0f234e9829d6c945e231b82229e89ffb5100cbca546afb05fcf4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:4755c8c2fdad607a4d093d0d6eb826be68a179fa72323aebfb0ff8fc29b43836",
+    "name": "com.bloxbean.cardano:crypto",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:crypto",
+    "artifactIds": [
+      "artifact:afb701bed93953d118dfaed3de1eca7274709d72f71fa954228cf5604901f457"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:4755c8c2fdad607a4d093d0d6eb826be68a179fa72323aebfb0ff8fc29b43836",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:afb701bed93953d118dfaed3de1eca7274709d72f71fa954228cf5604901f457": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:6977a0e83cfd961e54771f129290da6edaccd5b09ce00bbd2994c64cd77b9a9d",
+    "name": "com.bloxbean.cardano:function",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:function",
+    "artifactIds": [
+      "artifact:85ef2202321e5409055bdc5584f99451993086eec539c669a22503ac76e4d1f4"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:6977a0e83cfd961e54771f129290da6edaccd5b09ce00bbd2994c64cd77b9a9d",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:85ef2202321e5409055bdc5584f99451993086eec539c669a22503ac76e4d1f4": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:eaad3afdac3e9621edd721310f6d1007429258976450d147eab7e75d40ac120d"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:a6c959456e6028d30e7f04f53373f436d278b09b113aca3d3d36835762b2af61",
+    "name": "com.bloxbean.cardano:hd-wallet",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:hd-wallet",
+    "artifactIds": [
+      "artifact:f02f57df2694d4d02c6fca509cba33e54a63575cd6f4c9a0b3bf4fc600ff05b3"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:a6c959456e6028d30e7f04f53373f436d278b09b113aca3d3d36835762b2af61",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:f02f57df2694d4d02c6fca509cba33e54a63575cd6f4c9a0b3bf4fc600ff05b3": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:1f97a2c32d3fe1658aa4b9f844b790a7b56bc61bd5a52e0c315c9252026e72a3",
+          "occurrence:ffdc6f82383cdad71aec2cb4c30a25588dbebedaf13a3e6c69983f02be0527f7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:5dd392f18eeba5d476d6df65cd5819dace2cf47be9c63ad8d20cdbec50da1b27",
+    "name": "com.bloxbean.cardano:metadata",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:metadata",
+    "artifactIds": [
+      "artifact:f4694bb22bf750986a36fcb9a433bf6565d97194a86da41483affd476bc3df96"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:5dd392f18eeba5d476d6df65cd5819dace2cf47be9c63ad8d20cdbec50da1b27",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:f4694bb22bf750986a36fcb9a433bf6565d97194a86da41483affd476bc3df96": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:9183cc0e565138ba4b11bceae45ca4bab6541274ccf466de7d2b9c3dfa1bbf2a"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:658a1b769f7c2dc39c83e727aa4c1818152755e0159a8617b38d5b816cf71beb",
+    "name": "com.bloxbean.cardano:net-i2p-crypto-eddsa",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:6864ed92744a2634f2752ed888d3dfc0593e0a847a866065d45215efecbe38cc"
+    ],
+    "versions": [
+      "0.3.1"
+    ],
+    "impact": {
+      "artifactId": "project:658a1b769f7c2dc39c83e727aa4c1818152755e0159a8617b38d5b816cf71beb",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:6864ed92744a2634f2752ed888d3dfc0593e0a847a866065d45215efecbe38cc": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:81495a80433d58d2b9d5fe8fe154eba0a49b8c8e6e87eb112fde9ab4eb1ea2c7"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:7bc331b74ba3f0df32620a879a393d148944b043360c140550ef908d136d18e2",
+    "name": "com.bloxbean.cardano:plutus",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:plutus",
+    "artifactIds": [
+      "artifact:fcc78df7dc890616e437b60731fd846423ea89c18f656c8d0efb299d16a2f577"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:7bc331b74ba3f0df32620a879a393d148944b043360c140550ef908d136d18e2",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:fcc78df7dc890616e437b60731fd846423ea89c18f656c8d0efb299d16a2f577": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:ef5bf6e9893ed8b47bd0d39b0dfed8b0f9b4f7c6243113ca2dafc593a3ed7196"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:21f45f2fe398cbf1c603e97565127a92a86e18cef1d51aa7d4e1cad4129a4666",
+    "name": "com.bloxbean.cardano:quicktx",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:quicktx",
+    "artifactIds": [
+      "artifact:acad8b5aad5f033fa0d62c9552ceeeaf79a3e7cbe9fdc964167c84b5d5927dc4"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:21f45f2fe398cbf1c603e97565127a92a86e18cef1d51aa7d4e1cad4129a4666",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:acad8b5aad5f033fa0d62c9552ceeeaf79a3e7cbe9fdc964167c84b5d5927dc4": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:1f97a2c32d3fe1658aa4b9f844b790a7b56bc61bd5a52e0c315c9252026e72a3"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:93c6746e21cab10f8697d7bae9f334405f4f3016009aa3e396c1ae117c514e96",
+    "name": "com.bloxbean.cardano:transaction-spec",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:transaction-spec",
+    "artifactIds": [
+      "artifact:cbe4e23fbdb5e325832bd26cb0efd2aa6d304b7ad823a72d55f9f96f817dee72"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:93c6746e21cab10f8697d7bae9f334405f4f3016009aa3e396c1ae117c514e96",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:cbe4e23fbdb5e325832bd26cb0efd2aa6d304b7ad823a72d55f9f96f817dee72": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:363ded5a5151e30c106b27dc23ccfecc0ed753bb9d0cdc407409e90190a75898"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:1e146df4c2a37be1a5b4e3950a6131ccb9c004d574734440447062b9f46c4da3",
+    "name": "com.fasterxml.jackson:jackson-bom",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:7679dcac162cf2ac0fe12f09966db969488dae02efa8a189fa4d4db3f0aed6a6"
+    ],
+    "versions": [
+      "2.16.0"
+    ],
+    "impact": {
+      "artifactId": "project:1e146df4c2a37be1a5b4e3950a6131ccb9c004d574734440447062b9f46c4da3",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:7679dcac162cf2ac0fe12f09966db969488dae02efa8a189fa4d4db3f0aed6a6": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9",
+          "occurrence:b025b3825b222869f87a036cbb4173408dc0243caf1713c82868d7adb25be9bb",
+          "occurrence:d27aa6de6822996d7743aec3ad10b1527b381645e46cd79bb9ae787cb9506113"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:7191d8ac63dd83d73775269b88532b7d71f78102053937aeada8dd18070d1de8",
+    "name": "com.fasterxml.jackson.core:jackson-annotations",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:4375e5cc8caff0f7bdec142ba8b98860e24965a6448a862f8b2f9eeef632eeb3"
+    ],
+    "versions": [
+      "2.16.0"
+    ],
+    "impact": {
+      "artifactId": "project:7191d8ac63dd83d73775269b88532b7d71f78102053937aeada8dd18070d1de8",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:4375e5cc8caff0f7bdec142ba8b98860e24965a6448a862f8b2f9eeef632eeb3": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9",
+          "occurrence:b025b3825b222869f87a036cbb4173408dc0243caf1713c82868d7adb25be9bb",
+          "occurrence:04b13bcf01f97fbaad1dd8380d4768add312cbdc699a52995073aadf045034db"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:0f183ff393f2fd4257873a5fa377c7c984c455bb0cb47b1e0efd75354ab92fcf",
+    "name": "com.fasterxml.jackson.core:jackson-core",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:eea9a5d94243738bcef0980dcf54bbfb49933d79cbbdae5bad8d6f9ae4b566ef"
+    ],
+    "versions": [
+      "2.16.0"
+    ],
+    "impact": {
+      "artifactId": "project:0f183ff393f2fd4257873a5fa377c7c984c455bb0cb47b1e0efd75354ab92fcf",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:eea9a5d94243738bcef0980dcf54bbfb49933d79cbbdae5bad8d6f9ae4b566ef": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9",
+          "occurrence:b025b3825b222869f87a036cbb4173408dc0243caf1713c82868d7adb25be9bb",
+          "occurrence:49d560eb5de4340be34f82e0d1cc5b03a6f458f0e1e8fa0afb7550153a88f9e4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:9cedfb703c1c31d60cafb001df5783691ca562477fee012ee31568184e84677f",
+    "name": "com.fasterxml.jackson.core:jackson-databind",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:23ceef22d51be7efab5d8d370b5de1c9ed41c7f219cbca3fa2adbad174785549"
+    ],
+    "versions": [
+      "2.16.0"
+    ],
+    "impact": {
+      "artifactId": "project:9cedfb703c1c31d60cafb001df5783691ca562477fee012ee31568184e84677f",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:23ceef22d51be7efab5d8d370b5de1c9ed41c7f219cbca3fa2adbad174785549": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9",
+          "occurrence:b025b3825b222869f87a036cbb4173408dc0243caf1713c82868d7adb25be9bb"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:4bbdd24a54ad93d3bf1d49b4ea3f3785e86212b1830c00b372c047a3f97cf6a8",
+    "name": "com.google.code.findbugs:jsr305",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:f543f2d9c864b7f99589de133d67d67ea9c97e466b1a1588ba5de0fc021b5d3d"
+    ],
+    "versions": [
+      "3.0.2"
+    ],
+    "impact": {
+      "artifactId": "project:4bbdd24a54ad93d3bf1d49b4ea3f3785e86212b1830c00b372c047a3f97cf6a8",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:f543f2d9c864b7f99589de133d67d67ea9c97e466b1a1588ba5de0fc021b5d3d": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94",
+          "occurrence:95f3d9de8a35d6b82a01f8abc85bcb67d2bd3420f6ab96add4f8a86f90f26ac4"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:4a361556a628c7e41ca34859060853544830d7033f0a25dffac130e67df81a51",
+    "name": "com.google.errorprone:error_prone_annotations",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:11c5472859ef80da81214fb9649c7497422726188447f16d3db6addc29b1c707"
+    ],
+    "versions": [
+      "2.23.0"
+    ],
+    "impact": {
+      "artifactId": "project:4a361556a628c7e41ca34859060853544830d7033f0a25dffac130e67df81a51",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:11c5472859ef80da81214fb9649c7497422726188447f16d3db6addc29b1c707": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94",
+          "occurrence:2f6f97c4f69b6940f223033613e8afa315986711f7bd692ae62fddca438a6272"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:6da05f33d3c7c8c0fd0fd9b72347a18c1d02a6f6966ee35b9719ad4999e644a0",
+    "name": "com.google.guava:failureaccess",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:34ab62a60150184c25282ba7e8352762f72210e58dac71fa5ae0dc14f262129d"
+    ],
+    "versions": [
+      "1.0.2"
+    ],
+    "impact": {
+      "artifactId": "project:6da05f33d3c7c8c0fd0fd9b72347a18c1d02a6f6966ee35b9719ad4999e644a0",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:34ab62a60150184c25282ba7e8352762f72210e58dac71fa5ae0dc14f262129d": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94",
+          "occurrence:96e2f8814afeecb3c225f1fb5790665109b6ad3a5c342c0d46c7595031b3270c"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:4ddf322d5505789d930d7fe2ef1da820bc7a81320622692f4ea6591f6ec19676",
+    "name": "com.google.guava:guava",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:dfec730b45bd680ea8dbd6abbecc4ee9da1fa6af81a59eb780e6fa4ad138a6a2"
+    ],
+    "versions": [
+      "33.0.0-jre"
+    ],
+    "impact": {
+      "artifactId": "project:4ddf322d5505789d930d7fe2ef1da820bc7a81320622692f4ea6591f6ec19676",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:dfec730b45bd680ea8dbd6abbecc4ee9da1fa6af81a59eb780e6fa4ad138a6a2": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:fd3986e6707dfda1d66ebce10df66e8aaa78a71eb473baef7b8bb9d950ec77e5",
+    "name": "com.google.guava:listenablefuture",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:07607ef15dfbffee861aa9d9136c5062d5e7ec84565d2f3f518efb39b8924f4a"
+    ],
+    "versions": [
+      "9999.0-empty-to-avoid-conflict-with-guava"
+    ],
+    "impact": {
+      "artifactId": "project:fd3986e6707dfda1d66ebce10df66e8aaa78a71eb473baef7b8bb9d950ec77e5",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:07607ef15dfbffee861aa9d9136c5062d5e7ec84565d2f3f518efb39b8924f4a": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94",
+          "occurrence:f158035c209954864aa9460da5c12d1562e3d8ce460dbc8299563e03131724f6"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:90266cb67561833956216414712a0a7af13859b2c1f0d4488fa7c7e538076aa1",
+    "name": "com.squareup.okhttp3:okhttp",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:5fb7f83d1d093a77a75591174d90580d90af9d9f867bcd0684a77c0071140998"
+    ],
+    "versions": [
+      "4.12.0"
+    ],
+    "impact": {
+      "artifactId": "project:90266cb67561833956216414712a0a7af13859b2c1f0d4488fa7c7e538076aa1",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:5fb7f83d1d093a77a75591174d90580d90af9d9f867bcd0684a77c0071140998": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:5b14ff70dce379bf378ec2b57a7999f981f877092ec646d99ea2ddfd8d2f84ba",
+    "name": "com.squareup.okio:okio",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:d486ab4c49d85d8931acdc333a369b27588e88b423efbaa4cd3158a359912f9b"
+    ],
+    "versions": [
+      "3.6.0"
+    ],
+    "impact": {
+      "artifactId": "project:5b14ff70dce379bf378ec2b57a7999f981f877092ec646d99ea2ddfd8d2f84ba",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:d486ab4c49d85d8931acdc333a369b27588e88b423efbaa4cd3158a359912f9b": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:cab3771f7ea6a24eecf3298d66690c11672970d95b11ee6f05c6046334ed185e"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:eb0047105fcc83ddde6fcc123829ddc865593ab38363cf92be3f1ad49318a4f0",
+    "name": "com.squareup.okio:okio-jvm",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:9e2fde3f0faf66b6a07449a341d7f423ff313fe47d087f9c7828fc8c2b9543a3"
+    ],
+    "versions": [
+      "3.6.0"
+    ],
+    "impact": {
+      "artifactId": "project:eb0047105fcc83ddde6fcc123829ddc865593ab38363cf92be3f1ad49318a4f0",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:9e2fde3f0faf66b6a07449a341d7f423ff313fe47d087f9c7828fc8c2b9543a3": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:cab3771f7ea6a24eecf3298d66690c11672970d95b11ee6f05c6046334ed185e",
+          "occurrence:81402f88a75531bbf79b8efb0d4e5ac35efc51e578526b1dd49d26ec33bf9c56"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:091f8afd33547cd2f344bee9b533a76919bb5c79bae11808a74b5cb42495611b",
+    "name": "com.squareup.retrofit2:converter-jackson",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:1802a3bf1dad8c1a29915d8f27342a6c3b214f940cd525f4d4a33cc4bc2606e6"
+    ],
+    "versions": [
+      "2.9.0"
+    ],
+    "impact": {
+      "artifactId": "project:091f8afd33547cd2f344bee9b533a76919bb5c79bae11808a74b5cb42495611b",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:1802a3bf1dad8c1a29915d8f27342a6c3b214f940cd525f4d4a33cc4bc2606e6": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:978287b4cb9e8be5fe3ce332ac6aaebc1a28e36e5a403166ba8074e986dbfcbc"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:31d9d22be103da8f706590a9ab8b913875f6a076815fa0205617f0de1a5b3e26",
+    "name": "com.squareup.retrofit2:retrofit",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:fa784664aeea59e7023d30cd779c97f91213827a9f5e039d2229b60e37688dbc"
+    ],
+    "versions": [
+      "2.9.0"
+    ],
+    "impact": {
+      "artifactId": "project:31d9d22be103da8f706590a9ab8b913875f6a076815fa0205617f0de1a5b3e26",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:fa784664aeea59e7023d30cd779c97f91213827a9f5e039d2229b60e37688dbc": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:213b29dc1ea7f1ec1a90c5044053260577c0ee0cfc089c0680f2b6ba3b9e5b94"
         ]
       }
     }
@@ -395097,6 +396196,244 @@
         "opshin:required:profile:opshin:cb786ec365e6a46cc52bf170:artifact:ead893b6fe9b516fd4e02f3bf2883769fa8e0675e80aa8af159856102cf222b8": [
           "occurrence:8abdd7f920fa9392b7565a0c2c707b112e765042fa5943d7fbea585862fd0aab",
           "occurrence:0d5bc1439278ffafc6032345770f96ae0a3109c4ac81c6d4f60f49cb3d4ee1fa"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:0f2756560f825f58a78df7d6557675d52ad1335f44b3a8ac2d38279d020802ae",
+    "name": "org.bouncycastle:bcprov-jdk18on",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:04913b030a5650f50f86b46f779961ecfe7400c9c082a5bc76c65a4c5ce2d854"
+    ],
+    "versions": [
+      "1.78"
+    ],
+    "impact": {
+      "artifactId": "project:0f2756560f825f58a78df7d6557675d52ad1335f44b3a8ac2d38279d020802ae",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:04913b030a5650f50f86b46f779961ecfe7400c9c082a5bc76c65a4c5ce2d854": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
+          "occurrence:71647e865f8440a4b2957bbfc98eb852c418efdaa961098918b6b680d66f2c40"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:5e28ce420dd87fd16df109c7d011450ffa2e1bb65f2f8ee9f40c7dd92b15e4a3",
+    "name": "org.checkerframework:checker-qual",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:c8e3a6964bbb6f920e8ad8ec5eaed68b2907746496a9573675ded423521c336e"
+    ],
+    "versions": [
+      "3.41.0"
+    ],
+    "impact": {
+      "artifactId": "project:5e28ce420dd87fd16df109c7d011450ffa2e1bb65f2f8ee9f40c7dd92b15e4a3",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:c8e3a6964bbb6f920e8ad8ec5eaed68b2907746496a9573675ded423521c336e": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26",
+          "occurrence:b2d8405383403c44bfcfbfddf54b35bfb30e1b254ebd2f72affa0a6a90af8f94",
+          "occurrence:366b194d1e0bb8e4160edae085fca32be295c5a595629442793b49c82338a2ee"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:2af2c9f4adcb3633c8a3c77abe6fc3b77f8823742c87c0d8df3c568015ae8fa9",
+    "name": "org.jetbrains:annotations",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:8ec6c7082c7abd831b33a729fb26ad6a94f28998281bcbf6748ba154013163e5"
+    ],
+    "versions": [
+      "13.0"
+    ],
+    "impact": {
+      "artifactId": "project:2af2c9f4adcb3633c8a3c77abe6fc3b77f8823742c87c0d8df3c568015ae8fa9",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:8ec6c7082c7abd831b33a729fb26ad6a94f28998281bcbf6748ba154013163e5": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:44fb0b1039f50c669e90a7ef1f50295aba4a0a8f4345eea6c05505bf939eebde",
+          "occurrence:42a8a8534ad6db9be776cc5a7bee6dcbd298fcbe497e1fcce902ebffc2f04ae5",
+          "occurrence:fb07171795a51a142f0e2cfa9237776f5ba756cad7e7715941ab9fcf96ca0c12"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:0cae594cbaa2fb8462510670e08318039603ac093957f8b0f6898a28283d9de3",
+    "name": "org.jetbrains.kotlin:kotlin-stdlib",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:484c84677172337fc074aa061230da287828572d8e88e44deccc14b7e794a87d"
+    ],
+    "versions": [
+      "1.9.10"
+    ],
+    "impact": {
+      "artifactId": "project:0cae594cbaa2fb8462510670e08318039603ac093957f8b0f6898a28283d9de3",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:484c84677172337fc074aa061230da287828572d8e88e44deccc14b7e794a87d": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:44fb0b1039f50c669e90a7ef1f50295aba4a0a8f4345eea6c05505bf939eebde",
+          "occurrence:42a8a8534ad6db9be776cc5a7bee6dcbd298fcbe497e1fcce902ebffc2f04ae5"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:839fb0312a07e5bb2022e7e84bc3b618fe03d6bccafa17127f236259acadf5d5",
+    "name": "org.jetbrains.kotlin:kotlin-stdlib-common",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:ea43c524b6243491538319bc2e056ce44b8ab42911092beb68196a9c0826a95b"
+    ],
+    "versions": [
+      "1.9.10"
+    ],
+    "impact": {
+      "artifactId": "project:839fb0312a07e5bb2022e7e84bc3b618fe03d6bccafa17127f236259acadf5d5",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:ea43c524b6243491538319bc2e056ce44b8ab42911092beb68196a9c0826a95b": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:cab3771f7ea6a24eecf3298d66690c11672970d95b11ee6f05c6046334ed185e",
+          "occurrence:81402f88a75531bbf79b8efb0d4e5ac35efc51e578526b1dd49d26ec33bf9c56",
+          "occurrence:52bde8816a7c889bf84ef54d76d534754c2708ab17edc0f571ca6fdffa39fbc0"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:6c1425c2c226e8d3c8fae29890fdb027da78e84844622756a0f80fed3a7cf255",
+    "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:dcea258553fa03adebfb67f00179c35aef47b08992ebf6787821162f56b8bd41"
+    ],
+    "versions": [
+      "1.9.10"
+    ],
+    "impact": {
+      "artifactId": "project:6c1425c2c226e8d3c8fae29890fdb027da78e84844622756a0f80fed3a7cf255",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:dcea258553fa03adebfb67f00179c35aef47b08992ebf6787821162f56b8bd41": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:44fb0b1039f50c669e90a7ef1f50295aba4a0a8f4345eea6c05505bf939eebde",
+          "occurrence:df8a1abade7769ff27a45ac6ca8fd87e18d93a1e26fd345a0f3e722e9b182a45"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:2bc6c6e46f81fea62aad6d9e79531bf28054a7e3666c6822d93051819e88d78a",
+    "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:fec595a210077bd3286647554d90460f48095ace615784acd447f2158f3bdfe9"
+    ],
+    "versions": [
+      "1.9.10"
+    ],
+    "impact": {
+      "artifactId": "project:2bc6c6e46f81fea62aad6d9e79531bf28054a7e3666c6822d93051819e88d78a",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:fec595a210077bd3286647554d90460f48095ace615784acd447f2158f3bdfe9": [
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
+          "occurrence:f1f97d74abb897ba684dba38193a9fadb9d41576754c61fd0b67696ed2123084",
+          "occurrence:44fb0b1039f50c669e90a7ef1f50295aba4a0a8f4345eea6c05505bf939eebde"
+        ]
+      }
+    }
+  },
+  {
+    "id": "project:442cdccc74095a5d8a1c6815e2fc69be3f29431d3b8e6b5e3223f00adb962210",
+    "name": "org.slf4j:slf4j-api",
+    "ecosystem": "gradle",
+    "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+    "artifactIds": [
+      "artifact:f42f77b69ee7e793c4687bceffe448f3d476a261ccf9898b4b427515677f812a"
+    ],
+    "versions": [
+      "2.0.11"
+    ],
+    "impact": {
+      "artifactId": "project:442cdccc74095a5d8a1c6815e2fc69be3f29431d3b8e6b5e3223f00adb962210",
+      "required": [
+        "bloxbean-cardano-client-library"
+      ],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {
+        "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17:artifact:f42f77b69ee7e793c4687bceffe448f3d476a261ccf9898b4b427515677f812a": [
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:04725f2088271cdc63b612316c63b00397a429ddbc59a9707e682a585f16425e"
         ]
       }
     }
@@ -551594,6 +552931,69 @@
           "occurrence:ae9e8dd4609644bb5d1026284d35100e38e84fd4492d288fd7b1ccc0f063cdb9"
         ]
       }
+    }
+  },
+  {
+    "id": "project:0f29ab75a929fba9b92eff4971b6c258708d1760320661a8d446975da05f073f",
+    "name": "com.bloxbean.cardano:blockfrost",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:backend-modules/blockfrost",
+    "artifactIds": [
+      "artifact:e08a7b965d0770829e63d50fab2edeb9a65c9d430029eab3101f9791116f0f25"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:0f29ab75a929fba9b92eff4971b6c258708d1760320661a8d446975da05f073f",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:b40aa18ea5997055849b8aa289e980e1965c17570b913de9ddded215ba670855",
+    "name": "com.bloxbean.cardano:cardano-client-lib",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:.",
+    "artifactIds": [
+      "artifact:1486472f4198d080935eb5543671cd5a0ca4fde7efcbb59cee76a5ae13dcaef2"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:b40aa18ea5997055849b8aa289e980e1965c17570b913de9ddded215ba670855",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:0d150be3381a610397e491fe0e66f2e53f8c85c295f4c12d34eadf9f9933de74",
+    "name": "com.bloxbean.cardano:governance",
+    "ecosystem": "gradle",
+    "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:governance",
+    "artifactIds": [
+      "artifact:d908195c5ebfc77581fb6942a8f3a44949b96da23267e6c40dd18d0e88d42c1f"
+    ],
+    "versions": [
+      "0.7.3"
+    ],
+    "impact": {
+      "artifactId": "project:0d150be3381a610397e491fe0e66f2e53f8c85c295f4c12d34eadf9f9933de74",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {

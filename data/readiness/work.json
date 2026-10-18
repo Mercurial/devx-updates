@@ -1,5 +1,5 @@
 {
-  "snapshot": "a4542a40e39f377a5e03467b0dc1c3183582132605978827e82237e6706231d1",
+  "snapshot": "38a4f66a54cec99d4a2727d5d1d5d1ce374646673becc83f108606b098a1482b",
   "catalogTools": 269,
   "ranking": [
     "verifiedCapabilities",
@@ -3920,6 +3920,20 @@
       "issueUrl": null
     },
     {
+      "id": "gap:150620f414ead55aabd51780",
+      "area": "artifact",
+      "reason": "Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+      "nextAction": "Verify published module coordinates, artifact checksums and release provenance for the selected consumer workflow.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:artifact",
+      "toolId": "bloxbean-cardano-client-library",
+      "name": "Bloxbean Cardano Client Library",
+      "maintainer": "BloxBean",
+      "taskId": "coverage:24a93e453ac02eee029e49a8d957c53099912285f8556a818f0fd2336bfe6cdc",
+      "owner": null,
+      "issueUrl": null
+    },
+    {
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -4942,6 +4956,20 @@
       "name": "Marlowe Playground",
       "maintainer": "IOG",
       "taskId": "coverage:31c1943a99ecce81d665075099055862b886a94ad1da95ddcd4fef97b795f78d",
+      "owner": null,
+      "issueUrl": null
+    },
+    {
+      "id": "gap:9419305bc758a4d435005a6a",
+      "area": "integration",
+      "reason": "Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+      "nextAction": "Collect applicable additional configurations/artifact inventories and manually review enabled transaction, signing and governance workflows.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:integration",
+      "toolId": "bloxbean-cardano-client-library",
+      "name": "Bloxbean Cardano Client Library",
+      "maintainer": "BloxBean",
+      "taskId": "coverage:31dd808a3c68c36b57b6a7a6aa69f5f9903c7f34d495d0aa329448935a9798a4",
       "owner": null,
       "issueUrl": null
     },
@@ -8163,19 +8191,6 @@
       "name": "NuFi",
       "maintainer": "NuFi (ex-AdaLite)",
       "taskId": "coverage:54d007b136f622a3fd785acbe7aaecf9db949ff3672b024d73569dac996878bc",
-      "owner": null,
-      "issueUrl": null
-    },
-    {
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing",
-      "toolId": "bloxbean-cardano-client-library",
-      "name": "Bloxbean Cardano Client Library",
-      "maintainer": "BloxBean",
-      "taskId": "coverage:550b63b24db9b4f9b600631c0939e8cd42a1d77ee94d25d0a3d7009a6829084d",
       "owner": null,
       "issueUrl": null
     },
@@ -15178,6 +15193,19 @@
       "issueUrl": null
     },
     {
+      "id": "gap:40a57cec14b2a10290af7249",
+      "area": "resolution",
+      "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "toolId": "bloxbean-cardano-client-library",
+      "name": "Bloxbean Cardano Client Library",
+      "maintainer": "BloxBean",
+      "taskId": "coverage:a1de780374178c2b93f7f81acb40bb7b02b027e4b1d8a06117fa5b180547e393",
+      "owner": null,
+      "issueUrl": null
+    },
+    {
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -15562,6 +15590,19 @@
       "name": "ADA Handle",
       "maintainer": "ADA Handle",
       "taskId": "coverage:a61137fd8799f9ef4cdc46c70a337c34685c9f792d2734273877f1bcfb4dde34",
+      "owner": null,
+      "issueUrl": null
+    },
+    {
+      "id": "gap:1349f31b7d1e9c8d6659492c",
+      "area": "resolution",
+      "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "toolId": "bloxbean-cardano-client-library",
+      "name": "Bloxbean Cardano Client Library",
+      "maintainer": "BloxBean",
+      "taskId": "coverage:a638431f218ed2c5b3781d9e20bf5a3ce4c38993cb4a7af714c0e0aa5b56d2a5",
       "owner": null,
       "issueUrl": null
     },
@@ -17396,6 +17437,20 @@
       "name": "CardanoSharp.Koios",
       "maintainer": "Cardano Community",
       "taskId": "coverage:ba9454733cf33916c4118b8a6499d07f3624b8282b5bd62260769d957c54e456",
+      "owner": null,
+      "issueUrl": null
+    },
+    {
+      "id": "gap:4b40f604bfc99dbf87cf1809",
+      "area": "resolution",
+      "reason": "This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+      "nextAction": "Recapture with the retained selection/script/worker and reimport after source or configuration changes; implement an isolated scheduled collector before registering automatic refresh.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:refresh",
+      "toolId": "bloxbean-cardano-client-library",
+      "name": "Bloxbean Cardano Client Library",
+      "maintainer": "BloxBean",
+      "taskId": "coverage:bac473a08ca858d349348e54a48cc28d54625e680a531aa9b1093bcee7e5c57c",
       "owner": null,
       "issueUrl": null
     },
@@ -267954,6 +268009,142 @@
       }
     },
     {
+      "projectId": "project:04309b760c24f07300d67195a176f41540704e2e34b225e63e974823cb9d1891",
+      "name": "com.bloxbean.cardano:cip67",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip67",
+      "artifactIds": [
+        "artifact:3d30218dafc4d4598431b3f5615171283559416f02e6a0437cafabf7ce462dd0"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:04309b760c24f07300d67195a176f41540704e2e34b225e63e974823cb9d1891",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:04309b760c24f07300d67195a176f41540704e2e34b225e63e974823cb9d1891"
+      }
+    },
+    {
+      "projectId": "project:0488f7c635f6324c73a925820dbb7ea04ded4a397f747306eaa1f3e3fdf73526",
+      "name": "com.bloxbean.cardano:common",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:common",
+      "artifactIds": [
+        "artifact:bd7f6ad287aa5eac398eb59c910c0b62e8abefb4a7b85916e419e62daf974ce1"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:0488f7c635f6324c73a925820dbb7ea04ded4a397f747306eaa1f3e3fdf73526",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0488f7c635f6324c73a925820dbb7ea04ded4a397f747306eaa1f3e3fdf73526"
+      }
+    },
+    {
+      "projectId": "project:091f8afd33547cd2f344bee9b533a76919bb5c79bae11808a74b5cb42495611b",
+      "name": "com.squareup.retrofit2:converter-jackson",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:1802a3bf1dad8c1a29915d8f27342a6c3b214f940cd525f4d4a33cc4bc2606e6"
+      ],
+      "versions": [
+        "2.9.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:091f8afd33547cd2f344bee9b533a76919bb5c79bae11808a74b5cb42495611b",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:091f8afd33547cd2f344bee9b533a76919bb5c79bae11808a74b5cb42495611b"
+      }
+    },
+    {
+      "projectId": "project:0cae594cbaa2fb8462510670e08318039603ac093957f8b0f6898a28283d9de3",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:484c84677172337fc074aa061230da287828572d8e88e44deccc14b7e794a87d"
+      ],
+      "versions": [
+        "1.9.10"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:0cae594cbaa2fb8462510670e08318039603ac093957f8b0f6898a28283d9de3",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0cae594cbaa2fb8462510670e08318039603ac093957f8b0f6898a28283d9de3"
+      }
+    },
+    {
       "projectId": "project:0cd2d5390a3c9c8c6d557ad3991adce74fc7f2d46d5c4081c8543eb50829737f",
       "name": "js-sha256",
       "ecosystem": "npm",
@@ -267985,6 +268176,278 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:0cd2d5390a3c9c8c6d557ad3991adce74fc7f2d46d5c4081c8543eb50829737f"
+      }
+    },
+    {
+      "projectId": "project:0f183ff393f2fd4257873a5fa377c7c984c455bb0cb47b1e0efd75354ab92fcf",
+      "name": "com.fasterxml.jackson.core:jackson-core",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:eea9a5d94243738bcef0980dcf54bbfb49933d79cbbdae5bad8d6f9ae4b566ef"
+      ],
+      "versions": [
+        "2.16.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:0f183ff393f2fd4257873a5fa377c7c984c455bb0cb47b1e0efd75354ab92fcf",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0f183ff393f2fd4257873a5fa377c7c984c455bb0cb47b1e0efd75354ab92fcf"
+      }
+    },
+    {
+      "projectId": "project:0f2756560f825f58a78df7d6557675d52ad1335f44b3a8ac2d38279d020802ae",
+      "name": "org.bouncycastle:bcprov-jdk18on",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:04913b030a5650f50f86b46f779961ecfe7400c9c082a5bc76c65a4c5ce2d854"
+      ],
+      "versions": [
+        "1.78"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:0f2756560f825f58a78df7d6557675d52ad1335f44b3a8ac2d38279d020802ae",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0f2756560f825f58a78df7d6557675d52ad1335f44b3a8ac2d38279d020802ae"
+      }
+    },
+    {
+      "projectId": "project:1cec9facead2bd6d17fb5f053bae3f1a05bc3502f3d99f7ac8b6baf9d8b8c45e",
+      "name": "com.bloxbean.cardano:address",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:address",
+      "artifactIds": [
+        "artifact:fe7caa52204d04abb1122071a6a152fb1d219730d4081c5c297e9f7f7a462178"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:1cec9facead2bd6d17fb5f053bae3f1a05bc3502f3d99f7ac8b6baf9d8b8c45e",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:1cec9facead2bd6d17fb5f053bae3f1a05bc3502f3d99f7ac8b6baf9d8b8c45e"
+      }
+    },
+    {
+      "projectId": "project:1e146df4c2a37be1a5b4e3950a6131ccb9c004d574734440447062b9f46c4da3",
+      "name": "com.fasterxml.jackson:jackson-bom",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:7679dcac162cf2ac0fe12f09966db969488dae02efa8a189fa4d4db3f0aed6a6"
+      ],
+      "versions": [
+        "2.16.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:1e146df4c2a37be1a5b4e3950a6131ccb9c004d574734440447062b9f46c4da3",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:1e146df4c2a37be1a5b4e3950a6131ccb9c004d574734440447062b9f46c4da3"
+      }
+    },
+    {
+      "projectId": "project:1fd8d9b81047c35e6519be92812a03bee3225b08e09202ccb7d19d7d296135eb",
+      "name": "com.bloxbean.cardano:cip68",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip68",
+      "artifactIds": [
+        "artifact:1d816ca4a335b44db9d72091cc245e41b3163de049376caf99334f872120c7de"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:1fd8d9b81047c35e6519be92812a03bee3225b08e09202ccb7d19d7d296135eb",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:1fd8d9b81047c35e6519be92812a03bee3225b08e09202ccb7d19d7d296135eb"
+      }
+    },
+    {
+      "projectId": "project:21f45f2fe398cbf1c603e97565127a92a86e18cef1d51aa7d4e1cad4129a4666",
+      "name": "com.bloxbean.cardano:quicktx",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:quicktx",
+      "artifactIds": [
+        "artifact:acad8b5aad5f033fa0d62c9552ceeeaf79a3e7cbe9fdc964167c84b5d5927dc4"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:21f45f2fe398cbf1c603e97565127a92a86e18cef1d51aa7d4e1cad4129a4666",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:21f45f2fe398cbf1c603e97565127a92a86e18cef1d51aa7d4e1cad4129a4666"
+      }
+    },
+    {
+      "projectId": "project:2af2c9f4adcb3633c8a3c77abe6fc3b77f8823742c87c0d8df3c568015ae8fa9",
+      "name": "org.jetbrains:annotations",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:8ec6c7082c7abd831b33a729fb26ad6a94f28998281bcbf6748ba154013163e5"
+      ],
+      "versions": [
+        "13.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:2af2c9f4adcb3633c8a3c77abe6fc3b77f8823742c87c0d8df3c568015ae8fa9",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:2af2c9f4adcb3633c8a3c77abe6fc3b77f8823742c87c0d8df3c568015ae8fa9"
+      }
+    },
+    {
+      "projectId": "project:2bc6c6e46f81fea62aad6d9e79531bf28054a7e3666c6822d93051819e88d78a",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:fec595a210077bd3286647554d90460f48095ace615784acd447f2158f3bdfe9"
+      ],
+      "versions": [
+        "1.9.10"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:2bc6c6e46f81fea62aad6d9e79531bf28054a7e3666c6822d93051819e88d78a",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:2bc6c6e46f81fea62aad6d9e79531bf28054a7e3666c6822d93051819e88d78a"
       }
     },
     {
@@ -268022,6 +268485,40 @@
       }
     },
     {
+      "projectId": "project:31d9d22be103da8f706590a9ab8b913875f6a076815fa0205617f0de1a5b3e26",
+      "name": "com.squareup.retrofit2:retrofit",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:fa784664aeea59e7023d30cd779c97f91213827a9f5e039d2229b60e37688dbc"
+      ],
+      "versions": [
+        "2.9.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:31d9d22be103da8f706590a9ab8b913875f6a076815fa0205617f0de1a5b3e26",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:31d9d22be103da8f706590a9ab8b913875f6a076815fa0205617f0de1a5b3e26"
+      }
+    },
+    {
       "projectId": "project:3e0979547354a2e2192e682ec1969ea7840f4775ef0dd184258771534d788aed",
       "name": "@lucid-evolution/utils",
       "ecosystem": "npm",
@@ -268053,6 +268550,448 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:3e0979547354a2e2192e682ec1969ea7840f4775ef0dd184258771534d788aed"
+      }
+    },
+    {
+      "projectId": "project:3f8549df92f322ecb37866116adf0df7b222a0dc0862606eb0e23351d54cd73c",
+      "name": "com.bloxbean.cardano:cip20",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip20",
+      "artifactIds": [
+        "artifact:d892c6e0bf329178f3f79a8521be106af80a05c4d547f104516daa415db9d484"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:3f8549df92f322ecb37866116adf0df7b222a0dc0862606eb0e23351d54cd73c",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:3f8549df92f322ecb37866116adf0df7b222a0dc0862606eb0e23351d54cd73c"
+      }
+    },
+    {
+      "projectId": "project:442cdccc74095a5d8a1c6815e2fc69be3f29431d3b8e6b5e3223f00adb962210",
+      "name": "org.slf4j:slf4j-api",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:f42f77b69ee7e793c4687bceffe448f3d476a261ccf9898b4b427515677f812a"
+      ],
+      "versions": [
+        "2.0.11"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:442cdccc74095a5d8a1c6815e2fc69be3f29431d3b8e6b5e3223f00adb962210",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:442cdccc74095a5d8a1c6815e2fc69be3f29431d3b8e6b5e3223f00adb962210"
+      }
+    },
+    {
+      "projectId": "project:4755c8c2fdad607a4d093d0d6eb826be68a179fa72323aebfb0ff8fc29b43836",
+      "name": "com.bloxbean.cardano:crypto",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:crypto",
+      "artifactIds": [
+        "artifact:afb701bed93953d118dfaed3de1eca7274709d72f71fa954228cf5604901f457"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:4755c8c2fdad607a4d093d0d6eb826be68a179fa72323aebfb0ff8fc29b43836",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:4755c8c2fdad607a4d093d0d6eb826be68a179fa72323aebfb0ff8fc29b43836"
+      }
+    },
+    {
+      "projectId": "project:4a361556a628c7e41ca34859060853544830d7033f0a25dffac130e67df81a51",
+      "name": "com.google.errorprone:error_prone_annotations",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:11c5472859ef80da81214fb9649c7497422726188447f16d3db6addc29b1c707"
+      ],
+      "versions": [
+        "2.23.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:4a361556a628c7e41ca34859060853544830d7033f0a25dffac130e67df81a51",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:4a361556a628c7e41ca34859060853544830d7033f0a25dffac130e67df81a51"
+      }
+    },
+    {
+      "projectId": "project:4bbdd24a54ad93d3bf1d49b4ea3f3785e86212b1830c00b372c047a3f97cf6a8",
+      "name": "com.google.code.findbugs:jsr305",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:f543f2d9c864b7f99589de133d67d67ea9c97e466b1a1588ba5de0fc021b5d3d"
+      ],
+      "versions": [
+        "3.0.2"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:4bbdd24a54ad93d3bf1d49b4ea3f3785e86212b1830c00b372c047a3f97cf6a8",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:4bbdd24a54ad93d3bf1d49b4ea3f3785e86212b1830c00b372c047a3f97cf6a8"
+      }
+    },
+    {
+      "projectId": "project:4ddf322d5505789d930d7fe2ef1da820bc7a81320622692f4ea6591f6ec19676",
+      "name": "com.google.guava:guava",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:dfec730b45bd680ea8dbd6abbecc4ee9da1fa6af81a59eb780e6fa4ad138a6a2"
+      ],
+      "versions": [
+        "33.0.0-jre"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:4ddf322d5505789d930d7fe2ef1da820bc7a81320622692f4ea6591f6ec19676",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:4ddf322d5505789d930d7fe2ef1da820bc7a81320622692f4ea6591f6ec19676"
+      }
+    },
+    {
+      "projectId": "project:5488274975474f2081bceca4cbb1e6c29bc58811cf79d8b26e0a8891cff56e6f",
+      "name": "com.bloxbean.cardano:common-spec",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:common-spec",
+      "artifactIds": [
+        "artifact:1f8e02000d39a5dd923089f5b46d6d8099ac395326310e78aaa80925647589ad"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:5488274975474f2081bceca4cbb1e6c29bc58811cf79d8b26e0a8891cff56e6f",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:5488274975474f2081bceca4cbb1e6c29bc58811cf79d8b26e0a8891cff56e6f"
+      }
+    },
+    {
+      "projectId": "project:5af3c54de5f49771acd5c8a34f643b553cb9936e92b528fc30f6a8568f666dfc",
+      "name": "com.bloxbean.cardano:cip30",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip30",
+      "artifactIds": [
+        "artifact:3075c821cfd9e976a008b1b070903f1a67b0e4adcde6f55b5f55c8732aa0aa72"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:5af3c54de5f49771acd5c8a34f643b553cb9936e92b528fc30f6a8568f666dfc",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:5af3c54de5f49771acd5c8a34f643b553cb9936e92b528fc30f6a8568f666dfc"
+      }
+    },
+    {
+      "projectId": "project:5b14ff70dce379bf378ec2b57a7999f981f877092ec646d99ea2ddfd8d2f84ba",
+      "name": "com.squareup.okio:okio",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:d486ab4c49d85d8931acdc333a369b27588e88b423efbaa4cd3158a359912f9b"
+      ],
+      "versions": [
+        "3.6.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:5b14ff70dce379bf378ec2b57a7999f981f877092ec646d99ea2ddfd8d2f84ba",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:5b14ff70dce379bf378ec2b57a7999f981f877092ec646d99ea2ddfd8d2f84ba"
+      }
+    },
+    {
+      "projectId": "project:5dd392f18eeba5d476d6df65cd5819dace2cf47be9c63ad8d20cdbec50da1b27",
+      "name": "com.bloxbean.cardano:metadata",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:metadata",
+      "artifactIds": [
+        "artifact:f4694bb22bf750986a36fcb9a433bf6565d97194a86da41483affd476bc3df96"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:5dd392f18eeba5d476d6df65cd5819dace2cf47be9c63ad8d20cdbec50da1b27",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:5dd392f18eeba5d476d6df65cd5819dace2cf47be9c63ad8d20cdbec50da1b27"
+      }
+    },
+    {
+      "projectId": "project:5e28ce420dd87fd16df109c7d011450ffa2e1bb65f2f8ee9f40c7dd92b15e4a3",
+      "name": "org.checkerframework:checker-qual",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:c8e3a6964bbb6f920e8ad8ec5eaed68b2907746496a9573675ded423521c336e"
+      ],
+      "versions": [
+        "3.41.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:5e28ce420dd87fd16df109c7d011450ffa2e1bb65f2f8ee9f40c7dd92b15e4a3",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:5e28ce420dd87fd16df109c7d011450ffa2e1bb65f2f8ee9f40c7dd92b15e4a3"
+      }
+    },
+    {
+      "projectId": "project:63a6095657f13e171d87e28c67aa135f04a3975c7fa4b60856b3e24951626d16",
+      "name": "com.bloxbean.cardano:backend",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:backend",
+      "artifactIds": [
+        "artifact:8e2d6682fc335ef4195e5cc1176e1c808ea051ae25c4358b696dcbfe241ee7c6"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:63a6095657f13e171d87e28c67aa135f04a3975c7fa4b60856b3e24951626d16",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:63a6095657f13e171d87e28c67aa135f04a3975c7fa4b60856b3e24951626d16"
+      }
+    },
+    {
+      "projectId": "project:658a1b769f7c2dc39c83e727aa4c1818152755e0159a8617b38d5b816cf71beb",
+      "name": "com.bloxbean.cardano:net-i2p-crypto-eddsa",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:6864ed92744a2634f2752ed888d3dfc0593e0a847a866065d45215efecbe38cc"
+      ],
+      "versions": [
+        "0.3.1"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:658a1b769f7c2dc39c83e727aa4c1818152755e0159a8617b38d5b816cf71beb",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:658a1b769f7c2dc39c83e727aa4c1818152755e0159a8617b38d5b816cf71beb"
       }
     },
     {
@@ -268090,6 +269029,176 @@
       }
     },
     {
+      "projectId": "project:67e1d641d6cb2be7148c2d1d1fa564ac79dba7eae87f9a7debacabcc52b58241",
+      "name": "com.bloxbean.cardano:cip25",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip25",
+      "artifactIds": [
+        "artifact:00442db64ee7539c014de7c3157ff3ddf8d04877623ff390e6b02f27701123e4"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:67e1d641d6cb2be7148c2d1d1fa564ac79dba7eae87f9a7debacabcc52b58241",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:67e1d641d6cb2be7148c2d1d1fa564ac79dba7eae87f9a7debacabcc52b58241"
+      }
+    },
+    {
+      "projectId": "project:6977a0e83cfd961e54771f129290da6edaccd5b09ce00bbd2994c64cd77b9a9d",
+      "name": "com.bloxbean.cardano:function",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:function",
+      "artifactIds": [
+        "artifact:85ef2202321e5409055bdc5584f99451993086eec539c669a22503ac76e4d1f4"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:6977a0e83cfd961e54771f129290da6edaccd5b09ce00bbd2994c64cd77b9a9d",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:6977a0e83cfd961e54771f129290da6edaccd5b09ce00bbd2994c64cd77b9a9d"
+      }
+    },
+    {
+      "projectId": "project:6c1425c2c226e8d3c8fae29890fdb027da78e84844622756a0f80fed3a7cf255",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:dcea258553fa03adebfb67f00179c35aef47b08992ebf6787821162f56b8bd41"
+      ],
+      "versions": [
+        "1.9.10"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:6c1425c2c226e8d3c8fae29890fdb027da78e84844622756a0f80fed3a7cf255",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:6c1425c2c226e8d3c8fae29890fdb027da78e84844622756a0f80fed3a7cf255"
+      }
+    },
+    {
+      "projectId": "project:6da05f33d3c7c8c0fd0fd9b72347a18c1d02a6f6966ee35b9719ad4999e644a0",
+      "name": "com.google.guava:failureaccess",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:34ab62a60150184c25282ba7e8352762f72210e58dac71fa5ae0dc14f262129d"
+      ],
+      "versions": [
+        "1.0.2"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:6da05f33d3c7c8c0fd0fd9b72347a18c1d02a6f6966ee35b9719ad4999e644a0",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:6da05f33d3c7c8c0fd0fd9b72347a18c1d02a6f6966ee35b9719ad4999e644a0"
+      }
+    },
+    {
+      "projectId": "project:7191d8ac63dd83d73775269b88532b7d71f78102053937aeada8dd18070d1de8",
+      "name": "com.fasterxml.jackson.core:jackson-annotations",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:4375e5cc8caff0f7bdec142ba8b98860e24965a6448a862f8b2f9eeef632eeb3"
+      ],
+      "versions": [
+        "2.16.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:7191d8ac63dd83d73775269b88532b7d71f78102053937aeada8dd18070d1de8",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:7191d8ac63dd83d73775269b88532b7d71f78102053937aeada8dd18070d1de8"
+      }
+    },
+    {
       "projectId": "project:749df57564e8fc5c7d295061423177dbe7b9322a89c7d8cd68b42b9b44762df5",
       "name": "openapi-typescript-helpers",
       "ecosystem": "npm",
@@ -268121,6 +269230,74 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:749df57564e8fc5c7d295061423177dbe7b9322a89c7d8cd68b42b9b44762df5"
+      }
+    },
+    {
+      "projectId": "project:7bc331b74ba3f0df32620a879a393d148944b043360c140550ef908d136d18e2",
+      "name": "com.bloxbean.cardano:plutus",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:plutus",
+      "artifactIds": [
+        "artifact:fcc78df7dc890616e437b60731fd846423ea89c18f656c8d0efb299d16a2f577"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:7bc331b74ba3f0df32620a879a393d148944b043360c140550ef908d136d18e2",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:7bc331b74ba3f0df32620a879a393d148944b043360c140550ef908d136d18e2"
+      }
+    },
+    {
+      "projectId": "project:839fb0312a07e5bb2022e7e84bc3b618fe03d6bccafa17127f236259acadf5d5",
+      "name": "org.jetbrains.kotlin:kotlin-stdlib-common",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:ea43c524b6243491538319bc2e056ce44b8ab42911092beb68196a9c0826a95b"
+      ],
+      "versions": [
+        "1.9.10"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:839fb0312a07e5bb2022e7e84bc3b618fe03d6bccafa17127f236259acadf5d5",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:839fb0312a07e5bb2022e7e84bc3b618fe03d6bccafa17127f236259acadf5d5"
       }
     },
     {
@@ -268158,6 +269335,176 @@
       }
     },
     {
+      "projectId": "project:8879199e1a9e73c2539783b550ad0c0099981ba23336af01cef349beef4b77ba",
+      "name": "co.nstant.in:cbor",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:9c6a8de2b2ff94e0909e0f9bcb019d8e0ad6504f8b6fa133c52cfac30384dbfa"
+      ],
+      "versions": [
+        "0.9"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:8879199e1a9e73c2539783b550ad0c0099981ba23336af01cef349beef4b77ba",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:8879199e1a9e73c2539783b550ad0c0099981ba23336af01cef349beef4b77ba"
+      }
+    },
+    {
+      "projectId": "project:8f9abdbfb471f85696dd926fd58dc6b9e5ce8d3a47cf8b594c8f06eece060861",
+      "name": "com.bloxbean.cardano:coinselection",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:coinselection",
+      "artifactIds": [
+        "artifact:1c9ecff84c6086b46c5066d408209afc68eeaa52722f89795bee11dd70ebe230"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:8f9abdbfb471f85696dd926fd58dc6b9e5ce8d3a47cf8b594c8f06eece060861",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:8f9abdbfb471f85696dd926fd58dc6b9e5ce8d3a47cf8b594c8f06eece060861"
+      }
+    },
+    {
+      "projectId": "project:90266cb67561833956216414712a0a7af13859b2c1f0d4488fa7c7e538076aa1",
+      "name": "com.squareup.okhttp3:okhttp",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:5fb7f83d1d093a77a75591174d90580d90af9d9f867bcd0684a77c0071140998"
+      ],
+      "versions": [
+        "4.12.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:90266cb67561833956216414712a0a7af13859b2c1f0d4488fa7c7e538076aa1",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:90266cb67561833956216414712a0a7af13859b2c1f0d4488fa7c7e538076aa1"
+      }
+    },
+    {
+      "projectId": "project:93c6746e21cab10f8697d7bae9f334405f4f3016009aa3e396c1ae117c514e96",
+      "name": "com.bloxbean.cardano:transaction-spec",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:transaction-spec",
+      "artifactIds": [
+        "artifact:cbe4e23fbdb5e325832bd26cb0efd2aa6d304b7ad823a72d55f9f96f817dee72"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:93c6746e21cab10f8697d7bae9f334405f4f3016009aa3e396c1ae117c514e96",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:93c6746e21cab10f8697d7bae9f334405f4f3016009aa3e396c1ae117c514e96"
+      }
+    },
+    {
+      "projectId": "project:9cedfb703c1c31d60cafb001df5783691ca562477fee012ee31568184e84677f",
+      "name": "com.fasterxml.jackson.core:jackson-databind",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:23ceef22d51be7efab5d8d370b5de1c9ed41c7f219cbca3fa2adbad174785549"
+      ],
+      "versions": [
+        "2.16.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:9cedfb703c1c31d60cafb001df5783691ca562477fee012ee31568184e84677f",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:9cedfb703c1c31d60cafb001df5783691ca562477fee012ee31568184e84677f"
+      }
+    },
+    {
       "projectId": "project:a310e671a53efa624c1ca12980651716e0c678fe88622b26470046ae97425481",
       "name": "@lucid-evolution/crc8",
       "ecosystem": "npm",
@@ -268189,6 +269536,74 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:a310e671a53efa624c1ca12980651716e0c678fe88622b26470046ae97425481"
+      }
+    },
+    {
+      "projectId": "project:a6c959456e6028d30e7f04f53373f436d278b09b113aca3d3d36835762b2af61",
+      "name": "com.bloxbean.cardano:hd-wallet",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:hd-wallet",
+      "artifactIds": [
+        "artifact:f02f57df2694d4d02c6fca509cba33e54a63575cd6f4c9a0b3bf4fc600ff05b3"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:a6c959456e6028d30e7f04f53373f436d278b09b113aca3d3d36835762b2af61",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:a6c959456e6028d30e7f04f53373f436d278b09b113aca3d3d36835762b2af61"
+      }
+    },
+    {
+      "projectId": "project:a9e9c7bee7202fec7bca8cc826dca0e1d8d0b9bf9c742cbc9513e2f4e3d3c6b8",
+      "name": "com.bloxbean.cardano:cip27",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip27",
+      "artifactIds": [
+        "artifact:204e30baf7d7f58e8bf1758a7a77b7f6c1598fc192332714c883b66107f413a4"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:a9e9c7bee7202fec7bca8cc826dca0e1d8d0b9bf9c742cbc9513e2f4e3d3c6b8",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:a9e9c7bee7202fec7bca8cc826dca0e1d8d0b9bf9c742cbc9513e2f4e3d3c6b8"
       }
     },
     {
@@ -268291,6 +269706,74 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:b1a1426afb55c5e22c32047230a8254aaf8250dd0ecc6fc321bed8b0a865f224"
+      }
+    },
+    {
+      "projectId": "project:b520a5c60e42047ae67d7cbb668a03828a762ab13bfebdb9a4fbb983e93f73c0",
+      "name": "com.bloxbean.cardano:cip",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip",
+      "artifactIds": [
+        "artifact:94b71d2d4a21fd5bead8e4ae28b711f37449f28c29fd40ae8bfb4ad970278909"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:b520a5c60e42047ae67d7cbb668a03828a762ab13bfebdb9a4fbb983e93f73c0",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:b520a5c60e42047ae67d7cbb668a03828a762ab13bfebdb9a4fbb983e93f73c0"
+      }
+    },
+    {
+      "projectId": "project:b871b828d5c8bc1b3754dab689408a094c3adc040f39daf4687044d29831791d",
+      "name": "com.bloxbean.cardano:core",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:core",
+      "artifactIds": [
+        "artifact:a5f509ab8071c984c4e688ce87314ca74ba714d86e1686da24bb99de50328af0"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:b871b828d5c8bc1b3754dab689408a094c3adc040f39daf4687044d29831791d",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:b871b828d5c8bc1b3754dab689408a094c3adc040f39daf4687044d29831791d"
       }
     },
     {
@@ -268430,6 +269913,40 @@
       }
     },
     {
+      "projectId": "project:df08d67a6167b979a1fb366a2fcf6176ef4bdfd88e1e76eac5660c6d5283c6cb",
+      "name": "com.bloxbean.cardano:cip8",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:cip/cip8",
+      "artifactIds": [
+        "artifact:c16975ac9fcdd6a42e9437ba09814ea656ae7e8f2aab56e9546d5f1735028025"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:df08d67a6167b979a1fb366a2fcf6176ef4bdfd88e1e76eac5660c6d5283c6cb",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:df08d67a6167b979a1fb366a2fcf6176ef4bdfd88e1e76eac5660c6d5283c6cb"
+      }
+    },
+    {
       "projectId": "project:e0d32100de55b20f58d36b2d86df0eb2e3d24b4385ac03f859dac63e36041c9e",
       "name": "cardano-nftcdn-client",
       "ecosystem": "npm",
@@ -268464,6 +269981,40 @@
       }
     },
     {
+      "projectId": "project:e278769b975919c51beb23333409217be846702dcc5ad7e4aa25fda5a988b86c",
+      "name": "com.bloxbean.cardano:core-api",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:core-api",
+      "artifactIds": [
+        "artifact:e955eed09eb99646aac4faf21cad4d283521bf63d8bda2c266cc5970841de027"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:e278769b975919c51beb23333409217be846702dcc5ad7e4aa25fda5a988b86c",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:e278769b975919c51beb23333409217be846702dcc5ad7e4aa25fda5a988b86c"
+      }
+    },
+    {
       "projectId": "project:ea31cb17ae6ab6ec9c7497580b86f33952a6d2d08dcd546ee0b029c08c5f0945",
       "name": "cardano-ogmios-client",
       "ecosystem": "npm",
@@ -268495,6 +270046,40 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:ea31cb17ae6ab6ec9c7497580b86f33952a6d2d08dcd546ee0b029c08c5f0945"
+      }
+    },
+    {
+      "projectId": "project:eb0047105fcc83ddde6fcc123829ddc865593ab38363cf92be3f1ad49318a4f0",
+      "name": "com.squareup.okio:okio-jvm",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:9e2fde3f0faf66b6a07449a341d7f423ff313fe47d087f9c7828fc8c2b9543a3"
+      ],
+      "versions": [
+        "3.6.0"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:eb0047105fcc83ddde6fcc123829ddc865593ab38363cf92be3f1ad49318a4f0",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:eb0047105fcc83ddde6fcc123829ddc865593ab38363cf92be3f1ad49318a4f0"
       }
     },
     {
@@ -268563,6 +270148,40 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:fbd8fc866a7de3f1526e5c3bdda5a4a07b94c9023dd8933b33063ba98a286acf"
+      }
+    },
+    {
+      "projectId": "project:fd3986e6707dfda1d66ebce10df66e8aaa78a71eb473baef7b8bb9d950ec77e5",
+      "name": "com.google.guava:listenablefuture",
+      "ecosystem": "gradle",
+      "source": "unverified-gradle-capture:a7680cb4f37c3e2d0cd11b748b34454ba708967dd0fdb34d08a76a926ff50b05",
+      "artifactIds": [
+        "artifact:07607ef15dfbffee861aa9d9136c5062d5e7ec84565d2f3f518efb39b8924f4a"
+      ],
+      "versions": [
+        "9999.0-empty-to-avoid-conflict-with-guava"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 1,
+        "potentialConsumers": 0,
+        "consumerGaps": 8
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "No exact collected root links this component to a catalog maintainer."
+      ],
+      "capabilities": [],
+      "maintainerHints": [],
+      "rootScopes": [],
+      "taskId": "project:fd3986e6707dfda1d66ebce10df66e8aaa78a71eb473baef7b8bb9d950ec77e5",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:fd3986e6707dfda1d66ebce10df66e8aaa78a71eb473baef7b8bb9d950ec77e5"
       }
     },
     {
@@ -549649,6 +551268,108 @@
       }
     },
     {
+      "projectId": "project:0d150be3381a610397e491fe0e66f2e53f8c85c295f4c12d34eadf9f9933de74",
+      "name": "com.bloxbean.cardano:governance",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:governance",
+      "artifactIds": [
+        "artifact:d908195c5ebfc77581fb6942a8f3a44949b96da23267e6c40dd18d0e88d42c1f"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 0,
+        "potentialConsumers": 0,
+        "consumerGaps": 0
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "Bloxbean Cardano Client Library: Chain-facing capabilities have not been reviewed.",
+        "Bloxbean Cardano Client Library: Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+        "Bloxbean Cardano Client Library: Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+        "Bloxbean Cardano Client Library: Runtime, bundled, and service dependencies have not been reviewed.",
+        "Bloxbean Cardano Client Library: Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+        "Bloxbean Cardano Client Library: This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+        "Bloxbean Cardano Client Library: Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+        "Bloxbean Cardano Client Library: Source release identified; published package/binary correspondence and supported profiles need verification."
+      ],
+      "capabilities": [],
+      "maintainerHints": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "name": "Bloxbean Cardano Client Library",
+          "maintainer": "BloxBean"
+        }
+      ],
+      "rootScopes": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+          "release": "v0.7.3",
+          "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+          "platform": "amd64-Linux",
+          "evidenceIds": [
+            "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+            "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+            "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+            "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+            "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+            "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+            "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+            "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+            "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+            "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+            "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+            "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+            "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+            "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+            "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+            "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+            "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+            "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+            "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+            "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+            "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+            "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+            "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+            "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+            "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+            "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+            "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+            "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+            "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+            "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+            "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+            "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+            "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+            "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+            "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+            "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+            "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+            "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+            "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+            "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+            "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+            "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+            "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+            "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+            "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+          ]
+        }
+      ],
+      "taskId": "project:0d150be3381a610397e491fe0e66f2e53f8c85c295f4c12d34eadf9f9933de74",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0d150be3381a610397e491fe0e66f2e53f8c85c295f4c12d34eadf9f9933de74"
+      }
+    },
+    {
       "projectId": "project:0d7eba9c036d53946c254dac286aeff2cb54264c077d90a7e79524151895687b",
       "name": "github.com/blinklabs-io/gouroboros/protocol/messagesubmission",
       "ecosystem": "go",
@@ -549715,6 +551436,108 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:0d7eba9c036d53946c254dac286aeff2cb54264c077d90a7e79524151895687b"
+      }
+    },
+    {
+      "projectId": "project:0f29ab75a929fba9b92eff4971b6c258708d1760320661a8d446975da05f073f",
+      "name": "com.bloxbean.cardano:blockfrost",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:backend-modules/blockfrost",
+      "artifactIds": [
+        "artifact:e08a7b965d0770829e63d50fab2edeb9a65c9d430029eab3101f9791116f0f25"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 0,
+        "potentialConsumers": 0,
+        "consumerGaps": 0
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "Bloxbean Cardano Client Library: Chain-facing capabilities have not been reviewed.",
+        "Bloxbean Cardano Client Library: Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+        "Bloxbean Cardano Client Library: Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+        "Bloxbean Cardano Client Library: Runtime, bundled, and service dependencies have not been reviewed.",
+        "Bloxbean Cardano Client Library: Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+        "Bloxbean Cardano Client Library: This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+        "Bloxbean Cardano Client Library: Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+        "Bloxbean Cardano Client Library: Source release identified; published package/binary correspondence and supported profiles need verification."
+      ],
+      "capabilities": [],
+      "maintainerHints": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "name": "Bloxbean Cardano Client Library",
+          "maintainer": "BloxBean"
+        }
+      ],
+      "rootScopes": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+          "release": "v0.7.3",
+          "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+          "platform": "amd64-Linux",
+          "evidenceIds": [
+            "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+            "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+            "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+            "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+            "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+            "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+            "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+            "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+            "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+            "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+            "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+            "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+            "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+            "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+            "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+            "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+            "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+            "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+            "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+            "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+            "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+            "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+            "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+            "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+            "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+            "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+            "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+            "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+            "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+            "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+            "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+            "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+            "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+            "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+            "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+            "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+            "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+            "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+            "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+            "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+            "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+            "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+            "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+            "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+            "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+          ]
+        }
+      ],
+      "taskId": "project:0f29ab75a929fba9b92eff4971b6c258708d1760320661a8d446975da05f073f",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:0f29ab75a929fba9b92eff4971b6c258708d1760320661a8d446975da05f073f"
       }
     },
     {
@@ -559324,6 +561147,108 @@
       "pathsRef": {
         "file": "projects.json",
         "projectId": "project:b215f4fa1f9a2a8b67dae042753f0b093289c202a50e524a153282c9de55db48"
+      }
+    },
+    {
+      "projectId": "project:b40aa18ea5997055849b8aa289e980e1965c17570b913de9ddded215ba670855",
+      "name": "com.bloxbean.cardano:cardano-client-lib",
+      "ecosystem": "gradle",
+      "source": "source:f1130177b02761ea15b93a92e385ae0739d27096:.",
+      "artifactIds": [
+        "artifact:1486472f4198d080935eb5543671cd5a0ca4fde7efcbb59cee76a5ae13dcaef2"
+      ],
+      "versions": [
+        "0.7.3"
+      ],
+      "factors": {
+        "verifiedCapabilities": 0,
+        "potentialCapabilities": 0,
+        "verifiedConsumers": 0,
+        "potentialConsumers": 0,
+        "consumerGaps": 0
+      },
+      "uncertainties": [
+        "No current, component-specific runtime capability evidence.",
+        "Bloxbean Cardano Client Library: Chain-facing capabilities have not been reviewed.",
+        "Bloxbean Cardano Client Library: Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+        "Bloxbean Cardano Client Library: Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+        "Bloxbean Cardano Client Library: Runtime, bundled, and service dependencies have not been reviewed.",
+        "Bloxbean Cardano Client Library: Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+        "Bloxbean Cardano Client Library: This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+        "Bloxbean Cardano Client Library: Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+        "Bloxbean Cardano Client Library: Source release identified; published package/binary correspondence and supported profiles need verification."
+      ],
+      "capabilities": [],
+      "maintainerHints": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "name": "Bloxbean Cardano Client Library",
+          "maintainer": "BloxBean"
+        }
+      ],
+      "rootScopes": [
+        {
+          "toolId": "bloxbean-cardano-client-library",
+          "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+          "release": "v0.7.3",
+          "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+          "platform": "amd64-Linux",
+          "evidenceIds": [
+            "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+            "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+            "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+            "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+            "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+            "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+            "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+            "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+            "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+            "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+            "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+            "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+            "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+            "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+            "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+            "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+            "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+            "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+            "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+            "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+            "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+            "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+            "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+            "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+            "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+            "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+            "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+            "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+            "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+            "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+            "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+            "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+            "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+            "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+            "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+            "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+            "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+            "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+            "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+            "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+            "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+            "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+            "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+            "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+            "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+          ]
+        }
+      ],
+      "taskId": "project:b40aa18ea5997055849b8aa289e980e1965c17570b913de9ddded215ba670855",
+      "owner": null,
+      "issueUrl": null,
+      "nextAction": "Inspect this component's production behavior and exact release identity; record capability evidence and unresolved integration boundaries.",
+      "pathsRef": {
+        "file": "projects.json",
+        "projectId": "project:b40aa18ea5997055849b8aa289e980e1965c17570b913de9ddded215ba670855"
       }
     },
     {

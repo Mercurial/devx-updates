@@ -1012,6 +1012,66 @@ bound and was replaced with a lightweight exact-source citation check. Broader
 native coverage, manual review decisions and the exact Dijkstra target/environment
 remain open.
 
+### Active continuation: native Gradle SDK graph
+
+The next unsupported higher-level workflow is Bloxbean Cardano Client Lib's Java
+SDK, whose production Gradle build must not be replaced with its documentation
+Yarn lock. A new `gradle-resolution` import adapter and pinned Gradle 7.5.1 init
+script capture native selected-variant dependency graphs. Separate configuration
+graphs retain runtime/build/development scopes, shared dependency paths, selected
+versions and original requests. Native constraints remain evidence without
+creating dependency exposure; unresolved selections remain gaps. Malformed
+captures, missing referenced nodes and unbound included-build identities fail
+closed. This extends ADR-1/ADR-2's retained-input model without runtime resolution.
+
+The real pilot uses source tag v0.7.3 at
+`f1130177b02761ea15b93a92e385ae0739d27096`, selecting `runtimeClasspath` for the
+aggregate library, governance and Blockfrost backend. Native capture produced
+97 variant occurrences and 247 dependency edges, excluding nine constraint
+records from exposure. QuickTx is reached through the aggregate project graph.
+Source project group/name identities remain distinct from Maven publication IDs.
+External coordinates lack per-module repository provenance and binary checksums,
+so identities remain capture-local and coverage remains partial.
+
+The disposable worker used the pinned Gradle 7.5.1/JDK 17.0.5 image, two CPUs,
+2 GiB memory, 256-process limit, no capabilities and no publishing credentials or
+host home/socket mounts. The source checkout was copied from a read-only mount;
+project evaluation ran only the capture task. Its 48-second successful log, image
+digest, command, selection, init script and 43 pinned source files are retained.
+No SDK compilation, tests or Dijkstra assessment ran. Additional provider/supplier
+roots, build/plugin/annotation-processor classpaths, native artifacts, published
+JAR provenance and deployed services remain unresolved. The profile is explicitly
+import-only; isolated automatic recapture/refresh remains rollout work.
+
+The snapshot now covers 40 of 269 tools across 44 profiles, with 56,507 occurrences,
+176,198 edges and 1,171 evidence objects. A real native fixture covers diamonds,
+version mediation, platform constraints, main versus test-fixture variants and
+separate build/test configurations. The initial 115-test suite, focused lint and
+TypeScript pass. Evidence validation and replay pass for all 44 profiles and 1,171
+evidence objects. Standards review found no actionable issues. Specification review
+identified missing Gradle ecosystem filtering; a shared ecosystem list now connects
+discovery, reports and the dashboard. Existing retained Gradle manifests reclassify
+15 tools, without claiming new native coverage for the other 14. Cached discovery
+results also use current classification. Groovy and Kotlin build/settings files,
+version catalogs and wrapper properties are recognized; resolver version support
+remains explicitly limited. Follow-up specification review confirms the filter
+finding resolved; there are no remaining actionable implementation-review findings.
+
+Final verification: all 116 readiness tests pass, and the production export passes
+349 routes with `/devx-updates` basePath. Browser checks verify the SDK's three
+roots, exact graph counts, partial/unassessed status, scope gaps and graph export;
+Gradle-filtered coverage, impact and investigations, complete exports and paths;
+base-path navigation, mobile width and console errors. The browser helper was
+corrected to distinguish the three collected roots (zero downstream consumers,
+retained root-scope evidence) from components with downstream paths. No product
+change was needed for that distinction. All 1,172 lexical citations validate.
+Old profiles, evidence, graph chunks and all ten manual-review states are unchanged.
+The comparison adds one profile and 247 edges with no changed/removed existing
+profiles or capability findings. The temporary task-owned Gradle image was removed
+after both workers exited; retained captures, source and worker provenance remain.
+Broader coverage, isolated automatic Gradle refresh, owner-run review decisions
+and Dijkstra target/environment work remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

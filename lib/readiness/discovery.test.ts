@@ -5,8 +5,15 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { Graph } from "../map-types";
 import { inventory, object } from "./core";
-import { discover } from "./discovery";
+import { detectManifests, discover } from "./discovery";
 import { readJson, Store, writeJson } from "./store";
+
+test("Gradle production inputs have their own ecosystem without swallowing unrelated JVM manifests", () => {
+  const paths = ["sdk/build.gradle", "service/build.gradle.kts", "settings.gradle.kts", "gradle/libs.versions.toml", "gradle/wrapper/gradle-wrapper.properties", "gradle.properties"];
+  assert.deepEqual(detectManifests(paths).ecosystems, ["gradle"]);
+  assert.deepEqual(detectManifests(paths).manifests, [...paths].sort());
+  assert.deepEqual(detectManifests([...paths, "other/pom.xml", "web/package.json"]).ecosystems, ["gradle", "npm", "other"]);
+});
 
 test("discovery resumes interrupted jobs, retains successful evidence on failure, and reuses completed work", async (t) => {
   const directory = mkdtempSync(join(tmpdir(), "readiness-discovery-"));
@@ -23,7 +30,7 @@ test("discovery resumes interrupted jobs, retains successful evidence on failure
       if (endpoint === "repos/owner/repo") return { full_name: "owner/repo", default_branch: "main" };
       if (endpoint.endsWith("/releases/latest")) return { tag_name: "v1", html_url: "https://github.com/owner/repo/releases/tag/v1" };
       if (endpoint.endsWith("/commits/v1")) return { sha: revision };
-      if (endpoint.includes("/git/trees/")) return { sha: revision, truncated: false, tree: [{ path: "package.json", type: "blob" }] };
+      if (endpoint.includes("/git/trees/")) return { sha: revision, truncated: false, tree: [{ path: "package.json", type: "blob" }, { path: "build.gradle", type: "blob" }] };
       throw new Error(`Unexpected request ${endpoint}`);
     };
     await discover(snapshot, store, { stateDir, request });
@@ -34,6 +41,11 @@ test("discovery resumes interrupted jobs, retains successful evidence on failure
     assert.equal(calls, 4, "successful work is reused");
     const statePath = join(stateDir, "discovery.json");
     const jobs = object(readJson(statePath));
+    object(object(jobs["owner/repo"]).result).ecosystems = ["npm", "other"];
+    writeJson(statePath, jobs);
+    await discover(snapshot, store, { stateDir, request });
+    assert.equal(calls, 4, "new classification reuses the captured tree");
+    assert.deepEqual(snapshot.tools[0].ecosystems, ["gradle", "npm"]);
     object(jobs["owner/repo"]).status = "running";
     writeJson(statePath, jobs);
     await discover(snapshot, store, { stateDir, request: async () => { throw new Error("Network unavailable"); } });

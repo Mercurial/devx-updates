@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { Tool } from "@/lib/readiness/types";
-import { CAPABILITY_LABELS } from "@/lib/readiness/types";
+import { CAPABILITY_LABELS, ECOSYSTEMS } from "@/lib/readiness/types";
 import type { CapabilityRow } from "@/lib/readiness/capabilities";
 import Download from "./Download";
 import InvestigationTable from "./InvestigationTable";
@@ -88,7 +88,7 @@ export default function Dashboard({ tools, manifest, profileCounts, asOf }: { to
     {view === "capabilities" && <p className="text-sm text-muted">Behavior findings apply only to their release, profile and condition. Suggestions are not verified behavior. Historical findings do not describe the current source. Tools without findings remain unresolved; this list is not a readiness assessment.</p>}
     <div className="flex flex-wrap items-end gap-3">
       <label className="flex min-w-52 flex-1 flex-col gap-1 text-xs text-muted">{view === "investigation" ? "Search component, owner or maintainer" : view === "impact" ? "Search component" : "Search tool or maintainer"}<input value={search} onChange={(e) => { setSearch(e.target.value); reset(); }} placeholder={view === "impact" || view === "investigation" ? "e.g. pallas, serialization" : "e.g. Oura, TxPipe"} className={inputStyle} /></label>
-      <label className="flex flex-col gap-1 text-xs text-muted">Ecosystem<select value={ecosystem} onChange={(e) => { setEcosystem(e.target.value); reset(); }} className={inputStyle}><option value="">All ecosystems</option>{["npm", "cargo", "cabal", "go", "python", "nix", "container", "other"].map((e) => <option key={e}>{e}</option>)}</select></label>
+      <label className="flex flex-col gap-1 text-xs text-muted">Ecosystem<select value={ecosystem} onChange={(e) => { setEcosystem(e.target.value); reset(); }} className={inputStyle}><option value="">All ecosystems</option>{ECOSYSTEMS.map((e) => <option key={e}>{e}</option>)}</select></label>
       {(view === "coverage" || view === "queue") && <label className="flex flex-col gap-1 text-xs text-muted">Coverage filter<select value={coverage} onChange={(e) => { setCoverage(e.target.value); reset(); }} className={inputStyle}><option value="">All tools</option><option value="profiles">Has native profiles</option><option value="unresolved">Needs native resolution</option><option value="errors">Discovery failed</option><option value="stale">No recent discovery (14 days)</option></select></label>}
       {view === "impact" && <label className="flex items-center gap-2 py-2 text-sm"><input type="checkbox" checked={groupVersions} onChange={(e) => { setGroupVersions(e.target.checked); reset(); }} />Group package versions</label>}
       {(view === "queue" || view === "investigation") && <label className="flex flex-col gap-1 text-xs text-muted">Ownership<select value={ownership} onChange={(e) => { setOwnership(e.target.value); reset(); }} className={inputStyle}><option value="">All tasks</option><option value="unassigned">Unassigned</option><option value="assigned">Assigned</option></select></label>}

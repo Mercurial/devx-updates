@@ -18,11 +18,12 @@ export function detectManifests(paths: string[]): { manifests: string[]; ecosyst
     ["npm", /(^|\/)(package\.json|package-lock\.json|yarn\.lock|bun\.lockb?|pnpm-lock\.yaml)$/],
     ["cargo", /(^|\/)Cargo\.(toml|lock)$/],
     ["cabal", /\.cabal$|(^|\/)(cabal\.project(\..+)?|stack\.yaml(\.lock)?)$/],
+    ["gradle", /(^|\/)((build|settings)\.gradle(\.kts)?|gradle\.properties|gradle-wrapper\.properties|libs\.versions\.toml)$/],
     ["go", /(^|\/)go\.(mod|sum)$/],
     ["python", /(^|\/)(pyproject\.toml|poetry\.lock|uv\.lock|requirements[^/]*\.txt|Pipfile(\.lock)?|setup\.py)$/],
     ["nix", /\.nix$|(^|\/)flake\.lock$/],
     ["container", /(^|\/)(Dockerfile[^/]*|docker-compose[^/]*|compose\.ya?ml)$/],
-    ["other", /(^|\/)(aiken\.toml|aiken\.lock|mix\.exs|mix\.lock|pom\.xml|build\.gradle|Gemfile|deno\.jsonc?|deno\.lock)$/],
+    ["other", /(^|\/)(aiken\.toml|aiken\.lock|mix\.exs|mix\.lock|pom\.xml|Gemfile|deno\.jsonc?|deno\.lock)$/],
   ];
   const manifests = new Set<string>(); const ecosystems = new Set<Ecosystem>();
   for (const path of paths) for (const [ecosystem, pattern] of patterns) if (pattern.test(path)) { manifests.add(path); ecosystems.add(ecosystem); }
@@ -97,7 +98,9 @@ function applyDiscovery(tool: Tool, job: Job, snapshot: Snapshot) {
   const previousRevision = tool.revision;
   tool.catalogRepo ??= tool.repo;
   tool.repo = result.repo; tool.release = result.release; tool.revision = result.revision; tool.releaseUrl = result.releaseUrl;
-  tool.manifests = result.manifests; tool.ecosystems = result.ecosystems;
+  tool.manifests = result.manifests;
+  // Cached trees may predate a new ecosystem classifier; reuse their evidence, not stale labels.
+  tool.ecosystems = detectManifests(result.manifests).ecosystems;
   tool.artifact = "partial";
   tool.gaps = tool.gaps.filter((g) => g.area !== "artifact" && g.area !== "discovery");
   tool.gaps.push(gap("artifact", result.stable ? "Source release identified; published package/binary correspondence and supported profiles need verification." : "No GitHub stable release was found; default-branch source is discovery evidence only.", "Confirm distribution artifacts and production configuration with release evidence."));

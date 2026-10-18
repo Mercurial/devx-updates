@@ -1,12 +1,12 @@
 {
-  "snapshot": "a4542a40e39f377a5e03467b0dc1c3183582132605978827e82237e6706231d1",
+  "snapshot": "38a4f66a54cec99d4a2727d5d1d5d1ce374646673becc83f108606b098a1482b",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 39,
-  "profiles": 43,
+  "withProfiles": 40,
+  "profiles": 44,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 230,
+  "unresolvedTools": 229,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -1398,6 +1398,23 @@
     },
     {
       "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:1349f31b7d1e9c8d6659492c",
+      "area": "resolution",
+      "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:150620f414ead55aabd51780",
+      "area": "artifact",
+      "reason": "Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+      "nextAction": "Verify published module coordinates, artifact checksums and release provenance for the selected consumer workflow.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:artifact"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -1406,11 +1423,29 @@
     },
     {
       "toolId": "bloxbean-cardano-client-library",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:40a57cec14b2a10290af7249",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:4b40f604bfc99dbf87cf1809",
+      "area": "resolution",
+      "reason": "This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+      "nextAction": "Recapture with the retained selection/script/worker and reimport after source or configuration changes; implement an isolated scheduled collector before registering automatic refresh.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:refresh"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:9419305bc758a4d435005a6a",
+      "area": "integration",
+      "reason": "Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+      "nextAction": "Collect applicable additional configurations/artifact inventories and manually review enabled transaction, signing and governance workflows.",
+      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+      "code": "gradle-scope:integration"
     },
     {
       "toolId": "bloxbean-cardano-client-library",
@@ -14462,10 +14497,11 @@
     "npm": 125,
     "cargo": 51,
     "cabal": 47,
+    "gradle": 15,
     "go": 25,
     "python": 31,
     "nix": 62,
     "container": 71,
-    "other": 53
+    "other": 41
   }
 }

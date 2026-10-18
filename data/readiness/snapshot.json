@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "a4542a40e39f377a5e03467b0dc1c3183582132605978827e82237e6706231d1",
-    "generatedAt": "2026-10-18T20:27:29.702Z",
+    "semanticDigest": "38a4f66a54cec99d4a2727d5d1d5d1ce374646673becc83f108606b098a1482b",
+    "generatedAt": "2026-10-18T20:47:42.909Z",
     "tools": [
       {
         "id": "1694-io",
@@ -2351,11 +2351,11 @@
         "registryHint": "Maven",
         "packageHint": "com.bloxbean.cardano:cardano-client-lib",
         "ecosystems": [
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -2398,8 +2398,53 @@
           "transaction-spec/build.gradle"
         ],
         "evidenceIds": [
+          "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+          "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+          "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+          "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+          "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+          "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+          "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+          "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+          "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+          "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+          "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+          "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+          "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+          "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+          "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+          "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+          "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+          "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+          "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+          "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+          "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+          "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+          "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+          "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+          "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+          "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+          "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+          "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
           "evidence:84ded2fea70b94cffb7dff6147e59e82e4868316145c2adb8b1224db3c719b37",
-          "evidence:ee88936c9a74762399eb034f52aa0c99b8d260ea17e7555103c5b70576bef07b"
+          "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+          "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+          "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+          "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+          "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+          "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+          "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+          "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+          "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+          "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+          "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+          "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+          "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+          "evidence:ee88936c9a74762399eb034f52aa0c99b8d260ea17e7555103c5b70576bef07b",
+          "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+          "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+          "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
         ],
         "gaps": [
           {
@@ -2410,6 +2455,21 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:1349f31b7d1e9c8d6659492c",
+            "area": "resolution",
+            "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17"
+          },
+          {
+            "id": "gap:150620f414ead55aabd51780",
+            "area": "artifact",
+            "reason": "Cardano Client Lib source tag and Gradle project versions agree on 0.7.3. Native names use project group/name and can differ from published Maven IDs (for example the selected blockfrost project). No Maven publication, JAR provenance or deployed application correspondence is established.",
+            "nextAction": "Verify published module coordinates, artifact checksums and release provenance for the selected consumer workflow.",
+            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+            "code": "gradle-scope:artifact"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -2417,11 +2477,27 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:40a57cec14b2a10290af7249",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17"
+          },
+          {
+            "id": "gap:4b40f604bfc99dbf87cf1809",
+            "area": "resolution",
+            "reason": "This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
+            "nextAction": "Recapture with the retained selection/script/worker and reimport after source or configuration changes; implement an isolated scheduled collector before registering automatic refresh.",
+            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+            "code": "gradle-scope:refresh"
+          },
+          {
+            "id": "gap:9419305bc758a4d435005a6a",
+            "area": "integration",
+            "reason": "Only the aggregate library, governance and Blockfrost backend runtime configurations are selected. QuickTx is reached through the aggregate native project graph. Koios/Ogmios backends, supplier roots, build/plugins/annotation processors, native cryptography, script evaluation and configured provider deployments remain separate boundaries.",
+            "nextAction": "Collect applicable additional configurations/artifact inventories and manually review enabled transaction, signing and governance workflows.",
+            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+            "code": "gradle-scope:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -3220,6 +3296,7 @@
           "cargo",
           "container",
           "go",
+          "gradle",
           "npm",
           "other",
           "python"
@@ -7303,7 +7380,7 @@
         "registryHint": null,
         "packageHint": null,
         "ecosystems": [
-          "other"
+          "gradle"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -8325,6 +8402,7 @@
         "ecosystems": [
           "cargo",
           "container",
+          "gradle",
           "npm",
           "other",
           "python"
@@ -8646,8 +8724,8 @@
         "packageHint": null,
         "ecosystems": [
           "container",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -9374,8 +9452,8 @@
         "packageHint": null,
         "ecosystems": [
           "cargo",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -12645,7 +12723,7 @@
         "registryHint": "Service",
         "packageHint": null,
         "ecosystems": [
-          "other"
+          "gradle"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -12826,8 +12904,8 @@
         "packageHint": null,
         "ecosystems": [
           "container",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -22548,8 +22626,8 @@
         "packageHint": null,
         "ecosystems": [
           "container",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "partial",
@@ -23789,7 +23867,7 @@
         "registryHint": null,
         "packageHint": null,
         "ecosystems": [
-          "other"
+          "gradle"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -23849,7 +23927,7 @@
         "registryHint": null,
         "packageHint": null,
         "ecosystems": [
-          "other",
+          "gradle",
           "python"
         ],
         "artifact": "partial",
@@ -23912,8 +23990,8 @@
         "packageHint": null,
         "ecosystems": [
           "container",
+          "gradle",
           "npm",
-          "other",
           "python"
         ],
         "artifact": "partial",
@@ -23998,8 +24076,8 @@
         "packageHint": "com.bloxbean.cardano:yaci-store",
         "ecosystems": [
           "container",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -24143,6 +24221,7 @@
         "packageHint": null,
         "ecosystems": [
           "container",
+          "gradle",
           "npm",
           "other"
         ],
@@ -24670,8 +24749,8 @@
         "ecosystems": [
           "cargo",
           "go",
-          "npm",
-          "other"
+          "gradle",
+          "npm"
         ],
         "artifact": "partial",
         "resolution": "unresolved",
@@ -24946,6 +25025,77 @@
         ],
         "nativeEvidenceId": "evidence:f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265",
         "configurationEvidenceId": "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
+        "toolId": "bloxbean-cardano-client-library",
+        "release": "v0.7.3",
+        "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+        "platform": "amd64-Linux",
+        "features": [
+          ":runtimeClasspath",
+          ":governance:runtimeClasspath",
+          ":backend-modules:blockfrost:runtimeClasspath"
+        ],
+        "command": "gradle --no-daemon --max-workers=2 -Dorg.gradle.jvmargs=-Xmx1024m -PskipSigning -I /capture/gradle-resolution.init.gradle -Dreadiness.selection=/work/selection.json -Dreadiness.output=/work/resolution.json readinessResolution",
+        "toolchain": "Gradle 7.5.1 / Eclipse Adoptium JDK 17.0.5 / Linux amd64",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
+          "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
+          "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331"
+        ],
+        "inputDigest": "bce31ecc813ab4ccc6ea9f1715ed4bf445007afa22725ef3db26914f27674e0e",
+        "evidenceIds": [
+          "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+          "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+          "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+          "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+          "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+          "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+          "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+          "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+          "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+          "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+          "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+          "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+          "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+          "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+          "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+          "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+          "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+          "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+          "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+          "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+          "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+          "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+          "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+          "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+          "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+          "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+          "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+          "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+          "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+          "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+          "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+          "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+          "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+          "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+          "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+          "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+          "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+          "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+          "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+          "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+          "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+          "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+          "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+          "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+        ],
+        "nativeEvidenceId": "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+        "configurationEvidenceId": "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
         "coverage": "partial"
       },
       {
@@ -26463,6 +26613,13 @@
         "sourceUrl": "https://github.com/ODATANO/ODATANO/tree/72954d36d871595345338c76da9956a775521062"
       },
       {
+        "id": "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+        "digest": "03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+        "path": "evidence/03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/metadata/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/metadata/build.gradle"
+      },
+      {
         "id": "evidence:03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693",
         "digest": "03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693",
         "path": "evidence/03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693.json.gz",
@@ -26580,6 +26737,19 @@
         "path": "evidence/063f425d05669d49f499a885574316a5b0d83edc7c37a8c87f7965d72cf590d3.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/wowica/xogmios/tree/d48eebfe10cbd5de12d4a6b52dee226dd9627894"
+      },
+      {
+        "id": "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+        "digest": "0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+        "path": "evidence/0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/supplier/ogmios-supplier/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/supplier/ogmios-supplier/build.gradle"
+      },
+      {
+        "id": "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+        "digest": "0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+        "path": "evidence/0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03.json.gz",
+        "description": "Native Gradle profile and command"
       },
       {
         "id": "evidence:06aeabc250db796877273e0d623aece237192ecdeb5078de0b412fca2dc50713",
@@ -26732,6 +26902,13 @@
         "path": "evidence/0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e.json.gz",
         "description": "Native input sokosumi/packages/soko-bot/package.json",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/soko-bot/package.json"
+      },
+      {
+        "id": "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+        "digest": "0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+        "path": "evidence/0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/supplier/kupo-supplier/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/supplier/kupo-supplier/build.gradle"
       },
       {
         "id": "evidence:0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b",
@@ -27196,6 +27373,13 @@
         "sourceUrl": "https://github.com/Python-Cardano/pycardano/tree/0445f3079cb8b356f48c13e040d00e25326ce59e"
       },
       {
+        "id": "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+        "digest": "1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+        "path": "evidence/1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/address/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/address/build.gradle"
+      },
+      {
         "id": "evidence:1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
         "digest": "1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
         "path": "evidence/1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157.json.gz",
@@ -27303,6 +27487,13 @@
         "path": "evidence/20d8e01c475dfe600ea4f89053e99663d372d556ccb6637dbbf13aa25a580143.json.gz",
         "description": "Source cardano-connect-with-wallet/core/README.md",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-connect-with-wallet/blob/47ceba88338f19b576bf72251e8158a7883a5e45/core/README.md"
+      },
+      {
+        "id": "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+        "digest": "20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+        "path": "evidence/20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/ogmios/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/ogmios/build.gradle"
       },
       {
         "id": "evidence:20e7a101be1dc94a2971c7274d898c06530e11c460bee95cb566ea04d1552ba9",
@@ -27556,6 +27747,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/wallet/package.json"
       },
       {
+        "id": "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+        "digest": "26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+        "path": "evidence/26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/plutus/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/plutus/build.gradle"
+      },
+      {
         "id": "evidence:26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca",
         "digest": "26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca",
         "path": "evidence/26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca.json.gz",
@@ -27608,6 +27806,13 @@
         "path": "evidence/27da9c4ff8f9d9f93a8a29cffb613621bec919bc32ee41532c50e4ed3f5ed5cd.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/releases/tag/%40evolution-sdk/devnet%403.0.21"
+      },
+      {
+        "id": "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+        "digest": "27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+        "path": "evidence/27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/build.gradle"
       },
       {
         "id": "evidence:283d8acb423c3f2cc40e40c27c8d784e6226961dd044c1b2f0ef544389364735",
@@ -27761,6 +27966,13 @@
         "sourceUrl": "https://github.com/masumi-network/x402-cardano/blob/213e6f24a45a09064791f9effe4d94c2bc99d8e9/package.json"
       },
       {
+        "id": "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+        "digest": "2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+        "path": "evidence/2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/coinselection/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/coinselection/build.gradle"
+      },
+      {
         "id": "evidence:2c9af1d7219ae0b0235e5c68b9337ed95e39c81cbe8c6912705641eb88d151a5",
         "digest": "2c9af1d7219ae0b0235e5c68b9337ed95e39c81cbe8c6912705641eb88d151a5",
         "path": "evidence/2c9af1d7219ae0b0235e5c68b9337ed95e39c81cbe8c6912705641eb88d151a5.json.gz",
@@ -27772,6 +27984,13 @@
         "digest": "2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1",
         "path": "evidence/2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1.json.gz",
         "description": "Collection request for geniusyield-sdk"
+      },
+      {
+        "id": "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+        "digest": "2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
+        "path": "evidence/2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/quicktx/src/main/java/com/bloxbean/cardano/client/quicktx/QuickTxBuilder.java",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/quicktx/src/main/java/com/bloxbean/cardano/client/quicktx/QuickTxBuilder.java"
       },
       {
         "id": "evidence:2d63e70e426b766c561e5299164e3bbf4f347fb043c7cef9838aa1ef6a676209",
@@ -27875,6 +28094,13 @@
         "path": "evidence/2f6369fa1ad4244e0360b93b19b6c93b0b258f0d4b352b218884f63edd288621.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/ajnabi-workshop/jambhala/tree/1e2a19867266f81a36da9c0612a8cddd6fbb4c7a"
+      },
+      {
+        "id": "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+        "digest": "2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+        "path": "evidence/2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/build.gradle"
       },
       {
         "id": "evidence:2fb28ac441a3aa01e3e572a37453fe6f81c28ab603f1370ac2d0417d3160105c",
@@ -28064,6 +28290,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/tree/e846a7c5d2747609d791d7d47d5423616718cb34"
       },
       {
+        "id": "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+        "digest": "36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+        "path": "evidence/36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/gradle/wrapper/gradle-wrapper.properties",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/gradle/wrapper/gradle-wrapper.properties"
+      },
+      {
         "id": "evidence:36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b",
         "digest": "36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b",
         "path": "evidence/36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b.json.gz",
@@ -28243,6 +28476,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/registry-v2/aiken.toml"
       },
       {
+        "id": "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+        "digest": "3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+        "path": "evidence/3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/cardano-graphql/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/cardano-graphql/build.gradle"
+      },
+      {
         "id": "evidence:3e0bdfa1d3ddf335e69d623f923f16578a96e792345334ba911123f8f53a976b",
         "digest": "3e0bdfa1d3ddf335e69d623f923f16578a96e792345334ba911123f8f53a976b",
         "path": "evidence/3e0bdfa1d3ddf335e69d623f923f16578a96e792345334ba911123f8f53a976b.json.gz",
@@ -28390,6 +28630,13 @@
         "sourceUrl": "https://github.com/sidan-lab/gin/tree/3f27a00d98fb19169394208c69dd4c4a81ceb7ee"
       },
       {
+        "id": "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+        "digest": "42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+        "path": "evidence/42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/hd-wallet/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/hd-wallet/build.gradle"
+      },
+      {
         "id": "evidence:42fc878c089db93fcdc388f35d56c0d6e34f15ff79b5202fe69e360949db4f66",
         "digest": "42fc878c089db93fcdc388f35d56c0d6e34f15ff79b5202fe69e360949db4f66",
         "path": "evidence/42fc878c089db93fcdc388f35d56c0d6e34f15ff79b5202fe69e360949db4f66.json.gz",
@@ -28493,6 +28740,13 @@
         "path": "evidence/458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce.json.gz",
         "description": "Native input blaze/packages/blaze-wallet/src/index.ts",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/src/index.ts"
+      },
+      {
+        "id": "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+        "digest": "45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+        "path": "evidence/45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/governance/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/governance/build.gradle"
       },
       {
         "id": "evidence:46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a",
@@ -28647,6 +28901,13 @@
         "sourceUrl": "https://github.com/ODATANO/ODATANO/blob/72954d36d871595345338c76da9956a775521062/app/wallet/package.json"
       },
       {
+        "id": "evidence:4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+        "digest": "4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a",
+        "path": "evidence/4c0b43193dd03dc1a98448f7eda57eacfa198c10c7fbd45fba9525567e096d1a.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/blockfrost/src/main/java/com/bloxbean/cardano/client/backend/blockfrost/service/BFBackendService.java",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/blockfrost/src/main/java/com/bloxbean/cardano/client/backend/blockfrost/service/BFBackendService.java"
+      },
+      {
         "id": "evidence:4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
         "digest": "4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
         "path": "evidence/4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6.json.gz",
@@ -28658,6 +28919,13 @@
         "path": "evidence/4c4704847b361ea8c90fe52ff6fff8be64012d37d8bf6f40848cf9aa68757489.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/uplc-turbo/tree/da3e8c818f6ccc13cdf05821be1bbbc4fc3688ad"
+      },
+      {
+        "id": "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+        "digest": "4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+        "path": "evidence/4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/core/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/core/build.gradle"
       },
       {
         "id": "evidence:4cabe9acc711709eafe73fcc5f5e59ae2441201db45e16873e5b3c2c351d22f0",
@@ -28799,6 +29067,13 @@
         "sourceUrl": "https://github.com/projectNEWM/kogmios/tree/f0160af84d18a5669f721b0cd0c032847c316c6b"
       },
       {
+        "id": "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+        "digest": "526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+        "path": "evidence/526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/blockfrost/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/blockfrost/build.gradle"
+      },
+      {
         "id": "evidence:526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
         "digest": "526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
         "path": "evidence/526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd.json.gz",
@@ -28826,11 +29101,31 @@
         "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-interop-lib/releases/tag/v3.1.0"
       },
       {
+        "id": "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+        "digest": "52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+        "path": "evidence/52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/settings.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/settings.gradle"
+      },
+      {
         "id": "evidence:52f60820277258b608e342f801f7dae7ca4eb9d4b228183aeab89f1e560c90be",
         "digest": "52f60820277258b608e342f801f7dae7ca4eb9d4b228183aeab89f1e560c90be",
         "path": "evidence/52f60820277258b608e342f801f7dae7ca4eb9d4b228183aeab89f1e560c90be.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/plutus-simple-model/tree/ec86b357e6ff0615ab02d31e4f7ebe75e3027fb0"
+      },
+      {
+        "id": "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+        "digest": "538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+        "path": "evidence/538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip30/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip30/build.gradle"
+      },
+      {
+        "id": "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+        "digest": "541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
+        "path": "evidence/541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356.json.gz",
+        "description": "Gradle 7.5.1 selected runtime variants for bloxbean-cardano-client-library v0.7.3"
       },
       {
         "id": "evidence:548e16dd4e186220c72b39f46bc7ed1a4d0035aa13917f65b98f73b42e01619e",
@@ -28907,6 +29202,13 @@
         "path": "evidence/58576f0d6f293cb758afe6bc3d269f4eb22761df42a9ceae24fc2e4561f2375c.json.gz",
         "description": "uv-tree for opshin 0.28.0",
         "sourceUrl": "https://github.com/OpShin/opshin/tree/515329f99b51e27c65492237200c8aafd802837d"
+      },
+      {
+        "id": "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+        "digest": "58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+        "path": "evidence/58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/common/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/common/build.gradle"
       },
       {
         "id": "evidence:590d598ad00fa378710833a6ab868c2b8b7def587f427443b62356dae69b16a7",
@@ -29342,6 +29644,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/pnpm-workspace.yaml"
       },
       {
+        "id": "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+        "digest": "691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+        "path": "evidence/691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/gradle.properties",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/gradle.properties"
+      },
+      {
         "id": "evidence:6938d5b729f5864ce860b8f9abfbfc6356f9580daff3a8cdc55f9cefcac28cff",
         "digest": "6938d5b729f5864ce860b8f9abfbfc6356f9580daff3a8cdc55f9cefcac28cff",
         "path": "evidence/6938d5b729f5864ce860b8f9abfbfc6356f9580daff3a8cdc55f9cefcac28cff.json.gz",
@@ -29382,6 +29691,13 @@
         "path": "evidence/6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/bloxbean/julc/releases/tag/v0.1.0-pre18"
+      },
+      {
+        "id": "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+        "digest": "6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+        "path": "evidence/6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip68/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip68/build.gradle"
       },
       {
         "id": "evidence:6bdc45671d4554cfe57c7bad9b2ebd2738f95b24f62f5046727e12aef131af1e",
@@ -29718,6 +30034,13 @@
         "sourceUrl": "https://github.com/dQuadrant/kuber/tree/2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5"
       },
       {
+        "id": "evidence:759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+        "digest": "759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd",
+        "path": "evidence/759e68cfa3525a8bd254f229ed5e385aa951917e27fc11eb2c02f4abe89a9edd.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/README.md",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/README.md"
+      },
+      {
         "id": "evidence:75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79",
         "digest": "75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79",
         "path": "evidence/75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79.json.gz",
@@ -29729,6 +30052,20 @@
         "digest": "75ba0b080692863571e3347ecdd46f03f0d4bcc06e89c79b470953c15c731757",
         "path": "evidence/75ba0b080692863571e3347ecdd46f03f0d4bcc06e89c79b470953c15c731757.json.gz",
         "description": "Collection request for yoroi"
+      },
+      {
+        "id": "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+        "digest": "75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+        "path": "evidence/75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/transaction-spec/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/transaction-spec/build.gradle"
+      },
+      {
+        "id": "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+        "digest": "766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+        "path": "evidence/766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend/build.gradle"
       },
       {
         "id": "evidence:7671fd29c44c307f65ff97db88ccbbb5affb473745cba9479393e7a059fe21d5",
@@ -30132,6 +30469,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/routes/api/payments/index.ts"
       },
       {
+        "id": "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+        "digest": "8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+        "path": "evidence/8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip25/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip25/build.gradle"
+      },
+      {
         "id": "evidence:83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc",
         "digest": "83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc",
         "path": "evidence/83d3efa185da17dfacbc16058870ea9e69de567cd6f6f3fa5e182aa755c3f6bc.json.gz",
@@ -30411,6 +30755,13 @@
         "sourceUrl": "https://github.com/Python-Cardano/pycardano/blob/0445f3079cb8b356f48c13e040d00e25326ce59e/pycardano/backend/kupo.py"
       },
       {
+        "id": "evidence:88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+        "digest": "88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07",
+        "path": "evidence/88c4bfdd480a443556b101d5ffd7957e12a150bbc4ff7c61eb77b410181ebe07.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/core-api/src/main/java/com/bloxbean/cardano/client/api/TransactionProcessor.java",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/core-api/src/main/java/com/bloxbean/cardano/client/api/TransactionProcessor.java"
+      },
+      {
         "id": "evidence:8917264abc5ca15977343d57b75172de68afb0b004c97cb59b37bc12b9122884",
         "digest": "8917264abc5ca15977343d57b75172de68afb0b004c97cb59b37bc12b9122884",
         "path": "evidence/8917264abc5ca15977343d57b75172de68afb0b004c97cb59b37bc12b9122884.json.gz",
@@ -30439,6 +30790,13 @@
         "sourceUrl": "https://github.com/Biglup/cardano-c/releases/tag/v1.2.1"
       },
       {
+        "id": "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+        "digest": "89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+        "path": "evidence/89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/function/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/function/build.gradle"
+      },
+      {
         "id": "evidence:89c09a5b479bab41fc29fa69b65ffcbbfcb16d22bcfd863424bef30f372e0788",
         "digest": "89c09a5b479bab41fc29fa69b65ffcbbfcb16d22bcfd863424bef30f372e0788",
         "path": "evidence/89c09a5b479bab41fc29fa69b65ffcbbfcb16d22bcfd863424bef30f372e0788.json.gz",
@@ -30457,6 +30815,13 @@
         "digest": "8a142a9ba8f1c5f0e321e277a767ee582e157ab226de98dc196523fb344e836e",
         "path": "evidence/8a142a9ba8f1c5f0e321e277a767ee582e157ab226de98dc196523fb344e836e.json.gz",
         "description": "Collection request for gouroboros"
+      },
+      {
+        "id": "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+        "digest": "8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+        "path": "evidence/8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip27/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip27/build.gradle"
       },
       {
         "id": "evidence:8a74273ed87cb02c635493eabbec94f70991d25fce0b71d6ca69e1e4a5608fc1",
@@ -31201,6 +31566,13 @@
         "sourceUrl": "https://github.com/txbody-org/sutra-cardano/releases/tag/0.2.5"
       },
       {
+        "id": "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+        "digest": "a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+        "path": "evidence/a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/build.gradle"
+      },
+      {
         "id": "evidence:a2381ccad5ed45986724d2574c23ea6b51d658a71a39516743c60197e0c9be4c",
         "digest": "a2381ccad5ed45986724d2574c23ea6b51d658a71a39516743c60197e0c9be4c",
         "path": "evidence/a2381ccad5ed45986724d2574c23ea6b51d658a71a39516743c60197e0c9be4c.json.gz",
@@ -31372,6 +31744,13 @@
         "path": "evidence/a69338326bed56a9e064431c521a0a3d015310670643a6ce85426cdafe7efd80.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/well-typed/plutonomy/releases/tag/v0.20220715"
+      },
+      {
+        "id": "evidence:a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+        "digest": "a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90",
+        "path": "evidence/a6f3d8bab6a44efc4b85d675811720fa887b1464ce7b90d147bd6ed7ff603c90.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/.github/workflows/release.yml",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/.github/workflows/release.yml"
       },
       {
         "id": "evidence:a701221f6779738971b7a640585fd3681d6addc3f21a84f7ce9dbfad8df7e2cf",
@@ -31923,6 +32302,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-registry-service/tree/3b0ab26f340174acbed0d4eb6afba1bb6697d524"
       },
       {
+        "id": "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+        "digest": "b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+        "path": "evidence/b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/supplier/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/supplier/build.gradle"
+      },
+      {
         "id": "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
         "digest": "b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
         "path": "evidence/b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787.json.gz",
@@ -32081,6 +32467,20 @@
         "path": "evidence/bc525ebd6999dcc886bc1a28110d69ec17de9759af04ff6383929be0a3c2e839.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/lidonation/Cardano-mcp/tree/9fe85c6552770915b767c966b3663234b22674e2"
+      },
+      {
+        "id": "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+        "digest": "bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+        "path": "evidence/bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/integration-test/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/integration-test/build.gradle"
+      },
+      {
+        "id": "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+        "digest": "bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+        "path": "evidence/bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip20/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip20/build.gradle"
       },
       {
         "id": "evidence:bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4",
@@ -32272,6 +32672,13 @@
         "path": "evidence/c25d08cb716d78b67bca165f311ea3a7082962912a058a910298b75cf760db81.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-foundation/dab/releases/tag/v0.1"
+      },
+      {
+        "id": "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+        "digest": "c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+        "path": "evidence/c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip67/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip67/build.gradle"
       },
       {
         "id": "evidence:c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca",
@@ -33145,11 +33552,25 @@
         "sourceUrl": "https://github.com/input-output-hk/marconi/tree/d39923eb7b81156f5783e6252469b321ad89a253"
       },
       {
+        "id": "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+        "digest": "ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+        "path": "evidence/ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/common-spec/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/common-spec/build.gradle"
+      },
+      {
         "id": "evidence:dde0f682300592b467dfc76684101c8454855164a4381d02e02429151d78863e",
         "digest": "dde0f682300592b467dfc76684101c8454855164a4381d02e02429151d78863e",
         "path": "evidence/dde0f682300592b467dfc76684101c8454855164a4381d02e02429151d78863e.json.gz",
         "description": "Source marlowe-ts-sdk/packages/language/core/v1/package.json",
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/blob/93598c0f8e452d7679a44097c48e693d95bfd631/packages/language/core/v1/package.json"
+      },
+      {
+        "id": "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+        "digest": "de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+        "path": "evidence/de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/cip/cip8/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/cip/cip8/build.gradle"
       },
       {
         "id": "evidence:df02ec911fdc9e57163123cb8952eacca2d23e01a47bf84cc020d02c3cb6d953",
@@ -33234,6 +33655,13 @@
         "path": "evidence/e15ac3040508471dde48a96259142599ee9c27b231c77ba5a1ea2d921c2df650.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/tree/5d629436c7b7e7c2757355888a63cccd62fb1bca"
+      },
+      {
+        "id": "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+        "digest": "e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+        "path": "evidence/e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/gradle/libs.versions.toml",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/gradle/libs.versions.toml"
       },
       {
         "id": "evidence:e1ebaaeca9c950991b07c51b7828b2dba81a4162e59ee9809cb8084e70d1ac99",
@@ -33423,6 +33851,13 @@
         "path": "evidence/e775aa2943cf0e11ca886fcd781e9476da4916b61fb9ae852e4f913690bfb8bf.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/cardano-db-sync/releases/tag/13.7.2.1"
+      },
+      {
+        "id": "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+        "digest": "e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+        "path": "evidence/e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/quicktx/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/quicktx/build.gradle"
       },
       {
         "id": "evidence:e8106738219ebff904d81a5287d1cbabd2342746368ba3e961e56ee8e1a1605f",
@@ -33731,6 +34166,20 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/payment-v2/aiken.toml"
       },
       {
+        "id": "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+        "digest": "f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+        "path": "evidence/f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/backend-modules/koios/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/backend-modules/koios/build.gradle"
+      },
+      {
+        "id": "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+        "digest": "f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+        "path": "evidence/f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/crypto/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/crypto/build.gradle"
+      },
+      {
         "id": "evidence:f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c",
         "digest": "f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c",
         "path": "evidence/f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c.json.gz",
@@ -33765,6 +34214,13 @@
         "sourceUrl": "https://github.com/blockfrost/blockfrost-backend-ryo/blob/6d0000098ac865ebad3910732427f55bbb65fe9d/yarn.lock"
       },
       {
+        "id": "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+        "digest": "f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+        "path": "evidence/f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/core-api/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/core-api/build.gradle"
+      },
+      {
         "id": "evidence:f43255b57188c46eea0f270850e309308dc0b9dc9586a7adfb59200a9a52ed57",
         "digest": "f43255b57188c46eea0f270850e309308dc0b9dc9586a7adfb59200a9a52ed57",
         "path": "evidence/f43255b57188c46eea0f270850e309308dc0b9dc9586a7adfb59200a9a52ed57.json.gz",
@@ -33791,6 +34247,13 @@
         "path": "evidence/f4e077db38c6022a79218bed09ee81b39209050522e625d03ae23e9858021ee7.json.gz",
         "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/types.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/types.ts"
+      },
+      {
+        "id": "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295",
+        "digest": "f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295",
+        "path": "evidence/f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295.json.gz",
+        "description": "Gradle production source bloxbean-cardano-client-library/annotation-processor/build.gradle",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/annotation-processor/build.gradle"
       },
       {
         "id": "evidence:f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84",
@@ -34332,29 +34795,29 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/f01d6a7b612384053b3cd52f130418044a8889ed9f6e587fc8c7d185702d65f7.json",
-        "digest": "f01d6a7b612384053b3cd52f130418044a8889ed9f6e587fc8c7d185702d65f7",
-        "records": 1869
+        "path": "snapshots/artifacts/738f5fd10372804d7b22bc37331a88bd568503fc2f84a65801588a9bb36ef13b.json",
+        "digest": "738f5fd10372804d7b22bc37331a88bd568503fc2f84a65801588a9bb36ef13b",
+        "records": 1872
       },
       {
-        "path": "snapshots/artifacts/66332b701504f1197906fafbe09e4db149670706d6ee90f0f25f8e66bffdb70b.json",
-        "digest": "66332b701504f1197906fafbe09e4db149670706d6ee90f0f25f8e66bffdb70b",
-        "records": 1841
+        "path": "snapshots/artifacts/0465399b43fcfe40e751fe65bb3e6fdcead3b3d6a98ef9b84792ec58c47887ce.json",
+        "digest": "0465399b43fcfe40e751fe65bb3e6fdcead3b3d6a98ef9b84792ec58c47887ce",
+        "records": 1842
       },
       {
-        "path": "snapshots/artifacts/7fa7f722f6fe2b3d55346d98be1c0b207e99bacfaeec9ff1ef9d1c44532cd961.json",
-        "digest": "7fa7f722f6fe2b3d55346d98be1c0b207e99bacfaeec9ff1ef9d1c44532cd961",
-        "records": 1884
+        "path": "snapshots/artifacts/0d05c8e1d604033b2e7f74d9fd7f51c85cb45375fa359dfea504cc0f178df092.json",
+        "digest": "0d05c8e1d604033b2e7f74d9fd7f51c85cb45375fa359dfea504cc0f178df092",
+        "records": 1886
       },
       {
-        "path": "snapshots/artifacts/d407aa3af4a7ae5f67187b1a59ceff5311509db9b4b352b3a90a71ff14a7763e.json",
-        "digest": "d407aa3af4a7ae5f67187b1a59ceff5311509db9b4b352b3a90a71ff14a7763e",
-        "records": 1866
-      },
-      {
-        "path": "snapshots/artifacts/4d3172b2e92e9eb0bff5ab8babd65bdfd0307871f5d92bcb6fbe0b2b673544e0.json",
-        "digest": "4d3172b2e92e9eb0bff5ab8babd65bdfd0307871f5d92bcb6fbe0b2b673544e0",
+        "path": "snapshots/artifacts/3bdf1d1774e1f4100976a7d87927c2b7190fb6e9919f19a3838b3779d5558649.json",
+        "digest": "3bdf1d1774e1f4100976a7d87927c2b7190fb6e9919f19a3838b3779d5558649",
         "records": 1868
+      },
+      {
+        "path": "snapshots/artifacts/0ca5d0b01bdf35c8d528be39ba873b1243ad1a10cc4dbd46d1ed6ae7cac7157d.json",
+        "digest": "0ca5d0b01bdf35c8d528be39ba873b1243ad1a10cc4dbd46d1ed6ae7cac7157d",
+        "records": 1872
       },
       {
         "path": "snapshots/artifacts/bf84a04bd30b1870432ab8bd527f28112367dd1d48cbc005731db7299bc5970f.json",
@@ -34362,54 +34825,54 @@
         "records": 1900
       },
       {
-        "path": "snapshots/artifacts/2842851ec83bbd6ffda9e8d0f87fb5e6e390772dad934588c291118bf7e0bc79.json",
-        "digest": "2842851ec83bbd6ffda9e8d0f87fb5e6e390772dad934588c291118bf7e0bc79",
-        "records": 1995
+        "path": "snapshots/artifacts/0dbcbd493d06c6edca76a20dee874a2e8226d3fa1f218745dbde63cf656b0af4.json",
+        "digest": "0dbcbd493d06c6edca76a20dee874a2e8226d3fa1f218745dbde63cf656b0af4",
+        "records": 1998
       },
       {
-        "path": "snapshots/artifacts/3554bea4b0378c213f6967a504f3a6b2dbb2a98d5c5034956a47846586c7cf9a.json",
-        "digest": "3554bea4b0378c213f6967a504f3a6b2dbb2a98d5c5034956a47846586c7cf9a",
-        "records": 1826
+        "path": "snapshots/artifacts/5a29250f73dcf16a1f9337b6b5944d13fd44f534c1ba3bf3e4a530b15d821b7b.json",
+        "digest": "5a29250f73dcf16a1f9337b6b5944d13fd44f534c1ba3bf3e4a530b15d821b7b",
+        "records": 1827
       },
       {
-        "path": "snapshots/artifacts/ee6c72804df9f286e47e3d67b3ec77f0b7f44fe0e55e7ced7a3f028a178147a1.json",
-        "digest": "ee6c72804df9f286e47e3d67b3ec77f0b7f44fe0e55e7ced7a3f028a178147a1",
-        "records": 1872
+        "path": "snapshots/artifacts/7c102daf5c98787dd221ccdbd1402201db9d975feb3d9e1fa542316b9e287c7f.json",
+        "digest": "7c102daf5c98787dd221ccdbd1402201db9d975feb3d9e1fa542316b9e287c7f",
+        "records": 1877
       },
       {
-        "path": "snapshots/artifacts/9e3333fe04b205fb2dafc4005d22e7df47a962346434e66a5fe841f053a4a7a1.json",
-        "digest": "9e3333fe04b205fb2dafc4005d22e7df47a962346434e66a5fe841f053a4a7a1",
-        "records": 1857
+        "path": "snapshots/artifacts/11496b6354f1722c92ca90f01f0800b0b26f0cd5ddf80f74f37402623976e2e4.json",
+        "digest": "11496b6354f1722c92ca90f01f0800b0b26f0cd5ddf80f74f37402623976e2e4",
+        "records": 1860
       },
       {
-        "path": "snapshots/artifacts/eec8addcc11e13b8b197026bcd09e36f7d6295566dc89e92facb64a7629bb5cc.json",
-        "digest": "eec8addcc11e13b8b197026bcd09e36f7d6295566dc89e92facb64a7629bb5cc",
-        "records": 1915
+        "path": "snapshots/artifacts/9b8c55414897c9d9b184483b4996d4ce9f4d240396e09b928642f49774319d42.json",
+        "digest": "9b8c55414897c9d9b184483b4996d4ce9f4d240396e09b928642f49774319d42",
+        "records": 1918
       },
       {
-        "path": "snapshots/artifacts/a5ad432c57db06b4f9707ed04db1e38e57d2d5035c30f9754dae612baafd20d4.json",
-        "digest": "a5ad432c57db06b4f9707ed04db1e38e57d2d5035c30f9754dae612baafd20d4",
-        "records": 1909
+        "path": "snapshots/artifacts/7a1f74df61cf8d0d22e4185565909c2b4a8f2d4876291918be9867df45f1d08f.json",
+        "digest": "7a1f74df61cf8d0d22e4185565909c2b4a8f2d4876291918be9867df45f1d08f",
+        "records": 1916
       },
       {
-        "path": "snapshots/artifacts/2164736e8b6afc01797494163c470555380dd682fc4152c6a0f9daed274ede55.json",
-        "digest": "2164736e8b6afc01797494163c470555380dd682fc4152c6a0f9daed274ede55",
-        "records": 1919
+        "path": "snapshots/artifacts/763e271bd43b234d1a52527296fc2ad4e3a7c11e075cd3d7c378e87149ff11bd.json",
+        "digest": "763e271bd43b234d1a52527296fc2ad4e3a7c11e075cd3d7c378e87149ff11bd",
+        "records": 1928
       },
       {
-        "path": "snapshots/artifacts/a97bdec87bc19a4e71d8f3361dd897b2e52178263b43c85ce264fa8823e6c1f0.json",
-        "digest": "a97bdec87bc19a4e71d8f3361dd897b2e52178263b43c85ce264fa8823e6c1f0",
-        "records": 1852
+        "path": "snapshots/artifacts/48b9995bacbb585bf3f70221066fa8c4aab603a1deda13ff81c4418bc3c75085.json",
+        "digest": "48b9995bacbb585bf3f70221066fa8c4aab603a1deda13ff81c4418bc3c75085",
+        "records": 1855
       },
       {
-        "path": "snapshots/artifacts/7b0406858218bebc50c81718c84d72a8b735f5cefc3a07757d6a03e87efb0bcf.json",
-        "digest": "7b0406858218bebc50c81718c84d72a8b735f5cefc3a07757d6a03e87efb0bcf",
-        "records": 1868
+        "path": "snapshots/artifacts/4f0835c90f5fb37f3d4e9bb4fb9e87e9ed04ad19343f1fe1f7b441bbe2da2d7e.json",
+        "digest": "4f0835c90f5fb37f3d4e9bb4fb9e87e9ed04ad19343f1fe1f7b441bbe2da2d7e",
+        "records": 1870
       },
       {
-        "path": "snapshots/artifacts/6e73df394d36ad292e97138d8bbf2db6ebfa8201b47363b7cbea93503053b48b.json",
-        "digest": "6e73df394d36ad292e97138d8bbf2db6ebfa8201b47363b7cbea93503053b48b",
-        "records": 1880
+        "path": "snapshots/artifacts/ca6858a93a003157d05737edd5e8bb5fc5598b52a64e294271d1822688017fa6.json",
+        "digest": "ca6858a93a003157d05737edd5e8bb5fc5598b52a64e294271d1822688017fa6",
+        "records": 1881
       }
     ],
     "occurrences": [
@@ -34432,6 +34895,11 @@
         "path": "snapshots/occurrences/ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa.json",
         "digest": "ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa",
         "records": 546
+      },
+      {
+        "path": "snapshots/occurrences/addfdd252a2cf6288aa44db3de25e36067f202396d58a4c380099b17831e1c0b.json",
+        "digest": "addfdd252a2cf6288aa44db3de25e36067f202396d58a4c380099b17831e1c0b",
+        "records": 97
       },
       {
         "path": "snapshots/occurrences/8978056d5dafad48469864f4f704af8e96a5163b522214aa33c81523724c6fc4.json",
@@ -34654,6 +35122,11 @@
         "path": "snapshots/edges/a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225.json",
         "digest": "a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225",
         "records": 785
+      },
+      {
+        "path": "snapshots/edges/80c8f2fca2c910d345699ec0ef33df6578e4b1946453ebb62fd1d3aacb66a983.json",
+        "digest": "80c8f2fca2c910d345699ec0ef33df6578e4b1946453ebb62fd1d3aacb66a983",
+        "records": 247
       },
       {
         "path": "snapshots/edges/bb22a830c1016de0c2a4581409896891d01ffc4b5bd92395488138c8ed9dbab4.json",

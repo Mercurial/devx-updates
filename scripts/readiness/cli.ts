@@ -14,7 +14,7 @@ import { acquireLock, addEvidence, mergeResolution, readJson, readSnapshot, Stor
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
 import { rebuildNative } from "../../lib/readiness/rebuild";
 import { replaySnapshot } from "../../lib/readiness/replay";
-import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
+import { COLLECT_ADAPTERS, ECOSYSTEMS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
 import { collectionCandidates } from "../../lib/readiness/candidates";
 import { collectBatch } from "../../lib/readiness/batch";
 import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
@@ -142,7 +142,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
       capabilityFindings: capabilityRows(snapshot),
       unresolvedTools: snapshot.tools.filter((t) => t.resolution === "unresolved").length,
       gaps: snapshot.tools.flatMap((tool) => tool.gaps.map((g) => ({ toolId: tool.id, ...g }))),
-      ecosystemBacklog: Object.fromEntries(["npm", "cargo", "cabal", "go", "python", "nix", "container", "other"].map((ecosystem) => [ecosystem, snapshot.tools.filter((t) => t.ecosystems.includes(ecosystem as typeof t.ecosystems[number])).length])),
+      ecosystemBacklog: Object.fromEntries(ECOSYSTEMS.map((ecosystem) => [ecosystem, snapshot.tools.filter((t) => t.ecosystems.includes(ecosystem)).length])),
     };
     writeJson(join(store.directory, "report.json"), report);
     const impacts = calculateImpact(snapshot);

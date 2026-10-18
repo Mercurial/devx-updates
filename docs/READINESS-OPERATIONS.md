@@ -242,7 +242,58 @@ This Debian worker is not the full Atlas Nix release environment. No Atlas code
 was compiled or tested. Full repository index tarballs are not vendored; the
 retained native plan is sufficient for graph replay, not an offline fresh solve.
 
-Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
+### Gradle selected-variant graph imports
+
+`gradle-resolution` accepts format-version 1 output from
+`scripts/readiness/gradle-resolution.init.gradle`, currently pinned to Gradle
+7.5.1. It is import-only: it does not run arbitrary project evaluation from the
+regular collector or scheduled refresh. Resolve in a disposable worker with no
+publishing credentials or host home/socket access. Retain the worker image digest,
+exact project revision, source build files/version catalogs, selection, init script,
+command, toolchain and logs with the capture. `provenance` may hold those bytes;
+the complete envelope is retained and hashed by `import-native`.
+
+Select each configuration explicitly in a JSON array:
+
+```json
+[
+  { "projectPath": ":", "configuration": "runtimeClasspath", "scope": "runtime" }
+]
+```
+
+Pass its path as `-Dreadiness.selection`, the output path as `-Dreadiness.output`,
+and run `readinessResolution` with the init script. Scope is an explicit capture
+choice: runtime, build or development. It must match the selected configuration's
+purpose. Only those configurations are included; local dependencies' separate
+compiler/plugin/annotation-processor configurations are not implied. The native
+[`ResolutionResult`](https://docs.gradle.org/current/javadoc/org/gradle/api/artifacts/result/ResolutionResult.html)
+API describes selections, while
+[`getDependenciesForVariant`](https://docs.gradle.org/current/javadoc/org/gradle/api/artifacts/result/ResolvedComponentResult.html)
+preserves each selected variant's own edges. Constraints affect native version
+selection but do not create exposure edges. Native failures remain gaps; malformed
+captures, missing referenced nodes and unbound included builds fail closed.
+
+The profile platform must equal the captured `<arch>-<os>` (for this Linux worker,
+`amd64-Linux`). Root names are captured `<group>:<project-name>` identities, which
+can differ from published Maven artifact IDs. Keep that distinction explicit.
+Local project sources bind to the immutable checkout and relative path. External
+module coordinates lack per-module repository provenance and binary checksums in
+this API, so their identities remain isolated to the capture. This deliberately
+does not merge them into verified Maven artifacts. No binaries are downloaded by
+the graph traversal; Gradle may download plugins and metadata during evaluation.
+File dependencies and shipped/native inventories remain separate boundaries.
+
+The first pilot selects Cardano Client Lib v0.7.3 at
+`f1130177b02761ea15b93a92e385ae0739d27096`: `runtimeClasspath` for `:`,
+`:governance` and `:backend-modules:blockfrost`. These yield 97 variant occurrences
+and 247 dependency edges; nine native constraint records remain evidence only.
+The aggregate library includes QuickTx through its native project dependencies.
+Koios/Ogmios backends, supplier modules, integration tests and build classpaths
+outside those roots remain open. Gradle's successful capture task is not a
+successful SDK build or a hardfork result. This profile requires explicit
+recapture/reimport; automatic isolated Gradle refresh remains rollout work.
+
+Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `gradle-resolution`, `go-packages`, and `uv-tree`. Cabal and Gradle remain import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
 ## Scan retained source for integration leads
 
