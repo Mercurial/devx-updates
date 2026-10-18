@@ -1,6 +1,6 @@
 # Higher-level capability review handoff
 
-Five task-brief-v2 packets are prepared in `.readiness/reviews/capabilities/`.
+Seven task-brief-v2 packets are prepared in `.readiness/reviews/capabilities/`.
 The [retained index](./capability-reviews.json) records exact packet IDs, source
 revisions, profile IDs and their captured production source files. Every packet remains
 pending; no discovery/challenge task has been launched and no capability claims
@@ -16,6 +16,8 @@ LLM prompts, exact input/output paths, and the evidence-check/import procedure.
 | TyphonJS | Inspect exported transaction APIs, builder and serialization paths. Preserve library context; do not infer a deployed Typhon wallet. Both historical parser captures describe the same pinned v4.0.0 source; use the official-parser profile ending `5958bba13a88b8790661b312` for new findings and retain the first capture as history. |
 | Cometa | Trace public exports, transaction builder and wallet wrappers into native/WASM boundaries. Separate direct JavaScript behavior, bindings and external providers. No runtime npm dependencies does not imply no native runtime. Source/build correspondence remains unverified. |
 | Lucid Evolution | Trace transaction construction, signing, submission, governance helpers and provider/wallet wiring through the retained production TypeScript packages. Source manifest `@lucid-evolution/lucid` 0.8.3 is at the `@lucid-evolution/core-types@0.5.2` repository tag; publication correspondence is unverified. Use registered profile ending `82ef3bc2a8877a35a7fe4310` for new findings; retain the other native profile as history. CML/UPLC conditional node/browser/worker bindings and speed/size variants need explicit consumer context and separate native artifact provenance. Provider endpoints, network, wallet configuration and selected evaluator remain unknown. |
+| Masumi | Trace backend startup, API routes and monitoring jobs into payment-source V1/V2 purchase processing, transaction construction, wallet signing and submission. Inspect provider selection and cost-model synchronization; comments describing a workaround do not prove correctness or target compatibility. Keep V1/V2 Mesh contexts and conditional L1/Hydra L2 behavior distinct. Trace admin transaction queries through its configured API client; backend signing is not evidence of frontend signing. Both selected roots are manifest 0.1.0 on default-branch source, not verified deployed artifacts. Contract/compiler, generated-client, native/WASM and Hydra image provenance remain separate boundaries. |
+| Sokosumi | Trace web job actions through Core routes, job creation, purchase registration/synchronization and the configured payment/registry clients. Distinguish delegated payment requests from direct chain construction, signing or submission. Inspect payment-source/network conditions and x402 paths without attributing every payment protocol to Cardano. The web root is 0.1.0 and Core has no manifest version at the `macos-v1.1.1` repository tag; neither identifies a web/Core deployment. URLs and client names do not establish a service edge to the separately collected Masumi revision. Apple, CMO and CLI roots remain outside the selected profile; other agent, database and hosted services remain unreviewed. |
 
 This Lucid Evolution packet refers to `Anastasia-Labs/lucid-evolution`.
 Original Lucid (`spacebudz/lucid`) is excluded from active work at the owner's
@@ -37,6 +39,8 @@ node --import tsx scripts/readiness/cli.ts export-review --tools govtool --outpu
 node --import tsx scripts/readiness/cli.ts export-review --tools typhonjs --output .readiness/reviews/capabilities/typhonjs
 node --import tsx scripts/readiness/cli.ts export-review --tools cometa-js --output .readiness/reviews/capabilities/cometa-js
 node --import tsx scripts/readiness/cli.ts export-review --tools lucid-evolution --output .readiness/reviews/capabilities/lucid-evolution
+node --import tsx scripts/readiness/cli.ts export-review --tools masumi --output .readiness/reviews/capabilities/masumi
+node --import tsx scripts/readiness/cli.ts export-review --tools sokosumi --output .readiness/reviews/capabilities/sokosumi
 ```
 
 The owner can launch discovery with the template in

@@ -1,5 +1,5 @@
 {
-  "snapshot": "87b1947c7dc8a348b5bfc12c5501f2645aefaeddcf646cf705ab63eea308499d",
+  "snapshot": "722954f67bcd7f10ba73b3d3a87883de74e30daffce2da8f0dc269c48b9bcca3",
   "tools": 269,
   "discovered": 227,
   "withProfiles": 35,
@@ -9205,8 +9205,8 @@
       "toolId": "masumi",
       "id": "gap:4d4585cb24476be092dda79a",
       "area": "integration",
-      "reason": "Payment-source V1/V2 dispatch and Hydra client/configuration source are retained for later review. Active payment source, contract identifiers, Blockfrost/network, Hydra and database deployments remain unverified. A lucid-cardano dependency is retained as consumer evidence; original Lucid remains excluded from standalone readiness work. No capability or service-version relationship is asserted.",
-      "nextAction": "Prepare production workflow review with explicit payment-source and deployment configuration; do not infer deployed services from package names.",
+      "reason": "Pinned backend/admin source is prepared for owner-run workflow review: API and job wiring, payment-source V1/V2 dispatch, purchase construction/signing/submission, provider and cost-model helpers, Hydra L2 boundary, and frontend API calls. Active payment source, network, contract identifiers and deployed services remain unknown. Preparation imports no capability findings or verified service relationships.",
+      "nextAction": "Run discovery and independent challenge on the Masumi packet. Distinguish backend behavior from frontend API delegation, V1/V2 SDK contexts, conditional L1/L2 paths, and deployed artifact identity; return unexamined workflows as gaps.",
       "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
       "code": "payment-app-scope:masumi:integration"
     },
@@ -11904,8 +11904,8 @@
       "toolId": "sokosumi",
       "id": "gap:d896e86c68bb813b16141c68",
       "area": "integration",
-      "reason": "Retained web/Core clients configure Core, payment and registry URLs and network at runtime. Their presence does not identify the deployed Masumi service revision or establish a verified relationship to the separately collected Masumi profile. Database, agent services, authentication and other hosted dependencies remain unreviewed; no capability findings are imported.",
-      "nextAction": "Capture production endpoint/network configuration and review workflow wiring before accepting service identity or capability findings.",
+      "reason": "Pinned web/Core source is prepared for owner-run workflow review: web job actions, Core routes, job purchase registration/synchronization, payment and registry clients, generated-client configuration, and x402 delegation. Configured URLs and network do not identify a deployed Masumi revision. No capability findings or verified cross-tool service relationships have been imported.",
+      "nextAction": "Run discovery and independent challenge on the Sokosumi packet. Trace web/Core delegation and payment-source conditions; require separate deployment evidence before mapping any client to a Masumi artifact, and return unexamined providers or workflows as gaps.",
       "profileId": "profile:sokosumi:378b837174d64744243e8d78",
       "code": "payment-app-scope:sokosumi:integration"
     },

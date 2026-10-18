@@ -650,6 +650,64 @@ SundaeSwap still needs aligned upstream lock inputs. Original Lucid remains
 excluded from standalone work, and target-specific compatibility needs a selected
 hardfork environment.
 
+### Active continuation: payment workflow review packets and inventory retention
+
+Continue sections 6.3, 7 and 8 under ADR-1/ADR-2 by preparing Masumi and
+Sokosumi's collected production roots for owner-launched review. Preserve existing
+review decisions through recurring inventory before accepting returned findings.
+
+- [x] Reproduce and fix inventory refresh dropping capability findings and their
+  decision history; verify unchanged and changed catalogs through the CLI.
+- [x] Retain pinned workflow sources and export Masumi/Sokosumi packets with
+  explicit production, configuration, native-artifact and deployment boundaries.
+- [x] Extend the review index, scope questions and copy-paste owner instructions;
+  keep all five earlier packet IDs unchanged and all seven reviews pending.
+- [x] Validate/replay evidence, reproduce complete packets, regenerate comparison,
+  review the milestone, verify static output and commit locally.
+
+Implementation checkpoint: the inventory regression failed before the fix and
+passes after it. All 76 readiness tests pass with zero skips; TypeScript and
+scoped lint pass. Thirty-seven additional pinned source files cover Masumi's
+backend/admin wiring, V1/V2 purchase signing/submission, provider/cost-model
+helpers and L2 boundary, plus Sokosumi's web/Core job and payment-client paths.
+The packets index 54 Masumi and 40 Sokosumi source/configuration files including
+previously retained inputs. Source preparation does not identify a deployed
+Masumi endpoint or import capability claims.
+
+Evidence checkpoint: all 1,062 retained evidence objects validate and all 39
+native profiles replay identically. Both new packets reproduce byte-for-byte
+across 116 files; all 94 indexed source files match the immutable Git blob IDs
+in their pinned repository trees. Earlier evidence, graph chunks, profiles,
+collection requests and decisions are unchanged. All 39 new evidence blobs are
+referenced. Comparison against `3e54e36` changes only Masumi/Sokosumi coverage
+records, with no added, removed or changed artifacts, edges, profiles or
+capabilities. Coverage remains 35 tools with profiles, 234 without profiles and
+all 269 hardfork-unassessed. Standards and specification reviews independently
+found no actionable issues. Inventory retention is committed locally as `0d80bb9`.
+
+Static verification checkpoint: the webpack build first failed in Google Fonts
+URL parsing; a retry compiled, type-checked and generated all 311 pages, then
+exhausted disk while copying the export. After clearing incomplete/redundant
+generated output, the pinned Next.js export stage completed with the build's
+App Router-only configuration. An initial export-stage recovery attempt omitted
+that flag and failed on the absent Pages Router `_document`; the corrected
+attempt succeeded. All 310 exported prerender routes and their RSC payloads match
+the completed production files byte-for-byte (Next omits `_global-error`), with
+404 and `.nojekyll` verified. Both payment pages show the expected roots, current
+digest, scope gaps, base-path links and unassessed status. This is a recovered
+static export, not a fresh uninterrupted build. No UI interactions changed or
+were re-tested; Turbopack was not revalidated. The verified `out/` and `.next/dev`
+are retained; disposable production server/cache output was cleared for space.
+
+Next: the owner has selected **Dijkstra** and the tagged, not-yet-released
+**cardano-node 11.2** source as the hardfork authority. Verify and pin the exact
+tag/commit before change-to-capability analysis. Baseline, transition and
+post-fork environment configuration remain unspecified. All seven prepared
+consumer reviews remain owner-launched and pending. Continue catalog/native
+artifact coverage alongside target analysis; original Lucid remains excluded
+from standalone work. This verified milestone remains local; nothing was pushed.
+
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

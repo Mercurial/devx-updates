@@ -210,5 +210,8 @@ Source and configuration evidence makes the remaining boundaries reviewable.
 Sokosumi's payment/registry clients use configured URLs and a network. No verified
 service edge to the collected Masumi revision is inferred. Masumi's lock includes
 `lucid-cardano`; retain that dependency as consumer evidence while original Lucid
-remains excluded from standalone work. Neither new tool has a prepared capability
-review packet yet. The existing five owner-run packets remain pending and unchanged.
+remains excluded from standalone work. Both tools now have prepared capability
+review packets in [the handoff](./capability-reviews.md), including additional
+production workflow source. All seven owner-run packets remain pending; the five
+earlier packet IDs are unchanged. Preparation does not import capability findings
+or identify deployed service versions.
