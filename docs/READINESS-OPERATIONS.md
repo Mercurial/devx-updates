@@ -336,7 +336,7 @@ Adding a new native profile and launching review passes remain explicit tasks. D
 
 ### Bun and Poetry production SDK inputs
 
-`bun-lock` reads text `bun.lock` version 1/config version 1 with pinned
+`bun-lock` reads text `bun.lock` version 1/config versions 0 and 1 with pinned
 `jsonc-parser` 3.3.1, including comments and trailing commas. It captures every
 locked workspace manifest, checks dependency declarations, follows nested package
 keys and workspace aliases, and retains development, optional and peer edges.
@@ -346,7 +346,10 @@ and `.npmrc` files are retained; when present, omitted registry URLs retain an
 unresolved registry identity instead of assuming npm's public registry.
 Installed peer contexts, overrides/patch content and lifecycle outputs remain gaps.
 The format/lookup boundary follows [Bun's lockfile documentation](https://bun.sh/docs/pm/lockfile)
-and the [Bun 1.3.14 native reader](https://github.com/oven-sh/bun/blob/bun-v1.3.14/src/install/lockfile/bun.lock.zig).
+and the [Bun 1.3.14 native reader](https://github.com/oven-sh/bun/blob/bun-v1.3.14/src/install/lockfile/bun.lock.zig)
+with its [configuration version definition](https://github.com/oven-sh/bun/blob/bun-v1.3.14/src/install/ConfigVersion.zig).
+Config version 0 uses the same text-v1 package lookup; accepting it does not bypass
+manifest/lock validation. Unknown configuration versions are rejected.
 
 `poetry-lock` reads Poetry lock version 2.1 with legacy `[tool.poetry]` manifests,
 using Poetry and poetry-core **2.1.1** in an isolated Python interpreter. Set up

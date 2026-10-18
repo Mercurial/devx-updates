@@ -122,3 +122,18 @@ test("Bun uses native duplicate declaration precedence without leaking dev selec
   assert.equal(r.edges.filter((e) => e.from === relation.from && e.to === relation.to).length, 1);
   assert.ok(r.gaps.some((g) => g.reason.includes("shadowed by devDependencies")));
 });
+
+test("Bun config version 0 preserves workspace resolution and rejects unknown configuration versions", () => {
+  const current = fixture();
+  const older = { ...current, lock: { ...current.lock, configVersion: 0 } };
+  const parsed = parseBunLock(JSON.stringify(older.lock));
+  assert.equal(parsed.configVersion, 0);
+  const oldResult = resolveNative(older, input, evidence);
+  const currentResult = resolveNative(current, input, evidence);
+  assert.deepEqual(oldResult.artifacts, currentResult.artifacts);
+  assert.deepEqual(oldResult.occurrences.map((o) => o.locator), currentResult.occurrences.map((o) => o.locator));
+  assert.equal(edge(oldResult, "workspace:packages/wallet", "package:shared")!.scope, "runtime");
+  assert.equal(edge(oldResult, "workspace:", "package:tooling")!.scope, "development");
+  assert.ok(edge(oldResult, "package:alias", "package:alias/shared"));
+  for (const version of [-1, 0.5, 2, "0"]) assert.throws(() => parseBunLock(JSON.stringify({ ...current.lock, configVersion: version })), /config versions/);
+});

@@ -4,7 +4,7 @@ import type { AdapterContext } from "./adapter-context";
 
 const fields = ["dependencies", "optionalDependencies", "devDependencies", "peerDependencies"] as const;
 export function bunWorkspacePaths(lock: Record<string, unknown>) {
-  if (lock.lockfileVersion !== 1 || (lock.configVersion !== undefined && lock.configVersion !== 1)) throw new Error("Only Bun text lock version 1/config version 1 is supported");
+  if (lock.lockfileVersion !== 1 || (lock.configVersion !== undefined && ![0, 1].includes(lock.configVersion as number))) throw new Error("Only Bun text lock version 1/config versions 0 and 1 are supported");
   const paths = Object.keys(object(lock.workspaces));
   if (!paths.includes("")) throw new Error("Bun lock has no root workspace");
   if (paths.some((path) => posix.isAbsolute(path) || path.includes("\\") || path.split("/").includes(".."))) throw new Error("Bun workspace escapes project");

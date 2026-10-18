@@ -495,12 +495,33 @@ Sixteen never-committed intermediate chunks were moved into ignored recovery
 storage. Code, evidence and reports are committed locally; nothing was pushed.
 
 Next: inspect SundaeSwap's pinned production inputs for reuse of Bun support,
-and continue unsupported higher-level roots such as Lucid/Deno. Keep production
+and advance Lucid Evolution's existing production profile into review. Owner
+priority correction: original Lucid (`spacebudz/lucid`) is excluded from active
+readiness work; prioritize Lucid Evolution (`Anastasia-Labs/lucid-evolution`).
+Retain the existing catalog/history, but do not build a Lucid/Deno collector. Keep production
 package selection distinct from nested native/test/example projects. The owner
 can assign the four prepared capability reviews using
 [Run the prepared reviews](./RUN-PREPARED-REVIEWS.md). Target-specific compatibility
 testing still needs a selected hardfork target and environment.
 
+
+### SundaeSwap collection and Lucid Evolution review preparation
+
+Continue ADR-1/ADR-2's offline retained-evidence pipeline for maintained
+higher-level consumers. SundaeSwap's text-v1 Bun lock uses config-version 0.
+Lucid Evolution already has a native pnpm production profile; prepare source
+and an owner-run review packet rather than duplicating its package collection.
+
+- [x] Support Bun config-version 0 and attempt the pinned SundaeSwap production
+  SDK collection. Retain its inputs and retryable failure when manifests differ.
+- [ ] Retain production entry points and native/provider boundaries for
+  SundaeSwap and Lucid Evolution; prepare Lucid Evolution's pending review packet
+  and update the LLM review handoff. SundaeSwap needs aligned native inputs first. Do not launch these consumer review tasks.
+- [ ] Validate/replay, verify cache reuse and packet reproduction, regenerate
+  reports, review the milestone and verify the static export.
+
+Original Lucid is not part of this milestone or the active collection priority.
+No capability claims or hardfork compatibility assessments are imported.
 
 ## 1. Objective
 
