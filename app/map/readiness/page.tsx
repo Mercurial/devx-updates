@@ -1,33 +1,17 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import Comparison from "@/components/readiness/Comparison";
+import DeferredComparison from "@/components/readiness/DeferredComparison";
 import Dashboard from "@/components/readiness/Dashboard";
-import { readinessAssignments, readinessChanges, readinessImpacts, readinessSnapshot, reviewQueue } from "@/lib/readiness/site";
-import type { Impact } from "@/lib/readiness/types";
-import { capabilityRows } from "@/lib/readiness/capabilities";
-import { investigationProjects, summarizeWork, workReport } from "@/lib/readiness/work";
+import { readinessSnapshot, reviewQueue } from "@/lib/readiness/site";
+import { readinessSiteReports } from "@/lib/readiness/site-reports";
 
 export const metadata: Metadata = { title: "Dependency coverage and hardfork readiness", description: "Evidence-backed dependency coverage, unresolved work, and upstream impact for Cardano tools." };
 
 export default function ReadinessPage() {
   const snapshot = readinessSnapshot();
-  const artifactMap = new Map(snapshot.artifacts.map((a) => [a.id, a]));
-  const nodeMap = new Map(snapshot.occurrences.map((n) => [n.id, n]));
-  const explain = (impact: Impact) => Object.entries(impact.paths).map(([key, path]) => {
-    const [toolId, bucket] = key.split(":");
-    const profileId = nodeMap.get(path[0])!.profileId;
-    const profile = snapshot.profiles.find((p) => p.id === profileId)!;
-    return { toolId, bucket, profileId, release: profile.release, platform: profile.platform, labels: path.map((id) => { const a = artifactMap.get(nodeMap.get(id)!.artifactId)!; return `${a.name}@${a.version ?? "unknown"}`; }) };
-  });
-  const impacts = readinessImpacts().map((impact) => ({ ...impact, artifact: artifactMap.get(impact.artifactId)!, explainedPaths: explain(impact) }));
-  const grouped = investigationProjects(snapshot, readinessImpacts());
-  const projects = grouped.map((project) => ({ ...project.impact, artifact: { id: project.id, name: project.name, ecosystem: project.ecosystem, source: project.source, version: project.versions.join(", "), integrity: null }, explainedPaths: explain(project.impact) }));
-  const work = workReport(snapshot, readinessAssignments(), grouped);
-  // Paths already travel with the impact rows; avoid duplicating the graph payload.
-  const workSummary = summarizeWork(work);
+  const { manifest } = readinessSiteReports();
   const profileCounts = Object.fromEntries(snapshot.tools.map((t) => [t.id, snapshot.profiles.filter((p) => p.toolId === t.id).length]));
   const reviewed = reviewQueue();
-  const changes = readinessChanges();
   return <div className="map-view" style={{ overflow: "visible" }}>
     <div className="mx-auto max-w-7xl space-y-8 px-4 py-7 sm:px-8">
       <div className="flex flex-wrap items-center justify-between gap-4"><div><p className="mb-2 text-xs uppercase tracking-widest text-muted">Cardano tooling · Evidence snapshot</p><h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Dependency coverage</h1></div><Nav /></div>
@@ -40,8 +24,8 @@ export default function ReadinessPage() {
         [snapshot.tools.filter((t) => t.resolution === "unresolved").length, "Need native resolution", "Visible in the work queue"],
       ].map(([count, label, detail]) => <div key={label} className="rounded-xl border border-border bg-surface p-4 sm:p-5"><div className="font-display text-3xl font-semibold tabular-nums">{count}</div><div className="mt-2 text-sm font-medium">{label}</div><div className="mt-1 text-xs text-muted">{detail}</div></div>)}</div>
       <div className="flex flex-wrap justify-between gap-2 text-xs text-muted"><span>Snapshot: {snapshot.generatedAt.slice(0, 10)} · {snapshot.semanticDigest.slice(0, 12)}</span><span>{reviewed.filter((r) => r.status === "pending").length} manual review packets pending · Evidence is collected separately from the site build</span></div>
-      <Dashboard tools={snapshot.tools} impacts={impacts} projects={projects} profileCounts={profileCounts} asOf={snapshot.generatedAt} capabilities={capabilityRows(snapshot)} work={workSummary} />
-      <details className="rounded-xl border border-border bg-surface p-5"><summary className="cursor-pointer font-medium">Snapshot comparison</summary>{changes ? <div className="mt-4"><Comparison changes={changes} /></div> : <p className="mt-3 text-sm text-muted">No comparison has been retained for this snapshot. Generate one with the readiness diff command.</p>}</details>
+      <Dashboard tools={snapshot.tools} manifest={manifest} profileCounts={profileCounts} asOf={snapshot.generatedAt} />
+      <DeferredComparison reference={manifest.reports.comparison} available={manifest.hasComparison} />
     </div>
   </div>;
 }

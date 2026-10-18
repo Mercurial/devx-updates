@@ -429,6 +429,32 @@ npm run test:readiness
 
 Profiles are historical, release-specific records. Refreshing discovery does not silently change old graphs or declare the newest release resolved. Collect a new profile for the new release. Tool-level resolution stays partial until supported configuration coverage has been established; a complete native profile does not establish complete tool coverage.
 
+### Static website reports
+
+`next build` derives JSON reports from the committed snapshot, assignments and
+current comparison. The static export includes these files under
+`out/map/readiness/data/`; deploy them together with the HTML and other assets.
+No collection, registry access or runtime server is involved (ADR-1/ADR-2).
+Requests use `NEXT_PUBLIC_BASE_PATH` (ADR-11). Serve the exported directory through
+HTTP, including when inspecting it locally without external network access.
+
+Initial HTML contains tool coverage and the full catalog denominator. Other
+reports load when their tabs open; comparison loads when expanded. Impact and
+project indexes omit paths, which are partitioned into 32 static files shared by
+impact and investigation views. Expanding a component loads its path file. A
+filtered export fetches all required path files, with at most four concurrent
+requests, before producing the complete download. A failed fetch never produces
+a partial export or an empty-success report.
+
+Filenames hash each report's content, including authored assignments and comparison
+data rather than only graph identity. The browser checks the response version and
+identity, reuses successful/in-flight requests, and allows retries after failures.
+If a deployment has replaced files referenced by an older page, reload the page;
+do not treat missing files as missing evidence. These are reproducible website
+assets, not replacements for retained snapshots and evidence. Investigation and
+comparison files still load in full when opened; pagination limits rendering, not
+their transfer size.
+
 ### Snapshot storage and backups
 
 New saves use ordinary JSON chunks capped at 2 MiB. Occurrences and edges are

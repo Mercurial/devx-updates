@@ -884,6 +884,48 @@ data. A subsequent performance slice should load committed report data on demand
 without losing coverage, evidence, paths or offline static hosting. Broader native
 coverage, owner-launched consumer reviews and Dijkstra assessment remain open.
 
+### Active continuation: load website reports on demand
+
+The dashboard now keeps tool coverage and the complete catalog denominator in its
+initial HTML, while loading other reports only when their tabs open. Comparison
+loads when expanded. Impact and project indexes share 32 static path files;
+expanding a component fetches its file, and filtered exports hydrate every selected
+path before downloading. Queue, investigation and capability records retain their
+existing filters, ranking, ownership and exports. No evidence or collection state
+has changed.
+
+Static GET routes enumerate content-addressed report files at build time, using
+only committed inputs (ADR-1/ADR-2). Filenames reflect report contents, including
+assignment and comparison changes independent of the graph digest. Browser requests
+respect the deployment base path (ADR-11), share in-flight/successful results,
+check response identity, and allow retries after HTTP, parse or identity failures.
+Missing files remain visible errors rather than empty successful reports. Export
+requests use at most four concurrent path fetches and fail without a partial
+download. Deploy report files with the matching HTML; older pages may need reloading
+after deployment.
+
+Measured initial HTML fell from 117,422,087 to 1,006,206 bytes (99.1% smaller).
+The largest path file is 2,568,930 bytes. Investigation and comparison still load
+whole report files on selection (about 16.3 MB and 10.0 MB uncompressed respectively);
+their pagination limits rendering, not transfer. Further partitioning can target
+those views if needed without changing retained graph semantics.
+
+Validation: all 106 readiness tests, TypeScript and scoped lint pass. Static
+export passed all 349 routes with `/devx-updates`. Chromium verified initial
+coverage without report requests; all report views, filters and pagination;
+on-demand consumer paths; full-path filtered exports; unavailable/mismatched file
+recovery; failed-export atomicity and retry; base-path links; mobile layout and
+light/dark presentation. No page errors occurred. Exported JSON reconstructs all
+21,490 impact rows and 14,783 project rows, including every path, identically to
+the retained reports. Work and comparison payloads also match exactly. Standards
+and specification reviews found no actionable findings.
+
+The canonical snapshot digest remains
+`413d3e3de47bdffc067d91fdec95be12776ab967fd8b9f67fc019959ea338cb6`.
+Broader native collection, owner-launched consumer reviews and the Dijkstra source
+pin/test environments remain open; this performance work is not a compatibility
+assessment.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.
