@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "a984bb825fcb94eee1cda6162c87a8d5e30f55351c0e649204361720990bbb20",
-    "generatedAt": "2026-10-18T21:19:40.196Z",
+    "semanticDigest": "d19a7de8cf3452647caedc1b4a444545815f3979f9979f7a257ac432f3bc19ad",
+    "generatedAt": "2026-10-18T22:27:06.757Z",
     "tools": [
       {
         "id": "1694-io",
@@ -273,7 +273,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -285,8 +285,40 @@
           "frontend/pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:03dfe39b163aa9f32bea6f4131ee7079af6e3664003b6e110f54d8a8b6994a99",
+          "evidence:08da6178d1be4499444dc7a871826d38cae5b6812f13e39df0fb312e5d140d09",
+          "evidence:0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803",
+          "evidence:0d8dd8c24669d34a5642054f4e7bf28863a784faf7d93a17dc4b540fad95db57",
+          "evidence:1c1f828e42398e14a23919a2dc172db45d55d770f521f90a4d2e554ee9930d71",
+          "evidence:2218a3c3cb892a12a7b80dcee97885f978bf7f712e99a30cbfdda2d73cc7d416",
+          "evidence:25be5553ed03b83540ee6e24d6381cd2a64a85a200e40013158620a5ef11cda5",
+          "evidence:2dc904f9ae10b23ed79bd668a59e1578d3b23cda10f654d7272b83bc443e2da8",
           "evidence:2e0d43bfd91cf8619a847a3d4eda7fbe39c336fc6db18fb53722a91eef40f9ca",
-          "evidence:d25b8d7cae7d46237e68b6dcb9ad70fa09ba6d591b6f616638063b739a818417"
+          "evidence:3acd01c975a66cb7ce9063d4f65bcbabeb4835a8143c821f84f36fb9137d64e8",
+          "evidence:3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452",
+          "evidence:44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5",
+          "evidence:469760767496fa67196bfe6d54db5c922da777637e8e9c558bf70109990fe574",
+          "evidence:54a0dd56c0198353b3d477e6069c99d60e5d1ae30eb1522df36fdf2fec3ed54c",
+          "evidence:64c43bcf2eb0509ef7e882a5670f97a3c0d49d6f73a4bf0a27dcf62358f56bad",
+          "evidence:6ac04b1b0ea28b45c3be16072d63d802925787a74b6509f494111e458e835379",
+          "evidence:6c59b94f097a5d39bd9697a4e50201d3bcbc8797cb1996752a9ddf9871eff417",
+          "evidence:6e8966a749d972a18fe94c57db01a4bfd93b6013291055ee31a8f5d39008cb1b",
+          "evidence:70cd57d458831011fe23bed12cdfa2e407b3ae7bd1e16c32a5d9a6898ce70fca",
+          "evidence:7729dd3a470bdc76b05baab6e39e205ae08b992fd22496ebbd05982c0cbde72d",
+          "evidence:7d1fe67882fccfc45ce17e98c11563f454e88a656662c947e18938d672e50c9a",
+          "evidence:8abb3e607865e2cfb5bf14b3dcc7d64c7428e318b2ebed1dbb95e8bc309a32d6",
+          "evidence:c7e31702056ce0313ffa12c24f338a872e4817367156696c11d4b4f16d08d28c",
+          "evidence:d25b8d7cae7d46237e68b6dcb9ad70fa09ba6d591b6f616638063b739a818417",
+          "evidence:d713116eeefd0a9a850d601d1ecca984f911fe8c3316e0132d7fbcc66d342ccd",
+          "evidence:d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4",
+          "evidence:db34c0d1eb7bd8cca62e9591b6ab249496362cf0fef283c9e9f2e850daf7d8e1",
+          "evidence:e2bc2adb7721cbbd8439bd5f318129dd3590788e6e2700024a729fd32ca03685",
+          "evidence:e6855c22bce2485ee49a3c0ef286c966b52dcdae7d6245f2b807f5d9274861df",
+          "evidence:e69bf8533ab3173f96ce84d63206c8e96a8a8c68f3d3862f0f114b11edda8fcc",
+          "evidence:e8da007b3fec801b63edff0b04825f80ba53c662950f26a0e7b760e570b896e0",
+          "evidence:ec818690723761fef687381269bea19c66d083dd441da26340d7a9ee36d935d2",
+          "evidence:eefab5de2eec2ed16542ba5e304bf38baed1fdc95630d0bea102a8b139b23864",
+          "evidence:f8a20dc92d018be0b450e94edf7aa808af7a650251b762988c2ba97aa541c9f0"
         ],
         "gaps": [
           {
@@ -304,17 +336,38 @@
             "code": "integration-unreviewed"
           },
           {
+            "id": "gap:3364864f2f6e37ddd755b1b2",
+            "area": "resolution",
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:adastat-api:d0506731a811eb6d5671ea74"
+          },
+          {
             "id": "gap:4abbaad672af9beef40f0088",
             "area": "artifact",
             "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:c818fd1b3504ce489f277a86",
+            "area": "artifact",
+            "reason": "AdaStat backend and frontend each declare 2.0.0 on the selected default-branch source, without a verified stable release or adastat.net deployment mapping. Separate pnpm locks are source reconstructions. Built frontend/backend bundles, sharp/blake2b and other native/WASM assets, installed platform pruning and environment-selected network configurations remain unverified.",
+            "nextAction": "Verify published artifacts, build provenance and supported deployment/configuration mappings.",
+            "code": "query-scope:artifact"
+          },
+          {
+            "id": "gap:ebeb407a2c8e8fee7b706c32",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:adastat-api:70ce7cff20719d04c837d420"
+          },
+          {
+            "id": "gap:f73c8d42763a67cb8d0d459a",
+            "area": "integration",
+            "reason": "The retained backend README requires the separately maintained AdaStat Indexer and PostgreSQL schema/data. Source config selects primary/secondary databases, network constants and Mithril/IPFS/Arweave endpoints; frontend API/WebSocket clients use configured service endpoints. Indexer/deployment versions, database schema contracts, network settings and runtime wiring remain unresolved. Source inspection establishes review leads, not admitted service edges or capability findings.",
+            "nextAction": "Review the retained production wiring and obtain immutable service versions, schemas and configured deployment evidence.",
+            "code": "query-scope:integration"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:05.207Z",
@@ -5080,7 +5133,7 @@
           "python"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -5141,7 +5194,43 @@
         ],
         "evidenceIds": [
           "evidence:0553ddfdbd29dad0d4070edb00f014bf2245e98ac66c024dac88826ba247c7e6",
-          "evidence:aeb67a1ebc0d946a68d407679a504d62d15e84ca4be37defa3e2f8713d7cbda9"
+          "evidence:0efb28f042f498c83fba083086cc8909065c042155964791546790d0628fdfc2",
+          "evidence:1164b6b675678f9704e98af84dfaeea1de7404bc1d0e494940ecbcb06efdd2d4",
+          "evidence:14e117d2e3dbda39e8a8b2c381176becfdb05271c73a477fecf49a31cc18b81d",
+          "evidence:1cd32f975433f04773f0acf110cd8607d3e97caf2b2d7c6fb41418cd20ebffc6",
+          "evidence:311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6",
+          "evidence:44bf664934627305dec1f1a5fd4441048bea23d61481429b7fc434672d902569",
+          "evidence:45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee",
+          "evidence:5186ff8aae102eaa77c646c9bafb0f5dc6e57d74494153d5e5037ec8d3889c91",
+          "evidence:5b40bd4e6e75cd1b48d9e9baabc459af103111c0ba4f3ee6eb4be9a8abf0e8d5",
+          "evidence:5ca1387b4698745856510955e692359692eb7d2f6385f67bb91bfa2fbce8e20f",
+          "evidence:65a3927b597aaefd3041a9bcc01d9df6a0089226226725d2377136363a13f203",
+          "evidence:684226af76bf15b24e687fbaf7892aed494af157fcf93e3df38c496513b3a59a",
+          "evidence:705dcbfc615550bdf6b8ad0d088b6c794097b39b43dd961729ae94e835e868a1",
+          "evidence:70f182b97f9f0462bfd33157656a4ee3154294398df3a40147a49e01632f403d",
+          "evidence:7904f84ba4011be7518a549578f1340e7c9752f603636cc5f008ed0ee1916da4",
+          "evidence:7f21b941a1770ffb0ef0610d730bbf8cf050c370655a2b72f42764177f2e0bff",
+          "evidence:8056bfcb57bf6219f39b6c8fc78fa66ebd89ea441027e63361932a4395c22e95",
+          "evidence:85255fad531345893c5dade6e4906823455301a9a9ebfb1080ea58c800e958b9",
+          "evidence:875f5b763e90b867ad648b7dfd489d6a92bfed393d999324fc425cdafa988096",
+          "evidence:949a43ef809b2439dfbe317da19596ed50ac9c0f1c4c2bbc8dcacdce1a489f8a",
+          "evidence:957fcde5562d01c4c4e78725c6e9ec60b1ee8b65ff8d27b2794070569241b7d1",
+          "evidence:987caffd177a82ce05c100b2fcfa244b976d3cbc44a145f6766d4d86647994d0",
+          "evidence:9a4bd009f5c47093f45990a24296d4f0e268f3acfac0bb8a1a4194e380097dbd",
+          "evidence:9fd0b366150a50b523447679982bf13fe792f5d43978005425821f65799d1009",
+          "evidence:aeb67a1ebc0d946a68d407679a504d62d15e84ca4be37defa3e2f8713d7cbda9",
+          "evidence:b4a9f71ae40f7931374abeeacea19e8c9819fec5db580d8381a6a0405057d66e",
+          "evidence:b4c795118b3a458fa3a4c96af39f7509f9c4afa2d4caaf137f25c9696d44c178",
+          "evidence:bac5f4ecd206ecb46f6f24585a4efb1207792de282e65dc229f0da43cd2ca471",
+          "evidence:bbfb00c41ab31df5ac141a8702cf00a486d7c40327d229009821e6c9db4898d8",
+          "evidence:ccad9a1607c602d61452ce9c3e5ba1ec02c484891ba686ba0ab3b631309f3722",
+          "evidence:d0e6b18f9d33394d2cb5e984d969fbd7fbcbb382988410f629cc7e016c8e5606",
+          "evidence:d670f37c1457ea023027c17c6259c7294dc1b54b1fb691eef86117cb5b840d86",
+          "evidence:dd36499802a5c9a09a0d564ff086c93ce95627cf957189d7b4c63ace884ececc",
+          "evidence:e41b9d00bcc250e6ae48f57c56ba1ff76207073ccdc04548b70ef0230e878f30",
+          "evidence:f9970de3d234a0d5378f49c108efc2229d97da8595c8068db84e58841f264f52",
+          "evidence:ff999dd7db01c5acd6096519e127c554cca0c6dbe88a585fd6cfdd4da09ba873",
+          "evidence:ffd23e5f1b4d1e442dc87cf784b24e9cd70cf080dd860686f669545bb34812d7"
         ],
         "gaps": [
           {
@@ -5152,6 +5241,20 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:0aecdb1742904e4d0bbb3254",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for axios@^1.15.0 from workspace:packages/api-cardano-db-hasura.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284"
+          },
+          {
+            "id": "gap:16053b21fa1cd70f9ef2bdd7",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -5159,17 +5262,24 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
-            "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "id": "gap:c818fd1b3504ce489f277a86",
+            "area": "artifact",
+            "reason": "Cardano GraphQL 9.1.0 source selects @cardano-graphql/server and @cardano-graphql/api-cardano-db-hasura, each manifest 9.1.0. Native Classic Yarn workspace metadata links local packages while preserving development scopes. Root orchestration, CLI and client packages remain unselected records. Installed hoisting/peer contexts, offline-mirror tarballs, generated GraphQL code, Nix/container closures and published images need separate artifact evidence.",
+            "nextAction": "Verify published artifacts, build provenance and supported deployment/configuration mappings.",
+            "code": "query-scope:artifact"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:f73c8d42763a67cb8d0d459a",
+            "area": "integration",
+            "reason": "Retained server/API and Docker sources expose boundaries to Hasura, PostgreSQL/cardano-db-sync, cardano-node Prometheus metrics, cardano-submit-api, token metadata, Mithril bootstrap and the separate index-service container. Configured images/tags, deployed endpoints, schema/migration compatibility and actual network configuration remain unverified. No service graph edges, chain capabilities or Dijkstra compatibility claims are admitted by source capture.",
+            "nextAction": "Review the retained production wiring and obtain immutable service versions, schemas and configured deployment evidence.",
+            "code": "query-scope:integration"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:12.840Z",
@@ -25461,6 +25571,62 @@
     ],
     "profiles": [
       {
+        "id": "profile:adastat-api:70ce7cff20719d04c837d420",
+        "toolId": "adastat-api",
+        "release": "unreleased:main",
+        "revision": "2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed backend/pnpm-lock.yaml and importer manifests at 2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:785f386da2c09540a0d9b7e3987850a93a9c809fc8ee76f8e3dbf2f3bf4323f8"
+        ],
+        "inputDigest": "70ce7cff20719d04c837d42003c536a4995fcd5ff421e441a07ba0e7e6e8b9f7",
+        "evidenceIds": [
+          "evidence:3acd01c975a66cb7ce9063d4f65bcbabeb4835a8143c821f84f36fb9137d64e8",
+          "evidence:44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5",
+          "evidence:6e8966a749d972a18fe94c57db01a4bfd93b6013291055ee31a8f5d39008cb1b",
+          "evidence:d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4",
+          "evidence:eefab5de2eec2ed16542ba5e304bf38baed1fdc95630d0bea102a8b139b23864"
+        ],
+        "nativeEvidenceId": "evidence:d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4",
+        "configurationEvidenceId": "evidence:44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:adastat-api:d0506731a811eb6d5671ea74",
+        "toolId": "adastat-api",
+        "release": "unreleased:main",
+        "revision": "2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed frontend/pnpm-lock.yaml and importer manifests at 2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:dd849082eed45f264438c029e9f159c6495ce2a53853c6ab850a04bbcf6aef9e"
+        ],
+        "inputDigest": "d0506731a811eb6d5671ea74ea67209a8f0276cb0b1531db024164d3984b1d3c",
+        "evidenceIds": [
+          "evidence:0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803",
+          "evidence:2218a3c3cb892a12a7b80dcee97885f978bf7f712e99a30cbfdda2d73cc7d416",
+          "evidence:3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452",
+          "evidence:db34c0d1eb7bd8cca62e9591b6ab249496362cf0fef283c9e9f2e850daf7d8e1",
+          "evidence:e2bc2adb7721cbbd8439bd5f318129dd3590788e6e2700024a729fd32ca03685"
+        ],
+        "nativeEvidenceId": "evidence:0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803",
+        "configurationEvidenceId": "evidence:3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:atlas:ee169e1d50382aaa065c3534",
         "toolId": "atlas",
         "release": "v0.14.1",
@@ -26018,6 +26184,41 @@
         ],
         "nativeEvidenceId": "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
         "configurationEvidenceId": "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cardano-graphql:b8fd0bccda852f0d3134c284",
+        "toolId": "cardano-graphql",
+        "release": "9.1.0",
+        "revision": "fcfe3154115ef176788a60b2eae925ee42aabd7c",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at fcfe3154115ef176788a60b2eae925ee42aabd7c; yarn --no-default-rc --offline --ignore-scripts --non-interactive --cache-folder /cache --json workspaces info",
+        "toolchain": "Yarn classic lock; producing Yarn version unknown; parser @yarnpkg/lockfile 1.1.0; workspace metadata Yarn 1.22.22",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:8d297527acae43260d23156d5a6c93d2323e119ccc3ec92d7301e482cd9aaae7",
+          "occurrence:c08b31c0cb7936f937d4ff3fb8ffbf3a2afee8d4c853745441182f04750bbc02"
+        ],
+        "inputDigest": "b8fd0bccda852f0d3134c284c0b9efcf309c804f6f1b765310e78ba7bab8f35b",
+        "evidenceIds": [
+          "evidence:14e117d2e3dbda39e8a8b2c381176becfdb05271c73a477fecf49a31cc18b81d",
+          "evidence:311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6",
+          "evidence:45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee",
+          "evidence:5186ff8aae102eaa77c646c9bafb0f5dc6e57d74494153d5e5037ec8d3889c91",
+          "evidence:7f21b941a1770ffb0ef0610d730bbf8cf050c370655a2b72f42764177f2e0bff",
+          "evidence:8056bfcb57bf6219f39b6c8fc78fa66ebd89ea441027e63361932a4395c22e95",
+          "evidence:85255fad531345893c5dade6e4906823455301a9a9ebfb1080ea58c800e958b9",
+          "evidence:b4c795118b3a458fa3a4c96af39f7509f9c4afa2d4caaf137f25c9696d44c178",
+          "evidence:bac5f4ecd206ecb46f6f24585a4efb1207792de282e65dc229f0da43cd2ca471",
+          "evidence:dd36499802a5c9a09a0d564ff086c93ce95627cf957189d7b4c63ace884ececc",
+          "evidence:f9970de3d234a0d5378f49c108efc2229d97da8595c8068db84e58841f264f52"
+        ],
+        "nativeEvidenceId": "evidence:45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee",
+        "configurationEvidenceId": "evidence:311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6",
         "coverage": "partial"
       },
       {
@@ -27541,6 +27742,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/plutigo/tree/8f16bb5baecd8bc48da1b4e92f9d07039a884413"
       },
       {
+        "id": "evidence:03dfe39b163aa9f32bea6f4131ee7079af6e3664003b6e110f54d8a8b6994a99",
+        "digest": "03dfe39b163aa9f32bea6f4131ee7079af6e3664003b6e110f54d8a8b6994a99",
+        "path": "evidence/03dfe39b163aa9f32bea6f4131ee7079af6e3664003b6e110f54d8a8b6994a99.json.gz",
+        "description": "Native input adastat-api/backend/.env.example",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/.env.example"
+      },
+      {
         "id": "evidence:03f35f06d75d9a2663334de7b717893840617f3006f3ed60a13a7e2e85c799f7",
         "digest": "03f35f06d75d9a2663334de7b717893840617f3006f3ed60a13a7e2e85c799f7",
         "path": "evidence/03f35f06d75d9a2663334de7b717893840617f3006f3ed60a13a7e2e85c799f7.json.gz",
@@ -27727,6 +27935,13 @@
         "description": "Collection request for cardano-mcp"
       },
       {
+        "id": "evidence:08da6178d1be4499444dc7a871826d38cae5b6812f13e39df0fb312e5d140d09",
+        "digest": "08da6178d1be4499444dc7a871826d38cae5b6812f13e39df0fb312e5d140d09",
+        "path": "evidence/08da6178d1be4499444dc7a871826d38cae5b6812f13e39df0fb312e5d140d09.json.gz",
+        "description": "Native input adastat-api/backend/.env.preview",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/.env.preview"
+      },
+      {
         "id": "evidence:08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
         "digest": "08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
         "path": "evidence/08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431.json.gz",
@@ -27797,6 +28012,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/mithril/tree/3f6cb73f491eb3195d02318643e40836fb093acc"
       },
       {
+        "id": "evidence:0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803",
+        "digest": "0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803",
+        "path": "evidence/0b354fa320b783686b6ffb83034f8017fb74b6337638f767bf27c40285d7b803.json.gz",
+        "description": "pnpm-lock for adastat-api unreleased:main",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/tree/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436"
+      },
+      {
         "id": "evidence:0b4b4159f3f071375f75907d0cc27eb74cb121e2e9f9ab2fc20aa7990aa0cf47",
         "digest": "0b4b4159f3f071375f75907d0cc27eb74cb121e2e9f9ab2fc20aa7990aa0cf47",
         "path": "evidence/0b4b4159f3f071375f75907d0cc27eb74cb121e2e9f9ab2fc20aa7990aa0cf47.json.gz",
@@ -27851,6 +28073,13 @@
         "path": "evidence/0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976.json.gz",
         "description": "Native input cardano-js-sdk/packages/golden-test-generator/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/golden-test-generator/package.json"
+      },
+      {
+        "id": "evidence:0d8dd8c24669d34a5642054f4e7bf28863a784faf7d93a17dc4b540fad95db57",
+        "digest": "0d8dd8c24669d34a5642054f4e7bf28863a784faf7d93a17dc4b540fad95db57",
+        "path": "evidence/0d8dd8c24669d34a5642054f4e7bf28863a784faf7d93a17dc4b540fad95db57.json.gz",
+        "description": "Native input adastat-api/frontend/README.md",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/README.md"
       },
       {
         "id": "evidence:0dc0fcdbd385d1b8adffe27f2c251a13e23edf0e43054420845a959317c77b2d",
@@ -27913,6 +28142,13 @@
         "path": "evidence/0ec041772bc45cfdc82acee2e398e70aa606c112845013122f2fd4201faffff4.json.gz",
         "description": "Source sokosumi/apps/core/src/routes/v1/tasks/index.ts",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/src/routes/v1/tasks/index.ts"
+      },
+      {
+        "id": "evidence:0efb28f042f498c83fba083086cc8909065c042155964791546790d0628fdfc2",
+        "digest": "0efb28f042f498c83fba083086cc8909065c042155964791546790d0628fdfc2",
+        "path": "evidence/0efb28f042f498c83fba083086cc8909065c042155964791546790d0628fdfc2.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/src/HasuraClient.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/src/HasuraClient.ts"
       },
       {
         "id": "evidence:0f699fc4ace5eeb3f5bb96aa001fb1e981034855b537815ad267d09d904adc94",
@@ -28017,6 +28253,13 @@
         "description": "Collection request for cardano-js-sdk"
       },
       {
+        "id": "evidence:1164b6b675678f9704e98af84dfaeea1de7404bc1d0e494940ecbcb06efdd2d4",
+        "digest": "1164b6b675678f9704e98af84dfaeea1de7404bc1d0e494940ecbcb06efdd2d4",
+        "path": "evidence/1164b6b675678f9704e98af84dfaeea1de7404bc1d0e494940ecbcb06efdd2d4.json.gz",
+        "description": "Native input cardano-graphql/flake.lock",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/flake.lock"
+      },
+      {
         "id": "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
         "digest": "11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
         "path": "evidence/11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6.json.gz",
@@ -28084,6 +28327,13 @@
         "path": "evidence/145617b528f6fac4459263adc6fbba340753b09729af240d6671c13f17a9cc60.json.gz",
         "description": "Native input lucid-evolution/packages/provider/src/index.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/provider/src/index.ts"
+      },
+      {
+        "id": "evidence:14e117d2e3dbda39e8a8b2c381176becfdb05271c73a477fecf49a31cc18b81d",
+        "digest": "14e117d2e3dbda39e8a8b2c381176becfdb05271c73a477fecf49a31cc18b81d",
+        "path": "evidence/14e117d2e3dbda39e8a8b2c381176becfdb05271c73a477fecf49a31cc18b81d.json.gz",
+        "description": "Native input cardano-graphql/.yarnrc",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/.yarnrc"
       },
       {
         "id": "evidence:14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
@@ -28287,6 +28537,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-data-lite/tree/b099b3d11b009b971f918217bc15a769555be8fb"
       },
       {
+        "id": "evidence:1c1f828e42398e14a23919a2dc172db45d55d770f521f90a4d2e554ee9930d71",
+        "digest": "1c1f828e42398e14a23919a2dc172db45d55d770f521f90a4d2e554ee9930d71",
+        "path": "evidence/1c1f828e42398e14a23919a2dc172db45d55d770f521f90a4d2e554ee9930d71.json.gz",
+        "description": "Native input adastat-api/backend/.env.preprod",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/.env.preprod"
+      },
+      {
         "id": "evidence:1ca95c09d7e8ee42c3757babe69b5c85e9556bf50233c971e400d52251164b09",
         "digest": "1ca95c09d7e8ee42c3757babe69b5c85e9556bf50233c971e400d52251164b09",
         "path": "evidence/1ca95c09d7e8ee42c3757babe69b5c85e9556bf50233c971e400d52251164b09.json.gz",
@@ -28313,6 +28570,13 @@
         "path": "evidence/1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa.json.gz",
         "description": "Native input daedalus/package.json",
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/package.json"
+      },
+      {
+        "id": "evidence:1cd32f975433f04773f0acf110cd8607d3e97caf2b2d7c6fb41418cd20ebffc6",
+        "digest": "1cd32f975433f04773f0acf110cd8607d3e97caf2b2d7c6fb41418cd20ebffc6",
+        "path": "evidence/1cd32f975433f04773f0acf110cd8607d3e97caf2b2d7c6fb41418cd20ebffc6.json.gz",
+        "description": "Native input cardano-graphql/packages/index-service/Dockerfile",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/index-service/Dockerfile"
       },
       {
         "id": "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
@@ -28514,6 +28778,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/plutus/tree/152220ae3da8cd6ceaf2688094af541ac1245f58"
       },
       {
+        "id": "evidence:2218a3c3cb892a12a7b80dcee97885f978bf7f712e99a30cbfdda2d73cc7d416",
+        "digest": "2218a3c3cb892a12a7b80dcee97885f978bf7f712e99a30cbfdda2d73cc7d416",
+        "path": "evidence/2218a3c3cb892a12a7b80dcee97885f978bf7f712e99a30cbfdda2d73cc7d416.json.gz",
+        "description": "Native input adastat-api/frontend/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/pnpm-workspace.yaml"
+      },
+      {
         "id": "evidence:223cc577394850304efe5b8691ff555fe10953286cf398f8f4ce889a122ea161",
         "digest": "223cc577394850304efe5b8691ff555fe10953286cf398f8f4ce889a122ea161",
         "path": "evidence/223cc577394850304efe5b8691ff555fe10953286cf398f8f4ce889a122ea161.json.gz",
@@ -28658,6 +28929,13 @@
         "path": "evidence/25a9f61daba3f93d44b56b3caa51a4be9ebcf37bdc9c603de0993b2363bd4f2c.json.gz",
         "description": "Native input lucid-evolution/packages/utils/src/redeemer.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/redeemer.ts"
+      },
+      {
+        "id": "evidence:25be5553ed03b83540ee6e24d6381cd2a64a85a200e40013158620a5ef11cda5",
+        "digest": "25be5553ed03b83540ee6e24d6381cd2a64a85a200e40013158620a5ef11cda5",
+        "path": "evidence/25be5553ed03b83540ee6e24d6381cd2a64a85a200e40013158620a5ef11cda5.json.gz",
+        "description": "Native input adastat-api/backend/index.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/index.ts"
       },
       {
         "id": "evidence:25d2b4e243df6ad8982c785c5462e463345dccdbba2a289b39171471d8929901",
@@ -28996,6 +29274,12 @@
         "sourceUrl": "https://github.com/GameChangerFinance/gamechanger.wallet/tree/f061a5a2cbad42e94a704375df805c9e558ba0a5"
       },
       {
+        "id": "evidence:2dc904f9ae10b23ed79bd668a59e1578d3b23cda10f654d7272b83bc443e2da8",
+        "digest": "2dc904f9ae10b23ed79bd668a59e1578d3b23cda10f654d7272b83bc443e2da8",
+        "path": "evidence/2dc904f9ae10b23ed79bd668a59e1578d3b23cda10f654d7272b83bc443e2da8.json.gz",
+        "description": "Collection request for adastat-api"
+      },
+      {
         "id": "evidence:2dc93f528b9f6967b2ab97bcc680e4a16aeb8aa92265d2c712f33505a2c46072",
         "digest": "2dc93f528b9f6967b2ab97bcc680e4a16aeb8aa92265d2c712f33505a2c46072",
         "path": "evidence/2dc93f528b9f6967b2ab97bcc680e4a16aeb8aa92265d2c712f33505a2c46072.json.gz",
@@ -29125,6 +29409,13 @@
         "path": "evidence/311a9f6b5a5c8b349ca146891019ed700e54b1163826559326ab46b1e8f0a0bc.json.gz",
         "description": "Native input lucid-evolution/packages/lucid/src/script-context/ScriptContext.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/script-context/ScriptContext.ts"
+      },
+      {
+        "id": "evidence:311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6",
+        "digest": "311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6",
+        "path": "evidence/311c5b5211c113b285979c41fafdac2d5c6aed78eb6c0c8e5a091295164626d6.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/tree/fcfe3154115ef176788a60b2eae925ee42aabd7c"
       },
       {
         "id": "evidence:31ad0dc2bc9766caba744de6a248638f31ed81a0909780fb7d610ce5c5de487d",
@@ -29381,6 +29672,20 @@
         "path": "evidence/3ab02a130a09d0c80073090ecc70da32cbdc340be71c85269540e91be8d1efb5.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/CardanoSolutions/zhuli/releases/tag/0.0.2"
+      },
+      {
+        "id": "evidence:3acd01c975a66cb7ce9063d4f65bcbabeb4835a8143c821f84f36fb9137d64e8",
+        "digest": "3acd01c975a66cb7ce9063d4f65bcbabeb4835a8143c821f84f36fb9137d64e8",
+        "path": "evidence/3acd01c975a66cb7ce9063d4f65bcbabeb4835a8143c821f84f36fb9137d64e8.json.gz",
+        "description": "Native input adastat-api/backend/package.json",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/package.json"
+      },
+      {
+        "id": "evidence:3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452",
+        "digest": "3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452",
+        "path": "evidence/3ae6740a0a20db13844e864f4b69a72c8496ea26fd8a84d31eddc86684240452.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/tree/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436"
       },
       {
         "id": "evidence:3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
@@ -29764,6 +30069,20 @@
         "sourceUrl": "https://github.com/HarmonicPool/cardano-wallet-interface/tree/3b9451fcaf7fc79bc9e8b56f227b42657d69a21c"
       },
       {
+        "id": "evidence:44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5",
+        "digest": "44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5",
+        "path": "evidence/44aa63d6e79918921c75ca62103fd838673e2afa8e28e4eebb91ec5880a817e5.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/tree/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436"
+      },
+      {
+        "id": "evidence:44bf664934627305dec1f1a5fd4441048bea23d61481429b7fc434672d902569",
+        "digest": "44bf664934627305dec1f1a5fd4441048bea23d61481429b7fc434672d902569",
+        "path": "evidence/44bf664934627305dec1f1a5fd4441048bea23d61481429b7fc434672d902569.json.gz",
+        "description": "Native input cardano-graphql/dockerfiles/mithril/Dockerfile",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/dockerfiles/mithril/Dockerfile"
+      },
+      {
         "id": "evidence:44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40",
         "digest": "44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40",
         "path": "evidence/44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40.json.gz",
@@ -29783,6 +30102,13 @@
         "path": "evidence/458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce.json.gz",
         "description": "Native input blaze/packages/blaze-wallet/src/index.ts",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/src/index.ts"
+      },
+      {
+        "id": "evidence:45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee",
+        "digest": "45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee",
+        "path": "evidence/45a735a9a4d48051b8857c31787a33b22270e47282e05590663ea1b2b0d6faee.json.gz",
+        "description": "yarn-lock for cardano-graphql 9.1.0",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/tree/fcfe3154115ef176788a60b2eae925ee42aabd7c"
       },
       {
         "id": "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
@@ -29810,6 +30136,13 @@
         "path": "evidence/466f7c67abd36dfe3cbe0d9ccf42cf725b4f312a1a333c564df67b889f5ba459.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/blinklabs-io/dingo/releases/tag/v0.84.0"
+      },
+      {
+        "id": "evidence:469760767496fa67196bfe6d54db5c922da777637e8e9c558bf70109990fe574",
+        "digest": "469760767496fa67196bfe6d54db5c922da777637e8e9c558bf70109990fe574",
+        "path": "evidence/469760767496fa67196bfe6d54db5c922da777637e8e9c558bf70109990fe574.json.gz",
+        "description": "Native input adastat-api/backend/.env.mainnet",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/.env.mainnet"
       },
       {
         "id": "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
@@ -30136,6 +30469,13 @@
         "sourceUrl": "https://github.com/sidan-lab/plutus-cborhex-automation/tree/93af478c89e861a4803acad0a194bcbec73dfd8f"
       },
       {
+        "id": "evidence:5186ff8aae102eaa77c646c9bafb0f5dc6e57d74494153d5e5037ec8d3889c91",
+        "digest": "5186ff8aae102eaa77c646c9bafb0f5dc6e57d74494153d5e5037ec8d3889c91",
+        "path": "evidence/5186ff8aae102eaa77c646c9bafb0f5dc6e57d74494153d5e5037ec8d3889c91.json.gz",
+        "description": "Native input cardano-graphql/packages/util-dev/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/util-dev/package.json"
+      },
+      {
         "id": "evidence:51dc30bb0c80cdd98532083107e7284c13f35f71b93bc3b851a08256b00e0471",
         "digest": "51dc30bb0c80cdd98532083107e7284c13f35f71b93bc3b851a08256b00e0471",
         "path": "evidence/51dc30bb0c80cdd98532083107e7284c13f35f71b93bc3b851a08256b00e0471.json.gz",
@@ -30222,6 +30562,13 @@
         "path": "evidence/54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71.json.gz",
         "description": "Signing workflow source cardano-dev-wallet/webext/build.js",
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/build.js"
+      },
+      {
+        "id": "evidence:54a0dd56c0198353b3d477e6069c99d60e5d1ae30eb1522df36fdf2fec3ed54c",
+        "digest": "54a0dd56c0198353b3d477e6069c99d60e5d1ae30eb1522df36fdf2fec3ed54c",
+        "path": "evidence/54a0dd56c0198353b3d477e6069c99d60e5d1ae30eb1522df36fdf2fec3ed54c.json.gz",
+        "description": "Native input adastat-api/backend/lib/config.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/lib/config.ts"
       },
       {
         "id": "evidence:54c721fb224820a305eac73975aab81952efc465307d291a2aab4b7b8bf233be",
@@ -30405,6 +30752,13 @@
         "sourceUrl": "https://github.com/txbody-org/sutra-cardano/tree/c35322c32439c250416943346211f48074ba31d1"
       },
       {
+        "id": "evidence:5b40bd4e6e75cd1b48d9e9baabc459af103111c0ba4f3ee6eb4be9a8abf0e8d5",
+        "digest": "5b40bd4e6e75cd1b48d9e9baabc459af103111c0ba4f3ee6eb4be9a8abf0e8d5",
+        "path": "evidence/5b40bd4e6e75cd1b48d9e9baabc459af103111c0ba4f3ee6eb4be9a8abf0e8d5.json.gz",
+        "description": "Native input cardano-graphql/scripts/export_env.sh",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/scripts/export_env.sh"
+      },
+      {
         "id": "evidence:5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3",
         "digest": "5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3",
         "path": "evidence/5b8749eb6836830e4406381fe8a9950d25738f0279d89e5e52e5787165283cb3.json.gz",
@@ -30424,6 +30778,13 @@
         "path": "evidence/5c492a4c1949ab7c0c112b83b01807172b7777fad680e4953c11c995ba5bee5b.json.gz",
         "description": "npm-lock for cardano-peer-connect v1.2.21",
         "sourceUrl": "https://github.com/fabianbormann/cardano-peer-connect/tree/6fce1afe581da1009a81fe119ec83357150abab9"
+      },
+      {
+        "id": "evidence:5ca1387b4698745856510955e692359692eb7d2f6385f67bb91bfa2fbce8e20f",
+        "digest": "5ca1387b4698745856510955e692359692eb7d2f6385f67bb91bfa2fbce8e20f",
+        "path": "evidence/5ca1387b4698745856510955e692359692eb7d2f6385f67bb91bfa2fbce8e20f.json.gz",
+        "description": "Native input cardano-graphql/.env.docker-compose-preprod",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/.env.docker-compose-preprod"
       },
       {
         "id": "evidence:5cb7ac141f84351e6663b3c2a0333f299d7cafac2508a8a4e2d52707919b94c3",
@@ -30638,6 +30999,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/index.ts"
       },
       {
+        "id": "evidence:64c43bcf2eb0509ef7e882a5670f97a3c0d49d6f73a4bf0a27dcf62358f56bad",
+        "digest": "64c43bcf2eb0509ef7e882a5670f97a3c0d49d6f73a4bf0a27dcf62358f56bad",
+        "path": "evidence/64c43bcf2eb0509ef7e882a5670f97a3c0d49d6f73a4bf0a27dcf62358f56bad.json.gz",
+        "description": "Native input adastat-api/backend/lib/helpers/mithril-signers.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/lib/helpers/mithril-signers.ts"
+      },
+      {
         "id": "evidence:64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
         "digest": "64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
         "path": "evidence/64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d.json.gz",
@@ -30657,6 +31025,13 @@
         "path": "evidence/654704ec79e0b5f6228bcceec29139c8a35815e8533bd0ecf8b2e304510d5776.json.gz",
         "description": "Native input blaze/packages/blaze-uplc/wasm/build.sh",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/wasm/build.sh"
+      },
+      {
+        "id": "evidence:65a3927b597aaefd3041a9bcc01d9df6a0089226226725d2377136363a13f203",
+        "digest": "65a3927b597aaefd3041a9bcc01d9df6a0089226226725d2377136363a13f203",
+        "path": "evidence/65a3927b597aaefd3041a9bcc01d9df6a0089226226725d2377136363a13f203.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/src/CardanoNodeClient.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/src/CardanoNodeClient.ts"
       },
       {
         "id": "evidence:65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
@@ -30740,6 +31115,13 @@
         "path": "evidence/6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9.json.gz",
         "description": "Native input cardano-hw-cli/package.json",
         "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/package.json"
+      },
+      {
+        "id": "evidence:684226af76bf15b24e687fbaf7892aed494af157fcf93e3df38c496513b3a59a",
+        "digest": "684226af76bf15b24e687fbaf7892aed494af157fcf93e3df38c496513b3a59a",
+        "path": "evidence/684226af76bf15b24e687fbaf7892aed494af157fcf93e3df38c496513b3a59a.json.gz",
+        "description": "Native input cardano-graphql/packages/server/src/Server.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/src/Server.ts"
       },
       {
         "id": "evidence:6855215c2368fa5174ccbb1f86df0453c2d6c8faebbff5abc3e097289aa8344f",
@@ -30838,6 +31220,13 @@
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/pnpm-lock.yaml"
       },
       {
+        "id": "evidence:6ac04b1b0ea28b45c3be16072d63d802925787a74b6509f494111e458e835379",
+        "digest": "6ac04b1b0ea28b45c3be16072d63d802925787a74b6509f494111e458e835379",
+        "path": "evidence/6ac04b1b0ea28b45c3be16072d63d802925787a74b6509f494111e458e835379.json.gz",
+        "description": "Native input adastat-api/frontend/.env.preprod",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/.env.preprod"
+      },
+      {
         "id": "evidence:6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d",
         "digest": "6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d",
         "path": "evidence/6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d.json.gz",
@@ -30885,6 +31274,13 @@
         "path": "evidence/6c595f572637083071cf61d4b135c3cea38ff84698eca0de3397f84d1b5a0d73.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/HarmonicLabs/gerolamo/tree/0e6421e9069eaf4ab505ca90fff7c3fa7e1833ea"
+      },
+      {
+        "id": "evidence:6c59b94f097a5d39bd9697a4e50201d3bcbc8797cb1996752a9ddf9871eff417",
+        "digest": "6c59b94f097a5d39bd9697a4e50201d3bcbc8797cb1996752a9ddf9871eff417",
+        "path": "evidence/6c59b94f097a5d39bd9697a4e50201d3bcbc8797cb1996752a9ddf9871eff417.json.gz",
+        "description": "Native input adastat-api/frontend/vite.config.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/vite.config.ts"
       },
       {
         "id": "evidence:6cb30457d590d07565850c7a244865030cb9b53148e0139fbd482fb63f4ad13d",
@@ -30947,6 +31343,13 @@
         "path": "evidence/6e849a42b410b25582438197bb89cbb948a300bf5801dae72df235a7f4d904e3.json.gz",
         "description": "Native input blaze/packages/blaze-vm/package.json",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-vm/package.json"
+      },
+      {
+        "id": "evidence:6e8966a749d972a18fe94c57db01a4bfd93b6013291055ee31a8f5d39008cb1b",
+        "digest": "6e8966a749d972a18fe94c57db01a4bfd93b6013291055ee31a8f5d39008cb1b",
+        "path": "evidence/6e8966a749d972a18fe94c57db01a4bfd93b6013291055ee31a8f5d39008cb1b.json.gz",
+        "description": "Native input adastat-api/backend/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/pnpm-workspace.yaml"
       },
       {
         "id": "evidence:6ed60607365eab33e2e1ce3203b4a38c6f78a37eb99070e7fc0fe56ddd3f03be",
@@ -31040,6 +31443,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/tree/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8"
       },
       {
+        "id": "evidence:705dcbfc615550bdf6b8ad0d088b6c794097b39b43dd961729ae94e835e868a1",
+        "digest": "705dcbfc615550bdf6b8ad0d088b6c794097b39b43dd961729ae94e835e868a1",
+        "path": "evidence/705dcbfc615550bdf6b8ad0d088b6c794097b39b43dd961729ae94e835e868a1.json.gz",
+        "description": "Native input cardano-graphql/Dockerfile",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/Dockerfile"
+      },
+      {
         "id": "evidence:705de8f78fd17e2b1517de2407c9bceafdf36abe4b74a0a930b8e7e52840bbba",
         "digest": "705de8f78fd17e2b1517de2407c9bceafdf36abe4b74a0a930b8e7e52840bbba",
         "path": "evidence/705de8f78fd17e2b1517de2407c9bceafdf36abe4b74a0a930b8e7e52840bbba.json.gz",
@@ -31059,6 +31469,20 @@
         "path": "evidence/708720f07aa45c55a2e59ac69d7484a3c7ef21f3cf6a15e5d3680c357f050367.json.gz",
         "description": "Native input lucid-evolution/packages/wallet/src/wallet_selection.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/src/wallet_selection.ts"
+      },
+      {
+        "id": "evidence:70cd57d458831011fe23bed12cdfa2e407b3ae7bd1e16c32a5d9a6898ce70fca",
+        "digest": "70cd57d458831011fe23bed12cdfa2e407b3ae7bd1e16c32a5d9a6898ce70fca",
+        "path": "evidence/70cd57d458831011fe23bed12cdfa2e407b3ae7bd1e16c32a5d9a6898ce70fca.json.gz",
+        "description": "Native input adastat-api/frontend/src/utils/api.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/src/utils/api.ts"
+      },
+      {
+        "id": "evidence:70f182b97f9f0462bfd33157656a4ee3154294398df3a40147a49e01632f403d",
+        "digest": "70f182b97f9f0462bfd33157656a4ee3154294398df3a40147a49e01632f403d",
+        "path": "evidence/70f182b97f9f0462bfd33157656a4ee3154294398df3a40147a49e01632f403d.json.gz",
+        "description": "Native input cardano-graphql/packages/server/src/config.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/src/config.ts"
       },
       {
         "id": "evidence:71335bcaf04fff4070ec8f3f8422511af292b70ca240ded23721374a3a1f8a7d",
@@ -31283,6 +31707,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/go.mod"
       },
       {
+        "id": "evidence:7729dd3a470bdc76b05baab6e39e205ae08b992fd22496ebbd05982c0cbde72d",
+        "digest": "7729dd3a470bdc76b05baab6e39e205ae08b992fd22496ebbd05982c0cbde72d",
+        "path": "evidence/7729dd3a470bdc76b05baab6e39e205ae08b992fd22496ebbd05982c0cbde72d.json.gz",
+        "description": "Native input adastat-api/frontend/.env.preview",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/.env.preview"
+      },
+      {
         "id": "evidence:774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
         "digest": "774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
         "path": "evidence/774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4.json.gz",
@@ -31309,6 +31740,13 @@
         "path": "evidence/79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88.json.gz",
         "description": "Source daedalus/scripts/rebuild-native-modules.sh",
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/scripts/rebuild-native-modules.sh"
+      },
+      {
+        "id": "evidence:7904f84ba4011be7518a549578f1340e7c9752f603636cc5f008ed0ee1916da4",
+        "digest": "7904f84ba4011be7518a549578f1340e7c9752f603636cc5f008ed0ee1916da4",
+        "path": "evidence/7904f84ba4011be7518a549578f1340e7c9752f603636cc5f008ed0ee1916da4.json.gz",
+        "description": "Native input cardano-graphql/packages/index-service/README.md",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/index-service/README.md"
       },
       {
         "id": "evidence:791d3f9725e4789e79bb5c8af86d86f8b5aebc37240b9edd83f1abdfd38f74b7",
@@ -31489,6 +31927,13 @@
         "sourceUrl": "https://github.com/input-output-hk/nami/blob/e52e0bdb02eb1ec224db26f48b0192685a30f99e/package.json"
       },
       {
+        "id": "evidence:7d1fe67882fccfc45ce17e98c11563f454e88a656662c947e18938d672e50c9a",
+        "digest": "7d1fe67882fccfc45ce17e98c11563f454e88a656662c947e18938d672e50c9a",
+        "path": "evidence/7d1fe67882fccfc45ce17e98c11563f454e88a656662c947e18938d672e50c9a.json.gz",
+        "description": "Native input adastat-api/frontend/.env.mainnet",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/.env.mainnet"
+      },
+      {
         "id": "evidence:7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8",
         "digest": "7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8",
         "path": "evidence/7d26c08783da1f8cc44de5c1a4959066ad5250e6c27792573fd1a3004fe548c8.json.gz",
@@ -31535,6 +31980,13 @@
         "path": "evidence/7ee55377a33ff6a9097284579d4db52a987c6fe9f66320b2a133503f819cdd16.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/ODATANO/ODATANO/tree/72954d36d871595345338c76da9956a775521062"
+      },
+      {
+        "id": "evidence:7f21b941a1770ffb0ef0610d730bbf8cf050c370655a2b72f42764177f2e0bff",
+        "digest": "7f21b941a1770ffb0ef0610d730bbf8cf050c370655a2b72f42764177f2e0bff",
+        "path": "evidence/7f21b941a1770ffb0ef0610d730bbf8cf050c370655a2b72f42764177f2e0bff.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/package.json"
       },
       {
         "id": "evidence:7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2",
@@ -31584,6 +32036,13 @@
         "path": "evidence/801f00b00391b3dd8dafd6cc7cabcf23dd7bd21d7200ba7ad96f742d06137e1a.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardananium/cquisitor-lib/tree/d2c95bbb59938dcccbadc03710230e2ca73fb9ce"
+      },
+      {
+        "id": "evidence:8056bfcb57bf6219f39b6c8fc78fa66ebd89ea441027e63361932a4395c22e95",
+        "digest": "8056bfcb57bf6219f39b6c8fc78fa66ebd89ea441027e63361932a4395c22e95",
+        "path": "evidence/8056bfcb57bf6219f39b6c8fc78fa66ebd89ea441027e63361932a4395c22e95.json.gz",
+        "description": "Native input cardano-graphql/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/package.json"
       },
       {
         "id": "evidence:80589e4763e861397f695fc144587068d59116d3efb50d38b9caad3f5539e3c8",
@@ -31738,6 +32197,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/services/hydra-host/client.ts"
       },
       {
+        "id": "evidence:85255fad531345893c5dade6e4906823455301a9a9ebfb1080ea58c800e958b9",
+        "digest": "85255fad531345893c5dade6e4906823455301a9a9ebfb1080ea58c800e958b9",
+        "path": "evidence/85255fad531345893c5dade6e4906823455301a9a9ebfb1080ea58c800e958b9.json.gz",
+        "description": "Native input cardano-graphql/packages/util/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/util/package.json"
+      },
+      {
         "id": "evidence:85302a44155dc0d00cab06709e24c1e97f2295a5a82d1bd76a12857ff0e66c8f",
         "digest": "85302a44155dc0d00cab06709e24c1e97f2295a5a82d1bd76a12857ff0e66c8f",
         "path": "evidence/85302a44155dc0d00cab06709e24c1e97f2295a5a82d1bd76a12857ff0e66c8f.json.gz",
@@ -31883,6 +32349,13 @@
         "path": "evidence/8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a.json.gz",
         "description": "Source cometa-js/README.md",
         "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/README.md"
+      },
+      {
+        "id": "evidence:875f5b763e90b867ad648b7dfd489d6a92bfed393d999324fc425cdafa988096",
+        "digest": "875f5b763e90b867ad648b7dfd489d6a92bfed393d999324fc425cdafa988096",
+        "path": "evidence/875f5b763e90b867ad648b7dfd489d6a92bfed393d999324fc425cdafa988096.json.gz",
+        "description": "Native input cardano-graphql/packages/server/src/index.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/src/index.ts"
       },
       {
         "id": "evidence:876f87c6bcd42581f19d6eb43e11a59d88f014217f791f51f59e6745445e800f",
@@ -32050,6 +32523,13 @@
         "path": "evidence/8ab445759d0146d914927228846a3bd862b175c2a42f85093366857748b0d87c.json.gz",
         "description": "Source yoroi/mobile/README.md",
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/mobile/README.md"
+      },
+      {
+        "id": "evidence:8abb3e607865e2cfb5bf14b3dcc7d64c7428e318b2ebed1dbb95e8bc309a32d6",
+        "digest": "8abb3e607865e2cfb5bf14b3dcc7d64c7428e318b2ebed1dbb95e8bc309a32d6",
+        "path": "evidence/8abb3e607865e2cfb5bf14b3dcc7d64c7428e318b2ebed1dbb95e8bc309a32d6.json.gz",
+        "description": "Native input adastat-api/backend/lib/db.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/lib/db.ts"
       },
       {
         "id": "evidence:8ac552ffe597cadb51c087a3f01abc3bcd005fc5599e77a3b8d8afdcc4f75b94",
@@ -32334,6 +32814,13 @@
         "sourceUrl": "https://github.com/pragma-org/amaru/releases/tag/v10.11.20260925"
       },
       {
+        "id": "evidence:949a43ef809b2439dfbe317da19596ed50ac9c0f1c4c2bbc8dcacdce1a489f8a",
+        "digest": "949a43ef809b2439dfbe317da19596ed50ac9c0f1c4c2bbc8dcacdce1a489f8a",
+        "path": "evidence/949a43ef809b2439dfbe317da19596ed50ac9c0f1c4c2bbc8dcacdce1a489f8a.json.gz",
+        "description": "Native input cardano-graphql/.env.docker-compose",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/.env.docker-compose"
+      },
+      {
         "id": "evidence:949e98baf68c0ff3639f9024f2f986c374b43c3c736f4574ea6917071947aced",
         "digest": "949e98baf68c0ff3639f9024f2f986c374b43c3c736f4574ea6917071947aced",
         "path": "evidence/949e98baf68c0ff3639f9024f2f986c374b43c3c736f4574ea6917071947aced.json.gz",
@@ -32367,6 +32854,13 @@
         "path": "evidence/952be8346beedf47598694def8d076befa1951af17303e70a386226325afd16c.json.gz",
         "description": "Native input adalite/server/package.json",
         "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/server/package.json"
+      },
+      {
+        "id": "evidence:957fcde5562d01c4c4e78725c6e9ec60b1ee8b65ff8d27b2794070569241b7d1",
+        "digest": "957fcde5562d01c4c4e78725c6e9ec60b1ee8b65ff8d27b2794070569241b7d1",
+        "path": "evidence/957fcde5562d01c4c4e78725c6e9ec60b1ee8b65ff8d27b2794070569241b7d1.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/src/index.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/src/index.ts"
       },
       {
         "id": "evidence:958425701763b156cf98fee6beb312a5222b0bfa67a2f837f93bd82b2bc8afae",
@@ -32497,6 +32991,13 @@
         "description": "Collection request for dolos"
       },
       {
+        "id": "evidence:987caffd177a82ce05c100b2fcfa244b976d3cbc44a145f6766d4d86647994d0",
+        "digest": "987caffd177a82ce05c100b2fcfa244b976d3cbc44a145f6766d4d86647994d0",
+        "path": "evidence/987caffd177a82ce05c100b2fcfa244b976d3cbc44a145f6766d4d86647994d0.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/hasura/Dockerfile",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/hasura/Dockerfile"
+      },
+      {
         "id": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
         "digest": "989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
         "path": "evidence/989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759.json.gz",
@@ -32557,6 +33058,13 @@
         "path": "evidence/9a34cd30114e5e3204cc21a980dfb0a8df2ce9ac440bee77595d89957089beb4.json.gz",
         "description": "Native input lucid-evolution/packages/utils/src/scripts.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/scripts.ts"
+      },
+      {
+        "id": "evidence:9a4bd009f5c47093f45990a24296d4f0e268f3acfac0bb8a1a4194e380097dbd",
+        "digest": "9a4bd009f5c47093f45990a24296d4f0e268f3acfac0bb8a1a4194e380097dbd",
+        "path": "evidence/9a4bd009f5c47093f45990a24296d4f0e268f3acfac0bb8a1a4194e380097dbd.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/src/HasuraBackgroundClient.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/src/HasuraBackgroundClient.ts"
       },
       {
         "id": "evidence:9a6e26bb177d6204c12639fc7af463a4681946facf0bc4e19845b35158b1b5a2",
@@ -32709,6 +33217,12 @@
         "digest": "9f969a333b0b37e99459d559e9b3dbbb6f448fe084aaee1e655ed041c3a91a4b",
         "path": "evidence/9f969a333b0b37e99459d559e9b3dbbb6f448fe084aaee1e655ed041c3a91a4b.json.gz",
         "description": "Collection request for odatano"
+      },
+      {
+        "id": "evidence:9fd0b366150a50b523447679982bf13fe792f5d43978005425821f65799d1009",
+        "digest": "9fd0b366150a50b523447679982bf13fe792f5d43978005425821f65799d1009",
+        "path": "evidence/9fd0b366150a50b523447679982bf13fe792f5d43978005425821f65799d1009.json.gz",
+        "description": "Collection request for cardano-graphql"
       },
       {
         "id": "evidence:9fee2e4347ab588b46df0ecb748b42312bfe4144ef20c03b0655332801f4b0d9",
@@ -33405,6 +33919,20 @@
         "sourceUrl": "https://github.com/cardano-community/pg_cardano/releases/tag/v1.2.0"
       },
       {
+        "id": "evidence:b4a9f71ae40f7931374abeeacea19e8c9819fec5db580d8381a6a0405057d66e",
+        "digest": "b4a9f71ae40f7931374abeeacea19e8c9819fec5db580d8381a6a0405057d66e",
+        "path": "evidence/b4a9f71ae40f7931374abeeacea19e8c9819fec5db580d8381a6a0405057d66e.json.gz",
+        "description": "Native input cardano-graphql/flake.nix",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/flake.nix"
+      },
+      {
+        "id": "evidence:b4c795118b3a458fa3a4c96af39f7509f9c4afa2d4caaf137f25c9696d44c178",
+        "digest": "b4c795118b3a458fa3a4c96af39f7509f9c4afa2d4caaf137f25c9696d44c178",
+        "path": "evidence/b4c795118b3a458fa3a4c96af39f7509f9c4afa2d4caaf137f25c9696d44c178.json.gz",
+        "description": "Native input cardano-graphql/packages/client-ts/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/client-ts/package.json"
+      },
+      {
         "id": "evidence:b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
         "digest": "b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
         "path": "evidence/b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d.json.gz",
@@ -33655,6 +34183,13 @@
         "sourceUrl": "https://github.com/SundaeSwap-finance/aicone/tree/753436d6caea515a6be7e607e2181afc1fa99369"
       },
       {
+        "id": "evidence:bac5f4ecd206ecb46f6f24585a4efb1207792de282e65dc229f0da43cd2ca471",
+        "digest": "bac5f4ecd206ecb46f6f24585a4efb1207792de282e65dc229f0da43cd2ca471",
+        "path": "evidence/bac5f4ecd206ecb46f6f24585a4efb1207792de282e65dc229f0da43cd2ca471.json.gz",
+        "description": "Native input cardano-graphql/yarn.lock",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/yarn.lock"
+      },
+      {
         "id": "evidence:bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
         "digest": "bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
         "path": "evidence/bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15.json.gz",
@@ -33723,6 +34258,13 @@
         "path": "evidence/bbf5837bc305ace6369a71cd837e9ec5e37606b447a60672debb5491c3a41b66.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IntersectMBO/bech32/tree/5a42857dfe454bb27a899f891cac8415d66d0292"
+      },
+      {
+        "id": "evidence:bbfb00c41ab31df5ac141a8702cf00a486d7c40327d229009821e6c9db4898d8",
+        "digest": "bbfb00c41ab31df5ac141a8702cf00a486d7c40327d229009821e6c9db4898d8",
+        "path": "evidence/bbfb00c41ab31df5ac141a8702cf00a486d7c40327d229009821e6c9db4898d8.json.gz",
+        "description": "Native input cardano-graphql/README.md",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/README.md"
       },
       {
         "id": "evidence:bc525ebd6999dcc886bc1a28110d69ec17de9759af04ff6383929be0a3c2e839",
@@ -34156,6 +34698,13 @@
         "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/tree/f1130177b02761ea15b93a92e385ae0739d27096"
       },
       {
+        "id": "evidence:c7e31702056ce0313ffa12c24f338a872e4817367156696c11d4b4f16d08d28c",
+        "digest": "c7e31702056ce0313ffa12c24f338a872e4817367156696c11d4b4f16d08d28c",
+        "path": "evidence/c7e31702056ce0313ffa12c24f338a872e4817367156696c11d4b4f16d08d28c.json.gz",
+        "description": "Native input adastat-api/backend/tsup.config.js",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/tsup.config.js"
+      },
+      {
         "id": "evidence:c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286",
         "digest": "c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286",
         "path": "evidence/c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286.json.gz",
@@ -34344,6 +34893,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/package.json"
       },
       {
+        "id": "evidence:ccad9a1607c602d61452ce9c3e5ba1ec02c484891ba686ba0ab3b631309f3722",
+        "digest": "ccad9a1607c602d61452ce9c3e5ba1ec02c484891ba686ba0ab3b631309f3722",
+        "path": "evidence/ccad9a1607c602d61452ce9c3e5ba1ec02c484891ba686ba0ab3b631309f3722.json.gz",
+        "description": "Native input cardano-graphql/docker-compose.yml",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/docker-compose.yml"
+      },
+      {
         "id": "evidence:cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
         "digest": "cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
         "path": "evidence/cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44.json.gz",
@@ -34453,6 +35009,13 @@
         "path": "evidence/d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7.json.gz",
         "description": "Native input sokosumi/packages/email/package.json",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/email/package.json"
+      },
+      {
+        "id": "evidence:d0e6b18f9d33394d2cb5e984d969fbd7fbcbb382988410f629cc7e016c8e5606",
+        "digest": "d0e6b18f9d33394d2cb5e984d969fbd7fbcbb382988410f629cc7e016c8e5606",
+        "path": "evidence/d0e6b18f9d33394d2cb5e984d969fbd7fbcbb382988410f629cc7e016c8e5606.json.gz",
+        "description": "Native input cardano-graphql/packages/server/README.md",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/README.md"
       },
       {
         "id": "evidence:d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686",
@@ -34692,6 +35255,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/README.md"
       },
       {
+        "id": "evidence:d670f37c1457ea023027c17c6259c7294dc1b54b1fb691eef86117cb5b840d86",
+        "digest": "d670f37c1457ea023027c17c6259c7294dc1b54b1fb691eef86117cb5b840d86",
+        "path": "evidence/d670f37c1457ea023027c17c6259c7294dc1b54b1fb691eef86117cb5b840d86.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/codegen.yml",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/codegen.yml"
+      },
+      {
         "id": "evidence:d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
         "digest": "d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
         "path": "evidence/d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568.json.gz",
@@ -34704,6 +35274,13 @@
         "path": "evidence/d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/releases/tag/%40sundaeswap/core%403.2.0"
+      },
+      {
+        "id": "evidence:d713116eeefd0a9a850d601d1ecca984f911fe8c3316e0132d7fbcc66d342ccd",
+        "digest": "d713116eeefd0a9a850d601d1ecca984f911fe8c3316e0132d7fbcc66d342ccd",
+        "path": "evidence/d713116eeefd0a9a850d601d1ecca984f911fe8c3316e0132d7fbcc66d342ccd.json.gz",
+        "description": "Native input adastat-api/frontend/.env.example",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/.env.example"
       },
       {
         "id": "evidence:d743c9552decfa846d352e9bbf74a19767f5839ba8ada95b39b2e6ecd15de791",
@@ -34753,6 +35330,13 @@
         "sourceUrl": "https://github.com/IndigoProtocol/dexter/blob/44a57eb0f6f80650f1ed34a7765c787afa27f1ab/package.json"
       },
       {
+        "id": "evidence:d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4",
+        "digest": "d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4",
+        "path": "evidence/d8c42e25b776d9a7b0c635eef6aec739c08f02f078117bf277da57caf16f41c4.json.gz",
+        "description": "pnpm-lock for adastat-api unreleased:main",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/tree/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436"
+      },
+      {
         "id": "evidence:d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
         "digest": "d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
         "path": "evidence/d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39.json.gz",
@@ -34785,6 +35369,13 @@
         "path": "evidence/da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/SundaeSwap-finance/gastronomy/releases/tag/v0.8.0"
+      },
+      {
+        "id": "evidence:db34c0d1eb7bd8cca62e9591b6ab249496362cf0fef283c9e9f2e850daf7d8e1",
+        "digest": "db34c0d1eb7bd8cca62e9591b6ab249496362cf0fef283c9e9f2e850daf7d8e1",
+        "path": "evidence/db34c0d1eb7bd8cca62e9591b6ab249496362cf0fef283c9e9f2e850daf7d8e1.json.gz",
+        "description": "Native input adastat-api/frontend/package.json",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/package.json"
       },
       {
         "id": "evidence:db3bf6e408a35762162d7c61b9cc5e092368fbc39afb1674a74026d8f082f57c",
@@ -34860,6 +35451,13 @@
         "path": "evidence/dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d.json.gz",
         "description": "Source hydra-sdk/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/package.json"
+      },
+      {
+        "id": "evidence:dd36499802a5c9a09a0d564ff086c93ce95627cf957189d7b4c63ace884ececc",
+        "digest": "dd36499802a5c9a09a0d564ff086c93ce95627cf957189d7b4c63ace884ececc",
+        "path": "evidence/dd36499802a5c9a09a0d564ff086c93ce95627cf957189d7b4c63ace884ececc.json.gz",
+        "description": "Native input cardano-graphql/packages/cli/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/cli/package.json"
       },
       {
         "id": "evidence:dd58406f773675af08ca64cf5a351dbf4d1af96b9719de27d75d999b521c9bab",
@@ -35037,6 +35635,13 @@
         "sourceUrl": "https://github.com/input-output-hk/sc-tools/tree/b4123bf1a3fca471404b804be9696bbc3e9bd471"
       },
       {
+        "id": "evidence:e2bc2adb7721cbbd8439bd5f318129dd3590788e6e2700024a729fd32ca03685",
+        "digest": "e2bc2adb7721cbbd8439bd5f318129dd3590788e6e2700024a729fd32ca03685",
+        "path": "evidence/e2bc2adb7721cbbd8439bd5f318129dd3590788e6e2700024a729fd32ca03685.json.gz",
+        "description": "Native input adastat-api/frontend/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/pnpm-lock.yaml"
+      },
+      {
         "id": "evidence:e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
         "digest": "e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
         "path": "evidence/e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149.json.gz",
@@ -35091,6 +35696,13 @@
         "path": "evidence/e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180.json.gz",
         "description": "Source hydra-sdk/packages/hydra-transaction/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-transaction/package.json"
+      },
+      {
+        "id": "evidence:e41b9d00bcc250e6ae48f57c56ba1ff76207073ccdc04548b70ef0230e878f30",
+        "digest": "e41b9d00bcc250e6ae48f57c56ba1ff76207073ccdc04548b70ef0230e878f30",
+        "path": "evidence/e41b9d00bcc250e6ae48f57c56ba1ff76207073ccdc04548b70ef0230e878f30.json.gz",
+        "description": "Native input cardano-graphql/dockerfiles/cardano-node/Dockerfile",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/dockerfiles/cardano-node/Dockerfile"
       },
       {
         "id": "evidence:e455056222521ff87c3895e802b1aad406de15952855dbea4ed1077b5d73971e",
@@ -35177,6 +35789,19 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/tree/df729a787f9084d2dc461862889ac2971ea43e07"
       },
       {
+        "id": "evidence:e6855c22bce2485ee49a3c0ef286c966b52dcdae7d6245f2b807f5d9274861df",
+        "digest": "e6855c22bce2485ee49a3c0ef286c966b52dcdae7d6245f2b807f5d9274861df",
+        "path": "evidence/e6855c22bce2485ee49a3c0ef286c966b52dcdae7d6245f2b807f5d9274861df.json.gz",
+        "description": "Native input adastat-api/README.md",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/README.md"
+      },
+      {
+        "id": "evidence:e69bf8533ab3173f96ce84d63206c8e96a8a8c68f3d3862f0f114b11edda8fcc",
+        "digest": "e69bf8533ab3173f96ce84d63206c8e96a8a8c68f3d3862f0f114b11edda8fcc",
+        "path": "evidence/e69bf8533ab3173f96ce84d63206c8e96a8a8c68f3d3862f0f114b11edda8fcc.json.gz",
+        "description": "Collection request for adastat-api"
+      },
+      {
         "id": "evidence:e6b30eb31c6b6f0f22b19f845624e15a120a00398705bb05df5f4b16403fe678",
         "digest": "e6b30eb31c6b6f0f22b19f845624e15a120a00398705bb05df5f4b16403fe678",
         "path": "evidence/e6b30eb31c6b6f0f22b19f845624e15a120a00398705bb05df5f4b16403fe678.json.gz",
@@ -35259,6 +35884,13 @@
         "path": "evidence/e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184.json.gz",
         "description": "Source govtool/govtool/frontend/src/context/wallet.tsx",
         "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/src/context/wallet.tsx"
+      },
+      {
+        "id": "evidence:e8da007b3fec801b63edff0b04825f80ba53c662950f26a0e7b760e570b896e0",
+        "digest": "e8da007b3fec801b63edff0b04825f80ba53c662950f26a0e7b760e570b896e0",
+        "path": "evidence/e8da007b3fec801b63edff0b04825f80ba53c662950f26a0e7b760e570b896e0.json.gz",
+        "description": "Native input adastat-api/frontend/src/utils/socket.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/src/utils/socket.ts"
       },
       {
         "id": "evidence:e95e53ae6a13b4a7fd133b4287f148718d6dae511d338ac076886f1468bd4460",
@@ -35344,6 +35976,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/releases/tag/%40hydra-sdk/core%401.5.0"
       },
       {
+        "id": "evidence:ec818690723761fef687381269bea19c66d083dd441da26340d7a9ee36d935d2",
+        "digest": "ec818690723761fef687381269bea19c66d083dd441da26340d7a9ee36d935d2",
+        "path": "evidence/ec818690723761fef687381269bea19c66d083dd441da26340d7a9ee36d935d2.json.gz",
+        "description": "Native input adastat-api/frontend/src/main.ts",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/frontend/src/main.ts"
+      },
+      {
         "id": "evidence:ec8210d2eb991f814a2a7fb17cc371ed526fdf0a6b7da57c04ccbdda2d45bf7b",
         "digest": "ec8210d2eb991f814a2a7fb17cc371ed526fdf0a6b7da57c04ccbdda2d45bf7b",
         "path": "evidence/ec8210d2eb991f814a2a7fb17cc371ed526fdf0a6b7da57c04ccbdda2d45bf7b.json.gz",
@@ -35418,6 +36057,13 @@
         "path": "evidence/eecb7f8b209be290553d39e4b4855e3972d128b2b437a52b4fe0150e670a0e6f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/cardano-community/koios-java-client/tree/394ed90a0c101a7ff30e43f4f50643d693d3d4e2"
+      },
+      {
+        "id": "evidence:eefab5de2eec2ed16542ba5e304bf38baed1fdc95630d0bea102a8b139b23864",
+        "digest": "eefab5de2eec2ed16542ba5e304bf38baed1fdc95630d0bea102a8b139b23864",
+        "path": "evidence/eefab5de2eec2ed16542ba5e304bf38baed1fdc95630d0bea102a8b139b23864.json.gz",
+        "description": "Native input adastat-api/backend/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/pnpm-lock.yaml"
       },
       {
         "id": "evidence:ef7e8d584584b7d760e6c37c47d58ed5c0e426711309e50c5290a0c2d827a7e7",
@@ -35817,6 +36463,13 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/blob/93598c0f8e452d7679a44097c48e693d95bfd631/package-lock.json"
       },
       {
+        "id": "evidence:f8a20dc92d018be0b450e94edf7aa808af7a650251b762988c2ba97aa541c9f0",
+        "digest": "f8a20dc92d018be0b450e94edf7aa808af7a650251b762988c2ba97aa541c9f0",
+        "path": "evidence/f8a20dc92d018be0b450e94edf7aa808af7a650251b762988c2ba97aa541c9f0.json.gz",
+        "description": "Native input adastat-api/backend/README.md",
+        "sourceUrl": "https://github.com/CardanoExplorer/adastat/blob/2e5b5f96d2a4c0d037768107ca5dd93b7aac3436/backend/README.md"
+      },
+      {
         "id": "evidence:f906f415abcb4bcf62f52c1de248b6d55fe74a9d989b080078c59d4a02622357",
         "digest": "f906f415abcb4bcf62f52c1de248b6d55fe74a9d989b080078c59d4a02622357",
         "path": "evidence/f906f415abcb4bcf62f52c1de248b6d55fe74a9d989b080078c59d4a02622357.json.gz",
@@ -35836,6 +36489,13 @@
         "path": "evidence/f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899.json.gz",
         "description": "Native input hydra-sdk/apps/docs-v2/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs-v2/package.json"
+      },
+      {
+        "id": "evidence:f9970de3d234a0d5378f49c108efc2229d97da8595c8068db84e58841f264f52",
+        "digest": "f9970de3d234a0d5378f49c108efc2229d97da8595c8068db84e58841f264f52",
+        "path": "evidence/f9970de3d234a0d5378f49c108efc2229d97da8595c8068db84e58841f264f52.json.gz",
+        "description": "Native input cardano-graphql/packages/server/package.json",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/package.json"
       },
       {
         "id": "evidence:f9a85594db175a9a2461d8aa7a56941bfe89cda5aef029a085626336578aee8d",
@@ -35991,6 +36651,20 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-utils/package.json"
       },
       {
+        "id": "evidence:ff999dd7db01c5acd6096519e127c554cca0c6dbe88a585fd6cfdd4da09ba873",
+        "digest": "ff999dd7db01c5acd6096519e127c554cca0c6dbe88a585fd6cfdd4da09ba873",
+        "path": "evidence/ff999dd7db01c5acd6096519e127c554cca0c6dbe88a585fd6cfdd4da09ba873.json.gz",
+        "description": "Native input cardano-graphql/packages/server/codegen.yml",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/server/codegen.yml"
+      },
+      {
+        "id": "evidence:ffd23e5f1b4d1e442dc87cf784b24e9cd70cf080dd860686f669545bb34812d7",
+        "digest": "ffd23e5f1b4d1e442dc87cf784b24e9cd70cf080dd860686f669545bb34812d7",
+        "path": "evidence/ffd23e5f1b4d1e442dc87cf784b24e9cd70cf080dd860686f669545bb34812d7.json.gz",
+        "description": "Native input cardano-graphql/packages/api-cardano-db-hasura/src/background.ts",
+        "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/blob/fcfe3154115ef176788a60b2eae925ee42aabd7c/packages/api-cardano-db-hasura/src/background.ts"
+      },
+      {
         "id": "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
         "digest": "ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
         "path": "evidence/ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150.json.gz",
@@ -36000,6 +36674,18 @@
     ],
     "decisions": [],
     "collections": [
+      {
+        "key": "5fa3b8916ab88fcba2f9838c4ac1468b629a19fb5e850162e8a42e5922030c97",
+        "toolId": "adastat-api",
+        "profileId": "profile:adastat-api:d0506731a811eb6d5671ea74",
+        "evidenceId": "evidence:2dc904f9ae10b23ed79bd668a59e1578d3b23cda10f654d7272b83bc443e2da8"
+      },
+      {
+        "key": "95b97422f5eb9a059fe47d63b7a8e6b56c9e881f9f72edceeceec0af30b0e5c6",
+        "toolId": "adastat-api",
+        "profileId": "profile:adastat-api:70ce7cff20719d04c837d420",
+        "evidenceId": "evidence:e69bf8533ab3173f96ce84d63206c8e96a8a8c68f3d3862f0f114b11edda8fcc"
+      },
       {
         "key": "326d1b889c0aa6e7010b60c14b5aa0c34eea15fe93f6c34a59ce5d9b589d8150",
         "toolId": "blaze",
@@ -36071,6 +36757,12 @@
         "toolId": "cardano-dev-wallet",
         "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824",
         "evidenceId": "evidence:5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0"
+      },
+      {
+        "key": "959c2a39216b3699e52fc4baabb43699b9799b6a9b676eda68fd3b386ee965d6",
+        "toolId": "cardano-graphql",
+        "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284",
+        "evidenceId": "evidence:9fd0b366150a50b523447679982bf13fe792f5d43978005425821f65799d1009"
       },
       {
         "key": "5c661d5f3efea5008f344bb0d5f67808907f6f121f6d267828b89d60eedbb6fa",
@@ -36293,87 +36985,97 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/f7e4cbd229eea43f8acd8a5510fb58be3393df70acd55f6524feb5344eeaf64a.json",
-        "digest": "f7e4cbd229eea43f8acd8a5510fb58be3393df70acd55f6524feb5344eeaf64a",
-        "records": 1968
+        "path": "snapshots/artifacts/94daf3fc7d64f903123764c2c7dff173b508475f1cd3b8fdd70a966036dcb225.json",
+        "digest": "94daf3fc7d64f903123764c2c7dff173b508475f1cd3b8fdd70a966036dcb225",
+        "records": 2027
       },
       {
-        "path": "snapshots/artifacts/bbead4079f2149ba027977ec1d26771121da4a2d1188bf007723288d14fd9cf2.json",
-        "digest": "bbead4079f2149ba027977ec1d26771121da4a2d1188bf007723288d14fd9cf2",
-        "records": 1949
+        "path": "snapshots/artifacts/a5a7036041e0e05c81cc73d7063fd21be9dbb6879fa4854e6e77648d851105ec.json",
+        "digest": "a5a7036041e0e05c81cc73d7063fd21be9dbb6879fa4854e6e77648d851105ec",
+        "records": 2016
       },
       {
-        "path": "snapshots/artifacts/3e3f74b1f7fac6cc58e226a245493f6da3addfe4c8d82482a416f98dd5a241fc.json",
-        "digest": "3e3f74b1f7fac6cc58e226a245493f6da3addfe4c8d82482a416f98dd5a241fc",
-        "records": 1986
+        "path": "snapshots/artifacts/dd86d4900399bfe3340925230493f5eb304c91ad5c23f3439107c5518ade9072.json",
+        "digest": "dd86d4900399bfe3340925230493f5eb304c91ad5c23f3439107c5518ade9072",
+        "records": 2034
       },
       {
-        "path": "snapshots/artifacts/ba4cb748ca9627e586254af02da3b89cef050761705a610d58b605307e618419.json",
-        "digest": "ba4cb748ca9627e586254af02da3b89cef050761705a610d58b605307e618419",
-        "records": 1956
+        "path": "snapshots/artifacts/ebd30978cefec9b5e3841bda2b702c50ab925ca4cefcc6048289a222e489d1df.json",
+        "digest": "ebd30978cefec9b5e3841bda2b702c50ab925ca4cefcc6048289a222e489d1df",
+        "records": 2023
       },
       {
-        "path": "snapshots/artifacts/15546ad87e3f682914248190be67bfc88afe5026367f3eb1052becf2c998cba6.json",
-        "digest": "15546ad87e3f682914248190be67bfc88afe5026367f3eb1052becf2c998cba6",
-        "records": 1969
+        "path": "snapshots/artifacts/778f41332ac06b8bf820d54bc08f93afbd215aa146da276a8d4453c469bd974b.json",
+        "digest": "778f41332ac06b8bf820d54bc08f93afbd215aa146da276a8d4453c469bd974b",
+        "records": 2031
       },
       {
-        "path": "snapshots/artifacts/a030eccad8e58da91cf2aea2747e5aff91819b72d77b521fe405ec0a62d669e5.json",
-        "digest": "a030eccad8e58da91cf2aea2747e5aff91819b72d77b521fe405ec0a62d669e5",
-        "records": 1994
+        "path": "snapshots/artifacts/e394799a3e4fba330b95c2f6fc2c734c0f8a3a069b435dda8b97853924b76daa.json",
+        "digest": "e394799a3e4fba330b95c2f6fc2c734c0f8a3a069b435dda8b97853924b76daa",
+        "records": 2060
       },
       {
-        "path": "snapshots/artifacts/2f17f35afca901b0b7b0015a1ac553d0698f245284a7bbc857499da1ed65592f.json",
-        "digest": "2f17f35afca901b0b7b0015a1ac553d0698f245284a7bbc857499da1ed65592f",
-        "records": 2086
+        "path": "snapshots/artifacts/1a75eccfe522504a2fdf661be6408a50422b428f3d6712b3429876dfb4a2f6bd.json",
+        "digest": "1a75eccfe522504a2fdf661be6408a50422b428f3d6712b3429876dfb4a2f6bd",
+        "records": 2142
       },
       {
-        "path": "snapshots/artifacts/77a91f30099f0894054b1fce27842a48b506f85a6378406a85b00cbaf2b9c27d.json",
-        "digest": "77a91f30099f0894054b1fce27842a48b506f85a6378406a85b00cbaf2b9c27d",
-        "records": 1928
+        "path": "snapshots/artifacts/002554dd8cecc4d8b6009a7159983d62d94fd2d73a678e8b207ec3522bacbe3e.json",
+        "digest": "002554dd8cecc4d8b6009a7159983d62d94fd2d73a678e8b207ec3522bacbe3e",
+        "records": 1996
       },
       {
-        "path": "snapshots/artifacts/471c8a1b1665ed729a662f1e8201de021f6defe0fe7e1408ba8da10dd5cb22e7.json",
-        "digest": "471c8a1b1665ed729a662f1e8201de021f6defe0fe7e1408ba8da10dd5cb22e7",
-        "records": 1969
+        "path": "snapshots/artifacts/b28f78aa3a98d850f1f11bc964a91436fc8f23511ef675e67a19e79a9e668f38.json",
+        "digest": "b28f78aa3a98d850f1f11bc964a91436fc8f23511ef675e67a19e79a9e668f38",
+        "records": 2018
       },
       {
-        "path": "snapshots/artifacts/e081f5729f314dd49bb2d3f595cbaeda797b2b8c438c014fa2cf567c77409a23.json",
-        "digest": "e081f5729f314dd49bb2d3f595cbaeda797b2b8c438c014fa2cf567c77409a23",
-        "records": 1941
+        "path": "snapshots/artifacts/279ce9f00934231c449f85d9a8bbe5d287781f88e600e0f812a8a5b8d58a9c7c.json",
+        "digest": "279ce9f00934231c449f85d9a8bbe5d287781f88e600e0f812a8a5b8d58a9c7c",
+        "records": 1996
       },
       {
-        "path": "snapshots/artifacts/157bb6bc184ae49a42cdb90019d8b35a6b8541eb24f14142806a77c1b15483a3.json",
-        "digest": "157bb6bc184ae49a42cdb90019d8b35a6b8541eb24f14142806a77c1b15483a3",
-        "records": 1985
+        "path": "snapshots/artifacts/5d469c76c821ac1f859f9f940bb4765c71539687ae7d465c2f8c0b8491ece48b.json",
+        "digest": "5d469c76c821ac1f859f9f940bb4765c71539687ae7d465c2f8c0b8491ece48b",
+        "records": 2045
       },
       {
-        "path": "snapshots/artifacts/a2064bc6c86378924ecf8f74fa576ae7eafbdd033698db32cf54f2f0550a6843.json",
-        "digest": "a2064bc6c86378924ecf8f74fa576ae7eafbdd033698db32cf54f2f0550a6843",
-        "records": 1997
+        "path": "snapshots/artifacts/c0e506c4322a3380d8b807947e2c2dc3fd675b7187ec44c3b0fa33116732f668.json",
+        "digest": "c0e506c4322a3380d8b807947e2c2dc3fd675b7187ec44c3b0fa33116732f668",
+        "records": 2057
       },
       {
-        "path": "snapshots/artifacts/230a7c9b0cc9ad15257b730386ded5cd436d4bb9548c0c3e309842c3096b60d8.json",
-        "digest": "230a7c9b0cc9ad15257b730386ded5cd436d4bb9548c0c3e309842c3096b60d8",
-        "records": 2008
+        "path": "snapshots/artifacts/183ce35b1743264c325de172a0d7c01998a21b4c775965e54fac13da282e0dad.json",
+        "digest": "183ce35b1743264c325de172a0d7c01998a21b4c775965e54fac13da282e0dad",
+        "records": 2078
       },
       {
-        "path": "snapshots/artifacts/f03097ec15265175edf8aa7fda9748c8de2ae591b8ebc59cc8ad13efece65b86.json",
-        "digest": "f03097ec15265175edf8aa7fda9748c8de2ae591b8ebc59cc8ad13efece65b86",
-        "records": 1963
+        "path": "snapshots/artifacts/d1f47da3e200a947061aea7a9f44361d70673ff27041419ecffa8ff703b13976.json",
+        "digest": "d1f47da3e200a947061aea7a9f44361d70673ff27041419ecffa8ff703b13976",
+        "records": 2030
       },
       {
-        "path": "snapshots/artifacts/0bd0960e11b6379688aa9a835c9a3f0633c4a2e36a6fd42a92366cb961954e37.json",
-        "digest": "0bd0960e11b6379688aa9a835c9a3f0633c4a2e36a6fd42a92366cb961954e37",
-        "records": 1968
+        "path": "snapshots/artifacts/02b8a5ba1b1733f6b02a60f9036799a807f1ffc78c063dbd9b05ce3e1d7824db.json",
+        "digest": "02b8a5ba1b1733f6b02a60f9036799a807f1ffc78c063dbd9b05ce3e1d7824db",
+        "records": 2038
       },
       {
-        "path": "snapshots/artifacts/9d3c0efcfa5334dbc84cde2dfc37eaec6f22f70b2277983b8a9083faf4a2aa36.json",
-        "digest": "9d3c0efcfa5334dbc84cde2dfc37eaec6f22f70b2277983b8a9083faf4a2aa36",
-        "records": 1972
+        "path": "snapshots/artifacts/8b729edb827eef4481f5ca882778d7f6271dff8e30cb8af09d297143d873654f.json",
+        "digest": "8b729edb827eef4481f5ca882778d7f6271dff8e30cb8af09d297143d873654f",
+        "records": 2039
       }
     ],
     "occurrences": [
+      {
+        "path": "snapshots/occurrences/fab9478041b3798a6104ded6f9a08479cf0e80910a59ea363076cb0a248eb508.json",
+        "digest": "fab9478041b3798a6104ded6f9a08479cf0e80910a59ea363076cb0a248eb508",
+        "records": 531
+      },
+      {
+        "path": "snapshots/occurrences/16ec191a7575a607b74ab310b34092d34963aeda6d4e05e864f46d3f7cf71705.json",
+        "digest": "16ec191a7575a607b74ab310b34092d34963aeda6d4e05e864f46d3f7cf71705",
+        "records": 430
+      },
       {
         "path": "snapshots/occurrences/c467263e99e954b665ba84780c09031cb16438923929a58dc417b0979f697a7e.json",
         "digest": "c467263e99e954b665ba84780c09031cb16438923929a58dc417b0979f697a7e",
@@ -36443,6 +37145,11 @@
         "path": "snapshots/occurrences/15d3312a50b3ffe37beaa36eea1d6f105f4cf7fdf682ec13959ca3d383cf51ba.json",
         "digest": "15d3312a50b3ffe37beaa36eea1d6f105f4cf7fdf682ec13959ca3d383cf51ba",
         "records": 475
+      },
+      {
+        "path": "snapshots/occurrences/ed73fa0f23cc77d0e1dc556f2a8bba712418cc664ec85d8a65ef467714866b51.json",
+        "digest": "ed73fa0f23cc77d0e1dc556f2a8bba712418cc664ec85d8a65ef467714866b51",
+        "records": 1710
       },
       {
         "path": "snapshots/occurrences/5dedd691f91a16043190e0728b0dc62fd43a087b99525766b60efc9d7c233c44.json",
@@ -36637,6 +37344,16 @@
     ],
     "edges": [
       {
+        "path": "snapshots/edges/6ed3685eec9167e96d8c05a1beb78859f946f8e50c432c7d4a0106536f450d43.json",
+        "digest": "6ed3685eec9167e96d8c05a1beb78859f946f8e50c432c7d4a0106536f450d43",
+        "records": 754
+      },
+      {
+        "path": "snapshots/edges/78957d206786791ebf8a302d2a0f551f8494b08bd9b90d6a46188c5204c9feb4.json",
+        "digest": "78957d206786791ebf8a302d2a0f551f8494b08bd9b90d6a46188c5204c9feb4",
+        "records": 743
+      },
+      {
         "path": "snapshots/edges/dd353fb38310b574c07cb205be9df3d2f89c190ea7b578ce125bf97a6a2b85f2.json",
         "digest": "dd353fb38310b574c07cb205be9df3d2f89c190ea7b578ce125bf97a6a2b85f2",
         "records": 2965
@@ -36760,6 +37477,11 @@
         "path": "snapshots/edges/e26effec60d2ecfc6db3facd9bd89c2531160c73fa165fa3e637fdac91ed75ea.json",
         "digest": "e26effec60d2ecfc6db3facd9bd89c2531160c73fa165fa3e637fdac91ed75ea",
         "records": 632
+      },
+      {
+        "path": "snapshots/edges/c19eabec97491d115a5c27c3dc08b6cb9ce2172a76976630c9c677433e4c3c3e.json",
+        "digest": "c19eabec97491d115a5c27c3dc08b6cb9ce2172a76976630c9c677433e4c3c3e",
+        "records": 3515
       },
       {
         "path": "snapshots/edges/8dbd0c7a57a9791f0a9bf7f727799a76c70d7fd9ba4f0a5f35b04777f169866c.json",

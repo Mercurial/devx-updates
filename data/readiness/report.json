@@ -1,12 +1,12 @@
 {
-  "snapshot": "a984bb825fcb94eee1cda6162c87a8d5e30f55351c0e649204361720990bbb20",
+  "snapshot": "d19a7de8cf3452647caedc1b4a444545815f3979f9979f7a257ac432f3bc19ad",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 43,
-  "profiles": 52,
+  "withProfiles": 45,
+  "profiles": 55,
   "completeProfiles": 7,
   "capabilityFindings": [],
-  "unresolvedTools": 226,
+  "unresolvedTools": 224,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -180,6 +180,14 @@
     },
     {
       "toolId": "adastat-api",
+      "id": "gap:3364864f2f6e37ddd755b1b2",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:adastat-api:d0506731a811eb6d5671ea74"
+    },
+    {
+      "toolId": "adastat-api",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -187,11 +195,27 @@
     },
     {
       "toolId": "adastat-api",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:c818fd1b3504ce489f277a86",
+      "area": "artifact",
+      "reason": "AdaStat backend and frontend each declare 2.0.0 on the selected default-branch source, without a verified stable release or adastat.net deployment mapping. Separate pnpm locks are source reconstructions. Built frontend/backend bundles, sharp/blake2b and other native/WASM assets, installed platform pruning and environment-selected network configurations remain unverified.",
+      "nextAction": "Verify published artifacts, build provenance and supported deployment/configuration mappings.",
+      "code": "query-scope:artifact"
+    },
+    {
+      "toolId": "adastat-api",
+      "id": "gap:ebeb407a2c8e8fee7b706c32",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:adastat-api:70ce7cff20719d04c837d420"
+    },
+    {
+      "toolId": "adastat-api",
+      "id": "gap:f73c8d42763a67cb8d0d459a",
+      "area": "integration",
+      "reason": "The retained backend README requires the separately maintained AdaStat Indexer and PostgreSQL schema/data. Source config selects primary/secondary databases, network constants and Mithril/IPFS/Arweave endpoints; frontend API/WebSocket clients use configured service endpoints. Indexer/deployment versions, database schema contracts, network settings and runtime wiring remain unresolved. Source inspection establishes review leads, not admitted service edges or capability findings.",
+      "nextAction": "Review the retained production wiring and obtain immutable service versions, schemas and configured deployment evidence.",
+      "code": "query-scope:integration"
     },
     {
       "toolId": "adder",
@@ -3354,6 +3378,22 @@
     },
     {
       "toolId": "cardano-graphql",
+      "id": "gap:0aecdb1742904e4d0bbb3254",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for axios@^1.15.0 from workspace:packages/api-cardano-db-hasura.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284"
+    },
+    {
+      "toolId": "cardano-graphql",
+      "id": "gap:16053b21fa1cd70f9ef2bdd7",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284"
+    },
+    {
+      "toolId": "cardano-graphql",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -3362,11 +3402,11 @@
     },
     {
       "toolId": "cardano-graphql",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "id": "gap:c818fd1b3504ce489f277a86",
+      "area": "artifact",
+      "reason": "Cardano GraphQL 9.1.0 source selects @cardano-graphql/server and @cardano-graphql/api-cardano-db-hasura, each manifest 9.1.0. Native Classic Yarn workspace metadata links local packages while preserving development scopes. Root orchestration, CLI and client packages remain unselected records. Installed hoisting/peer contexts, offline-mirror tarballs, generated GraphQL code, Nix/container closures and published images need separate artifact evidence.",
+      "nextAction": "Verify published artifacts, build provenance and supported deployment/configuration mappings.",
+      "code": "query-scope:artifact"
     },
     {
       "toolId": "cardano-graphql",
@@ -3374,6 +3414,14 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "cardano-graphql",
+      "id": "gap:f73c8d42763a67cb8d0d459a",
+      "area": "integration",
+      "reason": "Retained server/API and Docker sources expose boundaries to Hasura, PostgreSQL/cardano-db-sync, cardano-node Prometheus metrics, cardano-submit-api, token metadata, Mithril bootstrap and the separate index-service container. Configured images/tags, deployed endpoints, schema/migration compatibility and actual network configuration remain unverified. No service graph edges, chain capabilities or Dijkstra compatibility claims are admitted by source capture.",
+      "nextAction": "Review the retained production wiring and obtain immutable service versions, schemas and configured deployment evidence.",
+      "code": "query-scope:integration"
     },
     {
       "toolId": "cardano-hw-cli",

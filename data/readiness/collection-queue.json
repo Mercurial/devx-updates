@@ -776,6 +776,60 @@
       "attemptedAt": "2026-10-18T21:18:46.128Z",
       "profileId": "profile:bursa:4e0905655a23986d1c9ec50e",
       "succeededAt": "2026-10-18T21:19:06.406Z"
+    },
+    {
+      "id": "collection:49036e06bde661b2095b74c32316a4a487ab34feb0ee1de65b7d5311f60932f9",
+      "request": {
+        "toolId": "adastat-api",
+        "revision": "2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "adastat-backend"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "backend/pnpm-lock.yaml"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T22:24:51.433Z",
+      "profileId": "profile:adastat-api:70ce7cff20719d04c837d420",
+      "succeededAt": "2026-10-18T22:25:01.668Z"
+    },
+    {
+      "id": "collection:ba715dfacecafa3cc56e8a57c5610021a9c0d4adafc558d216eae9ba2f8a42d9",
+      "request": {
+        "toolId": "adastat-api",
+        "revision": "2e5b5f96d2a4c0d037768107ca5dd93b7aac3436",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "adastat-frontend"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "frontend/pnpm-lock.yaml"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T22:25:01.669Z",
+      "profileId": "profile:adastat-api:d0506731a811eb6d5671ea74",
+      "succeededAt": "2026-10-18T22:25:12.514Z"
+    },
+    {
+      "id": "collection:f422448adb698a214c7c295ad5c5ec227a1d102d425cfa0baa654fb140ba5b54",
+      "request": {
+        "toolId": "cardano-graphql",
+        "revision": "fcfe3154115ef176788a60b2eae925ee42aabd7c",
+        "adapter": "yarn-lock",
+        "roots": [
+          "@cardano-graphql/server",
+          "@cardano-graphql/api-cardano-db-hasura"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T22:25:12.515Z",
+      "profileId": "profile:cardano-graphql:b8fd0bccda852f0d3134c284",
+      "succeededAt": "2026-10-18T22:25:23.192Z"
     }
   ]
 }

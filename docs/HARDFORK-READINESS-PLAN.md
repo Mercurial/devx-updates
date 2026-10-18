@@ -1182,6 +1182,52 @@ routes, and its browser comparison download equals retained JSON byte for byte
 Broader catalog coverage, owner-launched reviews and the exact Dijkstra target
 and baseline/transition/post-fork environment remain open.
 
+### Active continuation: query services and Classic Yarn workspaces
+
+`content/readiness/query-service-batch.json` adds AdaStat's separately locked
+backend and frontend at immutable default-branch source, and Cardano GraphQL
+9.1.0's production server and API/background workspaces. All three profiles
+remain partial source reconstructions. Forty-four additional retained source
+files describe unverified build/deployment, database, external-service and
+native/WASM boundaries; no service or capability finding is promoted.
+
+The Classic Yarn collector now captures native workspace membership and local
+range selections using pinned Yarn 1.22.22, offline, without lifecycle scripts,
+project/user rc files or delegated Yarn binaries. Captured manifests establish
+names, versions and dependency scope. Mismatched workspace ranges use external
+lock selections; ambiguous selections and potentially applicable resolution
+overrides remain explicit gaps. An unnamed orchestration root is retained as
+source without inventing a package identity. Every requested root must match.
+Collector context v2 invalidates obsolete batch cache entries while historical
+captures retain their original replay behavior (ADR-1/ADR-2).
+
+Coverage is now **45/269 tools**, **55 profiles**, **1,319 evidence objects**,
+**65,779 occurrences** and **226,077 edges**. Snapshot digest:
+`d19a7de8cf3452647caedc1b4a444545815f3979f9979f7a257ac432f3bc19ad`.
+Seven profiles have complete native resolution within their declared scope;
+48 are partial. All tools remain hardfork-unassessed. Comparison against
+`5902019` adds three profiles, 991 artifacts and 5,012 edges, with no historical
+records removed or changed and no capability changes.
+
+All 123 readiness tests, TypeScript and scoped lint pass. Validation checks all
+retained evidence, and all 55 native profiles replay identically. A completed
+batch rerun attempts zero jobs; registered GraphQL refresh reuses its capture.
+Native-data checks verify production roots, six GraphQL child workspaces and
+five local dependency edges with manifest scopes. Standards review found no
+actionable issues; specification review identified the unnamed-root case, which
+was corrected and regression-tested, with no remaining findings. Static export
+passes for all 349 routes with the `/devx-updates` base path. Chromium checks
+pass for all three profiles, production roots, exact graph downloads, gaps,
+npm filtering, mobile layout, base-path navigation and console errors. The full
+comparison download equals retained JSON byte for byte apart from its trailing
+newline. Untracked intermediate graph chunks were compressed into ignored local
+recovery storage; all current references and historical committed data remain.
+
+The owner requested a pause at this commit. Further consumer inspection is only
+ignored local preparation: Masumi Registry Service, Buildooor and Cardano Wallet
+Interface source manifests have been inspected, but no requests or data for that
+next batch have been admitted. Owner-run reviews and Phase 6 remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

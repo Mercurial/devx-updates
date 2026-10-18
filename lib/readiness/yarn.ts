@@ -2,6 +2,7 @@ import { posix } from "node:path";
 import { canonical, object, text } from "./core";
 import type { AdapterContext } from "./adapter-context";
 import type { Scope } from "./types";
+import { classicWorkspaceInfo } from "./yarn-workspaces";
 
 export const MODERN_YARN_LOCK_VERSIONS = [6, 8, 10] as const;
 
@@ -33,6 +34,15 @@ export function resolveYarn(data: Record<string, unknown>, ctx: AdapterContext) 
   const lock = object(data.lock, "Yarn lock");
   if (modern && !(MODERN_YARN_LOCK_VERSIONS as readonly number[]).includes(Number(object(lock.__metadata).version))) throw new Error("Unsupported modern Yarn lock version");
   const manifests = object(data.manifests, "Yarn source manifests");
+  const classicInfo = !modern && data.classicWorkspaces !== undefined ? classicWorkspaceInfo(object(data.classicWorkspaces).info) : undefined;
+  const classicByLocation = new Map(Object.entries(classicInfo ?? {}).map(([name, info]) => [info.location, { name, ...info }]));
+  // Native `workspaces info` classifies manifest ranges, not install-time overrides.
+  // Exact names and **/name selectors can be ruled out; other patterns stay opaque.
+  const classicOverrides = classicInfo ? Object.keys(object(object(manifests["."]).resolutions ?? {})) : [];
+  const mayOverrideWorkspace = (name: string) => classicOverrides.some((pattern) => {
+    const target = pattern.replace(/^\*\*\//, "");
+    return !/^(@[^/*?\[\]{}]+\/)?[^/*?\[\]{}]+$/.test(target) || target === name;
+  });
   const directory = text(data.sourceDirectory, "Yarn source directory");
   const registries = object(data.registries ?? {});
   const selections = new Map<string, Selection>();
@@ -93,17 +103,46 @@ export function resolveYarn(data: Record<string, unknown>, ctx: AdapterContext) 
   }
 
   if (!modern) {
-    const manifest = object(manifests["."], "root package.json");
-    const name = text(manifest.name);
-    ctx.node("workspace:.", name, typeof manifest.version === "string" ? manifest.version : null, `source:${ctx.input.revision}:${directory}`, null);
-    selections.set("workspace:.", { locator: "workspace:.", workspace: ".", entry: manifest });
-    if (ctx.input.rootNames.includes(name)) ctx.root("workspace:.");
-    if (manifest.workspaces) ctx.gap("Classic Yarn workspace linking is not resolved by this collector; collect an installed workspace inventory.");
+    for (const workspace of [".", ...classicByLocation.keys()]) {
+      const manifest = object(manifests[workspace], `${workspace}/package.json`);
+      if (workspace === "." && classicInfo && manifest.name === undefined) {
+        ctx.gap("Unnamed Classic orchestration root is retained as source; its own dependencies are not modeled as a package root.");
+        continue;
+      }
+      const name = text(manifest.name);
+      if (workspace !== "." && classicByLocation.get(workspace)!.name !== name) throw new Error(`Yarn workspace identity disagrees with manifest: ${workspace}`);
+      const locator = `workspace:${workspace}`;
+      ctx.node(locator, name, typeof manifest.version === "string" ? manifest.version : null, `source:${ctx.input.revision}:${posix.join(directory, workspace)}`, null);
+      selections.set(locator, { locator, workspace, entry: manifest });
+      if (ctx.input.rootNames.includes(name)) ctx.root(locator);
+    }
+    if (object(manifests["."]).workspaces && !classicInfo) ctx.gap("Classic Yarn workspace linking is not resolved by this collector; collect an installed workspace inventory.");
   }
+
+  const workspaceNames = new Set([...selections.values()].filter((selection) => selection.workspace !== undefined).map((selection) => object(manifests[selection.workspace!]).name));
+  for (const name of ctx.input.rootNames) if (!workspaceNames.has(name)) throw new Error(`No Yarn workspace root matched ${name}; check package names and captured workspace membership`);
 
   const normalize = (range: string) => modern && !/^[\w+.-]+:/.test(range) ? `npm:${range}` : range;
   function dependency(from: Selection, name: string, range: unknown, scope: Scope, optional: boolean) {
     const constraint = text(range, `Yarn dependency ${name}`);
+    if (classicInfo && from.workspace !== undefined && Object.hasOwn(classicInfo, name)) {
+      if (mayOverrideWorkspace(name)) {
+        ctx.gap(`Yarn resolutions may override workspace ${name} from ${from.locator}; installed selection needs separate evidence and no edge was inferred.`);
+        return;
+      }
+      const info = classicByLocation.get(from.workspace);
+      const matches = info?.workspaceDependencies.includes(name);
+      const mismatches = info?.mismatchedWorkspaceDependencies.includes(name);
+      if (!info || matches === mismatches) {
+        ctx.gap(`Ambiguous or unavailable native workspace selection for ${name} from ${from.locator}; no dependency edge was inferred.`);
+        return;
+      }
+      if (matches) {
+        ctx.edge(from.locator, `workspace:${classicInfo[name].location}`, scope, optional, null, constraint);
+        return;
+      }
+      // Yarn reports a version mismatch: the dependency must use its external lock selection.
+    }
     const descriptor = `${name}@${normalize(constraint)}`;
     const target = descriptors.get(descriptor);
     if (!target || ambiguous.has(descriptor)) { ctx.gap(`No unambiguous Yarn selection for ${descriptor} from ${from.locator}.`); return; }

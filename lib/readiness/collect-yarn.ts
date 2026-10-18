@@ -8,11 +8,12 @@ import { publishCollection, reuseCollection, type CollectOptions, type Collectio
 import type { Snapshot, NativeInput } from "./types";
 import type { Store } from "./store";
 import { MODERN_YARN_LOCK_VERSIONS, yarnWorkspaces } from "./yarn";
+import { captureClassicWorkspaces, CLASSIC_WORKSPACE_VERSION } from "./yarn-workspaces";
 import packageJson from "../../package.json";
 
 const classicParserVersion = packageJson.dependencies["@yarnpkg/lockfile"];
 const modernParserVersion = packageJson.dependencies["@yarnpkg/parsers"];
-export const YARN_CAPTURE_CONTEXT = `committed-yarn-lock:v1;classic-parser:${classicParserVersion};modern-parser:${modernParserVersion}`;
+export const YARN_CAPTURE_CONTEXT = `committed-yarn-lock:v2;classic-parser:${classicParserVersion};modern-parser:${modernParserVersion};workspace-reader:${CLASSIC_WORKSPACE_VERSION}`;
 
 export function parseYarnLock(content: string) {
   if (/^# yarn lockfile v1\r?$/m.test(content)) {
@@ -38,10 +39,14 @@ export async function collectYarn(snapshot: Snapshot, store: Store, options: Col
   const root = await pinnedCheckout(tool.repo!, tool.revision!, options.stateDir);
   const sourceDirectory = posix.dirname(path);
   const parsed = parseYarnLock(readFileSync(sourcePath(root, path), "utf8"));
+  const rootManifestPath = posix.join(sourceDirectory, "package.json");
+  const rootManifest = object(JSON.parse(readFileSync(sourcePath(root, rootManifestPath), "utf8")));
+  const classicWorkspaces = parsed.kind === "classic" && rootManifest.workspaces
+    ? await captureClassicWorkspaces(sourcePath(root, sourceDirectory)) : undefined;
   const manifests: Record<string, unknown> = {};
   const supportPaths = [path];
   const issues: string[] = [];
-  const workspaces = parsed.kind === "modern" ? yarnWorkspaces(parsed.lock) : ["."];
+  const workspaces = parsed.kind === "modern" ? yarnWorkspaces(parsed.lock) : [".", ...Object.values(classicWorkspaces?.info ?? {}).map((row) => row.location)];
   for (const workspace of workspaces) {
     if (posix.isAbsolute(workspace) || workspace.split("/").includes("..")) throw new Error(`Yarn workspace escapes selected project: ${workspace}`);
     const manifestPath = posix.join(sourceDirectory, workspace, "package.json");
@@ -50,8 +55,6 @@ export async function collectYarn(snapshot: Snapshot, store: Store, options: Col
     manifests[workspace] = JSON.parse(readFileSync(full, "utf8"));
     supportPaths.push(manifestPath);
   }
-  const rootManifestPath = posix.join(sourceDirectory, "package.json");
-  const rootManifest = object(JSON.parse(readFileSync(sourcePath(root, rootManifestPath), "utf8")));
   supportPaths.push(rootManifestPath);
   const registries: Record<string, string> = { default: "https://registry.yarnpkg.com" };
   const ancestors: string[] = [];
@@ -81,13 +84,13 @@ export async function collectYarn(snapshot: Snapshot, store: Store, options: Col
       for (const field of ["packageExtensions", "plugins", "yarnPath"]) if (config[field]) issues.push(`Captured ${configPath} declares ${field}; its effect on installed dependency behavior needs separate verification.`);
     }
   }
-  const raw = { formatVersion: 1, ...parsed, manifests, sourceDirectory, registries, issues };
+  const raw = { formatVersion: 1, ...parsed, manifests, sourceDirectory, registries, issues, ...(classicWorkspaces ? { classicWorkspaces } : {}) };
   const supporting = retainSource(snapshot, store, tool.id, root, supportPaths);
   const profile: NativeInput = {
     toolId: tool.id, release: tool.release!, revision: tool.revision!, platform: options.platform,
     features: ["all-lockfile-targets", "peer-bindings:unresolved"],
-    command: `Read committed ${path}, package manifests and repository configuration at ${tool.revision}`,
-    toolchain: `Yarn ${parsed.kind} lock; ${String(rootManifest.packageManager ?? "producing Yarn version unknown")}; parser ${parsed.kind === "classic" ? `@yarnpkg/lockfile ${classicParserVersion}` : `@yarnpkg/parsers ${modernParserVersion}`}`,
+    command: `Read committed ${path}, package manifests and repository configuration at ${tool.revision}${classicWorkspaces ? `; ${classicWorkspaces.command}` : ""}`,
+    toolchain: `Yarn ${parsed.kind} lock; ${String(rootManifest.packageManager ?? "producing Yarn version unknown")}; parser ${parsed.kind === "classic" ? `@yarnpkg/lockfile ${classicParserVersion}` : `@yarnpkg/parsers ${modernParserVersion}`}${classicWorkspaces ? `; workspace metadata ${classicWorkspaces.toolchain}` : ""}`,
     origin: "source-reconstruction", adapter: "yarn-lock", rootNames: options.roots,
   };
   return publishCollection(snapshot, store, selection, profile, raw, supporting, `https://github.com/${tool.repo}/tree/${tool.revision}`).profile;

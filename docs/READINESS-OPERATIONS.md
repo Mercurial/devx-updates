@@ -78,7 +78,22 @@ workspace manifests restore package names, versions, and runtime/development sco
 Nested projects use `--path path/to/yarn.lock`. Repository configuration and
 manifests are retained with parsed native selections; no package installation,
 user configuration, plugins or project scripts run. Registered requests refresh
-through the existing queue/cache workflow without a Yarn toolchain installation.
+through the existing queue/cache workflow. The pinned Classic metadata reader is
+installed with this pipeline's dependencies; no global Yarn installation is needed.
+
+Classic monorepos additionally capture
+[`yarn workspaces info --json`](https://classic.yarnpkg.com/lang/en/docs/cli/workspaces/)
+using Yarn 1.22.22, offline, with a temporary cache and sanitized environment.
+`--no-default-rc`, `YARN_IGNORE_PATH=1` and `--ignore-scripts` prevent repository/user
+configuration, delegated binaries and lifecycle scripts from running. The command
+has a 30-second timeout and bounded output. Retained native workspace locations
+and matching/mismatching dependency lists connect named production roots using
+their manifests' runtime/development/optional scopes. Unnamed orchestration roots
+remain source evidence with an explicit unmodeled-root boundary. Every requested
+root must match. Ambiguous native classifications and potentially applicable
+`resolutions` overrides suppress edges and remain gaps; this metadata does not
+prove installed selection under overrides. Capture context v2 invalidates old
+refresh and completed-batch caches; historical captures keep their replay behavior.
 
 Metadata v6 covers the pinned Cardano JS SDK Yarn 3.2.1 input. Its
 [native lock writer](https://github.com/yarnpkg/berry/blob/%40yarnpkg/cli/3.2.1/packages/yarnpkg-core/sources/Project.ts#L1461)
@@ -90,7 +105,7 @@ This adds an accepted input format without changing historical capture identitie
 
 Yarn lock records establish declared selections, not an installed dependency tree.
 Peer bindings are left unresolved; platform conditions remain conditional edges.
-Classic workspace linking, unlisted selectors, ambiguous descriptors, opaque Git/
+Installed Classic workspace layout, unlisted selectors, ambiguous descriptors, opaque Git/
 local/patch sources, configuration extensions, native bundles and shipped artifact
 correspondence remain explicit gaps. Modern cache checksums are retained as raw
 evidence and never substituted for npm tarball integrity. Unknown lock versions

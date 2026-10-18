@@ -8,6 +8,7 @@ import { COLLECT_ADAPTERS, type CollectAdapter, type Snapshot } from "./types";
 import { npmRootPaths } from "./npm-roots";
 import { gradleConfigurations } from "./gradle-selection";
 import { gradleCaptureContext } from "./collect-gradle";
+import { YARN_CAPTURE_CONTEXT } from "./collect-yarn";
 
 export interface PinnedRequest extends CollectionRequest { revision: string }
 export interface CollectionJob {
@@ -61,9 +62,10 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
 
 function retainedResult(job: CollectionJob, snapshot: Snapshot, store: Store): boolean {
   const profile = retainedCollectionProfile(snapshot, store, job.profileId, job.request.adapter);
-  if (job.request.adapter === "gradle-resolution") {
+  if (job.request.adapter === "gradle-resolution" || job.request.adapter === "yarn-lock") {
     const { toolId, ...request } = job.request;
-    const key = collectionKey({ ...request, path: request.path ?? "build.gradle", resolverContext: gradleCaptureContext().fingerprint });
+    const gradle = request.adapter === "gradle-resolution";
+    const key = collectionKey({ ...request, path: request.path ?? (gradle ? "build.gradle" : "yarn.lock"), resolverContext: gradle ? gradleCaptureContext().fingerprint : YARN_CAPTURE_CONTEXT });
     if (!snapshot.collections?.some((c) => c.toolId === toolId && c.profileId === job.profileId && c.key === key)) return false;
   }
   return !!profile && profile.toolId === job.request.toolId && profile.revision === job.request.revision;

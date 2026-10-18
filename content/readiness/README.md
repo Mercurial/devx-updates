@@ -1,5 +1,27 @@
 # Selected catalog collections
 
+## Chain-data query services
+
+`query-service-batch.json` selects AdaStat's separately locked backend/frontend
+and Cardano GraphQL's production server and API/background module. No service,
+database, application build or chain compatibility test runs.
+
+| Consumer | Selected roots | Scope and remaining boundaries |
+| --- | --- | --- |
+| AdaStat | `adastat-backend` and `adastat-frontend`, each manifest 2.0.0 with its own pnpm v9 lock | Default-branch source, without verified stable-release or hosted-deployment correspondence. The separate AdaStat Indexer, PostgreSQL schema/data, API/WebSocket deployments, Mithril and content gateways need integration evidence. Built bundles and native/WASM assets remain unverified. |
+| Cardano GraphQL | `@cardano-graphql/server` and `@cardano-graphql/api-cardano-db-hasura`, manifest/tag 9.1.0, Classic Yarn lock | Pinned Yarn 1.22.22 supplies native workspace links; root orchestration, CLI and client packages remain unselected audit records. Hasura, db-sync/PostgreSQL, node metrics, submit-api, token metadata, Mithril and the index-service container remain separate integration boundaries. Generated code, offline-mirror tarballs and Nix/container artifacts require provenance. |
+
+All three profiles use `all-lockfile-targets` and remain partial source
+reconstructions. Native workspace metadata is captured offline with project/user
+rc files, delegated Yarn binaries and lifecycle scripts disabled. It describes
+workspace range matches, not installed hoisting or peer bindings. Manifest scope
+is retained; ambiguous matches and potentially applicable resolution overrides
+remain gaps. No service edges, capabilities or readiness claims are inferred.
+
+```sh
+node --import tsx scripts/readiness/cli.ts collect-batch --input content/readiness/query-service-batch.json --limit 3
+```
+
 ## Hardware signing and wallet batch
 
 `signing-batch.json` adds production signing consumers and a developer wallet,
