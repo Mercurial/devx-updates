@@ -1,9 +1,9 @@
 {
-  "snapshot": "38a4f66a54cec99d4a2727d5d1d5d1ce374646673becc83f108606b098a1482b",
+  "snapshot": "b8a2a267a8b3741c81091af76da394ec9b0d6f4d528ce8927cc7330ba0e653df",
   "tools": 269,
   "discovered": 227,
   "withProfiles": 40,
-  "profiles": 44,
+  "profiles": 46,
   "completeProfiles": 5,
   "capabilityFindings": [],
   "unresolvedTools": 229,
@@ -1431,12 +1431,11 @@
     },
     {
       "toolId": "bloxbean-cardano-client-library",
-      "id": "gap:4b40f604bfc99dbf87cf1809",
+      "id": "gap:75464787c9f858e9064a62d4",
       "area": "resolution",
-      "reason": "This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
-      "nextAction": "Recapture with the retained selection/script/worker and reimport after source or configuration changes; implement an isolated scheduled collector before registering automatic refresh.",
-      "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
-      "code": "gradle-scope:refresh"
+      "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1"
     },
     {
       "toolId": "bloxbean-cardano-client-library",
@@ -1449,10 +1448,34 @@
     },
     {
       "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:a11f0900988258d698237623",
+      "area": "resolution",
+      "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:ec416de31f1edfee5d195d56",
+      "area": "resolution",
+      "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00"
+    },
+    {
+      "toolId": "bloxbean-cardano-client-library",
+      "id": "gap:ee24b93c70f7824289c8d5ae",
+      "area": "resolution",
+      "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1"
     },
     {
       "toolId": "boros",

@@ -3,6 +3,8 @@ import { resolveNative } from "./adapters";
 import { addEvidence, mergeResolution, Store } from "./store";
 import { COLLECT_ADAPTERS, type CollectAdapter, type NativeInput, type Snapshot } from "./types";
 import { npmRootPaths } from "./npm-roots";
+import { gradleConfigurations, type GradleConfiguration } from "./gradle-selection";
+import { gradleHasFailures } from "./gradle";
 
 export interface CollectionRequest {
   toolId: string;
@@ -14,6 +16,7 @@ export interface CollectionRequest {
   pythonVersion?: string;
   patterns?: string[];
   tags?: string[];
+  configurations?: GradleConfiguration[];
 }
 
 export interface CollectOptions extends CollectionRequest {
@@ -49,6 +52,7 @@ export function collectionRequests(snapshot: Snapshot, store: Store, selection: 
       ...(typeof input.pythonVersion === "string" ? { pythonVersion: input.pythonVersion } : {}),
       ...(input.patterns ? { patterns: list(input.patterns).map((p) => text(p)) } : {}),
       ...(input.tags ? { tags: list(input.tags).map((p) => text(p)) } : {}),
+      ...(input.adapter === "gradle-resolution" ? { configurations: gradleConfigurations(input.configurations, input.adapter) } : {}),
     };
     requests.set(digest(request), request);
   }
@@ -71,6 +75,10 @@ export function retainedCollectionProfile(snapshot: Snapshot, store: Store, prof
     const evidence = snapshot.evidence.find((evidence) => evidence.id === id);
     if (!evidence) return undefined;
     try { store.readEvidence(evidence); } catch { return undefined; }
+  }
+  if (adapter === "gradle-resolution") {
+    const native = snapshot.evidence.find((evidence) => evidence.id === profile.nativeEvidenceId);
+    try { if (!native || gradleHasFailures(store.readEvidence(native))) return undefined; } catch { return undefined; }
   }
   return profile;
 }

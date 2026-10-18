@@ -58,6 +58,11 @@ test("Gradle external identities remain capture-local while pinned local source 
   assert.equal(first.artifacts.find((a) => a.name === "fixture:shared")!.id, second.artifacts.find((a) => a.name === "fixture:shared")!.id);
   assert.equal(first.artifacts.find((a) => a.name === "fixture:shared")!.source, `source:${input.revision}:shared`);
   assert.ok(first.gaps.some((g) => g.reason.includes("capture-local")));
+  raw.sourceDirectory = "nested/sdk";
+  const nested = resolve(raw);
+  assert.equal(nested.artifacts.find((a) => a.name === "fixture:shared")!.source, `source:${input.revision}:nested/sdk/shared`);
+  raw.sourceDirectory = "../outside";
+  assert.throws(() => resolve(raw), /source directory/);
 });
 
 test("Gradle native failures remain gaps and explicit cyclic selections remain finite", () => {

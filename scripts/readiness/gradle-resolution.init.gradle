@@ -11,6 +11,8 @@ gradle.projectsEvaluated {
     rootProject.tasks.register('readinessResolution') {
         doLast {
             if (gradle.gradleVersion != '7.5.1') throw new GradleException('Capture requires Gradle 7.5.1')
+            def expectedRoot = System.getProperty('readiness.root')
+            if (expectedRoot && rootProject.projectDir.canonicalFile != new File(expectedRoot).canonicalFile) throw new GradleException('Selected build directory is not the actual Gradle root')
             def selections = new JsonSlurper().parse(new File(System.getProperty('readiness.selection')))
             def attributes = { values ->
                 values.keySet().sort { it.name }.collectEntries { [(it.name): values.getAttribute(it).toString()] }

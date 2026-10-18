@@ -623,6 +623,43 @@
       "attemptedAt": "2026-10-18T20:24:15.920Z",
       "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7",
       "succeededAt": "2026-10-18T20:24:28.864Z"
+    },
+    {
+      "id": "collection:7b4c6550a76b1f0b3491a3735f3395a3d974f9bff645dda7ecf168075277b0ea",
+      "request": {
+        "toolId": "bloxbean-cardano-client-library",
+        "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+        "adapter": "gradle-resolution",
+        "roots": [
+          "com.bloxbean.cardano:cardano-client-lib",
+          "com.bloxbean.cardano:governance",
+          "com.bloxbean.cardano:blockfrost"
+        ],
+        "platform": "amd64-Linux",
+        "configurations": [
+          {
+            "projectPath": ":",
+            "configuration": "runtimeClasspath",
+            "scope": "runtime"
+          },
+          {
+            "projectPath": ":backend-modules:blockfrost",
+            "configuration": "runtimeClasspath",
+            "scope": "runtime"
+          },
+          {
+            "projectPath": ":governance",
+            "configuration": "runtimeClasspath",
+            "scope": "runtime"
+          }
+        ],
+        "path": "build.gradle"
+      },
+      "status": "succeeded",
+      "attempts": 2,
+      "attemptedAt": "2026-10-18T21:07:17.164Z",
+      "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1",
+      "succeededAt": "2026-10-18T21:07:54.027Z"
     }
   ]
 }

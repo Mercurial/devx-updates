@@ -15,6 +15,10 @@ function variant(value: unknown): string {
   return canonical(v);
 }
 
+export function gradleHasFailures(data: unknown): boolean {
+  return list(object(data).graphs).some((graph) => list(object(graph).nodes).some((node) => list(object(node).dependencies).some((dependency) => object(dependency).failure !== undefined)));
+}
+
 /** Import the variant graph emitted by our pinned Gradle init script, without executing a build. */
 export function resolveGradle(data: Record<string, unknown>, ctx: AdapterContext) {
   if (data.formatVersion !== 1 || data.gradleVersion !== "7.5.1") throw new Error("Unsupported Gradle capture version");
@@ -22,6 +26,8 @@ export function resolveGradle(data: Record<string, unknown>, ctx: AdapterContext
   for (const key of ["javaVersion", "javaVendor", "os", "arch"]) text(environment[key]);
   if (ctx.input.platform !== `${environment.arch}-${environment.os}`) throw new Error("Gradle capture platform differs from profile");
   list(data.repositories, "Gradle repositories");
+  const sourceDirectory = data.sourceDirectory === undefined ? "." : text(data.sourceDirectory);
+  if (posix.isAbsolute(sourceDirectory) || sourceDirectory.includes("\\") || posix.normalize(sourceDirectory) !== sourceDirectory || sourceDirectory === ".." || sourceDirectory.startsWith("../")) throw new Error("Gradle source directory escapes checkout");
   const graphs = list(data.graphs, "Gradle graphs").map((value) => object(value));
   if (!graphs.length) throw new Error("Gradle capture has no selected configurations");
   // ResolutionResult identifies selected coordinates, but not their repository or binary digest.
@@ -55,7 +61,7 @@ export function resolveGradle(data: Record<string, unknown>, ctx: AdapterContext
         text(component.projectPath, "Gradle local project path");
         const path = text(component.path, "Gradle source path");
         if (posix.isAbsolute(path) || path.includes("\\") || posix.normalize(path) !== path || path === ".." || path.startsWith("../")) throw new Error("Gradle project source lies outside the pinned checkout");
-        source = `source:${ctx.input.revision}:${path}`;
+        source = `source:${ctx.input.revision}:${posix.join(sourceDirectory, path)}`;
       } else if (component.kind === "module") source = externalSource;
       else throw new Error("Unsupported Gradle component kind");
       if (version === "unspecified") ctx.gap(`Gradle project ${name} has no declared version.`);

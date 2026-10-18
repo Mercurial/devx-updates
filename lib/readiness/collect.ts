@@ -12,6 +12,8 @@ import { collectLocks } from "./collect-locks";
 import { collectYarn } from "./collect-yarn";
 import { githubSource, normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 import { npmRootPaths } from "./npm-roots";
+import { collectGradle } from "./collect-gradle";
+import { gradleConfigurations } from "./gradle-selection";
 
 const exec = promisify(execFile);
 
@@ -28,7 +30,9 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   const tool = snapshot.tools.find((t) => t.id === options.toolId);
   if (!tool?.revision || !tool.repo || !tool.release) throw new Error("Discover this tool's immutable source first");
   const rootPaths = npmRootPaths(options.rootPaths, options.adapter);
+  gradleConfigurations(options.configurations, options.adapter);
   try {
+    if (options.adapter === "gradle-resolution") return await collectGradle(snapshot, store, options);
     if (["bun-lock", "poetry-lock"].includes(options.adapter)) return await collectLocks(snapshot, store, options);
     if (options.adapter === "yarn-lock") return await collectYarn(snapshot, store, options);
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
@@ -70,11 +74,12 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
     const profile: NativeInput = { toolId: tool.id, release: tool.release, revision: tool.revision, platform: options.platform, features: ["default"], command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots, ...(rootPaths ? { rootPaths } : {}) };
     return publishCollection(snapshot, store, selection, profile, raw, supporting, sourceUrl).profile;
   } catch (error) {
-    const failure = error as Error & { cmd?: string; code?: string | number; signal?: string; stdout?: string; stderr?: string };
+    const failure = error as Error & { cmd?: string; code?: string | number; signal?: string; stdout?: string; stderr?: string; invocationEvidenceId?: string };
     const evidence = store.evidence(normalizeNativePaths({
       toolId: tool.id, revision: tool.revision, adapter: options.adapter,
       command: failure.cmd ?? null, exitCode: failure.code ?? null, signal: failure.signal ?? null,
       message: String(error), stdout: failure.stdout ?? "", stderr: failure.stderr ?? "",
+      ...(failure.invocationEvidenceId ? { invocationEvidenceId: failure.invocationEvidenceId } : {}),
     }, { [resolve(options.stateDir, "sources", tool.revision)]: "/source" }), `Failed native collection for ${tool.id}`);
     addEvidence(snapshot, evidence); tool.evidenceIds.push(evidence.id);
     const reason = `Collection failed (${options.adapter}): ${String(error).slice(0, 1500)}`;

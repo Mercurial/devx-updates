@@ -5,8 +5,8 @@ export const ECOSYSTEMS = ["npm", "cargo", "cabal", "gradle", "go", "python", "n
 export type Ecosystem = typeof ECOSYSTEMS[number];
 export const NATIVE_ADAPTERS = ["npm-lock", "cargo-metadata", "cabal-plan", "gradle-resolution", "pnpm-lock", "yarn-lock", "bun-lock", "poetry-lock", "go-packages", "uv-tree"] as const;
 export type NativeAdapter = typeof NATIVE_ADAPTERS[number];
-export type CollectAdapter = Exclude<NativeAdapter, "cabal-plan" | "gradle-resolution">;
-export const COLLECT_ADAPTERS: readonly CollectAdapter[] = NATIVE_ADAPTERS.filter((adapter): adapter is CollectAdapter => adapter !== "cabal-plan" && adapter !== "gradle-resolution");
+export type CollectAdapter = Exclude<NativeAdapter, "cabal-plan">;
+export const COLLECT_ADAPTERS: readonly CollectAdapter[] = NATIVE_ADAPTERS.filter((adapter): adapter is CollectAdapter => adapter !== "cabal-plan");
 
 export interface Evidence {
   id: string;

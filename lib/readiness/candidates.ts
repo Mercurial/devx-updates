@@ -10,6 +10,7 @@ export function collectionCandidates(snapshot: Snapshot, toolIds?: string[]) {
     for (const path of tool.manifests) {
       const file = posix.basename(path);
       const sibling = (name: string) => posix.join(posix.dirname(path), name);
+      if (/^build\.gradle(\.kts)?$/.test(file) && (posix.dirname(path) === "." || manifests.has(sibling("settings.gradle")) || manifests.has(sibling("settings.gradle.kts")))) candidates.push({ adapter: "gradle-resolution", path, requirements: ["Docker with pinned Gradle 7.5.1 image", "official 7.5.1 wrapper distribution", "explicit project/configuration/scope selections and root names", "amd64-Linux"] });
       if (file === "package-lock.json") candidates.push({ adapter: "npm-lock", path, requirements: ["npm lockfile v2/v3", "root package names", "all-platform lock scope"] });
       if (file === "pnpm-lock.yaml") candidates.push({ adapter: "pnpm-lock", path, requirements: ["pnpm lockfile v9", "workspace root package names", "all-platform lock scope"] });
       if (file === "yarn.lock" && manifests.has(sibling("package.json"))) candidates.push({ adapter: "yarn-lock", path, requirements: ["Classic v1 or modern Yarn metadata v6/v8/v10", "production package/workspace manifests", "all-platform lock scope; peer bindings unresolved"] });

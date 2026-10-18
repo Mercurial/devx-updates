@@ -2,10 +2,12 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { digest, list, object, text } from "./core";
 import { collect } from "./collect";
-import { retainedCollectionProfile, type CollectionRequest, type RefreshSelection } from "./collection";
+import { collectionKey, retainedCollectionProfile, type CollectionRequest, type RefreshSelection } from "./collection";
 import { readJson, Store, writeJson } from "./store";
 import { COLLECT_ADAPTERS, type CollectAdapter, type Snapshot } from "./types";
 import { npmRootPaths } from "./npm-roots";
+import { gradleConfigurations } from "./gradle-selection";
+import { gradleCaptureContext } from "./collect-gradle";
 
 export interface PinnedRequest extends CollectionRequest { revision: string }
 export interface CollectionJob {
@@ -26,7 +28,7 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
   if (batch.schemaVersion !== 1) throw new Error("Unsupported collection batch schema");
   const requests = list(batch.requests).map((raw) => {
     const input = object(raw, "collection request");
-    const keys = new Set(["toolId", "revision", "adapter", "roots", "rootPaths", "path", "platform", "pythonVersion", "patterns", "tags"]);
+    const keys = new Set(["toolId", "revision", "adapter", "roots", "rootPaths", "path", "platform", "pythonVersion", "patterns", "tags", "configurations"]);
     for (const key of Object.keys(input)) if (!keys.has(key)) throw new Error(`Unknown collection option: ${key}`);
     const toolId = text(input.toolId);
     if (!snapshot.tools.some((tool) => tool.id === toolId)) throw new Error(`Unknown tool: ${toolId}`);
@@ -37,6 +39,8 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
     const roots = strings(input.roots);
     if (!roots.length || new Set(roots).size !== roots.length) throw new Error("Select nonempty, unique package roots");
     const request: PinnedRequest = { toolId, revision, adapter: input.adapter as CollectAdapter, roots, platform: text(input.platform) };
+    const configurations = gradleConfigurations(input.configurations, request.adapter);
+    if (configurations) request.configurations = configurations;
     if (input.rootPaths !== undefined) request.rootPaths = npmRootPaths(input.rootPaths, request.adapter);
     if (input.path !== undefined) {
       request.path = text(input.path);
@@ -57,6 +61,11 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
 
 function retainedResult(job: CollectionJob, snapshot: Snapshot, store: Store): boolean {
   const profile = retainedCollectionProfile(snapshot, store, job.profileId, job.request.adapter);
+  if (job.request.adapter === "gradle-resolution") {
+    const { toolId, ...request } = job.request;
+    const key = collectionKey({ ...request, path: request.path ?? "build.gradle", resolverContext: gradleCaptureContext().fingerprint });
+    if (!snapshot.collections?.some((c) => c.toolId === toolId && c.profileId === job.profileId && c.key === key)) return false;
+  }
   return !!profile && profile.toolId === job.request.toolId && profile.revision === job.request.revision;
 }
 

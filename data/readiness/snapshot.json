@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "38a4f66a54cec99d4a2727d5d1d5d1ce374646673becc83f108606b098a1482b",
-    "generatedAt": "2026-10-18T20:47:42.909Z",
+    "semanticDigest": "b8a2a267a8b3741c81091af76da394ec9b0d6f4d528ce8927cc7330ba0e653df",
+    "generatedAt": "2026-10-18T21:09:50.335Z",
     "tools": [
       {
         "id": "1694-io",
@@ -2406,6 +2406,7 @@
           "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
           "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
           "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+          "evidence:2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167",
           "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
           "evidence:2d582421d0e604b4e4d8caef471342d92a39ec9a92f527de7b7b1823a801b2ea",
           "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
@@ -2436,15 +2437,19 @@
           "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
           "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
           "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+          "evidence:c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726",
+          "evidence:dbfbdf82eb55f74806f079bc2f884a4679e3d759b55a329c60bdccaf3eacdaee",
           "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
           "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
           "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
           "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
           "evidence:ee88936c9a74762399eb034f52aa0c99b8d260ea17e7555103c5b70576bef07b",
+          "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
           "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
           "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
           "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
-          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295",
+          "evidence:f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364"
         ],
         "gaps": [
           {
@@ -2484,12 +2489,11 @@
             "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17"
           },
           {
-            "id": "gap:4b40f604bfc99dbf87cf1809",
+            "id": "gap:75464787c9f858e9064a62d4",
             "area": "resolution",
-            "reason": "This Gradle profile is an explicit isolated import and is not registered for automatic refresh.",
-            "nextAction": "Recapture with the retained selection/script/worker and reimport after source or configuration changes; implement an isolated scheduled collector before registering automatic refresh.",
-            "profileId": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
-            "code": "gradle-scope:refresh"
+            "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1"
           },
           {
             "id": "gap:9419305bc758a4d435005a6a",
@@ -2500,10 +2504,31 @@
             "code": "gradle-scope:integration"
           },
           {
+            "id": "gap:a11f0900988258d698237623",
+            "area": "resolution",
+            "reason": "Only explicitly selected Gradle configurations are captured. File dependencies, build/plugin/annotation-processor classpaths, native bundles, generated outputs, tests and deployed integrations outside those configurations remain unexamined. No successful build or hardfork compatibility is established.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00"
+          },
+          {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:ec416de31f1edfee5d195d56",
+            "area": "resolution",
+            "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00"
+          },
+          {
+            "id": "gap:ee24b93c70f7824289c8d5ae",
+            "area": "resolution",
+            "reason": "Gradle selected-variant metadata graph does not identify downloaded binary checksums or the repository that supplied each external module. External identities are capture-local; published artifacts and dependency verification require separate evidence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:56.162Z",
@@ -25028,6 +25053,72 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1",
+        "toolId": "bloxbean-cardano-client-library",
+        "release": "v0.7.3",
+        "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+        "platform": "amd64-Linux",
+        "features": [
+          ":/runtimeClasspath:runtime",
+          ":backend-modules:blockfrost/runtimeClasspath:runtime",
+          ":governance/runtimeClasspath:runtime"
+        ],
+        "command": "Isolated gradle@sha256:deb7b59256192aed1f463ab5e698c509cc77ce5d4e421d8b89b5d99eb0b24538: /capture/gradle-worker.sh .; selections [{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":\",\"scope\":\"runtime\"},{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":backend-modules:blockfrost\",\"scope\":\"runtime\"},{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":governance\",\"scope\":\"runtime\"}]",
+        "toolchain": "Gradle 7.5.1 / Eclipse Adoptium JDK 17.0.5",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+          "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+          "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7"
+        ],
+        "inputDigest": "23ed51384dd91ab286beeaa1c12b608c08dbbb7d6b4f3a96508fbd09a3459f70",
+        "evidenceIds": [
+          "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+          "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+          "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+          "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+          "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+          "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+          "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+          "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+          "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+          "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+          "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+          "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+          "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+          "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+          "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+          "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+          "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+          "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+          "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+          "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+          "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+          "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+          "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+          "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+          "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+          "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+          "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+          "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+          "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+          "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+          "evidence:c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726",
+          "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+          "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+          "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+          "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+          "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
+          "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+          "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+          "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295"
+        ],
+        "nativeEvidenceId": "evidence:c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726",
+        "configurationEvidenceId": "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17",
         "toolId": "bloxbean-cardano-client-library",
         "release": "v0.7.3",
@@ -25096,6 +25187,72 @@
         ],
         "nativeEvidenceId": "evidence:541be34c6efe94b41a817a7e66a43d23f2c08d51c7a23965ba448c445cf33356",
         "configurationEvidenceId": "evidence:0699c47903674c8fd088d1bfce9a6784f41c2c74c070995f857089d963b8cc03",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00",
+        "toolId": "bloxbean-cardano-client-library",
+        "release": "v0.7.3",
+        "revision": "f1130177b02761ea15b93a92e385ae0739d27096",
+        "platform": "amd64-Linux",
+        "features": [
+          ":/runtimeClasspath:runtime",
+          ":backend-modules:blockfrost/runtimeClasspath:runtime",
+          ":governance/runtimeClasspath:runtime"
+        ],
+        "command": "Isolated gradle@sha256:deb7b59256192aed1f463ab5e698c509cc77ce5d4e421d8b89b5d99eb0b24538: /capture/gradle-worker.sh .; selections [{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":\",\"scope\":\"runtime\"},{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":backend-modules:blockfrost\",\"scope\":\"runtime\"},{\"configuration\":\"runtimeClasspath\",\"projectPath\":\":governance\",\"scope\":\"runtime\"}]",
+        "toolchain": "Gradle 7.5.1 / Eclipse Adoptium JDK 17.0.5",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+          "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+          "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f"
+        ],
+        "inputDigest": "d09ea3867583634af8fc3b002ff61e57d729fed985e7f1fcbea422f1cfb42c49",
+        "evidenceIds": [
+          "evidence:03c620e62743c9ba0758f990e1cc998789942cafe1a0247dbb063d9914ea8ae3",
+          "evidence:0665d2da8ab3d86f9ef4dd3a36223ca4eca95c90a835e796df7a07b61c15e58e",
+          "evidence:0d2ebf221d8d9697c94602d5cc668aedaf307816a85964ca0a451c9318b0e509",
+          "evidence:1d95ee23461232a527e72cb28605440c2065f5768464bfecddf7c2908e93ad0b",
+          "evidence:20d96256e1cf6c76d823a3ed7706922782949b43cc1dceff4cf0377f6731835d",
+          "evidence:26c13734d9ea8a05e1f235670493fc782bae159ef8abdc7787e0cbbebba6e7c3",
+          "evidence:27f3c34782f8255f666123db1fa794ba8df23a7b03ab37078459e1e7759d8760",
+          "evidence:2c770b02be4a5dc0a97218e6eb64032967e2c47d2e2d2dd32b65cc0b2ddd48f1",
+          "evidence:2f9d86bbaf859b980c10de23f1be537879e0b847b9b18b84a491dffd55d26bdb",
+          "evidence:36b5189bbea1959df116132cd3683476d0fd494747e9a186a0d0220d857b1285",
+          "evidence:3d911ad676981c591db5c2650d449980f0727dbeea77a24ed339bfe26d390d05",
+          "evidence:42daff992ce0d4be221458af7bea678f796af94ba187101ba7e200844c5a2ec8",
+          "evidence:45cc06c1ca6d5c5ecad48e88bc65efe0843cdd337d06bb12cbe8e9a6e88b890d",
+          "evidence:4c50eb25b13a4257a27c9615eb31564ec8eb8a986bb9c7279233fd7bb9b64be9",
+          "evidence:526d1fa942538682e1e92bd03b0e68c275121383440df22fdd47ae394d2708ab",
+          "evidence:52d49bffa1a8f714d83a5a5092587c61cf9df9f4d6ce993e76b0932563debbaa",
+          "evidence:538d2c488aa754f695e69c0778621048531b1a3126f8dbd728d43f6b9142abcf",
+          "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
+          "evidence:691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1",
+          "evidence:6b77945d6887d0fa001575a81175adac8ff16946acb33640d2a567be0ff3b81e",
+          "evidence:75d54722a887b02135d1910c567e43b1f97ea21f5b70820b5a9b90cf400306ac",
+          "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
+          "evidence:8390cb5f066279d723788ee4e503fe58f3ad01eee3739b60bae0c21abcdc4089",
+          "evidence:89ae4df81ebde014689791f32b2f54d0ea60f428a0477b82651c25bcf4288f81",
+          "evidence:8a27cb59fe1715353687a0d4e3f55889ffd87ff5ff5e23828e63844822938980",
+          "evidence:a21b8163b85fb4b53c36a253dd7f3a6e096baf9cd6ed30f98e7bff571ba19c3e",
+          "evidence:b88dcb7e0c59fc6773946065139dd82f50bed8f2071f9ada2864aa8bd33f4a0d",
+          "evidence:bc5c6581c8403d6338d676e4e4551e607d8905e8a6d0aa2c784c59215fd4154b",
+          "evidence:bc659e491fdfab1e2b5436468943f541d0c63a465b1f158a8c4e357e0121d167",
+          "evidence:c2a11e94d02f5475aa0f47a22aac6b81977cd19cf947526f51f9878bf1eb017d",
+          "evidence:ddd1f72dfd459273a4475f2e29798a347e8878760158c2475e6611ef9db74394",
+          "evidence:de4e74f4dd00244e07068c64dd919771aa7545c90e1306e02061784479ee10a3",
+          "evidence:e1e053dce39a38b7177b9c1f40a4d3f8022a7def1dc42150298caf140202b03c",
+          "evidence:e7e7b016668a69f1009bfe00c6388283e134c8648831a8c9ad0afca28be585b3",
+          "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
+          "evidence:f312fba4e21eec10ce58ac178ef53e1e6295a6d35dcd4d8717e2fa3f5c8a0031",
+          "evidence:f3421dc5213531ebeef950ae3c70ef78af0f802d42fd273cbb948fc9a679a743",
+          "evidence:f4156f8432033613c5beaec86aa0666e9c36fbc05997cfd18935ec6005d22680",
+          "evidence:f4f8e9d38643202d46bba9d82cc806fb28feacf858ee82b07bf823aa0aa61295",
+          "evidence:f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364"
+        ],
+        "nativeEvidenceId": "evidence:f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364",
+        "configurationEvidenceId": "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
         "coverage": "partial"
       },
       {
@@ -27909,6 +28066,12 @@
         "path": "evidence/2a946bd1294443155521d0f94772f98c93985452bdb696d31297d4188075ad3c.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/tx3-lang/tx3/releases/tag/v0.25.0"
+      },
+      {
+        "id": "evidence:2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167",
+        "digest": "2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167",
+        "path": "evidence/2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167.json.gz",
+        "description": "Collection request for bloxbean-cardano-client-library"
       },
       {
         "id": "evidence:2b15d01f59f2a60d767da7ccf68b984d2390cd2d5b41a69b9f285447b4a39754",
@@ -32873,6 +33036,13 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/tree/93598c0f8e452d7679a44097c48e693d95bfd631"
       },
       {
+        "id": "evidence:c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726",
+        "digest": "c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726",
+        "path": "evidence/c7d86bf8b7d461ff61774efb26dd9c6abd99842d1fb3711fab12ae8a9ea11726.json.gz",
+        "description": "gradle-resolution for bloxbean-cardano-client-library v0.7.3",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/tree/f1130177b02761ea15b93a92e385ae0739d27096"
+      },
+      {
         "id": "evidence:c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286",
         "digest": "c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286",
         "path": "evidence/c7e406eac5dff66cd5ff06a3443b8d23a0c99cd1c9d95ebfa1a455c375da3286.json.gz",
@@ -33460,6 +33630,12 @@
         "path": "evidence/db43bedf989740faab8064b05042f2ea4c44da1e99a89275a71246a16521d7db.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/blinklabs-io/adder/releases/tag/v0.45.0"
+      },
+      {
+        "id": "evidence:dbfbdf82eb55f74806f079bc2f884a4679e3d759b55a329c60bdccaf3eacdaee",
+        "digest": "dbfbdf82eb55f74806f079bc2f884a4679e3d759b55a329c60bdccaf3eacdaee",
+        "path": "evidence/dbfbdf82eb55f74806f079bc2f884a4679e3d759b55a329c60bdccaf3eacdaee.json.gz",
+        "description": "Collection request for bloxbean-cardano-client-library"
       },
       {
         "id": "evidence:dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
@@ -34110,6 +34286,13 @@
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/examples/advanced-querying/package.json"
       },
       {
+        "id": "evidence:f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
+        "digest": "f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc",
+        "path": "evidence/f10e58d0246d2dbd36e550043f4218e54b1526752d9505d72dc6ec6c00addfcc.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/tree/f1130177b02761ea15b93a92e385ae0739d27096"
+      },
+      {
         "id": "evidence:f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "digest": "f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "path": "evidence/f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe.json.gz",
@@ -34274,6 +34457,13 @@
         "path": "evidence/f54a324b98f27d23beb29ec1a2c5abf356ee454f0c04a31c79354017ac73a31a.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/src/render/edge-renderer.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/edge-renderer.ts"
+      },
+      {
+        "id": "evidence:f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364",
+        "digest": "f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364",
+        "path": "evidence/f5552b60919fce8f4baca0849a1782d88a814d66853662c19f79878b5a245364.json.gz",
+        "description": "gradle-resolution for bloxbean-cardano-client-library v0.7.3",
+        "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/tree/f1130177b02761ea15b93a92e385ae0739d27096"
       },
       {
         "id": "evidence:f58a57f022608b908cc04eddf9e280980c5fad9700db12c3c48b61d51ac5796e",
@@ -34569,6 +34759,18 @@
         "evidenceId": "evidence:af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d"
       },
       {
+        "key": "051493d7d154b1a99b1ba9123a49b62d2daee358b354ee1dac47ddb9c7d075d5",
+        "toolId": "bloxbean-cardano-client-library",
+        "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1",
+        "evidenceId": "evidence:dbfbdf82eb55f74806f079bc2f884a4679e3d759b55a329c60bdccaf3eacdaee"
+      },
+      {
+        "key": "a336cf3e2474030ced7e3882671747d1c6ee46d6404385a6836e3d09121f3c23",
+        "toolId": "bloxbean-cardano-client-library",
+        "profileId": "profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00",
+        "evidenceId": "evidence:2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167"
+      },
+      {
         "key": "c7af70cf7715fc2376d456740a0886832226af78d46f7295a60a8dad944f1d09",
         "toolId": "cardano-connect-with-wallet",
         "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
@@ -34795,84 +34997,84 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/738f5fd10372804d7b22bc37331a88bd568503fc2f84a65801588a9bb36ef13b.json",
-        "digest": "738f5fd10372804d7b22bc37331a88bd568503fc2f84a65801588a9bb36ef13b",
-        "records": 1872
+        "path": "snapshots/artifacts/2d2bd892e75e285197ad7db31b06fedbc8ab08e6b2453414141c0d879c894422.json",
+        "digest": "2d2bd892e75e285197ad7db31b06fedbc8ab08e6b2453414141c0d879c894422",
+        "records": 1876
       },
       {
-        "path": "snapshots/artifacts/0465399b43fcfe40e751fe65bb3e6fdcead3b3d6a98ef9b84792ec58c47887ce.json",
-        "digest": "0465399b43fcfe40e751fe65bb3e6fdcead3b3d6a98ef9b84792ec58c47887ce",
-        "records": 1842
+        "path": "snapshots/artifacts/ba64008c63ed77598fe17d54d89ea733daf189e75956430bfded04a975a3b1c0.json",
+        "digest": "ba64008c63ed77598fe17d54d89ea733daf189e75956430bfded04a975a3b1c0",
+        "records": 1845
       },
       {
-        "path": "snapshots/artifacts/0d05c8e1d604033b2e7f74d9fd7f51c85cb45375fa359dfea504cc0f178df092.json",
-        "digest": "0d05c8e1d604033b2e7f74d9fd7f51c85cb45375fa359dfea504cc0f178df092",
-        "records": 1886
+        "path": "snapshots/artifacts/8becce486c12acf3f4a9b47b56ae00302456459298432b05da15ff1659ea6f1d.json",
+        "digest": "8becce486c12acf3f4a9b47b56ae00302456459298432b05da15ff1659ea6f1d",
+        "records": 1888
       },
       {
-        "path": "snapshots/artifacts/3bdf1d1774e1f4100976a7d87927c2b7190fb6e9919f19a3838b3779d5558649.json",
-        "digest": "3bdf1d1774e1f4100976a7d87927c2b7190fb6e9919f19a3838b3779d5558649",
-        "records": 1868
+        "path": "snapshots/artifacts/26c9c1016da7f6a0150ae130719c5cc54ba4df368e6b9e87b5caa1297148f427.json",
+        "digest": "26c9c1016da7f6a0150ae130719c5cc54ba4df368e6b9e87b5caa1297148f427",
+        "records": 1869
       },
       {
-        "path": "snapshots/artifacts/0ca5d0b01bdf35c8d528be39ba873b1243ad1a10cc4dbd46d1ed6ae7cac7157d.json",
-        "digest": "0ca5d0b01bdf35c8d528be39ba873b1243ad1a10cc4dbd46d1ed6ae7cac7157d",
-        "records": 1872
+        "path": "snapshots/artifacts/700134e8348bfc0c6d8ea4568a371b1dda0ca0c075f263d632fe246b4cdc414c.json",
+        "digest": "700134e8348bfc0c6d8ea4568a371b1dda0ca0c075f263d632fe246b4cdc414c",
+        "records": 1874
       },
       {
-        "path": "snapshots/artifacts/bf84a04bd30b1870432ab8bd527f28112367dd1d48cbc005731db7299bc5970f.json",
-        "digest": "bf84a04bd30b1870432ab8bd527f28112367dd1d48cbc005731db7299bc5970f",
-        "records": 1900
+        "path": "snapshots/artifacts/203a5ae307e2b87d58924264be52f07aea77dad1630c03f11eb12a907147bba1.json",
+        "digest": "203a5ae307e2b87d58924264be52f07aea77dad1630c03f11eb12a907147bba1",
+        "records": 1903
       },
       {
-        "path": "snapshots/artifacts/0dbcbd493d06c6edca76a20dee874a2e8226d3fa1f218745dbde63cf656b0af4.json",
-        "digest": "0dbcbd493d06c6edca76a20dee874a2e8226d3fa1f218745dbde63cf656b0af4",
-        "records": 1998
+        "path": "snapshots/artifacts/b72a0f0a07c82d22542ef3a2e88c7f79a5643a2ef76a2dc9b5c8fbe95bf6dce3.json",
+        "digest": "b72a0f0a07c82d22542ef3a2e88c7f79a5643a2ef76a2dc9b5c8fbe95bf6dce3",
+        "records": 2000
       },
       {
-        "path": "snapshots/artifacts/5a29250f73dcf16a1f9337b6b5944d13fd44f534c1ba3bf3e4a530b15d821b7b.json",
-        "digest": "5a29250f73dcf16a1f9337b6b5944d13fd44f534c1ba3bf3e4a530b15d821b7b",
-        "records": 1827
+        "path": "snapshots/artifacts/cf56290d3f65a839e2452c548b5be244fda55f5ad6f25d4e2e68c6722f367024.json",
+        "digest": "cf56290d3f65a839e2452c548b5be244fda55f5ad6f25d4e2e68c6722f367024",
+        "records": 1835
       },
       {
-        "path": "snapshots/artifacts/7c102daf5c98787dd221ccdbd1402201db9d975feb3d9e1fa542316b9e287c7f.json",
-        "digest": "7c102daf5c98787dd221ccdbd1402201db9d975feb3d9e1fa542316b9e287c7f",
-        "records": 1877
+        "path": "snapshots/artifacts/c706836482db6029ae705571fff78fb9c6162d644687ce3a863697cb0f46b882.json",
+        "digest": "c706836482db6029ae705571fff78fb9c6162d644687ce3a863697cb0f46b882",
+        "records": 1878
       },
       {
-        "path": "snapshots/artifacts/11496b6354f1722c92ca90f01f0800b0b26f0cd5ddf80f74f37402623976e2e4.json",
-        "digest": "11496b6354f1722c92ca90f01f0800b0b26f0cd5ddf80f74f37402623976e2e4",
-        "records": 1860
+        "path": "snapshots/artifacts/fed497590f554cab8206bfba2cd616dad7c1022e33822f8c336cbf14fd168b3c.json",
+        "digest": "fed497590f554cab8206bfba2cd616dad7c1022e33822f8c336cbf14fd168b3c",
+        "records": 1864
       },
       {
-        "path": "snapshots/artifacts/9b8c55414897c9d9b184483b4996d4ce9f4d240396e09b928642f49774319d42.json",
-        "digest": "9b8c55414897c9d9b184483b4996d4ce9f4d240396e09b928642f49774319d42",
-        "records": 1918
+        "path": "snapshots/artifacts/0bb456e50eace13c781bcb88f8325c6deea6d0d8b138124871dcce6621340632.json",
+        "digest": "0bb456e50eace13c781bcb88f8325c6deea6d0d8b138124871dcce6621340632",
+        "records": 1923
       },
       {
-        "path": "snapshots/artifacts/7a1f74df61cf8d0d22e4185565909c2b4a8f2d4876291918be9867df45f1d08f.json",
-        "digest": "7a1f74df61cf8d0d22e4185565909c2b4a8f2d4876291918be9867df45f1d08f",
-        "records": 1916
+        "path": "snapshots/artifacts/e7fccea8bfa6350710212f7c5cdc8d7a89f96538fc99cb01e7b8d1cd8a9e8de5.json",
+        "digest": "e7fccea8bfa6350710212f7c5cdc8d7a89f96538fc99cb01e7b8d1cd8a9e8de5",
+        "records": 1919
       },
       {
-        "path": "snapshots/artifacts/763e271bd43b234d1a52527296fc2ad4e3a7c11e075cd3d7c378e87149ff11bd.json",
-        "digest": "763e271bd43b234d1a52527296fc2ad4e3a7c11e075cd3d7c378e87149ff11bd",
-        "records": 1928
+        "path": "snapshots/artifacts/c93580846bff7ad04cfefca882131f4dc697a41dcd334f60c8d02ddc79749022.json",
+        "digest": "c93580846bff7ad04cfefca882131f4dc697a41dcd334f60c8d02ddc79749022",
+        "records": 1930
       },
       {
-        "path": "snapshots/artifacts/48b9995bacbb585bf3f70221066fa8c4aab603a1deda13ff81c4418bc3c75085.json",
-        "digest": "48b9995bacbb585bf3f70221066fa8c4aab603a1deda13ff81c4418bc3c75085",
-        "records": 1855
+        "path": "snapshots/artifacts/ce8ee178bcc2202bba9a84333c6f412b5ee64210fb4abdab217f3d7cf2843184.json",
+        "digest": "ce8ee178bcc2202bba9a84333c6f412b5ee64210fb4abdab217f3d7cf2843184",
+        "records": 1856
       },
       {
-        "path": "snapshots/artifacts/4f0835c90f5fb37f3d4e9bb4fb9e87e9ed04ad19343f1fe1f7b441bbe2da2d7e.json",
-        "digest": "4f0835c90f5fb37f3d4e9bb4fb9e87e9ed04ad19343f1fe1f7b441bbe2da2d7e",
-        "records": 1870
+        "path": "snapshots/artifacts/210a4659cfbfce39a8c4c20be33cb88903c18f07345ea3883682a014eb153199.json",
+        "digest": "210a4659cfbfce39a8c4c20be33cb88903c18f07345ea3883682a014eb153199",
+        "records": 1873
       },
       {
-        "path": "snapshots/artifacts/ca6858a93a003157d05737edd5e8bb5fc5598b52a64e294271d1822688017fa6.json",
-        "digest": "ca6858a93a003157d05737edd5e8bb5fc5598b52a64e294271d1822688017fa6",
-        "records": 1881
+        "path": "snapshots/artifacts/9d769d7ce6cd7af2e3ea06ce58aefb58d82f651b9a14c5f485461034f7728c3b.json",
+        "digest": "9d769d7ce6cd7af2e3ea06ce58aefb58d82f651b9a14c5f485461034f7728c3b",
+        "records": 1885
       }
     ],
     "occurrences": [
@@ -34897,8 +35099,18 @@
         "records": 546
       },
       {
+        "path": "snapshots/occurrences/fef7eeab8bb0976cb3a78db65a5f331a29ee95165d706d1013938c255813ba00.json",
+        "digest": "fef7eeab8bb0976cb3a78db65a5f331a29ee95165d706d1013938c255813ba00",
+        "records": 97
+      },
+      {
         "path": "snapshots/occurrences/addfdd252a2cf6288aa44db3de25e36067f202396d58a4c380099b17831e1c0b.json",
         "digest": "addfdd252a2cf6288aa44db3de25e36067f202396d58a4c380099b17831e1c0b",
+        "records": 97
+      },
+      {
+        "path": "snapshots/occurrences/ab6ee75fcc347440357188acac70478b5edcc3c7a6597d563cb6393a4c9adacb.json",
+        "digest": "ab6ee75fcc347440357188acac70478b5edcc3c7a6597d563cb6393a4c9adacb",
         "records": 97
       },
       {
@@ -35124,8 +35336,18 @@
         "records": 785
       },
       {
+        "path": "snapshots/edges/88ab7c60770eb1ce74446433f19dd8d18969cbe8d36c5daca832197ecae75bc0.json",
+        "digest": "88ab7c60770eb1ce74446433f19dd8d18969cbe8d36c5daca832197ecae75bc0",
+        "records": 247
+      },
+      {
         "path": "snapshots/edges/80c8f2fca2c910d345699ec0ef33df6578e4b1946453ebb62fd1d3aacb66a983.json",
         "digest": "80c8f2fca2c910d345699ec0ef33df6578e4b1946453ebb62fd1d3aacb66a983",
+        "records": 247
+      },
+      {
+        "path": "snapshots/edges/ce3655d56e37f8aabd5bbe7d5196cfbb9809db85b5d64706b1e2faffcac120f8.json",
+        "digest": "ce3655d56e37f8aabd5bbe7d5196cfbb9809db85b5d64706b1e2faffcac120f8",
         "records": 247
       },
       {

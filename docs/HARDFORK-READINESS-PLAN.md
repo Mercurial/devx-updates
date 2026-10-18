@@ -1072,6 +1072,54 @@ after both workers exited; retained captures, source and worker provenance remai
 Broader coverage, isolated automatic Gradle refresh, owner-run review decisions
 and Dijkstra target/environment work remain open.
 
+### Active continuation: managed Gradle collection and refresh
+
+The Java SDK's selected configurations now run through `collect`, pinned
+`collect-batch` and registered `refresh-native`. Explicit project/configuration/
+scope selections survive registration, deduplication and cache reuse. The CLI
+accepts a selection JSON file; candidate discovery identifies build roots rather
+than ordinary subprojects. Nested builds require their own settings, and the
+native capture checks Gradle's actual root directory before assigning source paths.
+
+The collector uses the retained Gradle 7.5.1/JDK 17.0.5 image digest in a disposable
+non-root Docker container: read-only root/source/capture, no host home/socket or
+forwarded credentials, dropped capabilities, two CPUs, 2 GiB memory, 256 PIDs,
+bounded tmpfs and a six-minute execution limit. Unique containers are removed on
+success, failure and client timeout; cleanup errors retain original status and
+logs. Invocation evidence records the image, scripts, selection and limits before
+execution, and failed-run diagnostics link to it. Successful evidence includes
+native environment and source inputs. Cached evidence is verified before checkout
+or Docker; changed source, selection or worker context invalidates reuse, including
+completed batch jobs. Native resolution failures remain retryable.
+
+`content/readiness/gradle-batch.json` registers the same Cardano Client Lib v0.7.3
+roots as the manual pilot. Two managed captures (before and after the reviewed
+native root check) each reproduce its 97 occurrences and 247 edges. All three
+retained graphs agree; historical profiles are preserved. The obsolete tool-level
+manual-refresh gap is removed, while artifact provenance, unselected configurations
+and integration boundaries remain open. No SDK build/test or hardfork assessment
+has run. The existing scheduled workflow picks up the registered selection.
+
+Coverage stays **40/269 tools**, now **46 profiles**, **1,176 evidence objects**,
+**56,701 occurrences** and **176,692 edges**. Snapshot digest:
+`b8a2a267a8b3741c81091af76da394ec9b0d6f4d528ce8927cc7330ba0e653df`.
+Validation passes and offline replay reproduces all 46 profiles. Batch resume
+attempts zero jobs; selected refresh reuses the final capture without Docker.
+All previous profiles, capability findings and manual review states are unchanged.
+Reports and the comparison against `5194041` are regenerated.
+
+All 118 readiness tests, typechecking and lint pass. Real Docker probes verify
+read-only mounts, absent forwarded credentials, native failure, client timeout,
+exact-container removal, rejected root relocation and retained failure provenance.
+The static export passes 349 routes with `/devx-updates`; browser checks pass for
+three profiles, exact graph counts/exports, Gradle coverage/impact/investigation
+filters, base-path navigation, mobile width and console errors. Standards review
+found no documented violations and one optional duplicated-validator refactor;
+spec review's root-identity and failure-provenance findings were fixed and confirmed.
+Only the task-downloaded image was removed after all workers terminated. ADR-1 and
+ADR-2 remain the persistence/publication model. Broader collection, owner-launched
+consumer reviews and the exact Dijkstra source/environment remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

@@ -130082,10 +130082,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:5d8d449e2ddb1f746247ab30fc3b2353d15c41956d1aa98347c4f6e9670f9207"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:842e7f1640910503fbb1db35f1a15dfda18641f222d526f277027147d37f4502"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:33126c9a7eb3a2476f71419596606c09fd81f99abe29db501de1164b544e3a90"
       ]
     }
   },
@@ -131146,6 +131156,22 @@
         "occurrence:fdd7d07703a5f3d44948bd1ebe4eceb1ab762c8a3c8b4e536705bd1428fa5d47",
         "occurrence:22fc3992e1397e78a0721ea4d29a10a992ef095f942314d4d5113cb6ff3ca404",
         "occurrence:fe0f7b0c916f8e7b7ae74fdddca7f39b9fd92a7988ace58610a7d20f60902da9"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:016f4d6da5a3738d111a1f463e92293c8eba3a994dc7306010cd1eadc359d911",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:771fa3f0b6893382691ecf98e9f4c71b6663a49fde23c95b9d4ba475619f526c"
       ]
     }
   },
@@ -134988,6 +135014,24 @@
     }
   },
   {
+    "artifactId": "artifact:06286185a8e5e1776c65c625b6e9a361b9e49de6afef81aa028fb68004777774",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22",
+        "occurrence:a4b505033d3ee33ecbcb456fc7386265df0ec6222d49e862757a5352332bcb38"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:062fe37722e7511c49d21900a89090639d0d0474d544990d9c5ff7a5f1d6a2e2",
     "required": [
       "cardano-js-sdk"
@@ -138465,6 +138509,24 @@
         "occurrence:d48467b879c35fbdcbc855544e39ea7b02c60ea841ad5a12c173eba79ad5dc24",
         "occurrence:ea829f036d1de43212597c15e0af0d7500812fa9e9affba6db354be2754e1fba",
         "occurrence:ebbd01684e1e271d54a0a6ab66ff57b033b1a6d8528f8c35ad4a1c76f73d3013"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:0a05d6d768799822fa316499e2429bd46df3c9c00d45974d4ceaff41d1638a39",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22",
+        "occurrence:2913d3f35c00504da8ef369ed124da0050684aaa77d59004bdccb73bf8983ace"
       ]
     }
   },
@@ -144531,6 +144593,22 @@
         "occurrence:5f7da425cceb58b9bbc16065cdecdacb6b21a4f4ca71e62a9676748ba043df00",
         "occurrence:0b487d26f06952b417615ce9590fcaec99cecee5a084d913249c725a095df111",
         "occurrence:d8d674951ced57f8dee6c83317a967f12d393319a888638bce01341bf3b6cd12"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:111729ce1dd6851957f532d800a6968ce934fd2fbd4edbb8ef576c7bbb309924",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:d0cea46b6d6109f838ad290b4fad59f04a0f7387b5c63e0264a8a1a9f0648587"
       ]
     }
   },
@@ -153625,10 +153703,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:77c30d0efb3e5444f008f347b17ae43a2022456371c5c00c0da29cd6d6736b47"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:f397e9a34ef04e45ece7c07f38c0eacb7833ad4720b6951674cb90199ddc0be3"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:b7322b09d0c1704547024b0af6ad00927e513b69a0a751c1dcb001c47077678a"
       ]
     }
   },
@@ -153897,6 +153985,24 @@
       "daedalus:required:profile:daedalus:5c78926765a31fcbb8b185d0": [
         "occurrence:c4dd7d87d997a85640cb904b4fd9674d904f44acfe52838b15a7e3f64927aaad",
         "occurrence:e2a137bc6019c6c9bf3f22e10e0eacaab61757c20f2ccc95e8f637728eda6783"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:1cfa32d2eb3074353c4256c97c47f7c61b76e77e40669e5ff20c2871ba3a7ed8",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf",
+        "occurrence:e5111ba6ef18659a6a8bb7d05bca9f6d00623cb91991bf1ab8bd9ead7d281276",
+        "occurrence:e0a05feb609158d564cb43584568f7a769a8be94f27fbb5d3ebf4eec935c427a"
       ]
     }
   },
@@ -154213,10 +154319,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:f166484338121c85fe2892848304c32d27024ebcb92aa72f399588ff9b4605d3"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:4add6e6670d6973d38120b3cd6c912bd331d7a038ddaba1e7c8a3c034daaaa93"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:cfc5cf6efd1c610a99b48756a5809526633818340f567c14675ae148088b2661"
       ]
     }
   },
@@ -154797,6 +154913,23 @@
         "occurrence:3e9907f4778bf49c8591584ead4ef7344d18eefb389f4a2f22f24fc4039a3a06",
         "occurrence:f24d00ad08629a0d72c8ae3bfda50dfdf727fe300d5515674818784839eeb67c",
         "occurrence:a1c9614f919b1d6b06c085587dfc0908809194929e4113101b45ac6a8783559a"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:1e167bf2b18921d0cfa8bb31c6127684ad54c9b5257e399b86211087a0239b3f",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:e58ef1f90a14e41a5ce6518268630756571d4971e17055c7890a46c0b95bd563"
       ]
     }
   },
@@ -156106,10 +156239,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:d85f9e6e4afcf2d2396cdd2557d040150077f985eba9fa476abf53e8cab10bcd"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:c20b1722957a9bc5497c65aabfbf4a925a504198d9360f936f39dc9cab1b99ce"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:978bbfb6d0bf0b179e7ffceeeb5abdb914f11ac627113761248ee89d6d2b13cf"
       ]
     }
   },
@@ -156624,10 +156767,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:60256019591916d1ed14b9fecc5a58a22ae1e087985cbc050ceec375e2ee8f22"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:3f8b067b2305cfe5b08eb2099dfe507ded55c4e078264b7fb6b9f1bf91bfcc0a"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:1a7cecfd09955123dfa4e15e6d09a6539c4e0cd75b19c8944308d0be4069a2f3"
       ]
     }
   },
@@ -166584,6 +166737,25 @@
     }
   },
   {
+    "artifactId": "artifact:2cbe11f67a0ab1f9c9bf36c0368a500f9a74b3b39a8097fd47daa7e85ad9f35c",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:d2d0d1978c805b4540d3d1fb931b9055b12ed11d33d3a23163265f1699b68f19",
+        "occurrence:ba5d94072637a641b2485d7ed20d351d13ae6e8a0a0e2cb722df3f85b8b0ddee",
+        "occurrence:5bf93486aa72c5082db3ad747cb409dbdb608cecf44dcda0efd2ef1c74070e47"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:2cc5b8c6d36602010c9c44a7f32ae580387b9fb00268866638c9aa1048b95780",
     "required": [
       "lace"
@@ -169286,10 +169458,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:b769fac2117d4dec9e3c25eb400f2daa75b013414e3aea0378e2ce04d7f66fcc"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:7f22cdfc461fc00fb121ff36a436dc43af436a2082e2f3c20929fee13846471a"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:56bdefe0e30994baea7d3229dba5e30279656cb49530537d34dfd032deedb324"
       ]
     }
   },
@@ -169960,6 +170142,25 @@
         "occurrence:6e5a62fc672db994df51ffc7e91bed42944b44060e7851f603fe53eebde4142f",
         "occurrence:cf8889c41fc299657c7835f0edac472f34147765e8bbef863aae3f7ace39c6da",
         "occurrence:465234efa20126ee071cd9fac8a2e05ab272b6b8fe76ab9c4cbf92c0d27acc6c"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:3126b622fa442e57f91f2f13a70c648e3f6695606280875043b5ed2773ac40cb",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:d2d0d1978c805b4540d3d1fb931b9055b12ed11d33d3a23163265f1699b68f19",
+        "occurrence:ba5d94072637a641b2485d7ed20d351d13ae6e8a0a0e2cb722df3f85b8b0ddee",
+        "occurrence:d639e184a364a09bbed38b08c82584c65d6e94f5273ce60de847b8f2d3c91dcc"
       ]
     }
   },
@@ -179708,10 +179909,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:7a5aecc0f444e32b024b467efcf342aeae76090976fea10dfb2f26900b24a59a"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:219f1cd32cedfabad1e76e32f0cb9f94f61cd2fe299467b8a0fc60a46720a3f3"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:4d1441ede57ebfbd8a88d2c6482b8deca6ab9af58c607eb305f4a1167fc52878"
       ]
     }
   },
@@ -181321,6 +181532,24 @@
     }
   },
   {
+    "artifactId": "artifact:3ec8fe04a8e832902dbccf8aeb9b0c88d23a5a9ef706e99040a24d85bea37273",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22",
+        "occurrence:e8d8a232213ee46a3ff31c44f4125c7ae19383a3f3752555e09d77bf6080cc48"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:3eca13b916e6d989c46160ae544c6f9b88e0f7196ab0f74accaa1b268e0adb88",
     "required": [
       "yoroi"
@@ -182658,6 +182887,23 @@
       "dolos:required:profile:dolos:ecca38f5cb622db24ad29cc9": [
         "occurrence:34d99329cdfe6e3d527f90c31c8009b8d6509d452b28bfcc2fe0cdd058a33af6",
         "occurrence:51cc4053a49c274a8428d6449959d92a467e48d781ab511030975c6e672f3c15"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:40732e6faf12c9f53f60ab0252ee0841c8c2f69f2ff652d816f3170f2513bb51",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:6de930036abe193ecbf5a18e24b5fad3a41bbb43421f23f76529761d105ffeeb"
       ]
     }
   },
@@ -186431,6 +186677,23 @@
         "occurrence:e4b80b9f89ed5f437e15e55fb5a7e54553f61c3758da7668ea98a56631a9dc7a",
         "occurrence:850a8fdfca61da89c9340d46f38e4ce610c5af6f6b74a381dfa2b48c23c4d89f",
         "occurrence:4e245737621d0aef213162a636aa2d3c30e7408dcea80b8542e05e3c2b1e3cad"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:453ebc54c65e2f3ff9a2adb148a6411ea54d76bb583daae247a7e070e6ba2269",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22"
       ]
     }
   },
@@ -196584,6 +196847,24 @@
     }
   },
   {
+    "artifactId": "artifact:51c2dff83987de25aa72206b07baf20d7fc4fbd44dab2861456a21d9480ac001",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf",
+        "occurrence:e5111ba6ef18659a6a8bb7d05bca9f6d00623cb91991bf1ab8bd9ead7d281276",
+        "occurrence:3973140d570a778ada851315245654ed862519e9bf8398526a753f5cac7ee0e5"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:51c45d62f07cb195b5f6b9dea119f5356c33adac2c9de8f1cddb7a688500b5a2",
     "required": [
       "govtool"
@@ -198442,6 +198723,23 @@
         "occurrence:370f9b21164798fe926007db649237f6ff75a3c432e5517a7d69ed0c1240ff2b",
         "occurrence:c21f68a7556ccfc9cb6f91464d381de0a6abc4c7337b4924cc0cf81a85bc333e",
         "occurrence:c7944075892b85de0f87efc9b449393d28e7fe06aa2a06a8309a1525bca38c38"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:53ca853dca46615539b3464815f7ed61e7b60b6e0fd73c1e6626f4169261ae6f",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:1db5af292b25acba4a7645fb3ca3174c0066adc91f8dcae4013bc10796d02c98"
       ]
     }
   },
@@ -203714,6 +204012,24 @@
     }
   },
   {
+    "artifactId": "artifact:5a5e970d2e35c4e4e4f146ce1c0ce27a2cd4289ed56d65a749be8140e33c390e",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:cccefeb09338657a700ad717f69c2a97001607b1a450dc7357b394cabfe748cb",
+        "occurrence:d517823d875a0f9c26e461889c66e01ee73045593eabeac89beb38ed3754d86e"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:5a6385275e4b22ba7a1c286c05eec792cc94d4e5536ddc13a667cdb9057586a2",
     "required": [
       "cardano-connect-with-wallet"
@@ -206244,6 +206560,24 @@
     }
   },
   {
+    "artifactId": "artifact:5d7c4530ccd968e67ba9355e281280892fd69e6c3af04ded89cc3e90757f94a4",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf",
+        "occurrence:e5111ba6ef18659a6a8bb7d05bca9f6d00623cb91991bf1ab8bd9ead7d281276",
+        "occurrence:d3d6f94d8a8f776a45370bd00d06066b21ccb9e248308105f987476755d220d9"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:5d7ced5a38dc23a824de35d2931abf22ca8e452f51f3856c9e8dd55e79e175bc",
     "required": [
       "yoroi"
@@ -208304,6 +208638,22 @@
         "occurrence:270307fb2115d00b07c7d682908afa5fa54b5b277725b7429d77839f775384c6",
         "occurrence:079f39d495b182bdbb5a88c7ffe16d26abbf10cefed6cd39c3da02de9ddd6869",
         "occurrence:282fa11affe547fec6aafdf2619ab89a77ef0c707868f50c6606fa6eb51167e6"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:5fe84ba8db1764bc89ff05ab0b8bc843fa901d6343bccb079fc3926cf053738a",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0"
       ]
     }
   },
@@ -216500,6 +216850,23 @@
     }
   },
   {
+    "artifactId": "artifact:69a91e8ff0359dc4c6669384f8ea3ea4656fd95c60715169c34805002cff599c",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf",
+        "occurrence:ea8d5095910a141bc3b13a1d7e6d6703fd532bc70b5d9c00fc9de377f60df110"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:69ad0fb72495b47f5ba26372ac1aab45ae7f1f2e870a9f206249dc2022f38b1b",
     "required": [
       "cardano-js-sdk"
@@ -219259,6 +219626,24 @@
     }
   },
   {
+    "artifactId": "artifact:6d1c8eaad5a02e584c304e2da8c81d4d902175f0344ebf820654194344382bf8",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:d2d0d1978c805b4540d3d1fb931b9055b12ed11d33d3a23163265f1699b68f19",
+        "occurrence:42e210004d49f507b3490a423a4cd27fcf810181c24a07bfd4aea23c2da29794"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:6d1eab95fed91a51918598d8a3e90b1d58b4933055f1a356d323a22ff0c81b80",
     "required": [
       "govtool"
@@ -221671,6 +222056,23 @@
     }
   },
   {
+    "artifactId": "artifact:703134579e0c713cbd2d75a16145e22e92e16e2ce0c2f0685083bcab8def0607",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:78990ad2a75eaed9c6e46322bf79f2da39646ead2ab0da7ad029327645ff38c7",
+        "occurrence:a568eaf49603f5d764f9dce18d22efca7c497c69db2d317783742bcdab18afa3"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:7031402feedca421d6492f9a28500e6463313a0914f031f13d94cb0897b70258",
     "required": [
       "yoroi"
@@ -222327,6 +222729,22 @@
         "occurrence:8a7f720abd51cf33aa0d00985384ef96a3291d169743cc00fce36cd6709fe5fb",
         "occurrence:df1cf19897a193c52863cbd353156cd7935a1b8255aedeb0443b5a9e447da04a",
         "occurrence:8b5a5b988b7555369126b307588361eacfe72f64413a53c872b067db291d74bd"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:711afd983627c60b70547b16d28bd40955105809b008deba42bee801ba2cd5e7",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:44fc2079eea2785e8654299c7c37893e81cd6af19755254079bbb24192d6c485"
       ]
     }
   },
@@ -223156,6 +223574,23 @@
         "occurrence:46aac88965fb969daf8c924a9bf0776b1d6268f9b2887051284d95ae1537293f",
         "occurrence:85ff80accaec7b72768ed4f8579ec8c39209b5b636468902aeefb90d9009b69b",
         "occurrence:4a2e9859b29bb8eaaade19e81cd4dd7c3b5e0bafb24a8413fa77f8eb5416e833"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:727f452d5153ba4306a4dfb12c4b97bd783b2ee369282b03b621c8cdd3c08e0f",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf",
+        "occurrence:e5111ba6ef18659a6a8bb7d05bca9f6d00623cb91991bf1ab8bd9ead7d281276"
       ]
     }
   },
@@ -226678,6 +227113,23 @@
     }
   },
   {
+    "artifactId": "artifact:7705fa779528d564f91ff1d33b6d4bd9a6997863ca9b895a9e2cf278a89b6cc4",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:cccefeb09338657a700ad717f69c2a97001607b1a450dc7357b394cabfe748cb"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:7721126d03b229a0719d3eaef818153629a91cea92ca2e8c46f4dc61b87dede4",
     "required": [
       "masumi"
@@ -228488,6 +228940,23 @@
     }
   },
   {
+    "artifactId": "artifact:7943177721a51d34007be8b9a2a1ed3b4b75c1e3320e339effecf5611b8cc523",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:9c5024ddb303f9fc0dfc9e0fe4e16d40d55504723ee7a8550a79310884a4c342"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:7943e06e00a5920f3f95b420fd7b7be3aaa4feacd1a27e9c420214aae00dc9a1",
     "required": [
       "nami"
@@ -228622,6 +229091,24 @@
         "occurrence:64ec262e5e23b702035d3000126eb47a0ffba0550042a8e5ba5c1bef33626b83",
         "occurrence:dce140e570cbde80c6b37963e162afddd0c7f83391f171d97609d509ddb2767b",
         "occurrence:2a24ca61bfee01ff77cd6abd0657ace5529b5384745471cea511f2c774b52b5b"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:795dfec6bf12023c81bcdb7bc3a20f8d2e5106540a0107af3daf40b10269e9b2",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:6fb5883af0f4929846e04f99f9fc41b86e9fe54eab4569322280c5a82b6348fe",
+        "occurrence:e100332c22d558862fe51db1d0c72df8ddec5b6e40b4b094ccb6432361419a04"
       ]
     }
   },
@@ -234258,6 +234745,22 @@
     }
   },
   {
+    "artifactId": "artifact:7f781682b8ae0ff15aa82c5657a98ee36c02c82b59353f43de4b62662f7ebfa0",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:b42ce02347b0cd8d8f205b8dfec1e64b5c1491174257daa5a2c9ea5dcdf5bb90"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:7f820d294811c162c4e3495414cc38823d22e7815deed5c018a54824fa1ec103",
     "required": [
       "cardano-mcp"
@@ -239772,9 +240275,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:56bfa865cc551d5fd90da4facdfc13ab20d3fe349dcc989bcc9e0cb5dbd0f957"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:eaad3afdac3e9621edd721310f6d1007429258976450d147eab7e75d40ac120d"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:51b373d5381e2a343a22750447947753bd29ae4fe37284f4cb55229ed104eee0"
       ]
     }
   },
@@ -242400,6 +242911,24 @@
         "occurrence:cb8c25467fbb7d55b8acb43c957a3ccfa5a0e16f66391ed14f9b8a391bf635a5",
         "occurrence:624df415bfc72dae7d516b7dda0478c91208537e5bc796c0a73c4c0b88d9bd63",
         "occurrence:2992d0a10b5ec5c3baff759e9cb141e2d6e21edc0ed2828c9a2b80695aba84a4"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:896666d10110f2ac542d735104bd637c2ca8717427385a244482b67c84aa7bec",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22",
+        "occurrence:978c3f63cd1766f8ecb2ea8edd021915631d471c3d2ffd2ec827ac5f263434b3"
       ]
     }
   },
@@ -246363,9 +246892,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:2fcd5508ffc58fe1491934f0393e0370a299c74f4f3e2d26e519f0f5a5bc444c"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:49bb35e3107f72e9c70cafec2c6dc96ef40e2aec5bf673af3ee29c0265b94331",
         "occurrence:be53d8f60d941f19841e7704034839d11dc746efcb9d2f20d47258e554c09641"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:c250be272a4bffaa5be478e53f003e38360f9ab98bae52007f6b8276076cf56b"
       ]
     }
   },
@@ -250337,6 +250874,24 @@
     }
   },
   {
+    "artifactId": "artifact:929eb176087c7678328dfa1e2f5d58c591c65d513386c14a1e53ae0d79dd7123",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78",
+        "occurrence:7d76e1bdc5b5a830c2a17ef0651f0bf53015675c07dcd2c39b767363330a917c"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:92a1079942a482ed4f8fd017586dadc1d7101793919505237eef33d48020bfd2",
     "required": [
       "daedalus"
@@ -251824,9 +252379,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154"
       ]
     }
   },
@@ -252278,6 +252841,22 @@
         "occurrence:e193125a70e3230cf0a72f5ccb2bb4029a25fffd147c2c4c4e76cedabe46c2ff",
         "occurrence:39e7113c7f1a5bdd8354495b5793463ff5577d01ae99672eebdda041a6b2672c",
         "occurrence:9d2ff1cc7be7464d2bf471e3d452ae1eb77b2c2ba04985724a2e646031b9ec48"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:952cb3e97257b10a68372cab330eb26487fb41cb86f2d79dd133ca89d5ef5e3d",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:931cfaf7fac79cbf9807761bb65883075fcdb5978d92e121618467109b7bff58"
       ]
     }
   },
@@ -255217,6 +255796,24 @@
         "occurrence:2853c79bfaccfb8acda50dda498422ea8acc88947d8ef4160a026b64d4c9bb67",
         "occurrence:4e2340ee5b1ffeb6d198af5f04b725d4c5cf2affd9d446142669e4a302032764",
         "occurrence:db6eada2144c3625f9fb87eeb2455c62ddc5e0930155f1f5b42a9cebb1b73206"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:9928aff4d689f9c5201052ca5fd562c627b2e5df72de3fcbb67206f7349f6197",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78",
+        "occurrence:91c927d5292056d6cb053e92a99decfd454e6d0b5bb210f428d6fa0ca71bfb03"
       ]
     }
   },
@@ -259905,6 +260502,25 @@
     }
   },
   {
+    "artifactId": "artifact:9eded32d18718647b14e5cf9956708183846484ca37dfa9a02817f520d744e11",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:cccefeb09338657a700ad717f69c2a97001607b1a450dc7357b394cabfe748cb",
+        "occurrence:a5dc5d308fad2aa915a31775e65f16848916fc035ab96df40748b348eae46e84",
+        "occurrence:7eb57e4ab59b008736450ab13591e55aa3d046cd29d18caa27966dc59050a11f"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:9edfb558d2d2815ebd2a9895c3ed28d4ad0e68ab4a62d7e1eb069c471329fe11",
     "required": [
       "govtool"
@@ -262695,6 +263311,24 @@
         "occurrence:820897ce795aa2d9e36343af2a004471297c12fbb532145408838aeff23003ff",
         "occurrence:32019eabf452cb1e7b360fd2b4b70b815cff77c86326e86f759a91878f610817",
         "occurrence:cb6082865c7db04bde2a7c67fc6a3aef9952f4f6335a7facbc9ad734456fbeb6"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:a1d51452eaad76e51478bcc367f1955368e1923c433f49ac11a687004a14e10b",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:1db5af292b25acba4a7645fb3ca3174c0066adc91f8dcae4013bc10796d02c98",
+        "occurrence:cb2a7b7b43077f7566fa098af0fb1606f587d32cd0003abbaa70ea74ba100978"
       ]
     }
   },
@@ -265680,6 +266314,24 @@
     }
   },
   {
+    "artifactId": "artifact:a5c35d3e0fef5afb3e1b583584060eab770a60247cda6a97c98a7932574a0fb5",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:cccefeb09338657a700ad717f69c2a97001607b1a450dc7357b394cabfe748cb",
+        "occurrence:a5dc5d308fad2aa915a31775e65f16848916fc035ab96df40748b348eae46e84"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:a5ca4732813da4787790dc753121f8906c883322a69c68a5d8c7aeed30b2f6ce",
     "required": [
       "lace"
@@ -265891,9 +266543,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a"
       ]
     }
   },
@@ -268865,6 +269525,22 @@
     }
   },
   {
+    "artifactId": "artifact:a987955b209e995890d07d609f1cab364067594a0f898101bab18b251e26b45a",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:a98b102ad8e126ca6c612139a2b605bd4a1b2d4ed9ac3fd2a7075051056af02c",
     "required": [
       "sokosumi"
@@ -271055,9 +271731,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:a52594d37eceabede8757e065b09adfba2a1addf2d5a56999fe8325e3321b31b"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:1f97a2c32d3fe1658aa4b9f844b790a7b56bc61bd5a52e0c315c9252026e72a3"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:ae08d67414ffdb6430c4df64e0f035cf876b6c07acf36e3831a6a6ef505930f1"
       ]
     }
   },
@@ -273152,6 +273836,23 @@
     }
   },
   {
+    "artifactId": "artifact:afa50b6a987a7494599665283fd4ea03593771f612cda36c67ece46b9108e945",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:9752afbdee1a232e104af31cdb4ec8a0fc434d371bd91d9df0788777ed99c4aa"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:afa7c4e9f1d01a8a97ce78be0e9bec145b6ae3cf66eedc96e4e2b3b9a5ad32ac",
     "required": [
       "dingo"
@@ -273278,9 +273979,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
         "occurrence:5476ae3fbc7efe2dee303dafb760dae266596ae1d08608df6c087c5d68dcce26"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:78990ad2a75eaed9c6e46322bf79f2da39646ead2ab0da7ad029327645ff38c7"
       ]
     }
   },
@@ -278717,6 +279426,24 @@
     }
   },
   {
+    "artifactId": "artifact:b693cf3848091610c60cd018c3e8bee09e385e30ec5a4848daf31cdd89cf2128",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:004ff440a8a5a3a34a10ef5d7239713600a010562bd72afb786c72076e09cc22",
+        "occurrence:4835fae90d23d4d079c54fcb37c581ee54c3fa14afc58b425ccc2caf5c76f1a6"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:b69a9467b021660a05d4311334490372bbc0e844c34b27488147239281a6d980",
     "required": [
       "govtool"
@@ -279383,6 +280110,22 @@
         "occurrence:95bbd758cff665b98f68ac5ccee922f3b33b85303454d1e3bff564829ddec541",
         "occurrence:eda5a5ec9ef69a98f768ac9a856be44f0429e1b3dacd47c76ac0840ca9ad0ca7",
         "occurrence:17aa034e3a960f4cbbc84ea3d240064fc3c345b2978d68005bd8a4dec1d177fb"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:b7510653b026ec61d970a8fcc8a6e8ba5e10aaeb45a0bd2afbe14e91e8089e53",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:a0c0ebed7be3f36c64d12fb07614412746b4e06b9ef6e5c14933ccfae3ebc8f5"
       ]
     }
   },
@@ -282838,6 +283581,24 @@
     }
   },
   {
+    "artifactId": "artifact:badf00f41bb488b0a500bcfd39dfe7e9144ec2410ea6718b876de0ce8dc0c5a6",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78",
+        "occurrence:f0226fcc1760cf34c63e1f391d98934342c115bf41c4ac886483d1f70d6d6f81"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:baea44578337867934dcdaa062b1cb03d8ac2ede881026248434818c4a4ef8f3",
     "required": [
       "epora-wallet"
@@ -284216,6 +284977,23 @@
     }
   },
   {
+    "artifactId": "artifact:bc9208044d4ed16f9d5fe8318ad6f2fe39fb0f411ae049b843857424082ebd81",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:9b5a9d90b5de875e9adefae0eab40cab0770828a5ed79e78057b23f5fd92670f"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:bc97e249a797bc556cc14b429ccf9c1a0a00456eb829ba3f5b47767ce77ab8c8",
     "required": [
       "lace"
@@ -284700,6 +285478,25 @@
     }
   },
   {
+    "artifactId": "artifact:bd0ef8a064b093492b2df6c46c5c902bf32c11ac7b5d56860ad86b94e2063db6",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:66be1a95ec970e2e4f6615ecbdb2390f38983b894e5f8fb4d8b9f99caebfb95c",
+        "occurrence:ba87137d7766c320911cee226e3aea90d0440f718db358628ced571555216251",
+        "occurrence:cccefeb09338657a700ad717f69c2a97001607b1a450dc7357b394cabfe748cb",
+        "occurrence:a5dc5d308fad2aa915a31775e65f16848916fc035ab96df40748b348eae46e84",
+        "occurrence:f8a0575cede00d94ffcc5ee72924d2d861612da569480fc037e0e7330eb106b3"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:bd117330d3369cd6ae1b6ad53d8739b1836305dd807548e8e76beb239de060a1",
     "required": [
       "cardano-js-sdk"
@@ -284955,9 +285752,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:b838f4746e6d6f85a2f35f48cd923d6c08b93ca0627dd83c72801f0aa5c820cf"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
         "occurrence:571bff047a65af0eae6d350fd861c910f0f2b8da53b228fbe46dfd322282ccb9"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8"
       ]
     }
   },
@@ -287998,10 +288803,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:53f95605560773d7f4d6c18012ace0ccf1f8eace09f2cc0ab1a7f84751d75a25"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:ed33e2ab5ba916cf510e803353d94efa810387216c0a2b82736d203ef21880b7"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:8e1d03d18cf2a1e77b7485ede3917fc48bc38d780e2e682c9c19ddd902377339"
       ]
     }
   },
@@ -293648,6 +294463,23 @@
     }
   },
   {
+    "artifactId": "artifact:c865fc7fc878c5141b26ed5ef4e87a90ed91796f43934b29d08620270f457479",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:6fb5883af0f4929846e04f99f9fc41b86e9fe54eab4569322280c5a82b6348fe"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:c868431d5a8e59aa1957c91623fc0cf56cf15f4d08988fe3102d867915585afd",
     "required": [
       "dingo"
@@ -296624,6 +297456,24 @@
     }
   },
   {
+    "artifactId": "artifact:cb9f40cfac211a2c6dd4b01380fee3544e54cea4d83a6774f2f6c544eb1d47a0",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:9752afbdee1a232e104af31cdb4ec8a0fc434d371bd91d9df0788777ed99c4aa",
+        "occurrence:5b76781b08ca523d758d0b055e51032e9bf72f042d5d620d083f309062cfd56d"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:cbaa7fb9da21240bf6312515b72ff831fd26633328386510001456ce01f14cf8",
     "required": [
       "sokosumi"
@@ -296816,9 +297666,17 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:bc7f78bbd7c75bcf9727c9a18f5268796907cf88af33d74005c79ab163b6d147"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:eea527820f4241e013f34dcf402f36db88e4bc7ed4662b3705adbed8d9bc837c",
         "occurrence:363ded5a5151e30c106b27dc23ccfecc0ed753bb9d0cdc407409e90190a75898"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:089ba57b17d20280badeaf4a862caaa449e55cfa3663ff6e7eafe342b2361fa9"
       ]
     }
   },
@@ -301352,6 +302210,23 @@
     }
   },
   {
+    "artifactId": "artifact:d1251422bd3c219fcc6b7fbe2478886c450b2313e205df9a96b0bd091b07bfb2",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:d136a5486997a98086057c95fc7a9cc47ebaf1b61a1cb4f29bc5f948bb421378",
     "required": [
       "oura"
@@ -301541,6 +302416,24 @@
         "occurrence:0c19913c06038f724262aadf788fc7db63925c9da44901733c3b5b930f06ad73",
         "occurrence:5b65255da2fac80078b2c1233ecf7cd10b70daf7066c3bb900737d59867b7c24",
         "occurrence:aab73146f833e6de388d338e4d0e641922d5e98afc00cc6243ac08d8edc426bb"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:d18a525ca50a37c2773201eecbc8236a4c8d0f883f588477d0e1b489959d41db",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:6fb5883af0f4929846e04f99f9fc41b86e9fe54eab4569322280c5a82b6348fe",
+        "occurrence:5edf5ee0ffc9db464a8d3393c7dbc685d27fdc5df9eeb67d295ede3257ace11b"
       ]
     }
   },
@@ -307158,10 +308051,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:7d490b9b44253779245d13c6255fb4f341212057d529400597d3ac1a0432f5a0",
+        "occurrence:b8a5d23149a3ada00c2267fdce8b43aaedb8d20563de900b6f5465f115b7c250"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:3b3465e9d0050df97bc043df8fc8a81b80702aa03fed1c646d5b68ad3808f89e",
         "occurrence:6131743a0fbd5ffef6340d72bc427056f069fe5ab125e3750f2d9ac47767b9ad"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:7504e0a95034a45c9b744b9183ece6e0cd1b60d51eaf5960e8af2f34001d1154",
+        "occurrence:92923743930da0a907b27e89ca6dbf973bc1497789b379f9e1842d1150c18f0c"
       ]
     }
   },
@@ -315772,6 +316675,24 @@
     }
   },
   {
+    "artifactId": "artifact:e3917708225f8af9df0415ac353707d31c99a5be0383bac77e0c945f27e7ce17",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:4bc1b63284262ca66da55134044feca539c0419f908cd96fa6f41a2982a3a22f",
+        "occurrence:fbb0cffa7da22e033576af244e3e3efc17f551fa72518f9ec209a79474e054f8",
+        "occurrence:6fb5883af0f4929846e04f99f9fc41b86e9fe54eab4569322280c5a82b6348fe",
+        "occurrence:b4d1ad8153f4d2e03ca2db28255d76f044570505b0e93b3b6103630acb3c64a5"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:e3965c39a5acd281c3a037e631d7ca0972efb28f06331968cd27910f1f8ff6ca",
     "required": [
       "govtool"
@@ -320637,10 +321558,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:4a3a849b83f7a42a2648c0ef9fe5d3de6cd4ef867819f289a0933ea23dfb8e56"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:75b5fc939e1d0f234e9829d6c945e231b82229e89ffb5100cbca546afb05fcf4"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:4e4d11229b70f15982702e2e71977d3952a4c7f84bfa57a5e42711c8dfc7f50a"
       ]
     }
   },
@@ -326799,10 +327730,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:a52594d37eceabede8757e065b09adfba2a1addf2d5a56999fe8325e3321b31b",
+        "occurrence:b213c6069f2abd60518365b44a1a1cb4792c6538981e801777603b130699911c"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:1f97a2c32d3fe1658aa4b9f844b790a7b56bc61bd5a52e0c315c9252026e72a3",
         "occurrence:ffdc6f82383cdad71aec2cb4c30a25588dbebedaf13a3e6c69983f02be0527f7"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:ae08d67414ffdb6430c4df64e0f035cf876b6c07acf36e3831a6a6ef505930f1",
+        "occurrence:7db00ceecfb47155f0db928bb9e7efea785faa7765e172242e28b2cf560781e8"
       ]
     }
   },
@@ -330200,10 +331141,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:b7d867e3d21fc4c17c87e429c83eddb88a4761c4942ce58d4a990073c38e0c3e"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:9183cc0e565138ba4b11bceae45ca4bab6541274ccf466de7d2b9c3dfa1bbf2a"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:7028583ae1c856bd5fe76bea20c96c2f1abc60d88ac63f6a8c83005d57d7496f"
       ]
     }
   },
@@ -330750,6 +331701,23 @@
         "occurrence:8e635167fbe95b1a85168949b797cb0abccbc63501e1e4e94281db32de8f330f",
         "occurrence:089e2f84d7f1e6e21c7936ba15daeb0b3701c0ce965d5b8806bc4d3622073683",
         "occurrence:bad03dda33d31430a1386c76fb6a854f25c4f09ca06d83faca376ec4669d41c2"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:f502f0322801dc03115de510d1385568f8e0fab2eccd03b27aecaddf7ab12710",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:d2d0d1978c805b4540d3d1fb931b9055b12ed11d33d3a23163265f1699b68f19"
       ]
     }
   },
@@ -333575,6 +334543,24 @@
         "occurrence:185a6621c840171424a9ebe29623c600ea4230c1f5338c9c3dc2478f83b375f1",
         "occurrence:3fedd5efe3d3505e3ba92656021c9039a184d4ab46446cbc4f596d40a1896134",
         "occurrence:43da33823dbfcd6ca1884fee0e5dd48449e4d2381a44486b1f8d080445119cbf"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:f81a3e94c41e1e7818ab3ea48006fab704b31e6f25f57b8876ebc357e53a3003",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78",
+        "occurrence:17bf408d88b30ffd06597bdc48e5971360b9b876c119476c7d041ed51bc289b3"
       ]
     }
   },
@@ -337757,10 +338743,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:c40c70bb78cd3f4c6f6de2663906a6ce0ac8e18abeb180e7481d968cee15cce8"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:ef5bf6e9893ed8b47bd0d39b0dfed8b0f9b4f7c6243113ca2dafc593a3ed7196"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:b16cfa5b5d9cc546c8baf804a8a06f4bb18c2a1e6e680efa8a3fef09d74ac22a"
       ]
     }
   },
@@ -339104,6 +340100,24 @@
     }
   },
   {
+    "artifactId": "artifact:fe2300ebc432fe043221481ca294be49f6cb1910a4a6c5791231751ed3dd6554",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:4883cc40d6160c0456619c174751ddf12c9f6deea58ef7ba3e90cedd6bdfabf7",
+        "occurrence:0a8b642e02f4fc58e222d2635fdc02c1c180ff5cbf4de8d0d9805d3cff9824ab",
+        "occurrence:633f28806eb46451fecc778b2c37540647bfdad68962c50d6024fc4503a49a78",
+        "occurrence:f5f64d407f67044047bbfa7793067a938b9284d76552e08e71fd2c37ed9fe4bb"
+      ]
+    }
+  },
+  {
     "artifactId": "artifact:fe408e398efee5e9364f21461199ecd05e0a894d70202ce881df4d9cab0e12e6",
     "required": [
       "yoroi"
@@ -339295,10 +340309,20 @@
     "development": [],
     "potential": [],
     "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1": [
+        "occurrence:47215f25782fd26179263beb6b66a410c21e97527cd554f355beb3928b933110",
+        "occurrence:232efd6a6a39bd577c66b52ec185389b4ce692d401280bc77acf5e235121808b",
+        "occurrence:bcd132720fbd8291e47533e550765dfd8b136ac5e017aa41bff6aa20ee733d08"
+      ],
       "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:bce31ecc813ab4ccc6ea9f17": [
         "occurrence:12a4386dde26549ef595fdd07710123f6ffcdbd5b7bd0028ec2e1d1675a29c3d",
         "occurrence:f133e2bafa3f0225e9c341af22b5c7d81b6fe56add11f46da699a15ff2bf1ece",
         "occurrence:8cb8919fd8ad2922c9722e708b7d57e4f7b1dcfc384d8618636cb5a972f95c15"
+      ],
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:a4d33fb7e5aeb6741865e9990c4421cb48a5d7ad40d5be37031ef0cf0a96cb7c",
+        "occurrence:523a688a19e86b0428bff2dca20f1f122e39ba90b7ae4c340f16f055ead41e2a",
+        "occurrence:daa2765f4cfc4ab0d49cd71468a9975ab2057e3852030a958f144504cb0b0468"
       ]
     }
   },
@@ -340134,6 +341158,24 @@
         "occurrence:94bdc5ec5fdbfd995911bea710215ddd9e39d65644e5d41d2fe8e48c13f95f15",
         "occurrence:db9cfedcfee19a330d855b0a951a2846f9b76089196aaf91546169ddf921b5de",
         "occurrence:7da09fb4440fd0af0da0bf61b776123fd4fd0b5acc2f51535b2e02356647a66d"
+      ]
+    }
+  },
+  {
+    "artifactId": "artifact:ff769f1db22b9c2dee32f556e3a959a04f168ff6506283c4bcad74b874328291",
+    "required": [
+      "bloxbean-cardano-client-library"
+    ],
+    "optional": [],
+    "build": [],
+    "development": [],
+    "potential": [],
+    "paths": {
+      "bloxbean-cardano-client-library:required:profile:bloxbean-cardano-client-library:d09ea3867583634af8fc3b00": [
+        "occurrence:3938f7a906bb0b2e60d2482ed46857e94c1668899d048f752cf0b52db1a0fc17",
+        "occurrence:41c865481fe9ae06ee2da66fa8f8690cc9ab995fb712728e3dbe9c9101c700c0",
+        "occurrence:d2d0d1978c805b4540d3d1fb931b9055b12ed11d33d3a23163265f1699b68f19",
+        "occurrence:ba5d94072637a641b2485d7ed20d351d13ae6e8a0a0e2cb722df3f85b8b0ddee"
       ]
     }
   },

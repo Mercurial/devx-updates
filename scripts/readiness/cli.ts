@@ -16,6 +16,7 @@ import { rebuildNative } from "../../lib/readiness/rebuild";
 import { replaySnapshot } from "../../lib/readiness/replay";
 import { COLLECT_ADAPTERS, ECOSYSTEMS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
 import { collectionCandidates } from "../../lib/readiness/candidates";
+import { gradleConfigurations } from "../../lib/readiness/gradle-selection";
 import { collectBatch } from "../../lib/readiness/batch";
 import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 import { capabilityRows } from "../../lib/readiness/capabilities";
@@ -33,6 +34,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   packet: { type: "string" }, decisions: { type: "string" },
   "before-ref": { type: "string" },
   "root-paths": { type: "string" },
+  configurations: { type: "string" },
   "python-version": { type: "string" }, packages: { type: "string" }, tags: { type: "string" },
 } });
 
@@ -53,6 +55,7 @@ import-native   --profile profile.json --input native-output.json
 collect         --tool id --adapter <collector> --roots package,package
                 --platform target [--path manifest-path] [--refresh]
                 npm-lock: --root-paths workspace/path,workspace/path ('.' = lock root)
+                gradle-resolution: --configurations selection.json --platform amd64-Linux
                 uv-tree: --python-version 3.13; go-packages: --packages ./... --tags tag,tag
 refresh-native  Refresh registered collection profiles against discovered source revisions
                 --tools id,id --limit N --refresh (limit counts distinct requests)
@@ -109,7 +112,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     await discover(snapshot, store, { stateDir: values.state!, toolIds: values.tools?.split(","), limit, refresh: values.refresh });
   } else if (command === "collect") {
     if (!values.tool || !values.roots || !values.platform || !(COLLECT_ADAPTERS as readonly unknown[]).includes(values.adapter)) throw new Error(`collect requires --tool, --adapter (${COLLECT_ADAPTERS.join(", ")}), --roots, and --platform`);
-    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), ...(values["root-paths"] !== undefined ? { rootPaths: values["root-paths"].split(",") } : {}), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
+    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), ...(values["root-paths"] !== undefined ? { rootPaths: values["root-paths"].split(",") } : {}), configurations: gradleConfigurations(values.configurations ? readJson(values.configurations) : undefined, values.adapter!), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
   } else if (command === "collect-batch") {
     const summary = await collectBatch(snapshot, store, readJson(required("input")), { stateDir: values.state!, refresh: values.refresh, toolIds: values.tools?.split(","), limit: values.limit === undefined ? undefined : Number(values.limit) });
     console.log(JSON.stringify(summary));

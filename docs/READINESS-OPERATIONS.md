@@ -242,16 +242,37 @@ This Debian worker is not the full Atlas Nix release environment. No Atlas code
 was compiled or tested. Full repository index tarballs are not vendored; the
 retained native plan is sufficient for graph replay, not an offline fresh solve.
 
-### Gradle selected-variant graph imports
+### Gradle selected-variant collection and imports
 
 `gradle-resolution` accepts format-version 1 output from
 `scripts/readiness/gradle-resolution.init.gradle`, currently pinned to Gradle
-7.5.1. It is import-only: it does not run arbitrary project evaluation from the
-regular collector or scheduled refresh. Resolve in a disposable worker with no
-publishing credentials or host home/socket access. Retain the worker image digest,
-exact project revision, source build files/version catalogs, selection, init script,
-command, toolchain and logs with the capture. `provenance` may hold those bytes;
-the complete envelope is retained and hashed by `import-native`.
+7.5.1. `collect`, `collect-batch` and `refresh-native` run the build in a disposable
+Docker worker using the pinned image
+`gradle@sha256:deb7b59256192aed1f463ab5e698c509cc77ce5d4e421d8b89b5d99eb0b24538`
+(Gradle 7.5.1, JDK 17.0.5, Linux amd64). Docker must be available; the collector
+pulls that exact image only when absent. The selected build must declare an
+official Gradle 7.5.1 wrapper distribution. The wrapper itself is never executed.
+Other Gradle versions need a separately validated worker/adapter.
+
+The worker has a read-only root and source/capture mounts, no host home, Docker
+socket or credential mounts, no forwarded host environment, no Linux capabilities,
+two CPUs, 2 GiB memory with no additional swap, 256 PIDs, 1 GiB work storage and
+128 MiB temporary storage. The image's cache volume is masked with another bounded
+16 MiB tmpfs. Project evaluation can access the network for public plugins and
+metadata. There are no host-writable project output mounts. Native JSON returns on
+bounded stdout; the capture retains stderr, elapsed time, source input sizes,
+worker limits, exact scripts and image digest. A run is limited to six minutes;
+image preparation has a separate three-minute bound. Every container has a unique
+name and is forcibly removed on success, failure or client timeout. Cleanup
+failure is reported with that exact name for inspection.
+
+Registered requests retain explicit project/configuration/scope selections.
+Verified cached evidence is reused before checkout or Docker startup; revision,
+selection, image, worker script or limit changes invalidate the cache. A successful
+batch resume also checks the current worker context. `--refresh` forces a fresh
+capture. Native dependency failures retain their partial graph but fail collection
+and remain retryable. Adapter limitations alone do not prevent cache reuse.
+Manual `import-native` remains available for retained native envelopes.
 
 Select each configuration explicitly in a JSON array:
 
@@ -261,8 +282,13 @@ Select each configuration explicitly in a JSON array:
 ]
 ```
 
-Pass its path as `-Dreadiness.selection`, the output path as `-Dreadiness.output`,
-and run `readinessResolution` with the init script. Scope is an explicit capture
+Pass its path to `collect --configurations selection.json`, alongside explicit
+`--roots`, `--path build.gradle` (or a discovered nested build with its own settings) and
+`--platform amd64-Linux`. The native capture also verifies that Gradle's actual
+root directory matches the selection, so ancestor settings cannot silently
+change source identities. The worker supplies the init script properties. For a
+manual capture, pass `-Dreadiness.selection` and `-Dreadiness.output` and run
+`readinessResolution` with the init script. Scope is an explicit capture
 choice: runtime, build or development. It must match the selected configuration's
 purpose. Only those configurations are included; local dependencies' separate
 compiler/plugin/annotation-processor configurations are not implied. The native
@@ -290,10 +316,20 @@ and 247 dependency edges; nine native constraint records remain evidence only.
 The aggregate library includes QuickTx through its native project dependencies.
 Koios/Ogmios backends, supplier modules, integration tests and build classpaths
 outside those roots remain open. Gradle's successful capture task is not a
-successful SDK build or a hardfork result. This profile requires explicit
-recapture/reimport; automatic isolated Gradle refresh remains rollout work.
+successful SDK build or a hardfork result. The original manual profile remains
+historical evidence; `content/readiness/gradle-batch.json` registers the same three
+configurations for managed collection and scheduled refresh:
 
-Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `gradle-resolution`, `go-packages`, and `uv-tree`. Cabal and Gradle remain import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
+```sh
+npm run readiness -- collect-batch --input content/readiness/gradle-batch.json
+npm run readiness -- refresh-native --tools bloxbean-cardano-client-library
+```
+
+This follows ADR-1/ADR-2: only retained, reviewable evidence feeds the static site.
+The scheduled workflow already calls `refresh-native`; its host `GH_TOKEN` is not
+forwarded into the Gradle worker.
+
+Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `gradle-resolution`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
 ## Scan retained source for integration leads
 
