@@ -11,6 +11,8 @@ conversation or agent context. Keep final evidence decisions separate.
 Use a checkout of this repository that includes the capability-review milestone.
 The committed handoff index is `content/readiness/capability-reviews.json`; the
 scope questions are in `content/readiness/capability-reviews.md`.
+Run commands from the repository root with this repository's dependencies
+installed (`npm ci` if needed). Do not install dependencies in consumer repositories.
 
 Packet folders are ignored local files. Regenerate them offline from the retained
 snapshot if they are missing:

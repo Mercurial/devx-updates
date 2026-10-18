@@ -262,6 +262,117 @@
       "attemptedAt": "2026-10-18T15:04:33.461Z",
       "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
       "succeededAt": "2026-10-18T15:04:39.429Z"
+    },
+    {
+      "id": "collection:8cd7297b8ed145acdb725ed9fb32590cb3619daa3be372255fd2b909879b3ab8",
+      "request": {
+        "toolId": "nami",
+        "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+        "adapter": "npm-lock",
+        "roots": [
+          "nami-wallet"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "."
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:01:11.560Z",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d",
+      "succeededAt": "2026-10-18T16:01:19.337Z"
+    },
+    {
+      "id": "collection:ec2f770095026512fa3e87712c5b18491dc01e1145e9552d7daeff60dcb33999",
+      "request": {
+        "toolId": "yoroi",
+        "revision": "d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6",
+        "adapter": "npm-lock",
+        "roots": [
+          "yoroi-v2"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "."
+        ],
+        "path": "mobile/package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:01:19.338Z",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369",
+      "succeededAt": "2026-10-18T16:01:25.860Z"
+    },
+    {
+      "id": "collection:a3be4f1d2cd88fd1d451074c5c5808a592da473f9915412bc86cc6d9294bc818",
+      "request": {
+        "toolId": "veridian-wallet",
+        "revision": "e93a56f54451cc386ba54dd1e8e5564a884b3593",
+        "adapter": "npm-lock",
+        "roots": [
+          "veridian-wallet"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "."
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:01:43.980Z",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731",
+      "succeededAt": "2026-10-18T16:01:53.195Z"
+    },
+    {
+      "id": "collection:3b5cd693d965d932bbc8d7007c00ac3323f143986e1e7f4173db2ff36219c7e0",
+      "request": {
+        "toolId": "marlowe-ts-sdk",
+        "revision": "93598c0f8e452d7679a44097c48e693d95bfd631",
+        "adapter": "npm-lock",
+        "roots": [
+          "@marlowe.io/runtime-lifecycle",
+          "@marlowe.io/wallet",
+          "@marlowe.io/language-core-v1"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "packages/runtime/lifecycle",
+          "packages/wallet",
+          "packages/language/core/v1"
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:02:45.163Z",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729",
+      "succeededAt": "2026-10-18T16:02:52.941Z"
+    },
+    {
+      "id": "collection:0f42d1351e5c1bac22111e86152e6cff01832d11856097f7cdadb33d30ce8652",
+      "request": {
+        "toolId": "cardano-connect-with-wallet",
+        "revision": "47ceba88338f19b576bf72251e8158a7883a5e45",
+        "adapter": "npm-lock",
+        "roots": [
+          "@cardano-foundation/cardano-connect-with-wallet-core",
+          "@cardano-foundation/cardano-connect-with-wallet"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "core",
+          "react"
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:02:52.941Z",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
+      "succeededAt": "2026-10-18T16:03:00.182Z"
     }
   ]
 }

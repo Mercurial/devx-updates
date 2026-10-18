@@ -322,13 +322,50 @@ collection boundary and ADR-2's retained, auditable data.
   including retained requests, cache identity, refresh and replay inputs.
 - [x] Write `docs/RUN-PREPARED-REVIEWS.md` with copy-paste discovery/challenge
   prompts, exact packet/output paths and checked-import instructions for the owner.
-- [ ] Collect the five bounded requests and retain source-backed scope gaps.
-- [ ] Validate, replay, regenerate reports, review and verify the static export.
+- [x] Collect the five bounded requests and retain source-backed scope gaps.
+- [x] Validate, replay, regenerate reports, review and verify the static export.
 
 Selection tests cover duplicated names, excluded orchestration roots, complete
 lock retention, invalid/partial selectors, and cache/refresh preservation. Old
 captures without explicit paths retain their existing interpretation and identity.
 The four prepared capability reviews remain pending for the owner to launch.
+
+Collection checkpoint: all five requests succeeded. Coverage rises from 21 to 26
+tools, with 30 historical profiles, 710 validated evidence objects, 41,988
+occurrences and 140,823 edges. The selected roots match their explicit paths;
+Cardano Connect with Wallet excludes the same-named orchestration root. Retained
+source captures and scope notes preserve Nami/Yoroi/connector manifest-lock
+version differences, Marlowe prerelease identity, and native/service boundaries.
+All 269 tools remain hardfork-unassessed; 243 still have no native profile.
+
+Verification checkpoint: all 62 behavior tests, TypeScript and readiness lint
+pass. All 30 historical profiles replay identically. Rerunning the completed
+batch attempts zero requests; selected native refresh reuses exactly five cached
+profiles with their explicit paths. The four prepared capability packet IDs are
+unchanged and pending. Implementation standards/specification reviews found no
+actionable issues, including in the requested LLM review guide. Coverage, impact,
+project and comparison reports are regenerated against baseline `ba025aa`.
+
+Final data review confirms all earlier graph records and collection jobs remain
+unchanged. The comparison adds five profiles and 18,151 edges without removing
+historical profiles or edges. Both review axes found no actionable issues. The
+33 new source captures and five scope notes match their pinned revisions; unused,
+never-committed intermediate chunks were moved to ignored recovery storage.
+
+Static export checkpoint: the `/devx-updates` production build with `--webpack`
+passes and exports 311 routes. The sandboxed attempt failed while Next.js parsed
+its TypeScript subprocess output; the same build succeeded outside the sandbox.
+Generated pages for all five consumers show exactly the selected roots and locked
+versions, current snapshot digest, source-backed gaps, base-path navigation and
+unassessed readiness. No browser interaction changes were made or re-tested.
+Default Turbopack was not revalidated. Implementation `f874f90` and the verified
+data milestone remain local; nothing was pushed.
+
+Next: use [Run the prepared reviews](./RUN-PREPARED-REVIEWS.md) to assign discovery
+and independent challenge for Lace, GovTool, TyphonJS and Cometa. Import checked
+results through the existing evidence-decision workflow. Continue higher-level
+coverage batches alongside the remaining native-artifact/Cabal gaps; compatibility
+testing still requires a selected hardfork target and environment.
 
 ## 1. Objective
 

@@ -39,6 +39,13 @@ npm run readiness -- collect --tool opshin --adapter uv-tree --roots opshin --pl
 
 npm collection reads a committed v2/v3 lockfile, including workspace links and hoisted dependencies. It does not run install scripts or assert which optional dependencies ship on a platform. Missing selections and platform applicability are explicit gaps.
 
+Use optional `--root-paths core,react` to distinguish same-named npm packages.
+Paths are relative to the selected lockfile; `.` selects its root. Every path and
+every `--roots` name must match the selected packages. Batch requests use the
+equivalent `rootPaths` array. Selection is retained in profile/cache identity and
+native refresh; unselected lock records remain auditable. Paths apply only to npm.
+Omitting them preserves the historical name-based selection.
+
 Large GitHub files are fetched through the immutable blob ID returned for the
 pinned source path; a missing or mismatched blob fails collection. New npm captures
 use a versioned envelope and identify unnamed workspace packages through unique

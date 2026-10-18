@@ -1,12 +1,12 @@
 {
-  "snapshot": "de734a0479c8215ff30c3647b450df34d688f125cfec5462c5554152decd736b",
+  "snapshot": "450ad0ee0eca82c337f5a5e1f2acc4252d18d2ec4e8c2ccc45687249bf12d6a1",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 21,
-  "profiles": 25,
+  "withProfiles": 26,
+  "profiles": 30,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 248,
+  "unresolvedTools": 243,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -1350,11 +1350,83 @@
     },
     {
       "toolId": "cardano-connect-with-wallet",
+      "id": "gap:007d1fc32d46c829ef3c7786",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm-musleabihf from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:045a41a2402b2e57dca33b8b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies prettier from node_modules/storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:047cb995c418b3e13d3ae662",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:08b794d7595eafe64d2ff423",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:0f5fef934d30638158056db9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:14949397c287bf7bf5b3c86c",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:15650bbb0ea9d59179fae07a",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm-gnueabihf from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:1596f44a3132aab03330d403",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-android-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:15f172ccf835743d772bcb3d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
     },
     {
       "toolId": "cardano-connect-with-wallet",
@@ -1366,11 +1438,293 @@
     },
     {
       "toolId": "cardano-connect-with-wallet",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:1e7ca89cd02b600766d68a1c",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional optionalDependencies @rollup/rollup-openharmony-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:25ca3f1340424f5d4a0d68f5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies lightningcss from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:296fcce4078bbd2dbd465aa2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:2c9ee138ee5cc58ca912a1d4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:321f94b175628efe42005062",
+      "area": "resolution",
+      "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:35a59bbdab4489c620e16182",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-openbsd-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:39646374613eaa7afeec733c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:3b428d2f5988c8554cc07b37",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-bundle-analyzer from node_modules/webpack-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:40e0dbd879aa7659d699e5a6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:463465b9bc7ca199d8161ef8",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-ppc64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:4866fa121d4af10efe0f0f8c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vite-plus from node_modules/storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:4fde49ccd1bdcd786bc9e39f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-dev-server from node_modules/webpack-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:527d598e75927b32703ad785",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-arm64-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:52a6888727da4f3a305de9d9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:623adcc5a5887f1e079d9e9d",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-android-arm-eabi from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:62cf7fddcd51d4aa6489b253",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-loong64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:64036af3f83eb2b9125697ab",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:671a3660c30d12df463b0ffd",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-darwin-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:69ae170c57a6533d946e8feb",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-freebsd-x64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:6a03727c4797eeacd75752b7",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-loong64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:784d6f3b341ea0b5bb8856a4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:7f5927775ae53b6d90f68748",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-riscv64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:8798a4a84a593f1d73184878",
+      "area": "resolution",
+      "reason": "Optional peerDependencies yaml from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:895327221f1cb50ea1b192cb",
+      "area": "artifact",
+      "reason": "At tag cardano-connect-with-wallet-v0.2.22, core manifest 0.2.12 differs from lock 0.2.11 and React manifest 0.2.22 differs from lock 0.2.21; dependency declarations agree in both. Explicit core/react paths exclude the same-named monorepo root from production roots. Published artifact correspondence is unverified.",
+      "nextAction": "Verify both package release/lock mappings; preserve locked versions and explicit paths until published artifact provenance is established.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
+      "code": "wallet-scope:cardano-connect-with-wallet:artifact"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:915b4c77f66011fd789a5cc0",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-ppc64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:9571891f41af4de542e0eacb",
+      "area": "integration",
+      "reason": "Injected wallet providers, peer connections and browser/mobile integration settings are external/configuration-dependent boundaries. README protocol claims do not prove that every integration is enabled or implemented by a consuming application.",
+      "nextAction": "Capture selected core/React entry-point wiring and consumer configuration, then manually review wallet interaction and protocol capabilities.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
+      "code": "wallet-scope:cardano-connect-with-wallet:integration"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:a44be73e124888d7cf07fff2",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-arm64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:a4872ed647761d6f3fefb79b",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-ia32-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:a51a3263cd17d499dacc10dc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/debug from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:a730e6bc858f89e654b00ab6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:a78cdec39519d36ce74f7498",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:afd6041bfd11b1c52da519ec",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:b5c33d62502f2d5ea3d0e80b",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-x64-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:bd992655c96874f8ac737467",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-win32-x64-msvc from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:c27e292fe150bd94e6355d19",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:c7ae7f5a8d5f857b09700b75",
+      "area": "resolution",
+      "reason": "Optional peerDependencies yaml from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
     },
     {
       "toolId": "cardano-connect-with-wallet",
@@ -1378,6 +1732,126 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ce126ba5aa71d93d8bf29c23",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:d0526775ec5ca7a4066b50ab",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-freebsd-arm64 from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:d6dca60251da9829f6676803",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-s390x-gnu from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:da2614a69c544c4098ab2b9d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:db677e0b7e56de30e071a1de",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:e2f664b7977a4a0170837ca6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/css-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ea9788332c79c07bb85df771",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/html-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ee5429f0ca227216051b076e",
+      "area": "resolution",
+      "reason": "Optional optionalDependencies @rollup/rollup-linux-riscv64-musl from node_modules/rollup has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ee69236eed0ff6f2490c0af8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/babel-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:eed6efe3f62cf1027b6dbfdd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ef2229de1170ec3ac5235f69",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:f294d3139ad872ea4105fa24",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/@playwright/experimental-ct-core/node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:f7582eeced0a5712e80d461f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:fb9936db3eb7716a7f6d819e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native from node_modules/styled-components has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
+    },
+    {
+      "toolId": "cardano-connect-with-wallet",
+      "id": "gap:ffeda0850e937e7138caf676",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30"
     },
     {
       "toolId": "cardano-crypto-js",
@@ -7384,6 +7858,14 @@
     },
     {
       "toolId": "marlowe-ts-sdk",
+      "id": "gap:1b70e43a60b8a31ad17e91e4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -7392,11 +7874,101 @@
     },
     {
       "toolId": "marlowe-ts-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:3d9d58593ed987f5db72fee7",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:535d608847eb19ed49f280f1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:57e819f06ad3da5aa8e4a873",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/simple-websocket/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:9238083040b90ecedb4b7178",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/simple-websocket/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:9b6f2556c67b0bfd14346ba5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:a1367625609cf1b4666397eb",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:b3d4a5608a7445933961c306",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:b4050822c9d52e1e1ed6d52c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:bbabd9674b741c3439310fb4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:bbcb6400ce82ca344e0e1ae5",
+      "area": "integration",
+      "reason": "Marlowe Runtime instance and connected-wallet configuration are external to the selected npm graph. README documents browser CIP-30 and Lucid-backed choices; its Runtime compatibility table lists older SDK versions and does not establish a deployed Runtime version for 0.4.0-beta.",
+      "nextAction": "Capture production contract lifecycle/wallet wiring and selected Runtime version/configuration before manually reviewing behavior and service dependencies.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729",
+      "code": "wallet-scope:marlowe-ts-sdk:integration"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:c2d1b90dc7160e8f771914d0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:c2e85036b1c2864caa404afb",
+      "area": "artifact",
+      "reason": "Selected runtime-lifecycle, wallet and language-core-v1 source/lock versions match tag 0.4.0-beta. This is a prerelease source reconstruction, not verified correspondence with published package artifacts. Documentation, examples and testing packages remain retained but are not selected roots.",
+      "nextAction": "Verify published prerelease package provenance and supported release selection before attributing consumer exposure.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729",
+      "code": "wallet-scope:marlowe-ts-sdk:artifact"
     },
     {
       "toolId": "marlowe-ts-sdk",
@@ -7404,6 +7976,22 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:e92699f09b57e28140431468",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/core from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
+    },
+    {
+      "toolId": "marlowe-ts-sdk",
+      "id": "gap:f22f0db24a7a4e9847517a2f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:marlowe-ts-sdk:e486633257978f85f92e3729"
     },
     {
       "toolId": "masumi",
@@ -8197,6 +8785,71 @@
     },
     {
       "toolId": "nami",
+      "id": "gap:2176449f195cb5535ac74e3b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-constants from node_modules/@trezor/env-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:24cba667cc31664b2c81e21b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:3813c0003862aa706b2f9289",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sockjs-client from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:388c7fa0f8af5bcaa82e7a2b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:3c4297f774a97c048504dc75",
+      "area": "integration",
+      "reason": "The npm profile excludes the vendored cardano-message-signing Rust/WASM build and cannot establish the distributed WASM identity or configured Blockfrost deployment. README/API declarations are review leads, not verified signing or transaction behavior.",
+      "nextAction": "Capture pinned native build inputs and browser production wiring, then manually review signing, submission and selected provider configuration.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d",
+      "code": "wallet-scope:nami:integration"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:3d25d0ca82553cff84221c89",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:4146c6d2152d41f6f327ba1d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:4725ba28d6d8f6bd983811f0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -8204,11 +8857,156 @@
     },
     {
       "toolId": "nami",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:4c8d5a338749215d88421664",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies fibers from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:4f6b4aa3afb554a17dead19b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:5b2d7c572060fe3bdf2e0752",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/bun from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:673bf91ab9aa19f88cb7ba63",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:687e297ba6076c160567e6fa",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-localization from node_modules/@trezor/env-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:68e8a604c61276919ee71cf9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/webpack from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:69deb52e2ae82ea1867292bf",
+      "area": "artifact",
+      "reason": "Nami default-branch source has manifest 3.9.6 but npm lock root 3.9.5; dependency declarations agree. The manifest declares Yarn 1.22.21 while README documents npm installation. This npm graph does not establish the authoritative release lock or published browser-extension artifact.",
+      "nextAction": "Identify the supported release revision, authoritative package-manager input and distributed browser bundle; preserve both source and lock versions until verified.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d",
+      "code": "wallet-scope:nami:artifact"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:6b5211ebdee9647b9468626c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:749c2eda05348d015ee90725",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:7a5c5347492d9932764a759d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:83c04d1b325264c936af2323",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:8b88090881eec55fc8dc6ce7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native from node_modules/easy-peasy has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:a87272c78016fad32608b891",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/easy-peasy has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:ae8590af9364e5f7c7d5acf0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-plugin-serve from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:b97ceb61119c44444485c8fb",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:c7c089bdfac566332710292b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native from node_modules/@trezor/env-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:c95bf94b18092ce27a12c329",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:e4bfd82ad68a3f1f743d7e47",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-asmjs from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
+    },
+    {
+      "toolId": "nami",
+      "id": "gap:ea163f47b061996e081fb31f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vitest from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:nami:255bf3da496ccc0487bcc36d"
     },
     {
       "toolId": "naumachia",
@@ -10500,11 +11298,116 @@
     },
     {
       "toolId": "veridian-wallet",
+      "id": "gap:0ea44006979d103bcf4162f6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:1466423d206a4c26948d708a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/css-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:1851c002d7a1980f7d72f4da",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/tar-stream/node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:1cc65cf4f89f6952ef9d054c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet.",
       "code": "integration-unreviewed"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:2afd82a7fd6c7ecf89b3780d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies allure-playwright from node_modules/allure-js-commons has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:30e7108ef1130591fd780324",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/text-decoder/node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:45c6f2b0ece9778f5c623c4b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/bare-fs has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:48d3a81d36141de677aafbe0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies fibers from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:500965b76485a782e11fe4c6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/core from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:587628f6dc86a6198399a62d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:5b5c189310f86123e475fa66",
+      "area": "integration",
+      "reason": "Veridian tag, manifest and npm lock agree on 1.2.2, but the npm graph excludes native Capacitor Android/iOS inventories, KERIA and witness deployments. Compose files have configurable image/deployment selections; they do not identify the services used by a distributed wallet. The sample dApp is not a selected root.",
+      "nextAction": "Collect pinned native build and deployed image identities, then manually review credential, wallet and CIP-45 production wiring for the selected configuration.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731",
+      "code": "wallet-scope:veridian-wallet:integration"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:606178ca51eb44bdad4a27dd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/record-cache/node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:685996026c6de8d234ee326e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/@jest/environment-jsdom-abstract has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
     },
     {
       "toolId": "veridian-wallet",
@@ -10515,11 +11418,59 @@
     },
     {
       "toolId": "veridian-wallet",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:7f58f74e8976fccdeffb17b8",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:858e8dbe9eb1344afaf9a481",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:8dcc7ab8922b0aabe6728751",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:903348e028b6dd7a5e42947f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native from node_modules/react-redux has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:921a9e26a5c8fa14df3a0bc9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:94c18d04d547ad0c492f0f49",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/bare-events has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:9a62faf42ead063002148115",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
     },
     {
       "toolId": "veridian-wallet",
@@ -10527,6 +11478,54 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:ccef926a1557b4328bf9bfb3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/html-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:cd6abcb3a32d8d12b472868a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:d0604aee5bed2f3b067a8b66",
+      "area": "resolution",
+      "reason": "Optional peerDependencies puppeteer-core from node_modules/webdriverio has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:db81c5d40cab635df948cdf2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:e19c580b30c37511091871ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
+    },
+    {
+      "toolId": "veridian-wallet",
+      "id": "gap:eb600ff51f36e328c05facfd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:veridian-wallet:4e485ae12935aa07b3805731"
     },
     {
       "toolId": "vespr",
@@ -11397,11 +12396,43 @@
     },
     {
       "toolId": "yoroi",
+      "id": "gap:005b8516faefa570214b27dd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:0b55e5c10c73eaafbe066734",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-localize from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:10a48a3c2e46a9db8eaf11fc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/react-devtools-core/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:1d9f5a6f2fa9dc0baf07d7c7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vitest from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
     },
     {
       "toolId": "yoroi",
@@ -11413,11 +12444,269 @@
     },
     {
       "toolId": "yoroi",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:201e7b036b6c4950ad700ecb",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:2278b60939f61925a541ad4b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:22f08163cb5d1fbff40ec1a8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @expo/dom-webview from node_modules/expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:24ebe530eb66bfd62017dd88",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @glimmer/reference from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:34b8193f828911e19f6a8aea",
+      "area": "resolution",
+      "reason": "Optional peerDependencies posthog-react-native-session-replay from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:3b03b22ba105bb063c58db94",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-windows from node_modules/lottie-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:3f7c8084e98d20c807d41263",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:41b16deeb76c8c94bb5d5f54",
+      "area": "resolution",
+      "reason": "Optional peerDependencies content-tag from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:45ffa34b2736ea551236d1ea",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:4729009a71ccf4930e4d56dd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:5195089ce8ef3d7bca6dd627",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/react-devtools-core/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:5e605b772db7ad005cb7038a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/metro/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:62556800dcb80f7edce4248b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vue/compiler-core from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:66d666599e8575376a89e55a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:6fad44e102d510429becccf3",
+      "area": "artifact",
+      "reason": "Yoroi tag v7.0.5 and mobile manifest 7.0.5 contain lock root yoroi-v2 7.0.4; dependency declarations agree. The selected mobile npm graph is not a verified inventory of a shipped 7.0.5 app.",
+      "nextAction": "Verify the release build provenance and mobile lock correspondence without replacing the captured lock version.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369",
+      "code": "wallet-scope:yoroi:artifact"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:711c05ce10147bb5920f0e53",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@testing-library/react has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:7c89105b24186a1b2889dcfc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:80a1384b560a18980073184f",
+      "area": "integration",
+      "reason": "Only the mobile JavaScript root is selected. Expo prebuild and production/preview/development configuration, native Android/iOS output, postinstall patches, hardware devices and provider deployments remain outside this lock profile.",
+      "nextAction": "Capture the selected production Expo/native build output and configuration, then manually review wallet signing, sending and service boundaries.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369",
+      "code": "wallet-scope:yoroi:integration"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:84390474fdc73ea560729cdc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @glimmer/env from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:8725eff503230f61703f92b2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @lottiefiles/dotlottie-react from node_modules/lottie-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:95817eb0d593f079cb24daa6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/metro/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:963c1ac731c059159f54b1e3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @glimmer/syntax from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:9944c078847d68cad60ff284",
+      "area": "resolution",
+      "reason": "Optional peerDependencies svelte from node_modules/@trivago/prettier-plugin-sort-imports has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:9d0d218d487a3d33ddad537a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:aadfdf1ecdf71526a1c814bb",
+      "area": "resolution",
+      "reason": "Optional peerDependencies graphql from node_modules/@0no-co/graphql.web has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:acf11970fb804085c40b6ba5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-react-compiler from node_modules/babel-preset-expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:b050f4eaeb6e3c250cd57948",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @expo/metro-runtime from node_modules/expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:b92f7c9013d5fdfd1f88eb91",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:bc9354fed548145b8c57fa67",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @glimmer/validator from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:bd663201246631c64029f9ba",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:c3f261096707ef2e7911aec2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies prettier-plugin-svelte from node_modules/@trivago/prettier-plugin-sort-imports has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:c5055133d0478cce29c84086",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-navigation from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:c66dbde6fb0c1f92a79c8def",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vue/compiler-sfc from node_modules/@trivago/prettier-plugin-sort-imports has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
     },
     {
       "toolId": "yoroi",
@@ -11425,6 +12714,54 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:d50fc33c92d9888affbbbe40",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:d5144c1d3a9250db5296b869",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:d73a8a10449c0b605bc86784",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/bun from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:dc4c63e17532f33d9d8a99f8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ember-template-recast from node_modules/@formatjs/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:e09a285f8393307d1bd439d9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @react-native-community/cli from node_modules/@react-native/community-cli-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
+    },
+    {
+      "toolId": "yoroi",
+      "id": "gap:f88690080020d4be900e0ed5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:yoroi:67d8aeed89b15a8b48d24369"
     },
     {
       "toolId": "zeroj",
