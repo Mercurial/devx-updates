@@ -15,7 +15,7 @@ export function repositoryReference(raw: string): string | null {
 
 export function detectManifests(paths: string[]): { manifests: string[]; ecosystems: Ecosystem[]; reviewFiles: string[] } {
   const patterns: [Ecosystem, RegExp][] = [
-    ["npm", /(^|\/)(package\.json|package-lock\.json|yarn\.lock|pnpm-lock\.yaml)$/],
+    ["npm", /(^|\/)(package\.json|package-lock\.json|yarn\.lock|bun\.lockb?|pnpm-lock\.yaml)$/],
     ["cargo", /(^|\/)Cargo\.(toml|lock)$/],
     ["cabal", /\.cabal$|(^|\/)(cabal\.project(\..+)?|stack\.yaml(\.lock)?)$/],
     ["go", /(^|\/)go\.(mod|sum)$/],

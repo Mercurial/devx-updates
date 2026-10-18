@@ -433,6 +433,26 @@ discovery/challenge reviews remain available to the owner through
 [Run the prepared reviews](./RUN-PREPARED-REVIEWS.md); target-specific compatibility
 testing still awaits a selected hardfork target and environment.
 
+### Blaze/Bun and PyCardano/Poetry production SDK coverage
+
+This milestone implements the next higher-level priority under ADR-1/ADR-2.
+Read complete committed package-manager inputs and select Blaze SDK, tx, wallet
+and query workspaces plus PyCardano's root library. Retain all lock entries;
+separate development/example projects from production roots. Never infer
+installed artifacts or hardfork compatibility from dependency collection.
+
+- [x] Inspect pinned sources and implement Bun text-v1 and Poetry lock-2.1
+  collection, including native Poetry freshness/source/constraint checks.
+- [ ] Collect the two pinned requests in `content/readiness/lock-sdk-batch.json`,
+  recording release, platform, native-artifact and integration scope gaps.
+- [ ] Validate/replay, verify cache reuse, regenerate reports, review and build.
+
+The Bun reader checks workspace declarations and follows nested package keys.
+The Poetry reader runs isolated pinned tooling without invoking consumer code;
+legacy manifests and registry packages are its initial supported boundary.
+Unsupported formats/sources fail explicitly. Prepared capability reviews remain
+owner-launched; this milestone does not import review findings.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

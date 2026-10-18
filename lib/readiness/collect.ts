@@ -8,6 +8,7 @@ import { addEvidence, Store } from "./store";
 import type { NativeInput, Snapshot } from "./types";
 import { collectionRequests, publishCollection, reuseCollection, type CollectOptions, type RefreshSelection } from "./collection";
 import { collectExpanded } from "./collect-expanded";
+import { collectLocks } from "./collect-locks";
 import { collectYarn } from "./collect-yarn";
 import { githubSource, normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 import { npmRootPaths } from "./npm-roots";
@@ -28,6 +29,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   if (!tool?.revision || !tool.repo || !tool.release) throw new Error("Discover this tool's immutable source first");
   const rootPaths = npmRootPaths(options.rootPaths, options.adapter);
   try {
+    if (["bun-lock", "poetry-lock"].includes(options.adapter)) return await collectLocks(snapshot, store, options);
     if (options.adapter === "yarn-lock") return await collectYarn(snapshot, store, options);
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
     const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, ...(rootPaths ? { rootPaths } : {}), path: options.path ?? "", platform: options.platform, resolverContext: options.adapter === "npm-lock" ? "committed-lockfile:npm-workspaces-v1" : "committed-lockfile" };

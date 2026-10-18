@@ -145,3 +145,27 @@ extensions and plugins are retained as inputs requiring separate verification;
 the collector does not guess their installed effects. The NEWM connector's
 dependency declarations agree with its lock despite the root version discrepancy.
 The two pnpm application/SDK importers also match their manifest declarations.
+
+## Bun/Poetry production SDK batch
+
+`lock-sdk-batch.json` selects Blaze's SDK, transaction, wallet and query packages,
+plus PyCardano's root library. It continues the higher-level consumer priority.
+
+- Blaze revision `0499975bfa4fdb324f2185657a7f17e4cea35aa1` is tagged
+  `@blaze-cardano/blueprint@0.9.1`. Selected manifests are SDK 0.3.3, tx 0.15.4,
+  wallet 0.6.3 and query 0.6.4; the tag does not prove these independent published
+  artifacts. Bun 1.3.14's text lock retains all 21 workspaces and their dependencies,
+  including examples/e2e/tooling outside the four selected roots. Overrides,
+  optional peers, native/WASM outputs, providers and wallet configuration remain
+  explicit review boundaries. The nested UPLC Cargo lock is not whole-SDK coverage.
+- PyCardano revision `0445f3079cb8b356f48c13e040d00e25326ce59e`, tag `v0.19.2`,
+  has matching library manifest 0.19.2 and a Poetry 2.1 lock produced by Poetry
+  2.1.1. Collect its root `poetry.lock` with the verified manifest content hash;
+  the example/full-stack lock is a separate project. All 95 locked distributions,
+  main/dev/docs groups, markers, extras and candidate files stay retained.
+  Python/platform selection, build-backend and native cryptography/serialization
+  artifacts, configured chain backends and published package provenance remain open.
+
+See [operations](../../docs/READINESS-OPERATIONS.md#bun-and-poetry-production-sdk-inputs)
+for collector tooling. Both requests use `all-lockfile-targets`; neither executes
+consumer scripts nor claims hardfork compatibility.

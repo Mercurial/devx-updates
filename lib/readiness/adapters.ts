@@ -4,6 +4,8 @@ import { NATIVE_ADAPTERS } from "./types";
 import { resolvePnpm } from "./pnpm";
 import { resolveGo } from "./go";
 import { resolveUv } from "./uv";
+import { resolveBun } from "./bun";
+import { resolvePoetry } from "./poetry";
 import { resolveYarn } from "./yarn";
 import type { AdapterContext } from "./adapter-context";
 import { npmRootPaths } from "./npm-roots";
@@ -37,7 +39,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   const artifactIds = new Set<string>();
   const edgeIds = new Set<string>();
   const addNode = (locator: string, name: string, version: string | null, source: string, integrity: string | null) => {
-    const ecosystem = ["pnpm-lock", "yarn-lock"].includes(input.adapter) ? "npm" : input.adapter === "uv-tree" ? "python" : input.adapter.split("-")[0];
+    const ecosystem = ["pnpm-lock", "yarn-lock", "bun-lock"].includes(input.adapter) ? "npm" : ["uv-tree", "poetry-lock"].includes(input.adapter) ? "python" : input.adapter.split("-")[0];
     const a = artifact({ ecosystem, name, version, source, integrity });
     if (!artifactIds.has(a.id)) { result.artifacts.push(a); artifactIds.add(a.id); }
     const id = `occurrence:${digest({ profileId, locator })}`;
@@ -63,6 +65,8 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   } };
   if (input.adapter === "pnpm-lock") resolvePnpm(data, context);
   else if (input.adapter === "yarn-lock") resolveYarn(data, context);
+  else if (input.adapter === "bun-lock") resolveBun(data, context);
+  else if (input.adapter === "poetry-lock") resolvePoetry(data, context);
   else if (input.adapter === "go-packages") resolveGo(data, context);
   else if (input.adapter === "uv-tree") resolveUv(data, context);
   else if (input.adapter === "npm-lock") {

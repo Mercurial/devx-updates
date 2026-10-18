@@ -188,7 +188,7 @@ Example profile:
 
 Replace placeholders with observed values. For Cabal, import `dist-newstyle/cache/plan.json` from the declared build configuration. Preserve index states, project flags, and release/build provenance as source evidence. `release-build` is reserved for an actual release build's output; reconstructing source locally is not equivalent.
 
-Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without uv locks, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
+Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
 ## Manual review handoff
 
@@ -333,3 +333,46 @@ self-contained export, and uploaded review artifacts include the chunk directory
 `.github/workflows/readiness.yml` refreshes discovery and registered native profiles weekly and on manual dispatch. It validates data and uploads a review artifact with a snapshot comparison, including resolution failures. It has read-only repository permission and does not commit, push, or create pull requests. Accepted snapshots and evidence are committed separately after review.
 
 Adding a new native profile and launching review passes remain explicit tasks. Download review artifacts within their 90-day retention window; merged evidence is retained in git.
+
+### Bun and Poetry production SDK inputs
+
+`bun-lock` reads text `bun.lock` version 1/config version 1 with pinned
+`jsonc-parser` 3.3.1, including comments and trailing commas. It captures every
+locked workspace manifest, checks dependency declarations, follows nested package
+keys and workspace aliases, and retains development, optional and peer edges.
+Use `--platform all-lockfile-targets` and select production package names.
+Binary `bun.lockb` and other versions remain unsupported. Repository `bunfig.toml`
+and `.npmrc` files are retained; when present, omitted registry URLs retain an
+unresolved registry identity instead of assuming npm's public registry.
+Installed peer contexts, overrides/patch content and lifecycle outputs remain gaps.
+The format/lookup boundary follows [Bun's lockfile documentation](https://bun.sh/docs/pm/lockfile)
+and the [Bun 1.3.14 native reader](https://github.com/oven-sh/bun/blob/bun-v1.3.14/src/install/lockfile/bun.lock.zig).
+
+`poetry-lock` reads Poetry lock version 2.1 with legacy `[tool.poetry]` manifests,
+using Poetry and poetry-core **2.1.1** in an isolated Python interpreter. Set up
+collector tooling once (these commands install collector tooling only):
+
+```sh
+uv venv .readiness/toolchains/poetry --python python3
+uv pip install --python .readiness/toolchains/poetry/bin/python poetry==2.1.1
+npm run readiness -- collect-batch --input content/readiness/lock-sdk-batch.json
+```
+
+Python must provide `tomllib` (3.11+). `READINESS_POETRY_PYTHON` can select another
+interpreter with the same pinned Poetry/core versions. Toolchain versions and the
+helper digest participate in cache identity. The helper uses the
+[native Locker](https://github.com/python-poetry/poetry/blob/2.1.1/src/poetry/packages/locker.py)
+to verify the manifest content hash and read all locked packages; native
+`Package.satisfies` checks names, constraints and sources. No Poetry CLI, plugin,
+consumer install, build, solver or backend runs. Replay needs retained JSON only,
+without Python or Poetry. A conditional integration test exercises the real reader
+when the tooling interpreter is available; install it to run that test in CI/local checks.
+
+Every group, extra declaration, marker and candidate wheel/sdist hash is retained.
+The graph preserves matching alternatives with their conditions, without selecting
+a target environment or claiming an installed distribution hash. Non-main groups
+are development scope. PEP 621 manifests and direct/local/git dependencies are
+explicitly rejected by this first boundary; it does not run local metadata hooks.
+Build-backend dependencies, native libraries and release provenance remain gaps.
+Both adapters use collection registration, bounded batches, retry, evidence-checked
+cache reuse and offline replay. Their profiles remain partial and hardfork-unassessed.
