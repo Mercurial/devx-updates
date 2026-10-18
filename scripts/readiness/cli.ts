@@ -87,6 +87,8 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
         }
       }
       Object.assign(next, { profiles: previous.profiles, artifacts: previous.artifacts, occurrences: previous.occurrences, edges: previous.edges, evidence: previous.evidence, decisions: previous.decisions, ...(previous.collections ? { collections: previous.collections } : {}) });
+      if (previous.capabilities) next.capabilities = previous.capabilities;
+      if (previous.capabilityDecisions) next.capabilityDecisions = previous.capabilityDecisions;
       if (previous.catalogDigest === next.catalogDigest) next.catalogRevision = previous.catalogRevision;
     }
     store.save(next);

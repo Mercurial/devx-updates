@@ -3,9 +3,10 @@ import assert from "node:assert/strict";
 import { mkdtempSync, rmSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 import { canonical, inventory, finalize, validate } from "./core";
 import { resolveNative } from "./adapters";
-import { Store, addEvidence, mergeResolution } from "./store";
+import { Store, addEvidence, mergeResolution, writeJson } from "./store";
 import { exportPacket, importReview, reviewPacket } from "./review";
 import { calculateImpact, compareSnapshots } from "./impact";
 import { capabilityRows } from "./capabilities";
@@ -70,6 +71,35 @@ test("explicit capability decisions retain history and require the previous stat
     assert.equal(next.capabilityDecisions?.length, 4);
     assert.equal(reviewPacket(next, ["wallet"]).context.capabilityDecisions?.length, 4);
     assert.equal(next.tools.find((t) => t.id === "wallet")!.readiness, "unassessed");
+  } finally { rmSync(directory, { recursive: true }); }
+});
+
+test("inventory preserves imported capability decisions and review context across catalog refreshes", () => {
+  const { directory, store, snapshot, packet, result } = fixture();
+  try {
+    const reviewed = importReview(snapshot, store, packet, result, { decisions: [{ findingId: "submit", verification: "verified", method: "source-review", rationale: "Checked the pinned submission entry point." }] });
+    const catalog = { nodes: [{ id: "wallet", name: "Wallet" }, { id: "other", name: "Other" }] } as Graph;
+    const path = join(directory, "catalog.json");
+    store.save(reviewed);
+    const context = reviewPacket(reviewed, ["wallet"]);
+    const refresh = () => execFileSync(process.execPath, ["--import", "tsx", "scripts/readiness/cli.ts", "inventory", "--directory", directory, "--catalog", path], { encoding: "utf8", timeout: 30_000 });
+    writeJson(path, catalog);
+    refresh();
+    const unchanged = store.load();
+    assert.equal(unchanged.semanticDigest, reviewed.semanticDigest);
+    assert.equal(canonical(reviewPacket(unchanged, ["wallet"])), canonical(context));
+
+    catalog.nodes.push({ id: "new", name: "New tool" } as Graph["nodes"][number]);
+    catalog.nodes[0].name = "Renamed wallet";
+    writeJson(path, catalog);
+    refresh();
+    const changed = store.load();
+    assert.deepEqual(changed.capabilities, reviewed.capabilities);
+    assert.deepEqual(changed.capabilityDecisions, reviewed.capabilityDecisions);
+    assert.deepEqual(changed.evidence, reviewed.evidence);
+    assert.equal(changed.tools.find((tool) => tool.id === "wallet")!.name, "Renamed wallet");
+    assert.equal(changed.tools.find((tool) => tool.id === "new")!.capability, "unresolved");
+    store.verify(changed);
   } finally { rmSync(directory, { recursive: true }); }
 });
 
