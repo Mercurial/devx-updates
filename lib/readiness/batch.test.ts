@@ -30,11 +30,11 @@ test("batch checkpoints successes, retains first-time failures, and resumes with
   try {
     f.publish("alpha"); f.publish("gamma");
     const batch = { schemaVersion: 1, requests: [f.request("beta"), f.request("alpha"), f.request("gamma")] };
-    assert.deepEqual(await collectBatch(f.snapshot, f.store, batch, { ...f.options, limit: 2 }), { requested: 3, attempted: 2, failed: 1, succeeded: 1, pending: 2, deferred: 0 });
+    assert.deepEqual(await collectBatch(f.snapshot, f.store, batch, { ...f.options, limit: 2 }), { requested: 3, attempted: 2, failed: 1, succeeded: 1, pending: 1, deferred: 0 });
     assert.deepEqual(f.queue().jobs.map((job) => job.status), ["failed", "succeeded", "pending"]);
     assert.match(f.queue().jobs[0].error!, /No discovered manifest/);
     assert.ok(f.store.load().tools.find((tool) => tool.id === "beta")!.gaps.some((gap) => gap.code === "native-collection-failed:npm-lock"));
-    assert.deepEqual(await collectBatch(f.snapshot, f.store, batch, { ...f.options, limit: 1 }), { requested: 3, attempted: 1, failed: 0, succeeded: 2, pending: 1, deferred: 0 });
+    assert.deepEqual(await collectBatch(f.snapshot, f.store, batch, { ...f.options, limit: 1 }), { requested: 3, attempted: 1, failed: 1, succeeded: 2, pending: 0, deferred: 0 }, "a limited run must still report the outstanding selected failure");
     assert.equal(f.queue().jobs[0].attempts, 1, "pending gamma advances ahead of failed beta");
     f.publish("beta");
     assert.deepEqual(await collectBatch(f.snapshot, f.store, batch, f.options), { requested: 3, attempted: 1, failed: 0, succeeded: 3, pending: 0, deferred: 0 });

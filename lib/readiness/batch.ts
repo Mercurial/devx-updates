@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { digest, list, object, text } from "./core";
 import { collect } from "./collect";
-import type { CollectionRequest, RefreshSelection } from "./collection";
+import { retainedCollectionProfile, type CollectionRequest, type RefreshSelection } from "./collection";
 import { readJson, Store, writeJson } from "./store";
 import { COLLECT_ADAPTERS, type CollectAdapter, type Snapshot } from "./types";
 
@@ -54,14 +54,8 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
 }
 
 function retainedResult(job: CollectionJob, snapshot: Snapshot, store: Store): boolean {
-  const profile = snapshot.profiles.find((profile) => profile.id === job.profileId);
-  if (!profile || profile.toolId !== job.request.toolId || profile.revision !== job.request.revision) return false;
-  if (job.request.adapter === "go-packages" && profile.coverage !== "complete") return false;
-  return profile.evidenceIds.every((id) => {
-    const evidence = snapshot.evidence.find((evidence) => evidence.id === id);
-    if (!evidence) return false;
-    try { store.readEvidence(evidence); return true; } catch { return false; }
-  });
+  const profile = retainedCollectionProfile(snapshot, store, job.profileId, job.request.adapter);
+  return !!profile && profile.toolId === job.request.toolId && profile.revision === job.request.revision;
 }
 
 /** The CLI holds the store's writer lock across both queue and snapshot updates. */
@@ -96,7 +90,6 @@ export async function collectBatch(snapshot: Snapshot, store: Store, raw: unknow
   writeJson(path, queue);
   // Unattempted work advances even when an earlier request keeps failing.
   const pending = selected.filter((job) => job.status === "pending" || job.status === "failed").sort((a, b) => Number(a.status === "failed") - Number(b.status === "failed")).slice(0, options.limit);
-  let failed = 0;
   for (const [index, job] of pending.entries()) {
     job.status = "running"; job.attempts++; job.attemptedAt = new Date().toISOString(); delete job.error;
     writeJson(path, queue);
@@ -105,15 +98,16 @@ export async function collectBatch(snapshot: Snapshot, store: Store, raw: unknow
       const profile = await collect(snapshot, store, { ...job.request, stateDir: options.stateDir, refresh: options.refresh });
       job.status = "succeeded"; job.profileId = profile.id; job.succeededAt = new Date().toISOString();
     } catch (error) {
-      job.status = "failed"; job.error = String(error).slice(0, 1500); failed++;
+      job.status = "failed"; job.error = String(error).slice(0, 1500);
       console.error(`Collection batch failed for ${job.request.toolId}: ${job.error}`);
     }
     writeJson(path, queue);
   }
   return {
-    requested: selected.length, attempted: pending.length, failed,
+    requested: selected.length, attempted: pending.length,
+    failed: selected.filter((job) => job.status === "failed").length,
     succeeded: selected.filter((job) => job.status === "succeeded").length,
-    pending: selected.filter((job) => job.status === "pending" || job.status === "failed").length,
+    pending: selected.filter((job) => job.status === "pending").length,
     deferred: selected.filter((job) => job.status === "deferred").length,
   };
 }

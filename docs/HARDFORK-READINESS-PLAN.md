@@ -90,6 +90,8 @@ Initial candidate inspection: Helios, Minswap SDK, Cardano Peer Connect, Weld, a
 
 Batch implementation checkpoint: `collect-batch` persists pending/running/succeeded/failed/deferred jobs in `data/readiness/collection-queue.json`. Requests include immutable revisions; changed discovery defers them for renewed source review. Successful jobs require retained profile evidence before reuse, interrupted work resumes, and pending work precedes retries so repeated failures cannot starve a limited batch. Eight focused batch/cache tests, TypeScript, and readiness lint pass. The five requests in `content/readiness/catalog-batch.json` now have checked pinned package identities and supported lock formats; source/release/configuration caveats are documented alongside them. Real collection and final review follow.
 
+Collection/review checkpoint: Cardano Peer Connect, Helios, Minswap SDK, and Weld were captured in two bounded batches; each saved its profile before the next request. Dingo runs separately. Specification review found that outstanding selected failures could be hidden by a later limited invocation; summary counts now reflect all selected failed jobs and keep pending jobs separate. The regression test covers that exact sequence. Standards review's shared-cache-policy refinement is implemented: native cache hits and batch resumption use the same evidence-retention and Go completeness checks. Eight focused tests and TypeScript pass after these corrections.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

@@ -60,19 +60,24 @@ export interface CollectionSelection extends Omit<CollectionRequest, "toolId" | 
 
 export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(selection.adapter) ? 3 : 2 });
 
+/** Both native cache hits and completed batch jobs require replayable input bytes. */
+export function retainedCollectionProfile(snapshot: Snapshot, store: Store, profileId: string | undefined, adapter: CollectAdapter) {
+  const profile = snapshot.profiles.find((profile) => profile.id === profileId);
+  if (!profile || (adapter === "go-packages" && profile.coverage !== "complete")) return undefined;
+  for (const id of profile.evidenceIds) {
+    const evidence = snapshot.evidence.find((evidence) => evidence.id === id);
+    if (!evidence) return undefined;
+    try { store.readEvidence(evidence); } catch { return undefined; }
+  }
+  return profile;
+}
+
 export function reuseCollection(snapshot: Snapshot, store: Store, options: CollectOptions, selection: CollectionSelection) {
   if (options.refresh) return undefined;
   const key = collectionKey(selection);
   const request = snapshot.collections?.find((c) => c.key === key && c.toolId === options.toolId);
-  const profile = request && snapshot.profiles.find((p) => p.id === request.profileId);
+  const profile = retainedCollectionProfile(snapshot, store, request?.profileId, selection.adapter);
   if (!profile) return undefined;
-  if (selection.adapter === "go-packages" && profile.coverage !== "complete") return undefined;
-  // A cache hit must still have its retained input bytes, not just a graph reference.
-  for (const id of profile.evidenceIds) {
-    const evidence = snapshot.evidence.find((e) => e.id === id);
-    if (!evidence) return undefined;
-    try { store.readEvidence(evidence); } catch { return undefined; }
-  }
   console.log(`Reused ${options.toolId} native collection ${key.slice(0, 12)}`);
   return profile;
 }

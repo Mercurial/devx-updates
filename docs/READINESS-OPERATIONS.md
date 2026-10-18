@@ -107,7 +107,8 @@ reuses the completed pinned capture. `refresh-native` remains the command for
 registered profiles against newly discovered releases and current resolver inputs.
 If discovery has moved beyond a batch's pinned revision, that job is deferred;
 verify and update the input file rather than silently collecting a different source.
-Failures and deferred requests cause a nonzero exit status. A bounded run may leave
+Outstanding selected failures and deferred requests cause a nonzero exit status,
+including failures left unattempted by the current limit. A bounded run may leave
 pending jobs without failing; inspect its summary and rerun to continue. Collection
 success means evidence was captured, not complete coverage or hardfork readiness.
 
