@@ -1,5 +1,11 @@
 import type { CapabilityFinding, Profile, Snapshot, Tool } from "./types";
 
+export function capabilityCondition(value: unknown): string | null {
+  if (value === null) return null;
+  if (typeof value !== "string" || !value.trim() || value.trim() === "null") throw new Error("Capability condition must be meaningful text or JSON null");
+  return value;
+}
+
 export interface CapabilityRow extends CapabilityFinding {
   release: string;
   revision: string;

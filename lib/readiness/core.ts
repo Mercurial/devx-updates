@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import type { Graph } from "../map-types";
 import { CAPABILITY_LABELS, type Artifact, type Gap, type Snapshot, type Tool } from "./types";
+import { capabilityCondition } from "./capabilities";
 
 export function canonical(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
@@ -94,7 +95,7 @@ export function validate(snapshot: Snapshot): void {
     if (ids.size !== values.length) throw new Error("Duplicate IDs in snapshot");
     return ids;
   });
-  const [tools, profiles, artifacts, occurrences, edges, evidence] = indexes;
+  const [tools, profiles, artifacts, occurrences, edges, evidence, , capabilities] = indexes;
   const occurrenceById = new Map(snapshot.occurrences.map((n) => [n.id, n]));
   function refs(ids: string[], index: Set<string>, label: string) {
     for (const id of ids) if (!index.has(id)) throw new Error(`Unknown ${label}: ${id}`);
@@ -133,12 +134,12 @@ export function validate(snapshot: Snapshot): void {
     if (!Object.hasOwn(CAPABILITY_LABELS, c.capability)) throw new Error("Unknown capability vocabulary");
     if (!["runtime", "build", "development"].includes(c.scope)) throw new Error("Invalid capability scope");
     if (!["verified", "suggested", "disputed", "rejected"].includes(c.verification)) throw new Error("Invalid capability verification");
-    if (c.condition !== null) text(c.condition, "capability condition");
+    capabilityCondition(c.condition);
     text(c.rationale, "capability rationale");
     if (!c.evidenceIds.length) throw new Error("Capabilities must carry evidence");
   }
   for (const d of snapshot.capabilityDecisions ?? []) {
-    refs([d.capabilityId], indexes[7], "capability"); refs(d.evidenceIds, evidence, "evidence");
+    refs([d.capabilityId], capabilities, "capability"); refs(d.evidenceIds, evidence, "evidence");
     if (!["verified", "suggested", "disputed", "rejected"].includes(d.verification)) throw new Error("Invalid capability decision");
     text(d.packetId); text(d.rationale); text(d.method);
     if (!d.evidenceIds.length) throw new Error("Capability decisions must carry evidence");

@@ -43,6 +43,8 @@ test("capability suggestions are scoped, idempotent, retained and independent fr
     assert.equal(importReview(next, store, packet, result), next);
     assert.equal(compareSnapshots(snapshot, next).capabilities.added.length, 1);
     store.save(next); assert.equal(canonical(store.load()), canonical(next)); store.verify(next);
+    const submitted = store.readEvidence(next.evidence.find((e) => e.description.startsWith("Review submission"))!) as { result: unknown; decisions: unknown };
+    assert.equal(importReview(snapshot, store, packet, submitted.result, submitted.decisions ?? undefined).semanticDigest, next.semanticDigest, "retained submission replays from its original packet state");
     const refreshed = exportPacket(next, store, ["wallet"], join(directory, "packet"));
     assert.equal(refreshed.taskBriefVersion, 2);
     assert.equal(refreshed.context.capabilities?.length, 1);
@@ -74,7 +76,7 @@ test("explicit capability decisions retain history and require the previous stat
 test("invalid scope, citations, vocabulary and duplicate capabilities reject the whole import", () => {
   const { directory, store, snapshot, packet, result } = fixture();
   try {
-    for (const change of [{ profileId: "missing" }, { toolId: "other" }, { capability: "compatible" }, { scope: "production" }, { citations: [] }, { citations: [{ ...result.findings[0].citations[0], quote: "invented quote" }] }]) {
+    for (const change of [{ profileId: "missing" }, { toolId: "other" }, { capability: "compatible" }, { scope: "production" }, { condition: "null" }, { condition: " null " }, { citations: [] }, { citations: [{ ...result.findings[0].citations[0], quote: "invented quote" }] }]) {
       const bad = structuredClone(result); Object.assign(bad.findings[0], change);
       assert.throws(() => importReview(snapshot, store, packet, bad));
       assert.equal(snapshot.capabilities, undefined);
@@ -89,6 +91,9 @@ test("invalid scope, citations, vocabulary and duplicate capabilities reject the
     const current = reviewPacket(snapshot, ["wallet"]);
     const staleSource = { ...result, packetId: current.packetId, inputDigest: current.inputDigest, findings: [{ ...result.findings[0], citations: [{ evidenceId: old.id, pointer: "/content", quote: "provider.submitTx(tx)" }] }] };
     assert.throws(() => importReview(snapshot, store, current, staleSource), /profile revision/);
+    const valid = importReview(snapshot, store, current, { ...result, packetId: current.packetId, inputDigest: current.inputDigest });
+    valid.capabilities![0].condition = "null";
+    assert.throws(() => validate(valid), /JSON null/);
   } finally { rmSync(directory, { recursive: true }); }
 });
 

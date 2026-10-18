@@ -4,6 +4,7 @@ import { artifact, canonical, digest, finalize, gap, list, object, text } from "
 import { addEvidence, readJson, Store, writeJson } from "./store";
 import { CAPABILITY_LABELS, type CapabilityFinding, type Edge, type Snapshot, type Verification } from "./types";
 import { toolSubgraph } from "./graph";
+import { capabilityCondition } from "./capabilities";
 
 export interface ReviewQueueEntry { packetId: string; toolIds: string[]; status: string }
 
@@ -112,7 +113,7 @@ export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknow
       if (!Object.hasOwn(CAPABILITY_LABELS, capability)) throw new Error("Unknown capability vocabulary; record an extension request as a gap");
       const scope = text(finding.scope) as CapabilityFinding["scope"];
       if (!["runtime", "build", "development"].includes(scope)) throw new Error("Invalid capability scope");
-      const condition = finding.condition === null ? null : text(finding.condition);
+      const condition = capabilityCondition(finding.condition);
       const hasPinnedSource = list(finding.citations).some((raw) => {
         const citation = object(raw);
         const source = snapshot.evidence.find((e) => e.id === citation.evidenceId)!;
