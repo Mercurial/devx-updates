@@ -769,7 +769,21 @@ The existing `/map/table` and `/map/analysis` pages are natural entry points for
 | Refresh | Manual runs first, then scheduled and release-triggered refreshes | Agree on cadence after measuring cost and runtime |
 | Maintainer contact | Use verified catalog contact information and corrections | Contact availability and response times are not guaranteed |
 | LLM review | The project owner manually launches discovery and challenge passes using written task briefs | The pipeline exports evidence packets and imports results; no LLM API integration or launch orchestration is required |
-| Hardfork target | Bind future assessments to exact node build, network configuration, and activation conditions | A node version alone does not define the full compatibility target |
+| Hardfork target | Owner-selected Dijkstra, using cardano-node 11.2 source; bind assessments to an immutable source/build, network configuration and activation conditions | Exact tag/commit confirmation and baseline/transition/post-fork environment are still required; a node version alone does not define the full compatibility target |
+
+Owner selection (2026-10-18): Dijkstra is the target, and the owner identified
+the tagged, not-yet-released cardano-node 11.2 source as the authority. Pin
+verification remains unresolved: both GitHub's complete tag-reference query and
+`git ls-remote --tags https://github.com/IntersectMBO/cardano-node.git '*11.2*' '*dijkstra*'`
+returned no matching tag. The official [11.2 release tracker](https://github.com/IntersectMBO/cardano-node/issues/6672)
+points to [integration PR #6677](https://github.com/IntersectMBO/cardano-node/pull/6677),
+which was open with branch `koslambrou/prepare-11.2` at commit
+`34ae34db891105d2d17ad9b2704cb56423103da6` when checked. That commit is a
+provisional investigation reference, not a verified release tag or a substituted
+assessment target. The exact tag URL/commit has been requested from the owner.
+Retain the distinction between owner-selected version, verified immutable input,
+and test environment; no compatibility findings are authorized by this selection
+alone. Catalog collection and review preparation can continue independently.
 
 Do not describe a tool as safe merely because it is inactive, has no resolved package dependencies, or does not connect directly to a node.
 
