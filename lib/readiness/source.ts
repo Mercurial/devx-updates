@@ -1,0 +1,44 @@
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { existsSync, mkdirSync, readFileSync, realpathSync } from "node:fs";
+import { isAbsolute, relative, resolve, join } from "node:path";
+import { repositoryReference } from "./discovery";
+import { addEvidence, Store } from "./store";
+import type { Snapshot } from "./types";
+
+export const execute = promisify(execFile);
+
+export async function pinnedCheckout(repo: string, revision: string, stateDir: string): Promise<string> {
+  if (!repositoryReference(repo) || !/^[a-f0-9]{40,64}$/.test(revision)) throw new Error("Collection needs an immutable GitHub source identity");
+  const directory = resolve(stateDir, "sources", revision);
+  mkdirSync(directory, { recursive: true });
+  const git = (args: string[]) => execute("git", args, { cwd: directory, timeout: 120000, maxBuffer: 16 * 1024 * 1024 });
+  let matches = false;
+  if (existsSync(join(directory, ".git"))) {
+    if ((await git(["status", "--porcelain"])).stdout.trim()) throw new Error("Collection checkout contains local changes; preserve or reconcile them before collecting.");
+    try { matches = (await git(["rev-parse", "HEAD"])).stdout.trim() === revision; } catch { matches = false; }
+  } else {
+    await git(["init"]); await git(["remote", "add", "origin", `https://github.com/${repo}.git`]);
+  }
+  if (!matches) { await git(["fetch", "--depth=1", "origin", revision]); await git(["checkout", "--detach", revision]); }
+  return directory;
+}
+
+export function sourcePath(root: string, path: string): string {
+  const full = resolve(root, path);
+  const relativePath = relative(root, full);
+  if (isAbsolute(path) || relativePath === ".." || relativePath.startsWith("../")) throw new Error(`Source path escapes checkout: ${path}`);
+  if (existsSync(full)) {
+    const actual = relative(realpathSync(root), realpathSync(full));
+    if (isAbsolute(actual) || actual === ".." || actual.startsWith("../")) throw new Error(`Source symlink escapes checkout: ${path}`);
+  }
+  return full;
+}
+
+export function retainSource(snapshot: Snapshot, store: Store, toolId: string, root: string, paths: string[]): string[] {
+  const tool = snapshot.tools.find((t) => t.id === toolId)!;
+  return [...new Set(paths)].filter((path) => existsSync(sourcePath(root, path))).sort().map((path) => {
+    const evidence = store.evidence({ path, revision: tool.revision, content: readFileSync(sourcePath(root, path), "utf8") }, `Native input ${tool.id}/${path}`, `https://github.com/${tool.repo}/blob/${tool.revision}/${path}`);
+    addEvidence(snapshot, evidence); return evidence.id;
+  });
+}

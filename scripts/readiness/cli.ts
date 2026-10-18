@@ -11,6 +11,8 @@ import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/
 import { acquireLock, addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
 import { nativeEvidence, rebuildNative } from "../../lib/readiness/rebuild";
+import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
+import { collectionCandidates } from "../../lib/readiness/candidates";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -21,6 +23,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
   packet: { type: "string" }, decisions: { type: "string" },
   "before-ref": { type: "string" },
+  "python-version": { type: "string" }, packages: { type: "string" }, tags: { type: "string" },
 } });
 
 const store = new Store(resolve(values.directory!));
@@ -37,12 +40,13 @@ inventory       Create or reconcile coverage for every catalog tool
 discover        Discover pinned source and manifests via gh (resumes by default)
                 --tools id,id --limit N --refresh
 import-native   --profile profile.json --input native-output.json
-collect         --tool id --adapter npm-lock|cargo-metadata --roots package,package
+collect         --tool id --adapter <collector> --roots package,package
                 --platform target [--path manifest-path] [--refresh]
+                uv-tree: --python-version 3.13; go-packages: --packages ./... --tags tag,tag
 refresh-native  Refresh registered collection profiles against discovered source revisions
 report          Emit coverage and impact reports in the data directory
 show            --tool id (coverage, manifests, and profiles)
-candidates      List discovered root npm locks and Cargo lockfiles for pilot collection
+candidates      List supported collection starting points, including nested workspaces [--tools id,id]
 validate        Validate snapshot, references, semantic digest, and evidence checksums
 replay          Reconstruct native profiles from retained evidence and compare graph records
 rebuild-native  Upgrade native graph records using retained inputs (no network)
@@ -52,7 +56,8 @@ import-review   --packet packet.json --input result.json [--decisions decisions.
 diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json]
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
-Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
+Native adapters: ${NATIVE_ADAPTERS.join(", ")}.
+Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     return;
   }
   if (command === "inventory") {
@@ -83,8 +88,8 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     if (limit !== undefined && (!Number.isSafeInteger(limit) || limit < 1)) throw new Error("--limit must be a positive integer");
     await discover(snapshot, store, { stateDir: values.state!, toolIds: values.tools?.split(","), limit, refresh: values.refresh });
   } else if (command === "collect") {
-    if (!values.tool || !values.roots || !values.platform || !["npm-lock", "cargo-metadata"].includes(values.adapter ?? "")) throw new Error("collect requires --tool, --adapter npm-lock|cargo-metadata, --roots, and --platform");
-    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as "npm-lock" | "cargo-metadata", roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh });
+    if (!values.tool || !values.roots || !values.platform || !(COLLECT_ADAPTERS as readonly unknown[]).includes(values.adapter)) throw new Error(`collect requires --tool, --adapter (${COLLECT_ADAPTERS.join(", ")}), --roots, and --platform`);
+    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
   } else if (command === "refresh-native") {
     const summary = await refreshNative(snapshot, store, values.state!, values.refresh);
     console.log(JSON.stringify(summary));
@@ -118,7 +123,7 @@ Native adapters: npm-lock (v2/v3), cargo-metadata, cabal-plan.`);
     writeJson(join(store.directory, "projects.json"), aggregateProjects(snapshot));
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
-    console.log(JSON.stringify(snapshot.tools.filter((t) => t.manifests.includes("package-lock.json") || t.manifests.includes("Cargo.lock")).map((t) => ({ id: t.id, packageHint: t.packageHint, release: t.release, locks: t.manifests.filter((p) => ["package-lock.json", "Cargo.lock"].includes(p)) })), null, 2));
+    console.log(JSON.stringify(collectionCandidates(snapshot, values.tools?.split(",")), null, 2));
   } else if (command === "capture-source") {
     const tool = snapshot.tools.find((t) => t.id === values.tool);
     const path = values.path;

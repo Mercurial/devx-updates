@@ -21,7 +21,7 @@ npm run readiness -- show --tool oura
 npm run readiness -- candidates
 ```
 
-`candidates` lists root npm locks and Cargo locks as collection starting points. It is not the full ecosystem backlog; nested manifests remain visible in each tool's record.
+`candidates` lists npm, pnpm, Cargo, Go, and uv collection starting points, including nested workspaces. Use `--tools id,id` to narrow the output. Each candidate lists configuration requirements; package hints still need verification against pinned manifests. Unsupported ecosystems remain in the coverage backlog.
 
 ## Collect a native profile
 
@@ -32,6 +32,9 @@ npm run readiness -- collect --tool ouroboros-miniprotocols-ts --adapter npm-loc
 npm run readiness -- collect --tool meshjs-mesh-sdk --adapter npm-lock --roots @meshsdk/core --platform all-lockfile-targets
 npm run readiness -- collect --tool oura --adapter cargo-metadata --roots oura --platform x86_64-unknown-linux-gnu
 npm run readiness -- collect --tool dolos --adapter cargo-metadata --roots dolos --platform x86_64-unknown-linux-gnu
+npm run readiness -- collect --tool gouroboros --adapter go-packages --roots github.com/blinklabs-io/gouroboros --platform linux/amd64
+npm run readiness -- collect --tool lucid-evolution --adapter pnpm-lock --roots @lucid-evolution/lucid --platform all-lockfile-targets
+npm run readiness -- collect --tool opshin --adapter uv-tree --roots opshin --platform x86_64-unknown-linux-gnu --python-version 3.13
 ```
 
 npm collection reads a committed v2/v3 lockfile, including workspace links and hoisted dependencies. It does not run install scripts or assert which optional dependencies ship on a platform. Missing selections and platform applicability are explicit gaps.
@@ -39,6 +42,14 @@ npm collection reads a committed v2/v3 lockfile, including workspace links and h
 Cargo collection checks out the pinned revision in `.readiness/sources/`, then runs `cargo metadata --locked --format-version 1 --filter-platform <target>`. It retains the command, toolchain, metadata, lockfile, and root manifest. Cargo must be installed. A missing/outdated lock or failed resolver produces a retryable resolution gap. Default features are used; custom feature profiles can be imported separately.
 
 Results are reused for unchanged requests. Cargo cache keys include the toolchain and configuration/environment fingerprints; changed resolver inputs invalidate reuse. Use `--refresh` to deliberately rerun a collector. Source checkouts and job caches are disposable; retained evidence is not.
+
+pnpm collection reads committed v9 lock snapshots and importer manifests without installing dependencies. Workspace links, aliases, and peer-specific selections retain their resolution contexts. Patched/local packages and installed-platform pruning remain explicit gaps. Nested locks use `--path path/to/pnpm-lock.yaml`.
+
+Go collection runs `go list -e -deps -json -mod=readonly` for runtime and test graphs. It uses explicit `GOOS/GOARCH`, disables cgo and workspace overlays, and prevents automatic toolchain downloads. Select packages with `--packages ./...` and tags with `--tags tag,tag`; defaults cover every package in the selected module. Replacements preserve their actual source identity. Missing packages and native errors produce partial coverage. This is package-import coverage for the declared configuration, not a module-lock interpretation of `go.sum`.
+
+uv collection requires a committed `uv.lock` and uses offline, locked JSON tree output with explicit Python/platform selection. It captures extras and development groups separately. User uv environment overrides and external configuration discovery are disabled. Build-backend dependencies and installed wheel/sdist selection remain gaps. The JSON format is a preview API; the scheduled collector pins uv 0.12.22 and rejects unknown schema versions. Nested projects use `--path path/to/pyproject.toml`.
+
+All collectors verify retained evidence before reusing a cached profile. Go patterns/tags and Python versions are part of the collection request identity. New source checkouts refuse to overwrite local changes.
 
 `npm run readiness -- refresh-native` refreshes all registered `collect` requests against the currently discovered source revisions. Unchanged inputs reuse retained profiles. One failed profile does not stop the others; failures remain gaps and the command exits unsuccessfully. Imported custom profiles are not converted into executable commands automatically.
 
@@ -67,7 +78,7 @@ Example profile:
 
 Replace placeholders with observed values. For Cabal, import `dist-newstyle/cache/plan.json` from the declared build configuration. Preserve index states, project flags, and release/build provenance as source evidence. `release-build` is reserved for an actual release build's output; reconstructing source locally is not equivalent.
 
-Supported adapters are `npm-lock`, `cargo-metadata`, and `cabal-plan`. Unsupported ecosystems, Yarn/pnpm-only projects, and custom build systems remain visible coverage work. No synthetic resolution is substituted.
+Supported adapters are `npm-lock`, `pnpm-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Yarn, older pnpm lock formats, Python projects without uv locks, and other unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
 ## Manual review handoff
 

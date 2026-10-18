@@ -23,6 +23,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26.8'
+          cache: false
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.22'
       - run: npm run test:readiness
       - name: Save comparison baseline
         run: cp data/readiness/snapshot.json /tmp/readiness-before.json

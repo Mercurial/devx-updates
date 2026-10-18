@@ -1,5 +1,10 @@
 import { artifact, digest, gap, list, object, text } from "./core";
 import type { Edge, NativeInput, Resolution, Scope } from "./types";
+import { NATIVE_ADAPTERS } from "./types";
+import { resolvePnpm } from "./pnpm";
+import { resolveGo } from "./go";
+import { resolveUv } from "./uv";
+import type { AdapterContext } from "./adapter-context";
 
 export function parseNativeInput(value: unknown): NativeInput {
   const v = object(value, "profile");
@@ -8,7 +13,7 @@ export function parseNativeInput(value: unknown): NativeInput {
   for (const key of ["features", "rootNames"]) list(v[key], key).forEach((item) => text(item, key));
   if (!(v.rootNames as string[]).length) throw new Error("Select at least one root package");
   if (!["release-build", "source-reconstruction"].includes(v.origin as string)) throw new Error("Invalid resolution origin");
-  if (!["npm-lock", "cargo-metadata", "cabal-plan"].includes(v.adapter as string)) throw new Error("Unsupported native adapter");
+  if (!(NATIVE_ADAPTERS as readonly unknown[]).includes(v.adapter)) throw new Error("Unsupported native adapter");
   return v as unknown as NativeInput;
 }
 
@@ -25,7 +30,8 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   const artifactIds = new Set<string>();
   const edgeIds = new Set<string>();
   const addNode = (locator: string, name: string, version: string | null, source: string, integrity: string | null) => {
-    const a = artifact({ ecosystem: input.adapter.split("-")[0], name, version, source, integrity });
+    const ecosystem = input.adapter === "pnpm-lock" ? "npm" : input.adapter === "uv-tree" ? "python" : input.adapter.split("-")[0];
+    const a = artifact({ ecosystem, name, version, source, integrity });
     if (!artifactIds.has(a.id)) { result.artifacts.push(a); artifactIds.add(a.id); }
     const id = `occurrence:${digest({ profileId, locator })}`;
     if (locators.has(locator)) throw new Error(`Duplicate native locator ${locator}`);
@@ -37,13 +43,21 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
     result.profile.coverage = "partial";
   };
   const addEdge = (from: string, to: string, scope: Scope, optional = false, condition: string | null = null, constraint: string | null = null) => {
+    if (!locators.has(from)) { missing(`Unresolved dependency consumer ${from}`); return; }
     if (!locators.has(to)) { missing(`Unresolved dependency ${to} from ${from}`); return; }
     const fields: Omit<Edge, "id"> = { from: locators.get(from)!, to: locators.get(to)!, type: "package", scope, optional, condition, constraint, verification: "verified", evidenceIds };
     const id = `edge:${digest(fields)}`;
     if (!edgeIds.has(id)) { result.edges.push({ id, ...fields }); edgeIds.add(id); }
   };
 
-  if (input.adapter === "npm-lock") {
+  const context: AdapterContext = { input, node: addNode, edge: addEdge, gap: missing, root: (locator) => {
+    const id = locators.get(locator);
+    if (!id) missing(`Unresolved root ${locator}`); else if (!result.profile.roots.includes(id)) result.profile.roots.push(id);
+  } };
+  if (input.adapter === "pnpm-lock") resolvePnpm(data, context);
+  else if (input.adapter === "go-packages") resolveGo(data, context);
+  else if (input.adapter === "uv-tree") resolveUv(data, context);
+  else if (input.adapter === "npm-lock") {
     if (![2, 3].includes(data.lockfileVersion as number)) throw new Error("Only npm lockfile versions 2 and 3 are supported");
     const packages = object(data.packages, "packages");
     const entries = Object.entries(packages).map(([path, value]) => [path, object(value)] as const);
@@ -152,6 +166,6 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   }
   if (!result.profile.roots.length) throw new Error(`No roots matched ${input.rootNames.join(", ")}; check package names and workspace membership`);
   const matched = new Set(result.profile.roots.map((id) => result.artifacts.find((a) => a.id === result.occurrences.find((n) => n.id === id)!.artifactId)!.name));
-  for (const root of input.rootNames) if (!matched.has(root)) missing(`Requested root ${root} is absent from native output.`);
+  if (input.adapter !== "go-packages") for (const root of input.rootNames) if (!matched.has(root)) missing(`Requested root ${root} is absent from native output.`);
   return result;
 }

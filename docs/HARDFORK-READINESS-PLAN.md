@@ -42,6 +42,17 @@ No documented-standard breaches were found. Three maintainability findings were 
 
 Three correctness findings were fixed and regression-tested: missing Cargo resolution nodes, feature-optional dependency classification, and cross-profile exposure precedence. Follow-up review found no new blocking correctness issues in those fixes. Broader coverage gaps remain tracked below.
 
+### Active continuation: expanded native collection
+
+- [x] Recover interrupted pnpm, Go, and uv work; validate retained snapshot and replay the five existing native profiles, including Gouroboros.
+- [x] Finish adapter edge cases, evidence/cache handling, expanded collection candidates, and recurring toolchain setup.
+- [ ] Verify pnpm and uv against real pinned catalog sources and expand the registered native profiles.
+- [ ] Regenerate coverage/impact/comparison reports, review implementation, and commit verified milestones locally.
+
+Recovery checkpoint: the six new adapter tests and TypeScript checks pass. The interrupted snapshot contains 269 tools, five profiles, and 476 valid retained evidence objects. Go 1.26.8 and uv 0.12.22 are available; Cabal is still unavailable. This continuation implements the offline collection and retained-data boundaries in ADR-1 and ADR-2.
+
+Expanded collector milestone: pnpm v9, Go package/test graphs, and uv JSON trees now share evidence-checked collection registration and refresh. Candidate discovery includes nested workspaces. Nine focused tests cover peer contexts, aliases, nested source identity, replacements, test scope, extras, missing selections, and cache evidence. Type checking and readiness lint pass. Real OpShin and Lucid Evolution collections succeeded; all seven registered profiles reuse cached evidence and replay identically. Report regeneration and final review follow in the next checkpoint.
+
 ### Remaining rollout work
 
 - Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.
