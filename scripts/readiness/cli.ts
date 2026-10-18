@@ -8,12 +8,13 @@ import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover, github } from "../../lib/readiness/discovery";
 import { collect, refreshNative } from "../../lib/readiness/collect";
 import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
-import { acquireLock, addEvidence, mergeResolution, readJson, Store, writeJson } from "../../lib/readiness/store";
+import { acquireLock, addEvidence, mergeResolution, readJson, readSnapshot, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
 import { nativeEvidence, rebuildNative } from "../../lib/readiness/rebuild";
 import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
 import { collectionCandidates } from "../../lib/readiness/candidates";
 import { collectBatch } from "../../lib/readiness/batch";
+import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -52,6 +53,8 @@ report          Emit coverage and impact reports in the data directory
 show            --tool id (coverage, manifests, and profiles)
 candidates      List supported collection starting points, including nested workspaces [--tools id,id]
 validate        Validate snapshot, references, semantic digest, and evidence checksums
+compact-storage Rewrite snapshot storage as verified JSON chunks without changing graph data
+export-snapshot --output snapshot.json (self-contained graph for comparison or backup)
 replay          Reconstruct native profiles from retained evidence and compare graph records
 rebuild-native  Upgrade native graph records using retained inputs (no network)
 capture-source  --tool id --path source-file (retain pinned source for citations)
@@ -163,6 +166,14 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const tool = snapshot.tools.find((t) => t.id === values.tool);
     if (!tool) throw new Error("Select a known --tool");
     console.log(JSON.stringify({ tool, profiles: snapshot.profiles.filter((p) => p.toolId === tool.id) }, null, 2));
+  } else if (command === "compact-storage") {
+    store.save(snapshot, { preserveTimestamp: true });
+    console.log(`Partitioned snapshot storage; semantic digest remains ${snapshot.semanticDigest}`);
+  } else if (command === "export-snapshot") {
+    const output = required("output");
+    if (resolve(output) === join(store.directory, "snapshot.json")) throw new Error("Export to a separate file; do not replace the canonical snapshot manifest");
+    writeJson(output, snapshot);
+    console.log(`Exported self-contained snapshot to ${output}`);
   } else if (command === "validate") {
     store.verify(snapshot); console.log(`Validated ${snapshot.tools.length} tools, ${snapshot.profiles.length} profiles, ${snapshot.evidence.length} evidence objects.`);
   } else if (command === "replay") {
@@ -191,14 +202,14 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     }
     console.log("Rebuilt native graphs from retained evidence. Export fresh review packets for changed contexts.");
   } else if (command === "diff") {
-    const before = values["before-ref"] ? JSON.parse(execFileSync("git", ["show", `${values["before-ref"]}:data/readiness/snapshot.json`], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 })) as typeof snapshot : readJson(required("before")) as typeof snapshot;
+    const before = values["before-ref"] ? readGitSnapshot(values["before-ref"]) : readSnapshot(required("before"));
     const changes = compareSnapshots(before, snapshot);
     if (values.output) writeJson(values.output, changes); else console.log(JSON.stringify(changes, null, 2));
   } else throw new Error(`Unknown command ${command}; use help`);
 }
 
 async function run() {
-  const readOnly = ["help", "show", "candidates", "validate", "replay", "diff"].includes(positionals[0] ?? "help");
+  const readOnly = ["help", "show", "candidates", "validate", "replay", "diff", "export-snapshot"].includes(positionals[0] ?? "help");
   const release = readOnly ? () => {} : acquireLock(store.directory);
   try { await main(); } finally { release(); }
 }

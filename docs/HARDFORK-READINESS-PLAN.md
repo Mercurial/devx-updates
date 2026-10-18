@@ -96,6 +96,17 @@ Expanded catalog checkpoint: all five selected requests succeeded, including Din
 
 Next rollout priority: the normalized snapshot is now approximately 79.9 MiB for 12 covered tools. Before another large collection batch, compact or partition normalized storage while preserving reviewability, semantic identity, evidence replay, and static-site access. Keep this separate from the successfully verified collector work; do not silently prune historical profiles or dependencies to reduce size. Cabal collection, unsupported ecosystems, and returned integration/capability reviews remain open.
 
+### Active continuation: partitioned snapshot storage
+
+- [x] Measure storage and select a representation that preserves the canonical graph.
+- [x] Implement readable, checksum-verified graph chunks with shared evidence lists, atomic manifest publication, and legacy snapshot loading.
+- [x] Support self-contained snapshot export, comparisons against legacy/partitioned files and Git revisions, and CI baselines.
+- [ ] Migrate the retained snapshot, prove identical semantic digest/reports/review inputs, validate/replay/build, review, and commit locally.
+
+Storage measurement: compact JSON alone is 67.9 MiB; repeated evidence lists account for approximately 36.5 MiB across edges and occurrences, with only 15 distinct lists. The chosen ADR-1/ADR-2 implementation keeps ordinary JSON, moves artifacts/occurrences/edges into content-addressed chunks, and interns evidence lists within each chunk. Profile-local graph partitioning avoids rewriting unrelated historical profiles. The existing in-memory schema and semantic digest remain unchanged. Immutable chunks are written before the atomic manifest replacement; no automatic pruning of old chunks or evidence is included.
+
+Storage implementation checkpoint: new saves emit an atomic `snapshot.json` manifest and JSON chunks capped at 2 MiB. Legacy files remain readable; exports reconstruct self-contained graphs; Git comparisons pin one commit before reading the manifest and chunks. CI now exports its comparison baseline rather than copying only the manifest. Four focused storage tests pass, covering graph/report/review identity, manual decisions, non-aliased evidence lists, deterministic bounded chunks, unchanged unrelated profile chunks, checksum/path/count/index rejection, missing files, and prior-manifest recovery after failed writes. TypeScript and readiness lint pass. Migration and real-data equivalence checks follow.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

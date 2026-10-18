@@ -2,8 +2,9 @@ import { mkdirSync, readFileSync, renameSync, existsSync, writeFileSync, unlinkS
 import { hostname } from "node:os";
 import { dirname, join } from "node:path";
 import { gzipSync, gunzipSync } from "node:zlib";
-import { canonical, digest, finalize, upgradeOperationalGap, validate } from "./core";
+import { canonical, digest, finalize, upgradeOperationalGap } from "./core";
 import type { Evidence, Resolution, Snapshot } from "./types";
+import { decodeSnapshot, snapshotFiles } from "./snapshot-storage";
 
 export function writeJson(path: string, data: unknown) {
   mkdirSync(dirname(path), { recursive: true });
@@ -14,6 +15,10 @@ export function writeJson(path: string, data: unknown) {
 
 export function readJson(path: string): unknown {
   return JSON.parse(readFileSync(path, "utf8"));
+}
+
+export function readSnapshot(path: string): Snapshot {
+  return decodeSnapshot(readJson(path), (relative) => readFileSync(join(dirname(path), relative), "utf8"));
 }
 
 export function acquireLock(directory: string): () => void {
@@ -35,17 +40,24 @@ export class Store {
   constructor(readonly directory: string) {}
 
   load(): Snapshot {
-    const snapshot = readJson(join(this.directory, "snapshot.json")) as Snapshot;
-    validate(snapshot);
-    const expected = snapshot.semanticDigest;
-    if (finalize(snapshot).semanticDigest !== expected) throw new Error("Snapshot semantic digest mismatch");
-    return snapshot;
+    return readSnapshot(join(this.directory, "snapshot.json"));
   }
 
-  save(snapshot: Snapshot) {
-    snapshot.generatedAt = new Date().toISOString();
+  save(snapshot: Snapshot, options: { preserveTimestamp?: boolean } = {}) {
+    if (!options.preserveTimestamp) snapshot.generatedAt = new Date().toISOString();
     finalize(snapshot);
-    writeJson(join(this.directory, "snapshot.json"), snapshot);
+    const { manifest, chunks } = snapshotFiles(snapshot);
+    for (const chunk of chunks) {
+      const path = join(this.directory, chunk.path);
+      if (existsSync(path)) {
+        if (readFileSync(path, "utf8") !== chunk.content) throw new Error(`Corrupt existing snapshot chunk: ${chunk.path}`);
+      } else {
+        mkdirSync(dirname(path), { recursive: true });
+        const temporary = `${path}.${process.pid}.tmp`;
+        writeFileSync(temporary, chunk.content); renameSync(temporary, path);
+      }
+    }
+    writeJson(join(this.directory, "snapshot.json"), manifest);
   }
 
   evidence(value: unknown, description: string, sourceUrl?: string): Evidence {

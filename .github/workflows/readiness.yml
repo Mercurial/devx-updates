@@ -32,7 +32,7 @@ jobs:
           version: '0.12.22'
       - run: npm run test:readiness
       - name: Save comparison baseline
-        run: cp data/readiness/snapshot.json /tmp/readiness-before.json
+        run: npm run readiness -- export-snapshot --output /tmp/readiness-before.json
       - name: Refresh public source discovery
         env:
           GH_TOKEN: ${{ github.token }}

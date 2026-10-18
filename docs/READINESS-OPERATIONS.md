@@ -218,7 +218,11 @@ npm run readiness -- diff --before-ref <git-ref> --output data/readiness/changes
 npm run test:readiness
 ```
 
-- `snapshot.json` is the canonical graph and coverage state.
+- `snapshot.json` is the canonical snapshot manifest and coverage state. Its
+  `storageVersion: 1` envelope references immutable `snapshots/<table>/<sha256>.json`
+  chunks for artifacts, occurrences, and edges. The logical graph still uses
+  schema version 1. `Store.load()` validates every referenced chunk and reconstructs
+  the same graph before checking its semantic digest.
 - `evidence/*.json.gz` retains content-addressed inputs with checksums. Keep these files with every published snapshot; do not prune referenced evidence.
 - `report.json` contains coverage gaps and an ecosystem backlog.
 - `impact.json` contains distinct downstream tools and explanatory paths per scope/profile.
@@ -231,6 +235,37 @@ npm run test:readiness
 - A single-writer lock prevents concurrent collection commands from overwriting each other. Interrupted same-host locks are recovered when their process no longer exists.
 
 Profiles are historical, release-specific records. Refreshing discovery does not silently change old graphs or declare the newest release resolved. Collect a new profile for the new release. Tool-level resolution stays partial until supported configuration coverage has been established; a complete native profile does not establish complete tool coverage.
+
+### Snapshot storage and backups
+
+New saves use ordinary JSON chunks capped at 2 MiB. Occurrences and edges are
+grouped by profile; artifacts are distributed across stable hash buckets. Evidence
+lists are stored once per chunk and referenced by a local integer. Each decoded
+record receives its own evidence array, preserving independent review updates.
+Records remain complete JSON objects, one per line, for readable diffs.
+
+Chunks are content-addressed and written before atomically replacing the manifest.
+A failed save leaves the previous manifest usable. Existing chunks must match their
+expected bytes; corruption is rejected. Old chunks and evidence are not pruned
+automatically, so readers and retained manifests can still use their original
+references. Superseded chunks can accumulate after graph corrections; any future
+cleanup must account for retained manifests, not just the current snapshot.
+
+```sh
+npm run readiness -- compact-storage
+npm run readiness -- export-snapshot --output /tmp/readiness-before.json
+npm run readiness -- diff --before /tmp/readiness-before.json
+npm run readiness -- diff --before-ref HEAD
+```
+
+`compact-storage` migrates storage without changing operational timestamps or the
+semantic digest. Legacy self-contained snapshots remain readable. `export-snapshot`
+writes a self-contained logical snapshot for comparisons and portable graph
+backups; evidence files must still accompany backups intended for native replay.
+Copying `snapshot.json` alone no longer copies the graph: either export it or copy
+the manifest together with its referenced `snapshots/` files. Git comparisons read
+the manifest and all chunks from one resolved commit. The CI baseline uses the
+self-contained export, and uploaded review artifacts include the chunk directory.
 
 ## Scheduled collection
 
