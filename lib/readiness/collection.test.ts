@@ -78,7 +78,7 @@ test("native refresh selects and bounds deduplicated requests before running col
       // Empty path is the recorded default used by the npm collector.
       const selection: CollectionSelection = { revision, adapter: "npm-lock", roots: ["app"], path: "", platform: "all-lockfile-targets", resolverContext: "committed-lockfile:npm-workspaces-v1" };
       const profile: NativeInput = { ...selection, toolId, release: "v1", features: [], command: "read lock", toolchain: "npm v3", origin: "source-reconstruction", rootNames: selection.roots };
-      publishCollection(snapshot, store, selection, profile, { lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } }, [], "https://github.com/owner/repo");
+      publishCollection(snapshot, store, selection, profile, { formatVersion: 1, lock: { lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } } }, [], "https://github.com/owner/repo");
     }
     assert.equal(snapshot.collections!.length, 3);
     assert.deepEqual(collectionRequests(snapshot, store).map((r) => r.toolId), ["alpha", "beta"], "historical revisions do not duplicate a refresh request");

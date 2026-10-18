@@ -17,8 +17,8 @@ function fixture() {
   const request = (toolId: string): PinnedRequest => ({ toolId, revision: "a".repeat(40), adapter: "npm-lock", roots: [toolId], platform: "all-lockfile-targets" });
   const publish = (toolId: string) => {
     const input = request(toolId);
-    const selection = { revision: input.revision, adapter: input.adapter, roots: input.roots, platform: input.platform, path: "", resolverContext: "committed-lockfile" };
-    return publishCollection(snapshot, store, selection, { ...input, release: "v1", rootNames: input.roots, features: [], command: "Read committed lock", toolchain: "npm v3", origin: "source-reconstruction" }, { lockfileVersion: 3, packages: { "": { name: toolId, version: "1.0.0" } } }, [], "https://github.com/owner/repo");
+    const selection = { revision: input.revision, adapter: input.adapter, roots: input.roots, platform: input.platform, path: "", resolverContext: "committed-lockfile:npm-workspaces-v1" };
+    return publishCollection(snapshot, store, selection, { ...input, release: "v1", rootNames: input.roots, features: [], command: "Read committed lock", toolchain: "npm v3", origin: "source-reconstruction" }, { formatVersion: 1, lock: { lockfileVersion: 3, packages: { "": { name: toolId, version: "1.0.0" } } } }, [], "https://github.com/owner/repo");
   };
   const queuePath = join(directory, "collection-queue.json");
   return { directory, store, snapshot, request, publish, queuePath, queue: () => readJson(queuePath) as CollectionQueue, options: { stateDir: directory } };

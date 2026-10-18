@@ -1,11 +1,11 @@
 {
-  "snapshot": "abb229bb39659bdd3c6e3e1e772438eb9a9c3609f5ec0631d89f3d7e1f53cd3e",
+  "snapshot": "dea5da89b9aa496c0dc4e949ab03822858f7b72fb421a4c684637646c4a68a38",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 12,
-  "profiles": 15,
+  "withProfiles": 17,
+  "profiles": 20,
   "completeProfiles": 5,
-  "unresolvedTools": 257,
+  "unresolvedTools": 252,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -3880,6 +3880,23 @@
     },
     {
       "toolId": "dexter",
+      "id": "gap:3d00c9ee9c374a7415e0a926",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:3dd345871690805358e5a0a4",
+      "area": "integration",
+      "reason": "The retained README describes DEX APIs, Blockfrost/Kupo, configurable wallet/data providers and optional order submission. This package capture does not establish enabled providers, deployed contracts or service versions.",
+      "nextAction": "Trace selected swap/query/submission workflows and capture enabled provider/contract identities separately.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
+      "code": "workflow-scope:dexter:integration"
+    },
+    {
+      "toolId": "dexter",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -3887,11 +3904,84 @@
     },
     {
       "toolId": "dexter",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:4e19403efb40d37081d345d6",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:505962b294e6e6873b62d074",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:786fa780a05a7ec1757ef3fb",
+      "area": "artifact",
+      "reason": "Manifest/npm lock version 5.4.9 is from discovered default-branch source; no stable GitHub release mapping was identified.",
+      "nextAction": "Verify published Dexter package and source correspondence.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
+      "code": "workflow-scope:dexter:artifact"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:9797bbf020097390f7ae5de5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:aa781b180c2e434f3f52b343",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:aa8656c98066d0a76daabc86",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:ba040e071fec509c5381205b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:bba302c0863830af85c150be",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/core from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:c1f8b0b062ac53c2cde5f712",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+    },
+    {
+      "toolId": "dexter",
+      "id": "gap:c373ea6c17c0931e140e5c51",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
     },
     {
       "toolId": "dingo",
@@ -4064,11 +4154,29 @@
     },
     {
       "toolId": "evolution-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:7b8ab90232465fcfea05ce20",
+      "area": "artifact",
+      "reason": "Selected @evolution-sdk/evolution manifest is 0.6.0 at the @evolution-sdk/devnet@3.0.21 monorepo tag. This does not establish a published 0.6.0 SDK release mapping.",
+      "nextAction": "Verify the SDK-specific release and published package correspondence.",
+      "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
+      "code": "workflow-scope:evolution-sdk:artifact"
+    },
+    {
+      "toolId": "evolution-sdk",
+      "id": "gap:b019a4e1531859bf3fb39a65",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:evolution-sdk:299df18680147d54d422875c"
+    },
+    {
+      "toolId": "evolution-sdk",
+      "id": "gap:c627092923f9554873a03ab6",
+      "area": "capability",
+      "reason": "The selected transaction SDK package closure does not assess its direct chain-sensitive implementation or provider integration behavior.",
+      "nextAction": "Review transaction construction, serialization and configured providers against pinned SDK source.",
+      "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
+      "code": "workflow-scope:evolution-sdk:capability"
     },
     {
       "toolId": "evolution-sdk",
@@ -4516,11 +4624,27 @@
     },
     {
       "toolId": "govtool",
+      "id": "gap:034482441a2ade8c21431498",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:1719725fde2c7b5c27fcc1f6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
     },
     {
       "toolId": "govtool",
@@ -4532,11 +4656,253 @@
     },
     {
       "toolId": "govtool",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2a1757683a90eaca775f7645",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:32249e0b42b7c4a6bfd19acf",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/postcss-load-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:32998687ce7caa0f5705221b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:45e4c38de99ef5d8eb6b8af6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:468a887fbb14522cee881a7c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/webpack from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:48526af2bef60b8f2907f71a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-template-compiler from node_modules/fork-ts-checker-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:4e49e7b879e997bcf0c13cd0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-hot-middleware from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:5707926435889d6ee676ad6c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies prettier from node_modules/@storybook/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:59bf7ccbe3e051f2c1a38156",
+      "area": "resolution",
+      "reason": "Only the governance frontend is selected. The separately built Haskell backend and metadata-validation service have no native profile in this capture; discovered Stack/Cabal and metadata-service manifests remain unresolved frontiers.",
+      "nextAction": "Collect backend and metadata-service production configurations separately.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee",
+      "code": "workflow-scope:govtool:resolution"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:623921a12a4ff1303be29761",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:6474e854e76a7fa86b13faa8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webdriverio from node_modules/@vitest/browser has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:6dda4653c8886ab686f2e685",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:70d83504a5a020b39bcba25b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:7130a5f8a7103213265dec93",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:7291e597d8764d4e3729799a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/jest-environment-jsdom/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:7845dc96d2a3c10ed62880ef",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:7d8a644754d14234896ec427",
+      "area": "resolution",
+      "reason": "Optional peerDependencies rework-visit from node_modules/resolve-url-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:81bc71c06a8aaf48bf2e933d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/css-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:90552e183a523e9dd255d87b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:959f2d87fd371fa51f816d38",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:98c78a3d4e0931c8f36e8edb",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:9ac1c54e7c3c0d5cecdcf9f5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies fibers from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:9ddb92c40617f10fc0f12d85",
+      "area": "resolution",
+      "reason": "Optional peerDependencies webpack-plugin-serve from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:a4271ae5330617c8a7dee024",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/html-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:a486f7026ebe240a967a7732",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:ac25832d656021b588af98c1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:b61390d996269d4f013d1268",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:b76d9fc464d9a7cb234c668b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:bd9f36569e9b4d65d228b35d",
+      "area": "integration",
+      "reason": "The retained frontend Dockerfile declares backend, metadata, PDF/outcomes and IPFS endpoints plus deployment flags. Their deployed versions, enabled flags and container inventory are outside the frontend package closure.",
+      "nextAction": "Capture deployment configuration and trace each enabled service boundary with pinned evidence.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee",
+      "code": "workflow-scope:govtool:integration"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:c10972e69014ca8ad3025314",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:c5467fbc7e4bce69f96726dc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
     },
     {
       "toolId": "govtool",
@@ -4544,6 +4910,111 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:d6581c7ee0f7e5cef8628f7d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/react-scripts/node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:d7d8de00a3079e2e6fc8eeed",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/jest-environment-jsdom/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:d91897e00f78aae01015ef21",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:db9c921d84d8acc97b934a74",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:dc8bef56af1808c0cc52c7a7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:de4f342f5c965c4513077ede",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:dffff022ff84eef2cc251f66",
+      "area": "artifact",
+      "reason": "Repository tag v2.0.36 contains @govtool/frontend manifest/lock version 2.0.29. The retained Dockerfile runs npm install and postinstall patch-package; the committed lock alone does not prove the deployed bundle or patched source.",
+      "nextAction": "Verify release build inputs, patches and deployed frontend artifact identity.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee",
+      "code": "workflow-scope:govtool:artifact"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:e79781186a04a1cbe51b87ec",
+      "area": "resolution",
+      "reason": "Optional peerDependencies prettier from node_modules/storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:e8828dca76db6a0b0d3e2a47",
+      "area": "resolution",
+      "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:f7527e37430bcec8010e8a10",
+      "area": "resolution",
+      "reason": "Optional peerDependencies rework from node_modules/resolve-url-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:fd849a2cea845da6e92a5030",
+      "area": "resolution",
+      "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:ff05f0287d41d8f746f7e117",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sockjs-client from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
+    },
+    {
+      "toolId": "govtool",
+      "id": "gap:ff6fcb718594cd7fe5bce6fd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:govtool:61a7467db993f628223475ee"
     },
     {
       "toolId": "guild-operators-suite",
@@ -4725,11 +5196,20 @@
     },
     {
       "toolId": "hydra-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2cffdb1fc4bd02948a741988",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3"
+    },
+    {
+      "toolId": "hydra-sdk",
+      "id": "gap:80ed55729d050a3dff81f255",
+      "area": "integration",
+      "reason": "The bridge manifest describes Hydra node v2.x integration and the selected packages depend on @hydra-sdk/cardano-wasm. Node deployment/network configuration and WASM build correspondence remain unresolved.",
+      "nextAction": "Capture actual Hydra node interfaces/configurations and WASM artifact/build evidence before assessing Head workflows.",
+      "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+      "code": "workflow-scope:hydra-sdk:integration"
     },
     {
       "toolId": "hydra-sdk",
@@ -4737,6 +5217,15 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "hydra-sdk",
+      "id": "gap:fd07b0be19f70969fb1eaba6",
+      "area": "artifact",
+      "reason": "Core tag/manifest is 1.5.0; selected transaction 1.2.3 and bridge 2.0.2 packages share that source revision without independently verified published release mappings.",
+      "nextAction": "Verify published artifacts for each selected workspace package.",
+      "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+      "code": "workflow-scope:hydra-sdk:artifact"
     },
     {
       "toolId": "hyperledger-identus",
@@ -5264,11 +5753,163 @@
     },
     {
       "toolId": "lace",
+      "id": "gap:0010306cd036cf16b6e8b3af",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/rolldown-plugin-dts has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:03b06cc1ddef1582df3fb023",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/enhanced has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:03c50fdfe3dde40c58863ea4",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/extension-messaging from packages/sdk/dapp-connector has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:066cd7930403e9a64de14b8a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/enhanced has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:07dace4438a7edba13774984",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/appium-uiautomator2-driver/node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:088ba5aef021849ba196566f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/module/migrate-wallet/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:08afa53153785228bbf339d4",
+      "area": "resolution",
+      "reason": "dependencies midnight-extension from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:090efdf42fdc511052b73253",
+      "area": "resolution",
+      "reason": "Optional peerDependencies unplugin-unused from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:0c77a6798841c4505707dd0b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-xcuitest-driver/node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:0d5a44a2ec3ecef4d786cb29",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/activities-extension from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:0d855ef656df3b5067617e8c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-router from node_modules/@expo/router-server has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:0eb6ebba3658913b9b2f2fe1",
+      "area": "resolution",
+      "reason": "devDependencies @faker-js/faker from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:136c051448ecd54566de8705",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:139c5bbd9fb21f3cc6b1e2c3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:14e3ab453ec5f8524f91b2ae",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/app-midnight-extension from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:171765a05f80ea9a19e6227f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/appium-uiautomator2-driver/node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:17201a09eee49ccb3009c6d3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/debug from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:1aac7755c531a1af4c133a60",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:1ced0462af10c0d31a7245de",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @react-native-masked-view/masked-view from node_modules/@react-navigation/elements has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
     },
     {
       "toolId": "lace",
@@ -5280,11 +5921,741 @@
     },
     {
       "toolId": "lace",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:1fd3fbd386c5ea115a370d67",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies @tsdown/exe from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2026631c43d10090527979e5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-native from node_modules/@gorhom/bottom-sheet has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:236f50756446df459072cad1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies allure-playwright from node_modules/allure-js-commons has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:24e194f523beee1fa2b9a5c9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-nodejs from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2536a9cf5d5645994fb9b499",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/extension-messaging from packages/module/v2-bundle has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2682894dd7fef60996f6a0ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-uiautomator2-driver/node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2c74acbfc429129df76cee27",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2db85edf439ac531a8f89d60",
+      "area": "resolution",
+      "reason": "Optional peerDependencies esbuild-register from node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:2e9e79ff65d412e51d074a5d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies crossws from node_modules/graphql-ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:337edbce655c1f6db2617918",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/extension-messaging from packages/module/lmp-bundle has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:3592c063923988fd00fb78f3",
+      "area": "artifact",
+      "reason": "Selected lace-mobile manifest/lock 2.4.0 matches the lace-mobile@2.4.0 source tag; no correspondence to a shipped mobile binary or browser-extension release has been established.",
+      "nextAction": "Verify mobile release build artifacts and assess the browser extension as a separate production profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+      "code": "workflow-scope:lace:artifact"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:36081eca98860c3bb616dad5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/debug from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:36aab1e6133632972d5d358a",
+      "area": "resolution",
+      "reason": "devDependencies chai-string from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:3afc87ef33d8bdb4b1d10ce4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-widgets from node_modules/babel-preset-expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:3c14dcc28fd0881c09ed0677",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:404749b0d6c788562cb3def0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:414db3f13dda9253a7b3d178",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/contract/air-gapped-qr-exchange/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:44a0535cb6c60954cd7e8b60",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/contract/app/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:4625f969f5aa88899728aaae",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/bare-events has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:46c82dfe7d5c7af17e5bbf59",
+      "area": "resolution",
+      "reason": "Optional peerDependencies puppeteer-core from node_modules/@wdio/appium-service/node_modules/webdriverio has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:46d2e0d43794f5c4fe14488a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:494b7d68b88f5dadb91d2b34",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/module/dapp-connector-bitcoin/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:498389132924940eb7d59626",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:4c46b478122f3c84f7191c31",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-router-dom from node_modules/react-scan has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:4f67b08541f619bc50e257e8",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/onboarding-ui-v1 from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:50501f738d1d5f00c2e18c38",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @arethetypeswrong/core from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:51d567656fd2fcd55a5b2430",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-compiler-runtime from apps/lace-mobile-storybook/node_modules/babel-preset-expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:533e87bb004b4418d5d9b6ed",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:543a68bfb5d6b3e96fa2c0ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:548ea90f9122cee05e9c84e8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:55f1772f98a1eafd21d4356f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/appium-xcuitest-driver/node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:572094d544f62b0ea6d71c80",
+      "area": "resolution",
+      "reason": "Optional peerDependencies verdaccio from node_modules/@nx/js has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:57b44e2c3d316f7c5b15dabe",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/util from packages/sdk/extension-messaging has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:596b406274a4cfa94e9f6741",
+      "area": "integration",
+      "reason": "This profile covers the mobile npm lock closure only. Installed iOS/Android native dependencies, hardware-wallet devices and hosted provider configurations remain unresolved. See retained apps/lace-mobile/package.json.",
+      "nextAction": "Capture native mobile build inventories and trace enabled provider/device integrations before claiming complete wallet coverage.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+      "code": "workflow-scope:lace:integration"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:5c044d36ae0dfd8055abaabf",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:5febefb121fa255d2199989d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @tsdown/css from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:61e20f222d796957bfaa07f6",
+      "area": "resolution",
+      "reason": "peerDependencies fastestsmallesttextencoderdecoder from node_modules/@solana/codecs-strings has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:62cf346056ca5b05373e5917",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/vitest/node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:63e2d7fab27ba013044f8ab2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/@expo/router-server has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:652676c696823fba4ecf36a5",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/extension-messaging from packages/module/app-lock-activity-web has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:69789f2fbfee64abc6a4bcfa",
+      "area": "resolution",
+      "reason": "devDependencies @storybook/react-webpack5 from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:6c9a165421eae45294a760d9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/bunyan from node_modules/bunyamin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:6cfc4ee5e6b0986108d567a3",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/util from packages/sdk/dapp-connector has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:6d8edf7f64ac7c2e9f003196",
+      "area": "resolution",
+      "reason": "Optional peerDependencies publint from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:6f39fc22106628f34aecbacd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/debug from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:6f939e90e672f8797eaa9c6b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:70b7cd9094b03da894c3afc7",
+      "area": "resolution",
+      "reason": "Workspace package name for apps/midnight-extension-e2e is missing or ambiguous in the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:72c80dbc7d256e2b00f450e8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core/node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:7954981f48ac39ba05186115",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/rspack has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:7b077ade04bae961d0793d76",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/module/vault-local/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:7bf74f3eb2ec5287fc096c85",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/module/air-gapped-qr-exchange-host/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:7d7e027e4bb4b62f7a308611",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/expo-module-scripts/node_modules/jest-expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:837a2626d1c8afa53c2a5af0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/bare-stream has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:858c6670bc96170ef9ec1418",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:872434a9a5b92771543318ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-uiautomator2-driver/node_modules/bare-events has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:87b1414474a28592461dd25d",
+      "area": "resolution",
+      "reason": "devDependencies eslint-plugin-storybook from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:8a5ab4424b53a628ca6203e5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-asmjs from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:8c94972f4ce82c69020485ce",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/appium-xcuitest-driver/node_modules/bare-fs has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:8cc89ba2ac7c9d490f9c064f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:910ee3366f296bff2d2d1d67",
+      "area": "resolution",
+      "reason": "Optional peerDependencies subscriptions-transport-ws from node_modules/@apollo/client has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:91c2490855f663416f9f7fab",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:95a8fceefee9b187a340f632",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:97ba6e5901558bd1a14fb989",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/dts-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:980288b50c41fcf9047a328f",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/dapp-connector from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:9b50df86d67d5a4c45eedc95",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:9b80e625c324301900bd52b4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies puppeteer-core from node_modules/webdriverio has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:9cea0a3ca60427bac7070db3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:a0fb12abf1acb9c434d74f3b",
+      "area": "resolution",
+      "reason": "devDependencies node-libcurl from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:a5cf8cab32037d4e6a19f4cc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-localize from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:a8a1e300458fa241525b5bea",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/util from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:ab4a9b1a7553ebc619c5d3b0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/dts-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:aca01e3c6dc95d69274438e2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:ad3e5f0061dac53c0671fd43",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @fastify/websocket from node_modules/graphql-ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:ad8e8ff1172458a5e99a2ea2",
+      "area": "resolution",
+      "reason": "devDependencies @types/chai-sorted from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b050bb0f317dbfb9d53b2d7c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b0eaafb6d09e68bb2b784b06",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b1238609d385ed46f20c9e7b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies cypress from node_modules/@nx/cypress has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b207ce0046457d172c92301f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies solid-js from node_modules/@redux-devtools/app-core/node_modules/markdown-to-jsx has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b3e0904063c34dd49c42c89d",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/util from packages/module/app-midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b517d0217b491fed8964b4a2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from packages/contract/authentication-prompt/node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:b5b8ee0aba2d36e9dd75d4ee",
+      "area": "resolution",
+      "reason": "devDependencies @storybook/addon-docs from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:bcc367c9eeed68bf8bd63e8f",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/activities-extension from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:bd2b5c4f07f1a2d8758a9e57",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/jest-expo has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:bf02759da52b5b94ee579a6a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @remix-run/react from node_modules/react-scan has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:bf8cf26d7f984ac6e2fb5ec2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitejs/devtools from node_modules/tsdown has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c0397df5f6b5deb0e87737e6",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/app-midnight-extension from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c2b5f33b83d73285c8e5a87d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-xcuitest-driver/node_modules/bare-events has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c3ab0dfd24030a92f90c9174",
+      "area": "resolution",
+      "reason": "Workspace package name for apps/midnight-extension is missing or ambiguous in the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c5d45990a3204f96db627c5b",
+      "area": "resolution",
+      "reason": "dependencies @lace-lib/legacy-styles-extension from packages/module/app-midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c81167319acee559bf84a04b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:c975bf1cd2f8c92f101d6e15",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @react-native-community/cli from node_modules/@react-native/community-cli-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:cafae49dd6e5546534d31b77",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
     },
     {
       "toolId": "lace",
@@ -5292,6 +6663,270 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:cdde3be9fbeb06ea2aec48bd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/rspack has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:cf4203adbede8c075fde6f20",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-browser from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d0e02027806076934fd187d7",
+      "area": "resolution",
+      "reason": "dependencies @lace-lib/legacy-styles-extension from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d149f955b65c30e3f5e4d6a5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @typescript/native-preview from node_modules/rolldown-plugin-dts has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d1c0d62c113ec53021dd3314",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d476395ed4d0eeffe8cfec8c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue from node_modules/@redux-devtools/app-core/node_modules/markdown-to-jsx has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d7f87de4944e554f92857653",
+      "area": "resolution",
+      "reason": "Optional peerDependencies next from node_modules/react-scan has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d8228febadeb6cc2b5da565a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/appium-xcuitest-driver/node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d92046440ae20cccb2b8f8cf",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/bare-fs has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:d93890c1a72e104c728745ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-device-info from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:dbce2059b31bca28ca7b399c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bare-buffer from node_modules/appium-uiautomator2-driver/node_modules/bare-fs has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:dc76c7c0c8d1b49d0d74edcf",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:deb2ea30618133491a83a913",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/dapp-connector from packages/module/app-midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:df47ce8a85bb6de7e9482d00",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/debug from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e3b9a374e21b8f4dced3669e",
+      "area": "resolution",
+      "reason": "dependencies @lace-module/lmp-bundle from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e67a663dc26a8b88cfc5e9c8",
+      "area": "resolution",
+      "reason": "dependencies @lace-lib/legacy-styles-extension from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e6cd77c0667cbcc7080efe13",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-router from node_modules/@expo/cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e7b647a557255820adaf9053",
+      "area": "resolution",
+      "reason": "Optional peerDependencies expo-device from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e8934686ee2a301b55c188cc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @date-fns/tz from apps/lace-extension-carbon/node_modules/@base-ui/react has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:e8cd0ba9d2327be000a93fdd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vue-template-compiler from node_modules/fork-ts-checker-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:ebfd094a484c1fda4eab5c21",
+      "area": "resolution",
+      "reason": "devDependencies @fastify/busboy from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:edfe67b34821845ca60e5643",
+      "area": "resolution",
+      "reason": "devDependencies @types/chai-string from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:eff8ac733a80bc5da713c963",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:f071b78e839f030544e2cd51",
+      "area": "resolution",
+      "reason": "Optional peerDependencies puppeteer-core from node_modules/@wdio/browserstack-service/node_modules/webdriverio has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:f29dd3e31f5f0c76c1469267",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-navigation from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:f67f004561f6b6cb0a4f8723",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/util from apps/midnight-extension-storybook has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:f6b038144b0f8d20bd7df2da",
+      "area": "resolution",
+      "reason": "Optional peerDependencies posthog-react-native-session-replay from node_modules/posthog-react-native has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:f712016931d98d5ec97891df",
+      "area": "resolution",
+      "reason": "devDependencies testcontainers from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:fab42cf7e01847211a9e8d74",
+      "area": "resolution",
+      "reason": "dependencies @lace-sdk/extension-messaging from apps/midnight-extension has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:fb63bf75a1bb597acc4833c0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @ts-macro/tsc from node_modules/rolldown-plugin-dts has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:fb981ce6ad70c2f4ec3eb6e0",
+      "area": "resolution",
+      "reason": "Workspace package name for apps/midnight-extension-storybook is missing or ambiguous in the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:fd3e7febc637b261e259c8d1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+    },
+    {
+      "toolId": "lace",
+      "id": "gap:ffa252408b801f523700089a",
+      "area": "resolution",
+      "reason": "devDependencies chai-sorted from apps/midnight-extension-e2e has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
     },
     {
       "toolId": "lace-anatomy",

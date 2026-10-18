@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "abb229bb39659bdd3c6e3e1e772438eb9a9c3609f5ec0631d89f3d7e1f53cd3e",
-    "generatedAt": "2026-10-18T13:18:02.552Z",
+    "semanticDigest": "dea5da89b9aa496c0dc4e949ab03822858f7b72fb421a4c684637646c4a68a38",
+    "generatedAt": "2026-10-18T14:17:07.482Z",
     "tools": [
       {
         "id": "1694-io",
@@ -8341,7 +8341,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -8350,6 +8350,12 @@
           "package.json"
         ],
         "evidenceIds": [
+          "evidence:015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
+          "evidence:0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
+          "evidence:8ca80632d475a280a1f309cbb8c082ddb84716040f05b84ae8e8f4c99ce459be",
+          "evidence:a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b",
+          "evidence:c47475c300b978f97bbc7607a32e933d297629b84177d50bd0ef6bdc7aeb0ddf",
+          "evidence:d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
           "evidence:f071fb32f559846b01bba8eb2bbe5a4222b6db657d3929c063e94e634ecf6be1",
           "evidence:f6df172e920215f6bf41225f155649a378530bc063c8344487f3a687f02b117d"
         ],
@@ -8369,17 +8375,96 @@
             "code": "integration-unreviewed"
           },
           {
+            "id": "gap:3d00c9ee9c374a7415e0a926",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:3dd345871690805358e5a0a4",
+            "area": "integration",
+            "reason": "The retained README describes DEX APIs, Blockfrost/Kupo, configurable wallet/data providers and optional order submission. This package capture does not establish enabled providers, deployed contracts or service versions.",
+            "nextAction": "Trace selected swap/query/submission workflows and capture enabled provider/contract identities separately.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
+            "code": "workflow-scope:dexter:integration"
+          },
+          {
             "id": "gap:4abbaad672af9beef40f0088",
             "area": "artifact",
             "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:4e19403efb40d37081d345d6",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:505962b294e6e6873b62d074",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:786fa780a05a7ec1757ef3fb",
+            "area": "artifact",
+            "reason": "Manifest/npm lock version 5.4.9 is from discovered default-branch source; no stable GitHub release mapping was identified.",
+            "nextAction": "Verify published Dexter package and source correspondence.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
+            "code": "workflow-scope:dexter:artifact"
+          },
+          {
+            "id": "gap:9797bbf020097390f7ae5de5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:aa781b180c2e434f3f52b343",
+            "area": "resolution",
+            "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:aa8656c98066d0a76daabc86",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:ba040e071fec509c5381205b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:bba302c0863830af85c150be",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @swc/core from node_modules/ts-node has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:c1f8b0b062ac53c2cde5f712",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
+          },
+          {
+            "id": "gap:c373ea6c17c0931e140e5c51",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:17.230Z",
@@ -8747,7 +8832,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -8770,8 +8855,23 @@
           "pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3",
           "evidence:27da9c4ff8f9d9f93a8a29cffb613621bec919bc32ee41532c50e4ed3f5ed5cd",
-          "evidence:b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e"
+          "evidence:474cce9fe4b158f0d918e11c2bcc936e68f19b4e991f13a3d27d459e663b80cb",
+          "evidence:635f863083451344d3f33eb73130c66f4aec2298032566439215e52595873c05",
+          "evidence:686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb",
+          "evidence:99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d",
+          "evidence:a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
+          "evidence:a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17",
+          "evidence:a58b082e6002749d7dc283cae2329a118896b8db859aed814de0af39d5046040",
+          "evidence:ab39e6f56389237c1fd750d37908cfd2e0cc880490d566c5a92753cf3e6651e6",
+          "evidence:b15880dff8d46aaa36ad238d129701ca5bc0316610e32d1befd6070ca7bf6d6a",
+          "evidence:b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e",
+          "evidence:c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca",
+          "evidence:c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+          "evidence:c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7",
+          "evidence:e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
+          "evidence:eda4b9fd15a46b818b99c06048019a384a4e2cdea1df1bfc725d25e6037acfd9"
         ],
         "gaps": [
           {
@@ -8789,11 +8889,27 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:7b8ab90232465fcfea05ce20",
+            "area": "artifact",
+            "reason": "Selected @evolution-sdk/evolution manifest is 0.6.0 at the @evolution-sdk/devnet@3.0.21 monorepo tag. This does not establish a published 0.6.0 SDK release mapping.",
+            "nextAction": "Verify the SDK-specific release and published package correspondence.",
+            "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
+            "code": "workflow-scope:evolution-sdk:artifact"
+          },
+          {
+            "id": "gap:b019a4e1531859bf3fb39a65",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:evolution-sdk:299df18680147d54d422875c"
+          },
+          {
+            "id": "gap:c627092923f9554873a03ab6",
+            "area": "capability",
+            "reason": "The selected transaction SDK package closure does not assess its direct chain-sensitive implementation or provider integration behavior.",
+            "nextAction": "Review transaction construction, serialization and configured providers against pinned SDK source.",
+            "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
+            "code": "workflow-scope:evolution-sdk:capability"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -9581,7 +9697,7 @@
           "python"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -9630,16 +9746,37 @@
           "tests/test-metadata-api/yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
           "evidence:1fccbc899426e0a1e47fb830559e28f2f16d3fa0ae531310350f19e7830b0527",
+          "evidence:278aa8694b98faa252df78a7be51d167e17dee4079d7e3775b718b449223f7e2",
+          "evidence:3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+          "evidence:72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b",
+          "evidence:7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
+          "evidence:9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d",
+          "evidence:ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2",
           "evidence:bf5dff245db13456b329264972c72f08205c1488920d4c807c814d9dbc90fa0a"
         ],
         "gaps": [
+          {
+            "id": "gap:034482441a2ade8c21431498",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:1719725fde2c7b5c27fcc1f6",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -9649,17 +9786,321 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:2a1757683a90eaca775f7645",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:32249e0b42b7c4a6bfd19acf",
+            "area": "resolution",
+            "reason": "Optional peerDependencies ts-node from node_modules/postcss-load-config has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:32998687ce7caa0f5705221b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:45e4c38de99ef5d8eb6b8af6",
+            "area": "resolution",
+            "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:468a887fbb14522cee881a7c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/webpack from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:48526af2bef60b8f2907f71a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-template-compiler from node_modules/fork-ts-checker-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:4e49e7b879e997bcf0c13cd0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies webpack-hot-middleware from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:5707926435889d6ee676ad6c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies prettier from node_modules/@storybook/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:59bf7ccbe3e051f2c1a38156",
+            "area": "resolution",
+            "reason": "Only the governance frontend is selected. The separately built Haskell backend and metadata-validation service have no native profile in this capture; discovered Stack/Cabal and metadata-service manifests remain unresolved frontiers.",
+            "nextAction": "Collect backend and metadata-service production configurations separately.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee",
+            "code": "workflow-scope:govtool:resolution"
+          },
+          {
+            "id": "gap:623921a12a4ff1303be29761",
+            "area": "resolution",
+            "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:6474e854e76a7fa86b13faa8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies webdriverio from node_modules/@vitest/browser has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:6dda4653c8886ab686f2e685",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:70d83504a5a020b39bcba25b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:7130a5f8a7103213265dec93",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:7291e597d8764d4e3729799a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/jest-environment-jsdom/node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:7845dc96d2a3c10ed62880ef",
+            "area": "resolution",
+            "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:7d8a644754d14234896ec427",
+            "area": "resolution",
+            "reason": "Optional peerDependencies rework-visit from node_modules/resolve-url-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:81bc71c06a8aaf48bf2e933d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @rspack/core from node_modules/css-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:90552e183a523e9dd255d87b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/react-scripts/node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:959f2d87fd371fa51f816d38",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:98c78a3d4e0931c8f36e8edb",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:9ac1c54e7c3c0d5cecdcf9f5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies fibers from node_modules/sass-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:9ddb92c40617f10fc0f12d85",
+            "area": "resolution",
+            "reason": "Optional peerDependencies webpack-plugin-serve from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:a4271ae5330617c8a7dee024",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @rspack/core from node_modules/html-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:a486f7026ebe240a967a7732",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:ac25832d656021b588af98c1",
+            "area": "resolution",
+            "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:b61390d996269d4f013d1268",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:b76d9fc464d9a7cb234c668b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:bd9f36569e9b4d65d228b35d",
+            "area": "integration",
+            "reason": "The retained frontend Dockerfile declares backend, metadata, PDF/outcomes and IPFS endpoints plus deployment flags. Their deployed versions, enabled flags and container inventory are outside the frontend package closure.",
+            "nextAction": "Capture deployment configuration and trace each enabled service boundary with pinned evidence.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee",
+            "code": "workflow-scope:govtool:integration"
+          },
+          {
+            "id": "gap:c10972e69014ca8ad3025314",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass-embedded from node_modules/sass-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:c5467fbc7e4bce69f96726dc",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:d6581c7ee0f7e5cef8628f7d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies ts-node from node_modules/react-scripts/node_modules/jest-config has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:d7d8de00a3079e2e6fc8eeed",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/jest-environment-jsdom/node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:d91897e00f78aae01015ef21",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:db9c921d84d8acc97b934a74",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:dc8bef56af1808c0cc52c7a7",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:de4f342f5c965c4513077ede",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:dffff022ff84eef2cc251f66",
+            "area": "artifact",
+            "reason": "Repository tag v2.0.36 contains @govtool/frontend manifest/lock version 2.0.29. The retained Dockerfile runs npm install and postinstall patch-package; the committed lock alone does not prove the deployed bundle or patched source.",
+            "nextAction": "Verify release build inputs, patches and deployed frontend artifact identity.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee",
+            "code": "workflow-scope:govtool:artifact"
+          },
+          {
+            "id": "gap:e79781186a04a1cbe51b87ec",
+            "area": "resolution",
+            "reason": "Optional peerDependencies prettier from node_modules/storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:e8828dca76db6a0b0d3e2a47",
+            "area": "resolution",
+            "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:f7527e37430bcec8010e8a10",
+            "area": "resolution",
+            "reason": "Optional peerDependencies rework from node_modules/resolve-url-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:fd849a2cea845da6e92a5030",
+            "area": "resolution",
+            "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:ff05f0287d41d8f746f7e117",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sockjs-client from node_modules/@pmmmwh/react-refresh-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
+          },
+          {
+            "id": "gap:ff6fcb718594cd7fe5bce6fd",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:govtool:61a7467db993f628223475ee"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:22.837Z",
@@ -10199,7 +10640,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -10228,8 +10669,29 @@
           "pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05",
+          "evidence:21880e600ceca3573fa0a617aff5766c2930b66b3752670b12299ef610702069",
+          "evidence:250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a",
+          "evidence:2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687",
+          "evidence:4446b1fff6020c886729133a49dbc38fb6302ec958c31f3cbb7cde4c8f8934be",
+          "evidence:643f0ff7ceba03740479dce93cb4b2f8bf7834ecab275bc91463b26b86d021e2",
+          "evidence:65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
+          "evidence:6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa",
+          "evidence:7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
           "evidence:7fc374e87623e2cdc00c1ad91f2a1c7c5306991ea7d1985f4e91439ced54cb5c",
-          "evidence:ebfcb21655bf7162f41bd342ae610d22775222cce231b017b9c8f9041dc19586"
+          "evidence:8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce",
+          "evidence:86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
+          "evidence:9a1583c745f81fad41ecd76b0b5a3e605836b40e6772a1aac48f90e235947f13",
+          "evidence:b56911710bea233a0bd837bc565e64a19c7d2b6213728a118aec05d82e57e6b8",
+          "evidence:b80030573b917724ba9edd0845ea7e2c214dfa26e7843e823812d0499f4b94b5",
+          "evidence:bcc22999804d249c70ad793129932550f0e456b447184f6f3dccaf0660723073",
+          "evidence:d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
+          "evidence:dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d",
+          "evidence:e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180",
+          "evidence:ebfcb21655bf7162f41bd342ae610d22775222cce231b017b9c8f9041dc19586",
+          "evidence:f18c1f3a77691aed39155cad2479a718e5c7b0925fadfb31b9c7353fa5d5ee51",
+          "evidence:f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
+          "evidence:f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899"
         ],
         "gaps": [
           {
@@ -10247,17 +10709,33 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:2cffdb1fc4bd02948a741988",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3"
+          },
+          {
+            "id": "gap:80ed55729d050a3dff81f255",
+            "area": "integration",
+            "reason": "The bridge manifest describes Hydra node v2.x integration and the selected packages depend on @hydra-sdk/cardano-wasm. Node deployment/network configuration and WASM build correspondence remain unresolved.",
+            "nextAction": "Capture actual Hydra node interfaces/configurations and WASM artifact/build evidence before assessing Head workflows.",
+            "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+            "code": "workflow-scope:hydra-sdk:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:fd07b0be19f70969fb1eaba6",
+            "area": "artifact",
+            "reason": "Core tag/manifest is 1.5.0; selected transaction 1.2.3 and bridge 2.0.2 packages share that source revision without independently verified published release mappings.",
+            "nextAction": "Verify published artifacts for each selected workspace package.",
+            "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+            "code": "workflow-scope:hydra-sdk:artifact"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:40.764Z",
@@ -11288,7 +11766,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -11458,16 +11936,155 @@
           "packages/module/views-mobile/package.json"
         ],
         "evidenceIds": [
+          "evidence:1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
+          "evidence:2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976",
           "evidence:8539a1ad6e1f22d11bb958416bc3b69b7b2766c701de127d46660fb6918643ff",
-          "evidence:8542c4f0610774d8385c110691fb1990ca56957e8eacc058ffa084220e87c5a7"
+          "evidence:8542c4f0610774d8385c110691fb1990ca56957e8eacc058ffa084220e87c5a7",
+          "evidence:93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
+          "evidence:aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd",
+          "evidence:b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630",
+          "evidence:b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802"
         ],
         "gaps": [
+          {
+            "id": "gap:0010306cd036cf16b6e8b3af",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/rolldown-plugin-dts has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:03b06cc1ddef1582df3fb023",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/enhanced has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:03c50fdfe3dde40c58863ea4",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/extension-messaging from packages/sdk/dapp-connector has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:066cd7930403e9a64de14b8a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/enhanced has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:07dace4438a7edba13774984",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/appium-uiautomator2-driver/node_modules/bare-stream has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:088ba5aef021849ba196566f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/module/migrate-wallet/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:08afa53153785228bbf339d4",
+            "area": "resolution",
+            "reason": "dependencies midnight-extension from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:090efdf42fdc511052b73253",
+            "area": "resolution",
+            "reason": "Optional peerDependencies unplugin-unused from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:0c77a6798841c4505707dd0b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-xcuitest-driver/node_modules/bare-stream has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:0d5a44a2ec3ecef4d786cb29",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/activities-extension from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:0d855ef656df3b5067617e8c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies expo-router from node_modules/@expo/router-server has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:0eb6ebba3658913b9b2f2fe1",
+            "area": "resolution",
+            "reason": "devDependencies @faker-js/faker from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:136c051448ecd54566de8705",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/ui from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:139c5bbd9fb21f3cc6b1e2c3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:14e3ab453ec5f8524f91b2ae",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/app-midnight-extension from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:171765a05f80ea9a19e6227f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-b4a from node_modules/appium-uiautomator2-driver/node_modules/b4a has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:17201a09eee49ccb3009c6d3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/debug from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:1aac7755c531a1af4c133a60",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:1ced0462af10c0d31a7245de",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @react-native-masked-view/masked-view from node_modules/@react-navigation/elements has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -11477,17 +12094,887 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:1fd3fbd386c5ea115a370d67",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies @tsdown/exe from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2026631c43d10090527979e5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-native from node_modules/@gorhom/bottom-sheet has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:236f50756446df459072cad1",
+            "area": "resolution",
+            "reason": "Optional peerDependencies allure-playwright from node_modules/allure-js-commons has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:24e194f523beee1fa2b9a5c9",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-nodejs from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2536a9cf5d5645994fb9b499",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/extension-messaging from packages/module/v2-bundle has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2682894dd7fef60996f6a0ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-uiautomator2-driver/node_modules/bare-stream has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2c74acbfc429129df76cee27",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2db85edf439ac531a8f89d60",
+            "area": "resolution",
+            "reason": "Optional peerDependencies esbuild-register from node_modules/jest-config has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:2e9e79ff65d412e51d074a5d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies crossws from node_modules/graphql-ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:337edbce655c1f6db2617918",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/extension-messaging from packages/module/lmp-bundle has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:3592c063923988fd00fb78f3",
+            "area": "artifact",
+            "reason": "Selected lace-mobile manifest/lock 2.4.0 matches the lace-mobile@2.4.0 source tag; no correspondence to a shipped mobile binary or browser-extension release has been established.",
+            "nextAction": "Verify mobile release build artifacts and assess the browser extension as a separate production profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+            "code": "workflow-scope:lace:artifact"
+          },
+          {
+            "id": "gap:36081eca98860c3bb616dad5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/debug from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:36aab1e6133632972d5d358a",
+            "area": "resolution",
+            "reason": "devDependencies chai-string from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:3afc87ef33d8bdb4b1d10ce4",
+            "area": "resolution",
+            "reason": "Optional peerDependencies expo-widgets from node_modules/babel-preset-expo has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:3c14dcc28fd0881c09ed0677",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:404749b0d6c788562cb3def0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:414db3f13dda9253a7b3d178",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/contract/air-gapped-qr-exchange/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:44a0535cb6c60954cd7e8b60",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/contract/app/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:4625f969f5aa88899728aaae",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-abort-controller from node_modules/bare-events has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:46c82dfe7d5c7af17e5bbf59",
+            "area": "resolution",
+            "reason": "Optional peerDependencies puppeteer-core from node_modules/@wdio/appium-service/node_modules/webdriverio has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:46d2e0d43794f5c4fe14488a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:494b7d68b88f5dadb91d2b34",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/module/dapp-connector-bitcoin/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:498389132924940eb7d59626",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:4c46b478122f3c84f7191c31",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-router-dom from node_modules/react-scan has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:4f67b08541f619bc50e257e8",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/onboarding-ui-v1 from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:50501f738d1d5f00c2e18c38",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @arethetypeswrong/core from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:51d567656fd2fcd55a5b2430",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-compiler-runtime from apps/lace-mobile-storybook/node_modules/babel-preset-expo has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:533e87bb004b4418d5d9b6ed",
+            "area": "resolution",
+            "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:543a68bfb5d6b3e96fa2c0ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:548ea90f9122cee05e9c84e8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:55f1772f98a1eafd21d4356f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/appium-xcuitest-driver/node_modules/bare-stream has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:572094d544f62b0ea6d71c80",
+            "area": "resolution",
+            "reason": "Optional peerDependencies verdaccio from node_modules/@nx/js has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:57b44e2c3d316f7c5b15dabe",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/util from packages/sdk/extension-messaging has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:596b406274a4cfa94e9f6741",
+            "area": "integration",
+            "reason": "This profile covers the mobile npm lock closure only. Installed iOS/Android native dependencies, hardware-wallet devices and hosted provider configurations remain unresolved. See retained apps/lace-mobile/package.json.",
+            "nextAction": "Capture native mobile build inventories and trace enabled provider/device integrations before claiming complete wallet coverage.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+            "code": "workflow-scope:lace:integration"
+          },
+          {
+            "id": "gap:5c044d36ae0dfd8055abaabf",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-sass from node_modules/sass-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:5febefb121fa255d2199989d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @tsdown/css from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:61e20f222d796957bfaa07f6",
+            "area": "resolution",
+            "reason": "peerDependencies fastestsmallesttextencoderdecoder from node_modules/@solana/codecs-strings has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:62cf346056ca5b05373e5917",
+            "area": "resolution",
+            "reason": "Optional peerDependencies msw from node_modules/vitest/node_modules/@vitest/mocker has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:63e2d7fab27ba013044f8ab2",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/@expo/router-server has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:652676c696823fba4ecf36a5",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/extension-messaging from packages/module/app-lock-activity-web has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:69789f2fbfee64abc6a4bcfa",
+            "area": "resolution",
+            "reason": "devDependencies @storybook/react-webpack5 from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:6c9a165421eae45294a760d9",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/bunyan from node_modules/bunyamin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:6cfc4ee5e6b0986108d567a3",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/util from packages/sdk/dapp-connector has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:6d8edf7f64ac7c2e9f003196",
+            "area": "resolution",
+            "reason": "Optional peerDependencies publint from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:6f39fc22106628f34aecbacd",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/debug from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:6f939e90e672f8797eaa9c6b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:70b7cd9094b03da894c3afc7",
+            "area": "resolution",
+            "reason": "Workspace package name for apps/midnight-extension-e2e is missing or ambiguous in the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:72c80dbc7d256e2b00f450e8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core/node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:7954981f48ac39ba05186115",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/rspack has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:7b077ade04bae961d0793d76",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/module/vault-local/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:7bf74f3eb2ec5287fc096c85",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/module/air-gapped-qr-exchange-host/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:7d7e027e4bb4b62f7a308611",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/expo-module-scripts/node_modules/jest-expo has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:837a2626d1c8afa53c2a5af0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/bare-stream has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:858c6670bc96170ef9ec1418",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from packages/module/vault-local/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:872434a9a5b92771543318ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-uiautomator2-driver/node_modules/bare-events has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:87b1414474a28592461dd25d",
+            "area": "resolution",
+            "reason": "devDependencies eslint-plugin-storybook from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:8a5ab4424b53a628ca6203e5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-asmjs from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:8c94972f4ce82c69020485ce",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/appium-xcuitest-driver/node_modules/bare-fs has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:8cc89ba2ac7c9d490f9c064f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:910ee3366f296bff2d2d1d67",
+            "area": "resolution",
+            "reason": "Optional peerDependencies subscriptions-transport-ws from node_modules/@apollo/client has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:91c2490855f663416f9f7fab",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from packages/module/onboarding/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:95a8fceefee9b187a340f632",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:97ba6e5901558bd1a14fb989",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/dts-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:980288b50c41fcf9047a328f",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/dapp-connector from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:9b50df86d67d5a4c45eedc95",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:9b80e625c324301900bd52b4",
+            "area": "resolution",
+            "reason": "Optional peerDependencies puppeteer-core from node_modules/webdriverio has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:9cea0a3ca60427bac7070db3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:a0fb12abf1acb9c434d74f3b",
+            "area": "resolution",
+            "reason": "devDependencies node-libcurl from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:a5cf8cab32037d4e6a19f4cc",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-localize from node_modules/posthog-react-native has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:a8a1e300458fa241525b5bea",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/util from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:ab4a9b1a7553ebc619c5d3b0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/node/node_modules/@module-federation/dts-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:aca01e3c6dc95d69274438e2",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:ad3e5f0061dac53c0671fd43",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @fastify/websocket from node_modules/graphql-ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:ad8e8ff1172458a5e99a2ea2",
+            "area": "resolution",
+            "reason": "devDependencies @types/chai-sorted from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b050bb0f317dbfb9d53b2d7c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/ui from packages/lib/bitcoin-provider-core/node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b0eaafb6d09e68bb2b784b06",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@storybook/test-runner/node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b1238609d385ed46f20c9e7b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies cypress from node_modules/@nx/cypress has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b207ce0046457d172c92301f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies solid-js from node_modules/@redux-devtools/app-core/node_modules/markdown-to-jsx has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b3e0904063c34dd49c42c89d",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/util from packages/module/app-midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b517d0217b491fed8964b4a2",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from packages/contract/authentication-prompt/node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:b5b8ee0aba2d36e9dd75d4ee",
+            "area": "resolution",
+            "reason": "devDependencies @storybook/addon-docs from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:bcc367c9eeed68bf8bd63e8f",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/activities-extension from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:bd2b5c4f07f1a2d8758a9e57",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-server-dom-webpack from node_modules/jest-expo has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:bf02759da52b5b94ee579a6a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @remix-run/react from node_modules/react-scan has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:bf8cf26d7f984ac6e2fb5ec2",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitejs/devtools from node_modules/tsdown has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c0397df5f6b5deb0e87737e6",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/app-midnight-extension from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c2b5f33b83d73285c8e5a87d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-abort-controller from node_modules/appium-xcuitest-driver/node_modules/bare-events has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c3ab0dfd24030a92f90c9174",
+            "area": "resolution",
+            "reason": "Workspace package name for apps/midnight-extension is missing or ambiguous in the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c5d45990a3204f96db627c5b",
+            "area": "resolution",
+            "reason": "dependencies @lace-lib/legacy-styles-extension from packages/module/app-midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c81167319acee559bf84a04b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:c975bf1cd2f8c92f101d6e15",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @react-native-community/cli from node_modules/@react-native/community-cli-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:cafae49dd6e5546534d31b77",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:cdde3be9fbeb06ea2aec48bd",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-tsc from node_modules/@module-federation/rspack has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:cf4203adbede8c075fde6f20",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @dcspark/cardano-multiplatform-lib-browser from node_modules/@cardano-sdk/crypto has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d0e02027806076934fd187d7",
+            "area": "resolution",
+            "reason": "dependencies @lace-lib/legacy-styles-extension from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d149f955b65c30e3f5e4d6a5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @typescript/native-preview from node_modules/rolldown-plugin-dts has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d1c0d62c113ec53021dd3314",
+            "area": "resolution",
+            "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d476395ed4d0eeffe8cfec8c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue from node_modules/@redux-devtools/app-core/node_modules/markdown-to-jsx has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d7f87de4944e554f92857653",
+            "area": "resolution",
+            "reason": "Optional peerDependencies next from node_modules/react-scan has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d8228febadeb6cc2b5da565a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-b4a from node_modules/appium-xcuitest-driver/node_modules/b4a has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d92046440ae20cccb2b8f8cf",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/bare-fs has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:d93890c1a72e104c728745ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-device-info from node_modules/posthog-react-native has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:dbce2059b31bca28ca7b399c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bare-buffer from node_modules/appium-uiautomator2-driver/node_modules/bare-fs has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:dc76c7c0c8d1b49d0d74edcf",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:deb2ea30618133491a83a913",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/dapp-connector from packages/module/app-midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:df47ce8a85bb6de7e9482d00",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/debug from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e3b9a374e21b8f4dced3669e",
+            "area": "resolution",
+            "reason": "dependencies @lace-module/lmp-bundle from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e67a663dc26a8b88cfc5e9c8",
+            "area": "resolution",
+            "reason": "dependencies @lace-lib/legacy-styles-extension from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e6cd77c0667cbcc7080efe13",
+            "area": "resolution",
+            "reason": "Optional peerDependencies expo-router from node_modules/@expo/cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e7b647a557255820adaf9053",
+            "area": "resolution",
+            "reason": "Optional peerDependencies expo-device from node_modules/posthog-react-native has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e8934686ee2a301b55c188cc",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @date-fns/tz from apps/lace-extension-carbon/node_modules/@base-ui/react has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:e8cd0ba9d2327be000a93fdd",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vue-template-compiler from node_modules/fork-ts-checker-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:ebfd094a484c1fda4eab5c21",
+            "area": "resolution",
+            "reason": "devDependencies @fastify/busboy from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:edfe67b34821845ca60e5643",
+            "area": "resolution",
+            "reason": "devDependencies @types/chai-string from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:eff8ac733a80bc5da713c963",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:f071b78e839f030544e2cd51",
+            "area": "resolution",
+            "reason": "Optional peerDependencies puppeteer-core from node_modules/@wdio/browserstack-service/node_modules/webdriverio has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:f29dd3e31f5f0c76c1469267",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-navigation from node_modules/posthog-react-native has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:f67f004561f6b6cb0a4f8723",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/util from apps/midnight-extension-storybook has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:f6b038144b0f8d20bd7df2da",
+            "area": "resolution",
+            "reason": "Optional peerDependencies posthog-react-native-session-replay from node_modules/posthog-react-native has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:f712016931d98d5ec97891df",
+            "area": "resolution",
+            "reason": "devDependencies testcontainers from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:fab42cf7e01847211a9e8d74",
+            "area": "resolution",
+            "reason": "dependencies @lace-sdk/extension-messaging from apps/midnight-extension has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:fb63bf75a1bb597acc4833c0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @ts-macro/tsc from node_modules/rolldown-plugin-dts has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:fb981ce6ad70c2f4ec3eb6e0",
+            "area": "resolution",
+            "reason": "Workspace package name for apps/midnight-extension-storybook is missing or ambiguous in the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:fd3e7febc637b261e259c8d1",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
+          },
+          {
+            "id": "gap:ffa252408b801f523700089a",
+            "area": "resolution",
+            "reason": "devDependencies chai-sorted from apps/midnight-extension-e2e has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:38.509Z",
@@ -20085,6 +21572,30 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:dexter:f3cebd33fc6ab1d00989de83",
+        "toolId": "dexter",
+        "release": "unreleased:master",
+        "revision": "44a57eb0f6f80650f1ed34a7765c787afa27f1ab",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed package-lock.json at 44a57eb0f6f80650f1ed34a7765c787afa27f1ab",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:678b4e311f3bb57a3f21c19dbcfbf5d557f1258441c1bf22cb6b892e0bb40dda"
+        ],
+        "inputDigest": "f3cebd33fc6ab1d00989de83f338be32ca8a091c3bf68873bc939a1e90973d2e",
+        "evidenceIds": [
+          "evidence:015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
+          "evidence:a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b"
+        ],
+        "nativeEvidenceId": "evidence:a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b",
+        "configurationEvidenceId": "evidence:015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:dingo:6f5b0ee506b45eb96bbe156f",
         "toolId": "dingo",
         "release": "v0.84.0",
@@ -20259,6 +21770,40 @@
         "coverage": "complete"
       },
       {
+        "id": "profile:evolution-sdk:299df18680147d54d422875c",
+        "toolId": "evolution-sdk",
+        "release": "@evolution-sdk/devnet@3.0.21",
+        "revision": "c4139df12e099dbd4742d3e2c10dc52f50a4bd41",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed pnpm-lock.yaml and importer manifests at c4139df12e099dbd4742d3e2c10dc52f50a4bd41",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:8d9b850aa98a55ad8dd7f077ab108489dc20a68efc6adb87b52e0cd40ec69486"
+        ],
+        "inputDigest": "299df18680147d54d422875cfd3cc55bd06bd6ec0c9e70ea3c9527730778d51b",
+        "evidenceIds": [
+          "evidence:12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3",
+          "evidence:474cce9fe4b158f0d918e11c2bcc936e68f19b4e991f13a3d27d459e663b80cb",
+          "evidence:99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d",
+          "evidence:a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
+          "evidence:a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17",
+          "evidence:ab39e6f56389237c1fd750d37908cfd2e0cc880490d566c5a92753cf3e6651e6",
+          "evidence:b15880dff8d46aaa36ad238d129701ca5bc0316610e32d1befd6070ca7bf6d6a",
+          "evidence:c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+          "evidence:c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7",
+          "evidence:e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
+          "evidence:eda4b9fd15a46b818b99c06048019a384a4e2cdea1df1bfc725d25e6037acfd9"
+        ],
+        "nativeEvidenceId": "evidence:e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
+        "configurationEvidenceId": "evidence:c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:gouroboros:8219528d8e28e5fc56581eb1",
         "toolId": "gouroboros",
         "release": "v0.213.5",
@@ -20413,6 +21958,30 @@
         "coverage": "complete"
       },
       {
+        "id": "profile:govtool:61a7467db993f628223475ee",
+        "toolId": "govtool",
+        "release": "v2.0.36",
+        "revision": "993d25ab42b6565a95aaa82ef297ac5053b3fb3e",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed govtool/frontend/package-lock.json at 993d25ab42b6565a95aaa82ef297ac5053b3fb3e",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:64915ec62bd0315f6beaa3805ce0bc85bd13f83868473870967f41f3d94d9b7e"
+        ],
+        "inputDigest": "61a7467db993f628223475eedd644cb849f42ee485fc1f2823ec710c4d6465e7",
+        "evidenceIds": [
+          "evidence:3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+          "evidence:ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2"
+        ],
+        "nativeEvidenceId": "evidence:ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2",
+        "configurationEvidenceId": "evidence:3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:helios:7ac457e6c9833f81ababb556",
         "toolId": "helios",
         "release": "unreleased:main",
@@ -20437,6 +22006,70 @@
         ],
         "nativeEvidenceId": "evidence:cae989be54e322d9090728763c43700fc987301143414db583644f03bec2383d",
         "configurationEvidenceId": "evidence:03f35f06d75d9a2663334de7b717893840617f3006f3ed60a13a7e2e85c799f7",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+        "toolId": "hydra-sdk",
+        "release": "@hydra-sdk/core@1.5.0",
+        "revision": "d10c4596fae296a93ad0fdf215d52f9f01d63361",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed pnpm-lock.yaml and importer manifests at d10c4596fae296a93ad0fdf215d52f9f01d63361",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:de59880d1651ac70e58ecb6e73204bd5371f72d262710b792dec75e870fc0aef",
+          "occurrence:64557042f72b7a157b548425b7cb1073de0ba86fc572eccbdd441959daf00bcd",
+          "occurrence:72c0096f61c1526ce85eeffb01b28c2ab16b16d9cf71aff9ae9bdbcc9b95b895"
+        ],
+        "inputDigest": "8290f8466ff3f54c585e42e3a428e23d2366d7c6b6910d9a94e264f08c864f70",
+        "evidenceIds": [
+          "evidence:0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05",
+          "evidence:21880e600ceca3573fa0a617aff5766c2930b66b3752670b12299ef610702069",
+          "evidence:250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a",
+          "evidence:4446b1fff6020c886729133a49dbc38fb6302ec958c31f3cbb7cde4c8f8934be",
+          "evidence:643f0ff7ceba03740479dce93cb4b2f8bf7834ecab275bc91463b26b86d021e2",
+          "evidence:65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
+          "evidence:6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa",
+          "evidence:7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
+          "evidence:8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce",
+          "evidence:86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
+          "evidence:b56911710bea233a0bd837bc565e64a19c7d2b6213728a118aec05d82e57e6b8",
+          "evidence:d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
+          "evidence:f18c1f3a77691aed39155cad2479a718e5c7b0925fadfb31b9c7353fa5d5ee51",
+          "evidence:f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
+          "evidence:f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899"
+        ],
+        "nativeEvidenceId": "evidence:6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa",
+        "configurationEvidenceId": "evidence:8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+        "toolId": "lace",
+        "release": "lace-mobile@2.4.0",
+        "revision": "e431933f34ec417996d9c28b7389e24c87868b1e",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed package-lock.json at e431933f34ec417996d9c28b7389e24c87868b1e",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:dd05fc749e4d1df4ea85c62260929e2b3826716f083a0409c0e90ecd3ec6cee3"
+        ],
+        "inputDigest": "df2b413cb6eca9dc9fbd42bfb18d556d921a0a6cdbbede37d80a3797ec128fd4",
+        "evidenceIds": [
+          "evidence:93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
+          "evidence:aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd"
+        ],
+        "nativeEvidenceId": "evidence:aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd",
+        "configurationEvidenceId": "evidence:93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
         "coverage": "partial"
       },
       {
@@ -20744,11 +22377,25 @@
         "sourceUrl": "https://github.com/use-cardano/use-cardano/releases/tag/v1.1.0"
       },
       {
+        "id": "evidence:015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
+        "digest": "015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144",
+        "path": "evidence/015376091a08606540aa57ac568fe4e57e51803f79b8d98aa57f6b278f525144.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/IndigoProtocol/dexter/tree/44a57eb0f6f80650f1ed34a7765c787afa27f1ab"
+      },
+      {
         "id": "evidence:0171d10c834379b267af48c9a570b10d941319a8d01549701f5e071a96a8d10c",
         "digest": "0171d10c834379b267af48c9a570b10d941319a8d01549701f5e071a96a8d10c",
         "path": "evidence/0171d10c834379b267af48c9a570b10d941319a8d01549701f5e071a96a8d10c.json.gz",
         "description": "pnpm-lock for lucid-evolution @lucid-evolution/core-types@0.5.2",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/tree/df729a787f9084d2dc461862889ac2971ea43e07"
+      },
+      {
+        "id": "evidence:0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05",
+        "digest": "0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05",
+        "path": "evidence/0263d960bd649a6c287093edfc3971a906b71cfb23ff8d505cfdf82711e4cb05.json.gz",
+        "description": "Native input hydra-sdk/packages/core/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/core/package.json"
       },
       {
         "id": "evidence:02935df159255abe6512ce9ceec43e71763f5090d8d1c680fcda81ce76392a02",
@@ -20947,6 +22594,12 @@
         "sourceUrl": "https://github.com/mlabs-haskell/clb/tree/867ff70b4d3086f728733f25509692cda41ea0ef"
       },
       {
+        "id": "evidence:0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
+        "digest": "0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
+        "path": "evidence/0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f.json.gz",
+        "description": "Collection request for dexter"
+      },
+      {
         "id": "evidence:0ea7b08cc5156ebba3501af0de1d73b955998c3337d2da7eb581439e00bdcbc5",
         "digest": "0ea7b08cc5156ebba3501af0de1d73b955998c3337d2da7eb581439e00bdcbc5",
         "path": "evidence/0ea7b08cc5156ebba3501af0de1d73b955998c3337d2da7eb581439e00bdcbc5.json.gz",
@@ -20982,6 +22635,13 @@
         "sourceUrl": "https://github.com/txpipe/pix/tree/19e45ffade14177437fc760b14531cacd3e4d1a2"
       },
       {
+        "id": "evidence:12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3",
+        "digest": "12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3",
+        "path": "evidence/12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3.json.gz",
+        "description": "Native input evolution-sdk/packages/evolution-devnet/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/evolution-devnet/package.json"
+      },
+      {
         "id": "evidence:12efdc075da5f920a5e2b52eb57d5f64e5dcb2ef4f19d64735f6c0222d3db6ea",
         "digest": "12efdc075da5f920a5e2b52eb57d5f64e5dcb2ef4f19d64735f6c0222d3db6ea",
         "path": "evidence/12efdc075da5f920a5e2b52eb57d5f64e5dcb2ef4f19d64735f6c0222d3db6ea.json.gz",
@@ -21001,6 +22661,13 @@
         "path": "evidence/1447135e0c6ff619b56c52ee4170fd16055bde05229207fb8588a0b825b5d00d.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331"
+      },
+      {
+        "id": "evidence:1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
+        "digest": "1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
+        "path": "evidence/1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f.json.gz",
+        "description": "Source govtool/govtool/frontend/README.md",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/README.md"
       },
       {
         "id": "evidence:158dec8544c93fc7e1c418a9595d0bc810a763143d1fd61443d7601fb4f10fa2",
@@ -21107,6 +22774,12 @@
         "sourceUrl": "https://github.com/ajnabi-workshop/jambhala/tree/1e2a19867266f81a36da9c0612a8cddd6fbb4c7a"
       },
       {
+        "id": "evidence:1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
+        "digest": "1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
+        "path": "evidence/1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78.json.gz",
+        "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
         "id": "evidence:1f29fac34f3959a3384e5d36a9aa0332d874f1aa3e2127a1ffa06b9cac3d69dc",
         "digest": "1f29fac34f3959a3384e5d36a9aa0332d874f1aa3e2127a1ffa06b9cac3d69dc",
         "path": "evidence/1f29fac34f3959a3384e5d36a9aa0332d874f1aa3e2127a1ffa06b9cac3d69dc.json.gz",
@@ -21169,6 +22842,13 @@
         "description": "Collection request for opshin"
       },
       {
+        "id": "evidence:21880e600ceca3573fa0a617aff5766c2930b66b3752670b12299ef610702069",
+        "digest": "21880e600ceca3573fa0a617aff5766c2930b66b3752670b12299ef610702069",
+        "path": "evidence/21880e600ceca3573fa0a617aff5766c2930b66b3752670b12299ef610702069.json.gz",
+        "description": "Native input hydra-sdk/apps/playground/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/playground/package.json"
+      },
+      {
         "id": "evidence:21eec054720eb6e97bab890ba6f387e62d70a61765057a2bf35aac49fd9de298",
         "digest": "21eec054720eb6e97bab890ba6f387e62d70a61765057a2bf35aac49fd9de298",
         "path": "evidence/21eec054720eb6e97bab890ba6f387e62d70a61765057a2bf35aac49fd9de298.json.gz",
@@ -21225,6 +22905,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/bech32/releases/tag/v1.1.7"
       },
       {
+        "id": "evidence:250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a",
+        "digest": "250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a",
+        "path": "evidence/250f8d0519245f33033dd43a25af10726366889bd9f97453f4babbb32dc51d9a.json.gz",
+        "description": "Native input hydra-sdk/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/pnpm-workspace.yaml"
+      },
+      {
         "id": "evidence:254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069",
         "digest": "254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069",
         "path": "evidence/254af6dbcae683c5fa23e78ec7b637611d2c40f0f4049ca39e5f988a5d75b069.json.gz",
@@ -21265,6 +22952,13 @@
         "path": "evidence/26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/koios-python/releases/tag/v2.0.0"
+      },
+      {
+        "id": "evidence:278aa8694b98faa252df78a7be51d167e17dee4079d7e3775b718b449223f7e2",
+        "digest": "278aa8694b98faa252df78a7be51d167e17dee4079d7e3775b718b449223f7e2",
+        "path": "evidence/278aa8694b98faa252df78a7be51d167e17dee4079d7e3775b718b449223f7e2.json.gz",
+        "description": "Source govtool/govtool/frontend/Dockerfile",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/Dockerfile"
       },
       {
         "id": "evidence:279bf5b98daef37314ee1efc8332e24663ca2894330d33132e73ff4a18b22c05",
@@ -21326,6 +23020,12 @@
         "digest": "2a4cfc2fb5f11ea8adbee77e2eb53849ca7902b4c5a40b4c6a8fdb357494d043",
         "path": "evidence/2a4cfc2fb5f11ea8adbee77e2eb53849ca7902b4c5a40b4c6a8fdb357494d043.json.gz",
         "description": "Collection request for opshin"
+      },
+      {
+        "id": "evidence:2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687",
+        "digest": "2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687",
+        "path": "evidence/2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687.json.gz",
+        "description": "Authored collection scope and unresolved boundaries"
       },
       {
         "id": "evidence:2a946bd1294443155521d0f94772f98c93985452bdb696d31297d4188075ad3c",
@@ -21400,6 +23100,13 @@
         "path": "evidence/2e7b570ae829fea165abbaae8c7879953e1a79ba9b4d0b3447321b4070ec5ace.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/input-output-hk/daedalus/releases/tag/11.5.0"
+      },
+      {
+        "id": "evidence:2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976",
+        "digest": "2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976",
+        "path": "evidence/2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976.json.gz",
+        "description": "Source lace/apps/lace-mobile/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/package.json"
       },
       {
         "id": "evidence:2f6369fa1ad4244e0360b93b19b6c93b0b258f0d4b352b218884f63edd288621",
@@ -21603,6 +23310,13 @@
         "sourceUrl": "https://github.com/cardano-community/pg_cardano/tree/5aac863c2fb182fc92f97e6326db3bcba7aded04"
       },
       {
+        "id": "evidence:3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+        "digest": "3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+        "path": "evidence/3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/tree/993d25ab42b6565a95aaa82ef297ac5053b3fb3e"
+      },
+      {
         "id": "evidence:3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
         "digest": "3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
         "path": "evidence/3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89.json.gz",
@@ -21694,6 +23408,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/gouroboros/blob/234bc3a95cce93deb3680dd52d30670b37fbf7a6/go.mod"
       },
       {
+        "id": "evidence:4446b1fff6020c886729133a49dbc38fb6302ec958c31f3cbb7cde4c8f8934be",
+        "digest": "4446b1fff6020c886729133a49dbc38fb6302ec958c31f3cbb7cde4c8f8934be",
+        "path": "evidence/4446b1fff6020c886729133a49dbc38fb6302ec958c31f3cbb7cde4c8f8934be.json.gz",
+        "description": "Native input hydra-sdk/packages/tsconfig/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/tsconfig/package.json"
+      },
+      {
         "id": "evidence:444f884fdac7c419936ac875bca666966a018208268294cf26a4d45e47068610",
         "digest": "444f884fdac7c419936ac875bca666966a018208268294cf26a4d45e47068610",
         "path": "evidence/444f884fdac7c419936ac875bca666966a018208268294cf26a4d45e47068610.json.gz",
@@ -21733,6 +23454,13 @@
         "digest": "472e97a231007b924ab1e6fedc088385343e31e2de4297b2ffb73e22bd0fd5d7",
         "path": "evidence/472e97a231007b924ab1e6fedc088385343e31e2de4297b2ffb73e22bd0fd5d7.json.gz",
         "description": "Native command diagnostics for gouroboros"
+      },
+      {
+        "id": "evidence:474cce9fe4b158f0d918e11c2bcc936e68f19b4e991f13a3d27d459e663b80cb",
+        "digest": "474cce9fe4b158f0d918e11c2bcc936e68f19b4e991f13a3d27d459e663b80cb",
+        "path": "evidence/474cce9fe4b158f0d918e11c2bcc936e68f19b4e991f13a3d27d459e663b80cb.json.gz",
+        "description": "Native input evolution-sdk/packages/aiken-uplc/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/aiken-uplc/package.json"
       },
       {
         "id": "evidence:477792c1da611d0fa2a8414fb0a87a9f53ad410fa4172f56b0ed24465aee9cad",
@@ -22090,6 +23818,12 @@
         "sourceUrl": "https://github.com/CardanoSolutions/kupo/tree/491918a50b45ed2b3de682ee79e03c6dc09779a3"
       },
       {
+        "id": "evidence:635f863083451344d3f33eb73130c66f4aec2298032566439215e52595873c05",
+        "digest": "635f863083451344d3f33eb73130c66f4aec2298032566439215e52595873c05",
+        "path": "evidence/635f863083451344d3f33eb73130c66f4aec2298032566439215e52595873c05.json.gz",
+        "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
         "id": "evidence:6361f4d69ae02e88b3390604b1060689f1440c7676d3eba678682dbc8eba4a81",
         "digest": "6361f4d69ae02e88b3390604b1060689f1440c7676d3eba678682dbc8eba4a81",
         "path": "evidence/6361f4d69ae02e88b3390604b1060689f1440c7676d3eba678682dbc8eba4a81.json.gz",
@@ -22109,6 +23843,20 @@
         "path": "evidence/6422bcd025a342f0bba18857fcae5946a0cf7b7b6ace1a831e7431683de83cae.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/OpShin/opshin/tree/515329f99b51e27c65492237200c8aafd802837d"
+      },
+      {
+        "id": "evidence:643f0ff7ceba03740479dce93cb4b2f8bf7834ecab275bc91463b26b86d021e2",
+        "digest": "643f0ff7ceba03740479dce93cb4b2f8bf7834ecab275bc91463b26b86d021e2",
+        "path": "evidence/643f0ff7ceba03740479dce93cb4b2f8bf7834ecab275bc91463b26b86d021e2.json.gz",
+        "description": "Native input hydra-sdk/apps/docs/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs/package.json"
+      },
+      {
+        "id": "evidence:65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
+        "digest": "65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0",
+        "path": "evidence/65a9ad2d08b0fac5505fae2225da2c31e3408ddbfa2117f36f1bd932f7ababd0.json.gz",
+        "description": "Native input hydra-sdk/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/package.json"
       },
       {
         "id": "evidence:65efbfa474ea5f33fcb6994d4a876b1c01cbb2f7866a46e44eb827fe7943b1ef",
@@ -22131,6 +23879,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/gouroboros/tree/234bc3a95cce93deb3680dd52d30670b37fbf7a6"
       },
       {
+        "id": "evidence:6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa",
+        "digest": "6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa",
+        "path": "evidence/6705fa0f037e6df919dcdafebb12b0ef6a7919d3adaef6b24a3a29dad7cf0efa.json.gz",
+        "description": "pnpm-lock for hydra-sdk @hydra-sdk/core@1.5.0",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
+      },
+      {
         "id": "evidence:679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac",
         "digest": "679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac",
         "path": "evidence/679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac.json.gz",
@@ -22150,6 +23905,12 @@
         "path": "evidence/6855215c2368fa5174ccbb1f86df0453c2d6c8faebbff5abc3e097289aa8344f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/scrolls/tree/efe86f7293a30bf1c18902bc06ed7a07662991ee"
+      },
+      {
+        "id": "evidence:686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb",
+        "digest": "686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb",
+        "path": "evidence/686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb.json.gz",
+        "description": "Collection request for evolution-sdk"
       },
       {
         "id": "evidence:6898d73869dcb034411ce432d7bda4514ce9738228409d88e6bff15078001556",
@@ -22325,6 +24086,13 @@
         "sourceUrl": "https://github.com/aiken-lang/stdlib/tree/dfdf5ffc4fa28896c075f06faf2bf6709a11cc5e"
       },
       {
+        "id": "evidence:72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b",
+        "digest": "72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b",
+        "path": "evidence/72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b.json.gz",
+        "description": "Source govtool/govtool/frontend/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/package.json"
+      },
+      {
         "id": "evidence:730ab82d57daf25b4375363cb991c7b79f59b6b61093cc2fefac96d32774b80c",
         "digest": "730ab82d57daf25b4375363cb991c7b79f59b6b61093cc2fefac96d32774b80c",
         "path": "evidence/730ab82d57daf25b4375363cb991c7b79f59b6b61093cc2fefac96d32774b80c.json.gz",
@@ -22388,6 +24156,12 @@
         "sourceUrl": "https://github.com/blinklabs-io/dingo/blob/e0630ddf8a72dc0280ed8845fb1d899fae2d1051/go.mod"
       },
       {
+        "id": "evidence:7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
+        "digest": "7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
+        "path": "evidence/7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07.json.gz",
+        "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
         "id": "evidence:79c816d392a8b3b31e22098049223ee2d273897529559e6c80b85fdd52a94d69",
         "digest": "79c816d392a8b3b31e22098049223ee2d273897529559e6c80b85fdd52a94d69",
         "path": "evidence/79c816d392a8b3b31e22098049223ee2d273897529559e6c80b85fdd52a94d69.json.gz",
@@ -22448,6 +24222,13 @@
         "path": "evidence/7b66e0c7fc8403872e464edac0bcd10ef66b1c6000affe69831667ec0b7d257a.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/input-output-hk/devx/tree/5f05c1e1af6df3e2ec72d7ebf8d8d0ccb9a157b1"
+      },
+      {
+        "id": "evidence:7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
+        "digest": "7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
+        "path": "evidence/7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c.json.gz",
+        "description": "Native input hydra-sdk/apps/nodejs-playground/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/nodejs-playground/package.json"
       },
       {
         "id": "evidence:7c871571cd41c6fc694697dc9adcc7ed8aee6e9e8d6685c179a00104d94c0d91",
@@ -22576,6 +24357,13 @@
         "sourceUrl": "https://github.com/txpipe/mumak/tree/4da43f3cb21d986280faf2ad373db954418dc888"
       },
       {
+        "id": "evidence:8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce",
+        "digest": "8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce",
+        "path": "evidence/8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
+      },
+      {
         "id": "evidence:8539a1ad6e1f22d11bb958416bc3b69b7b2766c701de127d46660fb6918643ff",
         "digest": "8539a1ad6e1f22d11bb958416bc3b69b7b2766c701de127d46660fb6918643ff",
         "path": "evidence/8539a1ad6e1f22d11bb958416bc3b69b7b2766c701de127d46660fb6918643ff.json.gz",
@@ -22637,6 +24425,13 @@
         "path": "evidence/863c30caa37bfca467bfa512c5af532ada5dc11d1ba3ee94096b049ada34e9a6.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/blinklabs-io/nview/tree/bd56e11b0982756252babe734a66651443c440b1"
+      },
+      {
+        "id": "evidence:86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
+        "digest": "86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596",
+        "path": "evidence/86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596.json.gz",
+        "description": "Native input hydra-sdk/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/pnpm-lock.yaml"
       },
       {
         "id": "evidence:876f87c6bcd42581f19d6eb43e11a59d88f014217f791f51f59e6745445e800f",
@@ -22748,6 +24543,12 @@
         "path": "evidence/8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/tree/8e6fd820d21e901f019af71eec8150400b1e9669"
+      },
+      {
+        "id": "evidence:8ca80632d475a280a1f309cbb8c082ddb84716040f05b84ae8e8f4c99ce459be",
+        "digest": "8ca80632d475a280a1f309cbb8c082ddb84716040f05b84ae8e8f4c99ce459be",
+        "path": "evidence/8ca80632d475a280a1f309cbb8c082ddb84716040f05b84ae8e8f4c99ce459be.json.gz",
+        "description": "Authored collection scope and unresolved boundaries"
       },
       {
         "id": "evidence:8d108b7d32f2237b9a68a2d8123197806e7a4cd9fbb3f4522dbc79a18b50cb5b",
@@ -22882,6 +24683,13 @@
         "sourceUrl": "https://github.com/sidan-lab/rum/tree/aa8aa7c37f3997389bb5e5b115103d31b8c49ca1"
       },
       {
+        "id": "evidence:93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
+        "digest": "93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
+        "path": "evidence/93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/input-output-hk/lace/tree/e431933f34ec417996d9c28b7389e24c87868b1e"
+      },
+      {
         "id": "evidence:946c23231818c6644cae8bdd7ac9238071759e396aee6aa18db0a28e2e0f1014",
         "digest": "946c23231818c6644cae8bdd7ac9238071759e396aee6aa18db0a28e2e0f1014",
         "path": "evidence/946c23231818c6644cae8bdd7ac9238071759e396aee6aa18db0a28e2e0f1014.json.gz",
@@ -22962,6 +24770,13 @@
         "description": "Collection request for dolos"
       },
       {
+        "id": "evidence:99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d",
+        "digest": "99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d",
+        "path": "evidence/99c827b56c79758bfb1b559d0b1f077fea335ab1f57962aed3cefa856cdf202d.json.gz",
+        "description": "Native input evolution-sdk/examples/with-vite-react/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/examples/with-vite-react/package.json"
+      },
+      {
         "id": "evidence:99d9d2b596cbddf83b4e05d56663c5cc51745b42dbf628537fb111ca2c370962",
         "digest": "99d9d2b596cbddf83b4e05d56663c5cc51745b42dbf628537fb111ca2c370962",
         "path": "evidence/99d9d2b596cbddf83b4e05d56663c5cc51745b42dbf628537fb111ca2c370962.json.gz",
@@ -22974,6 +24789,13 @@
         "path": "evidence/9a14352f8327708a8010f265a4dac1c654101ac610614e16e66407cda74b9d54.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/dcSpark/carp/tree/c4f352201d6dded94426bf819fb41a08335456d1"
+      },
+      {
+        "id": "evidence:9a1583c745f81fad41ecd76b0b5a3e605836b40e6772a1aac48f90e235947f13",
+        "digest": "9a1583c745f81fad41ecd76b0b5a3e605836b40e6772a1aac48f90e235947f13",
+        "path": "evidence/9a1583c745f81fad41ecd76b0b5a3e605836b40e6772a1aac48f90e235947f13.json.gz",
+        "description": "Source hydra-sdk/packages/core/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/core/package.json"
       },
       {
         "id": "evidence:9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad",
@@ -23016,6 +24838,12 @@
         "path": "evidence/9c89c5f8d58e0b051954615afc625422a52b196b3488edef7f0888dc0f8f78c4.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/telchar/tree/20efba60947d04ee22430ded3efa74e3f19eeced"
+      },
+      {
+        "id": "evidence:9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d",
+        "digest": "9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d",
+        "path": "evidence/9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d.json.gz",
+        "description": "Collection request for govtool"
       },
       {
         "id": "evidence:9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
@@ -23129,11 +24957,32 @@
         "sourceUrl": "https://github.com/IntersectMBO/cardano-cli/releases/tag/cardano-cli-11.4.0.0"
       },
       {
+        "id": "evidence:a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
+        "digest": "a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
+        "path": "evidence/a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53.json.gz",
+        "description": "Native input evolution-sdk/packages/scalus-uplc/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/scalus-uplc/package.json"
+      },
+      {
         "id": "evidence:a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c",
         "digest": "a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c",
         "path": "evidence/a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/WingRiders/datum-explorer/tree/9e4b74840c91ba95dd4f1c80cb87a17c02562eba"
+      },
+      {
+        "id": "evidence:a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17",
+        "digest": "a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17",
+        "path": "evidence/a52502ed8dbc253cd77d93280377b53ab8b40fb02d498feee626deab28e29d17.json.gz",
+        "description": "Native input evolution-sdk/docs/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/docs/package.json"
+      },
+      {
+        "id": "evidence:a58b082e6002749d7dc283cae2329a118896b8db859aed814de0af39d5046040",
+        "digest": "a58b082e6002749d7dc283cae2329a118896b8db859aed814de0af39d5046040",
+        "path": "evidence/a58b082e6002749d7dc283cae2329a118896b8db859aed814de0af39d5046040.json.gz",
+        "description": "Source evolution-sdk/packages/evolution/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/evolution/package.json"
       },
       {
         "id": "evidence:a61133425aafaeadf09d753a62f978e1125345663b6e43fc53ba1e2f3c8b7700",
@@ -23205,6 +25054,13 @@
         "description": "Collection request for ouroboros-miniprotocols-ts"
       },
       {
+        "id": "evidence:a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b",
+        "digest": "a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b",
+        "path": "evidence/a9dcdf205a5cf5891288d2a44ef789a0cdaa9fa4ace7a4a218298e209232cb8b.json.gz",
+        "description": "npm-lock for dexter unreleased:master",
+        "sourceUrl": "https://github.com/IndigoProtocol/dexter/tree/44a57eb0f6f80650f1ed34a7765c787afa27f1ab"
+      },
+      {
         "id": "evidence:a9fd915cd4b849754b66fc8e1b4d169915bb0b8741cac81b5c17dff0ff90a637",
         "digest": "a9fd915cd4b849754b66fc8e1b4d169915bb0b8741cac81b5c17dff0ff90a637",
         "path": "evidence/a9fd915cd4b849754b66fc8e1b4d169915bb0b8741cac81b5c17dff0ff90a637.json.gz",
@@ -23231,6 +25087,27 @@
         "path": "evidence/aac998eb57bafb53f4c07a50d6085b998aca98d8027f933ff3ab276e034ed4c4.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/bloxbean/intelliada/tree/b3d3fceaf12a6fc094266b19dfd27dcae2e60cd3"
+      },
+      {
+        "id": "evidence:ab39e6f56389237c1fd750d37908cfd2e0cc880490d566c5a92753cf3e6651e6",
+        "digest": "ab39e6f56389237c1fd750d37908cfd2e0cc880490d566c5a92753cf3e6651e6",
+        "path": "evidence/ab39e6f56389237c1fd750d37908cfd2e0cc880490d566c5a92753cf3e6651e6.json.gz",
+        "description": "Native input evolution-sdk/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/pnpm-workspace.yaml"
+      },
+      {
+        "id": "evidence:ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2",
+        "digest": "ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2",
+        "path": "evidence/ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2.json.gz",
+        "description": "npm-lock for govtool v2.0.36",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/tree/993d25ab42b6565a95aaa82ef297ac5053b3fb3e"
+      },
+      {
+        "id": "evidence:aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd",
+        "digest": "aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd",
+        "path": "evidence/aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd.json.gz",
+        "description": "npm-lock for lace lace-mobile@2.4.0",
+        "sourceUrl": "https://github.com/input-output-hk/lace/tree/e431933f34ec417996d9c28b7389e24c87868b1e"
       },
       {
         "id": "evidence:acc67a3a78fc9c9db94b445641d22fa1119d35ca35cb86c52f341adb50716720",
@@ -23331,11 +25208,24 @@
         "sourceUrl": "https://github.com/Cardano-Forge/MetaDraft/tree/8b30c194567f26c59e6ca9559f9a2bbed6266e27"
       },
       {
+        "id": "evidence:b15880dff8d46aaa36ad238d129701ca5bc0316610e32d1befd6070ca7bf6d6a",
+        "digest": "b15880dff8d46aaa36ad238d129701ca5bc0316610e32d1befd6070ca7bf6d6a",
+        "path": "evidence/b15880dff8d46aaa36ad238d129701ca5bc0316610e32d1befd6070ca7bf6d6a.json.gz",
+        "description": "Native input evolution-sdk/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/pnpm-lock.yaml"
+      },
+      {
         "id": "evidence:b1a4fcb8171843b6d7022f8d7939697ba5a89dce7e53884e0b97d8da2d38b10e",
         "digest": "b1a4fcb8171843b6d7022f8d7939697ba5a89dce7e53884e0b97d8da2d38b10e",
         "path": "evidence/b1a4fcb8171843b6d7022f8d7939697ba5a89dce7e53884e0b97d8da2d38b10e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/bot-plutus-interface/tree/d6cf1e3686bc31bb2571c6feefbe28e3a2c8bb06"
+      },
+      {
+        "id": "evidence:b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630",
+        "digest": "b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630",
+        "path": "evidence/b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630.json.gz",
+        "description": "Collection request for lace"
       },
       {
         "id": "evidence:b2cf374a9eabf082890a4f54c17fcbba3b586f4e1d05f445ab69e255fca1ab65",
@@ -23387,6 +25277,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/pnpm-lock.yaml"
       },
       {
+        "id": "evidence:b56911710bea233a0bd837bc565e64a19c7d2b6213728a118aec05d82e57e6b8",
+        "digest": "b56911710bea233a0bd837bc565e64a19c7d2b6213728a118aec05d82e57e6b8",
+        "path": "evidence/b56911710bea233a0bd837bc565e64a19c7d2b6213728a118aec05d82e57e6b8.json.gz",
+        "description": "Native input hydra-sdk/packages/hydra-bridge/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-bridge/package.json"
+      },
+      {
         "id": "evidence:b5819680ad6a4e565ceffe87c33ac9364735832a96d60e86c4e940c04cd747cf",
         "digest": "b5819680ad6a4e565ceffe87c33ac9364735832a96d60e86c4e940c04cd747cf",
         "path": "evidence/b5819680ad6a4e565ceffe87c33ac9364735832a96d60e86c4e940c04cd747cf.json.gz",
@@ -23415,6 +25312,13 @@
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331/Cargo.lock"
       },
       {
+        "id": "evidence:b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802",
+        "digest": "b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802",
+        "path": "evidence/b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802.json.gz",
+        "description": "Source lace/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/package.json"
+      },
+      {
         "id": "evidence:b7852d55d178928f8080bcb045e568742b0670d311e51dbd9be18636b50ddc00",
         "digest": "b7852d55d178928f8080bcb045e568742b0670d311e51dbd9be18636b50ddc00",
         "path": "evidence/b7852d55d178928f8080bcb045e568742b0670d311e51dbd9be18636b50ddc00.json.gz",
@@ -23434,6 +25338,12 @@
         "path": "evidence/b7d870026180df4017b7608ea67ae556ee9841072e6ff05011db9b46006789ed.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/StricaHQ/bip32ed25519/tree/3829ba2e790328a7ff723892b93234353b333562"
+      },
+      {
+        "id": "evidence:b80030573b917724ba9edd0845ea7e2c214dfa26e7843e823812d0499f4b94b5",
+        "digest": "b80030573b917724ba9edd0845ea7e2c214dfa26e7843e823812d0499f4b94b5",
+        "path": "evidence/b80030573b917724ba9edd0845ea7e2c214dfa26e7843e823812d0499f4b94b5.json.gz",
+        "description": "Collection request for hydra-sdk"
       },
       {
         "id": "evidence:b827675332b2a79e831b0197938beddfebf46ddf071df0fdf4df9c1c3c453867",
@@ -23554,6 +25464,13 @@
         "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/tree/9f032253e0711e3a308068ed55cc85b5de71a348"
       },
       {
+        "id": "evidence:bcc22999804d249c70ad793129932550f0e456b447184f6f3dccaf0660723073",
+        "digest": "bcc22999804d249c70ad793129932550f0e456b447184f6f3dccaf0660723073",
+        "path": "evidence/bcc22999804d249c70ad793129932550f0e456b447184f6f3dccaf0660723073.json.gz",
+        "description": "Source hydra-sdk/packages/hydra-bridge/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-bridge/package.json"
+      },
+      {
         "id": "evidence:bcde3ab8e62d6c069d574ad9d3f2da6f4a62aeeab2ead5d814228056a1941e91",
         "digest": "bcde3ab8e62d6c069d574ad9d3f2da6f4a62aeeab2ead5d814228056a1941e91",
         "path": "evidence/bcde3ab8e62d6c069d574ad9d3f2da6f4a62aeeab2ead5d814228056a1941e91.json.gz",
@@ -23665,10 +25582,31 @@
         "sourceUrl": "https://github.com/cardano-foundation/dab/releases/tag/v0.1"
       },
       {
+        "id": "evidence:c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca",
+        "digest": "c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca",
+        "path": "evidence/c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca.json.gz",
+        "description": "Source evolution-sdk/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/package.json"
+      },
+      {
         "id": "evidence:c40485ab163f0ddc6f72b91e2d9f1e796b50a20a2abf62cf0b362da9175e719c",
         "digest": "c40485ab163f0ddc6f72b91e2d9f1e796b50a20a2abf62cf0b362da9175e719c",
         "path": "evidence/c40485ab163f0ddc6f72b91e2d9f1e796b50a20a2abf62cf0b362da9175e719c.json.gz",
         "description": "Native command diagnostics for dingo"
+      },
+      {
+        "id": "evidence:c47475c300b978f97bbc7607a32e933d297629b84177d50bd0ef6bdc7aeb0ddf",
+        "digest": "c47475c300b978f97bbc7607a32e933d297629b84177d50bd0ef6bdc7aeb0ddf",
+        "path": "evidence/c47475c300b978f97bbc7607a32e933d297629b84177d50bd0ef6bdc7aeb0ddf.json.gz",
+        "description": "Source dexter/README.md",
+        "sourceUrl": "https://github.com/IndigoProtocol/dexter/blob/44a57eb0f6f80650f1ed34a7765c787afa27f1ab/README.md"
+      },
+      {
+        "id": "evidence:c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+        "digest": "c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+        "path": "evidence/c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/tree/c4139df12e099dbd4742d3e2c10dc52f50a4bd41"
       },
       {
         "id": "evidence:c4e991459820a3a18e2a859aabfdd6e5132bf190c73ffa62225aa847cf958d9b",
@@ -23683,6 +25621,13 @@
         "path": "evidence/c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/tree/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8"
+      },
+      {
+        "id": "evidence:c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7",
+        "digest": "c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7",
+        "path": "evidence/c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7.json.gz",
+        "description": "Native input evolution-sdk/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/package.json"
       },
       {
         "id": "evidence:c6123be32077ff37a50d32249d1af41066d21819eff44e23fc4f5d9d836b4f74",
@@ -23978,6 +25923,20 @@
         "sourceUrl": "https://github.com/cardano-foundation/cardano-wallet/releases/tag/v2026-10-07"
       },
       {
+        "id": "evidence:d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
+        "digest": "d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
+        "path": "evidence/d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca.json.gz",
+        "description": "Source dexter/package.json",
+        "sourceUrl": "https://github.com/IndigoProtocol/dexter/blob/44a57eb0f6f80650f1ed34a7765c787afa27f1ab/package.json"
+      },
+      {
+        "id": "evidence:d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
+        "digest": "d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39",
+        "path": "evidence/d963230b8dab7f4d7edd0b1499d019f66b886d97ac8f2f6bed2495816cc23d39.json.gz",
+        "description": "Native input hydra-sdk/packages/hydra-transaction/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-transaction/package.json"
+      },
+      {
         "id": "evidence:da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4",
         "digest": "da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4",
         "path": "evidence/da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4.json.gz",
@@ -24004,6 +25963,13 @@
         "path": "evidence/dcc202a746c151c52673ac9f8fcfe23a7f06f0ee25dad313cbf40ab26768e61d.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/txpipe/laceanatomy/tree/1e8b05e9e1c8ad3bada3d539c549554d370cdf69"
+      },
+      {
+        "id": "evidence:dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d",
+        "digest": "dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d",
+        "path": "evidence/dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d.json.gz",
+        "description": "Source hydra-sdk/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/package.json"
       },
       {
         "id": "evidence:dda3efdf4d403164e2bc97524afb60d8a21a2c77ddc3309f8c15e72fe8b5f2db",
@@ -24069,6 +26035,13 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-cardano/releases/tag/runtime%40v1.0.0"
       },
       {
+        "id": "evidence:e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180",
+        "digest": "e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180",
+        "path": "evidence/e38463a9002095ff29545fc44f407bd40420ab74f51b0c8a7f1ef0df43cb1180.json.gz",
+        "description": "Source hydra-sdk/packages/hydra-transaction/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-transaction/package.json"
+      },
+      {
         "id": "evidence:e455056222521ff87c3895e802b1aad406de15952855dbea4ed1077b5d73971e",
         "digest": "e455056222521ff87c3895e802b1aad406de15952855dbea4ed1077b5d73971e",
         "path": "evidence/e455056222521ff87c3895e802b1aad406de15952855dbea4ed1077b5d73971e.json.gz",
@@ -24123,6 +26096,13 @@
         "path": "evidence/e6da239dd3047894c390358516bf2fbdeaf54609f6bb0de91e2ca0d8b8792587.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/MeshJS/mesh/tree/3df879e48f400f19eea0ebddfb00099b0809f484"
+      },
+      {
+        "id": "evidence:e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
+        "digest": "e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
+        "path": "evidence/e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920.json.gz",
+        "description": "pnpm-lock for evolution-sdk @evolution-sdk/devnet@3.0.21",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/tree/c4139df12e099dbd4742d3e2c10dc52f50a4bd41"
       },
       {
         "id": "evidence:e719e3822fe6bd7ff2fd72afce36f847b5fe28aa8717dca8824ac56853467ba3",
@@ -24216,6 +26196,13 @@
         "sourceUrl": "https://github.com/TokeoPay/CardanoKit/tree/d14dcf9b14de92ed7d63c7ba3af678e0bb02ab41"
       },
       {
+        "id": "evidence:eda4b9fd15a46b818b99c06048019a384a4e2cdea1df1bfc725d25e6037acfd9",
+        "digest": "eda4b9fd15a46b818b99c06048019a384a4e2cdea1df1bfc725d25e6037acfd9",
+        "path": "evidence/eda4b9fd15a46b818b99c06048019a384a4e2cdea1df1bfc725d25e6037acfd9.json.gz",
+        "description": "Native input evolution-sdk/packages/evolution/package.json",
+        "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/evolution/package.json"
+      },
+      {
         "id": "evidence:eda8cca692f13604c2b5bfb67d46f310ff09d8977b14a5336e12f5540e4d4407",
         "digest": "eda8cca692f13604c2b5bfb67d46f310ff09d8977b14a5336e12f5540e4d4407",
         "path": "evidence/eda8cca692f13604c2b5bfb67d46f310ff09d8977b14a5336e12f5540e4d4407.json.gz",
@@ -24278,6 +26265,13 @@
         "sourceUrl": "https://github.com/cardano-community/cardanosharp-koios/tree/d6a6b2f2730424b3402e14ccae3b49b8b252cff3"
       },
       {
+        "id": "evidence:f18c1f3a77691aed39155cad2479a718e5c7b0925fadfb31b9c7353fa5d5ee51",
+        "digest": "f18c1f3a77691aed39155cad2479a718e5c7b0925fadfb31b9c7353fa5d5ee51",
+        "path": "evidence/f18c1f3a77691aed39155cad2479a718e5c7b0925fadfb31b9c7353fa5d5ee51.json.gz",
+        "description": "Native input hydra-sdk/packages/eslint-config/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/eslint-config/package.json"
+      },
+      {
         "id": "evidence:f1a64447c20ce6dab96d48d4ba22d4e9f000efaff8a3dc38f47a95d7df47977e",
         "digest": "f1a64447c20ce6dab96d48d4ba22d4e9f000efaff8a3dc38f47a95d7df47977e",
         "path": "evidence/f1a64447c20ce6dab96d48d4ba22d4e9f000efaff8a3dc38f47a95d7df47977e.json.gz",
@@ -24290,6 +26284,13 @@
         "path": "evidence/f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/gimbalabs/kustomize-dandelion/tree/f814f568b389f13e75230f1d3175210abfddb7e9"
+      },
+      {
+        "id": "evidence:f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
+        "digest": "f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660",
+        "path": "evidence/f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660.json.gz",
+        "description": "Native input hydra-sdk/packages/cardano-wasm/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/cardano-wasm/package.json"
       },
       {
         "id": "evidence:f478a2523f911a46e78515d061c2e131212e36c05159c8f9e6e4803aa497d9e9",
@@ -24374,6 +26375,13 @@
         "path": "evidence/f91541be9869c911ed52ecd706b8cb34fb88f618f5ab4dc0f0775d98d42f423e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/Biglup/cardano-c/tree/238fe346192f2a2d54997fd98ba3bb576e3c51ea"
+      },
+      {
+        "id": "evidence:f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899",
+        "digest": "f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899",
+        "path": "evidence/f932e523b27f744bbdb0ebebe80f9b1d52aea8b7eb9d65589280216b2b608899.json.gz",
+        "description": "Native input hydra-sdk/apps/docs-v2/package.json",
+        "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs-v2/package.json"
       },
       {
         "id": "evidence:f9ee6c7e5f25a47bf6450f095dc1bfb11923ff81b85261401be1ea151a6667dc",
@@ -24469,6 +26477,12 @@
         "evidenceId": "evidence:2bf995992555ec05b5371df9bee16ac214d9d069187c6a783026d49ff2a6a869"
       },
       {
+        "key": "ff5973ea13d7b84604ba562326404422a33265164279f7f3afe79d2a25ba49b0",
+        "toolId": "dexter",
+        "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
+        "evidenceId": "evidence:0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f"
+      },
+      {
         "key": "9ca6af2bded2d1f276c48a3747714d8520e18d5cce14130602afcc3a52e3386d",
         "toolId": "dingo",
         "profileId": "profile:dingo:6f5b0ee506b45eb96bbe156f",
@@ -24479,6 +26493,12 @@
         "toolId": "dolos",
         "profileId": "profile:dolos:ecca38f5cb622db24ad29cc9",
         "evidenceId": "evidence:2dea4ab0f4a53cfd8db3cf35ddb001aaa343d1dd0a3281279a8fc68c7fcb2d7a"
+      },
+      {
+        "key": "e4c5e84c0657daee34a74395b6b9af2842e6811424192b15d5f76e1aab63bcec",
+        "toolId": "evolution-sdk",
+        "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
+        "evidenceId": "evidence:686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb"
       },
       {
         "key": "6e0a3f82106c995a644860e50db5144def04dca1b2e4b6acc24429c7ca0cd32f",
@@ -24493,10 +26513,28 @@
         "evidenceId": "evidence:a269583d7fac674e795483ed5f042fbb94d9774723a2232754985e7caa2e9a3f"
       },
       {
+        "key": "3d7221340f57fbb06d28e73ecba7fd3f20546bfeae6739962072cd9d233bb999",
+        "toolId": "govtool",
+        "profileId": "profile:govtool:61a7467db993f628223475ee",
+        "evidenceId": "evidence:9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d"
+      },
+      {
         "key": "d1dc784cabe20189f27b9453e2a5c428862305b4ee087eccaa495d97b5870eae",
         "toolId": "helios",
         "profileId": "profile:helios:7ac457e6c9833f81ababb556",
         "evidenceId": "evidence:169cf66bf3487744cf58c8e832c0264d3fe41f85e04a4d6925e90787cfc79ce8"
+      },
+      {
+        "key": "6734964b74bdfe3d21db9478e10c5fb0ca62e64de7790878dc5286367db9975f",
+        "toolId": "hydra-sdk",
+        "profileId": "profile:hydra-sdk:8290f8466ff3f54c585e42e3",
+        "evidenceId": "evidence:b80030573b917724ba9edd0845ea7e2c214dfa26e7843e823812d0499f4b94b5"
+      },
+      {
+        "key": "8efc8ed57ff963809363e5eb40553fa787c960a22f2348ab26a38345677d4cd0",
+        "toolId": "lace",
+        "profileId": "profile:lace:df2b413cb6eca9dc9fbd42bf",
+        "evidenceId": "evidence:b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630"
       },
       {
         "key": "f9351cfc548d75b4c275fba05c94bfa2b629a92920c842f02aa53f8c36f17633",
@@ -24545,84 +26583,84 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/1c2f22028c259c8064b95ffa2e73d5d083d0cb688514daf2588fad99fcd02739.json",
-        "digest": "1c2f22028c259c8064b95ffa2e73d5d083d0cb688514daf2588fad99fcd02739",
-        "records": 358
+        "path": "snapshots/artifacts/b2254dc76a89bcd0bac73cd98bab9843189858ca84e7fb4ce2be729d7bf0d24c.json",
+        "digest": "b2254dc76a89bcd0bac73cd98bab9843189858ca84e7fb4ce2be729d7bf0d24c",
+        "records": 914
       },
       {
-        "path": "snapshots/artifacts/c72c2ce7911286a93013bce77c67ca88163ad4579b12304923f0fd503fa54cd0.json",
-        "digest": "c72c2ce7911286a93013bce77c67ca88163ad4579b12304923f0fd503fa54cd0",
-        "records": 382
+        "path": "snapshots/artifacts/47061bcc6b02b46128499c60e1430b2638035cf70597be0a4e19da707bd9fd42.json",
+        "digest": "47061bcc6b02b46128499c60e1430b2638035cf70597be0a4e19da707bd9fd42",
+        "records": 948
       },
       {
-        "path": "snapshots/artifacts/40de5e560972644cb9baafa2955be97fb47669eeb310e7ec597729e565cdeb2e.json",
-        "digest": "40de5e560972644cb9baafa2955be97fb47669eeb310e7ec597729e565cdeb2e",
-        "records": 337
+        "path": "snapshots/artifacts/8231bbd89480a60e4028f58d78dd9ab6224eb2bac867fb9f909095cf1d30f2f6.json",
+        "digest": "8231bbd89480a60e4028f58d78dd9ab6224eb2bac867fb9f909095cf1d30f2f6",
+        "records": 879
       },
       {
-        "path": "snapshots/artifacts/3e93e8331b376fea329b6009230acf7c4bc16e5720e45b45e6a5bf514e796a32.json",
-        "digest": "3e93e8331b376fea329b6009230acf7c4bc16e5720e45b45e6a5bf514e796a32",
-        "records": 388
+        "path": "snapshots/artifacts/ea3030a6ecc920657d214e391ee43dcee0a9cbe750036bf4c343e5481f94c174.json",
+        "digest": "ea3030a6ecc920657d214e391ee43dcee0a9cbe750036bf4c343e5481f94c174",
+        "records": 913
       },
       {
-        "path": "snapshots/artifacts/bab37971506324d61eb33a2f60dca3a2e2d5af5ff0788e3efab994c450bd287d.json",
-        "digest": "bab37971506324d61eb33a2f60dca3a2e2d5af5ff0788e3efab994c450bd287d",
-        "records": 359
+        "path": "snapshots/artifacts/4723a2651bdb2076cc66698b21180a7716f7318de4d83e7616e1a7743c2c8d70.json",
+        "digest": "4723a2651bdb2076cc66698b21180a7716f7318de4d83e7616e1a7743c2c8d70",
+        "records": 942
       },
       {
-        "path": "snapshots/artifacts/2d01b1f7e81170cc3be1eb96c28d938c068d25f93e508c2516ab233937d811f3.json",
-        "digest": "2d01b1f7e81170cc3be1eb96c28d938c068d25f93e508c2516ab233937d811f3",
-        "records": 392
+        "path": "snapshots/artifacts/e61f465072300f62f0eb0a6b560e27a77cc44244a73d5226b226137fabc308d6.json",
+        "digest": "e61f465072300f62f0eb0a6b560e27a77cc44244a73d5226b226137fabc308d6",
+        "records": 945
       },
       {
-        "path": "snapshots/artifacts/bb1a8079a9b68ad1264ebf04c5274b5f141417ba6afd2db0c05085a29b3e407c.json",
-        "digest": "bb1a8079a9b68ad1264ebf04c5274b5f141417ba6afd2db0c05085a29b3e407c",
-        "records": 383
+        "path": "snapshots/artifacts/bc55db51b85287e291294df307ed51836a3706732c9117358b38ef896034f688.json",
+        "digest": "bc55db51b85287e291294df307ed51836a3706732c9117358b38ef896034f688",
+        "records": 958
       },
       {
-        "path": "snapshots/artifacts/3e4977c2063c472e7f1e122fc15949edb7510a019e43b59a09a4ae4295b1b276.json",
-        "digest": "3e4977c2063c472e7f1e122fc15949edb7510a019e43b59a09a4ae4295b1b276",
-        "records": 341
+        "path": "snapshots/artifacts/0f28d68991fbc05cc62072548a006d24850abe8440afd74e4f6368e2c1815f3b.json",
+        "digest": "0f28d68991fbc05cc62072548a006d24850abe8440afd74e4f6368e2c1815f3b",
+        "records": 895
       },
       {
-        "path": "snapshots/artifacts/039767ce7c3e888c43f3798ed09577f955d60d5777d17ed068819ad6112dcf2b.json",
-        "digest": "039767ce7c3e888c43f3798ed09577f955d60d5777d17ed068819ad6112dcf2b",
-        "records": 396
+        "path": "snapshots/artifacts/ae7cdad5ed456ea528212babc3855721680b91f417df03bc3997df3baad25182.json",
+        "digest": "ae7cdad5ed456ea528212babc3855721680b91f417df03bc3997df3baad25182",
+        "records": 924
       },
       {
-        "path": "snapshots/artifacts/097c313b3c6eda567d8c1f0602867f80d8ee32dc96043a54958c01be2884ae05.json",
-        "digest": "097c313b3c6eda567d8c1f0602867f80d8ee32dc96043a54958c01be2884ae05",
-        "records": 402
+        "path": "snapshots/artifacts/1399dd0e40c44d189b68b91e1f356b37c08142bf99fb075f4ec9693b01a185aa.json",
+        "digest": "1399dd0e40c44d189b68b91e1f356b37c08142bf99fb075f4ec9693b01a185aa",
+        "records": 945
       },
       {
-        "path": "snapshots/artifacts/aa5016395fc3c484aabb7237c033ad6310b4e3a2834940af711107c18dde3b91.json",
-        "digest": "aa5016395fc3c484aabb7237c033ad6310b4e3a2834940af711107c18dde3b91",
-        "records": 381
+        "path": "snapshots/artifacts/1fd60776ff0031d97319316ad064fcfcc2583b07cc21e808e5cf1684ab3eb111.json",
+        "digest": "1fd60776ff0031d97319316ad064fcfcc2583b07cc21e808e5cf1684ab3eb111",
+        "records": 965
       },
       {
-        "path": "snapshots/artifacts/e48051d1c590708788ca641780b8990c78b25797728dadcce60272b753f6fccd.json",
-        "digest": "e48051d1c590708788ca641780b8990c78b25797728dadcce60272b753f6fccd",
-        "records": 364
+        "path": "snapshots/artifacts/2686905fb479bb3548e9ffd3bf8051479b570af0a66a2c6d85be0db56986b2a6.json",
+        "digest": "2686905fb479bb3548e9ffd3bf8051479b570af0a66a2c6d85be0db56986b2a6",
+        "records": 931
       },
       {
-        "path": "snapshots/artifacts/0f58ff2526b4b54838f3161601fe4c2f0a5ff8dcdc0e5e5e0b3bcf4a2de043b1.json",
-        "digest": "0f58ff2526b4b54838f3161601fe4c2f0a5ff8dcdc0e5e5e0b3bcf4a2de043b1",
-        "records": 396
+        "path": "snapshots/artifacts/e1be294958d1fe9846fdb1a6901aa09ce3147fefe54272d3af6731ffea1d68d1.json",
+        "digest": "e1be294958d1fe9846fdb1a6901aa09ce3147fefe54272d3af6731ffea1d68d1",
+        "records": 951
       },
       {
-        "path": "snapshots/artifacts/9a8d2e20dca813196810f05018745a3cdd0678e0072d7dcd727ea6598b697fed.json",
-        "digest": "9a8d2e20dca813196810f05018745a3cdd0678e0072d7dcd727ea6598b697fed",
-        "records": 390
+        "path": "snapshots/artifacts/775cf59b4b73911b4297ed07804a2f1bd13572bdd1a55f0c63b8051dcef87f85.json",
+        "digest": "775cf59b4b73911b4297ed07804a2f1bd13572bdd1a55f0c63b8051dcef87f85",
+        "records": 916
       },
       {
-        "path": "snapshots/artifacts/4fd42f1c92d098528f8857f14accbcc89371a71b6e97ea6264d0775a631156a7.json",
-        "digest": "4fd42f1c92d098528f8857f14accbcc89371a71b6e97ea6264d0775a631156a7",
-        "records": 383
+        "path": "snapshots/artifacts/9c110adb98d4bb6f09b67062af1c36b6981debb36b4155bc4c6aaecd487a7754.json",
+        "digest": "9c110adb98d4bb6f09b67062af1c36b6981debb36b4155bc4c6aaecd487a7754",
+        "records": 926
       },
       {
-        "path": "snapshots/artifacts/d669a97124cef21a00737104077a0398c81491ae2bc731947d6f32cc5a5b7aa7.json",
-        "digest": "d669a97124cef21a00737104077a0398c81491ae2bc731947d6f32cc5a5b7aa7",
-        "records": 372
+        "path": "snapshots/artifacts/9f28d1cacdb7d653f1e6d76abd0e5ddf2b814b63e09e15b6c148dc1049f72ada.json",
+        "digest": "9f28d1cacdb7d653f1e6d76abd0e5ddf2b814b63e09e15b6c148dc1049f72ada",
+        "records": 919
       }
     ],
     "occurrences": [
@@ -24630,6 +26668,11 @@
         "path": "snapshots/occurrences/9a0df0c2db82f4af4ac64208848b7376cb6538b8d6bc39665d7ba688eeb3fd78.json",
         "digest": "9a0df0c2db82f4af4ac64208848b7376cb6538b8d6bc39665d7ba688eeb3fd78",
         "records": 457
+      },
+      {
+        "path": "snapshots/occurrences/faa1832f17fff8630d3bfb6e04b216e42908bd39852ffbc391fdd3fa54ae4e21.json",
+        "digest": "faa1832f17fff8630d3bfb6e04b216e42908bd39852ffbc391fdd3fa54ae4e21",
+        "records": 445
       },
       {
         "path": "snapshots/occurrences/10d7256ea69dc383b9bf8257db8089f86a8f3ef0be15567e4406b3110c9f9417.json",
@@ -24642,6 +26685,11 @@
         "records": 549
       },
       {
+        "path": "snapshots/occurrences/9870d31f8dbb5c2a14907f7a97d534c5e0fd43df1113dad20344c2d5d15ab476.json",
+        "digest": "9870d31f8dbb5c2a14907f7a97d534c5e0fd43df1113dad20344c2d5d15ab476",
+        "records": 1341
+      },
+      {
         "path": "snapshots/occurrences/1160f5d87bc93610629f926e43e29f70f693e746a5af53dc05c827f224ce4386.json",
         "digest": "1160f5d87bc93610629f926e43e29f70f693e746a5af53dc05c827f224ce4386",
         "records": 944
@@ -24652,9 +26700,24 @@
         "records": 944
       },
       {
+        "path": "snapshots/occurrences/7bf9c363ee3dd1f13ee5a430e714c9ad02395c342f274af945b56434daa5e081.json",
+        "digest": "7bf9c363ee3dd1f13ee5a430e714c9ad02395c342f274af945b56434daa5e081",
+        "records": 2256
+      },
+      {
         "path": "snapshots/occurrences/c93ea0415cda48f19f3896daeb56ca5f4a987c063d73beb966f76341ffaf98ab.json",
         "digest": "c93ea0415cda48f19f3896daeb56ca5f4a987c063d73beb966f76341ffaf98ab",
         "records": 14
+      },
+      {
+        "path": "snapshots/occurrences/4792165c2ad02f9ff999d95068046a45dd6fd7753967c441f0fdce70855d68e3.json",
+        "digest": "4792165c2ad02f9ff999d95068046a45dd6fd7753967c441f0fdce70855d68e3",
+        "records": 3269
+      },
+      {
+        "path": "snapshots/occurrences/1b067d8efe9e958c1c368d4300273a08074b647b2c470c6f83d321d0700dd234.json",
+        "digest": "1b067d8efe9e958c1c368d4300273a08074b647b2c470c6f83d321d0700dd234",
+        "records": 6897
       },
       {
         "path": "snapshots/occurrences/78c84e858c8d97d3fdbe78590eec264b310e93666d9b5e7ee544293e221a47f5.json",
@@ -24709,6 +26772,11 @@
         "records": 853
       },
       {
+        "path": "snapshots/edges/d44a814867e4d60172baccc60329d345e937cd64513103c06049e70b592c063b.json",
+        "digest": "d44a814867e4d60172baccc60329d345e937cd64513103c06049e70b592c063b",
+        "records": 1045
+      },
+      {
         "path": "snapshots/edges/2f7c32a9187a8ef62ec7a7a4c8d97dc3ac6e31ee164954242be7a11563a288ee.json",
         "digest": "2f7c32a9187a8ef62ec7a7a4c8d97dc3ac6e31ee164954242be7a11563a288ee",
         "records": 4294
@@ -24754,6 +26822,11 @@
         "records": 1912
       },
       {
+        "path": "snapshots/edges/d911ed8d9faee5af3767cb6f01ee2704814ef83240adc3e0be2e97b37e095674.json",
+        "digest": "d911ed8d9faee5af3767cb6f01ee2704814ef83240adc3e0be2e97b37e095674",
+        "records": 3058
+      },
+      {
         "path": "snapshots/edges/4b455993edf522650fe89d0d79041b4adb4e0aa3e056a90feba42cde29c1c635.json",
         "digest": "4b455993edf522650fe89d0d79041b4adb4e0aa3e056a90feba42cde29c1c635",
         "records": 4796
@@ -24774,9 +26847,49 @@
         "records": 4797
       },
       {
+        "path": "snapshots/edges/e0fb89d441b544433c3f000b5506be2060773c7802520ea2e9350a25e199d571.json",
+        "digest": "e0fb89d441b544433c3f000b5506be2060773c7802520ea2e9350a25e199d571",
+        "records": 2765
+      },
+      {
+        "path": "snapshots/edges/33c4a1ec662293b01cea8b313c040116221e122caac022b8d8bcb7646dbde43e.json",
+        "digest": "33c4a1ec662293b01cea8b313c040116221e122caac022b8d8bcb7646dbde43e",
+        "records": 2765
+      },
+      {
         "path": "snapshots/edges/471e2b38a074b56b8e6a636353cb79175ab3693ccd014bccdd6281f15dc010f8.json",
         "digest": "471e2b38a074b56b8e6a636353cb79175ab3693ccd014bccdd6281f15dc010f8",
         "records": 24
+      },
+      {
+        "path": "snapshots/edges/193564d52463ee5daea73fe0359c85cd82c716e29a3d5df394dd9116c0ab80e3.json",
+        "digest": "193564d52463ee5daea73fe0359c85cd82c716e29a3d5df394dd9116c0ab80e3",
+        "records": 4533
+      },
+      {
+        "path": "snapshots/edges/ba73c014190b15b9268b9607eedef3cb774ec978a6b5eb4aa3696c9b4ae33f1d.json",
+        "digest": "ba73c014190b15b9268b9607eedef3cb774ec978a6b5eb4aa3696c9b4ae33f1d",
+        "records": 4534
+      },
+      {
+        "path": "snapshots/edges/b3b53d63e59b5b4172af994911dcedb56460d6d5961b8872182dcbd257185e27.json",
+        "digest": "b3b53d63e59b5b4172af994911dcedb56460d6d5961b8872182dcbd257185e27",
+        "records": 4738
+      },
+      {
+        "path": "snapshots/edges/9f32c0aea502c115cf53dc4afbe6c893f15723cc9eac36a67bbbfe938cb900ea.json",
+        "digest": "9f32c0aea502c115cf53dc4afbe6c893f15723cc9eac36a67bbbfe938cb900ea",
+        "records": 4739
+      },
+      {
+        "path": "snapshots/edges/76f6075f4f0fe04fec090040b5fef3bbf9419b8c3befc9cd8a9295d0d4043457.json",
+        "digest": "76f6075f4f0fe04fec090040b5fef3bbf9419b8c3befc9cd8a9295d0d4043457",
+        "records": 4739
+      },
+      {
+        "path": "snapshots/edges/980a955e2219e5ccee80073bc1b76e63a739e3c05f0dd32cc6e2183ea371ac14.json",
+        "digest": "980a955e2219e5ccee80073bc1b76e63a739e3c05f0dd32cc6e2183ea371ac14",
+        "records": 4739
       },
       {
         "path": "snapshots/edges/0782f1bd0aa8458a509c0db84825fa7d858201898fc3bd77269a0d0f03107f4e.json",

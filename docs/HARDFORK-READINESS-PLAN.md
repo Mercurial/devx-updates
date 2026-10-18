@@ -129,8 +129,8 @@ do not establish adoption or verified reach. Aiken and Amaru remain useful roots
 but their available collectors do not put them ahead of missing user workflows.
 
 - [x] Verify a small batch of higher-level production roots and pinned configurations; document workflow rationale and release caveats.
-- [ ] Collect the selected requests in bounded runs, preserving retryable failures and evidence for unresolved boundaries.
-- [ ] Validate/replay retained inputs, regenerate reports/comparison, run checks and review, and commit the verified milestone locally (ADR-1/ADR-2).
+- [x] Collect the selected requests in bounded runs, preserving retryable failures and evidence for unresolved boundaries.
+- [x] Validate/replay retained inputs, regenerate reports/comparison, run checks and review, and commit the verified milestone locally (ADR-1/ADR-2).
 
 Selected batch: Lace mobile, GovTool frontend, Evolution SDK, Hydra SDK's core/
 transaction/bridge packages, and Dexter. `content/readiness/workflow-batch.json`
@@ -140,6 +140,43 @@ immutable GitHub blob retrieval. Lace also exposed unnamed npm workspaces: new,
 versioned captures resolve unique package-link names while historical inputs keep
 their original replay behavior. Missing/ambiguous identities remain gaps. Focused
 checks pass; retained-data validation and review follow collection.
+
+Collection checkpoint: all five selected tools succeeded in bounded batches. The
+snapshot now contains 17 tools with profiles, 20 historical profiles, 594 verified
+evidence objects, 26,612 occurrences, and 107,684 edges. All 20 profiles replay
+identically. A completed-batch rerun attempts zero requests; all five registered
+native refreshes reuse their retained captures. Thirteen additional pinned source
+files support explicit release and workflow-boundary notes. Every new profile is
+partial and source-reconstructed; all 269 tools remain hardfork-unassessed and
+252 tools still have no native profile.
+
+Verification checkpoint: all 47 behavior tests, TypeScript, and readiness lint
+pass. Reports and comparison are regenerated against pre-batch commit `0cd5670`:
+five profiles, 8,847 artifacts and 37,655 edges added, with no historical graph
+records removed or changed. Independent standards review found no actionable
+issues; specification review checked both implementation and retained source/root
+identities and found no blocking issues. Implementation checkpoint `0d7274b` is
+local. Active snapshot storage is 52.9 MiB; never-committed intermediate chunks
+were moved into ignored local recovery state while all manifest-referenced and
+previously committed chunks were retained.
+
+Static export checkpoint: `NEXT_PUBLIC_BASE_PATH=/devx-updates npm run build --
+--webpack` passes and exports 311 routes. Generated pages for all five new tools
+contain their selected roots, explicit scope gaps, current snapshot digest,
+unassessed status, and base-path links; dashboard totals/comparison match the
+retained snapshot. Default Turbopack builds failed because the execution environment
+denied the compiler worker's local port, including after an elevated retry. The
+documented Webpack option verified the static export; no build/deployment
+configuration was changed. This is an environment-specific default-build
+validation limitation, not a successful Turbopack check. No new browser interaction
+check was run for this data/collector-only change. Verified milestone is committed
+locally; nothing was pushed.
+
+Next: continue selecting higher-level workflow gaps, including unsupported
+production ecosystems, and prepare evidence for owner-launched integration and
+capability reviews of the collected consumers. Use their observed shared upstream
+dependencies to prioritize investigation. Cabal/GHC collection and the selected
+hardfork target/environment remain separate open prerequisites.
 
 ## 1. Objective
 
