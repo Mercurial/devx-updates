@@ -5,6 +5,7 @@ import { addEvidence, readJson, Store, writeJson } from "./store";
 import { CAPABILITY_LABELS, type CapabilityFinding, type Edge, type Snapshot, type Verification } from "./types";
 import { toolSubgraph } from "./graph";
 import { capabilityCondition } from "./capabilities";
+import { scanIntegrations } from "./integration-scan";
 
 export interface ReviewQueueEntry { packetId: string; toolIds: string[]; status: string }
 export type ReviewEvidenceStore = Pick<Store, "readEvidence" | "evidence">;
@@ -30,6 +31,8 @@ export function exportPacket(snapshot: Snapshot, store: Store, toolIds: string[]
   mkdirSync(output, { recursive: true });
   writeJson(join(output, "packet.json"), packet);
   for (const evidence of packet.context.evidence) writeJson(join(output, "evidence", `${evidence.digest}.json`), store.readEvidence(evidence));
+  // A derived navigation aid over the packet's own bytes; it admits no findings.
+  writeJson(join(output, "integration-scan.json"), scanIntegrations(packet.context, store, toolIds));
   writeJson(join(output, "result-template.json"), { packetId: packet.packetId, inputDigest: packet.inputDigest, completion: "partial", inspectedAreas: [], unreviewedAreas: ["Fill in remaining coverage"], findings: [] });
   writeFileSync(join(output, "TASKS.md"), readFileSync("docs/DEPENDENCY-REVIEW-TASKS.md", "utf8"));
   writeFileSync(join(output, "CAPABILITIES.md"), readFileSync("docs/CAPABILITY-REVIEW-FORMAT.md", "utf8"));

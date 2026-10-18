@@ -20,6 +20,7 @@ import { collectBatch } from "../../lib/readiness/batch";
 import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 import { capabilityRows } from "../../lib/readiness/capabilities";
 import { investigationProjects, parseAssignments, summarizeWork, workReport } from "../../lib/readiness/work";
+import { scanIntegrations } from "../../lib/readiness/integration-scan";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -66,6 +67,7 @@ export-snapshot --output snapshot.json (self-contained graph for comparison or b
 replay          Reconstruct native graphs and manual findings from retained evidence/packets
 rebuild-native  Upgrade native graph records using retained inputs (no network)
 capture-source  --tool id --path source-file (retain pinned source for citations)
+scan-integrations [--tools id,id] [--output report.json] (lexical leads from retained source)
 export-review   --tools id,id --output .readiness/reviews/name
 import-review   --packet packet.json --input result.json [--decisions decisions.json]
 diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json]
@@ -148,9 +150,15 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const projects = investigationProjects(snapshot, impacts);
     writeJson(join(store.directory, "projects.json"), projects);
     writeJson(join(store.directory, "work.json"), summarizeWork(workReport(snapshot, assignments, projects)));
+    writeJson(join(store.directory, "integration-scan.json"), scanIntegrations(snapshot, store));
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
     console.log(JSON.stringify(collectionCandidates(snapshot, values.tools?.split(",")), null, 2));
+  } else if (command === "scan-integrations") {
+    const report = scanIntegrations(snapshot, store, values.tools?.split(","));
+    const output = values.output ?? join(store.directory, "integration-scan.json");
+    writeJson(output, report);
+    console.log(JSON.stringify({ output, tools: report.tools.length, hints: report.tools.reduce((sum, tool) => sum + tool.hints.length, 0), coverage: "partial; retained source only; all leads need review" }));
   } else if (command === "capture-source") {
     const tool = snapshot.tools.find((t) => t.id === values.tool);
     const path = values.path;

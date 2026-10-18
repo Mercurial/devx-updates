@@ -926,6 +926,46 @@ Broader native collection, owner-launched consumer reviews and the Dijkstra sour
 pin/test environments remain open; this performance work is not a compatibility
 assessment.
 
+### Active continuation: deterministic integration leads
+
+Phase 3 now includes an offline lexical scan of source captures attached to tools
+and native profiles. `scan-integrations` accepts selected tools or the full catalog;
+the regular `report` command refreshes `data/readiness/integration-scan.json`.
+Versioned rules flag service calls/URLs, protocol and wallet markers, bundled or
+vendored references, generators, downloads and container build inputs. Each lead
+has an exact retained quote and file/line/column citation and remains `needs-review`.
+No relationship, capability, runtime scope or compatibility claim is admitted.
+
+The scan binds eligible files to the tool's current repository/revision and lists
+historical, foreign/unbound, native-lock, binary and limit-excluded captures.
+Per-tool and per-file bounds are explicit; uncaptured source is always an unresolved
+frontier. All tool scans remain partial, including tools without source or matches.
+Source bytes and inspection are reused across roots sharing exact evidence within
+a run. Ordering and identifiers are deterministic, and corrupt or missing attached
+evidence fails the command. This extends source inspection under ADR-1/ADR-2 without
+network access or project execution.
+
+New packet exports include a derived `integration-scan.json` navigation aid over
+the packet's existing inputs. Original source remains the citation authority.
+Creating this aid changes neither packet identity nor pending/accepted review
+state, and does not launch either owner-controlled review pass.
+
+The retained catalog report accounts for all 269 tools: 414 eligible source files
+for 32 tools produced 896 lexical leads (698 service, 148 protocol, 33 build,
+10 download, five generator and two bundled references). Another 33 source captures
+are native locks and four lack a current repository binding; 237 tools have no
+eligible captured source in this scan. Documentation and comments occur among the
+leads, intentionally without promotion to production behavior. Representative
+source leads include Lucid Evolution's metadata fetch and Masumi's service client.
+
+Validation: 110 readiness tests pass, including exact citations, current/historical
+source binding, explicit limits, shared input reuse, corrupt evidence and unchanged
+packet identity. TypeScript and scoped lint pass. All 896 real quotes and locations
+validate; a repeated scan reproduces the report. Existing graph records, coverage,
+impact, work reports and all ten manual packet contexts are unchanged. Standards
+and specification reviews found no actionable findings. Broader source capture,
+native coverage, owner-run review decisions and Dijkstra assessment remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

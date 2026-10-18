@@ -244,6 +244,45 @@ retained native plan is sufficient for graph replay, not an offline fresh solve.
 
 Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
+## Scan retained source for integration leads
+
+```sh
+npm run readiness -- scan-integrations
+npm run readiness -- scan-integrations --tools lucid-evolution,masumi --output .readiness/integration-leads.json
+```
+
+This offline scan reads source captures already attached to the selected tools or
+their native profiles. It does not fetch a repository, execute source, launch a
+review, or add graph edges/capability findings. The default report is
+`data/readiness/integration-scan.json`; it accounts for all catalog tools, including
+tools without captured source. The regular `report` command refreshes it alongside
+coverage and impact reports. Run either command after source captures or discovery
+changes. Existing `capture-source` commands can retain additional pinned files.
+
+Versioned lexical rules locate URLs/service calls, protocol/wallet markers,
+embedded/vendored references, generator commands, downloads and container build
+inputs. Each lead carries the retained evidence ID, `/content` citation pointer,
+exact quote and one-based line/column (columns count UTF-16 code units). Quotes are
+bounded excerpts; column denotes the excerpt's start. A match can be documentation, a comment, example or test. It
+does not establish production scope, target identity, deployment, enabled behavior
+or compatibility. Every lead remains `needs-review`, and every tool's scan coverage
+is partial even when no matches occur.
+
+The report enumerates captured files and explicit exclusions: historical revision,
+foreign/unbound repository, native package lock, binary content, or resource limit.
+Limits are 200 eligible files and 2,000 leads per tool, 2 MiB per source file, and
+500 characters per excerpt. Evidence-ID order determines which files fit a bounded
+scan. Files outside the captured bundle remain an unresolved frontier; a scan is
+never evidence of repository-wide absence. Missing/corrupt attached evidence fails
+the command rather than yielding a successful empty report.
+
+New manual review exports include an `integration-scan.json` navigation aid derived
+only from that packet's own retained inputs. Cite and examine original evidence;
+the scan is not an independent source or an admission decision. Its version and
+input digest are recorded separately. Existing packet identities, pending states,
+and accepted graph decisions are unchanged by creating this derived aid. The owner
+continues to decide when to launch discovery and challenge reviews.
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow
