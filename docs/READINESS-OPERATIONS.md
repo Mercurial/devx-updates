@@ -299,6 +299,47 @@ npm run test:readiness
 - `report.json` contains coverage gaps and an ecosystem backlog.
 - `impact.json` contains distinct downstream tools and explanatory paths per scope/profile.
 - `projects.json` unions downstream tools across package versions within known source namespaces. Forks and ambiguous sources stay separate.
+- `work.json` contains the coverage and component-investigation queues, tied to
+  the snapshot digest. Investigation tasks group versions by the same evidenced
+  namespace as `projects.json`, preserving individual consumer release/profile
+  paths. The website's **Investigations** view computes the same queue from
+  committed inputs; it supports search, ecosystem, ownership and capability
+  evidence filters, plus JSON export. Existing **Work queue** gaps expose owners
+  and linked issues too.
+  Stored investigation entries reference their project in `projects.json` via
+  `pathsRef`; retain both files with the snapshot. This avoids duplicating the
+  full occurrence paths. Website filtered exports include the matching impact
+  records and labeled paths for independent inspection.
+  Collected root components remain in `projects.json` and the investigation queue
+  even with zero downstream consumers. Their root profiles and evidence are
+  retained; zero reach does not remove material uncertainty from investigation.
+- Ranking is lexicographic, descending: current verified runtime capabilities at
+  an exact component root, current suggested/disputed capabilities, distinct
+  verified runtime/build consumers, potential consumers, then the total open gaps
+  across those consumers. Each factor is shown. Development-only verified reach
+  does not increase the runtime/build factor. Potential reach retains the graph's
+  suggested/disputed paths across scopes. Missing component evidence remains
+  explicit; no ranking factor is a compatibility finding. A consumer capability
+  is never attributed to its dependencies. Historical and multiple-root findings
+  remain inspectable but do not establish current component-specific behavior.
+- Author task ownership in `content/readiness/work-assignments.json`. Each row
+  has `taskId`, `owner`, `issueUrl`, and `nextAction`; the last three accept `null`.
+  Copy a task ID from the queue export. Investigation IDs persist across versions
+  within the same package namespace; coverage IDs bind a catalog tool to its gap.
+  For example, replace the placeholder ID before saving:
+
+  ```json
+  [{ "taskId": "<copy exported taskId>", "owner": "Assigned investigator", "issueUrl": null, "nextAction": null }]
+  ```
+
+  `null` next action keeps the generated suggestion. Issue links must use HTTPS
+  without credentials. `report --assignments path.json` supports an alternate
+  assignment file for isolated runs; website builds use the committed default.
+  Malformed or duplicate assignments fail validation. Assignments with no current
+  task remain in `unmatchedAssignments` and are shown for reconciliation instead
+  of being silently deleted. Assignment changes never alter graph evidence or
+  readiness. Catalog maintainer hints are separate from assigned owners and do
+  not constitute verified contact information. No issues or messages are sent.
 - `changes.json`, when generated for the current snapshot, supplies the website's snapshot comparison.
 - `replay` reconstructs native graph records and admitted manual relationships,
   capability findings and decisions from retained inputs, without network access

@@ -8,7 +8,7 @@ import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover } from "../../lib/readiness/discovery";
 import { githubSource } from "../../lib/readiness/source";
 import { collect, refreshNative } from "../../lib/readiness/collect";
-import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
+import { calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
 import { acquireLock, addEvidence, mergeResolution, readJson, readSnapshot, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
 import { rebuildNative } from "../../lib/readiness/rebuild";
@@ -18,11 +18,13 @@ import { collectionCandidates } from "../../lib/readiness/candidates";
 import { collectBatch } from "../../lib/readiness/batch";
 import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 import { capabilityRows } from "../../lib/readiness/capabilities";
+import { investigationProjects, parseAssignments, summarizeWork, workReport } from "../../lib/readiness/work";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
   state: { type: "string", default: ".readiness" },
   catalog: { type: "string", default: "data/cardano-graph.json" },
+  assignments: { type: "string", default: "content/readiness/work-assignments.json" },
   tools: { type: "string" }, limit: { type: "string" }, refresh: { type: "boolean" },
   profile: { type: "string" }, input: { type: "string" }, output: { type: "string" }, before: { type: "string" },
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
@@ -54,7 +56,7 @@ refresh-native  Refresh registered collection profiles against discovered source
                 --tools id,id --limit N --refresh (limit counts distinct requests)
 collect-batch   --input batch.json [--tools id,id] [--limit N] [--refresh]
                 Persist pinned requests and resume unfinished native collections
-report          Emit coverage and impact reports in the data directory
+report          Emit coverage, impact and work queues (--assignments path.json)
 show            --tool id (coverage, manifests, and profiles)
 candidates      List supported collection starting points, including nested workspaces [--tools id,id]
 validate        Validate snapshot, references, semantic digest, and evidence checksums
@@ -123,6 +125,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     mergeResolution(snapshot, result); store.save(snapshot);
     console.log(`Imported ${result.occurrences.length} occurrences and ${result.edges.length} edges; profile coverage ${result.profile.coverage}`);
   } else if (command === "report") {
+    const assignments = parseAssignments(readJson(resolve(values.assignments!)));
     finalize(snapshot);
     const reviewPath = join(store.directory, "reviews.json");
     if (existsSync(reviewPath)) writeJson(reviewPath, reconcileReviewQueue(snapshot, readJson(reviewPath) as ReviewQueueEntry[]));
@@ -141,7 +144,9 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     writeJson(join(store.directory, "report.json"), report);
     const impacts = calculateImpact(snapshot);
     writeJson(join(store.directory, "impact.json"), impacts);
-    writeJson(join(store.directory, "projects.json"), aggregateProjects(snapshot, impacts));
+    const projects = investigationProjects(snapshot, impacts);
+    writeJson(join(store.directory, "projects.json"), projects);
+    writeJson(join(store.directory, "work.json"), summarizeWork(workReport(snapshot, assignments, projects)));
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
     console.log(JSON.stringify(collectionCandidates(snapshot, values.tools?.split(",")), null, 2));

@@ -411292,6 +411292,27 @@
     }
   },
   {
+    "id": "project:1904a733aab360c95617db6b77bb2f2d2715d94f7d8a82c6a2e1de42396d30d1",
+    "name": "@ada-anvil/weld",
+    "ecosystem": "npm",
+    "source": "source:ce6cf90d721358254e8b70c1e484a5f342be4e74:core",
+    "artifactIds": [
+      "artifact:7960d2cb04fc6d39687ef7d432df70466bc74f1460e949b7c37202de7db27c5a"
+    ],
+    "versions": [
+      "0.7.0"
+    ],
+    "impact": {
+      "artifactId": "project:1904a733aab360c95617db6b77bb2f2d2715d94f7d8a82c6a2e1de42396d30d1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:d9e195d580b257e62ebad232875f91c9894172e67750842d33fa3032e40137c8",
     "name": "@adobe/css-tools",
     "ecosystem": "npm",
@@ -420763,6 +420784,27 @@
     }
   },
   {
+    "id": "project:c2da1edf9493935493c9b3ca7cd3a89bd500868c26fcbb682bd2cf1eed2ccd1a",
+    "name": "@biglup/cometa",
+    "ecosystem": "npm",
+    "source": "source:15f0862128fd49fa3eecd4f4e2a118e60c865cde:.",
+    "artifactIds": [
+      "artifact:88aaaf4ccc389522dd3c8154ff9da53d4e8e007e6e029b0a9c50cfc119d0de3e"
+    ],
+    "versions": [
+      "1.2.0"
+    ],
+    "impact": {
+      "artifactId": "project:c2da1edf9493935493c9b3ca7cd3a89bd500868c26fcbb682bd2cf1eed2ccd1a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:0650ee8108995af532e4c343a559781e951380b735d6006f70b10b39219f78a0",
     "name": "@blaze-cardano/eslint-config",
     "ecosystem": "npm",
@@ -420791,6 +420833,48 @@
     }
   },
   {
+    "id": "project:a49ccd7abb988b5b50f4823101cfeac776ed26f964bd61eed6bf1c21117cdfc0",
+    "name": "@blaze-cardano/query",
+    "ecosystem": "npm",
+    "source": "source:0499975bfa4fdb324f2185657a7f17e4cea35aa1:packages/blaze-query",
+    "artifactIds": [
+      "artifact:f8d826a6e8b3149630c8776dbff5450fc0189e44289c0d36466cd9bdcd9141f9"
+    ],
+    "versions": [
+      "0.6.4"
+    ],
+    "impact": {
+      "artifactId": "project:a49ccd7abb988b5b50f4823101cfeac776ed26f964bd61eed6bf1c21117cdfc0",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:c113348bd1df5a28edf19f18dd1abcf06bf7233f7ab5bc8ae2333a08fe9b6878",
+    "name": "@blaze-cardano/sdk",
+    "ecosystem": "npm",
+    "source": "source:0499975bfa4fdb324f2185657a7f17e4cea35aa1:packages/blaze-sdk",
+    "artifactIds": [
+      "artifact:3612071663b14cfba4c448011848b4622262bc46753514f84bb76122c5f34aa4"
+    ],
+    "versions": [
+      "0.3.3"
+    ],
+    "impact": {
+      "artifactId": "project:c113348bd1df5a28edf19f18dd1abcf06bf7233f7ab5bc8ae2333a08fe9b6878",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:064fa9c85abdb2f363536f5784824b0edd03cbb27227a15b46c9037cbcc73180",
     "name": "@blaze-cardano/tsconfig",
     "ecosystem": "npm",
@@ -420816,6 +420900,48 @@
           "occurrence:4354850ee59de0b9124f3642ec56ec4a7fd5727980cc1dd8bf3cd3b36fd2bbac"
         ]
       }
+    }
+  },
+  {
+    "id": "project:7403fb8bbf530610bb4d560139fd3e943e35f3efde4a6d29f8c1063fa4113f34",
+    "name": "@blaze-cardano/tx",
+    "ecosystem": "npm",
+    "source": "source:0499975bfa4fdb324f2185657a7f17e4cea35aa1:packages/blaze-tx",
+    "artifactIds": [
+      "artifact:57e47eb4e188128c85b07180fcb9bd4de3191e4c75c5109b2031cc0b74193343"
+    ],
+    "versions": [
+      "0.15.4"
+    ],
+    "impact": {
+      "artifactId": "project:7403fb8bbf530610bb4d560139fd3e943e35f3efde4a6d29f8c1063fa4113f34",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:19dc5da5d109989accf95ad2001752d7c79b060af97ff6d4699093d51a797be0",
+    "name": "@blaze-cardano/wallet",
+    "ecosystem": "npm",
+    "source": "source:0499975bfa4fdb324f2185657a7f17e4cea35aa1:packages/blaze-wallet",
+    "artifactIds": [
+      "artifact:e714259cd3609abdcfb6c19fff6880e36cd9439c03b96b2686ff409018fe5bb5"
+    ],
+    "versions": [
+      "0.6.3"
+    ],
+    "impact": {
+      "artifactId": "project:19dc5da5d109989accf95ad2001752d7c79b060af97ff6d4699093d51a797be0",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -420874,6 +421000,27 @@
           "occurrence:9e9745bf04e00d08961f7bbdef392e672d8fce807ae8590075a55a244d2ba843"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b40c241eb5ef73c77c427f4a2745615df2269e86904bae735209ff651d577565",
+    "name": "@blockfrost/blockfrost-js",
+    "ecosystem": "npm",
+    "source": "source:cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba:.",
+    "artifactIds": [
+      "artifact:e2576aeb92fd91b8354ca54337d6d6d824688f47f8980b5be47b046d17038cf6"
+    ],
+    "versions": [
+      "6.2.0"
+    ],
+    "impact": {
+      "artifactId": "project:b40c241eb5ef73c77c427f4a2745615df2269e86904bae735209ff651d577565",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -421166,6 +421313,48 @@
     }
   },
   {
+    "id": "project:a4226152be3dfe8f50a85afdf604d296ac603c2ba529bf2bba915f57c7a46fe1",
+    "name": "@cardano-foundation/cardano-connect-with-wallet",
+    "ecosystem": "npm",
+    "source": "source:47ceba88338f19b576bf72251e8158a7883a5e45:react",
+    "artifactIds": [
+      "artifact:671eeddb1fa3d324293411e88e24aee49c2da1997e514e389d6c733b75fa34c5"
+    ],
+    "versions": [
+      "0.2.21"
+    ],
+    "impact": {
+      "artifactId": "project:a4226152be3dfe8f50a85afdf604d296ac603c2ba529bf2bba915f57c7a46fe1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:c5703c795d3546b14b8766915d5d7a4dfb41243823b769f9cabfff71ae87f89d",
+    "name": "@cardano-foundation/cardano-connect-with-wallet-core",
+    "ecosystem": "npm",
+    "source": "source:47ceba88338f19b576bf72251e8158a7883a5e45:core",
+    "artifactIds": [
+      "artifact:ec43290bf1e6650719b4c74d356c414f697ac8ebf4e88c68afc2e706beae94f7"
+    ],
+    "versions": [
+      "0.2.11"
+    ],
+    "impact": {
+      "artifactId": "project:c5703c795d3546b14b8766915d5d7a4dfb41243823b769f9cabfff71ae87f89d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:5e71237ec127e4d87b986a001d23db5d82187edd682d80fac0fccb9f2f85bb1a",
     "name": "@cardano-ogmios/client",
     "ecosystem": "npm",
@@ -421248,6 +421437,48 @@
           "occurrence:d1f1f9d5c2b535c4c318ca88ee1f2229fa0b7c999b568e56d4df82fff5b8b2f2"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d623b2b22f0a21a2fba28b8d2b837fd3b60c5e91c34ed856fcedfe2d3380895c",
+    "name": "@cardano-sdk/dapp-connector",
+    "ecosystem": "npm",
+    "source": "source:48019e49c826ea77d81be0e2d2907f94406f5e04:packages/dapp-connector",
+    "artifactIds": [
+      "artifact:ff73d67c840236c5f8f357a31729903ddbfad1b3048f7cf32075c5b2f69833fe"
+    ],
+    "versions": [
+      "0.13.31"
+    ],
+    "impact": {
+      "artifactId": "project:d623b2b22f0a21a2fba28b8d2b837fd3b60c5e91c34ed856fcedfe2d3380895c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:9e0204e84e1ee2bd3a9865708d0f5dc4a7349c2d74fa3f134708c6985188df86",
+    "name": "@cardano-sdk/governance",
+    "ecosystem": "npm",
+    "source": "source:48019e49c826ea77d81be0e2d2907f94406f5e04:packages/governance",
+    "artifactIds": [
+      "artifact:694ab46454dea9518556938a1e585b1cfea6b2b32eb1ac234c8611383d399583"
+    ],
+    "versions": [
+      "0.11.34"
+    ],
+    "impact": {
+      "artifactId": "project:9e0204e84e1ee2bd3a9865708d0f5dc4a7349c2d74fa3f134708c6985188df86",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -421339,6 +421570,27 @@
     }
   },
   {
+    "id": "project:23e0cf08ad169e59d10b8d63694a426119b0370fc2b399eeaea717ad3e155fa8",
+    "name": "@cardano-sdk/tx-construction",
+    "ecosystem": "npm",
+    "source": "source:48019e49c826ea77d81be0e2d2907f94406f5e04:packages/tx-construction",
+    "artifactIds": [
+      "artifact:23ae05423b5a0bac76e35a38362d1b99c15f5a307a595b87a6daff3d2985d98b"
+    ],
+    "versions": [
+      "0.29.1"
+    ],
+    "impact": {
+      "artifactId": "project:23e0cf08ad169e59d10b8d63694a426119b0370fc2b399eeaea717ad3e155fa8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:568178d2ce8304737d04cb8bfae292fe1d81971ae0d9872e1e2900530ac7c8b1",
     "name": "@cardano-sdk/util-dev",
     "ecosystem": "npm",
@@ -421364,6 +421616,27 @@
           "occurrence:e046e91e70ab8fea3aa10f2d83c58fd1906484b18fb5620b8d0831ab42c9e896"
         ]
       }
+    }
+  },
+  {
+    "id": "project:def55b9693cb963e941bf4c932929f5d3f48bb17df23ce197c6a1714971ba3d2",
+    "name": "@cardano-sdk/wallet",
+    "ecosystem": "npm",
+    "source": "source:48019e49c826ea77d81be0e2d2907f94406f5e04:packages/wallet",
+    "artifactIds": [
+      "artifact:3b88586711e82ea80e390e38eb67184a52b4349c178e55cac89cceef16ef5b73"
+    ],
+    "versions": [
+      "0.56.0"
+    ],
+    "impact": {
+      "artifactId": "project:def55b9693cb963e941bf4c932929f5d3f48bb17df23ce197c6a1714971ba3d2",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -435454,6 +435727,27 @@
     }
   },
   {
+    "id": "project:a40d8320e5eb718521392cd051ce040ed47ab046cad7e370416753a6b5bdd714",
+    "name": "@evolution-sdk/evolution",
+    "ecosystem": "npm",
+    "source": "source:c4139df12e099dbd4742d3e2c10dc52f50a4bd41:packages/evolution",
+    "artifactIds": [
+      "artifact:2b063bb9b34541795f4796e36ef08478dacf3dc8eddba1c8c1bd2e28e184baa5"
+    ],
+    "versions": [
+      "0.6.0"
+    ],
+    "impact": {
+      "artifactId": "project:a40d8320e5eb718521392cd051ce040ed47ab046cad7e370416753a6b5bdd714",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:bea7e06952ebd41b5b778f16cd03a62c42a9c1ffa7f0f4c3ee37edae729e9153",
     "name": "@exodus/bytes",
     "ecosystem": "npm",
@@ -435578,6 +435872,27 @@
           "occurrence:af28fa7c7ed1d7376361aa655d8cacba8af85cbd7b9dbc6268d1b8a811eb9941"
         ]
       }
+    }
+  },
+  {
+    "id": "project:785cbe188484ee65792e9f9fa460e75eb7dd567690edcbc125c5ac250db7c3c9",
+    "name": "@fabianbormann/cardano-peer-connect",
+    "ecosystem": "npm",
+    "source": "source:6fce1afe581da1009a81fe119ec83357150abab9:",
+    "artifactIds": [
+      "artifact:b477ce5c1aeaf8868364d04e4032f79a7a7d34ab3925388d1513d8fbf0dc7682"
+    ],
+    "versions": [
+      "1.2.21"
+    ],
+    "impact": {
+      "artifactId": "project:785cbe188484ee65792e9f9fa460e75eb7dd567690edcbc125c5ac250db7c3c9",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -435790,6 +436105,27 @@
     }
   },
   {
+    "id": "project:8db364778d8161663a8fc96d26d0a95ac3038ae9bc1e7e5370de7dad3ed489c5",
+    "name": "@geniusyield/sdk",
+    "ecosystem": "npm",
+    "source": "source:66a6ebcedd64979d02d1bb01c520185af1489f0d:.",
+    "artifactIds": [
+      "artifact:731ba4d349ff8083ba7120f1a9fa98af403712653ec22dc20aa43e5f5e9bce23"
+    ],
+    "versions": [
+      "2.0.0"
+    ],
+    "impact": {
+      "artifactId": "project:8db364778d8161663a8fc96d26d0a95ac3038ae9bc1e7e5370de7dad3ed489c5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:66868ead7fc19d5d86c9113cc02c424c24912b7cbcf19dbf3081f9796de398ea",
     "name": "@gerrit0/mini-shiki",
     "ecosystem": "npm",
@@ -435850,6 +436186,27 @@
           "occurrence:8845bd05b5c922b1cde826925a3300a7cb0cb4a858f16939452fd781fdd45e4d"
         ]
       }
+    }
+  },
+  {
+    "id": "project:592f55b10969216fb9c304dfb4e81f4ef722ac3de9bb73eef1cc798a0a5b0108",
+    "name": "@govtool/frontend",
+    "ecosystem": "npm",
+    "source": "source:993d25ab42b6565a95aaa82ef297ac5053b3fb3e:",
+    "artifactIds": [
+      "artifact:c0d4d6119e0e9f93838d7fe1b5104239f6badebf690e315ed10c94f92c0e7cd9"
+    ],
+    "versions": [
+      "2.0.29"
+    ],
+    "impact": {
+      "artifactId": "project:592f55b10969216fb9c304dfb4e81f4ef722ac3de9bb73eef1cc798a0a5b0108",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -436377,6 +436734,48 @@
           "occurrence:613194491d3176276b42d883da8645e342beaa0ca31fd4441b6cdde2680bcded"
         ]
       }
+    }
+  },
+  {
+    "id": "project:267d392243639105977c8e375241b2f37f6674d1f7204bcdf235b21e7e5153fd",
+    "name": "@harmoniclabs/ouroboros-miniprotocols-ts",
+    "ecosystem": "npm",
+    "source": "source:9c26c7c24bdffb9af29d91cc59b2c5a65f98567d:",
+    "artifactIds": [
+      "artifact:89a7ba7f5831b29e5e2db4a0fa8e485c17cbeec52c08164c5632594cbeacda96"
+    ],
+    "versions": [
+      "0.0.5-dev5"
+    ],
+    "impact": {
+      "artifactId": "project:267d392243639105977c8e375241b2f37f6674d1f7204bcdf235b21e7e5153fd",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:63a1193aa42762588b847aa01571f9b381c6f3f156650e372cdbde1841a6f214",
+    "name": "@helios-lang/compiler",
+    "ecosystem": "npm",
+    "source": "source:7364d795562b96d14b1e177b28c103eb240d0f54:.",
+    "artifactIds": [
+      "artifact:e90e92065ad709f881fe1432703c71d7d4baca3bead5d2cd3979df115d305954"
+    ],
+    "versions": [
+      "0.17.33"
+    ],
+    "impact": {
+      "artifactId": "project:63a1193aa42762588b847aa01571f9b381c6f3f156650e372cdbde1841a6f214",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -436969,6 +437368,69 @@
           "occurrence:a7b6a83cfa193fc0662a2e4f4745f7f4d9ccd575a4e390e4e1b14c992ba22a85"
         ]
       }
+    }
+  },
+  {
+    "id": "project:29b0dadc54cbf2a8c109f0946915f935d61000f841798f7f49d8bbe53826d911",
+    "name": "@hydra-sdk/bridge",
+    "ecosystem": "npm",
+    "source": "source:d10c4596fae296a93ad0fdf215d52f9f01d63361:packages/hydra-bridge",
+    "artifactIds": [
+      "artifact:2e616f39147eaad84a6a0518fe65a08947f0af4bb9743c540ef0ce3e4abc92af"
+    ],
+    "versions": [
+      "2.0.2"
+    ],
+    "impact": {
+      "artifactId": "project:29b0dadc54cbf2a8c109f0946915f935d61000f841798f7f49d8bbe53826d911",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:b5edde4a9afbbfe3dc2196ee33f6943a37c78f572ff29dd1423c5caa19fca325",
+    "name": "@hydra-sdk/core",
+    "ecosystem": "npm",
+    "source": "source:d10c4596fae296a93ad0fdf215d52f9f01d63361:packages/core",
+    "artifactIds": [
+      "artifact:f6755cdadb8532c8c8facfb12983a7240999980518af0231723dbd7db3fc3c24"
+    ],
+    "versions": [
+      "1.5.0"
+    ],
+    "impact": {
+      "artifactId": "project:b5edde4a9afbbfe3dc2196ee33f6943a37c78f572ff29dd1423c5caa19fca325",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:b0b419b9a70d7b74ff7dcfeaf02e46a6a00a74ff5d0c3b84ff3dad670eb88bc1",
+    "name": "@hydra-sdk/transaction",
+    "ecosystem": "npm",
+    "source": "source:d10c4596fae296a93ad0fdf215d52f9f01d63361:packages/hydra-transaction",
+    "artifactIds": [
+      "artifact:46ab14c916c30e0f00b9c4048a3a6db967387cb118e7dfdc1d994a8ed6c7bd43"
+    ],
+    "versions": [
+      "1.2.3"
+    ],
+    "impact": {
+      "artifactId": "project:b0b419b9a70d7b74ff7dcfeaf02e46a6a00a74ff5d0c3b84ff3dad670eb88bc1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -438633,6 +439095,27 @@
           "occurrence:9bf42e6e4b19d05c06b21e26f41251095f566db662439c291f4a41e6ba01ac3b"
         ]
       }
+    }
+  },
+  {
+    "id": "project:1d09b7020255e2d48f1e40d1eebeb3883f04a37493614c3e803c1187f99dcf01",
+    "name": "@indigo-labs/dexter",
+    "ecosystem": "npm",
+    "source": "source:44a57eb0f6f80650f1ed34a7765c787afa27f1ab:",
+    "artifactIds": [
+      "artifact:bad6e56a572d81259c07b899f8d55a491af4d1ba576e3d301ad7b3220fc82443"
+    ],
+    "versions": [
+      "5.4.9"
+    ],
+    "impact": {
+      "artifactId": "project:1d09b7020255e2d48f1e40d1eebeb3883f04a37493614c3e803c1187f99dcf01",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -445049,6 +445532,27 @@
     }
   },
   {
+    "id": "project:fb13a3b0ae43a737ec6084d66693b1e5bee5142717db47ae91e51fc1816e3184",
+    "name": "@lucid-evolution/lucid",
+    "ecosystem": "npm",
+    "source": "source:df729a787f9084d2dc461862889ac2971ea43e07:packages/lucid",
+    "artifactIds": [
+      "artifact:a5b323816cee03ceb66bc919c0a96ded0ff22069c1a1f0907a3d9e89e43daca0"
+    ],
+    "versions": [
+      "0.8.3"
+    ],
+    "impact": {
+      "artifactId": "project:fb13a3b0ae43a737ec6084d66693b1e5bee5142717db47ae91e51fc1816e3184",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:e1193194a29c4ac860fd84620e6b877ec7fcdb02d63c9965506a79a44edc01f4",
     "name": "@lucid-evolution/scalus-uplc",
     "ecosystem": "npm",
@@ -445177,6 +445681,48 @@
     }
   },
   {
+    "id": "project:b6e4ce5f39ecedcc2377b63a5b31bd5a867c3a112e29e7cc802b43be6a4ea196",
+    "name": "@marlowe.io/language-core-v1",
+    "ecosystem": "npm",
+    "source": "source:93598c0f8e452d7679a44097c48e693d95bfd631:packages/language/core/v1",
+    "artifactIds": [
+      "artifact:422b9a1af959ef36d9f29356dcca654e4e4d393d575b622812927f27e7d81ed7"
+    ],
+    "versions": [
+      "0.4.0-beta"
+    ],
+    "impact": {
+      "artifactId": "project:b6e4ce5f39ecedcc2377b63a5b31bd5a867c3a112e29e7cc802b43be6a4ea196",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:c69c0718375b374cc908b719ea23fbca9828870ef092f53aa967263f189d8552",
+    "name": "@marlowe.io/runtime-lifecycle",
+    "ecosystem": "npm",
+    "source": "source:93598c0f8e452d7679a44097c48e693d95bfd631:packages/runtime/lifecycle",
+    "artifactIds": [
+      "artifact:3df982a7e5a7f1c33b60ddb9db14e512b217bc7686aedcd3068511a8a7953765"
+    ],
+    "versions": [
+      "0.4.0-beta"
+    ],
+    "impact": {
+      "artifactId": "project:c69c0718375b374cc908b719ea23fbca9828870ef092f53aa967263f189d8552",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:bc34777f3f1532e4d615f20331f70f1e541ca6c61695187fc2dd5a6ca761b203",
     "name": "@marlowe.io/testing-kit",
     "ecosystem": "npm",
@@ -445202,6 +445748,27 @@
           "occurrence:9f76218d52202c9fa978003bf7b31124d7dbde999953da2a6aaa9b7c4e979708"
         ]
       }
+    }
+  },
+  {
+    "id": "project:2711f430e58dd0d1eb07dd1f574d79b5abff56dca7f4bfb211e06a9cb63a3851",
+    "name": "@marlowe.io/wallet",
+    "ecosystem": "npm",
+    "source": "source:93598c0f8e452d7679a44097c48e693d95bfd631:packages/wallet",
+    "artifactIds": [
+      "artifact:7e38e27de39993c7ae90bdd41b1907f1a5bb60ec711af05276f27e11250be876"
+    ],
+    "versions": [
+      "0.4.0-beta"
+    ],
+    "impact": {
+      "artifactId": "project:2711f430e58dd0d1eb07dd1f574d79b5abff56dca7f4bfb211e06a9cb63a3851",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -445291,6 +445858,27 @@
           "occurrence:6c60bf70f097afd4fabdb7250b1212b14a53b9d4efedd2c68076c8388af6e585"
         ]
       }
+    }
+  },
+  {
+    "id": "project:384aead1528498ab60335458089fef906fccfcf75cd69f7fd680c871050509b0",
+    "name": "@meshsdk/core",
+    "ecosystem": "npm",
+    "source": "source:3df879e48f400f19eea0ebddfb00099b0809f484:packages/mesh-core",
+    "artifactIds": [
+      "artifact:8fa53cfe006b720ed9a7cd6d161a767172913221f4e2610a7c3742a9d210b314"
+    ],
+    "versions": [
+      "1.9.0"
+    ],
+    "impact": {
+      "artifactId": "project:384aead1528498ab60335458089fef906fccfcf75cd69f7fd680c871050509b0",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -446144,6 +446732,27 @@
     }
   },
   {
+    "id": "project:5b005d99da9193bb194e4e614482a74b9b4f2498cfae83e8f60c42ee24d2d649",
+    "name": "@minswap/sdk",
+    "ecosystem": "npm",
+    "source": "source:19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528:.",
+    "artifactIds": [
+      "artifact:616da15a7e6bb319cf2a77d642472e2e0b3302f044452c97e90aa5e1d303d492"
+    ],
+    "versions": [
+      "0.5.0"
+    ],
+    "impact": {
+      "artifactId": "project:5b005d99da9193bb194e4e614482a74b9b4f2498cfae83e8f60c42ee24d2d649",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:1223892adc6cdb5f471f137071fc16d2342565e1cc444a615b43752eb4282923",
     "name": "@modelcontextprotocol/sdk",
     "ecosystem": "npm",
@@ -446766,6 +447375,27 @@
           "occurrence:7896016c4a69193216d595ec239b6899f5c946921c466f9ef00aa74e3d65d0a5"
         ]
       }
+    }
+  },
+  {
+    "id": "project:128ae9b22488b6b48e4e0abe9214b2532b73d61ddb78539b4e4fd92b9a15f68d",
+    "name": "@newm.io/cardano-dapp-wallet-connector",
+    "ecosystem": "npm",
+    "source": "source:5d629436c7b7e7c2757355888a63cccd62fb1bca:",
+    "artifactIds": [
+      "artifact:96848afe5a3760061dfb0ccae7038be0288266562fe211c200a074076db1eb22"
+    ],
+    "versions": [
+      "1.5.4"
+    ],
+    "impact": {
+      "artifactId": "project:128ae9b22488b6b48e4e0abe9214b2532b73d61ddb78539b4e4fd92b9a15f68d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -463050,6 +463680,27 @@
     }
   },
   {
+    "id": "project:252d73efe066668ad426bcd7f27651491c5ccfb600f64b5156aaefe3cb03b0a5",
+    "name": "@sokosumi/core",
+    "ecosystem": "npm",
+    "source": "source:0f908764db652adfb76348222235a809ed8797bb:apps/core",
+    "artifactIds": [
+      "artifact:6a107f150b67657c5a2cdd4b8bcb704d66f435c862b097672f9e0e1e7099c1b8"
+    ],
+    "versions": [
+      "unknown"
+    ],
+    "impact": {
+      "artifactId": "project:252d73efe066668ad426bcd7f27651491c5ccfb600f64b5156aaefe3cb03b0a5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:c16a1773e383b62665271796babd729c4e012502a3d2cb7e981ecbfc84ed5779",
     "name": "@solana/buffer-layout",
     "ecosystem": "npm",
@@ -466346,6 +466997,27 @@
           "occurrence:828060a460bfa418bcb5e0e71394e23ad456815daaa6d073662ca4c928171054"
         ]
       }
+    }
+  },
+  {
+    "id": "project:a8b7be2809931c0561170343d7dc37c90b96eb8d09ae9a6ccae9b3e72aa67851",
+    "name": "@stricahq/typhonjs",
+    "ecosystem": "npm",
+    "source": "source:7190c3c67e9dc7be284842e89f06ed848b748ed2:.",
+    "artifactIds": [
+      "artifact:a8b076359e93c3586d2e5e203da05931bbe29cf8244e6ed7a7adc06264d2a37c"
+    ],
+    "versions": [
+      "4.0.0"
+    ],
+    "impact": {
+      "artifactId": "project:a8b7be2809931c0561170343d7dc37c90b96eb8d09ae9a6ccae9b3e72aa67851",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -488549,6 +489221,27 @@
     }
   },
   {
+    "id": "project:c4484b363a3ba05bf9d709a748a07f745b5e8b4c0735ac83d70ae904b35aee09",
+    "name": "admin-frontend",
+    "ecosystem": "npm",
+    "source": "source:8db9e6122bfd4303bb6e2b5740392f84a4b41ab8:frontend",
+    "artifactIds": [
+      "artifact:11472911a4f9f8e17fc585cc4b55ca7bfb9d81a282768e3ac65cc0d50840dd06"
+    ],
+    "versions": [
+      "0.1.0"
+    ],
+    "impact": {
+      "artifactId": "project:c4484b363a3ba05bf9d709a748a07f745b5e8b4c0735ac83d70ae904b35aee09",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:c61bc96614ca861f5fca1418438344c097e7af4529b3462d2884f0843ba809b9",
     "name": "aes-js",
     "ecosystem": "npm",
@@ -504379,6 +505072,27 @@
     }
   },
   {
+    "id": "project:2d508049cc7f1f97ec9f5b57c3f2514efb62c46a6741c998c0601f75e01cf2b8",
+    "name": "cardano-web3-js",
+    "ecosystem": "npm",
+    "source": "source:21aa0802533f9052b6d4bcbdc934acbbd482a006:.",
+    "artifactIds": [
+      "artifact:95a80b049ec78a00084d3fac372421b29c358a10c20cc9746957ac71bc1f7540"
+    ],
+    "versions": [
+      "2.3.4"
+    ],
+    "impact": {
+      "artifactId": "project:2d508049cc7f1f97ec9f5b57c3f2514efb62c46a6741c998c0601f75e01cf2b8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:138160a98f78a6bf0ab09486cd8926dfe343414f1801b2da57530e0061ad90ee",
     "name": "caseless",
     "ecosystem": "npm",
@@ -515226,6 +515940,27 @@
     }
   },
   {
+    "id": "project:87f002dfd7d2ef7f2bd00782ee7d6d9419f9400c96474658e5a9892a5d5d7de3",
+    "name": "daedalus",
+    "ecosystem": "npm",
+    "source": "source:22440487d08fd1d2121394fa80c238852df5ea7d:.",
+    "artifactIds": [
+      "artifact:97a06ca08547325228d5b188b0bbd7045671439410a99fc800e400c5b2529907"
+    ],
+    "versions": [
+      "11.5.0"
+    ],
+    "impact": {
+      "artifactId": "project:87f002dfd7d2ef7f2bd00782ee7d6d9419f9400c96474658e5a9892a5d5d7de3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:32b5e8d1838ae6e3bf7480f5984eba442b7565422f60d4ab951d3775a30fc6da",
     "name": "dargs",
     "ecosystem": "npm",
@@ -520522,6 +521257,27 @@
           "occurrence:effa1571359aef23924036850190b470258863906e4fb0aeae66ed811be5f9d8"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d3c8145b1f52df3824ca4ff9862623acde1669766a48e982992d4b63e224d497",
+    "name": "dolos",
+    "ecosystem": "cargo",
+    "source": "source:fd6c9a256f552dbb1d61ab63242f128ab786fdc2:./Cargo.toml",
+    "artifactIds": [
+      "artifact:8ae39de46c333f64a31db2d807bb95e0bea04110779739c8256ae2d8db8ad7a3"
+    ],
+    "versions": [
+      "1.6.1"
+    ],
+    "impact": {
+      "artifactId": "project:d3c8145b1f52df3824ca4ff9862623acde1669766a48e982992d4b63e224d497",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539243,6 +539999,27 @@
     }
   },
   {
+    "id": "project:6c781b799a97a1dab334212440021e2002cef10342150bf45630946d71edb867",
+    "name": "github.com/blinklabs-io/dingo",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:c47d254eb664f62c399d69f21f7f429bab2638273e9f60a6c89c70cec513c062"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6c781b799a97a1dab334212440021e2002cef10342150bf45630946d71edb867",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:6140d60a85d877568666ff9f7a2444892058ddd9fe028b5493ab42c74a79eb39",
     "name": "github.com/blinklabs-io/dingo.test",
     "ecosystem": "go",
@@ -539268,6 +540045,27 @@
           "occurrence:32fd5b27d15d5d8b0f7e3e25fcf96c4592c86dd72e4217bb37dee0c4255a5dc6"
         ]
       }
+    }
+  },
+  {
+    "id": "project:22590c1cfd02ad2112af3fbe5c12aa9b69121775be2a41b9f7a812a2c6852938",
+    "name": "github.com/blinklabs-io/dingo/api/blockfrost",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:0912461f231521f07803bad3dd46e6cf55855d71172e7654071c91802b4ea4b8"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:22590c1cfd02ad2112af3fbe5c12aa9b69121775be2a41b9f7a812a2c6852938",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539299,6 +540097,27 @@
     }
   },
   {
+    "id": "project:faa35cd9501293e7bd97e3dcd8c12be8281efa3e82fc2b04b79b50dd0681e1d6",
+    "name": "github.com/blinklabs-io/dingo/api/kupo",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:56986f6ed9ffa36d260292257dd31305416433e0349398bdccf3693ef226966e"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:faa35cd9501293e7bd97e3dcd8c12be8281efa3e82fc2b04b79b50dd0681e1d6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b1ac86ce99e96fbaf7942bdb64e2fa15afa76a273fe6f9fa77e20fb91deeb228",
     "name": "github.com/blinklabs-io/dingo/api/kupo.test",
     "ecosystem": "go",
@@ -539324,6 +540143,27 @@
           "occurrence:29d92f3ec57638b2f01cd763222c888309a13baa810cbf8d52f5e267ec84890f"
         ]
       }
+    }
+  },
+  {
+    "id": "project:e82d9224a1acde1f40368fa60994a1548ba4b3b9aa71a17d3c491759620c8497",
+    "name": "github.com/blinklabs-io/dingo/api/mcp",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:46b3fbd642595021c88868e69a18cf80db06f171f35a95b32bb1243b3164d6a1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:e82d9224a1acde1f40368fa60994a1548ba4b3b9aa71a17d3c491759620c8497",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539355,6 +540195,27 @@
     }
   },
   {
+    "id": "project:04ef6abf3a0d47f1b8e19f183a1fcc12af3c27edeea1512bfc437fcfe4df0f7b",
+    "name": "github.com/blinklabs-io/dingo/api/mesh",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:0b06ad65b6eb1840ec542f5132814d455560a0fea85907ecfd1370d5fd8063d1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:04ef6abf3a0d47f1b8e19f183a1fcc12af3c27edeea1512bfc437fcfe4df0f7b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:5f5fe5466a40c06042035c5844a8c723b48f51bb164f0cecc2cb4a1eac094a9f",
     "name": "github.com/blinklabs-io/dingo/api/mesh.test",
     "ecosystem": "go",
@@ -539380,6 +540241,27 @@
           "occurrence:d59651ab5b98cad7d1d08f7d29c1d09146b221a13347e47815ca2b07d9c2eb1d"
         ]
       }
+    }
+  },
+  {
+    "id": "project:061746413ddd76b7ee4bf73599f3127cc0b71dee7f615de8bc32a8dcd65e81f2",
+    "name": "github.com/blinklabs-io/dingo/api/utxorpc",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:70b0e1cc743a01b0a3ed6e519095c3825b6dd22c60f50ac82efe46c1baeb89b8"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:061746413ddd76b7ee4bf73599f3127cc0b71dee7f615de8bc32a8dcd65e81f2",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539411,6 +540293,27 @@
     }
   },
   {
+    "id": "project:edf36ef423f591c47f6f3aca1093c0e49114c0a2bdf2211416370fef3e72de0d",
+    "name": "github.com/blinklabs-io/dingo/bark",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7d62ab6f4246e73df82bdbb83603a553591ab2b3014a755d8815b5410d0217fd"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:edf36ef423f591c47f6f3aca1093c0e49114c0a2bdf2211416370fef3e72de0d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:9d176f261ae63c8635d20c8012b7982f8cd29386cacfaccea088261a31cf9eb2",
     "name": "github.com/blinklabs-io/dingo/bark.test",
     "ecosystem": "go",
@@ -539436,6 +540339,27 @@
           "occurrence:89909567292481eb4f2413cc9f15980cbab1bdf03f1c005f53b7faaa89263a3a"
         ]
       }
+    }
+  },
+  {
+    "id": "project:97851b341f4f14e03dda19a42afa3963c9dedf89d298bb60e0973e6e17eea18c",
+    "name": "github.com/blinklabs-io/dingo/bin",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9d4a9fdd3b2c366c40d9ae1638631e672f0866f1c662163daa5e46a86a5eb024"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:97851b341f4f14e03dda19a42afa3963c9dedf89d298bb60e0973e6e17eea18c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539496,6 +540420,27 @@
     }
   },
   {
+    "id": "project:1f152c33c97a440d9deca1163d7918234d53e8c9ac81e1df9a044083c644dfc6",
+    "name": "github.com/blinklabs-io/dingo/chain",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:2e7dd5446bbbee1af50cb8c05c5a843998aa4ad378494c03f69a9fa81daadaf3"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:1f152c33c97a440d9deca1163d7918234d53e8c9ac81e1df9a044083c644dfc6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:2c2c92e5c5f21bc7bb281d50ef93238b90807b12b6961c4682f1e1e7b3539cf4",
     "name": "github.com/blinklabs-io/dingo/chain_test",
     "ecosystem": "go",
@@ -539553,6 +540498,27 @@
     }
   },
   {
+    "id": "project:c3b865bce0214076a8bc4379cc24becdda5962df6d9d29ac9abd5734ca14be2b",
+    "name": "github.com/blinklabs-io/dingo/chainselection",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6280dcdad6442f6756c73f6d5a72211897d46e7acc0b297bbf19217ed6cd591c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:c3b865bce0214076a8bc4379cc24becdda5962df6d9d29ac9abd5734ca14be2b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:086860bcdad09579ab087ff240583b045ae844808bbee93b58e916901168773c",
     "name": "github.com/blinklabs-io/dingo/chainselection.test",
     "ecosystem": "go",
@@ -539578,6 +540544,27 @@
           "occurrence:2739b15eda8347e2bcd7c66c4a67372510d520c9989f16baae7523a840078579"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d912c876eaa39e9aa93492c4ba8a4bd688c0dde49b7b96693222f97ccec6ecb8",
+    "name": "github.com/blinklabs-io/dingo/chainsync",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:848a2339a4114585e3926de4903cb7125c7ed0efc5cbf6fe1d683dbfdc3cdaf4"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d912c876eaa39e9aa93492c4ba8a4bd688c0dde49b7b96693222f97ccec6ecb8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539638,6 +540625,27 @@
     }
   },
   {
+    "id": "project:46b01f2b07b8449112d83aa54766890b41371a18a3e71e28bbde57b616a4796d",
+    "name": "github.com/blinklabs-io/dingo/cmd/dingo",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f8254f72ed76aeca047dc135b1daa1ae1816120b20e37a3e1b1ca04c60c2cde6"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:46b01f2b07b8449112d83aa54766890b41371a18a3e71e28bbde57b616a4796d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:fb7f5e2787bbcf422abf24a6de7b1fb91392df4ea71b9ed730360856bdb37a34",
     "name": "github.com/blinklabs-io/dingo/cmd/dingo.test",
     "ecosystem": "go",
@@ -539663,6 +540671,27 @@
           "occurrence:cd7f5fecacfeac81eb6d41e79f9a2d7f5f57f4fba6a60edc5d359b7cb65e0f9b"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d09a6c07306124070c764063e03c06c349e018ebaca6709a861aaadabc123189",
+    "name": "github.com/blinklabs-io/dingo/cmd/koios-parity",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:dbbb2edb081a0daf24d817fa36f71371a3c5ebe8d0d2758210873e2f9275222e"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d09a6c07306124070c764063e03c06c349e018ebaca6709a861aaadabc123189",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539694,6 +540723,27 @@
     }
   },
   {
+    "id": "project:c11eb540e608fb1e3047eca7006b1e42906ee8fdb5862d230c6721ec9e2ddb0e",
+    "name": "github.com/blinklabs-io/dingo/cmd/leios-db-bench",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9d5ef62cad77734904a4633af0bd1298b7d49756905cd6f8532b805dc12625db"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:c11eb540e608fb1e3047eca7006b1e42906ee8fdb5862d230c6721ec9e2ddb0e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:cdd1864a890005a5d36ebb9cc4b6d9cd1e1298fefb897fa439d105fc84bd67f4",
     "name": "github.com/blinklabs-io/dingo/cmd/leios-db-bench.test",
     "ecosystem": "go",
@@ -539719,6 +540769,27 @@
           "occurrence:a1f4f5025e9681ec2b0a3fc5e213a06fa40870b73426c037103ebeb0610f4161"
         ]
       }
+    }
+  },
+  {
+    "id": "project:96337df3215c188e323ae28a5685cfbcf1c27ec618f0ccd615255115ebedd86e",
+    "name": "github.com/blinklabs-io/dingo/cmd/node-parity",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5b2ae6bcf0cc10980b77060c056a771dd6e759e22a38f848a52927de19250a19"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:96337df3215c188e323ae28a5685cfbcf1c27ec618f0ccd615255115ebedd86e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539750,6 +540821,27 @@
     }
   },
   {
+    "id": "project:a08b0619ab0d849932e39147850d5edfac4bb4f6d9e401194e8cae15b789aa7d",
+    "name": "github.com/blinklabs-io/dingo/config/cardano",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:64f59e9e9b76f642a8e7ed1ea07c56e5f44222e420398bd890d6454189756a0a"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:a08b0619ab0d849932e39147850d5edfac4bb4f6d9e401194e8cae15b789aa7d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b4237a0e4ac9d1e32d26af3a545b5a558f76fe66cbde51dbc3ca904f5c80cb17",
     "name": "github.com/blinklabs-io/dingo/config/cardano.test",
     "ecosystem": "go",
@@ -539775,6 +540867,27 @@
           "occurrence:dcb5d30709e3755a0c6cc58b4b41707177ad453559e17becc645669e6abd4bf2"
         ]
       }
+    }
+  },
+  {
+    "id": "project:4759c9b9541f1bc3179fe221a717dc8b49452658e15cd0b11dcfa76cfb383647",
+    "name": "github.com/blinklabs-io/dingo/connmanager",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:bf29d6ca5f010ad16d2f1f10a6db20bc3ae69b5277ee01bf27e39dc13bc942aa"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:4759c9b9541f1bc3179fe221a717dc8b49452658e15cd0b11dcfa76cfb383647",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539835,6 +540948,48 @@
     }
   },
   {
+    "id": "project:e8d18206794429d4f272cffbcc56127c7ba4ee41bf13bc5a583602c9971bbccc",
+    "name": "github.com/blinklabs-io/dingo/consensus/peras",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:e425daf7435bb192fc2ca3bddbc1997581c5e6d839c974a033ae2fc4f6edcde4"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:e8d18206794429d4f272cffbcc56127c7ba4ee41bf13bc5a583602c9971bbccc",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:73e27f0ba1bc9d5349ae0989326291dd127721356d59a214901d4ff234161798",
+    "name": "github.com/blinklabs-io/dingo/consensus/praos",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9226bb6b4d971d5eba071483aaae41fdcd31b5340ae76e547502cbc91682f6a7"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:73e27f0ba1bc9d5349ae0989326291dd127721356d59a214901d4ff234161798",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b12b753142872d36042d6fcb9d6e22bc1017bfded465219f45088da079c7a7fb",
     "name": "github.com/blinklabs-io/dingo/consensus/praos.test",
     "ecosystem": "go",
@@ -539860,6 +541015,27 @@
           "occurrence:1fbffbfd658f7d12b7a5a6aa2d471322dad861bb6b335de0be81cd40e2edcd81"
         ]
       }
+    }
+  },
+  {
+    "id": "project:79fa6baa3bfaa90f22bbe706177409cd20f3a88864466d570452f29718b2c2e8",
+    "name": "github.com/blinklabs-io/dingo/database",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:3b516b1bbf01e27394cae8c0174a1cebaf3531b2be97a3ebecbb392cd9dccebf"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:79fa6baa3bfaa90f22bbe706177409cd20f3a88864466d570452f29718b2c2e8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -539920,6 +541096,27 @@
     }
   },
   {
+    "id": "project:11e4bd155032c0ab92c6a2569b0906a3076d22ace29b996fe5c029a15164ae25",
+    "name": "github.com/blinklabs-io/dingo/database/dbinfo",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9e1d64d80abc184c82d02a975903f5bb06f4e5a5c0a5437d28b1b3584275da46"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:11e4bd155032c0ab92c6a2569b0906a3076d22ace29b996fe5c029a15164ae25",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:3905ebaddc17dad96f2f09ba552ba4170f1a94f0d41dc3aa27a55c6942ad1325",
     "name": "github.com/blinklabs-io/dingo/database/dbinfo_test",
     "ecosystem": "go",
@@ -539974,6 +541171,27 @@
           "occurrence:f348d365c6b6e1c45bbbf59d4273a9e8aaf438b1dd419477823c813633d460cc"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b215f4fa1f9a2a8b67dae042753f0b093289c202a50e524a153282c9de55db48",
+    "name": "github.com/blinklabs-io/dingo/database/immutable",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:63af8d0e8fe231bd869dafc18cd8acb81aafb7ee201c86866aba1df51948c425"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b215f4fa1f9a2a8b67dae042753f0b093289c202a50e524a153282c9de55db48",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540034,6 +541252,27 @@
     }
   },
   {
+    "id": "project:0366aee9082cfa332e794fcc80bcf8312dcfb232d70378b3b8caee4b66e068e0",
+    "name": "github.com/blinklabs-io/dingo/database/lifecycle",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:facfb3199b9be3954a8a329d1c67722d5cc0aadd6a2c0db3704cada19d08fb27"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:0366aee9082cfa332e794fcc80bcf8312dcfb232d70378b3b8caee4b66e068e0",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:07f7fb79b3c01290a2cdfd2ab857b5fb45a981eaa95768efd6e1fc597beee4ba",
     "name": "github.com/blinklabs-io/dingo/database/lifecycle_test",
     "ecosystem": "go",
@@ -540088,6 +541327,27 @@
           "occurrence:6e2e1a59ee91df62eff6dee8b90e853107fc7b02fd49f2084579698435ed0191"
         ]
       }
+    }
+  },
+  {
+    "id": "project:12879a16021674ee374299eaaf307ec75dc1ad4ba399abfa6efabc40fec00962",
+    "name": "github.com/blinklabs-io/dingo/database/models",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:641d9d3e10f124904c851f7d91bda4d7225be9dc332768596974589ab469d5d1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:12879a16021674ee374299eaaf307ec75dc1ad4ba399abfa6efabc40fec00962",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540148,6 +541408,27 @@
     }
   },
   {
+    "id": "project:b777abb4aa2bc2312c570642fbc4ee2577a02a6a0a803907ad0861b3f90ea05d",
+    "name": "github.com/blinklabs-io/dingo/database/nodesettings",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:8e119b89a9369ff4d5a6b9b98ade4734deef2e0bd6b058a78fee375f3a1bb136"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b777abb4aa2bc2312c570642fbc4ee2577a02a6a0a803907ad0861b3f90ea05d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:4e9f13a9b8adaef4e03806fd33e7ba8f73fefc9da37506ed209816b3d2d4f1e5",
     "name": "github.com/blinklabs-io/dingo/database/nodesettings_test",
     "ecosystem": "go",
@@ -540202,6 +541483,27 @@
           "occurrence:6fcfdafe49673f90111d2d614e05649a5abe750781c02e84697aa79e03ef4562"
         ]
       }
+    }
+  },
+  {
+    "id": "project:ed486044804a6fb31ee74d49f3a968e6d86852b8024df6a34c4df094c5c8ab34",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:2e9fc2df39349f35e197bf8f75de53492a25fddd7502182541d3714a3e4ed212"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:ed486044804a6fb31ee74d49f3a968e6d86852b8024df6a34c4df094c5c8ab34",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540262,6 +541564,27 @@
     }
   },
   {
+    "id": "project:157f50ad51ac8e68e118573aad4e8000a0f583aec915cec50f403f46fd5315d9",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/badger",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:475b06092a46a4f77b9fff3edb893e59b326c54ba4cd097c5e6cc4026fde938c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:157f50ad51ac8e68e118573aad4e8000a0f583aec915cec50f403f46fd5315d9",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:aaef2cbf220d1066408c9cf286355133aa0e0cf7dc30d0d471bba1b282f97a8b",
     "name": "github.com/blinklabs-io/dingo/database/plugin/blob/badger.test",
     "ecosystem": "go",
@@ -540287,6 +541610,27 @@
           "occurrence:5b2a146eae1f3a5b9ef8dc8a22649e18c34042e4cd3efe5ab0a050e4f3b7dd90"
         ]
       }
+    }
+  },
+  {
+    "id": "project:f404f8d5683fa570b636d29d8d1c1b990cf20f82dd679a4c724daad12e82ad37",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/blobbackup",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:254a76cbee9fe5d9951dabfe4a7dbcb750e69784e464677e5d7a78188fb400d2"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:f404f8d5683fa570b636d29d8d1c1b990cf20f82dd679a4c724daad12e82ad37",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540318,6 +541662,27 @@
     }
   },
   {
+    "id": "project:5ede7704a46dfc48ff11b8307556a2f158903fea971b4d123959ed88626edf93",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/committimestamp",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:06f3b305f92826340cc9b157b0403a2d0e95428305055b0ed99cdb50c5f3eab8"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:5ede7704a46dfc48ff11b8307556a2f158903fea971b4d123959ed88626edf93",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:7a834b6d6b94329129eb728ea5cb8e3117a770784ee96cd22ea3df1b6063495d",
     "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/committimestamp.test",
     "ecosystem": "go",
@@ -540343,6 +541708,27 @@
           "occurrence:551036eb007f0e536d62683b67d9ba7025d4acb14bc157b4531cc51e3b0e32ce"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d51af39fea792e887991b9f5f842ba53eb6f3a2f5d70cfa8aff6954703450575",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/compensate",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:462e46d74497018f95ba0358e5061e14cdac99ca7472e6d726083562648bdf53"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d51af39fea792e887991b9f5f842ba53eb6f3a2f5d70cfa8aff6954703450575",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540374,6 +541760,48 @@
     }
   },
   {
+    "id": "project:0ba3723ea5cacc16d22c079670ba2e5fd966a4487331200502038447860f608a",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/logadapter",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:2750a11bd8e8e378e34cd016e0c24177772654404031e088cf1f3f2d1bd2a984"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:0ba3723ea5cacc16d22c079670ba2e5fd966a4487331200502038447860f608a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:91bb60bad35be731bcef7581985fe40ae945fb6364a0ed42e898de1c84adcc1b",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/reversekey",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:eeb2016d0aac8e95f685b3e42fb8d936eb39e9c820ceb55c5f198eb22370c355"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:91bb60bad35be731bcef7581985fe40ae945fb6364a0ed42e898de1c84adcc1b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:0f8415f9c34cd8edad1bdd2ac379a307690991987e5decf96af8761f04278dd9",
     "name": "github.com/blinklabs-io/dingo/database/plugin/blob/internal/reversekey.test",
     "ecosystem": "go",
@@ -540399,6 +541827,27 @@
           "occurrence:017b2d8a4314a1fe107c839ee0ab26c7acf6803d3a94c92e4b378ac5988e1924"
         ]
       }
+    }
+  },
+  {
+    "id": "project:3b9c80d011b346e60d2ab77f69f1bffa24095ca690a10fe72406732d9dd050cb",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9e296fee4f83151a6de8efc3a268b9b31020c96b56a502621f68be3be9151445"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3b9c80d011b346e60d2ab77f69f1bffa24095ca690a10fe72406732d9dd050cb",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540459,6 +541908,27 @@
     }
   },
   {
+    "id": "project:819ba93499171ea1b19978a4a9f56db97dfaba216d88295b1fe640672c507953",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/deferred",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:66bcda8005519c5e9dbb16407133b26c796d20f25db940a252cd925fd8264d18"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:819ba93499171ea1b19978a4a9f56db97dfaba216d88295b1fe640672c507953",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:d646117907a37d4164614be3a1cc95eb3651be482defebb5ab8a0c4601188144",
     "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/deferred.test",
     "ecosystem": "go",
@@ -540484,6 +541954,27 @@
           "occurrence:1c22f0b093976641c8bfe37a5985ee4090c1f9b0922cb4ea6c7f66f08c777622"
         ]
       }
+    }
+  },
+  {
+    "id": "project:1f597271b136d3e63d74496769a5fd9668fddc1ec770b47e0593fea0e4a5ffa8",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/internal/certutil",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:05fe74f8cb1cd4b46c24f722a89f5396d2daac0dc0b505b5c55c60393bbe1bbf"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:1f597271b136d3e63d74496769a5fd9668fddc1ec770b47e0593fea0e4a5ffa8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540515,6 +542006,27 @@
     }
   },
   {
+    "id": "project:f50d32349cf79445d6cb6626a6f4043b385de57fc5ee3a122c9a37227a445be6",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/internal/drepquery",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:eb7d21b542f91cbbac1715162580fa58d03e675f35088253758e7e138075fb49"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:f50d32349cf79445d6cb6626a6f4043b385de57fc5ee3a122c9a37227a445be6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:443413e2ad7e27eaa09ea95fae3b940f3ea246dd312ff0982435b4e89fb3dd68",
     "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/internal/drepquery.test",
     "ecosystem": "go",
@@ -540540,6 +542052,27 @@
           "occurrence:1e8a02ba2918092bb46f7425719796f7e42860a6538f67130e4dd6d0d268aa9c"
         ]
       }
+    }
+  },
+  {
+    "id": "project:5efb88ea8bbd86c0f51835ed06db6b29e7d85a9e1b8ad5f08a8d9ad4d37f05a7",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/internal/utxocond",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:37cb6c1345f640b859d8c05389ff3545d38712cd3e98a98f48d6cc5b90a60941"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:5efb88ea8bbd86c0f51835ed06db6b29e7d85a9e1b8ad5f08a8d9ad4d37f05a7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540571,6 +542104,27 @@
     }
   },
   {
+    "id": "project:e755719f7c272d6837a8fbec113640abfdb8054bd4f845a08b3ec866fc3dab9b",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/labelcodec",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6f03ba64403b2936c1e0cbcf452f61e80ad6213ae357b61971d6d6a4e44dc678"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:e755719f7c272d6837a8fbec113640abfdb8054bd4f845a08b3ec866fc3dab9b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ce730ff29a1ccd932e6cf252f3901603026315b4a3fa2f65e0d3c732f55621ec",
     "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/labelcodec.test",
     "ecosystem": "go",
@@ -540599,6 +542153,27 @@
     }
   },
   {
+    "id": "project:eba44134f157df7c03c15c1bcfc7d077ab270841725293f12623810679a47fd7",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlite",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:05f3bfb15066431bd5ddab0413909904ec3ba46e6bfec7d6deb92c068d212fb7"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:eba44134f157df7c03c15c1bcfc7d077ab270841725293f12623810679a47fd7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ae7d63e14f8903f4e1b280d65bbc36bd501531271139b5e3a87190ebff7bd44b",
     "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlite.test",
     "ecosystem": "go",
@@ -540624,6 +542199,27 @@
           "occurrence:f0637f27a82ccb03a197efe0fcb0507f23156847713d53974bf895d732724417"
         ]
       }
+    }
+  },
+  {
+    "id": "project:83fd3f1c48be3bfa8cfc65e4e67b34123880213e2c66aef2bf55eb4ffe9a0558",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7a2122c8d68599b76b3c29e53499f6215e42a61a531e5dc5c9bb9911047b9b1d"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:83fd3f1c48be3bfa8cfc65e4e67b34123880213e2c66aef2bf55eb4ffe9a0558",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540684,6 +542280,90 @@
     }
   },
   {
+    "id": "project:9b300bbcf3814149e8d2c01e887c061cc528f1c8e713c84dd55a4895ba31fbb7",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore/internal/query/mysql",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f273a253978cc91dc6166f804fb8595aea276e356a44f22f24879338f72febb1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:9b300bbcf3814149e8d2c01e887c061cc528f1c8e713c84dd55a4895ba31fbb7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:bf8908142c390a5abab1629989e1ef61b10f8f5a94efb65a7ccec1b1ebcede29",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore/internal/query/postgres",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:dd2c7b572b7098a743a246bd14efaa7b0626ed8a5385705072c01a400739df57"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:bf8908142c390a5abab1629989e1ef61b10f8f5a94efb65a7ccec1b1ebcede29",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:b1433493f114da404d838f8032158d76d7c499089be53f6b47d3a4c1d67f57f7",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore/internal/query/sqlite",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:15599c9458270ec145d527f86fdb5cddafade81ecc075b66ad1b8c55ad56f70d"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b1433493f114da404d838f8032158d76d7c499089be53f6b47d3a4c1d67f57f7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:dbaa1406235279f94d9631255168576807da5107ce8eb2fd6eed4248b8e82cdf",
+    "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore/migrations",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:11684181a79f8616da290a491eea8ac9fa2c4f7a10015a3cb582df4ca2ca8af4"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:dbaa1406235279f94d9631255168576807da5107ce8eb2fd6eed4248b8e82cdf",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:9a71dbc3d9507149339355b884113a7e9fdf92004ed343287e9f5e30c31f52b0",
     "name": "github.com/blinklabs-io/dingo/database/plugin/metadata/sqlstore/migrations_test",
     "ecosystem": "go",
@@ -540738,6 +542418,48 @@
           "occurrence:a340e5924965373035e8cd668a921bcce43a23b3ef6691c5a143359c0bb4b400"
         ]
       }
+    }
+  },
+  {
+    "id": "project:9dccdf74ae883f59e5779110a7f5729cdb76d1d2649eadf1d52308c377d32ea3",
+    "name": "github.com/blinklabs-io/dingo/database/sops",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:d371390d2fc8d4fdcfacf2d421a250ce6a1f35b72eeaef5640f1870c9b0d0296"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:9dccdf74ae883f59e5779110a7f5729cdb76d1d2649eadf1d52308c377d32ea3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:9f1b268786fde5f380b40773e4bcc54d9bb31e24df9f8782e6e1797ce5ff03c4",
+    "name": "github.com/blinklabs-io/dingo/database/types",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:4d9fda29e7858b193457f8905d1eba1e042b4b429da9e5dcd003a1fc685308be"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:9f1b268786fde5f380b40773e4bcc54d9bb31e24df9f8782e6e1797ce5ff03c4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540798,6 +542520,27 @@
     }
   },
   {
+    "id": "project:d64eb3f773edbe179ece6146ad9c4efb42aef4b728657b3f04b4787e5c69fa46",
+    "name": "github.com/blinklabs-io/dingo/dmq",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:449ceaf2d9185c66eb702cb525559348ddeae7f4ece00687a81b9e3ba40527be"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d64eb3f773edbe179ece6146ad9c4efb42aef4b728657b3f04b4787e5c69fa46",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:4ec02d6afd0387bb49094bebec9f255250e99300b7a9f26b1642a6b4ff4ebfbc",
     "name": "github.com/blinklabs-io/dingo/dmq.test",
     "ecosystem": "go",
@@ -540823,6 +542566,27 @@
           "occurrence:c02a77b70717aa28e1393b12b6cec768c46ae1cfd3298838a67f1f0d112438cd"
         ]
       }
+    }
+  },
+  {
+    "id": "project:574ac6f60a9f9e3b1001011dc1c4c1369e9c60f2e4fef3027be368d56ca79217",
+    "name": "github.com/blinklabs-io/dingo/event",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:cd9843ef0401f230014790cd6767703c7829f9785f1cd94ac7fa2a50a65d23e0"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:574ac6f60a9f9e3b1001011dc1c4c1369e9c60f2e4fef3027be368d56ca79217",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540883,6 +542647,27 @@
     }
   },
   {
+    "id": "project:3594ce8c36370b993bbabff7e94f1d32212d018a722b26549871152457173d68",
+    "name": "github.com/blinklabs-io/dingo/internal/apiconfig",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:10760635faedcd6e5a0cece8efda471494db5339dd696aa575cefd563b8afbc3"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3594ce8c36370b993bbabff7e94f1d32212d018a722b26549871152457173d68",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ac22671b261da9073da8f8c87c8a5ccec23f35fd5e790710f92bf2945a4c5552",
     "name": "github.com/blinklabs-io/dingo/internal/apiconfig.test",
     "ecosystem": "go",
@@ -540911,6 +542696,27 @@
     }
   },
   {
+    "id": "project:242c5bbcc829ddae9baf5aca0a75cc4eafef04d6990a7e344b774e1c4cf1a537",
+    "name": "github.com/blinklabs-io/dingo/internal/apilistener",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:fa437b6b9dd6cd3f60b5602f3d32324c8ea39a1032f34ef9b61b37e904f78e43"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:242c5bbcc829ddae9baf5aca0a75cc4eafef04d6990a7e344b774e1c4cf1a537",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:643c1e72cf4b50b9f8db406e3a710feff6b7a237df43dc69ec5348b5c45e0c05",
     "name": "github.com/blinklabs-io/dingo/internal/apilistener.test",
     "ecosystem": "go",
@@ -540936,6 +542742,27 @@
           "occurrence:f1bd857320bebc452279f69c51703bdb8e8da2daea0c1d7966bfafa8121cac6f"
         ]
       }
+    }
+  },
+  {
+    "id": "project:465680d8e339e8d207412c84b6f5a496cce2eedd466678b7509f96f8a5ba6746",
+    "name": "github.com/blinklabs-io/dingo/internal/architecture",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:4c3c758366690661177e186e58f3791af25f20aacbc4edf8aee36f69e6500feb"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:465680d8e339e8d207412c84b6f5a496cce2eedd466678b7509f96f8a5ba6746",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -540996,6 +542823,27 @@
     }
   },
   {
+    "id": "project:ea3a8e2fd6f9e8da5b7f3a7393f76d5fbbc243b9b119d0e33480e08139b73785",
+    "name": "github.com/blinklabs-io/dingo/internal/benchci",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9aa2b462d70b60d3b5d5975c7f25085c0ad33fe8bae3ab6971b3eb910a2eab55"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:ea3a8e2fd6f9e8da5b7f3a7393f76d5fbbc243b9b119d0e33480e08139b73785",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:e33fbc7e979d502378e30b71f55cc4067ceea9a1d00ce8f74c1b47ab7059e102",
     "name": "github.com/blinklabs-io/dingo/internal/benchci.test",
     "ecosystem": "go",
@@ -541021,6 +542869,48 @@
           "occurrence:7409da6f90137ac9d693eb64027a2519d54bdef6463757ad9f8db0f226f6398c"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b91e99de556361d2743683eec0e6be68a80782086d35c90282f7427e0495f9a4",
+    "name": "github.com/blinklabs-io/dingo/internal/benchci/cmd/benchcheck",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6bf4076c73e8f1e520baf98318e02aea7433afce198c44ce8c621330c0939818"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b91e99de556361d2743683eec0e6be68a80782086d35c90282f7427e0495f9a4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:b78882851f70de28474ad77056a89a6baf95562372f38bc753b2072c6d95f1d2",
+    "name": "github.com/blinklabs-io/dingo/internal/blockverify",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f245f8a88f4cce632661af59212d49d528bdcaceca2ab108a42c535cc55e9626"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b78882851f70de28474ad77056a89a6baf95562372f38bc753b2072c6d95f1d2",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541052,6 +542942,27 @@
     }
   },
   {
+    "id": "project:fd7b61e4a1f3ee5faef50d871923b32d97dab85401b693040a98772d75fcbc86",
+    "name": "github.com/blinklabs-io/dingo/internal/cborconformance",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7075b5983653e20bc22e23a62d795cba5067f63c5dfd1737b7cddbe4235d3c09"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:fd7b61e4a1f3ee5faef50d871923b32d97dab85401b693040a98772d75fcbc86",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:76aef9a656d8e6f3f894910e8d22b3511594511f83ba393a41cb36f67b0959e9",
     "name": "github.com/blinklabs-io/dingo/internal/cborconformance.test",
     "ecosystem": "go",
@@ -541077,6 +542988,48 @@
           "occurrence:6c0407d8a34981ddd5e2a9cd6598450766e55592c347ea16ed1a49f2e7ea9b3e"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b9590fe4beb7380278c4582b6694d8faf7ee06d076a4bd7013711a49cc878cc5",
+    "name": "github.com/blinklabs-io/dingo/internal/cborconformance/cmd",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:41a3943a08e459ce78b6d4642139d628a5cb6c569ecd81757aa5a7f4d633e048"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b9590fe4beb7380278c4582b6694d8faf7ee06d076a4bd7013711a49cc878cc5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:58c50ca5e8220b4f533a540be36a176e5f8bea7b4b609fec5b38e9df85055b71",
+    "name": "github.com/blinklabs-io/dingo/internal/chainsyncrecycler",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:9c20c19e1929790431c530541d91f69f2e275e3acbea535a537efbab99d633cf"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:58c50ca5e8220b4f533a540be36a176e5f8bea7b4b609fec5b38e9df85055b71",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541108,6 +543061,27 @@
     }
   },
   {
+    "id": "project:d3ddeb0f9751c83dc11bb5c114b3455db921c0d0b4bef6a3b13a2d3bbbd5cf12",
+    "name": "github.com/blinklabs-io/dingo/internal/committeeauth",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:50351973d428f5a60f1ba7db9638240d35ed196555e87795a42be3305b8b5661"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d3ddeb0f9751c83dc11bb5c114b3455db921c0d0b4bef6a3b13a2d3bbbd5cf12",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:241192aae39bd5809718df83f42157b7f132c2272f6a8a0389a7b25d0f82bfc0",
     "name": "github.com/blinklabs-io/dingo/internal/committeeauth.test",
     "ecosystem": "go",
@@ -541133,6 +543107,27 @@
           "occurrence:28e57147ce4ae948d6c6ff3d8be83edca62376a1e1cd8299670e58489e42521a"
         ]
       }
+    }
+  },
+  {
+    "id": "project:f0a2e910d0ce05c93f950eec41acfa120a9530565f963b3d3a16281534c90aae",
+    "name": "github.com/blinklabs-io/dingo/internal/config",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f9f16e5490e2de1d99faba710a82669339d2f65afd95288d2da761315e62fea5"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:f0a2e910d0ce05c93f950eec41acfa120a9530565f963b3d3a16281534c90aae",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541193,6 +543188,27 @@
     }
   },
   {
+    "id": "project:5c7fa616e8dbbd825a0a71ae1513c88d8a0fd29963145ac5b7c805070abccf32",
+    "name": "github.com/blinklabs-io/dingo/internal/dblifecycle",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:3108d6c49ce57a0074f0479791b760df90f443a347a3e5da6bc7de62d30a1e61"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:5c7fa616e8dbbd825a0a71ae1513c88d8a0fd29963145ac5b7c805070abccf32",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:59db2d76b2eee59179b2699b60d578c2b09bc10d0a4b2121dca145fd4cfe6569",
     "name": "github.com/blinklabs-io/dingo/internal/dblifecycle_test",
     "ecosystem": "go",
@@ -541250,6 +543266,27 @@
     }
   },
   {
+    "id": "project:cffbc853d66558926f30e5795529f036c8148c9aa9371d6d28621f2bba75d167",
+    "name": "github.com/blinklabs-io/dingo/internal/devnetkeys",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5a2f4934aa73f2579c3acfff167c0dceb7dbc7c04d59c57100f975914f48dab2"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:cffbc853d66558926f30e5795529f036c8148c9aa9371d6d28621f2bba75d167",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:46461fea0a4bd1113e9bb8b794979f937aba0686192c1c9ba73a75d0a46d6af8",
     "name": "github.com/blinklabs-io/dingo/internal/devnetkeys.test",
     "ecosystem": "go",
@@ -541275,6 +543312,27 @@
           "occurrence:51a0c8afb60aecd13a8c21cb24b5e59f17d27bf9c4b485abd0015d8a72d7b54e"
         ]
       }
+    }
+  },
+  {
+    "id": "project:3671d078075cc3e16d7588b9978d2fe2eacc054bcafd0721597d8f79b20830f9",
+    "name": "github.com/blinklabs-io/dingo/internal/docsparity",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5c709b5071ff54e8a834594aaad794d6667099824aac51ead92ee3c039ce9fbd"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3671d078075cc3e16d7588b9978d2fe2eacc054bcafd0721597d8f79b20830f9",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541335,6 +543393,27 @@
     }
   },
   {
+    "id": "project:8cb9b137813b94eeaaf0b09103c80477c05820260d5f1565aa046a08387d1182",
+    "name": "github.com/blinklabs-io/dingo/internal/fsyncdir",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:069f65f0d6fd768ff4f5b432506703b8d9551a375f8eff0cc0994ec59cf24e6b"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:8cb9b137813b94eeaaf0b09103c80477c05820260d5f1565aa046a08387d1182",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b653d539dae12450c01b81eeffbeb7e842f6b165cf6c40dda84b29c01cb48642",
     "name": "github.com/blinklabs-io/dingo/internal/fsyncdir_test",
     "ecosystem": "go",
@@ -541389,6 +543468,27 @@
           "occurrence:1a3c2fbb62c5d8c6c7a21663091f3265190a1bf84c2290b2791ef5f3a98af644"
         ]
       }
+    }
+  },
+  {
+    "id": "project:1756d0eea1a457d14413a484da0779f87dda39f34a60d4e7abb72c9d25395ffb",
+    "name": "github.com/blinklabs-io/dingo/internal/health",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7a59ee4203c71b4ffe004cc4ff79d489bde1ee2d0fe94a50ad2ea731ca0e5166"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:1756d0eea1a457d14413a484da0779f87dda39f34a60d4e7abb72c9d25395ffb",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541449,6 +543549,27 @@
     }
   },
   {
+    "id": "project:85443b5c2ab5c70d5e22f8c6ed8868925a72b1edaa0be5e3ca34ff433ea6f1df",
+    "name": "github.com/blinklabs-io/dingo/internal/historyexpiry",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:60e45d399ad0fda53f2d0e85ace4eeab412a34f679acd14efad35f808a8a1c6b"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:85443b5c2ab5c70d5e22f8c6ed8868925a72b1edaa0be5e3ca34ff433ea6f1df",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:3ddbcec69d3968c34f423ddbc2849f32fce38a1b424b33c86fd66f35762e2a92",
     "name": "github.com/blinklabs-io/dingo/internal/historyexpiry.test",
     "ecosystem": "go",
@@ -541474,6 +543595,27 @@
           "occurrence:4943aeea76e69cae1be128d3fb32af6f3133ff6aded19309014b2542cdf45d65"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b935cd30d4dd0e42e361678b41ad32169004253fdbfc72980e9383db8027f7a8",
+    "name": "github.com/blinklabs-io/dingo/internal/httpcors",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6f375bb28a4a7a59b53c93f5649b93f6427e949eef7aa144358bddc3f96e4e04"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b935cd30d4dd0e42e361678b41ad32169004253fdbfc72980e9383db8027f7a8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541505,6 +543647,27 @@
     }
   },
   {
+    "id": "project:e53af7c5d8915f9a7c71c65466cd5e71b9118e98378e7c57974588600e299a4b",
+    "name": "github.com/blinklabs-io/dingo/internal/integration",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:ad679bd6d4577bb769d55a0c469b3d2c5d22ea493080b1b2859e19fee0cfb0dc"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:e53af7c5d8915f9a7c71c65466cd5e71b9118e98378e7c57974588600e299a4b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:9d4998db4ba776cd371b2c760866cd5a4cd6adde3a21006748acaa020ffb8628",
     "name": "github.com/blinklabs-io/dingo/internal/integration.test",
     "ecosystem": "go",
@@ -541530,6 +543693,27 @@
           "occurrence:6fa1b1b95a0ca9aaa6a7a5625feb5046756e5898423cc08a1151f9972b14fd98"
         ]
       }
+    }
+  },
+  {
+    "id": "project:750a4ee321f11340923410c371ed30bf187d1ad3e26b36505df22b1fdc20fbd9",
+    "name": "github.com/blinklabs-io/dingo/internal/koiosparity",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6949cdb2881c038903cd14f4d8ef3d9cb79ef85e372e332bf139ceb828deb306"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:750a4ee321f11340923410c371ed30bf187d1ad3e26b36505df22b1fdc20fbd9",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541561,6 +543745,27 @@
     }
   },
   {
+    "id": "project:5e77beb8082e5cad4cbd86edf5956bd4f5082bcf445e0a276989ae337b54245b",
+    "name": "github.com/blinklabs-io/dingo/internal/ledgerrulesconformance",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:e880fd356b31451511595c74d0a6dece355a3012c1ad3f063fd46c886b3e87cd"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:5e77beb8082e5cad4cbd86edf5956bd4f5082bcf445e0a276989ae337b54245b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:f79200d76fba76f78229fc7f17357b567378757dbf0f6d6d9bf72c51e48c469b",
     "name": "github.com/blinklabs-io/dingo/internal/ledgerrulesconformance.test",
     "ecosystem": "go",
@@ -541586,6 +543791,48 @@
           "occurrence:d8dcef0a77eb48a989019036a5e0fd5dfcbaaf61af57a6276528fef31b67a79b"
         ]
       }
+    }
+  },
+  {
+    "id": "project:d2ae573ae0f575d0c5cf40e0cc9a6b0321bf98195bdf7899cba402a4c28a8271",
+    "name": "github.com/blinklabs-io/dingo/internal/ledgerrulesconformance/cmd",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:b17963b01308d2d8c848167d87845d6335373da96adfd00307d27f75fcd64b28"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:d2ae573ae0f575d0c5cf40e0cc9a6b0321bf98195bdf7899cba402a4c28a8271",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:54398c8a00d884d74df4f1e3314cfd3d9c0e581fdb3ad664f70df9d95768e2d8",
+    "name": "github.com/blinklabs-io/dingo/internal/leiosheader",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:665023cbbfc1a21a768e1f95dcbb5762e39b3170b0a44627fe7f98184648ead7"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:54398c8a00d884d74df4f1e3314cfd3d9c0e581fdb3ad664f70df9d95768e2d8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541617,6 +543864,27 @@
     }
   },
   {
+    "id": "project:eba72a4685218df9d71cf033200ff7a2554a505d2e08b97e0b2813c82a94e4fd",
+    "name": "github.com/blinklabs-io/dingo/internal/netguard",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:c8abfffeb2dd72023fff8b8b40db9ea3628f21bf930a97626ddd7b0994844a89"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:eba72a4685218df9d71cf033200ff7a2554a505d2e08b97e0b2813c82a94e4fd",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:fd7ce487e4fdb0c7d712f7e5a561e769ced5d77eed7f6cb36ee48534ee263e12",
     "name": "github.com/blinklabs-io/dingo/internal/netguard.test",
     "ecosystem": "go",
@@ -541642,6 +543910,27 @@
           "occurrence:acdec43ff1b5b840c7352bda078906f289ccfba2cfa9593b60ad9e2bc526e79e"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b70f448cc740dfc375154c4d2dd77987da283ed4ab25369975ff34e7c7f88483",
+    "name": "github.com/blinklabs-io/dingo/internal/node",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:ca44e226a7dd6b6a88c9ebccde5b48c43f786d96dd605e454e56cb7bab8b3a48"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b70f448cc740dfc375154c4d2dd77987da283ed4ab25369975ff34e7c7f88483",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541673,6 +543962,27 @@
     }
   },
   {
+    "id": "project:7a513a40a7e805cca44ec13a172736ec397f86deb5a71656f104859ba8950be8",
+    "name": "github.com/blinklabs-io/dingo/internal/node/ledgerpeers",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6b2f720d648ba1047a325d6ee33336b5c3fdf22406a17865e779dd6f72eb8778"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:7a513a40a7e805cca44ec13a172736ec397f86deb5a71656f104859ba8950be8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:e492d4da3c47ad91f813bbbe0ee984b11ec7d1f5ae1bd96efb7ff51be82686d0",
     "name": "github.com/blinklabs-io/dingo/internal/node/ledgerpeers.test",
     "ecosystem": "go",
@@ -541698,6 +544008,27 @@
           "occurrence:6210f0c56f6492495b64c99d5119ec972bbe51e1c2f835e5e764ab66caf543dc"
         ]
       }
+    }
+  },
+  {
+    "id": "project:8e19cf2f714a9c06f1e5189c1f1b3b32293cfb1a7ef4af27ea25bc039c727bca",
+    "name": "github.com/blinklabs-io/dingo/internal/nodeparity",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7a61627861c26cf125fc41dcf91117de9fc51ea8d52e11c5c42b18243064daf6"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:8e19cf2f714a9c06f1e5189c1f1b3b32293cfb1a7ef4af27ea25bc039c727bca",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541729,6 +544060,27 @@
     }
   },
   {
+    "id": "project:477c383220e48dec0d32c5661bd816a0ce21459da1c6e4aec5b1243e8375afec",
+    "name": "github.com/blinklabs-io/dingo/internal/offchainmetadata",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:6d0ccccab136fd65752254f3514c498749de70e3bf39932bed93426bcb0d52fc"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:477c383220e48dec0d32c5661bd816a0ce21459da1c6e4aec5b1243e8375afec",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ce30582e4db8ccd953549cdf8ea07bf4d86660ef0b0f43cd976e39ad939d58e7",
     "name": "github.com/blinklabs-io/dingo/internal/offchainmetadata.test",
     "ecosystem": "go",
@@ -541754,6 +544106,27 @@
           "occurrence:c26286f4556cc08c938a0608100df8cb799e6d1837666cfc89e01c6f57f53ea3"
         ]
       }
+    }
+  },
+  {
+    "id": "project:1667e94385e051a101744d9f57ed0a9b7adf20d875c7806ca10118309400d06d",
+    "name": "github.com/blinklabs-io/dingo/internal/plannerstats",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:a3135f96a74092d5d0d13c86d0953be075c95e197bc75ae884cc4e5d47d65efe"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:1667e94385e051a101744d9f57ed0a9b7adf20d875c7806ca10118309400d06d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541814,6 +544187,27 @@
     }
   },
   {
+    "id": "project:c0b29ad976d7ce1f031f77d794ceafcaac58fd1f04d9bc9c26279e771ec7dbae",
+    "name": "github.com/blinklabs-io/dingo/internal/plugins",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:491cb91319c55958afa7c3a3f6978f90118086a4087a0125605d0821b08a1da2"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:c0b29ad976d7ce1f031f77d794ceafcaac58fd1f04d9bc9c26279e771ec7dbae",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b38fc2316afdb917f4a9911f1e9adb24d0b98fd6dd84893fe1367c0d2868eca0",
     "name": "github.com/blinklabs-io/dingo/internal/plugins.test",
     "ecosystem": "go",
@@ -541842,6 +544236,48 @@
     }
   },
   {
+    "id": "project:68aaddfbb4cf3a9b722722501166c4e73be8d229b3033a091a8d02d2eb99f4c9",
+    "name": "github.com/blinklabs-io/dingo/internal/promutil",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7be948d44cbddad4808817e30e1fde3b564f27cec09b0f4cb97bce1a8ecf3251"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:68aaddfbb4cf3a9b722722501166c4e73be8d229b3033a091a8d02d2eb99f4c9",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:53bd3886e7587a51fcd22ae65b25726655495ac5049a0f70e1981cfb927c170c",
+    "name": "github.com/blinklabs-io/dingo/internal/ratewindow",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:2447ea83330169b27bdbd2b1ff6c8c0196211527491b91a0b10e7523a7326ce1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:53bd3886e7587a51fcd22ae65b25726655495ac5049a0f70e1981cfb927c170c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:1b483de7ed360960de7a253862025a71d887fc327c6203474046b285f9949091",
     "name": "github.com/blinklabs-io/dingo/internal/ratewindow.test",
     "ecosystem": "go",
@@ -541867,6 +544303,27 @@
           "occurrence:25597baa185e8d00142420f5920e4728d47ecaea894dfa07d6450096c0d62eb2"
         ]
       }
+    }
+  },
+  {
+    "id": "project:545cd2bb2bce099497d6495255acebff31f68c4edaff6f189b51146907417a67",
+    "name": "github.com/blinklabs-io/dingo/internal/safedecode",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:748cb1d721ea108a5e2f1cf1ab37c6444f2f3110e7f11277959b4549aaae26db"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:545cd2bb2bce099497d6495255acebff31f68c4edaff6f189b51146907417a67",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -541927,6 +544384,27 @@
     }
   },
   {
+    "id": "project:3dd9e9022a3bbe06ec704fbbb4e5b20b3b45c0a183a68ff080ec620f0d26c37b",
+    "name": "github.com/blinklabs-io/dingo/internal/settingsresolve",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:c417a2d91b759db50fd74a7ad8fc037cabb3c92344187e90366d58b3f4c2725c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3dd9e9022a3bbe06ec704fbbb4e5b20b3b45c0a183a68ff080ec620f0d26c37b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:967cc0c55abaf5739d8a3bdba0d011ccfd9806464da63dd50480280eee84461e",
     "name": "github.com/blinklabs-io/dingo/internal/settingsresolve_test",
     "ecosystem": "go",
@@ -541984,6 +544462,27 @@
     }
   },
   {
+    "id": "project:3da1bf6e4e1efaec5dcd67cf6940cafbaaaaae95ebb09a9ec0c6d0733c455f0e",
+    "name": "github.com/blinklabs-io/dingo/internal/test/conformance",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:4bd2e6b48365ce8248e11c3d63cfbec6f32c6c57f198a051d4a41c1d77591d47"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3da1bf6e4e1efaec5dcd67cf6940cafbaaaaae95ebb09a9ec0c6d0733c455f0e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:8b63612f6a2b5d09ae589b9d4c88acc6dc14271532f8717c86eaa33c124dfeb5",
     "name": "github.com/blinklabs-io/dingo/internal/test/conformance.test",
     "ecosystem": "go",
@@ -542009,6 +544508,27 @@
           "occurrence:b28cf0ead796251d705c489ddd8b6849926e9b6778528c9b9cb504852beeadec"
         ]
       }
+    }
+  },
+  {
+    "id": "project:6130a4c17066b014d6c60d5f20866214793fc53cb93141fc8a32f44c655a3c46",
+    "name": "github.com/blinklabs-io/dingo/internal/test/dbtest",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f5ee2ee67e6bbb3ec63bb994833bfe749de19cfe04b29f509f208f3c1a00aa2a"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6130a4c17066b014d6c60d5f20866214793fc53cb93141fc8a32f44c655a3c46",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542040,6 +544560,27 @@
     }
   },
   {
+    "id": "project:f595efe0253d66efa8549c88834dc7f29fd99c6879e28be2fb68ae7356076eab",
+    "name": "github.com/blinklabs-io/dingo/internal/test/devnet",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:a9417623569d911a67eba3164a6c86b36d25c96b6bb7654bc08db0dfa2002e36"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:f595efe0253d66efa8549c88834dc7f29fd99c6879e28be2fb68ae7356076eab",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:35038ee268103542305cac34f62cf8186cc2823423c52efb2f31681dd9785b7f",
     "name": "github.com/blinklabs-io/dingo/internal/test/devnet.test",
     "ecosystem": "go",
@@ -542065,6 +544606,69 @@
           "occurrence:0c6b1427245f30e87237336e4ece730ec63f1e50eea786fef28935a28f4d8e7d"
         ]
       }
+    }
+  },
+  {
+    "id": "project:af5fffa001873b8d744922491de2cc04ffa65f409f481041ae5e3c58f34cb05e",
+    "name": "github.com/blinklabs-io/dingo/internal/test/dijkstrabatchfixture",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:d802a75dfc7a797a7454cd0183666390ba7cb7ce97671f2d2783262a87062813"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:af5fffa001873b8d744922491de2cc04ffa65f409f481041ae5e3c58f34cb05e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:fc322aca643849c8dca1190671fbe45cbdcbbdadea7e11791bdf603a252204ec",
+    "name": "github.com/blinklabs-io/dingo/internal/test/fakecloud",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f7a11fde664603de8cbd4673e79a667d5fcc3a36011a54feb9043e4b2aac7119"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:fc322aca643849c8dca1190671fbe45cbdcbbdadea7e11791bdf603a252204ec",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:a5434352320023beea9764acf7a80a5e6f08958b3a8b46576fe56d5657feed40",
+    "name": "github.com/blinklabs-io/dingo/internal/test/fixtures",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5cfa6b4844565934add0543e688c56f1293089d6cd1ab134c396df2cd95c936f"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:a5434352320023beea9764acf7a80a5e6f08958b3a8b46576fe56d5657feed40",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542096,6 +544700,27 @@
     }
   },
   {
+    "id": "project:aa6d37c4b7d3447a20cf831d9bd8435156d3703c40ffc68c5ae264b851c60d69",
+    "name": "github.com/blinklabs-io/dingo/internal/test/load",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5f45db4fc4053360a6cd0b697cfc029f6107a9e7e8537d10270b427364f94420"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:aa6d37c4b7d3447a20cf831d9bd8435156d3703c40ffc68c5ae264b851c60d69",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:433cd4c5d8dfcc426898c1de5fb5eb7a47d89a259a83f80ca054b1b48129b6ba",
     "name": "github.com/blinklabs-io/dingo/internal/test/load.test",
     "ecosystem": "go",
@@ -542121,6 +544746,48 @@
           "occurrence:45abc90cd7b370174e06c6f2fe19211ce08a086636aa7e4c3cf93e1acb397274"
         ]
       }
+    }
+  },
+  {
+    "id": "project:f9768f7b26260df38fd37df77bf47b24a5aa73f8af0681f52280c24ab4e3d72b",
+    "name": "github.com/blinklabs-io/dingo/internal/test/plutusv4script",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:28f57f1c20814841442b9ac95498a0b1e5341056c4cd6ec3463a4033ba2df959"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:f9768f7b26260df38fd37df77bf47b24a5aa73f8af0681f52280c24ab4e3d72b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:8adb49887545f9223b20babbd75851a5a7eb6f28533f3090c6a6e887d5c876a8",
+    "name": "github.com/blinklabs-io/dingo/internal/test/storagetest",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f3ee6164e53173794ff22faaf6ee649847e532bddac17c8820713b31229c5a1c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:8adb49887545f9223b20babbd75851a5a7eb6f28533f3090c6a6e887d5c876a8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542152,6 +544819,27 @@
     }
   },
   {
+    "id": "project:58b1207720d6e27cfbb4d147db8b57f1e0ab9a1245e6d0b4d990feb21a493f45",
+    "name": "github.com/blinklabs-io/dingo/internal/test/testutil",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:bbfa370b959c5b77010bbaeac87d22cc4d256d40b12cb1d3582d38160921501b"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:58b1207720d6e27cfbb4d147db8b57f1e0ab9a1245e6d0b4d990feb21a493f45",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:cc1d2f108e03dd777926afa5f24fcb9a1c13f1bbc616e465bf1fde732695f040",
     "name": "github.com/blinklabs-io/dingo/internal/test/testutil.test",
     "ecosystem": "go",
@@ -542177,6 +544865,27 @@
           "occurrence:dfb8b2d3abafc42fb2056f160f5d76bfbc04f17673341bbbfdbbb4d8c3201cd7"
         ]
       }
+    }
+  },
+  {
+    "id": "project:7764e4e5e64cf8562fd30299386b712cde14c591ce2be22c8655ff9fe606a744",
+    "name": "github.com/blinklabs-io/dingo/internal/tlsutil",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:b62bf6edb036bb4304bed9414aba24f3f136424f473aa60e6fa0cd7c76bcb0a4"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:7764e4e5e64cf8562fd30299386b712cde14c591ce2be22c8655ff9fe606a744",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542208,6 +544917,48 @@
     }
   },
   {
+    "id": "project:6447a4da4ab604834846be5343d36dd69db479189f28febe171ec977a1c6ccac",
+    "name": "github.com/blinklabs-io/dingo/internal/tracing",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:052d3a644b0ccd1161880314d97277586264e10607c9021fc975c53232643f24"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6447a4da4ab604834846be5343d36dd69db479189f28febe171ec977a1c6ccac",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:9259691a9edfd346e1f00f7691406f59bc1e175ae0cbe53b8007005236a72d10",
+    "name": "github.com/blinklabs-io/dingo/internal/uplcconformance",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:20d7460802a7eb2d82c2f3bb475e163997b48d34d3c93c132bd53d7fffbf8344"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:9259691a9edfd346e1f00f7691406f59bc1e175ae0cbe53b8007005236a72d10",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:3a9423adad65dffb969cfb7ac9165e7f7a6d2410f6a7497bc093a6be114e1111",
     "name": "github.com/blinklabs-io/dingo/internal/uplcconformance.test",
     "ecosystem": "go",
@@ -542233,6 +544984,48 @@
           "occurrence:8d7db1a0c790a1268b4ee9969957914e84436ab878d890791b0b30366c46208b"
         ]
       }
+    }
+  },
+  {
+    "id": "project:eeeec0af991106b2ab60b5f67ffb37ee59dbb2d822d87b5ca5c50b63dbac55d8",
+    "name": "github.com/blinklabs-io/dingo/internal/uplcconformance/cmd",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:e07ad3a59ce25719038f3cdcd7f380b1c80d26b443a6b0ad33ae82b25565c010"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:eeeec0af991106b2ab60b5f67ffb37ee59dbb2d822d87b5ca5c50b63dbac55d8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:26fcdf2cb4483dc429d2ee476469e774e4623193b40769ff5f2674f61104d1a4",
+    "name": "github.com/blinklabs-io/dingo/internal/uplcconformance/turbocmd",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:2af38e51afa51c5a0f9b4bd27cd32802bc1e809eecf182ad6348adfce7b2b792"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:26fcdf2cb4483dc429d2ee476469e774e4623193b40769ff5f2674f61104d1a4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542264,6 +545057,48 @@
     }
   },
   {
+    "id": "project:6ae545eeb7ef1693de9b0eff5e4f9915dc8afa0d53898cbba4daf9d49faa3565",
+    "name": "github.com/blinklabs-io/dingo/internal/version",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:aaa75eea0a3dd54114d987e269848a88c43e654af0063c3d446da40df40ee3a1"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6ae545eeb7ef1693de9b0eff5e4f9915dc8afa0d53898cbba4daf9d49faa3565",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:39ce051b8b0f5b8c0af9d111adbf5c60941c9b974137d26c91901323ba82407a",
+    "name": "github.com/blinklabs-io/dingo/kesagent",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:88369afa01adf6e6ba120e2223f5f818eb6232e13a9160050cd7890f46297e0e"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:39ce051b8b0f5b8c0af9d111adbf5c60941c9b974137d26c91901323ba82407a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:db48e990300bd688283c24c8ecc3db0adcb2239ecaaf53f7bfb7779d6a486e63",
     "name": "github.com/blinklabs-io/dingo/kesagent.test",
     "ecosystem": "go",
@@ -542292,6 +545127,27 @@
     }
   },
   {
+    "id": "project:45413f985c1913b0ec2a51e9a78fb1d3cd6e3adb214f32549480ee91a8f85108",
+    "name": "github.com/blinklabs-io/dingo/keystore",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:da78f8cf6117880f62f5f2443e75f11928124fdfbb426e7fe9787903256cfc93"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:45413f985c1913b0ec2a51e9a78fb1d3cd6e3adb214f32549480ee91a8f85108",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ef7a90370d2ecc3d8702e32f7cc2cf3d809711aec169fc591bad8b44e2508b0d",
     "name": "github.com/blinklabs-io/dingo/keystore.test",
     "ecosystem": "go",
@@ -542317,6 +545173,27 @@
           "occurrence:ad649b31229debd8902a7d941b2d1987bd5ec60fa4ba9f2194bcd0397da57f03"
         ]
       }
+    }
+  },
+  {
+    "id": "project:13921c05894256bc7e6268ecfa49225618f6be57700f63363bc458754817ae4f",
+    "name": "github.com/blinklabs-io/dingo/ledger",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:b71fc1c5a594b7649685bdc7f79c9206fd2f40621de24cfee7f6fdeda097bc51"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:13921c05894256bc7e6268ecfa49225618f6be57700f63363bc458754817ae4f",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542377,6 +545254,27 @@
     }
   },
   {
+    "id": "project:dd89b9910cfcda42f7bfbe682160e2805e113cccb0f9bfb4a4bd64172ddf1065",
+    "name": "github.com/blinklabs-io/dingo/ledger/byronupdate",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:be915a57624ded8368e180bbefc7a014fe590f6aa957669b18333b06b7b69d88"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:dd89b9910cfcda42f7bfbe682160e2805e113cccb0f9bfb4a4bd64172ddf1065",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:ea420b2f58d1c20c630d089888ff980cfa8397aa8dd8f38a713ef3b57ace8837",
     "name": "github.com/blinklabs-io/dingo/ledger/byronupdate.test",
     "ecosystem": "go",
@@ -542402,6 +545300,27 @@
           "occurrence:01a97da9fe33b6f09bee62be3c51ebc6e937f7dad59610e18e8a5063644a0d27"
         ]
       }
+    }
+  },
+  {
+    "id": "project:49abde296e2b672fab4cbaba4f7512051336e56003131f9d6ef37f1913c045aa",
+    "name": "github.com/blinklabs-io/dingo/ledger/eras",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:7a6c7f60450a97c8f6788b2c31a1835a8bdd822b7700230f1f77c7bd30d141e4"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:49abde296e2b672fab4cbaba4f7512051336e56003131f9d6ef37f1913c045aa",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542462,6 +545381,27 @@
     }
   },
   {
+    "id": "project:6d02c3871c02b42544726b776e44bd8b4931df8defef0575d619e51d55c52ba1",
+    "name": "github.com/blinklabs-io/dingo/ledger/forging",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:8482e4ef3910b274718d2a94056c2f7a493c6b4b3f5809b832dfc301585b0ba8"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6d02c3871c02b42544726b776e44bd8b4931df8defef0575d619e51d55c52ba1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:d5b95bcf92b23537091de774368fbcefb76951ade20ee75a195f0a20f9ec0970",
     "name": "github.com/blinklabs-io/dingo/ledger/forging.test",
     "ecosystem": "go",
@@ -542490,6 +545430,27 @@
     }
   },
   {
+    "id": "project:b9b9a2bc76fdb607cf5198fd08fa7a4ff420059588672d43b155e014adbe0146",
+    "name": "github.com/blinklabs-io/dingo/ledger/governance",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:56e60a3a69f5746ef19314d188aed6e93cc0a3353474cb6a3af8d25d2f250368"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b9b9a2bc76fdb607cf5198fd08fa7a4ff420059588672d43b155e014adbe0146",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:222fdf31e9ab829de6288f0860d4c60b01d3e2480d6d7b0f10c0758bb5d9733d",
     "name": "github.com/blinklabs-io/dingo/ledger/governance.test",
     "ecosystem": "go",
@@ -542515,6 +545476,27 @@
           "occurrence:1b4590087db466128325d0c38e55b8e8b8f5e745e7e2831eb5d5fb6884171cee"
         ]
       }
+    }
+  },
+  {
+    "id": "project:c9a9c6cf32492de3242b0bf10e91b14364c4bec5915f6622f580fd63a590666b",
+    "name": "github.com/blinklabs-io/dingo/ledger/hardfork",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f7a994db26530646cbd6ac6dbd132d5245dd419cebaa682cd26a29545ea072c0"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:c9a9c6cf32492de3242b0bf10e91b14364c4bec5915f6622f580fd63a590666b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542575,6 +545557,27 @@
     }
   },
   {
+    "id": "project:de1eafc68a10b3e415f1f0efa28c9c5de0a2b81199d485070959a0ebbba9d7f1",
+    "name": "github.com/blinklabs-io/dingo/ledger/leader",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f41ba2d4c3abde616a9ac0c22ae460bc0f23e75c9a42bb6b97efea41485eeb2c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:de1eafc68a10b3e415f1f0efa28c9c5de0a2b81199d485070959a0ebbba9d7f1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:2ceccaf57d52eba57ba41b6d8af1e85a6e7fc42f5472ad55b8f62854a0610e04",
     "name": "github.com/blinklabs-io/dingo/ledger/leader.test",
     "ecosystem": "go",
@@ -542600,6 +545603,27 @@
           "occurrence:b9fe0ffeebe2847a761807204a029eb67a4313b644f3ae721f33a6f11326abd2"
         ]
       }
+    }
+  },
+  {
+    "id": "project:22552a751f05f82bd08d27f1c9c741d1cd8ba29b42d2b5addb6e99ad5500697a",
+    "name": "github.com/blinklabs-io/dingo/ledger/leios",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:380df120d00c0add397221694bb9f09d42456313f2e2ba74323bb158c3b4b1b0"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:22552a751f05f82bd08d27f1c9c741d1cd8ba29b42d2b5addb6e99ad5500697a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542631,6 +545655,27 @@
     }
   },
   {
+    "id": "project:9d4a6b655b6fa26d0086f602962949e7618f24c410173ce64f1d0ca05ff374c8",
+    "name": "github.com/blinklabs-io/dingo/ledger/rewards",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:c5253e0f20ac5c07c932d54358743ec014b6d997116d974bdbed2f39b061426b"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:9d4a6b655b6fa26d0086f602962949e7618f24c410173ce64f1d0ca05ff374c8",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:47d2230e682e9c46b342cb0c6093e24ff209bfcf1e3b9abdba3ea71e850bf55a",
     "name": "github.com/blinklabs-io/dingo/ledger/rewards.test",
     "ecosystem": "go",
@@ -542656,6 +545701,27 @@
           "occurrence:e907403a0fc158eb752c0a134810cfd9b0aa19649ad93eb268a85741416ddca3"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b5e4484ffad818c049f09a9d440be8298caa52195b9821bd17eded980fb6a636",
+    "name": "github.com/blinklabs-io/dingo/ledger/snapshot",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:20cddd6955f4a62a67aeb9a592acd8326db31fcb7cd6f0ad584c4d305bf5c842"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b5e4484ffad818c049f09a9d440be8298caa52195b9821bd17eded980fb6a636",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542687,6 +545753,27 @@
     }
   },
   {
+    "id": "project:b1b47570eec06edbe335fa26036233cdf776b0cc8d7e43d880400c9e9cadd0bc",
+    "name": "github.com/blinklabs-io/dingo/ledgerstate",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:618776631174082ab3a1fc051940e83943f8ac47a443d3e94e2e2980a0be3214"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:b1b47570eec06edbe335fa26036233cdf776b0cc8d7e43d880400c9e9cadd0bc",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:1b64effcd0f00eda970c2d61767de80bdc58a2097b35e2b189a81c99b8d0b4d3",
     "name": "github.com/blinklabs-io/dingo/ledgerstate.test",
     "ecosystem": "go",
@@ -542712,6 +545799,27 @@
           "occurrence:ea5f813b6fd59b6aa2100782afeca12c49795addd43b4e48042e5e6ad8a57835"
         ]
       }
+    }
+  },
+  {
+    "id": "project:fbc9df96a656064d35c744436c6ab0e87df5e7ba7d97c3c3bae679525b87d62b",
+    "name": "github.com/blinklabs-io/dingo/mempool",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:5059ca887a7dbca2215dbb2cb99289e145a3b008fe4202a91ef2c26e661c72e9"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:fbc9df96a656064d35c744436c6ab0e87df5e7ba7d97c3c3bae679525b87d62b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542743,6 +545851,48 @@
     }
   },
   {
+    "id": "project:7e8891a8c138a8dc81eb2489aa06077bdde428fe6a940647b35a8e9ada5a65bf",
+    "name": "github.com/blinklabs-io/dingo/midnight",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:db82ab6ff0b0a99f6acff8df8654b3a26e5301cfbf58ecb8a7a4c0f4d8a00f67"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:7e8891a8c138a8dc81eb2489aa06077bdde428fe6a940647b35a8e9ada5a65bf",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:95af52d15fbff3f57a8785f5f350a546f1da8253baf9f9ee54a4682b609a4dc6",
+    "name": "github.com/blinklabs-io/dingo/midnight/indexer",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:47854881006dbfe498f95ecb713836ab7b2aac52a0a784f2517db26a8f0eeac2"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:95af52d15fbff3f57a8785f5f350a546f1da8253baf9f9ee54a4682b609a4dc6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:17960b85d7640cf785e830835f62b3d4092d273d2847d24632c3469c0c0bd0c8",
     "name": "github.com/blinklabs-io/dingo/midnight/indexer.test",
     "ecosystem": "go",
@@ -542768,6 +545918,27 @@
           "occurrence:c9a598330351747efd013764100362b9791b63be622bce7563cd5afe52e85f92"
         ]
       }
+    }
+  },
+  {
+    "id": "project:3550f5d369705abb115c5c4f1f501ad53d801e97d5c75218296a990b1f0f7faf",
+    "name": "github.com/blinklabs-io/dingo/midnight/server",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:4d9726739913ab56e6072a7fdc3f93d77a6cf91373e9af2f32d520216a18c251"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3550f5d369705abb115c5c4f1f501ad53d801e97d5c75218296a990b1f0f7faf",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542828,6 +545999,27 @@
     }
   },
   {
+    "id": "project:322cd187d3cc04202462b09409a68cd9aa959c92a3f3f9856d0b84bb02132fed",
+    "name": "github.com/blinklabs-io/dingo/mithril",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:642109685bbe93f2532513e471a52f72cde793e28878210bc6e64f2b7bd2752d"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:322cd187d3cc04202462b09409a68cd9aa959c92a3f3f9856d0b84bb02132fed",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:8a29057ae7226c6609e6c4569efb364bb87b1973016f1588946098ff90215a6f",
     "name": "github.com/blinklabs-io/dingo/mithril.test",
     "ecosystem": "go",
@@ -542853,6 +546045,27 @@
           "occurrence:bb2ab1327d841298a5076ef62cb36acfb9df6451548ddb414446081fd20ef18e"
         ]
       }
+    }
+  },
+  {
+    "id": "project:fc1fb88aec59d1572c2630ece033d9225cd319704896a038c9db7366d6ec7956",
+    "name": "github.com/blinklabs-io/dingo/ouroboros",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:49bc68c94c2ed641e8f8117abbd23026c7b4a376e67d4b479ad3fe44cd1b201c"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:fc1fb88aec59d1572c2630ece033d9225cd319704896a038c9db7366d6ec7956",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542884,6 +546097,27 @@
     }
   },
   {
+    "id": "project:6bc34234118f3a6114bc702f5f1f23169e4cd946accea02cfa456a48aebbd052",
+    "name": "github.com/blinklabs-io/dingo/peergov",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:8be96485eb274bdfbc7f224577b2ba233a8744581adb4e48e71bb549feca9b86"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:6bc34234118f3a6114bc702f5f1f23169e4cd946accea02cfa456a48aebbd052",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:b87b993b8cf563b9804b926ec152e0b91c9a24b1b0b3058a6ee7e1ff34b79a18",
     "name": "github.com/blinklabs-io/dingo/peergov.test",
     "ecosystem": "go",
@@ -542912,6 +546146,27 @@
     }
   },
   {
+    "id": "project:4df2fe278ba4cd5c3a643d1b7b24206010341fe44bd6a7757258a5970bb97dcd",
+    "name": "github.com/blinklabs-io/dingo/plugin",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:e6f27093225a09693dca3362f474cb9e198366c27313741e9f991e408fe8dad6"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:4df2fe278ba4cd5c3a643d1b7b24206010341fe44bd6a7757258a5970bb97dcd",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:a9da9be748f54dee94b4c2d081c49a0ff98f7e441531a5b72aa46ea51f91e79d",
     "name": "github.com/blinklabs-io/dingo/plugin.test",
     "ecosystem": "go",
@@ -542937,6 +546192,27 @@
           "occurrence:52f0c84f452fa19a8f97393243ea5013d36c4a6ae0b7125bbacaa19e8d3f861c"
         ]
       }
+    }
+  },
+  {
+    "id": "project:68f49fd3367273bc562fabd8296338502312152b80c2007aa2721288176d485d",
+    "name": "github.com/blinklabs-io/dingo/topology",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:625d5845c8fb8486e413790cec0360e20c3b75eab4833f1b30ceb2f544a464aa"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:68f49fd3367273bc562fabd8296338502312152b80c2007aa2721288176d485d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -542997,6 +546273,27 @@
     }
   },
   {
+    "id": "project:3b29c921f89966775bab77bc566fe71a509ea9cebe1c5f2a22483fa9057b8b90",
+    "name": "github.com/blinklabs-io/dingo/utxoref",
+    "ecosystem": "go",
+    "source": "source:e0630ddf8a72dc0280ed8845fb1d899fae2d1051:.",
+    "artifactIds": [
+      "artifact:f0a510237d403286def7972decddb4d8af3caf84b71afe58f64c414b685b79eb"
+    ],
+    "versions": [
+      "v0.84.0"
+    ],
+    "impact": {
+      "artifactId": "project:3b29c921f89966775bab77bc566fe71a509ea9cebe1c5f2a22483fa9057b8b90",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:6580392f2287850a02b26583235fc2273168c7c864d02a2d8075800aedd38f90",
     "name": "github.com/blinklabs-io/dingo/utxoref_test",
     "ecosystem": "go",
@@ -543051,6 +546348,27 @@
           "occurrence:5a81ca0b8572c1cbd37f91a893fe302462bb12ad08a0e4839348e8e800490288"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b1cb4a645c5889134e56456cf5c5ad74850acfc0fe1d1188ae9111d5311ddf9e",
+    "name": "github.com/blinklabs-io/gouroboros",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:4c20e3fb7e382d4f5e32ef4cb727e2a891d556f6837e36edf56c84985a59e32d"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:b1cb4a645c5889134e56456cf5c5ad74850acfc0fe1d1188ae9111d5311ddf9e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543120,6 +546438,27 @@
     }
   },
   {
+    "id": "project:76c4bfcb47807cdce33dbcd170518454f8697e340d904d7b810b93e75209a712",
+    "name": "github.com/blinklabs-io/gouroboros/cbor",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:8fa86134642dfd00562652d46042794251ee17434f1355cc58aa88cb250d6517"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:76c4bfcb47807cdce33dbcd170518454f8697e340d904d7b810b93e75209a712",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:74c061d8e7a5e6079323fc1711490aecabcde425194895c1f41aa516a44e5277",
     "name": "github.com/blinklabs-io/gouroboros/cbor_test",
     "ecosystem": "go",
@@ -543186,6 +546525,27 @@
     }
   },
   {
+    "id": "project:c4d6596cc32ec5e2abf2c32de2c937b49b68518d5a236ad01e0e9f432b0b0ca5",
+    "name": "github.com/blinklabs-io/gouroboros/connection",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:e7ca5c09fc7ab9e6102475d87d71376c49c40677f1ccc13a3bc4f93902b493c3"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:c4d6596cc32ec5e2abf2c32de2c937b49b68518d5a236ad01e0e9f432b0b0ca5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:40a32cb558e1431a62b023d6f06dd0f4659f7507aa54763b9d9fe6996961213f",
     "name": "github.com/blinklabs-io/gouroboros/connection.test",
     "ecosystem": "go",
@@ -543215,6 +546575,27 @@
           "occurrence:b6976bc8552cdbb074b01b6ff98e051352e961db7794c2df1bb356a5bd8948dd"
         ]
       }
+    }
+  },
+  {
+    "id": "project:3e6f8841135447aa7b8ce409af7da2b23b17a8a1163b60f25873ab1738b8cdd6",
+    "name": "github.com/blinklabs-io/gouroboros/consensus",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:5d0f4642153d6ec3ca9a87482f1ace3f6b22def3eeac3d6c50baafc7303b8ea6"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:3e6f8841135447aa7b8ce409af7da2b23b17a8a1163b60f25873ab1738b8cdd6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543250,6 +546631,27 @@
     }
   },
   {
+    "id": "project:5b812e08bf1103af450a27d404358cc44a97d7e10e7fd0b0e1089475133e303a",
+    "name": "github.com/blinklabs-io/gouroboros/consensus/byron",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:c100aa22f49bf89d66a3e12fb0bc2a530085f28bd7b75cda690cf1f560a3602b"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:5b812e08bf1103af450a27d404358cc44a97d7e10e7fd0b0e1089475133e303a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:589a0690b2a96f67c6cf84db27ecd305a1462d4ea453d4067e39c5c1f72225fe",
     "name": "github.com/blinklabs-io/gouroboros/consensus/byron.test",
     "ecosystem": "go",
@@ -543279,6 +546681,27 @@
           "occurrence:3fdab532dc425b6b1b7377cc6469d7b91b7c232bbf6c616500ec4108f3d7539b"
         ]
       }
+    }
+  },
+  {
+    "id": "project:7bece3b208500d7faff43b76852e6cdd6c3943a83fb627e2b1d7a63bf05eb8bd",
+    "name": "github.com/blinklabs-io/gouroboros/consensus/genesis",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:c78b25c4525c24e13b1bc4d334137c648da84bdee4c62e923d3e79746c6dd867"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:7bece3b208500d7faff43b76852e6cdd6c3943a83fb627e2b1d7a63bf05eb8bd",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543314,6 +546737,27 @@
     }
   },
   {
+    "id": "project:a8e8465753185878d6ac2774de3edefcd24355beab6d7ae6ac79745adddf2e7c",
+    "name": "github.com/blinklabs-io/gouroboros/internal/bench",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:6699c04ca0e9b9ffec001ba4ce08958f3f53860347cf58ef9c73ea8ece989c1e"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:a8e8465753185878d6ac2774de3edefcd24355beab6d7ae6ac79745adddf2e7c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:1decdcf4ea348a994d2d63aa70570066ca39ed728f471cb502dda5330fc0093d",
     "name": "github.com/blinklabs-io/gouroboros/internal/bench.test",
     "ecosystem": "go",
@@ -543346,6 +546790,27 @@
     }
   },
   {
+    "id": "project:dd0635c0978e4c0b5783ed17afad5ef95c4e4fb66fe67cb244e359235bc48afb",
+    "name": "github.com/blinklabs-io/gouroboros/internal/cryptoutil",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:58378470730a4a053d9f2f73eb25125974b882f8e0cae964c939e9921533ad3d"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:dd0635c0978e4c0b5783ed17afad5ef95c4e4fb66fe67cb244e359235bc48afb",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:43d6b171bcacd9b2521441e6ee6e9944962963847fca233d309b9504989c2259",
     "name": "github.com/blinklabs-io/gouroboros/internal/cryptoutil.test",
     "ecosystem": "go",
@@ -543375,6 +546840,27 @@
           "occurrence:bce83440f6f815a6e5220fedadf646f14c5a7b13ae1005f34cfc516a6d3108d5"
         ]
       }
+    }
+  },
+  {
+    "id": "project:2aeb6f3bc614d8b7c80ee897d04ec8ab1a371aecdaf681f9bbb52ec2fd065513",
+    "name": "github.com/blinklabs-io/gouroboros/internal/ed25519byron",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:ead0ac1853fe0971780b99d54047adf91a6d2e6c9c1b7d6ae06393ccf61a70cf"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:2aeb6f3bc614d8b7c80ee897d04ec8ab1a371aecdaf681f9bbb52ec2fd065513",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543444,6 +546930,27 @@
     }
   },
   {
+    "id": "project:ad43a90b957fe82eb064e087b5ff85414358f37cdd9628102a18e27f51dc013d",
+    "name": "github.com/blinklabs-io/gouroboros/internal/ed25519strict",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:d879e121b4964929b5f487d8429163fb908ad808e310b77cf201e90d5a185196"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:ad43a90b957fe82eb064e087b5ff85414358f37cdd9628102a18e27f51dc013d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:43280cc5877a9b98267dda1e866e166fbd0575bd8edefcd94afd22ed4ec2725c",
     "name": "github.com/blinklabs-io/gouroboros/internal/ed25519strict_test",
     "ecosystem": "go",
@@ -543507,6 +547014,90 @@
           "occurrence:1cc8edf9b4720676116b16f4de169fc3f2a6f2b9b932a3bc20f392eca57977c3"
         ]
       }
+    }
+  },
+  {
+    "id": "project:9c94fa5b341d3443a5cfe8e0c367fe4ebb67cb80c6de912ba523556b7a1e3cb5",
+    "name": "github.com/blinklabs-io/gouroboros/internal/ledgertest",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:c5670ed5141bd760b8af8a20e37c8c8371c3b7848ff8f05580ca4689df524292"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:9c94fa5b341d3443a5cfe8e0c367fe4ebb67cb80c6de912ba523556b7a1e3cb5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:fc9eedf5b355c442f17a361f93cbaf153264a3b862e4dbd1d7e6ffd542bf5645",
+    "name": "github.com/blinklabs-io/gouroboros/internal/panics",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:46584579bf3d80bf288f359e31261794d3cc862edfce4aa14e926b459f92becd"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:fc9eedf5b355c442f17a361f93cbaf153264a3b862e4dbd1d7e6ffd542bf5645",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:d2aa18b1c7b7b97cc799014e3439a75553d049097eae15c4db61e2bd3e67da0d",
+    "name": "github.com/blinklabs-io/gouroboros/internal/test",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:50208928183a598a70963dd3c321084b28b457307ef22a36bf0f01633144dfa0"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:d2aa18b1c7b7b97cc799014e3439a75553d049097eae15c4db61e2bd3e67da0d",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:0892bd625e4ae9eaf7ef3519819f988ac9bc06d7ff0fc451dd710385a1454071",
+    "name": "github.com/blinklabs-io/gouroboros/internal/test/conformance",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:b7b39c74ca2a8ee8ca17a0ef71c3b0ab8e0de47f84575f018729ea42a13ea66f"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:0892bd625e4ae9eaf7ef3519819f988ac9bc06d7ff0fc451dd710385a1454071",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543576,6 +547167,27 @@
     }
   },
   {
+    "id": "project:a0152a10f2b3365338763a4481cff3ead0efc072871766119f928c6239eb3244",
+    "name": "github.com/blinklabs-io/gouroboros/kes",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:ca711f53b0685c1a530f433b48e16bd44b3e534152483c6928765e5d28416c24"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:a0152a10f2b3365338763a4481cff3ead0efc072871766119f928c6239eb3244",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:f13c070b10f6251c95c96e09247166590f7694dfe9a3d1480d48330b6e42b6ae",
     "name": "github.com/blinklabs-io/gouroboros/kes.test",
     "ecosystem": "go",
@@ -543605,6 +547217,27 @@
           "occurrence:4089296abf2f8624c3a3434d6893c141ee784ec0fba03d0faec745ff4a5bca2a"
         ]
       }
+    }
+  },
+  {
+    "id": "project:71ade4c810c75866950a0b434faa0ccb33b2cb3aa3275732e6e22ff078c050d7",
+    "name": "github.com/blinklabs-io/gouroboros/ledger",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:98b6854384567aca72e23d4d779c344ab3e7810cafef3de6f6d700def181b71d"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:71ade4c810c75866950a0b434faa0ccb33b2cb3aa3275732e6e22ff078c050d7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543674,6 +547307,27 @@
     }
   },
   {
+    "id": "project:4490092d3bf1b9c424ff8a5d1c0cce9476939a8a2ff386545528c5b1c4168cf5",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/allegra",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:69602b50806c860a618da09547bf156d881238d5c89f50b2729fdfb00e05e214"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:4490092d3bf1b9c424ff8a5d1c0cce9476939a8a2ff386545528c5b1c4168cf5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:13073eed78ee89fb028f0963932d0f3e643fab09fc2ba5cfc8f1dead98fac740",
     "name": "github.com/blinklabs-io/gouroboros/ledger/allegra_test",
     "ecosystem": "go",
@@ -543737,6 +547391,27 @@
           "occurrence:292512c4f6ebed3fa74f5f563b422be836dfd4e0af3ececc2575fc90d369adbc"
         ]
       }
+    }
+  },
+  {
+    "id": "project:fcb6af6520804d1fde69e0e6f7d2724fc53eb52fc0af538bb6d17e9f8b92072a",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/alonzo",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:2df39d2d8858162ebd97621d4f9013fdd950d1263de517380f25fa1171f2e7da"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:fcb6af6520804d1fde69e0e6f7d2724fc53eb52fc0af538bb6d17e9f8b92072a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543806,6 +547481,27 @@
     }
   },
   {
+    "id": "project:8348d12b06b97423f63aaf4b341b25c6e800700d42bcf18d6fc291ced75ead79",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/babbage",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:d970f56157af7116f3c1b5056a243e47c87b00b6371f8429961036c53ceec6fd"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:8348d12b06b97423f63aaf4b341b25c6e800700d42bcf18d6fc291ced75ead79",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:900d25c0367dd4e51f607fcef1779035bc5d64cde6b5070c4e0fe8ee354c84a5",
     "name": "github.com/blinklabs-io/gouroboros/ledger/babbage_test",
     "ecosystem": "go",
@@ -543869,6 +547565,27 @@
           "occurrence:634d28cd9a39be55df94df5de0ff0ab3dd05088c3b2ad14c297d19494410aecd"
         ]
       }
+    }
+  },
+  {
+    "id": "project:ed8824b3b8090640f9f59ab3c0d807086065ee7770a51670e039e4e3fc7eb28a",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/byron",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:ab4581ad426bf2c6fe58887f59fb7dffd5cee5033623914527d6d6e78e3e0981"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:ed8824b3b8090640f9f59ab3c0d807086065ee7770a51670e039e4e3fc7eb28a",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -543938,6 +547655,27 @@
     }
   },
   {
+    "id": "project:cb898aa545aed8d47c780994d31d7fa23251e3355400e782d2410d8abed5e0cf",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/common",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:a619697e9da956fde0f96f52d77606286029e99fdc174ccc054730478d932fdd"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:cb898aa545aed8d47c780994d31d7fa23251e3355400e782d2410d8abed5e0cf",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:cbd0ad05eb328724d157d87e5d21fb52246b89f7d100ae32f8c543f56e2508e2",
     "name": "github.com/blinklabs-io/gouroboros/ledger/common_test",
     "ecosystem": "go",
@@ -544001,6 +547739,27 @@
           "occurrence:fd227c5b121b5c67daba4f8be81832171b2ec3e9a2d335184cdc2456e62096ce"
         ]
       }
+    }
+  },
+  {
+    "id": "project:473b673a6fcb7b9a9e3379b58966ccaf05617bce5cfffc07ce6fcb168865fe8c",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/common/script",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:71adfa67c90725c9603c657bbfce7b781944d822d581caf0b46d994adfc9e77e"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:473b673a6fcb7b9a9e3379b58966ccaf05617bce5cfffc07ce6fcb168865fe8c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544106,6 +547865,27 @@
     }
   },
   {
+    "id": "project:ab8dca747e9f555351db8db9d43477422d3a264df317bb4e0c8f78e5539d6065",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/conway",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:8442ed0aecf5872daeb060e3a6ee38e7611770cc4cf68a11d326b53b8802a5a7"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:ab8dca747e9f555351db8db9d43477422d3a264df317bb4e0c8f78e5539d6065",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:1c5d4963d4a9e5d95341b99c2550889242947385b5fead59c02013aee0dd8aef",
     "name": "github.com/blinklabs-io/gouroboros/ledger/conway_test",
     "ecosystem": "go",
@@ -544169,6 +547949,27 @@
           "occurrence:417c835d0eaabe20d6e65106b37f9acc1e82e7bda20af3a64c8487080a90ec3a"
         ]
       }
+    }
+  },
+  {
+    "id": "project:56f68fe936d00d47f32453dde07adfd2388cac6aa9d054bce45934e564bf0b00",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/dijkstra",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:f7344471d41f29ff369715a1e74a4b08442354de9e4ecd44c31005998bd4ab5f"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:56f68fe936d00d47f32453dde07adfd2388cac6aa9d054bce45934e564bf0b00",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544238,6 +548039,27 @@
     }
   },
   {
+    "id": "project:5ac4f7f644cde53f2adfd7bc4c7869921c595e11272bde63796b2a8e1b15e6bb",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/leios",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:0a90b26709d04900ca33715caba23abb6992b7dc6392046e8261278e5906f24b"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:5ac4f7f644cde53f2adfd7bc4c7869921c595e11272bde63796b2a8e1b15e6bb",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:95e6e8c2ed30ee3f56fe9aa6f9f4c3b7071050f1ab3a1d9d0455cdc829a9d35b",
     "name": "github.com/blinklabs-io/gouroboros/ledger/leios_test",
     "ecosystem": "go",
@@ -544301,6 +548123,27 @@
           "occurrence:a7ea288244ea5a33e0ad5a4301b13fb1c4035c56e256d5d3141dbf3c0cc8a19d"
         ]
       }
+    }
+  },
+  {
+    "id": "project:2209f44b38770a1ba7870032cd7195abf937d39cf49e7d0b78521ac5491c27ef",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/mary",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:039c2c5312f1b3fdc75ad916f583703fa864d0d7e6187ba82d3adb178143f4c2"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:2209f44b38770a1ba7870032cd7195abf937d39cf49e7d0b78521ac5491c27ef",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544370,6 +548213,27 @@
     }
   },
   {
+    "id": "project:eb63fd49689c127758262b028ad6d177ce29457abb559c429b6de22ec25ccad4",
+    "name": "github.com/blinklabs-io/gouroboros/ledger/shelley",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:f374e9a7067174ab7770e0170c14bb7795360070872e3800b7a44d056cea74ba"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:eb63fd49689c127758262b028ad6d177ce29457abb559c429b6de22ec25ccad4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:8e794d5811968a2b1f2aaac481b4d2c15813aa367b7b485653eb289a576455c9",
     "name": "github.com/blinklabs-io/gouroboros/ledger/shelley_test",
     "ecosystem": "go",
@@ -544433,6 +548297,27 @@
           "occurrence:920020ded031d5a268f3880b41348bf8dfa7ac046318c3f7edc97c96da68e5a9"
         ]
       }
+    }
+  },
+  {
+    "id": "project:746ad9a4ea8f0cf4c50be3e172414518cb36daaf35f5e149563107cd32e78102",
+    "name": "github.com/blinklabs-io/gouroboros/muxer",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:710af8e538d71fa10b813fb937ae445b1d724744ac3f7ab8c9c37df223738fd0"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:746ad9a4ea8f0cf4c50be3e172414518cb36daaf35f5e149563107cd32e78102",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544502,6 +548387,27 @@
     }
   },
   {
+    "id": "project:cd565a75fedb23928cb769d46030801483707c1666f9486c371f44f354f95bf2",
+    "name": "github.com/blinklabs-io/gouroboros/pipeline",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:96e48a4a579eeee14f6824a69e3ef1ebe575a389b8ad3f22979e5c22ea4c4f64"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:cd565a75fedb23928cb769d46030801483707c1666f9486c371f44f354f95bf2",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:c7d4794a190aa42168551b9acb693453d992b85d3200aabcd8e691b9992e81af",
     "name": "github.com/blinklabs-io/gouroboros/pipeline_test",
     "ecosystem": "go",
@@ -544565,6 +548471,27 @@
           "occurrence:487ddfbbcfd2da08dc2d7bf62580bebc3a3b5c8ffd7002d7fdbbee7fa6009dc9"
         ]
       }
+    }
+  },
+  {
+    "id": "project:e762e47b044aa0cec696c4ae7c0f0f3cebe04c50ee0cb196d3d2a344824b3ab6",
+    "name": "github.com/blinklabs-io/gouroboros/protocol",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:f770b64bd1887032eba0a5b8f00d4e60297aafe1c2f8256c67f48af707d42998"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:e762e47b044aa0cec696c4ae7c0f0f3cebe04c50ee0cb196d3d2a344824b3ab6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544634,6 +548561,27 @@
     }
   },
   {
+    "id": "project:548f42db70c885ebd1c5e9db5daaeba7492c8e9b32d063390ae555ff5e303068",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/blockfetch",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:7d6a982acac230c887c95d417e1e44da1a506181457760fdcde92b9baa626370"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:548f42db70c885ebd1c5e9db5daaeba7492c8e9b32d063390ae555ff5e303068",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:792a4aa141bf0afe3fe4e645c45b10068842e245a10fca64ea14176227bb25e8",
     "name": "github.com/blinklabs-io/gouroboros/protocol/blockfetch_test",
     "ecosystem": "go",
@@ -544697,6 +548645,27 @@
           "occurrence:893e247592424ca24c1ee41f08a8b761ed11d65f08ef455079c6ae9f4c089cc1"
         ]
       }
+    }
+  },
+  {
+    "id": "project:e63fd2547697adb826899b386574b48d3981b1f075783a6dd736a6f33ccf38fa",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/chainsync",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:c8f95e9743e3d265cebfc10402c664b9d4b451a53abbff6dd5e4c545f68304cb"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:e63fd2547697adb826899b386574b48d3981b1f075783a6dd736a6f33ccf38fa",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544766,6 +548735,27 @@
     }
   },
   {
+    "id": "project:99cfba43c3cb08b30e23f1b76e383ee4129b32e1a82cf544f3135d7aa4aef1d5",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/common",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:b607798171ba2dee3c6f6df84e129f34c78e7ac537835620fe53ceef18fd74e6"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:99cfba43c3cb08b30e23f1b76e383ee4129b32e1a82cf544f3135d7aa4aef1d5",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:7abbdaa229b4ae0fb3633009b3d466b8ad3369912ecfb40f568cb1a44e80fd17",
     "name": "github.com/blinklabs-io/gouroboros/protocol/common_test",
     "ecosystem": "go",
@@ -544829,6 +548819,27 @@
           "occurrence:72cd2dce69347ea014a68420ca7c4c96958791b655f093dda4b9c6fe36a1c787"
         ]
       }
+    }
+  },
+  {
+    "id": "project:a2ad7d31418eebd086d7f0a3e1b56ef5a4c4d59889750bc2e5d0b19a622288d4",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/handshake",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:bec12d5a46671315b16cf6af5a21e01048e185f336f7fc65081edcbfca0ee72e"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:a2ad7d31418eebd086d7f0a3e1b56ef5a4c4d59889750bc2e5d0b19a622288d4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544898,6 +548909,27 @@
     }
   },
   {
+    "id": "project:302870c6e5f9f4ebcf2d6e4ba937ac8acfba2d7ed6abf04f58582ad35139286c",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/internal/cborpreflight",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:845ab5a0eff0c01ea40c547ce87c135bd13b430962f783c18840d2c4d940d5cd"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:302870c6e5f9f4ebcf2d6e4ba937ac8acfba2d7ed6abf04f58582ad35139286c",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:20f6909ac88aa753909a54fe960850a6f9d657f29f1f8b8faeb8b2ab3f6ecb75",
     "name": "github.com/blinklabs-io/gouroboros/protocol/internal/cborpreflight.test",
     "ecosystem": "go",
@@ -544927,6 +548959,48 @@
           "occurrence:96def6d29f8ff4bae0e601d4ed2ad988ccf4ad29211bb42f5822de12483da7c3"
         ]
       }
+    }
+  },
+  {
+    "id": "project:c465b05857bcf19ad8618ed84705a313d636300755aedd65802c0ebc9c7e34c1",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/internal/cborwalk",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:2f7f766230c0cfaffb50f8e5d7a0eb768d37e51fd575bbb8116b118617741371"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:c465b05857bcf19ad8618ed84705a313d636300755aedd65802c0ebc9c7e34c1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
+    "id": "project:ab9dbef10eb7d36c95384874d2c251b7dc1c94414b4dfaa5a8fd60cb61fa1994",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/keepalive",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:421c6b12258db45b62a923899930cd8ad6644425e7694647e3970a920656f41b"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:ab9dbef10eb7d36c95384874d2c251b7dc1c94414b4dfaa5a8fd60cb61fa1994",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -544996,6 +549070,27 @@
     }
   },
   {
+    "id": "project:1632502872cb225612709a822aaa4111b4343530b507b0e5f824223ba88d5ff3",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/leiosfetch",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:d0081da2b108bda55a006fb0eb054aef62585e3dc30f9209e7021050b8808d4d"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:1632502872cb225612709a822aaa4111b4343530b507b0e5f824223ba88d5ff3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:9e6baa71bfe86142fc1d8971c242dcdbb11236383bd5e8cc61be55b9d8428507",
     "name": "github.com/blinklabs-io/gouroboros/protocol/leiosfetch_test",
     "ecosystem": "go",
@@ -545062,6 +549157,27 @@
     }
   },
   {
+    "id": "project:2ab81a9ee8494a5f2f4e8f2173475873fd56a061b68ad2a54a5e34f16c167cf3",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/leiosnotify",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:ee5fab625ae413bb8818c0b2b4af363f691e9951807f423eeb9d9ac9fefe6095"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:2ab81a9ee8494a5f2f4e8f2173475873fd56a061b68ad2a54a5e34f16c167cf3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:e3ebfe29000540050bb0e77551e3b4a207fe154294a20a2cbb05920ef91ab885",
     "name": "github.com/blinklabs-io/gouroboros/protocol/leiosnotify.test",
     "ecosystem": "go",
@@ -545091,6 +549207,27 @@
           "occurrence:1446ff65afc3687a415033ecae1459a702bb23c382c9f34b92f9d596ed03d975"
         ]
       }
+    }
+  },
+  {
+    "id": "project:787992c1bce34cf907496b0d9a331d87121dfda27f717ad626aa7b66790e26c3",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/leiosvotes",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:dbf17d713076725ad01afad99e6e55b84c800094dfae9a6511229e1121568deb"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:787992c1bce34cf907496b0d9a331d87121dfda27f717ad626aa7b66790e26c3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -545126,6 +549263,27 @@
     }
   },
   {
+    "id": "project:8239a0a7355e3d26b9d0e083268802b2a7f94ef1ac7daf5e77ac7612de934317",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/localmessagenotification",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:d94877a7e4eb16cba2dee81b8a603999794a1a2d4336d9febecc1e490c6c4954"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:8239a0a7355e3d26b9d0e083268802b2a7f94ef1ac7daf5e77ac7612de934317",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:7bf83f6d902abb5db2b9b7241bd42a919e31d22f34be786451f6e461fe713870",
     "name": "github.com/blinklabs-io/gouroboros/protocol/localmessagenotification.test",
     "ecosystem": "go",
@@ -545158,6 +549316,27 @@
     }
   },
   {
+    "id": "project:b7ce1aacf6415f7f4590bb5c16adcd63dd62d39d08bc6257dbcbbc08e65fb461",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/localmessagesubmission",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:83d3c1367310cf0085dccbd0ea54aa9fdd11f582b5aaa1147e64d7c54741271b"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:b7ce1aacf6415f7f4590bb5c16adcd63dd62d39d08bc6257dbcbbc08e65fb461",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:0d9c466d2008531ae2e940e6b44191f532b4df1e5fee00329d276ad582818194",
     "name": "github.com/blinklabs-io/gouroboros/protocol/localmessagesubmission.test",
     "ecosystem": "go",
@@ -545187,6 +549366,27 @@
           "occurrence:262faeb11cc33c9d33db9007a2aa1b2744287cca5b5ba3a8a54bafb40dc92130"
         ]
       }
+    }
+  },
+  {
+    "id": "project:815dda52a4adfe14222d569d143f77804b7bcc5919ce9978986af822101b0edf",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/localstatequery",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:59d8a53e1139de7545bb4279a8fe493268a17f3e3a93f2b581fc296c7b1137c8"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:815dda52a4adfe14222d569d143f77804b7bcc5919ce9978986af822101b0edf",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -545256,6 +549456,27 @@
     }
   },
   {
+    "id": "project:60a5921723f676d0cd22548563ad8b189b785a48596ddb61891c20f8372dea69",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/localtxmonitor",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:15fc10f62d93a2367de35e7ad556484f853f3d278f90685394eee567e281c466"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:60a5921723f676d0cd22548563ad8b189b785a48596ddb61891c20f8372dea69",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:2d116659254572dc78b49f127f3b5f066f94115918f9751347ff7a30130307b9",
     "name": "github.com/blinklabs-io/gouroboros/protocol/localtxmonitor_test",
     "ecosystem": "go",
@@ -545319,6 +549540,27 @@
           "occurrence:cb7153abeb9176810a888bb7ab3d108d3ded0a9e4d2c945649882cb0ea1a87af"
         ]
       }
+    }
+  },
+  {
+    "id": "project:348d9cac449bd867ac8b86404f57ea127a8c2521feb019cb47475bf74461e0c1",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/localtxsubmission",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:f3971bd6a0b9ce9b39e86a2102e0cd42f716d57e07f7de9c0462d5273320d848"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:348d9cac449bd867ac8b86404f57ea127a8c2521feb019cb47475bf74461e0c1",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -545388,6 +549630,27 @@
     }
   },
   {
+    "id": "project:0d7eba9c036d53946c254dac286aeff2cb54264c077d90a7e79524151895687b",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/messagesubmission",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:73332bb3bd0ae887b7f3aec6427af4ca7f07f3009afd8af8333eb204069ca1fd"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:0d7eba9c036d53946c254dac286aeff2cb54264c077d90a7e79524151895687b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:7d0b74598505eb9c79ce41da983b64196afef32bf14e328cd7b6943be5b8537d",
     "name": "github.com/blinklabs-io/gouroboros/protocol/messagesubmission.test",
     "ecosystem": "go",
@@ -545417,6 +549680,27 @@
           "occurrence:a7a843d53f363ee64891e62c3c3cb665ce94da9f3501cf0db550d5808fd20f69"
         ]
       }
+    }
+  },
+  {
+    "id": "project:2616e4dc87a4fc7d1ccccab99968d7e487c53ff721a10e6fd0a48782be100bfd",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/peersharing",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:4cde91cc39bc8fe9e4ebad58f638b66f59b7b2a9dbae04b8fb7ec7d1561597d7"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:2616e4dc87a4fc7d1ccccab99968d7e487c53ff721a10e6fd0a48782be100bfd",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -545452,6 +549736,27 @@
     }
   },
   {
+    "id": "project:e354cef3369df19ef91e86fce05a796798a1882a0090efbcafe35bb9609d8ec4",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/perasvotes",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:49c5135392ef89cdd2d7db82380616387e37ce49e7321067f894702e962fc9f4"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:e354cef3369df19ef91e86fce05a796798a1882a0090efbcafe35bb9609d8ec4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:61249062aa3941f2ec33a065dd22a53db095da02b6076c6633044671405286a9",
     "name": "github.com/blinklabs-io/gouroboros/protocol/perasvotes.test",
     "ecosystem": "go",
@@ -545481,6 +549786,27 @@
           "occurrence:43b6cf608402ce447c155cc8c160bc97180f6eb29920429ecc6780864b57863d"
         ]
       }
+    }
+  },
+  {
+    "id": "project:9921f5c0783c88d9a7aba8b6d8aa89ddd6df2ad30a9db5b1e4c7e787c955f3d4",
+    "name": "github.com/blinklabs-io/gouroboros/protocol/txsubmission",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:b40264ce8792d34a9bb95ba5eb87dfd57e67541ccb977543752828d4021d83dc"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:9921f5c0783c88d9a7aba8b6d8aa89ddd6df2ad30a9db5b1e4c7e787c955f3d4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -545547,6 +549873,27 @@
           "occurrence:7274870b66fa4580856d23348c9b5e22d1e235f24a0cc8cee78e7b5864598d62"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b0310d1a75ea21c927dd8615e48dc7f8b684a69d12d05f54cc6fdd45114cea8b",
+    "name": "github.com/blinklabs-io/gouroboros/vrf",
+    "ecosystem": "go",
+    "source": "source:234bc3a95cce93deb3680dd52d30670b37fbf7a6:.",
+    "artifactIds": [
+      "artifact:f78967c85d6bd520c8b145d5c48dd87447e356ea1f48dfbd19bd55b3f0eedfba"
+    ],
+    "versions": [
+      "v0.213.5"
+    ],
+    "impact": {
+      "artifactId": "project:b0310d1a75ea21c927dd8615e48dc7f8b684a69d12d05f54cc6fdd45114cea8b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -570561,6 +574908,27 @@
     }
   },
   {
+    "id": "project:29ee231d1a0567bf6b5f1c38126d503577ad4ea7a944cf8abbd20780731812b6",
+    "name": "lace-mobile",
+    "ecosystem": "npm",
+    "source": "source:e431933f34ec417996d9c28b7389e24c87868b1e:apps/lace-mobile",
+    "artifactIds": [
+      "artifact:490fa1b6dea7baa2e44c5971767fecf7b4f3156b9fcb02c8b947fcdbf55df4bf"
+    ],
+    "versions": [
+      "2.4.0"
+    ],
+    "impact": {
+      "artifactId": "project:29ee231d1a0567bf6b5f1c38126d503577ad4ea7a944cf8abbd20780731812b6",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:f79378c9779277f613081d74314751a72fd848affec591c3025c11792d01e0aa",
     "name": "language-subtag-registry",
     "ecosystem": "npm",
@@ -578994,6 +583362,27 @@
     }
   },
   {
+    "id": "project:70ce161080a84bdb3a2f4bb7cdf3f1dbf422c9a1a078f43b16ebeec7ecbabbf3",
+    "name": "masumi-payment-service",
+    "ecosystem": "npm",
+    "source": "source:8db9e6122bfd4303bb6e2b5740392f84a4b41ab8:.",
+    "artifactIds": [
+      "artifact:91f829fb3e96299b48d3d0f1c0c27e8008bed3b22f646c928fdd21ed9e0943b8"
+    ],
+    "versions": [
+      "0.1.0"
+    ],
+    "impact": {
+      "artifactId": "project:70ce161080a84bdb3a2f4bb7cdf3f1dbf422c9a1a078f43b16ebeec7ecbabbf3",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:8a077c3e43b3c01ccfba88d0f3a36e7e087a669e8e3aea72f99be6c7c305f280",
     "name": "matchdep",
     "ecosystem": "npm",
@@ -584396,6 +588785,27 @@
           "occurrence:eb3b90baf7caee723389fef6f9628bd67eaa6bdfe98585759479637989dfe816"
         ]
       }
+    }
+  },
+  {
+    "id": "project:83db156e6c9da818f8dad3f7fe9db4767a6dd7e35bd37aea5c0d889133d94591",
+    "name": "nami-wallet",
+    "ecosystem": "npm",
+    "source": "source:e52e0bdb02eb1ec224db26f48b0192685a30f99e:",
+    "artifactIds": [
+      "artifact:2e69f0928712bb4dcaefc8407b6c2c28cb8550a0b096f39273507695c18ae8df"
+    ],
+    "versions": [
+      "3.9.5"
+    ],
+    "impact": {
+      "artifactId": "project:83db156e6c9da818f8dad3f7fe9db4767a6dd7e35bd37aea5c0d889133d94591",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -590059,6 +594469,27 @@
     }
   },
   {
+    "id": "project:5e31d625ef8fcd2824bab98daa8958327246b5b59d1b4cacb3dd6d4fd8e38ef7",
+    "name": "opshin",
+    "ecosystem": "python",
+    "source": "source:515329f99b51e27c65492237200c8aafd802837d:.",
+    "artifactIds": [
+      "artifact:2f4c09e3cc3b64ceda36ae4df7f320f3562513e8fe61e5a05e18c23317be4243"
+    ],
+    "versions": [
+      "0.28.0"
+    ],
+    "impact": {
+      "artifactId": "project:5e31d625ef8fcd2824bab98daa8958327246b5b59d1b4cacb3dd6d4fd8e38ef7",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:d6f1195ea8d48ef08752b5d90530949946848927f63f660d3c9ed0f93ca5c0d2",
     "name": "optional-require",
     "ecosystem": "npm",
@@ -590504,6 +594935,27 @@
           "occurrence:e5706e6235474c9224328617116ef7404fa7eb60b9bf42737a60f24a7686aeb9"
         ]
       }
+    }
+  },
+  {
+    "id": "project:ecb2d89f05e793bbab47efe8b83f0515a3f56685b555c8641bf3b99a5262755b",
+    "name": "oura",
+    "ecosystem": "cargo",
+    "source": "source:6c326ddf3e010ee955cb45358dea7522dc75e331:./Cargo.toml",
+    "artifactIds": [
+      "artifact:6c83849a7dcd69c30eb52220590a4932d6320031819efe78d2d277cf1fb8d577"
+    ],
+    "versions": [
+      "2.2.0"
+    ],
+    "impact": {
+      "artifactId": "project:ecb2d89f05e793bbab47efe8b83f0515a3f56685b555c8641bf3b99a5262755b",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -595708,6 +600160,27 @@
           "occurrence:28d6d2bc5109e1b9e09005cddeca2263dd1da44f2a32244280a9617e64cb7645"
         ]
       }
+    }
+  },
+  {
+    "id": "project:96ebf25b907cac85e97c0bf9607da603fa8499d65a1a9cb0f1bac36f0148e5b4",
+    "name": "permission-wallet-dapp",
+    "ecosystem": "npm",
+    "source": "source:8e6fd820d21e901f019af71eec8150400b1e9669:code/dApp",
+    "artifactIds": [
+      "artifact:2979cbb0e7373fdfcb8bea0bc809ad964d7b234c705fe833c20d2a675bb118b9"
+    ],
+    "versions": [
+      "0.1.0"
+    ],
+    "impact": {
+      "artifactId": "project:96ebf25b907cac85e97c0bf9607da603fa8499d65a1a9cb0f1bac36f0148e5b4",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -603832,6 +608305,27 @@
           "occurrence:5f10758cfca102d432eba5720693f38dded2b5f5bb58701e3e13be1e32b1c4d2"
         ]
       }
+    }
+  },
+  {
+    "id": "project:15fbf049feb38c9c31a2416fe6d6d795efef27427cf360856b0238305edf77bc",
+    "name": "pycardano",
+    "ecosystem": "python",
+    "source": "source:0445f3079cb8b356f48c13e040d00e25326ce59e:.",
+    "artifactIds": [
+      "artifact:b869b0788e13086a2ca962360eaff70919bfe6e78e77dacf95e1296b8b7a1f1b"
+    ],
+    "versions": [
+      "0.19.2"
+    ],
+    "impact": {
+      "artifactId": "project:15fbf049feb38c9c31a2416fe6d6d795efef27427cf360856b0238305edf77bc",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -644941,6 +649435,27 @@
     }
   },
   {
+    "id": "project:281a3943e8777a15a6f6d21d94be25152a6756b6e27b33dee6df811dfe08ae5e",
+    "name": "veridian-wallet",
+    "ecosystem": "npm",
+    "source": "source:e93a56f54451cc386ba54dd1e8e5564a884b3593:",
+    "artifactIds": [
+      "artifact:b54775dee341daf19338054c0e6ecb66c8b1e2b63c40dcb581818de10a5971a3"
+    ],
+    "versions": [
+      "1.2.2"
+    ],
+    "impact": {
+      "artifactId": "project:281a3943e8777a15a6f6d21d94be25152a6756b6e27b33dee6df811dfe08ae5e",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
+    }
+  },
+  {
     "id": "project:14c6e47129592bb64a2cc19b43a8a7e3ab89d214fd8d724e973db30ee2030799",
     "name": "verror",
     "ecosystem": "npm",
@@ -646907,6 +651422,27 @@
           "occurrence:497e5fd7f0abb4eace60f59c03d99fe48a8946da09dde31f5ce50b42cbb06e48"
         ]
       }
+    }
+  },
+  {
+    "id": "project:39ac87a459857bcbeea761b098d0d0c1752e04a0ffed07ced3adb3f4839ebd76",
+    "name": "web",
+    "ecosystem": "npm",
+    "source": "source:0f908764db652adfb76348222235a809ed8797bb:apps/web",
+    "artifactIds": [
+      "artifact:32622cf043fdc2f965ba50674c276eb735cbec6be757b4aa1c6d60e46cf6f347"
+    ],
+    "versions": [
+      "0.1.0"
+    ],
+    "impact": {
+      "artifactId": "project:39ac87a459857bcbeea761b098d0d0c1752e04a0ffed07ced3adb3f4839ebd76",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {
@@ -652958,6 +657494,27 @@
           "occurrence:e4b9a73028dc3c4764a9dc13840583af10c63249a3c327433421d19c6c649afc"
         ]
       }
+    }
+  },
+  {
+    "id": "project:b0979c66e5dbbda169bd990100294505bc4015974fc5b0564bf08d11a5392ced",
+    "name": "yoroi-v2",
+    "ecosystem": "npm",
+    "source": "source:d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6:",
+    "artifactIds": [
+      "artifact:4915a1c2f1c7b046d99ec178e742e6742a36794431a1d9354a52ce7872d7ea1e"
+    ],
+    "versions": [
+      "7.0.4"
+    ],
+    "impact": {
+      "artifactId": "project:b0979c66e5dbbda169bd990100294505bc4015974fc5b0564bf08d11a5392ced",
+      "required": [],
+      "optional": [],
+      "build": [],
+      "development": [],
+      "potential": [],
+      "paths": {}
     }
   },
   {

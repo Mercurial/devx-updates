@@ -748,6 +748,50 @@ regression covers both receipt orders; follow-up review found no remaining issue
 This milestone implements section 7 / phase 5 under ADR-1/ADR-2. Catalog coverage,
 owner-launched consumer reviews and target-specific testing remain open.
 
+### Active continuation: investigation queue and work ownership
+
+Implement sections 4.4 and 8 and the phase-4/5 work-item requirements under
+ADR-1/ADR-2. Existing coverage and reach views did not provide prioritized
+component investigations or explicit ownership of unresolved work.
+
+- [x] Derive component tasks with visible capability/reach/uncertainty factors,
+  exact-root attribution, version-specific consumer paths and next actions.
+- [x] Add validated optional owner/issue assignments for coverage and component
+  tasks, retaining unmatched assignments for reconciliation.
+- [x] Export queues through `report` and expose filters, paths and assignments in
+  the static readiness explorer, without modifying readiness evidence.
+- [x] Verify behavior tests, real report generation, static build and desktop/
+  mobile browser flows; complete standards/specification review and commit.
+
+The initial assignment file is empty: no owner or maintainer agreement has been
+invented. No consumer review is launched by queue generation, and source fixes,
+compatibility findings, issue creation and outreach remain separate work.
+
+Verification checkpoint: all 87 readiness tests pass; TypeScript and readiness
+lint pass. Real report generation retains 1,803 coverage gaps and produces 14,295
+component investigations, including 217 collected-root groups that previously
+had no project entry. All 14,078 existing project reach/path records are unchanged.
+Every stored task/path reference resolves; the queue references `projects.json`
+instead of duplicating its full paths. The work report is approximately 20.9 MB.
+Canonical evidence, native profiles, capability findings and all seven pending
+review packet IDs remain unchanged.
+
+The production static build exports all 311 routes with `/devx-updates`. An
+earlier worker was killed during concurrent verification; rerunning the build
+alone succeeded. Chromium checks pass on the real export and a clearly isolated
+populated fixture: search, ownership/capability filters, issue links, consumer
+paths, retained unmatched assignments, downloads, empty results, pagination,
+base-path links, desktop/mobile layout and browser-console checks. Fixture setup
+errors were corrected before those passes; no synthetic results entered catalog
+data.
+
+Standards review's ranking-order duplication was resolved with a shared typed
+factor order. Specification review found that components with no downstream
+consumers were absent; collected roots now retain their tasks, exact profile
+evidence and uncertainty at zero reach. Both follow-up reviews have zero remaining
+findings. Broader catalog collection, owner-launched consumer reviews and Dijkstra
+target-specific assessment remain unfinished.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

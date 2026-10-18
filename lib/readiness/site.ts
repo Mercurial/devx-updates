@@ -4,6 +4,7 @@ import { calculateImpact, type compareSnapshots } from "./impact";
 import { readJson, Store } from "./store";
 import type { Snapshot } from "./types";
 import { reconcileReviewQueue, type ReviewQueueEntry } from "./review";
+import { parseAssignments } from "./work";
 
 let cached: Snapshot | undefined;
 let impacts: ReturnType<typeof calculateImpact> | undefined;
@@ -16,6 +17,10 @@ export function readinessSnapshot() {
 export function readinessImpacts() {
   impacts ??= calculateImpact(readinessSnapshot());
   return impacts;
+}
+
+export function readinessAssignments() {
+  return parseAssignments(readJson(join(process.cwd(), "content/readiness/work-assignments.json")));
 }
 
 export function reviewQueue(): { packetId: string; toolIds: string[]; status: string }[] {
