@@ -966,6 +966,52 @@ impact, work reports and all ten manual packet contexts are unchanged. Standards
 and specification reviews found no actionable findings. Broader source capture,
 native coverage, owner-run review decisions and Dijkstra assessment remain open.
 
+### Active continuation: enterprise and API application coverage
+
+The next phase-3 batch selects ODATANO's core service, Cardano MCP and Blockfrost
+RYO from immutable source revisions in `content/readiness/application-batch.json`.
+Their npm/Yarn source reconstructions add 3,014 occurrences and 5,674 edges:
+965/1,782 for ODATANO, 1,245/2,485 for Cardano MCP and 804/1,407 for RYO.
+Native coverage is now 39 of 269 tools across 43 profiles, with 56,410 occurrences,
+175,951 edges and 1,126 retained evidence objects. All three profiles remain partial;
+no consumer installation, build, deployment or compatibility test ran.
+
+ODATANO's source tag/manifest is 1.9.0 while the selected npm lock root remains
+1.7.10. Dependency declarations agree; the discrepancy is retained, not corrected.
+Its separate wallet/router applications, generated SAP models, native HSM bindings
+and configured chain services remain boundaries. Cardano MCP's 0.1.0 default-branch
+source retains external provider/indexer and invoked Aiken/WASM boundaries. RYO
+6.8.0 does not identify the hosted Blockfrost deployment; node/db-sync, database
+extensions, optional Mithril and built container inventories remain unresolved.
+
+The same inspection retains source for x402-cardano but creates no native profile.
+The inspected default branch contains upstream x402 documentation and an EVM/Solana
+core manifest. An explicit artifact gap requests the Cardano production branch,
+release and entry points; this is not an absence claim about the whole repository.
+Four pinned trees, 40 source files and four authored scope records preserve these
+choices under ADR-1/ADR-2. The refreshed lexical scan has 456 eligible files across
+36 tools and 1,075 leads; none becomes a verified integration or capability.
+
+Validation passes for all 43 profiles and 1,126 evidence objects. Offline replay
+reproduces every profile, and rerunning the batch attempts zero completed jobs.
+All 110 readiness tests pass. Existing manual review state is unchanged; no
+owner-controlled consumer review was launched. A temporary scope-retention helper
+hit its execution bound before saving; after its terminal result, the helper was
+made linear and resumed successfully without repeating native collection. Only
+unreferenced, untracked intermediate chunks were archived in ignored recovery
+storage; committed historical evidence remains intact.
+
+All 1,075 lexical quotes and UTF-16 locations match retained current-source bytes.
+Standards and specification reviews found no actionable findings. Production
+export passes all 349 routes with `/devx-updates` basePath, including TypeScript.
+Browser checks pass for all three profiles' exact roots, versions and graph export
+counts, their scope gaps, unresolved x402 coverage, navigation, mobile width and
+console errors. The build passed when run alone after a worker was killed during
+a concurrent optional whole-snapshot scan check; that optional check hit its time
+bound and was replaced with a lightweight exact-source citation check. Broader
+native coverage, manual review decisions and the exact Dijkstra target/environment
+remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

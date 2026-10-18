@@ -1,5 +1,38 @@
 # Selected catalog collections
 
+## Enterprise and API application batch
+
+`application-batch.json` adds three production service roots: enterprise
+transaction/query access, an MCP server, and a self-hosted chain-data API.
+Selections use already discovered immutable source revisions and retain complete
+lock inputs. No package installation or application scripts run.
+
+| Consumer | Selected production root | Source/configuration caveat |
+| --- | --- | --- |
+| ODATANO | `@odatano/core`, npm root `.` | Tag/manifest 1.9.0 versus lock root 1.7.10; runtime, optional, development and peer declarations agree. Preserve the lock version. Router and wallet applications, generated CDS models, SAP deployment, HSM/native PKCS#11 artifacts and configured chain backends remain separate boundaries. |
+| Cardano MCP | `cardano-mcp` | Manifest 0.1.0 on default-branch source; Yarn 1.22.22 / Classic v1 lock. Demo/documentation roots are excluded. External providers/indexers, the invoked Aiken executable, serialization WASM and supported release/deployment mapping remain unresolved. |
+| Blockfrost RYO | `blockfrost-backend-ryo` | Tag/manifest 6.8.0; Yarn 3.6.3 / metadata v6. This is the RYO service source, not an identified hosted Blockfrost deployment. Node/db-sync, PostgreSQL extensions, token metadata, optional Mithril and built container/Nix inventories require separate evidence. |
+
+All profiles use `all-lockfile-targets` and remain partial source reconstructions.
+Retained source and authored gaps record the production configuration and artifact
+boundaries. They establish no capability or compatibility findings.
+
+The same inspection considered `x402-cardano`. Its discovered default-branch source
+has an upstream x402 README and core TypeScript `x402` 0.6.6 manifest with EVM/Solana
+dependencies. A Cardano-specific production root/release has not been verified, so
+no generic root/example lock substitutes for that scope. Retained manifests and an
+artifact gap request the correct branch/release and entry points before collection.
+Original Lucid remains excluded from standalone collection.
+
+```sh
+node --import tsx scripts/readiness/cli.ts collect-batch --input content/readiness/application-batch.json --limit 3
+```
+
+Successful requests register for refresh. Existing owner-run review packets are
+independent; this batch does not launch reviews or infer service relationships.
+
+## Initial catalog batch
+
 `catalog-batch.json` records explicit source/configuration choices for a bounded
 phase-3 rollout. Revisions come from the existing discovery snapshot. Package
 names and lock formats were checked in manifests at those exact revisions.

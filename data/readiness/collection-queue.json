@@ -566,6 +566,63 @@
       "attemptedAt": "2026-10-18T18:11:12.519Z",
       "profileId": "profile:sokosumi:378b837174d64744243e8d78",
       "succeededAt": "2026-10-18T18:11:23.593Z"
+    },
+    {
+      "id": "collection:a219d01a4d7683d2c432cb659024268ab690be501181df9bef608173488fcf7d",
+      "request": {
+        "toolId": "odatano",
+        "revision": "72954d36d871595345338c76da9956a775521062",
+        "adapter": "npm-lock",
+        "roots": [
+          "@odatano/core"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "."
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T20:23:41.628Z",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66",
+      "succeededAt": "2026-10-18T20:23:57.377Z"
+    },
+    {
+      "id": "collection:c2f618cfd7aa020ec142c27727feb35e1a70e5ce7d996b7723ffe3c23dc883f2",
+      "request": {
+        "toolId": "cardano-mcp",
+        "revision": "9fe85c6552770915b767c966b3663234b22674e2",
+        "adapter": "yarn-lock",
+        "roots": [
+          "cardano-mcp"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "yarn.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T20:23:57.377Z",
+      "profileId": "profile:cardano-mcp:b3ef6761920b79e0c6b2673a",
+      "succeededAt": "2026-10-18T20:24:15.919Z"
+    },
+    {
+      "id": "collection:ed0c99c17d19909d00ecbda93f5aa5380fa018d4fc9b06a2e9dd4da86bb4aa88",
+      "request": {
+        "toolId": "blockfrost-backend-ryo",
+        "revision": "6d0000098ac865ebad3910732427f55bbb65fe9d",
+        "adapter": "yarn-lock",
+        "roots": [
+          "blockfrost-backend-ryo"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "yarn.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T20:24:15.920Z",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7",
+      "succeededAt": "2026-10-18T20:24:28.864Z"
     }
   ]
 }

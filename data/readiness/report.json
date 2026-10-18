@@ -1,12 +1,12 @@
 {
-  "snapshot": "413d3e3de47bdffc067d91fdec95be12776ab967fd8b9f67fc019959ea338cb6",
+  "snapshot": "a4542a40e39f377a5e03467b0dc1c3183582132605978827e82237e6706231d1",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 36,
-  "profiles": 40,
+  "withProfiles": 39,
+  "profiles": 43,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 233,
+  "unresolvedTools": 230,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -1112,6 +1112,30 @@
     },
     {
       "toolId": "blockfrost-backend-ryo",
+      "id": "gap:0c3862b95f6b2737c8fa94ff",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares plugins; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:1181110efc937467320ee99b",
+      "area": "resolution",
+      "reason": "Yarn source typescript@patch:typescript@npm%3A5.9.3#~builtin<compat/typescript>::version=5.9.3&hash=f3b441 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:1921259e024e334d6073ba19",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -1120,11 +1144,36 @@
     },
     {
       "toolId": "blockfrost-backend-ryo",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2456814604d57cbf9e700d5f",
+      "area": "artifact",
+      "reason": "Blockfrost RYO tag and manifest agree on 6.8.0; the retained project declares Yarn 3.6.3 with lock metadata v6. This source reconstruction does not identify a deployed Blockfrost hosted API or a built RYO container/Nix artifact.",
+      "nextAction": "Verify the specific RYO release artifact and deployment configuration; keep hosted Blockfrost service identity separate.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7",
+      "code": "application-scope:blockfrost-backend-ryo:artifact"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:4ddb5ba8186a4fd2907b770b",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn source resolve@patch:resolve@npm%3A1.22.11#~builtin<compat/resolve>::version=1.22.11&hash=c3c19d needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:579cf7b507f0109baabd857e",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:69cd126220a1e84348434baa",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
     },
     {
       "toolId": "blockfrost-backend-ryo",
@@ -1132,6 +1181,31 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:e9440fb3e16294cc2e484e6a",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:f919933aafc583117e73c561",
+      "area": "resolution",
+      "reason": "38 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7"
+    },
+    {
+      "toolId": "blockfrost-backend-ryo",
+      "id": "gap:fcefa20ed72da693df0eddfa",
+      "area": "integration",
+      "reason": "Retained README/configuration describe cardano-db-sync/PostgreSQL, node data, off-chain token metadata and optional Mithril proxying; the README also calls for pg_cardano database extensions. Those services, extensions and container/Nix inputs have no inventories in this Yarn profile.",
+      "nextAction": "Collect database extension, node/db-sync and enabled provider/image identities for the selected RYO deployment before compatibility assessment.",
+      "profileId": "profile:blockfrost-backend-ryo:b918679eea786362ad36bbe7",
+      "code": "application-scope:blockfrost-backend-ryo:integration"
     },
     {
       "toolId": "blockfrost-cardano-cli",
@@ -3387,6 +3461,15 @@
     },
     {
       "toolId": "cardano-mcp",
+      "id": "gap:3f2b8b13328e151c7a865a83",
+      "area": "integration",
+      "reason": "Retained server configuration names Blockfrost, Koios, Maestro, Kupo and Yaci Store endpoints. Contract-module source invokes an external Aiken executable. Their selected deployments, Aiken/compiler inputs and serialization WASM correspondence are outside the Yarn closure; source module names are not accepted capability findings.",
+      "nextAction": "Capture selected providers/indexers and Aiken/WASM artifact identities, then manually review enabled MCP workflows and transaction/governance behavior.",
+      "profileId": "profile:cardano-mcp:b3ef6761920b79e0c6b2673a",
+      "code": "application-scope:cardano-mcp:integration"
+    },
+    {
+      "toolId": "cardano-mcp",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -3394,11 +3477,20 @@
     },
     {
       "toolId": "cardano-mcp",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:85229cad4307fa51cff290a4",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-mcp:b3ef6761920b79e0c6b2673a"
+    },
+    {
+      "toolId": "cardano-mcp",
+      "id": "gap:c098ea2151214bfd0cfabcb0",
+      "area": "artifact",
+      "reason": "The selected cardano-mcp manifest is 0.1.0 on discovered default-branch source, with Yarn 1.22.22 / Classic v1 lock. No stable release or distributed server artifact was identified. The demo app and documentation project are not selected roots.",
+      "nextAction": "Verify the intended supported MCP server release and published/deployed source correspondence.",
+      "profileId": "profile:cardano-mcp:b3ef6761920b79e0c6b2673a",
+      "code": "application-scope:cardano-mcp:artifact"
     },
     {
       "toolId": "cardano-multiplatform-lib-cml",
@@ -10443,11 +10535,52 @@
     },
     {
       "toolId": "odatano",
+      "id": "gap:04778d645246eafebee741d7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @sap/hana-client from node_modules/@sap/cds-dk/node_modules/@sap/hdi has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:0559aace7e052b3b063d46f9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies undici from node_modules/http-cookie-agent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:05e87d97016821b876c61bc1",
+      "area": "integration",
+      "reason": "Retained source documents configurable Blockfrost/Koios/Ogmios backends and external/HSM signing. Compose supplies a Preview development stack with node/Ogmios images; it does not identify a production deployment. Hosted providers, SAP HANA/XSUAA, hardware module/device and container inventories remain opaque boundaries.",
+      "nextAction": "Capture the actual production service, signer, database and image configuration, then manually review applicable transaction/query/signing workflows.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66",
+      "code": "application-scope:odatano:integration"
+    },
+    {
+      "toolId": "odatano",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:0efab9c43cab0a1b915be3d9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sql.js from node_modules/@sap/cds-dk/node_modules/@cap-js/sqlite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:156fc7f8b8ebd54ba34401d6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
     },
     {
       "toolId": "odatano",
@@ -10459,11 +10592,141 @@
     },
     {
       "toolId": "odatano",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2c6f23acb3aff65f378e4a51",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:35f82b94d3565d32ae7859ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/core from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:449c51faad091bb187cc9b16",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/@sap/cds-dk/node_modules/eslint has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:4a025294b8f839a3ef526b82",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:4eec66d9a7a2d11bebd5344c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/@sap/cds-dk/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:5aa33462787078ebb26f32b6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:62f53ac74857fb10e219b511",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tar from node_modules/@sap/cds-dk/node_modules/@sap/cds has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:715c541f4b36e38217085276",
+      "area": "resolution",
+      "reason": "Only the @odatano/core root is selected. The app/router workspace is retained but not selected as a production root; app/wallet has a separate package/lock and is outside this profile. Generated CDS models, SAP host configuration and installed native/optional PKCS#11 artifacts remain unresolved.",
+      "nextAction": "Collect separate router/wallet production profiles and generated/native build inventories where those workflows are deployed.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66",
+      "code": "application-scope:odatano:resolution"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:7cbc3d3e5150ccbc796f9d21",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:7eb29573795620325232acb1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/eslint has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:8390edcf0a1dae3f03519c86",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:8d983d86da9c2426cc98140d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/wasm from node_modules/ts-node has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:90495715db68678c6786fd6b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:90fab887f7a4537754dac84c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tar from node_modules/@sap/cds has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:b5634f9264837cc1e3ef26e8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @sap/hana-client from node_modules/@cap-js/hana has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:bd5aa0647a7faa645c6f7029",
+      "area": "artifact",
+      "reason": "ODATANO tag and @odatano/core manifest are 1.9.0 while the committed npm lock root is 1.7.10. Runtime, optional, development and peer dependency declarations agree. Preserve both versions; no published plugin or deployed artifact correspondence is established.",
+      "nextAction": "Verify the release lock/build provenance and published @odatano/core artifact before treating the selected source as a shipped version.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66",
+      "code": "application-scope:odatano:artifact"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:c5336d48152b1346507ff886",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sql.js from node_modules/@cap-js/sqlite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
     },
     {
       "toolId": "odatano",
@@ -10471,6 +10734,46 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:d80b9c2eec404095176ea553",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:da760d96a91e8018d65ab72f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:e9b0df4bc8b190a18f370b01",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/@sap/cds-dk/node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:f43dfa6aeb55c1945edc6069",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
+    },
+    {
+      "toolId": "odatano",
+      "id": "gap:f6c568bf4ee49ee7ad9bc3ad",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @sap/hana-client from node_modules/@sap/cds-dk/node_modules/@sap/hdi-deploy has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:odatano:2b2446d59a423953a0b79f66"
     },
     {
       "toolId": "offchain-metadata-tools",
@@ -13520,6 +13823,14 @@
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "x402-cardano",
+      "id": "gap:b28698659fd260309c32cfe7",
+      "area": "artifact",
+      "reason": "The discovered masumi-network/x402-cardano default-branch revision has an upstream x402 README and core TypeScript x402 0.6.6 manifest declaring EVM/Solana dependencies. The inspected manifests do not establish the Cardano production root or its source/release mapping. No incidental root/example lock was substituted as Cardano coverage.",
+      "nextAction": "Verify the Cardano-specific branch/release and production package entry points, then submit a pinned collection request for that scope.",
+      "code": "application-scope:x402-cardano:artifact"
     },
     {
       "toolId": "x402-cardano",
