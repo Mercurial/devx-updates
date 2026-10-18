@@ -1,10 +1,11 @@
 {
-  "snapshot": "6a4a17986b699ab52755530dd2fa1494364ece337d6099c342fbeb508b161c85",
+  "snapshot": "de734a0479c8215ff30c3647b450df34d688f125cfec5462c5554152decd736b",
   "tools": 269,
   "discovered": 227,
   "withProfiles": 21,
   "profiles": 25,
   "completeProfiles": 5,
+  "capabilityFindings": [],
   "unresolvedTools": 248,
   "gaps": [
     {

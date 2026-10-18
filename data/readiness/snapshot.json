@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "6a4a17986b699ab52755530dd2fa1494364ece337d6099c342fbeb508b161c85",
-    "generatedAt": "2026-10-18T15:06:46.711Z",
+    "semanticDigest": "de734a0479c8215ff30c3647b450df34d688f125cfec5462c5554152decd736b",
+    "generatedAt": "2026-10-18T15:33:14.056Z",
     "tools": [
       {
         "id": "1694-io",
@@ -7383,6 +7383,9 @@
           "evidence:2799f0ee64aa6ba10654ac0c6754b408e0f85fb5345b5154d7e01920d875dc1e",
           "evidence:2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
           "evidence:4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
+          "evidence:6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1",
+          "evidence:72f0ab9e2b0b04a423ca88cd0b0023532069c1acb91d356b6c80e9c6596550df",
+          "evidence:85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8",
           "evidence:8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a",
           "evidence:c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72",
           "evidence:c9e6ad9288af81d423b349bf7239690b790c4c0e6ad654b548e76aec34943c6a",
@@ -9845,15 +9848,18 @@
           "tests/test-metadata-api/yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
           "evidence:1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
           "evidence:1fccbc899426e0a1e47fb830559e28f2f16d3fa0ae531310350f19e7830b0527",
           "evidence:278aa8694b98faa252df78a7be51d167e17dee4079d7e3775b718b449223f7e2",
           "evidence:3e958d811a8a053ed1d8ebb0633545a9519dc0caf2f20cedfe66cf33bfb9346c",
+          "evidence:6f3b32b9ceec1b335ad47b351c5e5a2cb2fb8d9445881f3417e88c66f8d0989d",
           "evidence:72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b",
           "evidence:7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
           "evidence:9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d",
           "evidence:ab81ab9e255bf367eb5b64e82b64c161c996a2ffbd82faf646a9c902255d8bb2",
-          "evidence:bf5dff245db13456b329264972c72f08205c1488920d4c807c814d9dbc90fa0a"
+          "evidence:bf5dff245db13456b329264972c72f08205c1488920d4c807c814d9dbc90fa0a",
+          "evidence:e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184"
         ],
         "gaps": [
           {
@@ -12036,10 +12042,14 @@
         ],
         "evidenceIds": [
           "evidence:1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
+          "evidence:238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450",
           "evidence:2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976",
+          "evidence:80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec",
           "evidence:8539a1ad6e1f22d11bb958416bc3b69b7b2766c701de127d46660fb6918643ff",
           "evidence:8542c4f0610774d8385c110691fb1990ca56957e8eacc058ffa084220e87c5a7",
+          "evidence:879e1af0babe866e12fe093d04726fec94303ea74e5c017a7aa7c3e134b2af70",
           "evidence:93c76b88bd6d55514a86823dca52b99c1dd823383f4eed63b714fb2df441368a",
+          "evidence:9ce3e8bc85897b035304dd72ed975316195b2ef353734486dc35f267eaee6b1f",
           "evidence:aba59b1cda826346a61ec0ed2c56dde4b6c65cb31bb3e2051bdf83c562f4aafd",
           "evidence:b1ac7a6d01e9c96b0c146dc1d434d6ab78032840b7c55a66019d702d7529b630",
           "evidence:b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802"
@@ -19592,6 +19602,8 @@
           "evidence:20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6",
           "evidence:3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
           "evidence:4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+          "evidence:553b1dccc309d6c094bd6a8113396e9d2e6691ee04e25c47c4b0ed09fbbbc763",
+          "evidence:5a4169d6220c2ff24a52ddead6edf4dcee8817ddd2a793b7b8be4110eabbdab2",
           "evidence:9b085ba3268d97639db58996ea7ce5049f13c0a2ab590592c006e59cb675af13",
           "evidence:a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
           "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
@@ -19601,7 +19613,8 @@
           "evidence:c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541",
           "evidence:cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
           "evidence:d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb",
-          "evidence:d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c"
+          "evidence:d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c",
+          "evidence:e50cf62ad5002551a2b7f9bbe33e1c1b8cd139a8463d18fbd4f48bbb20d0f284"
         ],
         "gaps": [
           {
@@ -23008,6 +23021,13 @@
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331"
       },
       {
+        "id": "evidence:14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
+        "digest": "14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe",
+        "path": "evidence/14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe.json.gz",
+        "description": "Source govtool/govtool/frontend/src/hooks/forms/useVoteActionForm.tsx",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/src/hooks/forms/useVoteActionForm.tsx"
+      },
+      {
         "id": "evidence:1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
         "digest": "1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f",
         "path": "evidence/1528306d07f5d8f4a598e7623b8109e903f1652c7e6ed79837756d47cd0dc35f.json.gz",
@@ -23261,6 +23281,13 @@
         "path": "evidence/236a0110a29b11873f31a740071804ff939a0f750ae6167de0de765694e1e42c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/dcSpark/cddl-codegen/tree/24b866a4b063230edd4b047782fd8ab8d713ed18"
+      },
+      {
+        "id": "evidence:238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450",
+        "digest": "238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450",
+        "path": "evidence/238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450.json.gz",
+        "description": "Source lace/apps/lace-sdk/src/sign-cardano-tx.ts",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-sdk/src/sign-cardano-tx.ts"
       },
       {
         "id": "evidence:24638d7a6466c5061a4f09c5c3f304bf6512f0414999205cf8d0e04136857b6f",
@@ -24069,6 +24096,13 @@
         "description": "Failed native collection for adalite"
       },
       {
+        "id": "evidence:553b1dccc309d6c094bd6a8113396e9d2e6691ee04e25c47c4b0ed09fbbbc763",
+        "digest": "553b1dccc309d6c094bd6a8113396e9d2e6691ee04e25c47c4b0ed09fbbbc763",
+        "path": "evidence/553b1dccc309d6c094bd6a8113396e9d2e6691ee04e25c47c4b0ed09fbbbc763.json.gz",
+        "description": "Source typhonjs/src/index.ts",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/src/index.ts"
+      },
+      {
         "id": "evidence:55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c",
         "digest": "55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c",
         "path": "evidence/55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c.json.gz",
@@ -24130,6 +24164,13 @@
         "path": "evidence/5a2791106e23375b8d17e3e6b9de9c4b5ce6e9c77e81fbf7594f5e7b0834efd2.json.gz",
         "description": "Native input lucid-evolution/packages/cml/package.json",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/cml/package.json"
+      },
+      {
+        "id": "evidence:5a4169d6220c2ff24a52ddead6edf4dcee8817ddd2a793b7b8be4110eabbdab2",
+        "digest": "5a4169d6220c2ff24a52ddead6edf4dcee8817ddd2a793b7b8be4110eabbdab2",
+        "path": "evidence/5a4169d6220c2ff24a52ddead6edf4dcee8817ddd2a793b7b8be4110eabbdab2.json.gz",
+        "description": "Source typhonjs/src/transaction/helpers/transactionBuilder.ts",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/src/transaction/helpers/transactionBuilder.ts"
       },
       {
         "id": "evidence:5a49c9f637cb0f740be07574d051e6b70f3d40860aaf463fe5b64ef889566098",
@@ -24393,6 +24434,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/dingo/tree/e0630ddf8a72dc0280ed8845fb1d899fae2d1051"
       },
       {
+        "id": "evidence:6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1",
+        "digest": "6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1",
+        "path": "evidence/6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1.json.gz",
+        "description": "Source cometa-js/src/index.ts",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/src/index.ts"
+      },
+      {
         "id": "evidence:6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d",
         "digest": "6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d",
         "path": "evidence/6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d.json.gz",
@@ -24453,6 +24501,13 @@
         "path": "evidence/6f2e80912f782e14f39fec23512862be0f5a091e4708658b494c5e1c5c06dfdf.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/vacuumlabs/cardano-crypto.js/tree/61adcedba42bb324456b96d60af3d4d46c2de328"
+      },
+      {
+        "id": "evidence:6f3b32b9ceec1b335ad47b351c5e5a2cb2fb8d9445881f3417e88c66f8d0989d",
+        "digest": "6f3b32b9ceec1b335ad47b351c5e5a2cb2fb8d9445881f3417e88c66f8d0989d",
+        "path": "evidence/6f3b32b9ceec1b335ad47b351c5e5a2cb2fb8d9445881f3417e88c66f8d0989d.json.gz",
+        "description": "Source govtool/govtool/frontend/src/services/requests/postDRepVote.ts",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/src/services/requests/postDRepVote.ts"
       },
       {
         "id": "evidence:6f483d0c3df39770c27d64720d3636ce91c9c175450a5374be7a917d308a08f6",
@@ -24530,6 +24585,13 @@
         "path": "evidence/72e4e2fcdfc45650597bb34abeb7de2de8f7cae18f16783be5d8fcb4550d787b.json.gz",
         "description": "Source govtool/govtool/frontend/package.json",
         "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/package.json"
+      },
+      {
+        "id": "evidence:72f0ab9e2b0b04a423ca88cd0b0023532069c1acb91d356b6c80e9c6596550df",
+        "digest": "72f0ab9e2b0b04a423ca88cd0b0023532069c1acb91d356b6c80e9c6596550df",
+        "path": "evidence/72f0ab9e2b0b04a423ca88cd0b0023532069c1acb91d356b6c80e9c6596550df.json.gz",
+        "description": "Source cometa-js/src/txBuilder/TransactionBuilder.ts",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/src/txBuilder/TransactionBuilder.ts"
       },
       {
         "id": "evidence:730ab82d57daf25b4375363cb991c7b79f59b6b61093cc2fefac96d32774b80c",
@@ -24732,6 +24794,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
       },
       {
+        "id": "evidence:80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec",
+        "digest": "80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec",
+        "path": "evidence/80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec.json.gz",
+        "description": "Source lace/apps/lace-sdk/src/submit-cardano-tx.ts",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-sdk/src/submit-cardano-tx.ts"
+      },
+      {
         "id": "evidence:801f00b00391b3dd8dafd6cc7cabcf23dd7bd21d7200ba7ad96f742d06137e1a",
         "digest": "801f00b00391b3dd8dafd6cc7cabcf23dd7bd21d7200ba7ad96f742d06137e1a",
         "path": "evidence/801f00b00391b3dd8dafd6cc7cabcf23dd7bd21d7200ba7ad96f742d06137e1a.json.gz",
@@ -24851,6 +24920,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/midgard/tree/41284d8974568f47ef35cb96e23acbf1b56894c2"
       },
       {
+        "id": "evidence:85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8",
+        "digest": "85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8",
+        "path": "evidence/85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8.json.gz",
+        "description": "Source cometa-js/src/wallet/Wallet.ts",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/src/wallet/Wallet.ts"
+      },
+      {
         "id": "evidence:860b17d8012a5111bcc2f4484ec0f55862fb57303e51c307c4c2fb4be655172a",
         "digest": "860b17d8012a5111bcc2f4484ec0f55862fb57303e51c307c4c2fb4be655172a",
         "path": "evidence/860b17d8012a5111bcc2f4484ec0f55862fb57303e51c307c4c2fb4be655172a.json.gz",
@@ -24912,6 +24988,13 @@
         "path": "evidence/8783f03ae4ed16dbdaf8e02f41a23e5bb8d6ffda762bd4b410924d1c4b2bc191.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/utxorpc/spec/tree/8ff8bf3bebe1e77c2defc413f07407293bbcf48d"
+      },
+      {
+        "id": "evidence:879e1af0babe866e12fe093d04726fec94303ea74e5c017a7aa7c3e134b2af70",
+        "digest": "879e1af0babe866e12fe093d04726fec94303ea74e5c017a7aa7c3e134b2af70",
+        "path": "evidence/879e1af0babe866e12fe093d04726fec94303ea74e5c017a7aa7c3e134b2af70.json.gz",
+        "description": "Source lace/apps/lace-mobile/src/app/load-app.ts",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/src/app/load-app.ts"
       },
       {
         "id": "evidence:881c34aeacd00f7657746004c124c4460ba8657b0f4caf84f1c31d1db5c9f662",
@@ -25311,6 +25394,13 @@
         "path": "evidence/9c89c5f8d58e0b051954615afc625422a52b196b3488edef7f0888dc0f8f78c4.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/telchar/tree/20efba60947d04ee22430ded3efa74e3f19eeced"
+      },
+      {
+        "id": "evidence:9ce3e8bc85897b035304dd72ed975316195b2ef353734486dc35f267eaee6b1f",
+        "digest": "9ce3e8bc85897b035304dd72ed975316195b2ef353734486dc35f267eaee6b1f",
+        "path": "evidence/9ce3e8bc85897b035304dd72ed975316195b2ef353734486dc35f267eaee6b1f.json.gz",
+        "description": "Source lace/apps/lace-mobile/src/app/util/all-modules.ts",
+        "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/src/app/util/all-modules.ts"
       },
       {
         "id": "evidence:9d1699a4796c7fc8ff05c703d3f269b4cf08eecedaf9b5e6e28d160a292d7d2d",
@@ -26692,6 +26782,13 @@
         "sourceUrl": "https://github.com/minswap/sdk/blob/19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528/package.json"
       },
       {
+        "id": "evidence:e50cf62ad5002551a2b7f9bbe33e1c1b8cd139a8463d18fbd4f48bbb20d0f284",
+        "digest": "e50cf62ad5002551a2b7f9bbe33e1c1b8cd139a8463d18fbd4f48bbb20d0f284",
+        "path": "evidence/e50cf62ad5002551a2b7f9bbe33e1c1b8cd139a8463d18fbd4f48bbb20d0f284.json.gz",
+        "description": "Source typhonjs/src/transaction/Transaction.ts",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/src/transaction/Transaction.ts"
+      },
+      {
         "id": "evidence:e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47",
         "digest": "e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47",
         "path": "evidence/e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47.json.gz",
@@ -26767,6 +26864,13 @@
         "path": "evidence/e8ab5767c7ab8d37605ca3a0908d8199cdc1cc60647659cbdc85cd62e1032ea6.json.gz",
         "description": "npm-lock for meshjs-mesh-sdk 1.9.0",
         "sourceUrl": "https://github.com/MeshJS/mesh/tree/3df879e48f400f19eea0ebddfb00099b0809f484"
+      },
+      {
+        "id": "evidence:e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184",
+        "digest": "e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184",
+        "path": "evidence/e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184.json.gz",
+        "description": "Source govtool/govtool/frontend/src/context/wallet.tsx",
+        "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/src/context/wallet.tsx"
       },
       {
         "id": "evidence:e95e53ae6a13b4a7fd133b4287f148718d6dae511d338ac076886f1468bd4460",

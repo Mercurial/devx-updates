@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "taskBriefVersion": 2,
+  "packets": [
+    {
+      "toolId": "lace",
+      "revision": "e431933f34ec417996d9c28b7389e24c87868b1e",
+      "sources": [
+        {
+          "path": "apps/lace-mobile/src/app/util/all-modules.ts",
+          "evidenceId": "evidence:9ce3e8bc85897b035304dd72ed975316195b2ef353734486dc35f267eaee6b1f"
+        },
+        {
+          "path": "apps/lace-mobile/src/app/load-app.ts",
+          "evidenceId": "evidence:879e1af0babe866e12fe093d04726fec94303ea74e5c017a7aa7c3e134b2af70"
+        },
+        {
+          "path": "apps/lace-sdk/src/sign-cardano-tx.ts",
+          "evidenceId": "evidence:238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450"
+        },
+        {
+          "path": "apps/lace-sdk/src/submit-cardano-tx.ts",
+          "evidenceId": "evidence:80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec"
+        }
+      ],
+      "packetId": "packet:9f8d8e5a058726226cd51bc4653d0b526b18bfd230ae70f09be61f427836c068",
+      "profileIds": [
+        "profile:lace:df2b413cb6eca9dc9fbd42bf"
+      ],
+      "output": ".readiness/reviews/capabilities/lace"
+    },
+    {
+      "toolId": "govtool",
+      "revision": "993d25ab42b6565a95aaa82ef297ac5053b3fb3e",
+      "sources": [
+        {
+          "path": "govtool/frontend/src/context/wallet.tsx",
+          "evidenceId": "evidence:e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184"
+        },
+        {
+          "path": "govtool/frontend/src/hooks/forms/useVoteActionForm.tsx",
+          "evidenceId": "evidence:14f3ba5c6f0264aa07f721df1bc37b3e03cd588eeed1994d6d7a3a5f84060cfe"
+        },
+        {
+          "path": "govtool/frontend/src/services/requests/postDRepVote.ts",
+          "evidenceId": "evidence:6f3b32b9ceec1b335ad47b351c5e5a2cb2fb8d9445881f3417e88c66f8d0989d"
+        }
+      ],
+      "packetId": "packet:35fae966f85075b51a293c94f73794b724a50972186f544938e0871348331e2d",
+      "profileIds": [
+        "profile:govtool:61a7467db993f628223475ee"
+      ],
+      "output": ".readiness/reviews/capabilities/govtool"
+    },
+    {
+      "toolId": "typhonjs",
+      "revision": "7190c3c67e9dc7be284842e89f06ed848b748ed2",
+      "sources": [
+        {
+          "path": "src/index.ts",
+          "evidenceId": "evidence:553b1dccc309d6c094bd6a8113396e9d2e6691ee04e25c47c4b0ed09fbbbc763"
+        },
+        {
+          "path": "src/transaction/Transaction.ts",
+          "evidenceId": "evidence:e50cf62ad5002551a2b7f9bbe33e1c1b8cd139a8463d18fbd4f48bbb20d0f284"
+        },
+        {
+          "path": "src/transaction/helpers/transactionBuilder.ts",
+          "evidenceId": "evidence:5a4169d6220c2ff24a52ddead6edf4dcee8817ddd2a793b7b8be4110eabbdab2"
+        }
+      ],
+      "packetId": "packet:8df0b6cf16bac8a4a5d3d930b881a0250eb3dc806cfa939bceda56aaddac5be0",
+      "profileIds": [
+        "profile:typhonjs:0fa38ad96bdd38e0564d95d4",
+        "profile:typhonjs:5958bba13a88b8790661b312"
+      ],
+      "output": ".readiness/reviews/capabilities/typhonjs"
+    },
+    {
+      "toolId": "cometa-js",
+      "revision": "15f0862128fd49fa3eecd4f4e2a118e60c865cde",
+      "sources": [
+        {
+          "path": "src/index.ts",
+          "evidenceId": "evidence:6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1"
+        },
+        {
+          "path": "src/txBuilder/TransactionBuilder.ts",
+          "evidenceId": "evidence:72f0ab9e2b0b04a423ca88cd0b0023532069c1acb91d356b6c80e9c6596550df"
+        },
+        {
+          "path": "src/wallet/Wallet.ts",
+          "evidenceId": "evidence:85ad5183d94fd190f5e92f43917a5286c7d6b3c32b83441e55239f0bbd54f5f8"
+        }
+      ],
+      "packetId": "packet:af2be52705dda34114598e5c062af5c045a2c25a3d6d1106da4ef2086fd42448",
+      "profileIds": [
+        "profile:cometa-js:966dc9baa6f8b89c653713f9"
+      ],
+      "output": ".readiness/reviews/capabilities/cometa-js"
+    }
+  ]
+}

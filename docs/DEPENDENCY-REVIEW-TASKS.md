@@ -122,7 +122,7 @@ Use stable finding IDs scoped to the packet. The following is an illustrative re
 
 ```yaml
 packetId: <packet-id>
-taskBriefVersion: 1
+taskBriefVersion: 2
 findings:
   - id: <packet-id>:finding-001
     kind: relationship

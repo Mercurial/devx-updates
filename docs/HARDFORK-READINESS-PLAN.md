@@ -252,10 +252,10 @@ structured capability findings across manual import, evidence/decision history,
 reports, filters and tool details. This follows ADR-1/ADR-2: collection and review
 remain offline, with the site reading retained data at build time.
 
-- [ ] Add profile-scoped capability findings, checked source citations, explicit verification decisions, history, stale-source handling and replayable storage.
-- [ ] Expose capability findings and filters in static reports, tool pages, snapshot comparisons and JSON exports.
-- [ ] Prepare pinned source packets for Lace mobile, GovTool frontend, TyphonJS and Cometa; retain pending owner-launched reviews without inventing findings.
-- [ ] Validate behavior, review implementation, check static export/browser flows, and commit the milestone locally.
+- [x] Add profile-scoped capability findings, checked source citations, explicit verification decisions, history, stale-source handling and replayable storage.
+- [x] Expose capability findings and filters in static reports, tool pages, snapshot comparisons and JSON exports.
+- [x] Prepare pinned source packets for Lace mobile, GovTool frontend, TyphonJS and Cometa; retain pending owner-launched reviews without inventing findings.
+- [x] Validate behavior, review implementation, check static export/browser flows, and commit the milestone locally.
 
 Capability vocabulary covers transaction construction, serialization, script
 compilation/evaluation, synchronization/decoding, query, submission, signing,
@@ -263,6 +263,51 @@ wallet integration and governance. Findings default to suggested; exact citation
 do not establish semantic truth. Only explicit evidence decisions verify claims.
 Coverage stays partial, historical profiles retain their source identity, and
 readiness stays unassessed. Target-specific compatibility remains out of scope.
+
+Implementation checkpoint: structured capability findings require a native profile
+and checked source citation at that profile's revision. Scope and conditions form
+part of their identity; suggested/verified/disputed/rejected states retain explicit
+decision history. Changed source is labeled historical rather than carrying claims
+forward. Import remains transactional and idempotent; retained submissions replay
+from their original packet state. Native rebuild refuses to discard capability
+decisions. Existing snapshots without capability fields retain their digest.
+
+Handoff checkpoint: four version-2 packets for Lace mobile, GovTool frontend,
+TyphonJS and Cometa are pending. Thirteen additional source files are retained at
+their exact revisions. `content/readiness/capability-reviews.json` records packet,
+profile and evidence IDs; its companion Markdown provides scope questions and
+offline regeneration commands. No manual discovery/challenge review was launched
+and no capability claims were imported. Version-1 packets require re-export;
+their old context is retained for history.
+
+Verification checkpoint: all 59 readiness tests pass; TypeScript and scoped lint
+pass. All 25 native profiles replay identically, and 657 evidence objects validate.
+The new retained-submission replay test verifies capability import independently
+from native graph replay. Reports and comparison against `e736e14` contain zero
+artifact/edge/profile/capability changes: this milestone adds the review workflow
+and its source evidence, not compatibility conclusions. Coverage remains 21 tools
+with profiles, 248 without profiles, and all 269 hardfork-unassessed. Standards
+review's named-index clarification and specification review's rejection of string
+`"null"` conditions are fixed and confirmed. Implementation commits `a423d44` and
+`5ef5e06` remain local.
+
+Static/browser checkpoint: the `/devx-updates` production export passes with 311
+routes using the documented Webpack fallback. Chromium checks pass against the
+real static pages and isolated populated capability fixtures: desktop/mobile
+filters, verification/source/scope distinctions, filtered downloads, decision
+history, evidence anchors, pending-review empty states, base-path navigation,
+document overflow and console errors. Screenshots were inspected. Fixture claims
+were never inserted into retained catalog data. The real four consumer pages show
+unassessed status, current snapshot identity and no returned capability findings.
+Verified evidence, packet index, reports and handoff are committed locally; nothing
+was pushed. Default Turbopack remains subject to the previously recorded local
+port restriction and was not revalidated in this milestone.
+
+Next: the owner can launch the prepared discovery/challenge reviews using
+`content/readiness/capability-reviews.md`. Checked returned results can now enter
+the pipeline as structured behavior findings and integration edges. Catalog-wide
+collection, Cabal/native-artifact boundaries and the hardfork target/environment
+remain separate open work; phase 3 is not complete merely because this workflow is.
 
 ## 1. Objective
 
