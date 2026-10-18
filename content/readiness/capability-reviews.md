@@ -6,6 +6,9 @@ revisions, profile IDs and the 13 additional captured files. Every packet remain
 pending; no discovery/challenge task has been launched and no capability claims
 have been imported. This is evidence preparation for plan sections 6.3 and 7.
 
+Use [Run the prepared reviews](../../docs/RUN-PREPARED-REVIEWS.md) for copy-paste
+LLM prompts, exact input/output paths, and the evidence-check/import procedure.
+
 | Consumer | Review questions and explicit boundary |
 | --- | --- |
 | Lace mobile | Trace mobile module wiring into signing and submission APIs. Establish which behavior is enabled in the selected mobile profile. Shared SDK entry points alone do not prove mobile wiring; ask for additional source where needed. Browser extension, native device behavior and hosted deployments remain separate. |

@@ -6,6 +6,7 @@ import { resolveGo } from "./go";
 import { resolveUv } from "./uv";
 import { resolveYarn } from "./yarn";
 import type { AdapterContext } from "./adapter-context";
+import { npmRootPaths } from "./npm-roots";
 
 export function parseNativeInput(value: unknown): NativeInput {
   const v = object(value, "profile");
@@ -15,10 +16,12 @@ export function parseNativeInput(value: unknown): NativeInput {
   if (!(v.rootNames as string[]).length) throw new Error("Select at least one root package");
   if (!["release-build", "source-reconstruction"].includes(v.origin as string)) throw new Error("Invalid resolution origin");
   if (!(NATIVE_ADAPTERS as readonly unknown[]).includes(v.adapter)) throw new Error("Unsupported native adapter");
+  npmRootPaths(v.rootPaths, String(v.adapter));
   return v as unknown as NativeInput;
 }
 
 export function resolveNative(raw: unknown, input: NativeInput, evidence: { native: string; configuration: string; supporting?: string[] }): Resolution {
+  const selectedPaths = npmRootPaths(input.rootPaths, input.adapter)?.map((path) => path === "." ? "" : path);
   const native = object(raw, "native output");
   const wrappedNpm = input.adapter === "npm-lock" && "formatVersion" in native;
   if (wrappedNpm && native.formatVersion !== 1) throw new Error("Unsupported npm capture format");
@@ -85,7 +88,12 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
       const version = typeof pkg.version === "string" ? pkg.version : null;
       const source = typeof pkg.resolved === "string" && !pkg.resolved.startsWith("file:") ? pkg.resolved : `source:${input.revision}:${path}`;
       addNode(path, name, version, source, typeof pkg.integrity === "string" ? pkg.integrity : null);
-      if (input.rootNames.includes(name) && !path.includes("node_modules/")) result.profile.roots.push(locators.get(path)!);
+      if (input.rootNames.includes(name) && !path.includes("node_modules/") && (!selectedPaths || selectedPaths.includes(path))) result.profile.roots.push(locators.get(path)!);
+    }
+    if (selectedPaths) {
+      const roots = result.occurrences.filter((o) => result.profile.roots.includes(o.id));
+      for (const path of selectedPaths) if (!roots.some((o) => o.locator === path)) throw new Error(`Selected root path ${path || "."} did not match a named workspace package`);
+      for (const name of input.rootNames) if (!roots.some((o) => result.artifacts.find((a) => a.id === o.artifactId)?.name === name)) throw new Error(`Selected root name ${name} did not match the explicit paths`);
     }
     const dereference = (path: string): string | undefined => {
       const pkg = packages[path] ? object(packages[path]) : undefined;

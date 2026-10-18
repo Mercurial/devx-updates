@@ -27,6 +27,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
   packet: { type: "string" }, decisions: { type: "string" },
   "before-ref": { type: "string" },
+  "root-paths": { type: "string" },
   "python-version": { type: "string" }, packages: { type: "string" }, tags: { type: "string" },
 } });
 
@@ -46,6 +47,7 @@ discover        Discover pinned source and manifests via gh (resumes by default)
 import-native   --profile profile.json --input native-output.json
 collect         --tool id --adapter <collector> --roots package,package
                 --platform target [--path manifest-path] [--refresh]
+                npm-lock: --root-paths workspace/path,workspace/path ('.' = lock root)
                 uv-tree: --python-version 3.13; go-packages: --packages ./... --tags tag,tag
 refresh-native  Refresh registered collection profiles against discovered source revisions
                 --tools id,id --limit N --refresh (limit counts distinct requests)
@@ -98,7 +100,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     await discover(snapshot, store, { stateDir: values.state!, toolIds: values.tools?.split(","), limit, refresh: values.refresh });
   } else if (command === "collect") {
     if (!values.tool || !values.roots || !values.platform || !(COLLECT_ADAPTERS as readonly unknown[]).includes(values.adapter)) throw new Error(`collect requires --tool, --adapter (${COLLECT_ADAPTERS.join(", ")}), --roots, and --platform`);
-    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
+    await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), ...(values["root-paths"] !== undefined ? { rootPaths: values["root-paths"].split(",") } : {}), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
   } else if (command === "collect-batch") {
     const summary = await collectBatch(snapshot, store, readJson(required("input")), { stateDir: values.state!, refresh: values.refresh, toolIds: values.tools?.split(","), limit: values.limit === undefined ? undefined : Number(values.limit) });
     console.log(JSON.stringify(summary));

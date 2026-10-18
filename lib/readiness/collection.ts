@@ -2,11 +2,13 @@ import { digest, list, object, text } from "./core";
 import { resolveNative } from "./adapters";
 import { addEvidence, mergeResolution, Store } from "./store";
 import { COLLECT_ADAPTERS, type CollectAdapter, type NativeInput, type Snapshot } from "./types";
+import { npmRootPaths } from "./npm-roots";
 
 export interface CollectionRequest {
   toolId: string;
   adapter: CollectAdapter;
   roots: string[];
+  rootPaths?: string[];
   path?: string;
   platform: string;
   pythonVersion?: string;
@@ -41,6 +43,7 @@ export function collectionRequests(snapshot: Snapshot, store: Store, selection: 
     const request: CollectionRequest = {
       toolId: collection.toolId, adapter: input.adapter as CollectAdapter,
       roots: list(input.roots).map((root) => text(root)),
+      ...(input.rootPaths !== undefined ? { rootPaths: npmRootPaths(input.rootPaths, String(input.adapter)) } : {}),
       path: typeof input.path === "string" && input.path ? input.path : undefined,
       platform: text(input.platform),
       ...(typeof input.pythonVersion === "string" ? { pythonVersion: input.pythonVersion } : {}),

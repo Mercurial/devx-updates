@@ -165,6 +165,7 @@ export interface NativeInput {
   origin: Profile["origin"];
   adapter: NativeAdapter;
   rootNames: string[];
+  rootPaths?: string[];
 }
 
 export interface Resolution {

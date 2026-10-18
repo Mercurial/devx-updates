@@ -10,6 +10,7 @@ import { collectionRequests, publishCollection, reuseCollection, type CollectOpt
 import { collectExpanded } from "./collect-expanded";
 import { collectYarn } from "./collect-yarn";
 import { githubSource, normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
+import { npmRootPaths } from "./npm-roots";
 
 const exec = promisify(execFile);
 
@@ -25,10 +26,11 @@ async function cargoContext(directory: string) {
 export async function collect(snapshot: Snapshot, store: Store, options: CollectOptions) {
   const tool = snapshot.tools.find((t) => t.id === options.toolId);
   if (!tool?.revision || !tool.repo || !tool.release) throw new Error("Discover this tool's immutable source first");
+  const rootPaths = npmRootPaths(options.rootPaths, options.adapter);
   try {
     if (options.adapter === "yarn-lock") return await collectYarn(snapshot, store, options);
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
-    const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: options.adapter === "npm-lock" ? "committed-lockfile:npm-workspaces-v1" : "committed-lockfile" };
+    const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, ...(rootPaths ? { rootPaths } : {}), path: options.path ?? "", platform: options.platform, resolverContext: options.adapter === "npm-lock" ? "committed-lockfile:npm-workspaces-v1" : "committed-lockfile" };
     const directory = options.adapter === "cargo-metadata" ? await pinnedCheckout(tool.repo, tool.revision, options.stateDir) : resolve(options.stateDir, "sources", tool.revision);
     if (options.adapter === "cargo-metadata") selection.resolverContext = (await cargoContext(directory)).fingerprint;
     const cached = reuseCollection(snapshot, store, options, selection);
@@ -63,7 +65,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
         }
       }
     }
-    const profile: NativeInput = { toolId: tool.id, release: tool.release, revision: tool.revision, platform: options.platform, features: ["default"], command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots };
+    const profile: NativeInput = { toolId: tool.id, release: tool.release, revision: tool.revision, platform: options.platform, features: ["default"], command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots, ...(rootPaths ? { rootPaths } : {}) };
     return publishCollection(snapshot, store, selection, profile, raw, supporting, sourceUrl).profile;
   } catch (error) {
     const failure = error as Error & { cmd?: string; code?: string | number; signal?: string; stdout?: string; stderr?: string };

@@ -78,3 +78,33 @@ content/readiness/yarn-batch.json --limit 2`, or select individual tools with
 `--tools`. Successful requests register for scheduled native refresh; other work
 stays pending or retryable. The operation remains local until separately reviewed
 publication.
+
+## Additional wallets and contract workflows
+
+`wallet-batch.json` selects five more higher-level consumers at already discovered
+immutable revisions. Every request explicitly names its npm lock and production
+package paths. `rootPaths` are relative to that lock (`.` means its root); names
+and paths must both match. This disambiguates Cardano Connect with Wallet's React
+package from the same-named monorepo orchestration root. Unselected lock records
+remain retained, but are not added as production roots.
+
+| Consumer | Selected package paths | Source/configuration caveat |
+| --- | --- | --- |
+| Nami | `.` / `nami-wallet` | Default-branch source, no stable release identified. Manifest 3.9.6, npm lock 3.9.5; dependency declarations agree. Manifest declares Yarn 1.22.21, while README documents npm installation. The committed npm graph is one source reconstruction; the authoritative release lock, browser bundle, vendored signing WASM and provider deployment remain unresolved. |
+| Yoroi mobile | `.` / `yoroi-v2`, relative to `mobile/package-lock.json` | Source tag v7.0.5 and mobile manifest 7.0.5, lock root 7.0.4; dependency declarations agree. Expo/native iOS and Android output, patches, hardware wallets and runtime providers need separate evidence. Repository scripts and other applications are not selected roots. |
+| Veridian Wallet | `.` / `veridian-wallet` | Source tag, manifest and lock agree on 1.2.2. Capacitor native builds, KERIA, witnesses and deployed services remain outside the npm graph; the sample dApp is not an application root. |
+| Marlowe TS SDK | `packages/runtime/lifecycle`, `packages/wallet`, `packages/language/core/v1` | Selected `@marlowe.io` packages and source tag are 0.4.0-beta; retain prerelease identity. Root declares npm 9.3.1. Marlowe Runtime/backend deployments and wallet configuration need review; documentation, examples and testing packages are not selected roots. |
+| Cardano Connect with Wallet | `core`, `react` | Source tag `cardano-connect-with-wallet-v0.2.22`; core manifest 0.2.12 vs lock 0.2.11, React manifest 0.2.22 vs lock 0.2.21. Dependency declarations agree in both. Preserve lock versions and release discrepancies; injected wallets, peer connections and enabled browser/mobile integrations need separate review. |
+
+All five use npm v3 locks and `all-lockfile-targets`. No package installation or
+consumer build scripts run. These partial profiles do not prove shipped artifact
+identity, enabled capabilities or hardfork compatibility. Manifest/lock version
+differences remain explicit gaps instead of being silently corrected.
+
+```sh
+node --import tsx scripts/readiness/cli.ts collect-batch --input content/readiness/wallet-batch.json --limit 2
+```
+
+Use `--tools` to bound an individual run; validate and replay before reports and
+publication. Existing manually launched reviews remain separate; the owner guide
+is [Run the prepared reviews](../../docs/RUN-PREPARED-REVIEWS.md).

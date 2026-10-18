@@ -177,6 +177,10 @@ Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `cargo-metadata`, `
 
 ## Manual review handoff
 
+For the four prepared higher-level consumer packets, follow
+[Run the prepared reviews](./RUN-PREPARED-REVIEWS.md), which includes discovery
+and independent-challenge prompts and owner import steps.
+
 First capture specific source files needed for cited findings, then export a packet:
 
 ```sh

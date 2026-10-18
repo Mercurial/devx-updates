@@ -5,6 +5,7 @@ import { collect } from "./collect";
 import { retainedCollectionProfile, type CollectionRequest, type RefreshSelection } from "./collection";
 import { readJson, Store, writeJson } from "./store";
 import { COLLECT_ADAPTERS, type CollectAdapter, type Snapshot } from "./types";
+import { npmRootPaths } from "./npm-roots";
 
 export interface PinnedRequest extends CollectionRequest { revision: string }
 export interface CollectionJob {
@@ -25,7 +26,7 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
   if (batch.schemaVersion !== 1) throw new Error("Unsupported collection batch schema");
   const requests = list(batch.requests).map((raw) => {
     const input = object(raw, "collection request");
-    const keys = new Set(["toolId", "revision", "adapter", "roots", "path", "platform", "pythonVersion", "patterns", "tags"]);
+    const keys = new Set(["toolId", "revision", "adapter", "roots", "rootPaths", "path", "platform", "pythonVersion", "patterns", "tags"]);
     for (const key of Object.keys(input)) if (!keys.has(key)) throw new Error(`Unknown collection option: ${key}`);
     const toolId = text(input.toolId);
     if (!snapshot.tools.some((tool) => tool.id === toolId)) throw new Error(`Unknown tool: ${toolId}`);
@@ -36,6 +37,7 @@ export function parseCollectionBatch(raw: unknown, snapshot: Snapshot): PinnedRe
     const roots = strings(input.roots);
     if (!roots.length || new Set(roots).size !== roots.length) throw new Error("Select nonempty, unique package roots");
     const request: PinnedRequest = { toolId, revision, adapter: input.adapter as CollectAdapter, roots, platform: text(input.platform) };
+    if (input.rootPaths !== undefined) request.rootPaths = npmRootPaths(input.rootPaths, request.adapter);
     if (input.path !== undefined) {
       request.path = text(input.path);
       if (request.path.split("/").some((part) => !part || part === "." || part === "..") || request.path.includes("\\")) throw new Error("Select a checkout-relative manifest path");

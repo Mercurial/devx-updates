@@ -309,6 +309,27 @@ the pipeline as structured behavior findings and integration edges. Catalog-wide
 collection, Cabal/native-artifact boundaries and the hardfork target/environment
 remain separate open work; phase 3 is not complete merely because this workflow is.
 
+### Additional wallet and contract workflow coverage
+
+Continue the agreed higher-level priority with Nami, Yoroi mobile, Veridian
+Wallet, Marlowe TS SDK and Cardano Connect with Wallet. The pinned requests in
+`content/readiness/wallet-batch.json` select application and SDK production roots;
+source/release caveats are in the adjacent README. This implements ADR-1's offline
+collection boundary and ADR-2's retained, auditable data.
+
+- [x] Inspect pinned manifests and lockfiles; preserve release/version differences.
+- [x] Add explicit npm workspace paths to distinguish same-named package roots,
+  including retained requests, cache identity, refresh and replay inputs.
+- [x] Write `docs/RUN-PREPARED-REVIEWS.md` with copy-paste discovery/challenge
+  prompts, exact packet/output paths and checked-import instructions for the owner.
+- [ ] Collect the five bounded requests and retain source-backed scope gaps.
+- [ ] Validate, replay, regenerate reports, review and verify the static export.
+
+Selection tests cover duplicated names, excluded orchestration roots, complete
+lock retention, invalid/partial selectors, and cache/refresh preservation. Old
+captures without explicit paths retain their existing interpretation and identity.
+The four prepared capability reviews remain pending for the owner to launch.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.
