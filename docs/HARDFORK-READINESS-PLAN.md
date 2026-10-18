@@ -19,7 +19,7 @@ This checklist records delivered behavior and verification, not just code starte
 - Planning baseline: documented features, assumptions, architecture, phased acceptance criteria, and manual review assignments. Existing invitation-script edits are outside this work.
 - Inventory and graph foundation: all 269 catalog entries have coverage records; the first run discovered source revisions/manifests for 226 entries. Website/organization-only entries and failed lookups remain explicit gaps. Ecosystem detection covers nested workspaces, including unsupported build systems.
 - Native pilot: imported pinned npm locks for Ouroboros Miniprotocols TS and Mesh, and executed locked, platform-filtered Cargo metadata for Oura and Dolos. Mesh exercises a monorepo root. Package artifacts are shared while occurrence edges retain consumer/profile context. npm lock coverage is deliberately partial because it does not establish an installed platform selection.
-- Cabal plan import is implemented and fixture-tested; a real Haskell pilot remains follow-up work because Cabal is unavailable in the current environment. Other ecosystems are detected and queued rather than treated as resolved.
+- Cabal plan import was initially fixture-tested; the real Atlas Haskell pilot is now recorded in the continuation below. Other ecosystems are detected and queued rather than treated as resolved.
 - Evidence storage decision: retain content-addressed compressed JSON evidence in `data/readiness/evidence/`, alongside the normalized snapshot. Local resumable state and source checkouts live in ignored `.readiness/`. This initial implementation uses repository retention rather than an external artifact store.
 - Foundation verification: 10 behavior tests cover closure/context separation, workspace links, missing dependencies, cycles, diamond paths, evidence replay, optional/build/test scope, and suggested reach. Type checking and scoped lint pass. CLI `replay` reconstructs native graph records from retained inputs.
 - Review and refresh milestone: packet export, pinned source capture, checked JSON citations, transactional result import, decision history, and stale-input rejection are implemented. The Oura discovery packet is prepared locally. Manual review findings remain pending until returned; no review service is invoked.
@@ -791,6 +791,51 @@ consumers were absent; collected roots now retain their tasks, exact profile
 evidence and uncertainty at zero reach. Both follow-up reviews have zero remaining
 findings. Broader catalog collection, owner-launched consumer reviews and Dijkstra
 target-specific assessment remain unfinished.
+
+### Active continuation: real Haskell dependency pilot
+
+Atlas v0.14.1 (`62e37abda859cdd7e8814e7d07f963c29e4f2833`) now has a native
+Cabal source reconstruction for its `atlas-cardano` library on x86_64 Linux.
+A disposable worker supplied the Atlas-pinned GHC 9.6.6 and BLST 0.3.13, with
+Cabal 3.12.1.0 and Debian system libraries. The first solve failed for missing
+libsodium development metadata; installing real system libraries allowed the
+unchanged project constraints to resolve. No fake package metadata or constraint
+relaxation was used. This closes the fixture-only Haskell pilot gap, not full
+Haskell catalog coverage or release-build correspondence.
+
+The native plan contains 631 units. The versioned importer expands package-level
+components into 635 occurrences and 5,930 edges, selecting only the Atlas library
+as a root. Test/example siblings stay separate; executable and custom setup
+requirements remain build-scoped. Immutable source overrides, per-component flags,
+compiler/platform identity, source hashes and Cabal metadata revisions survive
+normalization. Missing/ambiguous targets remain visible gaps; malformed dependency
+lists fail import. Historical bare plans preserve their original replay behavior.
+
+Retained evidence includes the untouched plan, exact project/package/Nix inputs,
+three override commits and manifests, command and worker recipe, compiler/package
+and system-library versions, signed repository metadata/cache hashes, successful
+resolver log and prior failure. The project retains its Hackage
+`2025-04-15T19:49:23Z` and CHaP `2025-04-11T16:42:25Z` index states. Repository
+index archives themselves are not vendored. Graph replay is offline; a fresh solve
+still needs repositories and the toolchain. No Atlas compilation, linking, runtime
+or Dijkstra compatibility test has run. The Debian reconstruction is not the full
+Nix release environment; foreign/native and shipped-artifact boundaries remain
+partial. This implements the offline evidence/reporting boundaries of ADR-1 and
+ADR-2.
+
+Validation: 93 readiness tests, TypeScript and scoped lint pass. All 40 native
+profiles replay identically; 1,064 retained evidence objects validate. Reports now
+cover 36 of 269 tools with native profiles; Atlas adds 526 distinct artifacts and
+one profile with no removed or changed prior graph records. The seven pending
+consumer review packets remain unchanged. Standards and specification reviews
+found no actionable findings.
+
+The production static export passed all 311 routes with `/devx-updates` as the
+base path. Chromium checks passed for the Atlas library root, dependency expansion,
+scope filtering, graph download, base-path navigation, mobile layout and console
+errors. Cabal remains a documented import-only workflow; executable collection registration and broader Haskell profiles remain
+follow-up work. Owner-launched consumer reviews and the Dijkstra immutable target
+and environment decisions remain independent open tracks.
 
 ## 1. Objective
 

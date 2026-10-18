@@ -197,7 +197,50 @@ Example profile:
 }
 ```
 
-Replace placeholders with observed values. For Cabal, import `dist-newstyle/cache/plan.json` from the declared build configuration. Preserve index states, project flags, and release/build provenance as source evidence. `release-build` is reserved for an actual release build's output; reconstructing source locally is not equivalent.
+Replace placeholders with observed values. `release-build` is reserved for an actual release build's output; reconstructing source locally is not equivalent.
+
+For new Cabal imports, wrap the untouched native `plan.json` in this envelope:
+
+```json
+{
+  "formatVersion": 1,
+  "sourceDirectory": "/source",
+  "roots": [{ "unitId": "<exact-local-unit-id>", "component": "lib" }],
+  "plan": { "<native-plan-fields>": "<native-values>" },
+  "provenance": { "<capture-inputs-and-logs>": "<retained-content>" }
+}
+```
+
+Use observed unit IDs and component names from `install-plan`, not package names
+inferred from the catalog. Select every intended root explicitly; a library root
+does not include its test or example siblings. Version 1 accepts Cabal/Cabal-library
+3.12.1.0 plans and requires profile `platform` to match `<arch>-<os>` from the plan.
+It preserves per-component flag conditions, executable and custom setup build
+dependencies, development scope, pre-existing compiler units, pinned Git overrides,
+archive checksums and Cabal metadata revision hashes. Missing or ambiguous targets
+remain gaps; malformed dependency arrays fail import. Bare historical plans retain
+their original interpretation for replay and should not be used for new captures.
+
+Retain the exact `cabal.project`, selected package manifests, freeze/local files if
+present, source override commits/manifests, command, toolchain and system-library
+versions, resolver logs, index states, repository security metadata, and worker
+recipe in `provenance` or supporting source evidence. The whole envelope is retained
+and hashed. Provenance is evidence for review, not an independently verified claim
+of a successful build. Graph replay consumes the retained plan offline; rerunning
+the solver also requires the source, toolchain and package repositories.
+
+The first real Haskell pilot is Atlas v0.14.1 at
+`62e37abda859cdd7e8814e7d07f963c29e4f2833`. It used GHC 9.6.6 and Cabal 3.12.1.0
+on x86_64 Linux, with the unchanged project index states (Hackage
+`2025-04-15T19:49:23Z`, CHaP `2025-04-11T16:42:25Z`) and three Git overrides.
+Its selected command was
+`cabal --config-file=/work/cabal/config build atlas-cardano:lib:atlas-cardano --dry-run --builddir=/work/dist`.
+The retained envelope includes the pinned official Haskell image digest, custom
+Dockerfile with BLST 0.3.13, compiler/package dump, signed repository metadata and
+cache hashes, source inputs, successful log and prior missing-libsodium failure.
+This Debian worker is not the full Atlas Nix release environment. No Atlas code
+was compiled or tested. Full repository index tarballs are not vendored; the
+retained native plan is sufficient for graph replay, not an offline fresh solve.
 
 Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `bun-lock`, `poetry-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without supported uv/Poetry inputs, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 

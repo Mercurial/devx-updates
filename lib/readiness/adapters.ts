@@ -9,6 +9,7 @@ import { resolvePoetry } from "./poetry";
 import { resolveYarn } from "./yarn";
 import type { AdapterContext } from "./adapter-context";
 import { npmRootPaths } from "./npm-roots";
+import { resolveCabal } from "./cabal";
 
 export function parseNativeInput(value: unknown): NativeInput {
   const v = object(value, "profile");
@@ -63,7 +64,8 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
     const id = locators.get(locator);
     if (!id) missing(`Unresolved root ${locator}`); else if (!result.profile.roots.includes(id)) result.profile.roots.push(id);
   } };
-  if (input.adapter === "pnpm-lock") resolvePnpm(data, context);
+  if (input.adapter === "cabal-plan" && "formatVersion" in data) resolveCabal(data, context);
+  else if (input.adapter === "pnpm-lock") resolvePnpm(data, context);
   else if (input.adapter === "yarn-lock") resolveYarn(data, context);
   else if (input.adapter === "bun-lock") resolveBun(data, context);
   else if (input.adapter === "poetry-lock") resolvePoetry(data, context);

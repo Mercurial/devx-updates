@@ -1,12 +1,12 @@
 {
-  "snapshot": "722954f67bcd7f10ba73b3d3a87883de74e30daffce2da8f0dc269c48b9bcca3",
+  "snapshot": "413d3e3de47bdffc067d91fdec95be12776ab967fd8b9f67fc019959ea338cb6",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 35,
-  "profiles": 39,
+  "withProfiles": 36,
+  "profiles": 40,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 234,
+  "unresolvedTools": 233,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -511,11 +511,11 @@
     },
     {
       "toolId": "atlas",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:96370b4bf8cbc56e5995d541",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Cabal plan describes a source reconstruction, not a successful build or shipped artifact. Foreign libraries, compiler plugins, generated outputs and deployed integrations require separate evidence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:atlas:ee169e1d50382aaa065c3534"
     },
     {
       "toolId": "atlas",

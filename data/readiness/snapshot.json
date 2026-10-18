@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "722954f67bcd7f10ba73b3d3a87883de74e30daffce2da8f0dc269c48b9bcca3",
-    "generatedAt": "2026-10-18T18:53:43.865Z",
+    "semanticDigest": "413d3e3de47bdffc067d91fdec95be12776ab967fd8b9f67fc019959ea338cb6",
+    "generatedAt": "2026-10-18T19:43:48.389Z",
     "tools": [
       {
         "id": "1694-io",
@@ -1084,7 +1084,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -1100,8 +1100,10 @@
           "tests/aiken/bar/aiken.toml"
         ],
         "evidenceIds": [
+          "evidence:08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf",
           "evidence:a842a49c57c55e3f7823b3a7f7dae5a1d60a8c5a4d5ce9421ab72610c785a181",
-          "evidence:cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9"
+          "evidence:cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9",
+          "evidence:d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005"
         ],
         "gaps": [
           {
@@ -1119,11 +1121,11 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:96370b4bf8cbc56e5995d541",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Cabal plan describes a source reconstruction, not a successful build or shipped artifact. Foreign libraries, compiler plugins, generated outputs and deployed integrations require separate evidence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:atlas:ee169e1d50382aaa065c3534"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -24483,6 +24485,30 @@
     ],
     "profiles": [
       {
+        "id": "profile:atlas:ee169e1d50382aaa065c3534",
+        "toolId": "atlas",
+        "release": "v0.14.1",
+        "revision": "62e37abda859cdd7e8814e7d07f963c29e4f2833",
+        "platform": "x86_64-linux",
+        "features": [
+          "cabal.project defaults; tests enabled; atlas-cardano library selected"
+        ],
+        "command": "cabal --config-file=/work/cabal/config build atlas-cardano:lib:atlas-cardano --dry-run --builddir=/work/dist",
+        "toolchain": "GHC 9.6.6; cabal-install 3.12.1.0; Debian bullseye; image sha256:fc5abe35eb4fcef5000b274de40eed0340ef1432bca311f99afc4b9d11cd57cd",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:dac7cace24829093aea4a6f4f63c401582408df66e41d4418c1689eb59f2444e"
+        ],
+        "inputDigest": "ee169e1d50382aaa065c3534b049d37a3ff4bafdc24eab6c317552c07d8a10a0",
+        "evidenceIds": [
+          "evidence:08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf",
+          "evidence:d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005"
+        ],
+        "nativeEvidenceId": "evidence:08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf",
+        "configurationEvidenceId": "evidence:d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:blaze:c617d45246dce15c6cd35d01",
         "toolId": "blaze",
         "release": "@blaze-cardano/blueprint@0.9.1",
@@ -26189,6 +26215,12 @@
         "path": "evidence/081425bc7fe21e21cccc69b365e295ca65924e820d0139491365e307a3ad5c70.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/vacuumlabs/adalite/tree/86dd006310600fad5e145fae2af2f9bea0b79572"
+      },
+      {
+        "id": "evidence:08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf",
+        "digest": "08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf",
+        "path": "evidence/08435427e03017b4795b9b24490fcd3486355f0af89c841a798da5ff192d5bcf.json.gz",
+        "description": "cabal-plan for atlas v0.14.1"
       },
       {
         "id": "evidence:08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
@@ -32060,6 +32092,12 @@
         "sourceUrl": "https://github.com/HarmonicLabs/pebble/tree/d6a5a75575d6091bc0bd3f63d5daa225d6772677"
       },
       {
+        "id": "evidence:d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005",
+        "digest": "d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005",
+        "path": "evidence/d4b590367e42d8e3127b86f55adb4ad0ebda65d4338bdbd2d3460306d5e70005.json.gz",
+        "description": "Native collection profile and command"
+      },
+      {
         "id": "evidence:d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba",
         "digest": "d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba",
         "path": "evidence/d4c1de020727c3b5d7fd11cec593446c0bb188108e678710de40304bc49aa5ba.json.gz",
@@ -33435,87 +33473,92 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/a4334a6cd648af6f8860f6d45b2e7529654e6c97e9fe24b47ae8cc478276350c.json",
-        "digest": "a4334a6cd648af6f8860f6d45b2e7529654e6c97e9fe24b47ae8cc478276350c",
-        "records": 1793
+        "path": "snapshots/artifacts/c5443c8a43fa434ad2bfd44bdca48fa5b62089b04d8a0a58f71dd35928a273a3.json",
+        "digest": "c5443c8a43fa434ad2bfd44bdca48fa5b62089b04d8a0a58f71dd35928a273a3",
+        "records": 1824
       },
       {
-        "path": "snapshots/artifacts/9ce7eab03aa6d041bff9dbd63a753c891f32205b87cc3690597087d0c0313a31.json",
-        "digest": "9ce7eab03aa6d041bff9dbd63a753c891f32205b87cc3690597087d0c0313a31",
-        "records": 1751
+        "path": "snapshots/artifacts/dddbdf019132554568e644d143846c43aa069c64552043d72384e8bdb442c740.json",
+        "digest": "dddbdf019132554568e644d143846c43aa069c64552043d72384e8bdb442c740",
+        "records": 1784
       },
       {
-        "path": "snapshots/artifacts/38bdbf22cb49a700367c9e9b1d3c327f3c8e48fe59e37ab56f83e7597e47aab0.json",
-        "digest": "38bdbf22cb49a700367c9e9b1d3c327f3c8e48fe59e37ab56f83e7597e47aab0",
-        "records": 1793
+        "path": "snapshots/artifacts/c67d35d144e89428fd47eff30c79909f315bc11a45a9b3af78ebb3a62b5d2c48.json",
+        "digest": "c67d35d144e89428fd47eff30c79909f315bc11a45a9b3af78ebb3a62b5d2c48",
+        "records": 1831
       },
       {
-        "path": "snapshots/artifacts/cd8d6fde7eeface44f886aa8eeec97296164bdf44f7bd56519c0b0071b4c56d2.json",
-        "digest": "cd8d6fde7eeface44f886aa8eeec97296164bdf44f7bd56519c0b0071b4c56d2",
-        "records": 1781
+        "path": "snapshots/artifacts/ee4d73c055ff4255e774d723f123f5aba58d696f86a62c423b7b511b838b21f7.json",
+        "digest": "ee4d73c055ff4255e774d723f123f5aba58d696f86a62c423b7b511b838b21f7",
+        "records": 1816
       },
       {
-        "path": "snapshots/artifacts/68b603c299ffd1e9bc18fee101a66037a4e5cf7f0c6543a8e0828d9b25170821.json",
-        "digest": "68b603c299ffd1e9bc18fee101a66037a4e5cf7f0c6543a8e0828d9b25170821",
-        "records": 1782
+        "path": "snapshots/artifacts/9af9d5c355242a29442da7c19899e8a25d95da773e6e3e718f98cde320d074cf.json",
+        "digest": "9af9d5c355242a29442da7c19899e8a25d95da773e6e3e718f98cde320d074cf",
+        "records": 1816
       },
       {
-        "path": "snapshots/artifacts/43d8e93f824a1e09642867dcb4b60cefce895ba3cd40459ae88a40a5edaec238.json",
-        "digest": "43d8e93f824a1e09642867dcb4b60cefce895ba3cd40459ae88a40a5edaec238",
-        "records": 1807
+        "path": "snapshots/artifacts/5a1d683ca3b97a147e07c8374b2d3842ac99d454ffab6e8c2c9c5b0f9e5733cb.json",
+        "digest": "5a1d683ca3b97a147e07c8374b2d3842ac99d454ffab6e8c2c9c5b0f9e5733cb",
+        "records": 1842
       },
       {
-        "path": "snapshots/artifacts/339bb53e0f84ea8eeac53a29af7df2acea91fb13c5e3a3f6e99cb8ee7de9b7c0.json",
-        "digest": "339bb53e0f84ea8eeac53a29af7df2acea91fb13c5e3a3f6e99cb8ee7de9b7c0",
-        "records": 1909
+        "path": "snapshots/artifacts/1ddb88a2f2635d9af0929a3293fb9e1d471182008aebe838699c3c18cf071555.json",
+        "digest": "1ddb88a2f2635d9af0929a3293fb9e1d471182008aebe838699c3c18cf071555",
+        "records": 1944
       },
       {
-        "path": "snapshots/artifacts/a480f4070b008fd5eac2fc69a77f25c7eae151de4c0b13827ed8478a87a796f2.json",
-        "digest": "a480f4070b008fd5eac2fc69a77f25c7eae151de4c0b13827ed8478a87a796f2",
-        "records": 1744
+        "path": "snapshots/artifacts/1c92dd2ad6274ad2127ef5e36dcef65bd41adddc43ccfb3c232f7aefcae6c6d8.json",
+        "digest": "1c92dd2ad6274ad2127ef5e36dcef65bd41adddc43ccfb3c232f7aefcae6c6d8",
+        "records": 1773
       },
       {
-        "path": "snapshots/artifacts/d043b06c631b2ddd37e0d351a0d8cbf02f01139149c54452db9f0284521227c5.json",
-        "digest": "d043b06c631b2ddd37e0d351a0d8cbf02f01139149c54452db9f0284521227c5",
-        "records": 1790
+        "path": "snapshots/artifacts/bd78d34df0f199bc8bd412a9b385ca3f3622349667b11046e9427a901dbfd7a8.json",
+        "digest": "bd78d34df0f199bc8bd412a9b385ca3f3622349667b11046e9427a901dbfd7a8",
+        "records": 1821
       },
       {
-        "path": "snapshots/artifacts/fd6c6590721d7b492cced36bf3fe219c66940173124a0e4fbc130874fb81b77d.json",
-        "digest": "fd6c6590721d7b492cced36bf3fe219c66940173124a0e4fbc130874fb81b77d",
-        "records": 1778
+        "path": "snapshots/artifacts/2b091cfc1ca8e9a0e0afec10af1fac0b1ee5a992442125ce73c830723dfbe595.json",
+        "digest": "2b091cfc1ca8e9a0e0afec10af1fac0b1ee5a992442125ce73c830723dfbe595",
+        "records": 1808
       },
       {
-        "path": "snapshots/artifacts/0056325cc67bba7456e7be4cd60056f641bb935059cd00239c3732050da2b3ce.json",
-        "digest": "0056325cc67bba7456e7be4cd60056f641bb935059cd00239c3732050da2b3ce",
-        "records": 1823
+        "path": "snapshots/artifacts/2ae6709c0fc74934a4b916f6b41b70857dff487dd6448b184451e7343a351d73.json",
+        "digest": "2ae6709c0fc74934a4b916f6b41b70857dff487dd6448b184451e7343a351d73",
+        "records": 1857
       },
       {
-        "path": "snapshots/artifacts/2a7ec1965dddbeeecdd232bc82b74528b5bde146572a7b8adbd84b709f180277.json",
-        "digest": "2a7ec1965dddbeeecdd232bc82b74528b5bde146572a7b8adbd84b709f180277",
-        "records": 1823
+        "path": "snapshots/artifacts/b9e5365f5ed3d7656a88de50f7a778cb32b106259be4ceba88f2e2086ee5db19.json",
+        "digest": "b9e5365f5ed3d7656a88de50f7a778cb32b106259be4ceba88f2e2086ee5db19",
+        "records": 1856
       },
       {
-        "path": "snapshots/artifacts/f23857c1068d810c550ead2a0b1abbed8312cb385238c5d48a297ec8d015f878.json",
-        "digest": "f23857c1068d810c550ead2a0b1abbed8312cb385238c5d48a297ec8d015f878",
-        "records": 1835
+        "path": "snapshots/artifacts/37dc95e084d6815e7d087875d094878b97c22699b5ca532a8b9c8dca5bbdbb80.json",
+        "digest": "37dc95e084d6815e7d087875d094878b97c22699b5ca532a8b9c8dca5bbdbb80",
+        "records": 1874
       },
       {
-        "path": "snapshots/artifacts/e525a276524fad95dd8d02194278f5b57820e2f5db18d5b7e09653b012b8724e.json",
-        "digest": "e525a276524fad95dd8d02194278f5b57820e2f5db18d5b7e09653b012b8724e",
-        "records": 1752
+        "path": "snapshots/artifacts/6d5ff457540699a25439fdc1ebe988e8334433db054c6170e71dc8044db7513f.json",
+        "digest": "6d5ff457540699a25439fdc1ebe988e8334433db054c6170e71dc8044db7513f",
+        "records": 1786
       },
       {
-        "path": "snapshots/artifacts/46695e9196f0f0124ab10aab9df1bd3a22b5574434f14118f8441bb563379dd7.json",
-        "digest": "46695e9196f0f0124ab10aab9df1bd3a22b5574434f14118f8441bb563379dd7",
-        "records": 1775
+        "path": "snapshots/artifacts/c104563a6a9efd03b0cb47e2bfbb6fd2dceb91a5c86efbf30d1b97b9a3905d4a.json",
+        "digest": "c104563a6a9efd03b0cb47e2bfbb6fd2dceb91a5c86efbf30d1b97b9a3905d4a",
+        "records": 1804
       },
       {
-        "path": "snapshots/artifacts/f568d3ea40c7f6a8254d83d3a50d7f22fd80393d1f42d196d45e40ba624b08c7.json",
-        "digest": "f568d3ea40c7f6a8254d83d3a50d7f22fd80393d1f42d196d45e40ba624b08c7",
-        "records": 1806
+        "path": "snapshots/artifacts/492b20f0a8e12d55b20b69eba6a2d6eb57934e5ff805ae7aa16930a783f6791c.json",
+        "digest": "492b20f0a8e12d55b20b69eba6a2d6eb57934e5ff805ae7aa16930a783f6791c",
+        "records": 1832
       }
     ],
     "occurrences": [
+      {
+        "path": "snapshots/occurrences/c467263e99e954b665ba84780c09031cb16438923929a58dc417b0979f697a7e.json",
+        "digest": "c467263e99e954b665ba84780c09031cb16438923929a58dc417b0979f697a7e",
+        "records": 635
+      },
       {
         "path": "snapshots/occurrences/34c59146c63a02ac49ec49f3f983ad7705aabe6cf13954c072416cbc2eb11a0c.json",
         "digest": "34c59146c63a02ac49ec49f3f983ad7705aabe6cf13954c072416cbc2eb11a0c",
@@ -33713,6 +33756,16 @@
       }
     ],
     "edges": [
+      {
+        "path": "snapshots/edges/dd353fb38310b574c07cb205be9df3d2f89c190ea7b578ce125bf97a6a2b85f2.json",
+        "digest": "dd353fb38310b574c07cb205be9df3d2f89c190ea7b578ce125bf97a6a2b85f2",
+        "records": 2965
+      },
+      {
+        "path": "snapshots/edges/2b6ea24df4f9e5ee005a32472bd65d6ecfbc9a96274ed1efef95a6c652d66215.json",
+        "digest": "2b6ea24df4f9e5ee005a32472bd65d6ecfbc9a96274ed1efef95a6c652d66215",
+        "records": 2965
+      },
       {
         "path": "snapshots/edges/e8559c360c47bc6e2104840d0d27e6f6c301025578adc977ba005506d0c614c1.json",
         "digest": "e8559c360c47bc6e2104840d0d27e6f6c301025578adc977ba005506d0c614c1",
