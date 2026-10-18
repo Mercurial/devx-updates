@@ -76,7 +76,7 @@ test("native refresh selects and bounds deduplicated requests before running col
       const tool = snapshot.tools.find((tool) => tool.id === toolId)!;
       Object.assign(tool, { revision, release: "v1", manifests: ["package-lock.json"] });
       // Empty path is the recorded default used by the npm collector.
-      const selection: CollectionSelection = { revision, adapter: "npm-lock", roots: ["app"], path: "", platform: "all-lockfile-targets", resolverContext: "committed-lockfile" };
+      const selection: CollectionSelection = { revision, adapter: "npm-lock", roots: ["app"], path: "", platform: "all-lockfile-targets", resolverContext: "committed-lockfile:npm-workspaces-v1" };
       const profile: NativeInput = { ...selection, toolId, release: "v1", features: [], command: "read lock", toolchain: "npm v3", origin: "source-reconstruction", rootNames: selection.roots };
       publishCollection(snapshot, store, selection, profile, { lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } }, [], "https://github.com/owner/repo");
     }

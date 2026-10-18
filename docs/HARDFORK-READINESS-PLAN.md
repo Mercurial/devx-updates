@@ -111,6 +111,36 @@ Migration checkpoint: retained snapshot storage shrank from 79.9 MiB to 32.2 MiB
 
 Next: resume phase-3 coverage in small, explicitly selected catalog batches using the new storage. Keep failed native requests retryable and record source/release caveats. A real Cabal pilot still requires a suitable Cabal/GHC environment; unsupported ecosystems and manually returned integration/capability findings remain the other open coverage tracks. Compatibility testing remains gated on a selected hardfork target and environment.
 
+### Active continuation: higher-level workflow coverage
+
+Priority agreed with the owner: start subsequent batches with higher-level SDKs,
+transaction builders, wallets, wallet integrations, and applications. Select roots
+by user-facing workflow relevance, gaps in existing workflow coverage, and
+evidence of downstream exposure. Collector support is a feasibility check or
+tie-breaker, not the primary ranking. Do not substitute documentation, examples,
+or test manifests for a tool's production root just because they are supported.
+
+Collect each consumer's selected dependency closure so shared lower-level
+components and actual selected versions emerge from consumer evidence. Use
+verified reach to prioritize subsequent upstream investigation; retain separately
+built services, hosted providers, native bundles, and unsupported production
+ecosystems as explicit integration or resolution gaps. Catalog usage hints alone
+do not establish adoption or verified reach. Aiken and Amaru remain useful roots,
+but their available collectors do not put them ahead of missing user workflows.
+
+- [x] Verify a small batch of higher-level production roots and pinned configurations; document workflow rationale and release caveats.
+- [ ] Collect the selected requests in bounded runs, preserving retryable failures and evidence for unresolved boundaries.
+- [ ] Validate/replay retained inputs, regenerate reports/comparison, run checks and review, and commit the verified milestone locally (ADR-1/ADR-2).
+
+Selected batch: Lace mobile, GovTool frontend, Evolution SDK, Hydra SDK's core/
+transaction/bridge packages, and Dexter. `content/readiness/workflow-batch.json`
+pins the requests; its companion README records workflow rationale, exact package
+versions, and release/configuration caveats. Large Lace/GovTool locks required
+immutable GitHub blob retrieval. Lace also exposed unnamed npm workspaces: new,
+versioned captures resolve unique package-link names while historical inputs keep
+their original replay behavior. Missing/ambiguous identities remain gaps. Focused
+checks pass; retained-data validation and review follow collection.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.
@@ -391,6 +421,13 @@ Compute required production, optional/configuration-dependent, build-time, and d
 Store at least one explanatory path per included tool and preserve the graph for further path inspection. Reach is measured only against the declared catalog and graph coverage; it is not ecosystem market share.
 
 ### Prioritization
+
+For catalog rollout, prioritize higher-level consumers that add coverage of
+transaction construction, wallet signing/integration, submission, query, and
+application workflows. Their selected closures expose shared upstream components
+in consumer context. Use supported collectors as a feasibility check or tie-breaker;
+unsupported high-priority tools remain visible work rather than silently falling
+behind easy-to-collect lower-level roots. Keep the selection rationale explicit.
 
 Initially rank investigation using chain-facing capability, verified downstream reach, potential reach, and evidence gaps. Show these factors rather than hiding them in an unexplained score. High reach is not a failure finding, and missing evidence is not low risk.
 

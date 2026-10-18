@@ -2,11 +2,29 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { existsSync, mkdirSync, readFileSync, realpathSync } from "node:fs";
 import { isAbsolute, relative, resolve, join } from "node:path";
-import { repositoryReference } from "./discovery";
+import { github, repositoryReference } from "./discovery";
+import { object } from "./core";
 import { addEvidence, Store } from "./store";
 import type { Snapshot } from "./types";
 
 export const execute = promisify(execFile);
+
+/** Large files omit inline content; follow the blob selected at the pinned revision. */
+export async function githubSource(repo: string, revision: string, path: string, request = github): Promise<string> {
+  if (!repositoryReference(repo) || !/^[a-f0-9]{40,64}$/.test(revision) || path.split("/").some((part) => !part || part === "." || part === "..")) {
+    throw new Error("Source capture needs an immutable repository revision and relative file path");
+  }
+  let blob = object(await request(`repos/${repo}/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${revision}`));
+  if (blob.type !== "file") throw new Error("Expected a source file");
+  if (blob.encoding === "none") {
+    const sha = blob.sha;
+    if (typeof sha !== "string" || !/^[a-f0-9]{40,64}$/.test(sha)) throw new Error("Missing pinned source blob identity");
+    blob = object(await request(`repos/${repo}/git/blobs/${sha}`));
+    if (blob.sha !== sha) throw new Error("Source blob identity mismatch");
+  }
+  if (blob.encoding !== "base64" || typeof blob.content !== "string") throw new Error("Expected base64 source file content");
+  return Buffer.from(blob.content, "base64").toString("utf8");
+}
 
 /** Replace host-specific paths while preserving native package IDs and import relationships. */
 export function normalizeNativePaths(value: unknown, paths: Record<string, string>): unknown {

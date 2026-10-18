@@ -3,13 +3,12 @@ import { promisify } from "node:util";
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { homedir } from "node:os";
-import { digest, gap, object, text } from "./core";
-import { github } from "./discovery";
+import { digest, gap, object } from "./core";
 import { addEvidence, Store } from "./store";
 import type { NativeInput, Snapshot } from "./types";
 import { collectionRequests, publishCollection, reuseCollection, type CollectOptions, type RefreshSelection } from "./collection";
 import { collectExpanded } from "./collect-expanded";
-import { normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
+import { githubSource, normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 
 const exec = promisify(execFile);
 
@@ -27,7 +26,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   if (!tool?.revision || !tool.repo || !tool.release) throw new Error("Discover this tool's immutable source first");
   try {
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
-    const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: "committed-lockfile" };
+    const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: options.adapter === "npm-lock" ? "committed-lockfile:npm-workspaces-v1" : "committed-lockfile" };
     const directory = options.adapter === "cargo-metadata" ? await pinnedCheckout(tool.repo, tool.revision, options.stateDir) : resolve(options.stateDir, "sources", tool.revision);
     if (options.adapter === "cargo-metadata") selection.resolverContext = (await cargoContext(directory)).fingerprint;
     const cached = reuseCollection(snapshot, store, options, selection);
@@ -38,11 +37,10 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
     if (options.adapter === "npm-lock") {
       const path = options.path ?? "package-lock.json";
       if (!tool.manifests.includes(path)) throw new Error(`No discovered manifest ${path}`);
-      const blob = object(await github(`repos/${tool.repo}/contents/${path.split("/").map(encodeURIComponent).join("/")}?ref=${tool.revision}`));
-      if (blob.encoding !== "base64") throw new Error("GitHub did not return file content; collect this lock locally");
-      raw = JSON.parse(Buffer.from(text(blob.content), "base64").toString("utf8"));
+      const lock = JSON.parse(await githubSource(tool.repo, tool.revision, path));
+      raw = { formatVersion: 1, lock };
       command = `Read committed ${path} at ${tool.revision}`;
-      toolchain = `npm lockfile format ${object(raw).lockfileVersion}; producing npm version unknown`;
+      toolchain = `npm lockfile format ${object(lock).lockfileVersion}; producing npm version unknown`;
     } else {
       const context = await cargoContext(directory);
       toolchain = context.toolchain; selection.resolverContext = context.fingerprint;

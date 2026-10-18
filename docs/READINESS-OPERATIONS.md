@@ -39,6 +39,14 @@ npm run readiness -- collect --tool opshin --adapter uv-tree --roots opshin --pl
 
 npm collection reads a committed v2/v3 lockfile, including workspace links and hoisted dependencies. It does not run install scripts or assert which optional dependencies ship on a platform. Missing selections and platform applicability are explicit gaps.
 
+Large GitHub files are fetched through the immutable blob ID returned for the
+pinned source path; a missing or mismatched blob fails collection. New npm captures
+use a versioned envelope and identify unnamed workspace packages through unique
+lockfile links. Missing or ambiguous workspace names remain gaps. Historical bare
+lock captures replay with their original identities; native refresh uses a new
+cache context for the upgraded capture format. The same source retrieval supports
+`capture-source` evidence for files over GitHub's inline-content limit.
+
 Cargo collection checks out the pinned revision in `.readiness/sources/`, then runs `cargo metadata --locked --format-version 1 --filter-platform <target>`. It retains the command, toolchain, metadata, lockfile, and root manifest. Cargo must be installed. A missing/outdated lock or failed resolver produces a retryable resolution gap. Default features are used; custom feature profiles can be imported separately.
 
 Results are reused for unchanged requests. Cargo cache keys include the toolchain and configuration/environment fingerprints; changed resolver inputs invalidate reuse. Use `--refresh` to deliberately rerun a collector. Source checkouts and job caches are disposable; retained evidence is not.

@@ -23,3 +23,31 @@ Run `npm run readiness -- collect-batch --input content/readiness/catalog-batch.
 --limit 2` to advance a small batch. Use `--tools id,id` for an individual retry.
 If source discovery changes a selected revision, verify the new manifests before
 updating the request. See `docs/READINESS-OPERATIONS.md` for resume semantics.
+
+## Higher-level workflow batch
+
+`workflow-batch.json` prioritizes missing user workflows over collector convenience,
+as agreed in `docs/HARDFORK-READINESS-PLAN.md`. The existing batch already includes
+transaction SDKs and wallet connectors; this batch adds a wallet application,
+governance application, another transaction framework, Hydra workflows, and a
+multi-DEX consumer. This is a coverage selection, not an adoption ranking.
+
+| Tool / workflow | Selected production root | Pinned source/configuration caveat |
+| --- | --- | --- |
+| Lace / mobile wallet, signing and sending | `lace-mobile` in `apps/lace-mobile` | `lace-mobile@2.4.0` matches manifest and npm v3 workspace-lock version 2.4.0. Browser-extension, installed iOS/Android native dependencies, hardware devices, and hosted provider configurations remain outside this profile. |
+| GovTool / governance actions and wallet interaction | `@govtool/frontend` in `govtool/frontend` | Repository release v2.0.36 contains frontend manifest/lock version 2.0.29; retain both identities. npm v3 frontend scope only; the Haskell backend, metadata service, deployment flags, container inventory, and postinstall patches are unresolved boundaries. |
+| Evolution SDK / transaction construction | `@evolution-sdk/evolution` in `packages/evolution` | Manifest version 0.6.0 at `@evolution-sdk/devnet@3.0.21`; the tag belongs to devnet and does not establish the SDK's published release. pnpm v9 lock, pnpm 9.0.0 declared. Provider integrations and direct chain-sensitive implementation need review. |
+| Hydra SDK / Head interaction and transaction construction | `@hydra-sdk/core`, `@hydra-sdk/transaction`, `@hydra-sdk/bridge` | Core tag/manifest 1.5.0; transaction 1.2.3 and bridge 2.0.2 share that source revision without independently verified release mappings. pnpm v9 lock produced under declared pnpm 10.5.2. Hydra node deployments, network configuration, and WASM build correspondence remain unresolved. |
+| Dexter / multi-DEX swaps and pool queries | `@indigo-labs/dexter` | Manifest/npm v3 lock version 5.4.9 on discovered default-branch source; no stable GitHub release identified. DEX contracts, hosted provider deployments, and enabled integrations require separate evidence. |
+
+All five profiles use the all-lockfile-targets scope. Package closures do not
+establish installed platform selection, published artifacts, runtime integration
+coverage, or hardfork compatibility. No install or project build scripts run.
+Missing and ambiguous workspace identities remain resolution gaps. Unsupported
+production roots such as Blaze's main SDK remain queued for adapter work; its
+nested WASM Cargo manifest must not stand in for whole-SDK coverage.
+
+Run `node --import tsx scripts/readiness/cli.ts collect-batch --input
+content/readiness/workflow-batch.json --limit 2` to advance the batch, or select
+one request with `--tools lace --limit 1`. Validate and replay separately before
+regenerating reports and committing the milestone.

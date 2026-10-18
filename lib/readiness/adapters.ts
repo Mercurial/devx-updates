@@ -18,7 +18,10 @@ export function parseNativeInput(value: unknown): NativeInput {
 }
 
 export function resolveNative(raw: unknown, input: NativeInput, evidence: { native: string; configuration: string; supporting?: string[] }): Resolution {
-  const data = object(raw, "native output");
+  const native = object(raw, "native output");
+  const wrappedNpm = input.adapter === "npm-lock" && "formatVersion" in native;
+  if (wrappedNpm && native.formatVersion !== 1) throw new Error("Unsupported npm capture format");
+  const data = wrappedNpm ? object(native.lock, "npm lock") : native;
   const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(input.adapter) ? 3 : 2 });
   const evidenceIds = [...new Set([evidence.native, evidence.configuration, ...(evidence.supporting ?? [])])].sort();
   const profileId = `profile:${input.toolId}:${inputDigest.slice(0, 24)}`;
@@ -61,9 +64,22 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
     if (![2, 3].includes(data.lockfileVersion as number)) throw new Error("Only npm lockfile versions 2 and 3 are supported");
     const packages = object(data.packages, "packages");
     const entries = Object.entries(packages).map(([path, value]) => [path, object(value)] as const);
+    // npm can omit a workspace's name while retaining it in its node_modules link.
+    // Legacy captures retain their original identities for historical replay.
+    const workspaceNames = new Map<string, Set<string>>();
+    if (wrappedNpm) for (const [path, pkg] of entries) {
+      if (!pkg.link || typeof pkg.resolved !== "string" || !path.includes("node_modules/")) continue;
+      const names = workspaceNames.get(pkg.resolved) ?? new Set<string>();
+      names.add(path.split("node_modules/").pop()!);
+      workspaceNames.set(pkg.resolved, names);
+    }
     for (const [path, pkg] of entries) {
       if (pkg.link) continue;
-      const name = typeof pkg.name === "string" ? pkg.name : path ? path.split("node_modules/").pop()! : text(data.name, "root package name");
+      const linkedNames = workspaceNames.get(path);
+      if (wrappedNpm && path && !path.includes("node_modules/") && typeof pkg.name !== "string" && linkedNames?.size !== 1) {
+        missing(`Workspace package name for ${path} is missing or ambiguous in the lockfile.`);
+      }
+      const name = typeof pkg.name === "string" ? pkg.name : linkedNames?.size === 1 ? [...linkedNames][0] : path ? path.split("node_modules/").pop()! : text(data.name, "root package name");
       const version = typeof pkg.version === "string" ? pkg.version : null;
       const source = typeof pkg.resolved === "string" && !pkg.resolved.startsWith("file:") ? pkg.resolved : `source:${input.revision}:${path}`;
       addNode(path, name, version, source, typeof pkg.integrity === "string" ? pkg.integrity : null);

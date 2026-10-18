@@ -27,6 +27,33 @@ const lock = {
   },
 };
 
+test("versioned npm captures identify unnamed workspace roots through lock links and preserve legacy replay", () => {
+  const workspaceLock = { name: "monorepo", lockfileVersion: 3, packages: {
+    "": { name: "monorepo" },
+    "apps/mobile": { version: "2.4.0", dependencies: { "@wallet/crypto": "*" } },
+    "packages/crypto": { version: "1.0.0" },
+    "node_modules/wallet-mobile": { link: true, resolved: "apps/mobile" },
+    "node_modules/@wallet/crypto": { link: true, resolved: "packages/crypto" },
+  } };
+  const evidence = { native: "native", configuration: "configuration" };
+  const input = { ...base, rootNames: ["wallet-mobile"] };
+  const result = resolveNative({ formatVersion: 1, lock: workspaceLock }, input, evidence);
+  const root = result.occurrences.find((n) => n.id === result.profile.roots[0])!;
+  assert.equal(root.locator, "apps/mobile");
+  assert.equal(result.artifacts.find((a) => a.id === root.artifactId)!.name, "wallet-mobile");
+  const dependency = result.occurrences.find((n) => n.locator === "packages/crypto")!;
+  assert.equal(result.artifacts.find((a) => a.id === dependency.artifactId)!.name, "@wallet/crypto");
+  assert.ok(result.edges.some((e) => e.from === root.id && e.to === dependency.id && e.scope === "runtime"));
+  const legacy = resolveNative(workspaceLock, { ...base, rootNames: ["apps/mobile"] }, evidence);
+  assert.ok(legacy.artifacts.some((a) => a.name === "apps/mobile"));
+  assert.ok(legacy.artifacts.some((a) => a.name === "packages/crypto"));
+  assert.throws(() => resolveNative({ formatVersion: 2, lock: workspaceLock }, input, evidence), /Unsupported npm/);
+  const ambiguous = { ...workspaceLock, packages: { ...workspaceLock.packages, "node_modules/crypto-alias": { link: true, resolved: "packages/crypto" } } };
+  const uncertain = resolveNative({ formatVersion: 1, lock: ambiguous }, input, evidence);
+  assert.ok(uncertain.gaps.some((g) => g.reason.includes("packages/crypto") && g.reason.includes("ambiguous")));
+  assert.equal(uncertain.profile.coverage, "partial");
+});
+
 function setup() {
   const directory = mkdtempSync(join(tmpdir(), "readiness-test-"));
   const store = new Store(directory);
