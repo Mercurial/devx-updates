@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "450ad0ee0eca82c337f5a5e1f2acc4252d18d2ec4e8c2ccc45687249bf12d6a1",
-    "generatedAt": "2026-10-18T16:03:10.794Z",
+    "semanticDigest": "ba13d59e1c1d8fdee1e60fc6717406bb7623be6fe8121595c9a0e75449afebf2",
+    "generatedAt": "2026-10-18T16:39:14.308Z",
     "tools": [
       {
         "id": "1694-io",
@@ -1727,7 +1727,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -1739,10 +1739,36 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:002b7ff139726dee56dce6e7d46288ed523a09c510aead2f6aca21a56743cd6d",
+          "evidence:006470ae0669c04f7c307e2a7649de48153242fa6ff8ebd0cd8dc72a9c3437e8",
+          "evidence:12a3f2bcb359b08dc5fabbe43192d8331c3f33a212cb0fa3ee855588187ad548",
+          "evidence:1ee06cad2807f349ba0cf1ea38bd1c7019fbb246190494b41dce1e594e5f61bc",
+          "evidence:41f0bac3a0a42b62d8497eb83c9dcd8ead030b55a88778a4785bab97d06263bb",
+          "evidence:4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c",
+          "evidence:55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837",
+          "evidence:af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d",
+          "evidence:b425caf34f7ed228133642a1b4815ac48e6f9aaab3ba2fcd04377bfb9774d367",
+          "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
           "evidence:c0bb21cd59a00298ef81b6c75eb1a9c1cb0c3aae3c3a23bde08ddcf2fb49f8ac",
-          "evidence:d4ec1c5760c58aa9d86db121266b7b358f7a3a39bd92c6f124fc736c2f798c8f"
+          "evidence:d4ec1c5760c58aa9d86db121266b7b358f7a3a39bd92c6f124fc736c2f798c8f",
+          "evidence:f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265"
         ],
         "gaps": [
+          {
+            "id": "gap:0527de190aa619a089e4cc85",
+            "area": "resolution",
+            "reason": "Yarn source resolve@patch:resolve@npm%3A1.19.0#optional!builtin<compat/resolve>::version=1.19.0&hash=c3c19d needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+          },
+          {
+            "id": "gap:055597214cef464418c51c09",
+            "area": "integration",
+            "reason": "Blockfrost JS tag and manifest 6.2.0 select a Yarn 4 client library profile. The hosted Blockfrost service, chosen network and request configuration are not deployed components identified by this lock. Serialization native/WASM artifacts, installed peers and published package correspondence remain unverified.",
+            "nextAction": "Verify the published client artifact and selected service/network configuration, then manually review chain-data, transaction submission and serialization integration boundaries.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21",
+            "code": "sdk-scope:blockfrost-js:integration"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
@@ -1758,17 +1784,52 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:431b1add092354f97d306d57",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Yarn source typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+          },
+          {
+            "id": "gap:507c8c758062ac98642b07f8",
+            "area": "resolution",
+            "reason": "17 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+          },
+          {
+            "id": "gap:5f706340ece87e55f867cd87",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+          },
+          {
+            "id": "gap:cb8bac6dfcbdc8e76909d3bc",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:d8bee8a6de2d2f3a89a0022b",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+          },
+          {
+            "id": "gap:dc8adb3969cee0fedaf3a7fb",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:53.976Z",
@@ -3462,7 +3523,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -3471,7 +3532,14 @@
           "package.json"
         ],
         "evidenceIds": [
+          "evidence:36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b",
+          "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+          "evidence:7529eb82130ff0571b0f16974ed101c469f969a9c73efd476d51d43e1dc97ac5",
+          "evidence:774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
+          "evidence:92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca",
           "evidence:aa0e75002c0ca5b0dac2ab9337a58e4b503cf6c08390f73e017797cab6ef9a93",
+          "evidence:d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
+          "evidence:d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789",
           "evidence:e15ac3040508471dde48a96259142599ee9c27b231c77ba5a1ea2d921c2df650"
         ],
         "gaps": [
@@ -3483,11 +3551,61 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:0dc67bb1fef2b4ece85992c3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:173a050a1562112ea6ebfaba",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
             "nextAction": "Export a discovery review packet.",
             "code": "integration-unreviewed"
+          },
+          {
+            "id": "gap:2a1a28bdcec18416d6b57d27",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @rspack/core from node_modules/@storybook/builder-webpack5/node_modules/html-webpack-plugin has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:32984e0f355b57fc2fae4d67",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:376b4151ee25bda1df04e283",
+            "area": "integration",
+            "reason": "The selected React/browser wallet connector package does not establish which injected wallet, network, mobile integration or consumer configuration is active. Client dependencies alone do not verify signing or submission behavior.",
+            "nextAction": "Capture production connector entry points and selected consumer/wallet configuration, then manually review wallet interactions and protocol boundaries.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+            "code": "sdk-scope:cardano-dapp-wallet-connector:integration"
+          },
+          {
+            "id": "gap:4033e2dc23e57a4b30160fd9",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:4055c161cb242f3bf933e8fb",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-focus-scope has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
           },
           {
             "id": "gap:4abbaad672af9beef40f0088",
@@ -3496,11 +3614,138 @@
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:54506482417beb3fe9f489d9",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies babel-plugin-macros from node_modules/jest-circus/node_modules/dedent has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:548159b8b7d1e014f05293ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies vitest from node_modules/@testing-library/jest-dom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:659f9fb97d9ee8dbff6d4a66",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:67b2f4476f965a65fc65c05a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:899eb288d8e1ebc21642b860",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:8a4677117f15fd86e83921ae",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-primitive has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:9234eda553bd54c01f65ded4",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/bun from node_modules/@testing-library/jest-dom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:94a85378a9b07b79bbed317c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-presence has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:9e169ac4fc96b691068a9ece",
+            "area": "artifact",
+            "reason": "NEWM Cardano dApp Wallet Connector default-branch source has manifest 1.5.5 but npm lock root 1.5.4; runtime, development, optional and peer dependency declarations agree. The locked version remains unchanged and no published release mapping is verified.",
+            "nextAction": "Verify the package release and source/lock correspondence before attributing exposure to a published connector version.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+            "code": "sdk-scope:cardano-dapp-wallet-connector:artifact"
+          },
+          {
+            "id": "gap:b7471e6a4d047e35f1a60a2c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-dismissable-layer has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:c7f18fbeba41a4a85acff60f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @rspack/core from node_modules/@storybook/builder-webpack5/node_modules/css-loader has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:c8169d686da5014bbafb28ae",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:c8980454b1bdcfdfcacc42ee",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:e4bf26a1829572f0d7fe3893",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-portal has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:e687043f8c0f8b95955a9454",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:f69dfe547e1425100965f1f7",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:f6ac840e479e75ce776bd7de",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-dialog has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:fa9950bb1e5c97d4e0c6463c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+          },
+          {
+            "id": "gap:fac58579f338dea34fef03b0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
           }
         ],
         "lastAttempt": "2026-10-17T16:53:02.822Z",
@@ -4139,7 +4384,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -4174,16 +4419,85 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639",
+          "evidence:0448708a14975267fca4dd95ab73377a17f91fe1cd098c326df81ff94f3e4faf",
+          "evidence:052f08982aacf2e6ad103215dec540d233352cb4a02195aa589552321b52fe50",
+          "evidence:08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
+          "evidence:0bc754220529706cfccc7e777e86f19a3c4bccb57213d2788f81adddc6947b4f",
+          "evidence:0bcac71ef9c786691541c11bbb02c0a018fb090873bdab41f91f5659c1037553",
+          "evidence:0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976",
+          "evidence:10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9",
+          "evidence:112791fa2d6b6a88e2ba35e9865c1919df06fe46490247e745d00e21187817fe",
+          "evidence:11543bf293c6e4757cccc6e5e91bf930834cc383af117ac00d63f4330b0fa52e",
+          "evidence:15b3d670d46d44a5854d0dd6b489502b3d699facfc30e346d3d3eefd30f1df8c",
+          "evidence:1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f",
+          "evidence:26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746",
           "evidence:2a3e4a32d8fac8ea9190ff55cf602eb27b727791415e066f80fc793cae02c65c",
-          "evidence:92f1f6afef83c9c6c4993f8557cb7292f3dd5dc82574fc9233bbe77f41894580"
+          "evidence:2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
+          "evidence:347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
+          "evidence:34993bba76d88ec7953a39dbd2ea5b70c78293f6079d0b4538dddaa3fe6ce8ed",
+          "evidence:3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6",
+          "evidence:3b8b576e7c029d7057fa7c20bc452b1ea744caaafe879a928dde6189e6aa7090",
+          "evidence:526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
+          "evidence:64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
+          "evidence:7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
+          "evidence:7bb109922fc142aa3b929467b1e37812c0cc235fbab69458754dc5f8d7ab203c",
+          "evidence:80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100",
+          "evidence:8126df2dec8d3db6bd7cf52cd6710cd1a992816cf382ecd4922d521970282a69",
+          "evidence:81eb15a51a2bc1d70af22f6c23e3ba4b66b3bf3fce3b61e5a201996e18e1e354",
+          "evidence:8b760147e6dea8a4d81aa24a9e3ab48926fb12e3fd48d43b7b2a6101fddb2396",
+          "evidence:92f1f6afef83c9c6c4993f8557cb7292f3dd5dc82574fc9233bbe77f41894580",
+          "evidence:94e882c04b4f084cac30f1c274602b10994e24061ba2ad54960baa5790cb3de1",
+          "evidence:982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
+          "evidence:a80a3c41ba06175fbc17a8285225b0a88a510aa1359a3d402247edcbde8e4e34",
+          "evidence:ac3acbcc019a4e74f6350c7703cd3ac3ba98bb673c5aed260923636185cba42e",
+          "evidence:bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4",
+          "evidence:c2b489c226dbb5d66eb26963a7cf3dfed091cb55efeb8ed989fa125dcbd97c84",
+          "evidence:c5d76b711aea5c7ff1c3a54f182843e0007d080546b09bd6c94432abfa2ecd0c",
+          "evidence:ca977f514b64290aa642a5693105fdc28a6174f5c8527f9c6da803b5e9a52972",
+          "evidence:cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
+          "evidence:d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20",
+          "evidence:d5344adb98bd8e75552ed0216d24ba3d73b6691407eb8388c8ac7ca8097c8bc7",
+          "evidence:d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
+          "evidence:e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07",
+          "evidence:ebf9b03e37177ed7094fa8ffef6ffc58ab4cc8b37840098f86739ef2805cb4e2",
+          "evidence:f6b6117e639957c9f2d111bbec16af669b35692eeefdd1ecf7749d2cb8dbf1d9"
         ],
         "gaps": [
+          {
+            "id": "gap:02b4d0fad63da8de7a2dae8b",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^11.1.0 from lock:@artilleryio/int-core@npm:2.28.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:062a8c18bf163d830a97afeb",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-trace-base@npm:2.7.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:0bd6ac1ffe2f74ce1b015117",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^11.1.0 from lock:artillery-plugin-publish-metrics@npm:2.38.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:17dc74812aff3c318eb65d45",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/sdk-metrics@npm:2.8.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -4193,17 +4507,412 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:2450396bb9a9fe7fd2be448c",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Yarn workspace packages/hardware-trezor manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:28a4c89708401115a5e13960",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:@istanbuljs/load-nyc-config@npm:1.1.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:29037dad63c808c6472dd647",
+            "area": "resolution",
+            "reason": "The Yarn 3.2.1 metadata-v6 graph retains declared selections but leaves unresolved descriptors and workspace declaration/lock differences visible. Root resolutions, six patch locators, package extensions and Yarn plugins require separate verification; absent edges are not inferred from plausible versions. Virtual peer instances and installed platform selection remain unresolved.",
+            "nextAction": "Collect an immutable installed inventory under the pinned Yarn configuration to resolve override/patch selections and peer bindings, preserving the original lock capture and explicit gaps.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+            "code": "sdk-scope:cardano-js-sdk:resolution"
+          },
+          {
+            "id": "gap:292b7778eeff5a1bae59fc07",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.5.5 from lock:@artilleryio/int-core@npm:2.28.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:2d46d04ecec8e046eac5f002",
+            "area": "resolution",
+            "reason": "Yarn source resolve@patch:resolve@npm%3A1.22.12#~builtin<compat/resolve>::version=1.22.12&hash=07638b needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:31478f4a062e7ff6b88ab0eb",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:3b0bf530328857cd5d15e69f",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:7.2.6 from lock:@trezor/protobuf@npm:1.2.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:4bd9bcb8c9a128800bdef29d",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares plugins; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:588f7a83327b5f3b5e2aa516",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^7.4.3 from lock:pacote@npm:21.5.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:5bacfc196fc3b734d444d5c7",
+            "area": "resolution",
+            "reason": "Yarn source typescript@patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=7ad353 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:5ca345f56c8ef0e17a0ee31b",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.5.5 from lock:@grpc/proto-loader@npm:0.8.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:5e96f174de9009309b071881",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-http@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:610aa65f4304547632d9987e",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/resources@npm:2.8.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:673511c0f584757000f3d9e1",
+            "area": "resolution",
+            "reason": "Yarn source resolve@patch:resolve@npm%3A1.22.3#~builtin<compat/resolve>::version=1.22.3&hash=07638b needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:7284a8900e34e64e5f85e6ed",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^14.0.0 from lock:rpc-websockets@npm:9.3.9.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:74073bf5149d2379e7a5dda0",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-proto@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:742f203ddfae7f15fedcc0a8",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^7.5.7 from lock:@yao-pkg/pkg@npm:6.20.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:756d677dc7678938fea9d004",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/exporter-zipkin@npm:2.8.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:791027fa56a60f1e58815ac1",
+            "area": "integration",
+            "reason": "The selected wallet/transaction/governance APIs do not establish consumer wiring, configured provider or Ogmios deployment identities, hardware-wallet firmware, or distributed native/WASM artifacts. Package scope is not proof of runtime capability or hardfork behavior.",
+            "nextAction": "Capture selected application/provider configuration and production entry points, then manually review signing, transaction construction, submission and governance behavior.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+            "code": "sdk-scope:cardano-js-sdk:integration"
+          },
+          {
+            "id": "gap:7ca4334ca5de5b89586a3f0b",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^7.5.11 from lock:@lerna-lite/publish@npm:4.11.5.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:7d141920ce3c56c6ff4272d3",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:eslint@npm:7.32.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:84fe2c047471edcc28b6f4ba",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-grpc@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:8a0746630c4b101135119fd7",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:8c49d63a558ae3c2107d1a08",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^7.5.4 from lock:node-gyp@npm:12.4.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:8e2b7da184b025b9c30b1d82",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-proto@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:95db43ed9db55002020815c9",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^10.0.0 from lock:dockerode@npm:4.0.12.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:990fc2e8e97a263e89481bf6",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares packageExtensions; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:9a4fb0863dca69c40f2e2318",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-exporter-base@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:9ad3c6dd57680cfdf0b354ee",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tmp@npm:^0.0.33 from lock:external-editor@npm:3.1.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:9b2dd1148546b8c596f20dc6",
+            "area": "resolution",
+            "reason": "Yarn workspace packages/key-management manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:9dcc1105c135cd6f0ef356b5",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^8.3.2 from lock:jayson@npm:4.3.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:a83ad4276e81a7fe8e8c6203",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^6.1.11 from lock:cacache@npm:16.1.3.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:a94628d12534c72b6d6c6210",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-http@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:b1c97993ad48ffcd14070f03",
+            "area": "artifact",
+            "reason": "Selected Cardano JS SDK wallet 0.56.0, tx-construction 0.29.1, dapp-connector 0.13.31 and governance 0.11.34 manifests share hardware-ledger tag 0.17.0. The repository tag does not establish published release correspondence for these four packages. All 22 locked workspaces remain retained; orchestration, e2e and service packages are not selected roots.",
+            "nextAction": "Verify published package provenance for the four selected versions and keep their independent release mappings separate from the hardware-ledger tag.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+            "code": "sdk-scope:cardano-js-sdk:artifact"
+          },
+          {
+            "id": "gap:b28593be25b23b98a964c29a",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/sdk-trace-base@npm:2.8.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:b649fd4723c07ff1e53a3f12",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for tar@npm:^6.1.2 from lock:node-gyp@npm:9.3.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:bab65241effef4a2a9cff02f",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^4.1.0 from lock:mocha@npm:10.8.2.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:be8b0941e0b51e6fb1079d13",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/resources@npm:2.7.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:c0b67814e5a7c6a84eec4f6e",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-grpc@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:c6ab99b4aca1c7b9f4ca9374",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^4.1.0 from lock:@apidevtools/json-schema-ref-parser@npm:14.2.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:d0756a4366653c20c1ab4577",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-grpc-exporter-base@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:d27add1273c32f13de51fc5f",
+            "area": "resolution",
+            "reason": "Yarn workspace packages/hardware-ledger manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:d46dc7004a361f30cd934192",
+            "area": "resolution",
+            "reason": "Yarn workspace packages/e2e manifest/lock selection disagrees for delay; no dependency edge was inferred.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:d7e4173dc489fdb29217d0fa",
+            "area": "resolution",
+            "reason": "239 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:d97b5097591f9ad54c8f3c50",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:^9.0.0 from lock:pg-boss@npm:8.4.2.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:dd5d411e38e82ab226792261",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:@eslint/eslintrc@npm:0.4.3.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:dedefe87fb1d334d03eb3ac3",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:7.2.6 from lock:@trezor/transport@npm:1.3.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:dfe88cd3448058c0182db60b",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-logs@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:e185c301a6a180ac20e9cd97",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:e7a63dbbe142d7fed8b65b37",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.3.2 from lock:dockerode@npm:4.0.12.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:e9596bcda145d4d47d334dad",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.2.5 from lock:@grpc/proto-loader@npm:0.7.15.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:e9d8c7894f2d31e0022540b7",
+            "area": "resolution",
+            "reason": "Yarn source typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=7ad353 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:f196ca5a03485133414d3977",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-transformer@npm:0.218.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:f2ad3c9c7fdb2c431c0c1973",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-metrics@npm:2.7.1.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:f3ad9ce6bcd2f8e5ea8c979d",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.14.1 from lock:artillery@npm:2.0.33.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:f5e49fb50d1765131674ad69",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+          },
+          {
+            "id": "gap:fda98a409db890b514798f17",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for uuid@npm:8.3.2 from lock:pouchdb@npm:7.3.0.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:34.232Z",
@@ -9239,7 +9948,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -9253,8 +9962,20 @@
           "code/smart-contract/pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:006b22f19f97840734b53c0f8f3441522c381640bc8b863639db38c48021d824",
+          "evidence:399ec5fdda1807232eb997611358e0e4467b9649c6ba33c78d4aba3045c65f44",
+          "evidence:3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
+          "evidence:6a3e920d19cbbc3cf93d64c30dc09a5add019d6aa5f24b86719583dc276189fa",
+          "evidence:8b5e23fc15fc605923ea0a21efd22776c9bb9f5c42ffadaacd3268b4d08b8d52",
           "evidence:8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6",
-          "evidence:a9672c49c743d54e37759e4790a97e6f8e08be845d8bcb065a7cfab5dde41fba"
+          "evidence:9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3",
+          "evidence:a28442426c8cf4c22bda965af643d0ab08ef89a0e324679374cf35f1cb6258ab",
+          "evidence:a3f10e147b007644070b59efb95408b87446b87d29d777ada350fd6ce74dbd5e",
+          "evidence:a9672c49c743d54e37759e4790a97e6f8e08be845d8bcb065a7cfab5dde41fba",
+          "evidence:b03c8487294fce3e029b161af30ff878c10fbbb6adfb09ad4cbeb7ab9be88804",
+          "evidence:dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
+          "evidence:df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d",
+          "evidence:f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84"
         ],
         "gaps": [
           {
@@ -9272,17 +9993,33 @@
             "code": "integration-unreviewed"
           },
           {
+            "id": "gap:20680b1f870a923ef293d187",
+            "area": "resolution",
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5"
+          },
+          {
             "id": "gap:4abbaad672af9beef40f0088",
             "area": "artifact",
             "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
-            "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "id": "gap:5d351d56654dfd8885bbd312",
+            "area": "integration",
+            "reason": "Epora documentation describes frontend/server packages, a default Preprod network, server-side Blockfrost/Koios proxies and PostgreSQL. Separate Aiken validators and mirrored plutus.json blueprints are outside the selected npm closure. The Aiken manifest declares compiler v1.1.23 and Plutus v3; these are source declarations, not verified deployed scripts or network readiness.",
+            "nextAction": "Capture the Aiken native closure, compiled blueprint provenance, selected contract hashes, database and proxy configuration before manually reviewing permission/recovery wallet workflows.",
+            "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+            "code": "sdk-scope:epora-wallet:integration"
+          },
+          {
+            "id": "gap:89c2f79dc077680c011c7972",
+            "area": "artifact",
+            "reason": "Epora permission-wallet-dapp manifest 0.1.0 comes from default-branch source with no stable release mapping. The nested pnpm-v9 importer declarations match the manifest. This profile covers application package selections, not a released app or compiled contract inventory.",
+            "nextAction": "Verify the deployed application source/build correspondence and retain its environment and network selection explicitly.",
+            "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+            "code": "sdk-scope:epora-wallet:artifact"
           }
         ],
         "lastAttempt": "2026-10-17T16:53:06.207Z",
@@ -9692,7 +10429,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -9701,16 +10438,40 @@
           "pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94",
+          "evidence:1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
+          "evidence:2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1",
+          "evidence:2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409",
           "evidence:3bfc492fbbd4921a1a047356a20ecdb553588754e825da955d82866b0a865d53",
-          "evidence:829e237d02351b55434f83fab701aa9747758076998a5da9beb3d4081d0dd316"
+          "evidence:75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79",
+          "evidence:829e237d02351b55434f83fab701aa9747758076998a5da9beb3d4081d0dd316",
+          "evidence:96067a9feb1dee4bbabc6ddaecdc690b809177c6da4b39c4ab8881f5ec213006",
+          "evidence:abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5",
+          "evidence:d2befdec45f517650d7bb954aad1c50b17d4a3a24dba2d615218bab28766a85d",
+          "evidence:d3750093a4094ed19eefae1c7db96dbae5d7d9e2ec0f1a419e82c134710bff5f"
         ],
         "gaps": [
+          {
+            "id": "gap:086a86e5aec49f3bc5101da4",
+            "area": "resolution",
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:0e9bb9c9a32ce4a2791f8645",
+            "area": "artifact",
+            "reason": "GeniusYield Lucid SDK manifest 2.0.0 is captured from default-branch source with no stable release mapping identified. Its pnpm importer declarations match the retained manifest, but distributed package correspondence remains unverified.",
+            "nextAction": "Identify and verify the published SDK version and source provenance without treating the default-branch revision as a stable release.",
+            "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+            "code": "sdk-scope:geniusyield-sdk:artifact"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -9726,11 +10487,12 @@
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
-            "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "id": "gap:9968322323047d1063e5739b",
+            "area": "integration",
+            "reason": "The selected SDK declares Lucid Evolution for GeniusYield DEX interaction. Lock evidence does not identify the deployed order/DEX contracts, provider configuration, enabled integrations or transaction behavior.",
+            "nextAction": "Capture production DEX/order implementation and contract/provider configuration, then manually review the supported consumer workflows and service boundaries.",
+            "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+            "code": "sdk-scope:geniusyield-sdk:integration"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:30.371Z",
@@ -22967,6 +23729,34 @@
     ],
     "profiles": [
       {
+        "id": "profile:blockfrost-js:fd053be60979025fd54aac21",
+        "toolId": "blockfrost-js",
+        "release": "v6.2.0",
+        "revision": "cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba",
+        "toolchain": "Yarn modern lock; yarn@4.0.0; parser @yarnpkg/parsers 3.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:a38b3e05e1a2dbb1d263275a4b5a7cd194a0d2d7f8513320f2c44a501e3258aa"
+        ],
+        "inputDigest": "fd053be60979025fd54aac21ab669e4cf241702a3ac68836443f24635487ff0b",
+        "evidenceIds": [
+          "evidence:002b7ff139726dee56dce6e7d46288ed523a09c510aead2f6aca21a56743cd6d",
+          "evidence:55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837",
+          "evidence:b425caf34f7ed228133642a1b4815ac48e6f9aaab3ba2fcd04377bfb9774d367",
+          "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
+          "evidence:f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265"
+        ],
+        "nativeEvidenceId": "evidence:f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265",
+        "configurationEvidenceId": "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
         "toolId": "cardano-connect-with-wallet",
         "release": "cardano-connect-with-wallet-v0.2.22",
@@ -22989,6 +23779,82 @@
         ],
         "nativeEvidenceId": "evidence:aae2141ba949844930b83885a7637cb45040ec2c3842c8fd93cc2f08e99c0520",
         "configurationEvidenceId": "evidence:33872841ca6c3131198c8fff7256e30ae48e3419def9a1d74dd05f294d26710d",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+        "toolId": "cardano-dapp-wallet-connector",
+        "release": "unreleased:master",
+        "revision": "5d629436c7b7e7c2757355888a63cccd62fb1bca",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed package-lock.json at 5d629436c7b7e7c2757355888a63cccd62fb1bca",
+        "toolchain": "npm lockfile format 2; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:d06d7db85d55a7e7f9cac89d1571343f2c7b9233fccf4f66b659a72864abb6c0"
+        ],
+        "inputDigest": "4388ebe22bd6824801066605fc1c5e881b56aee2dae29cf815b0a4eaaf27432d",
+        "evidenceIds": [
+          "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+          "evidence:92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca"
+        ],
+        "nativeEvidenceId": "evidence:92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca",
+        "configurationEvidenceId": "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+        "toolId": "cardano-js-sdk",
+        "release": "@cardano-sdk/hardware-ledger@0.17.0",
+        "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 48019e49c826ea77d81be0e2d2907f94406f5e04",
+        "toolchain": "Yarn modern lock; yarn@3.2.1; parser @yarnpkg/parsers 3.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:56818b843470feaa9e706a0fdaf8a7d188b2fb82f8e1f449355a1f4520662b23",
+          "occurrence:f818c43eac16f1b332389fbebd91b1f344efc63696839bb18067712a4253f72a",
+          "occurrence:47168032eeae001db5f04b1345918a8ddc87d0c82c7333824ef03ba9170e9219",
+          "occurrence:6b1b71514120df7c69f1bc026f4a4e8f65ecfd53bc4280c9b0bdabd24ed0b4ae"
+        ],
+        "inputDigest": "ec36b69b5ecae45f8e237af939997d5ca5377fdc02f09cdea4426a32fde616b7",
+        "evidenceIds": [
+          "evidence:0448708a14975267fca4dd95ab73377a17f91fe1cd098c326df81ff94f3e4faf",
+          "evidence:0bcac71ef9c786691541c11bbb02c0a018fb090873bdab41f91f5659c1037553",
+          "evidence:0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976",
+          "evidence:10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9",
+          "evidence:1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f",
+          "evidence:26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746",
+          "evidence:2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
+          "evidence:347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
+          "evidence:34993bba76d88ec7953a39dbd2ea5b70c78293f6079d0b4538dddaa3fe6ce8ed",
+          "evidence:3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6",
+          "evidence:526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
+          "evidence:64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
+          "evidence:7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
+          "evidence:80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100",
+          "evidence:8126df2dec8d3db6bd7cf52cd6710cd1a992816cf382ecd4922d521970282a69",
+          "evidence:8b760147e6dea8a4d81aa24a9e3ab48926fb12e3fd48d43b7b2a6101fddb2396",
+          "evidence:94e882c04b4f084cac30f1c274602b10994e24061ba2ad54960baa5790cb3de1",
+          "evidence:982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
+          "evidence:a80a3c41ba06175fbc17a8285225b0a88a510aa1359a3d402247edcbde8e4e34",
+          "evidence:ac3acbcc019a4e74f6350c7703cd3ac3ba98bb673c5aed260923636185cba42e",
+          "evidence:bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4",
+          "evidence:ca977f514b64290aa642a5693105fdc28a6174f5c8527f9c6da803b5e9a52972",
+          "evidence:d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20",
+          "evidence:d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
+          "evidence:e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07",
+          "evidence:ebf9b03e37177ed7094fa8ffef6ffc58ab4cc8b37840098f86739ef2805cb4e2"
+        ],
+        "nativeEvidenceId": "evidence:1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f",
+        "configurationEvidenceId": "evidence:10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9",
         "coverage": "partial"
       },
       {
@@ -23295,6 +24161,33 @@
         "coverage": "complete"
       },
       {
+        "id": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+        "toolId": "epora-wallet",
+        "release": "unreleased:main",
+        "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed code/dApp/pnpm-lock.yaml and importer manifests at 8e6fd820d21e901f019af71eec8150400b1e9669",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:8e635167fbe95b1a85168949b797cb0abccbc63501e1e4e94281db32de8f330f"
+        ],
+        "inputDigest": "4f24d3734967c2ad6b5cecd545a5438678bbf7c36c23f9920aeda0cdfda0ab98",
+        "evidenceIds": [
+          "evidence:6a3e920d19cbbc3cf93d64c30dc09a5add019d6aa5f24b86719583dc276189fa",
+          "evidence:9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3",
+          "evidence:dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
+          "evidence:df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d"
+        ],
+        "nativeEvidenceId": "evidence:dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
+        "configurationEvidenceId": "evidence:df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:evolution-sdk:299df18680147d54d422875c",
         "toolId": "evolution-sdk",
         "release": "@evolution-sdk/devnet@3.0.21",
@@ -23326,6 +24219,33 @@
         ],
         "nativeEvidenceId": "evidence:e6fb778dde6e1c749a81683f5150aef0b17999eef461cc5e0cf615e366079920",
         "configurationEvidenceId": "evidence:c4c4bfdb9aa508a1fd70e1c7ac0d36d5c073dcfa7d0ebf0dfa13d57769ba9ab0",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+        "toolId": "geniusyield-sdk",
+        "release": "unreleased:main",
+        "revision": "66a6ebcedd64979d02d1bb01c520185af1489f0d",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed pnpm-lock.yaml and importer manifests at 66a6ebcedd64979d02d1bb01c520185af1489f0d",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:77fab633b81a8ba99f41ad5109804d5cd48e00d0331bb3742c79a0979cd9feb5"
+        ],
+        "inputDigest": "e6a95c7082608707db87e25b558f48efe85bd001bf05a8c4446f87c1a561cc76",
+        "evidenceIds": [
+          "evidence:1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
+          "evidence:2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409",
+          "evidence:abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5",
+          "evidence:d2befdec45f517650d7bb954aad1c50b17d4a3a24dba2d615218bab28766a85d"
+        ],
+        "nativeEvidenceId": "evidence:2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409",
+        "configurationEvidenceId": "evidence:abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5",
         "coverage": "partial"
       },
       {
@@ -24035,6 +24955,13 @@
         "sourceUrl": "https://github.com/OpShin/opshin/tree/515329f99b51e27c65492237200c8aafd802837d"
       },
       {
+        "id": "evidence:002b7ff139726dee56dce6e7d46288ed523a09c510aead2f6aca21a56743cd6d",
+        "digest": "002b7ff139726dee56dce6e7d46288ed523a09c510aead2f6aca21a56743cd6d",
+        "path": "evidence/002b7ff139726dee56dce6e7d46288ed523a09c510aead2f6aca21a56743cd6d.json.gz",
+        "description": "Native input blockfrost-js/yarn.lock",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/yarn.lock"
+      },
+      {
         "id": "evidence:00309461cde655feb331a6877ab44c2fc466b5e44a2b58bc8d3345ddd81a9ff5",
         "digest": "00309461cde655feb331a6877ab44c2fc466b5e44a2b58bc8d3345ddd81a9ff5",
         "path": "evidence/00309461cde655feb331a6877ab44c2fc466b5e44a2b58bc8d3345ddd81a9ff5.json.gz",
@@ -24047,6 +24974,19 @@
         "path": "evidence/004d72d2dac4e3e2b4cbad73d4b6d804fe4455382575f657684f3a12c7313ebe.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/miguelaeh/cardanocli-js/releases/tag/5.0.1"
+      },
+      {
+        "id": "evidence:006470ae0669c04f7c307e2a7649de48153242fa6ff8ebd0cd8dc72a9c3437e8",
+        "digest": "006470ae0669c04f7c307e2a7649de48153242fa6ff8ebd0cd8dc72a9c3437e8",
+        "path": "evidence/006470ae0669c04f7c307e2a7649de48153242fa6ff8ebd0cd8dc72a9c3437e8.json.gz",
+        "description": "Pinned SDK/application workflow scope for blockfrost-js"
+      },
+      {
+        "id": "evidence:006b22f19f97840734b53c0f8f3441522c381640bc8b863639db38c48021d824",
+        "digest": "006b22f19f97840734b53c0f8f3441522c381640bc8b863639db38c48021d824",
+        "path": "evidence/006b22f19f97840734b53c0f8f3441522c381640bc8b863639db38c48021d824.json.gz",
+        "description": "Source epora-wallet/code/dApp/package.json",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/package.json"
       },
       {
         "id": "evidence:010ea1d12f43b3f440e4e5ca586c477d9321f319ba0c8db16b6f5648b91a7e36",
@@ -24125,6 +25065,13 @@
         "sourceUrl": "https://github.com/OpShin/hebi/tree/c598196f2d20b5a053d1a0dedd7e551d74299cac"
       },
       {
+        "id": "evidence:036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639",
+        "digest": "036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639",
+        "path": "evidence/036e13869d31fd2867afd309c09660ad3eec341a48d73c4323a44989a50df639.json.gz",
+        "description": "Source cardano-js-sdk/packages/tx-construction/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/tx-construction/package.json"
+      },
+      {
         "id": "evidence:03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693",
         "digest": "03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693",
         "path": "evidence/03dd0b2cf3e04541a20c46212b3fecdbf0f83eb46a844e1fae6b9355a1281693.json.gz",
@@ -24144,6 +25091,13 @@
         "path": "evidence/03f35f06d75d9a2663334de7b717893840617f3006f3ed60a13a7e2e85c799f7.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/HeliosLang/compiler/tree/7364d795562b96d14b1e177b28c103eb240d0f54"
+      },
+      {
+        "id": "evidence:0448708a14975267fca4dd95ab73377a17f91fe1cd098c326df81ff94f3e4faf",
+        "digest": "0448708a14975267fca4dd95ab73377a17f91fe1cd098c326df81ff94f3e4faf",
+        "path": "evidence/0448708a14975267fca4dd95ab73377a17f91fe1cd098c326df81ff94f3e4faf.json.gz",
+        "description": "Native input cardano-js-sdk/packages/e2e/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/e2e/package.json"
       },
       {
         "id": "evidence:0469054e52e465438b8c6045e2f28fd43a4f55a61b83d73699f98b9cb0b3b27b",
@@ -24172,6 +25126,13 @@
         "path": "evidence/04f8d4d3a651970d3c40e8e7e7d3c084add263d7e3d6c76fc492d27d0994344e.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/dcSpark/carp/releases/tag/3.3.0"
+      },
+      {
+        "id": "evidence:052f08982aacf2e6ad103215dec540d233352cb4a02195aa589552321b52fe50",
+        "digest": "052f08982aacf2e6ad103215dec540d233352cb4a02195aa589552321b52fe50",
+        "path": "evidence/052f08982aacf2e6ad103215dec540d233352cb4a02195aa589552321b52fe50.json.gz",
+        "description": "Source cardano-js-sdk/yarn.lock",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/yarn.lock"
       },
       {
         "id": "evidence:0553ddfdbd29dad0d4070edb00f014bf2245e98ac66c024dac88826ba247c7e6",
@@ -24230,6 +25191,13 @@
         "sourceUrl": "https://github.com/vacuumlabs/adalite/tree/86dd006310600fad5e145fae2af2f9bea0b79572"
       },
       {
+        "id": "evidence:08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
+        "digest": "08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431",
+        "path": "evidence/08f02ce3c9efc7ed8a43fc078c53ba5d69ba2443da7c5bef98184124fc18a431.json.gz",
+        "description": "Source cardano-js-sdk/packages/wallet/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/wallet/README.md"
+      },
+      {
         "id": "evidence:0905503325657c2db3126b02eee7880437ec833eb6382029a890a9463859da48",
         "digest": "0905503325657c2db3126b02eee7880437ec833eb6382029a890a9463859da48",
         "path": "evidence/0905503325657c2db3126b02eee7880437ec833eb6382029a890a9463859da48.json.gz",
@@ -24265,11 +25233,32 @@
         "sourceUrl": "https://github.com/cardananium/de-uplc-web/tree/57c58154b003b58780025a7b33ebf478930c5895"
       },
       {
+        "id": "evidence:0bc754220529706cfccc7e777e86f19a3c4bccb57213d2788f81adddc6947b4f",
+        "digest": "0bc754220529706cfccc7e777e86f19a3c4bccb57213d2788f81adddc6947b4f",
+        "path": "evidence/0bc754220529706cfccc7e777e86f19a3c4bccb57213d2788f81adddc6947b4f.json.gz",
+        "description": "Source cardano-js-sdk/packages/dapp-connector/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/dapp-connector/package.json"
+      },
+      {
+        "id": "evidence:0bcac71ef9c786691541c11bbb02c0a018fb090873bdab41f91f5659c1037553",
+        "digest": "0bcac71ef9c786691541c11bbb02c0a018fb090873bdab41f91f5659c1037553",
+        "path": "evidence/0bcac71ef9c786691541c11bbb02c0a018fb090873bdab41f91f5659c1037553.json.gz",
+        "description": "Native input cardano-js-sdk/packages/tx-construction/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/tx-construction/package.json"
+      },
+      {
         "id": "evidence:0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b",
         "digest": "0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b",
         "path": "evidence/0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/fabianbormann/cardano-peer-connect/releases/tag/v1.2.21"
+      },
+      {
+        "id": "evidence:0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976",
+        "digest": "0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976",
+        "path": "evidence/0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976.json.gz",
+        "description": "Native input cardano-js-sdk/packages/golden-test-generator/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/golden-test-generator/package.json"
       },
       {
         "id": "evidence:0dc0fcdbd385d1b8adffe27f2c251a13e23edf0e43054420845a959317c77b2d",
@@ -24312,6 +25301,13 @@
         "description": "Pinned wallet/contract workflow scope for marlowe-ts-sdk"
       },
       {
+        "id": "evidence:0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94",
+        "digest": "0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94",
+        "path": "evidence/0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94.json.gz",
+        "description": "Source geniusyield-sdk/package.json",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/package.json"
+      },
+      {
         "id": "evidence:107bb2096b9d1f13c3184c37b3959e53a56c7898505cc317c191b9c07ef15e0a",
         "digest": "107bb2096b9d1f13c3184c37b3959e53a56c7898505cc317c191b9c07ef15e0a",
         "path": "evidence/107bb2096b9d1f13c3184c37b3959e53a56c7898505cc317c191b9c07ef15e0a.json.gz",
@@ -24326,10 +25322,24 @@
         "sourceUrl": "https://github.com/wowica/xogmios/releases/tag/v0.8.0"
       },
       {
+        "id": "evidence:10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9",
+        "digest": "10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9",
+        "path": "evidence/10c74970d51744acb5582bbd76114b6f790f2bdcd14f8d7add7ab48c2becefc9.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/tree/48019e49c826ea77d81be0e2d2907f94406f5e04"
+      },
+      {
         "id": "evidence:10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0",
         "digest": "10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0",
         "path": "evidence/10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0.json.gz",
         "description": "Pinned Yarn workflow scope for daedalus"
+      },
+      {
+        "id": "evidence:112791fa2d6b6a88e2ba35e9865c1919df06fe46490247e745d00e21187817fe",
+        "digest": "112791fa2d6b6a88e2ba35e9865c1919df06fe46490247e745d00e21187817fe",
+        "path": "evidence/112791fa2d6b6a88e2ba35e9865c1919df06fe46490247e745d00e21187817fe.json.gz",
+        "description": "Source cardano-js-sdk/packages/governance/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/governance/README.md"
       },
       {
         "id": "evidence:115083467ca3ce66383e65fcc8be53d1aa343d8d20a0925cc0ad33eb7fe8542b",
@@ -24337,6 +25347,12 @@
         "path": "evidence/115083467ca3ce66383e65fcc8be53d1aa343d8d20a0925cc0ad33eb7fe8542b.json.gz",
         "description": "Source veridian-wallet/docker-compose.production.cardano-witnesses.yaml",
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/docker-compose.production.cardano-witnesses.yaml"
+      },
+      {
+        "id": "evidence:11543bf293c6e4757cccc6e5e91bf930834cc383af117ac00d63f4330b0fa52e",
+        "digest": "11543bf293c6e4757cccc6e5e91bf930834cc383af117ac00d63f4330b0fa52e",
+        "path": "evidence/11543bf293c6e4757cccc6e5e91bf930834cc383af117ac00d63f4330b0fa52e.json.gz",
+        "description": "Collection request for cardano-js-sdk"
       },
       {
         "id": "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
@@ -24358,6 +25374,13 @@
         "path": "evidence/11f3bc463a0ea6a1ad18de3b6791e497ee932f2efece30749f272c2fa19fe4c8.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/txpipe/pix/tree/19e45ffade14177437fc760b14531cacd3e4d1a2"
+      },
+      {
+        "id": "evidence:12a3f2bcb359b08dc5fabbe43192d8331c3f33a212cb0fa3ee855588187ad548",
+        "digest": "12a3f2bcb359b08dc5fabbe43192d8331c3f33a212cb0fa3ee855588187ad548",
+        "path": "evidence/12a3f2bcb359b08dc5fabbe43192d8331c3f33a212cb0fa3ee855588187ad548.json.gz",
+        "description": "Source blockfrost-js/package.json",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/package.json"
       },
       {
         "id": "evidence:12da1402be93320ac3c16542c4b2ad3e26c26d64ac36fdb3a919db921061e1f3",
@@ -24420,6 +25443,12 @@
         "path": "evidence/15a02fde14b02294cf3dc2d7e876b796c17060d0572ab7eda36c7f93ed9c7b3b.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/plutip/tree/4b7f9ddc1f9fdfaa52fd7fba790533b7529aa10d"
+      },
+      {
+        "id": "evidence:15b3d670d46d44a5854d0dd6b489502b3d699facfc30e346d3d3eefd30f1df8c",
+        "digest": "15b3d670d46d44a5854d0dd6b489502b3d699facfc30e346d3d3eefd30f1df8c",
+        "path": "evidence/15b3d670d46d44a5854d0dd6b489502b3d699facfc30e346d3d3eefd30f1df8c.json.gz",
+        "description": "Pinned SDK/application workflow scope for cardano-js-sdk"
       },
       {
         "id": "evidence:15d70f9e15834073f88cf7ae356512d96c1bd0de57e177f679de7b116518b489",
@@ -24526,6 +25555,13 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/package.json"
       },
       {
+        "id": "evidence:1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
+        "digest": "1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
+        "path": "evidence/1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831.json.gz",
+        "description": "Native input geniusyield-sdk/package.json",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/package.json"
+      },
+      {
         "id": "evidence:1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
         "digest": "1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157",
         "path": "evidence/1daa89eb72d047e1de596370a201f0e47c6bc5055618e2c584eca62351d0f157.json.gz",
@@ -24543,6 +25579,20 @@
         "digest": "1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
         "path": "evidence/1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78.json.gz",
         "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
+        "id": "evidence:1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f",
+        "digest": "1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f",
+        "path": "evidence/1edf81b3a0b79417140729c1cda6c06b8df793b62a314d2a64dee6f6180e056f.json.gz",
+        "description": "yarn-lock for cardano-js-sdk @cardano-sdk/hardware-ledger@0.17.0",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/tree/48019e49c826ea77d81be0e2d2907f94406f5e04"
+      },
+      {
+        "id": "evidence:1ee06cad2807f349ba0cf1ea38bd1c7019fbb246190494b41dce1e594e5f61bc",
+        "digest": "1ee06cad2807f349ba0cf1ea38bd1c7019fbb246190494b41dce1e594e5f61bc",
+        "path": "evidence/1ee06cad2807f349ba0cf1ea38bd1c7019fbb246190494b41dce1e594e5f61bc.json.gz",
+        "description": "Source blockfrost-js/README.md",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/README.md"
       },
       {
         "id": "evidence:1f29fac34f3959a3384e5d36a9aa0332d874f1aa3e2127a1ffa06b9cac3d69dc",
@@ -24746,6 +25796,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/clb/tree/867ff70b4d3086f728733f25509692cda41ea0ef"
       },
       {
+        "id": "evidence:26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746",
+        "digest": "26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746",
+        "path": "evidence/26b8ca707cdb879ee3721b90cff112c44ffbe1c83ef770068f7792f847de5746.json.gz",
+        "description": "Native input cardano-js-sdk/packages/wallet/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/wallet/package.json"
+      },
+      {
         "id": "evidence:26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca",
         "digest": "26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca",
         "path": "evidence/26d1ee8452ada6ea9d99d9f0f73edbba1854bb38e6ffde492035e37bf913e0ca.json.gz",
@@ -24888,6 +25945,12 @@
         "sourceUrl": "https://github.com/WingRiders/cab/tree/31e2488a4452dc4c9c5eefe4b74cd6b8ce6deec8"
       },
       {
+        "id": "evidence:2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1",
+        "digest": "2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1",
+        "path": "evidence/2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1.json.gz",
+        "description": "Collection request for geniusyield-sdk"
+      },
+      {
         "id": "evidence:2d84bf951b0e136c4615f56fcaf7950b4f6de30584c70abb6f589e7c681f42ec",
         "digest": "2d84bf951b0e136c4615f56fcaf7950b4f6de30584c70abb6f589e7c681f42ec",
         "path": "evidence/2d84bf951b0e136c4615f56fcaf7950b4f6de30584c70abb6f589e7c681f42ec.json.gz",
@@ -24935,6 +25998,13 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/releases/tag/11.5.0"
       },
       {
+        "id": "evidence:2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
+        "digest": "2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c",
+        "path": "evidence/2e96e3c27f92cce79ac8faafec4cad9c4233c31b7f52769fb5babe92be80373c.json.gz",
+        "description": "Native input cardano-js-sdk/packages/input-selection/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/input-selection/package.json"
+      },
+      {
         "id": "evidence:2ef81da07576931b29842a3b485eb30df47c186ca657497e67b08d2ef5cb82d9",
         "digest": "2ef81da07576931b29842a3b485eb30df47c186ca657497e67b08d2ef5cb82d9",
         "path": "evidence/2ef81da07576931b29842a3b485eb30df47c186ca657497e67b08d2ef5cb82d9.json.gz",
@@ -24947,6 +26017,13 @@
         "path": "evidence/2f1924d17a25821de6f30f4c8f372838eff9067eb5df7925d65541e205a37976.json.gz",
         "description": "Source lace/apps/lace-mobile/package.json",
         "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-mobile/package.json"
+      },
+      {
+        "id": "evidence:2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409",
+        "digest": "2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409",
+        "path": "evidence/2f4311cf6554b7c7f6fbd8634f6e82c170e90621706eb25bb3370c5b8ba46409.json.gz",
+        "description": "pnpm-lock for geniusyield-sdk unreleased:main",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/tree/66a6ebcedd64979d02d1bb01c520185af1489f0d"
       },
       {
         "id": "evidence:2f6369fa1ad4244e0360b93b19b6c93b0b258f0d4b352b218884f63edd288621",
@@ -25019,6 +26096,20 @@
         "sourceUrl": "https://github.com/cardano-foundation/cardano-connect-with-wallet/tree/47ceba88338f19b576bf72251e8158a7883a5e45"
       },
       {
+        "id": "evidence:347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
+        "digest": "347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
+        "path": "evidence/347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8.json.gz",
+        "description": "Native input cardano-js-sdk/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/package.json"
+      },
+      {
+        "id": "evidence:34993bba76d88ec7953a39dbd2ea5b70c78293f6079d0b4538dddaa3fe6ce8ed",
+        "digest": "34993bba76d88ec7953a39dbd2ea5b70c78293f6079d0b4538dddaa3fe6ce8ed",
+        "path": "evidence/34993bba76d88ec7953a39dbd2ea5b70c78293f6079d0b4538dddaa3fe6ce8ed.json.gz",
+        "description": "Native input cardano-js-sdk/yarn.lock",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/yarn.lock"
+      },
+      {
         "id": "evidence:354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
         "digest": "354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
         "path": "evidence/354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194.json.gz",
@@ -25060,6 +26151,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/tree/e846a7c5d2747609d791d7d47d5423616718cb34"
       },
       {
+        "id": "evidence:36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b",
+        "digest": "36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b",
+        "path": "evidence/36beb9766537f6add98c737d706bf5e7ee6473f6b8a854ef9f294ddf6fcf0d8b.json.gz",
+        "description": "Source cardano-dapp-wallet-connector/README.md",
+        "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/blob/5d629436c7b7e7c2757355888a63cccd62fb1bca/README.md"
+      },
+      {
         "id": "evidence:36f04b02cb1c0eec4882705ea40fbcf9ea9e94319d31739881c6132d3f78ff79",
         "digest": "36f04b02cb1c0eec4882705ea40fbcf9ea9e94319d31739881c6132d3f78ff79",
         "path": "evidence/36f04b02cb1c0eec4882705ea40fbcf9ea9e94319d31739881c6132d3f78ff79.json.gz",
@@ -25086,6 +26184,13 @@
         "path": "evidence/38ed25976a3687fb05ffe91ce8abc7e6ed490e7fc229c6ffb21cc8e2bad36a9f.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Plutonomicon/cardano-transaction-lib/tree/2ae739437420be191bca87fbe836eb999782b1ef"
+      },
+      {
+        "id": "evidence:399ec5fdda1807232eb997611358e0e4467b9649c6ba33c78d4aba3045c65f44",
+        "digest": "399ec5fdda1807232eb997611358e0e4467b9649c6ba33c78d4aba3045c65f44",
+        "path": "evidence/399ec5fdda1807232eb997611358e0e4467b9649c6ba33c78d4aba3045c65f44.json.gz",
+        "description": "Source epora-wallet/code/dApp/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/pnpm-lock.yaml"
       },
       {
         "id": "evidence:39a61d5d6ea1134ec1614c485ddc0613dccb410e68d437ececea1f11a5b46668",
@@ -25129,10 +26234,24 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/tree/e93a56f54451cc386ba54dd1e8e5564a884b3593"
       },
       {
+        "id": "evidence:3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6",
+        "digest": "3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6",
+        "path": "evidence/3b327128de9584a8719233ee6f7417d25cea26505cde801ca9f354e3c735e0d6.json.gz",
+        "description": "Native input cardano-js-sdk/packages/util-rxjs/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/util-rxjs/package.json"
+      },
+      {
         "id": "evidence:3b7d0ee54b2de3ce5a825d9fd3c219aa2b764259de4f0ed8c607379d116f961f",
         "digest": "3b7d0ee54b2de3ce5a825d9fd3c219aa2b764259de4f0ed8c607379d116f961f",
         "path": "evidence/3b7d0ee54b2de3ce5a825d9fd3c219aa2b764259de4f0ed8c607379d116f961f.json.gz",
         "description": "Pinned wallet/contract workflow scope for nami"
+      },
+      {
+        "id": "evidence:3b8b576e7c029d7057fa7c20bc452b1ea744caaafe879a928dde6189e6aa7090",
+        "digest": "3b8b576e7c029d7057fa7c20bc452b1ea744caaafe879a928dde6189e6aa7090",
+        "path": "evidence/3b8b576e7c029d7057fa7c20bc452b1ea744caaafe879a928dde6189e6aa7090.json.gz",
+        "description": "Source cardano-js-sdk/packages/tx-construction/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/tx-construction/README.md"
       },
       {
         "id": "evidence:3b9fdffb687efaa3376e1848f3f607ac4fe65c80657a0e6edd8ae9a5e56ae7f4",
@@ -25204,6 +26323,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/govtool/tree/993d25ab42b6565a95aaa82ef297ac5053b3fb3e"
       },
       {
+        "id": "evidence:3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
+        "digest": "3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
+        "path": "evidence/3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5.json.gz",
+        "description": "Source epora-wallet/code/dApp/README.md",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/README.md"
+      },
+      {
         "id": "evidence:3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
         "digest": "3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
         "path": "evidence/3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89.json.gz",
@@ -25253,6 +26379,13 @@
         "sourceUrl": "https://github.com/emesik/cardano-python/tree/dab7a13594ef054012a3f810b15a103cd5445646"
       },
       {
+        "id": "evidence:41f0bac3a0a42b62d8497eb83c9dcd8ead030b55a88778a4785bab97d06263bb",
+        "digest": "41f0bac3a0a42b62d8497eb83c9dcd8ead030b55a88778a4785bab97d06263bb",
+        "path": "evidence/41f0bac3a0a42b62d8497eb83c9dcd8ead030b55a88778a4785bab97d06263bb.json.gz",
+        "description": "Source blockfrost-js/.yarnrc.yml",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/.yarnrc.yml"
+      },
+      {
         "id": "evidence:424ee73d0c25b2b17a286539249978c6c3f254ad370d24893e7c962e8532e4da",
         "digest": "424ee73d0c25b2b17a286539249978c6c3f254ad370d24893e7c962e8532e4da",
         "path": "evidence/424ee73d0c25b2b17a286539249978c6c3f254ad370d24893e7c962e8532e4da.json.gz",
@@ -25286,6 +26419,13 @@
         "path": "evidence/437fffefc3fbab1d6abf9f3d2704ed01f77bd25d387d056d7bde91f86ff32868.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/OpShin/imperator/tree/d9e7464b39f5cd9dec57b680ad29d1f57b31a8c2"
+      },
+      {
+        "id": "evidence:4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c",
+        "digest": "4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c",
+        "path": "evidence/4387100fe9c71df0334d2617457b9f75744d06cafc771714bb7020cd4d44586c.json.gz",
+        "description": "Source blockfrost-js/yarn.lock",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/yarn.lock"
       },
       {
         "id": "evidence:43bb1a850548d244bec5f6c9b5970e76bc82d89431ae8a8db6c87a46265519bb",
@@ -25404,6 +26544,13 @@
         "path": "evidence/490d000f514d565bb177078f6a3345b625381d2afa89c1426f79e08e4c0b400f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/OpShin/mockfrost/tree/4338ae89412c1163be3587e7553258e5000d83d1"
+      },
+      {
+        "id": "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+        "digest": "4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+        "path": "evidence/4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/tree/5d629436c7b7e7c2757355888a63cccd62fb1bca"
       },
       {
         "id": "evidence:4a41b1832945870c1076868195ee333fab2022c316ab0b981384f659b1945288",
@@ -25551,6 +26698,13 @@
         "sourceUrl": "https://github.com/projectNEWM/kogmios/tree/f0160af84d18a5669f721b0cd0c032847c316c6b"
       },
       {
+        "id": "evidence:526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
+        "digest": "526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd",
+        "path": "evidence/526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd.json.gz",
+        "description": "Native input cardano-js-sdk/packages/web-extension/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/web-extension/package.json"
+      },
+      {
         "id": "evidence:52b4aba3b0ccf08e37e3a64db851649a43a5ccb7827d59035d0b4ac3cb8aa627",
         "digest": "52b4aba3b0ccf08e37e3a64db851649a43a5ccb7827d59035d0b4ac3cb8aa627",
         "path": "evidence/52b4aba3b0ccf08e37e3a64db851649a43a5ccb7827d59035d0b4ac3cb8aa627.json.gz",
@@ -25589,6 +26743,13 @@
         "path": "evidence/55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/schmidko/adapools/tree/72e59d841aea70d37038f76eb857570d0df72706"
+      },
+      {
+        "id": "evidence:55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837",
+        "digest": "55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837",
+        "path": "evidence/55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837.json.gz",
+        "description": "Native input blockfrost-js/.yarnrc.yml",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/.yarnrc.yml"
       },
       {
         "id": "evidence:56985c5aaea16cc94547b8a26f133f972d00b7ca2f59edbe981d3aeb898fe963",
@@ -25813,6 +26974,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/apps/docs/package.json"
       },
       {
+        "id": "evidence:64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
+        "digest": "64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d",
+        "path": "evidence/64d55582e024bd4933f7d349b82c8324b983bdde631f99adb406de033108317d.json.gz",
+        "description": "Native input cardano-js-sdk/packages/util-dev/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/util-dev/package.json"
+      },
+      {
         "id": "evidence:651d7d7cc067380348a6b2ca011bc9bf9250562f6702150286c5cc0904144a1e",
         "digest": "651d7d7cc067380348a6b2ca011bc9bf9250562f6702150286c5cc0904144a1e",
         "path": "evidence/651d7d7cc067380348a6b2ca011bc9bf9250562f6702150286c5cc0904144a1e.json.gz",
@@ -25927,6 +27095,13 @@
         "path": "evidence/6a2e9309e9a2249982de6c75478ee1ba9f436c8222b7100797b8a0f5d547baa1.json.gz",
         "description": "Source cometa-js/src/index.ts",
         "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/src/index.ts"
+      },
+      {
+        "id": "evidence:6a3e920d19cbbc3cf93d64c30dc09a5add019d6aa5f24b86719583dc276189fa",
+        "digest": "6a3e920d19cbbc3cf93d64c30dc09a5add019d6aa5f24b86719583dc276189fa",
+        "path": "evidence/6a3e920d19cbbc3cf93d64c30dc09a5add019d6aa5f24b86719583dc276189fa.json.gz",
+        "description": "Native input epora-wallet/code/dApp/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/pnpm-lock.yaml"
       },
       {
         "id": "evidence:6b4a34ceacd633fc66e825267738a09f971fb135baf95e6f721110fac08eec7d",
@@ -26103,6 +27278,12 @@
         "sourceUrl": "https://github.com/mlabs-haskell/bot-plutus-interface/releases/tag/vasil-compliant-v1.1.0"
       },
       {
+        "id": "evidence:7529eb82130ff0571b0f16974ed101c469f969a9c73efd476d51d43e1dc97ac5",
+        "digest": "7529eb82130ff0571b0f16974ed101c469f969a9c73efd476d51d43e1dc97ac5",
+        "path": "evidence/7529eb82130ff0571b0f16974ed101c469f969a9c73efd476d51d43e1dc97ac5.json.gz",
+        "description": "Pinned SDK/application workflow scope for cardano-dapp-wallet-connector"
+      },
+      {
         "id": "evidence:7541cd0f33dda30651592b81d45dac3dd5f2c6c571674c49f4da38dbb0957b41",
         "digest": "7541cd0f33dda30651592b81d45dac3dd5f2c6c571674c49f4da38dbb0957b41",
         "path": "evidence/7541cd0f33dda30651592b81d45dac3dd5f2c6c571674c49f4da38dbb0957b41.json.gz",
@@ -26115,6 +27296,13 @@
         "path": "evidence/758990c9e5d9fc765a17e4b4d428c30853f672c6913100486cc9028d94927b74.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/dQuadrant/kuber/tree/2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5"
+      },
+      {
+        "id": "evidence:75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79",
+        "digest": "75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79",
+        "path": "evidence/75a095736ad333e9a8be4ac76670ec0830409abfb729da9686e6ca48e8badb79.json.gz",
+        "description": "Source geniusyield-sdk/README.md",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/README.md"
       },
       {
         "id": "evidence:75ba0b080692863571e3347ecdd46f03f0d4bcc06e89c79b470953c15c731757",
@@ -26142,6 +27330,13 @@
         "path": "evidence/76ce0a0e5bfb11bb801a492f563c8e162c4d1674b7b8cf23cea0c2f65e1309dc.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/mlabs-haskell/purus/tree/f4d50126ecccb92cf4d939f0c0a18dc5294c4692"
+      },
+      {
+        "id": "evidence:774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
+        "digest": "774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
+        "path": "evidence/774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4.json.gz",
+        "description": "Source cardano-dapp-wallet-connector/package.json",
+        "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/blob/5d629436c7b7e7c2757355888a63cccd62fb1bca/package.json"
       },
       {
         "id": "evidence:779f79954964ea747091cf65758ae15ef88249e0db28103d7b3db370b83e004f",
@@ -26175,6 +27370,13 @@
         "path": "evidence/79cf2f9110ec1f749e0e48fa84e3a761aa419df46da7b0a5b9f43c1b8605ead6.json.gz",
         "description": "npm-lock for weld @ada-anvil/weld-plugin-hodei@0.0.10",
         "sourceUrl": "https://github.com/Cardano-Forge/weld/tree/ce6cf90d721358254e8b70c1e484a5f342be4e74"
+      },
+      {
+        "id": "evidence:7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
+        "digest": "7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
+        "path": "evidence/7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695.json.gz",
+        "description": "Native input cardano-js-sdk/packages/governance/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/governance/package.json"
       },
       {
         "id": "evidence:7ab484e97c105055a4a9b0eaac52b117ee3d9b934230ff4ad3181bef78dd1d32",
@@ -26230,6 +27432,12 @@
         "path": "evidence/7b66e0c7fc8403872e464edac0bcd10ef66b1c6000affe69831667ec0b7d257a.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/input-output-hk/devx/tree/5f05c1e1af6df3e2ec72d7ebf8d8d0ccb9a157b1"
+      },
+      {
+        "id": "evidence:7bb109922fc142aa3b929467b1e37812c0cc235fbab69458754dc5f8d7ab203c",
+        "digest": "7bb109922fc142aa3b929467b1e37812c0cc235fbab69458754dc5f8d7ab203c",
+        "path": "evidence/7bb109922fc142aa3b929467b1e37812c0cc235fbab69458754dc5f8d7ab203c.json.gz",
+        "description": "Cardano JS SDK collection disk-interruption recovery"
       },
       {
         "id": "evidence:7c5e009a9369850a65cdb5aa0b225b7843460f0311e586ca4c262bfcba2de08c",
@@ -26302,6 +27510,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
       },
       {
+        "id": "evidence:80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100",
+        "digest": "80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100",
+        "path": "evidence/80000df1f3b38a662e60dc15f1ae8e7ca2b2d2b553550f54fed9ce1fadfe5100.json.gz",
+        "description": "Native input cardano-js-sdk/.yarnrc.yml",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/.yarnrc.yml"
+      },
+      {
         "id": "evidence:80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec",
         "digest": "80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec",
         "path": "evidence/80169683fa8ad3766aff8a9b44e791d46001fcb853434d7c510ca1d39a084fec.json.gz",
@@ -26342,6 +27557,20 @@
         "path": "evidence/80f5af138818f9b7889d874cf7fefae89cd1955c40d27622c934ff37fd72978a.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-rosetta/releases/tag/2.5.0"
+      },
+      {
+        "id": "evidence:8126df2dec8d3db6bd7cf52cd6710cd1a992816cf382ecd4922d521970282a69",
+        "digest": "8126df2dec8d3db6bd7cf52cd6710cd1a992816cf382ecd4922d521970282a69",
+        "path": "evidence/8126df2dec8d3db6bd7cf52cd6710cd1a992816cf382ecd4922d521970282a69.json.gz",
+        "description": "Native input cardano-js-sdk/packages/hardware-trezor/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/hardware-trezor/package.json"
+      },
+      {
+        "id": "evidence:81eb15a51a2bc1d70af22f6c23e3ba4b66b3bf3fce3b61e5a201996e18e1e354",
+        "digest": "81eb15a51a2bc1d70af22f6c23e3ba4b66b3bf3fce3b61e5a201996e18e1e354",
+        "path": "evidence/81eb15a51a2bc1d70af22f6c23e3ba4b66b3bf3fce3b61e5a201996e18e1e354.json.gz",
+        "description": "Source cardano-js-sdk/packages/dapp-connector/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/dapp-connector/README.md"
       },
       {
         "id": "evidence:829e237d02351b55434f83fab701aa9747758076998a5da9beb3d4081d0dd316",
@@ -26616,6 +27845,19 @@
         "sourceUrl": "https://github.com/Plutonomicon/cardano-transaction-lib/tree/2ae739437420be191bca87fbe836eb999782b1ef"
       },
       {
+        "id": "evidence:8b5e23fc15fc605923ea0a21efd22776c9bb9f5c42ffadaacd3268b4d08b8d52",
+        "digest": "8b5e23fc15fc605923ea0a21efd22776c9bb9f5c42ffadaacd3268b4d08b8d52",
+        "path": "evidence/8b5e23fc15fc605923ea0a21efd22776c9bb9f5c42ffadaacd3268b4d08b8d52.json.gz",
+        "description": "Pinned SDK/application workflow scope for epora-wallet"
+      },
+      {
+        "id": "evidence:8b760147e6dea8a4d81aa24a9e3ab48926fb12e3fd48d43b7b2a6101fddb2396",
+        "digest": "8b760147e6dea8a4d81aa24a9e3ab48926fb12e3fd48d43b7b2a6101fddb2396",
+        "path": "evidence/8b760147e6dea8a4d81aa24a9e3ab48926fb12e3fd48d43b7b2a6101fddb2396.json.gz",
+        "description": "Native input cardano-js-sdk/packages/core/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/core/package.json"
+      },
+      {
         "id": "evidence:8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6",
         "digest": "8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6",
         "path": "evidence/8c193ad77a931ef92743f20275868a22ba7567cca4ee33503e2b704a9ba777d6.json.gz",
@@ -26740,6 +27982,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/gouroboros/tree/234bc3a95cce93deb3680dd52d30670b37fbf7a6"
       },
       {
+        "id": "evidence:92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca",
+        "digest": "92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca",
+        "path": "evidence/92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca.json.gz",
+        "description": "npm-lock for cardano-dapp-wallet-connector unreleased:master",
+        "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/tree/5d629436c7b7e7c2757355888a63cccd62fb1bca"
+      },
+      {
         "id": "evidence:92eae4d74538a64657ccf7443bdebae974ff232deae09ce0375114f2ea7ef8ed",
         "digest": "92eae4d74538a64657ccf7443bdebae974ff232deae09ce0375114f2ea7ef8ed",
         "path": "evidence/92eae4d74538a64657ccf7443bdebae974ff232deae09ce0375114f2ea7ef8ed.json.gz",
@@ -26795,6 +28044,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/package-lock.json"
       },
       {
+        "id": "evidence:94e882c04b4f084cac30f1c274602b10994e24061ba2ad54960baa5790cb3de1",
+        "digest": "94e882c04b4f084cac30f1c274602b10994e24061ba2ad54960baa5790cb3de1",
+        "path": "evidence/94e882c04b4f084cac30f1c274602b10994e24061ba2ad54960baa5790cb3de1.json.gz",
+        "description": "Native input cardano-js-sdk/packages/hardware-ledger/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/hardware-ledger/package.json"
+      },
+      {
         "id": "evidence:950c7621c20306aa5a5e19414c833953c2392d6ea5a487ddfbc7acc39760906a",
         "digest": "950c7621c20306aa5a5e19414c833953c2392d6ea5a487ddfbc7acc39760906a",
         "path": "evidence/950c7621c20306aa5a5e19414c833953c2392d6ea5a487ddfbc7acc39760906a.json.gz",
@@ -26822,6 +28078,12 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/releases/tag/%40lucid-evolution/core-types%400.5.2"
       },
       {
+        "id": "evidence:96067a9feb1dee4bbabc6ddaecdc690b809177c6da4b39c4ab8881f5ec213006",
+        "digest": "96067a9feb1dee4bbabc6ddaecdc690b809177c6da4b39c4ab8881f5ec213006",
+        "path": "evidence/96067a9feb1dee4bbabc6ddaecdc690b809177c6da4b39c4ab8881f5ec213006.json.gz",
+        "description": "Pinned SDK/application workflow scope for geniusyield-sdk"
+      },
+      {
         "id": "evidence:9637c217e05f4a29cdc333384fa3871e64a6004f38a94b937a5d1a1d229d0f11",
         "digest": "9637c217e05f4a29cdc333384fa3871e64a6004f38a94b937a5d1a1d229d0f11",
         "path": "evidence/9637c217e05f4a29cdc333384fa3871e64a6004f38a94b937a5d1a1d229d0f11.json.gz",
@@ -26846,6 +28108,13 @@
         "path": "evidence/97666e97acd33daad2c7a42f2d4dc2ea8fe559f439fb862c553053a2a9f3e47c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/tx3-lang/tx3/tree/f2cadfdb80dbdb72c111ec770e3f233fcbbff2db"
+      },
+      {
+        "id": "evidence:982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
+        "digest": "982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c",
+        "path": "evidence/982a3bc4fcad6a29b39e8cac26dc41ac8f2b92ff6c43e4f2beae8ee32c2f037c.json.gz",
+        "description": "Native input cardano-js-sdk/packages/cardano-services/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/cardano-services/package.json"
       },
       {
         "id": "evidence:983c263c119b084f4d51e64922e5b061c1c6031ae4f69a5a35de7ecb5d40691f",
@@ -26958,6 +28227,13 @@
         "description": "Collection request for govtool"
       },
       {
+        "id": "evidence:9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3",
+        "digest": "9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3",
+        "path": "evidence/9d58b68242d34fb0804e31be3e1fe3758838f90d5cbe9fc6d045f2da10869ef3.json.gz",
+        "description": "Native input epora-wallet/code/dApp/package.json",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/package.json"
+      },
+      {
         "id": "evidence:9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
         "digest": "9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab",
         "path": "evidence/9def4e36e498891d6e17d72bbe1098fffa14173e5d6f004f3fc056e1cd6a27ab.json.gz",
@@ -27062,6 +28338,13 @@
         "description": "Collection request for gouroboros"
       },
       {
+        "id": "evidence:a28442426c8cf4c22bda965af643d0ab08ef89a0e324679374cf35f1cb6258ab",
+        "digest": "a28442426c8cf4c22bda965af643d0ab08ef89a0e324679374cf35f1cb6258ab",
+        "path": "evidence/a28442426c8cf4c22bda965af643d0ab08ef89a0e324679374cf35f1cb6258ab.json.gz",
+        "description": "Source epora-wallet/code/smart-contract/aiken.toml",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/smart-contract/aiken.toml"
+      },
+      {
         "id": "evidence:a2d86ce2d8a947333ed1a8ea8f5b8992902bbbc96c726895aabf168b4ebc7c30",
         "digest": "a2d86ce2d8a947333ed1a8ea8f5b8992902bbbc96c726895aabf168b4ebc7c30",
         "path": "evidence/a2d86ce2d8a947333ed1a8ea8f5b8992902bbbc96c726895aabf168b4ebc7c30.json.gz",
@@ -27088,6 +28371,13 @@
         "path": "evidence/a3c8f16d582e8d6c30e3f9d0b415cfd9b225dfb99131f55e52d39c36eba0df55.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/cardano-cli/releases/tag/cardano-cli-11.4.0.0"
+      },
+      {
+        "id": "evidence:a3f10e147b007644070b59efb95408b87446b87d29d777ada350fd6ce74dbd5e",
+        "digest": "a3f10e147b007644070b59efb95408b87446b87d29d777ada350fd6ce74dbd5e",
+        "path": "evidence/a3f10e147b007644070b59efb95408b87446b87d29d777ada350fd6ce74dbd5e.json.gz",
+        "description": "Source epora-wallet/README.md",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/README.md"
       },
       {
         "id": "evidence:a408a65135af0c67d6a4db82405b23f4a67ea43a533fe475262924ecb9cd3a53",
@@ -27158,6 +28448,13 @@
         "path": "evidence/a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83.json.gz",
         "description": "yarn-lock for typhonjs v4.0.0",
         "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
+      },
+      {
+        "id": "evidence:a80a3c41ba06175fbc17a8285225b0a88a510aa1359a3d402247edcbde8e4e34",
+        "digest": "a80a3c41ba06175fbc17a8285225b0a88a510aa1359a3d402247edcbde8e4e34",
+        "path": "evidence/a80a3c41ba06175fbc17a8285225b0a88a510aa1359a3d402247edcbde8e4e34.json.gz",
+        "description": "Native input cardano-js-sdk/packages/cardano-services-client/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/cardano-services-client/package.json"
       },
       {
         "id": "evidence:a842a49c57c55e3f7823b3a7f7dae5a1d60a8c5a4d5ce9421ab72610c785a181",
@@ -27271,6 +28568,20 @@
         "sourceUrl": "https://github.com/input-output-hk/lace/tree/e431933f34ec417996d9c28b7389e24c87868b1e"
       },
       {
+        "id": "evidence:abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5",
+        "digest": "abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5",
+        "path": "evidence/abacbb825786dbbef8b957d3a68b9accc4cd1ac91ff4beb84b86aa79be6106e5.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/tree/66a6ebcedd64979d02d1bb01c520185af1489f0d"
+      },
+      {
+        "id": "evidence:ac3acbcc019a4e74f6350c7703cd3ac3ba98bb673c5aed260923636185cba42e",
+        "digest": "ac3acbcc019a4e74f6350c7703cd3ac3ba98bb673c5aed260923636185cba42e",
+        "path": "evidence/ac3acbcc019a4e74f6350c7703cd3ac3ba98bb673c5aed260923636185cba42e.json.gz",
+        "description": "Native input cardano-js-sdk/packages/key-management/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/key-management/package.json"
+      },
+      {
         "id": "evidence:acc67a3a78fc9c9db94b445641d22fa1119d35ca35cb86c52f341adb50716720",
         "digest": "acc67a3a78fc9c9db94b445641d22fa1119d35ca35cb86c52f341adb50716720",
         "path": "evidence/acc67a3a78fc9c9db94b445641d22fa1119d35ca35cb86c52f341adb50716720.json.gz",
@@ -27327,6 +28638,12 @@
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331"
       },
       {
+        "id": "evidence:af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d",
+        "digest": "af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d",
+        "path": "evidence/af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d.json.gz",
+        "description": "Collection request for blockfrost-js"
+      },
+      {
         "id": "evidence:af707facb6c4b99b56dc66617488a3f3a0801338db01e64a7ab5505450df7b9c",
         "digest": "af707facb6c4b99b56dc66617488a3f3a0801338db01e64a7ab5505450df7b9c",
         "path": "evidence/af707facb6c4b99b56dc66617488a3f3a0801338db01e64a7ab5505450df7b9c.json.gz",
@@ -27360,6 +28677,13 @@
         "path": "evidence/b00228ef2f9c8b299952970ab2f0f2b7f52658b9ca692f11f9e85022afeef600.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/WingRiders/cab/tree/31e2488a4452dc4c9c5eefe4b74cd6b8ce6deec8"
+      },
+      {
+        "id": "evidence:b03c8487294fce3e029b161af30ff878c10fbbb6adfb09ad4cbeb7ab9be88804",
+        "digest": "b03c8487294fce3e029b161af30ff878c10fbbb6adfb09ad4cbeb7ab9be88804",
+        "path": "evidence/b03c8487294fce3e029b161af30ff878c10fbbb6adfb09ad4cbeb7ab9be88804.json.gz",
+        "description": "Source epora-wallet/code/smart-contract/README.md",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/smart-contract/README.md"
       },
       {
         "id": "evidence:b0893e65b080568b38a232b36d5339a4b2c1544a8b4291a5e1c4aae846595355",
@@ -27429,6 +28753,13 @@
         "path": "evidence/b3effbf0caf46e2b99b54edb5537b0caaebbd13a182c16fcf4a4139b3da49fe5.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/bloxbean/zeroj/releases/tag/v0.1.0-pre13"
+      },
+      {
+        "id": "evidence:b425caf34f7ed228133642a1b4815ac48e6f9aaab3ba2fcd04377bfb9774d367",
+        "digest": "b425caf34f7ed228133642a1b4815ac48e6f9aaab3ba2fcd04377bfb9774d367",
+        "path": "evidence/b425caf34f7ed228133642a1b4815ac48e6f9aaab3ba2fcd04377bfb9774d367.json.gz",
+        "description": "Native input blockfrost-js/package.json",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/blob/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba/package.json"
       },
       {
         "id": "evidence:b4372db568e9c8c218f82b64c62d907418db8b9a8c11a8be93b26371bf6c5b3f",
@@ -27556,6 +28887,13 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-registry-service/tree/3b0ab26f340174acbed0d4eb6afba1bb6697d524"
       },
       {
+        "id": "evidence:b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
+        "digest": "b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787",
+        "path": "evidence/b8b7f67c95370cb78273ac74a829f80021c670a222c6b3be9f10d30989d25787.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/tree/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba"
+      },
+      {
         "id": "evidence:b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e",
         "digest": "b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e",
         "path": "evidence/b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e.json.gz",
@@ -27651,6 +28989,13 @@
         "path": "evidence/bbf5837bc305ace6369a71cd837e9ec5e37606b447a60672debb5491c3a41b66.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IntersectMBO/bech32/tree/5a42857dfe454bb27a899f891cac8415d66d0292"
+      },
+      {
+        "id": "evidence:bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4",
+        "digest": "bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4",
+        "path": "evidence/bc9d7514ff7b86ef874a37e1d412d880e0e48f36b53edcc8daa06d8e6010abd4.json.gz",
+        "description": "Native input cardano-js-sdk/packages/projection/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/projection/package.json"
       },
       {
         "id": "evidence:bc9f0f75b495c27a947736d19357678b71fe8b208d2de78e28c4f643e85d0621",
@@ -27803,6 +29148,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/package.json"
       },
       {
+        "id": "evidence:c2b489c226dbb5d66eb26963a7cf3dfed091cb55efeb8ed989fa125dcbd97c84",
+        "digest": "c2b489c226dbb5d66eb26963a7cf3dfed091cb55efeb8ed989fa125dcbd97c84",
+        "path": "evidence/c2b489c226dbb5d66eb26963a7cf3dfed091cb55efeb8ed989fa125dcbd97c84.json.gz",
+        "description": "Source cardano-js-sdk/packages/governance/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/governance/package.json"
+      },
+      {
         "id": "evidence:c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
         "digest": "c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
         "path": "evidence/c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c.json.gz",
@@ -27848,6 +29200,13 @@
         "path": "evidence/c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/tree/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8"
+      },
+      {
+        "id": "evidence:c5d76b711aea5c7ff1c3a54f182843e0007d080546b09bd6c94432abfa2ecd0c",
+        "digest": "c5d76b711aea5c7ff1c3a54f182843e0007d080546b09bd6c94432abfa2ecd0c",
+        "path": "evidence/c5d76b711aea5c7ff1c3a54f182843e0007d080546b09bd6c94432abfa2ecd0c.json.gz",
+        "description": "Source cardano-js-sdk/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/README.md"
       },
       {
         "id": "evidence:c5dc68b3d665f0e4a5e661c254f783de9e74149f9c14978233d8973ec2066cd7",
@@ -28009,6 +29368,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/nview/releases/tag/v0.15.2"
       },
       {
+        "id": "evidence:ca977f514b64290aa642a5693105fdc28a6174f5c8527f9c6da803b5e9a52972",
+        "digest": "ca977f514b64290aa642a5693105fdc28a6174f5c8527f9c6da803b5e9a52972",
+        "path": "evidence/ca977f514b64290aa642a5693105fdc28a6174f5c8527f9c6da803b5e9a52972.json.gz",
+        "description": "Native input cardano-js-sdk/packages/crypto/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/crypto/package.json"
+      },
+      {
         "id": "evidence:cad9401a83987fb4fbb82ff795600c55c0677a7247d68a96298c617ad4e28570",
         "digest": "cad9401a83987fb4fbb82ff795600c55c0677a7247d68a96298c617ad4e28570",
         "path": "evidence/cad9401a83987fb4fbb82ff795600c55c0677a7247d68a96298c617ad4e28570.json.gz",
@@ -28050,6 +29416,13 @@
         "description": "Pinned Yarn workflow scope for cometa-js"
       },
       {
+        "id": "evidence:cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
+        "digest": "cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
+        "path": "evidence/cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd.json.gz",
+        "description": "Source cardano-js-sdk/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/package.json"
+      },
+      {
         "id": "evidence:cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb",
         "digest": "cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb",
         "path": "evidence/cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb.json.gz",
@@ -28085,11 +29458,25 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/tree/93598c0f8e452d7679a44097c48e693d95bfd631"
       },
       {
+        "id": "evidence:d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
+        "digest": "d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
+        "path": "evidence/d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c.json.gz",
+        "description": "Source cardano-dapp-wallet-connector/package-lock.json",
+        "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/blob/5d629436c7b7e7c2757355888a63cccd62fb1bca/package-lock.json"
+      },
+      {
         "id": "evidence:d1f56bf175d2bae3da9b6f06ed83837883eed9568e84c7c99adec0823e903eda",
         "digest": "d1f56bf175d2bae3da9b6f06ed83837883eed9568e84c7c99adec0823e903eda",
         "path": "evidence/d1f56bf175d2bae3da9b6f06ed83837883eed9568e84c7c99adec0823e903eda.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/OpShin/opshin/releases/tag/0.28.0"
+      },
+      {
+        "id": "evidence:d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20",
+        "digest": "d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20",
+        "path": "evidence/d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20.json.gz",
+        "description": "Native input cardano-js-sdk/packages/ogmios/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/ogmios/package.json"
       },
       {
         "id": "evidence:d22dc1d9607d4cd1fa885001ef8be58832feb016996db45964f813d8588babc0",
@@ -28113,6 +29500,13 @@
         "sourceUrl": "https://github.com/emesik/cardano-python/tree/dab7a13594ef054012a3f810b15a103cd5445646"
       },
       {
+        "id": "evidence:d2befdec45f517650d7bb954aad1c50b17d4a3a24dba2d615218bab28766a85d",
+        "digest": "d2befdec45f517650d7bb954aad1c50b17d4a3a24dba2d615218bab28766a85d",
+        "path": "evidence/d2befdec45f517650d7bb954aad1c50b17d4a3a24dba2d615218bab28766a85d.json.gz",
+        "description": "Native input geniusyield-sdk/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/pnpm-lock.yaml"
+      },
+      {
         "id": "evidence:d2c7e0760cfaadaa83e31024973e27a63558defa31da9f4845a770f5822185b0",
         "digest": "d2c7e0760cfaadaa83e31024973e27a63558defa31da9f4845a770f5822185b0",
         "path": "evidence/d2c7e0760cfaadaa83e31024973e27a63558defa31da9f4845a770f5822185b0.json.gz",
@@ -28132,6 +29526,13 @@
         "path": "evidence/d31c0c1513105e0da3b06cc5a1ebbed3d6424f302fbf5c9f10c60f23427a7341.json.gz",
         "description": "Source nami/README.md",
         "sourceUrl": "https://github.com/input-output-hk/nami/blob/e52e0bdb02eb1ec224db26f48b0192685a30f99e/README.md"
+      },
+      {
+        "id": "evidence:d3750093a4094ed19eefae1c7db96dbae5d7d9e2ec0f1a419e82c134710bff5f",
+        "digest": "d3750093a4094ed19eefae1c7db96dbae5d7d9e2ec0f1a419e82c134710bff5f",
+        "path": "evidence/d3750093a4094ed19eefae1c7db96dbae5d7d9e2ec0f1a419e82c134710bff5f.json.gz",
+        "description": "Source geniusyield-sdk/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/pnpm-lock.yaml"
       },
       {
         "id": "evidence:d3ba53976395496fa0ee801a74c16900b6525f96c40bb568a884882535993979",
@@ -28190,6 +29591,13 @@
         "sourceUrl": "https://github.com/bloxbean/intelliada/releases/tag/v0.2.0-beta2"
       },
       {
+        "id": "evidence:d5344adb98bd8e75552ed0216d24ba3d73b6691407eb8388c8ac7ca8097c8bc7",
+        "digest": "d5344adb98bd8e75552ed0216d24ba3d73b6691407eb8388c8ac7ca8097c8bc7",
+        "path": "evidence/d5344adb98bd8e75552ed0216d24ba3d73b6691407eb8388c8ac7ca8097c8bc7.json.gz",
+        "description": "Source cardano-js-sdk/packages/wallet/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/wallet/package.json"
+      },
+      {
         "id": "evidence:d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a",
         "digest": "d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a",
         "path": "evidence/d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a.json.gz",
@@ -28232,6 +29640,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/README.md"
       },
       {
+        "id": "evidence:d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
+        "digest": "d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568",
+        "path": "evidence/d67105365ced4d5a0f830df6f90297f7ab9f8d314c9fa38384233077c64b1568.json.gz",
+        "description": "Native input cardano-js-sdk/packages/projection-typeorm/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/projection-typeorm/package.json"
+      },
+      {
         "id": "evidence:d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29",
         "digest": "d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29",
         "path": "evidence/d6b505c2374155276794f4f8be6650ed5f067ed31c604fea87abeaba1b917f29.json.gz",
@@ -28257,6 +29672,12 @@
         "path": "evidence/d78c2fba600f65cfb8c62d8b8faf9827912dd8591e0de948b71505e7c0b4ba4a.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-wallet/releases/tag/v2026-10-07"
+      },
+      {
+        "id": "evidence:d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789",
+        "digest": "d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789",
+        "path": "evidence/d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789.json.gz",
+        "description": "Collection request for cardano-dapp-wallet-connector"
       },
       {
         "id": "evidence:d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
@@ -28299,6 +29720,13 @@
         "path": "evidence/db43bedf989740faab8064b05042f2ea4c44da1e99a89275a71246a16521d7db.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/blinklabs-io/adder/releases/tag/v0.45.0"
+      },
+      {
+        "id": "evidence:dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
+        "digest": "dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2",
+        "path": "evidence/dc268a388ea7b25938fc29a5385e278986a339c82f4d3757933b6f4f028985c2.json.gz",
+        "description": "pnpm-lock for epora-wallet unreleased:main",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/tree/8e6fd820d21e901f019af71eec8150400b1e9669"
       },
       {
         "id": "evidence:dc5d667df75af4dd9dd6cc3e610ea1cc8527a506b38af4245b443a36bdf8983f",
@@ -28369,6 +29797,13 @@
         "path": "evidence/df02ec911fdc9e57163123cb8952eacca2d23e01a47bf84cc020d02c3cb6d953.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/CardanoSharp/cscli/releases/tag/v0.5.0"
+      },
+      {
+        "id": "evidence:df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d",
+        "digest": "df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d",
+        "path": "evidence/df25e15bc3a70aa8c553f0ed8f11b642ba3b8c660392c240760888e9cd74714d.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/schaier-io/epora-wallet/tree/8e6fd820d21e901f019af71eec8150400b1e9669"
       },
       {
         "id": "evidence:df918574f898d985bbce9aaadb8d2f5ae5cb864179cbad1464bead0abb34f77a",
@@ -28532,6 +29967,13 @@
         "sourceUrl": "https://github.com/Plutonomicon/plutarch-plutus/releases/tag/v1.10.1"
       },
       {
+        "id": "evidence:e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07",
+        "digest": "e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07",
+        "path": "evidence/e8388a15682ae327bc753f9d189a178b7e20a537159da34affa8762e6230bb07.json.gz",
+        "description": "Native input cardano-js-sdk/packages/dapp-connector/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/dapp-connector/package.json"
+      },
+      {
         "id": "evidence:e8ab5767c7ab8d37605ca3a0908d8199cdc1cc60647659cbdc85cd62e1032ea6",
         "digest": "e8ab5767c7ab8d37605ca3a0908d8199cdc1cc60647659cbdc85cd62e1032ea6",
         "path": "evidence/e8ab5767c7ab8d37605ca3a0908d8199cdc1cc60647659cbdc85cd62e1032ea6.json.gz",
@@ -28579,6 +30021,13 @@
         "path": "evidence/ebe1c8763391ec37d27c48bd656914922dec613bf54062b6337d76af5f5205e8.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Emurgo/csl-mobile-bridge/releases/tag/9.0.1"
+      },
+      {
+        "id": "evidence:ebf9b03e37177ed7094fa8ffef6ffc58ab4cc8b37840098f86739ef2805cb4e2",
+        "digest": "ebf9b03e37177ed7094fa8ffef6ffc58ab4cc8b37840098f86739ef2805cb4e2",
+        "path": "evidence/ebf9b03e37177ed7094fa8ffef6ffc58ab4cc8b37840098f86739ef2805cb4e2.json.gz",
+        "description": "Native input cardano-js-sdk/packages/util/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/util/package.json"
       },
       {
         "id": "evidence:ebfcb21655bf7162f41bd342ae610d22775222cce231b017b9c8f9041dc19586",
@@ -28762,6 +30211,19 @@
         "sourceUrl": "https://github.com/MeshJS/mesh/tree/3df879e48f400f19eea0ebddfb00099b0809f484"
       },
       {
+        "id": "evidence:f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84",
+        "digest": "f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84",
+        "path": "evidence/f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84.json.gz",
+        "description": "Collection request for epora-wallet"
+      },
+      {
+        "id": "evidence:f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265",
+        "digest": "f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265",
+        "path": "evidence/f51bf203c3e74dbb81b1711dad27130298399c71f6f18c37896f9f8fd569d265.json.gz",
+        "description": "yarn-lock for blockfrost-js v6.2.0",
+        "sourceUrl": "https://github.com/blockfrost/blockfrost-js/tree/cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba"
+      },
+      {
         "id": "evidence:f58a57f022608b908cc04eddf9e280980c5fad9700db12c3c48b61d51ac5796e",
         "digest": "f58a57f022608b908cc04eddf9e280980c5fad9700db12c3c48b61d51ac5796e",
         "path": "evidence/f58a57f022608b908cc04eddf9e280980c5fad9700db12c3c48b61d51ac5796e.json.gz",
@@ -28795,6 +30257,13 @@
         "path": "evidence/f6af88f87dfc20fee3f1926e4f69be69ac0e235909c733c9fedc8614fa8e5092.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/obsidiansystems/hydra-pay/releases/tag/v1.1.2"
+      },
+      {
+        "id": "evidence:f6b6117e639957c9f2d111bbec16af669b35692eeefdd1ecf7749d2cb8dbf1d9",
+        "digest": "f6b6117e639957c9f2d111bbec16af669b35692eeefdd1ecf7749d2cb8dbf1d9",
+        "path": "evidence/f6b6117e639957c9f2d111bbec16af669b35692eeefdd1ecf7749d2cb8dbf1d9.json.gz",
+        "description": "Source cardano-js-sdk/.yarnrc.yml",
+        "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/.yarnrc.yml"
       },
       {
         "id": "evidence:f6df172e920215f6bf41225f155649a378530bc063c8344487f3a687f02b117d",
@@ -28940,10 +30409,28 @@
     "decisions": [],
     "collections": [
       {
+        "key": "0bb3ed5ed55e3f489cbe1722fd8e5f98a784eab3d26dff608a40c2eb29d002ff",
+        "toolId": "blockfrost-js",
+        "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21",
+        "evidenceId": "evidence:af3dfd86865003b704483c6a754b7bab9796d847aa6d6fb0f2512379b63eaa7d"
+      },
+      {
         "key": "c7af70cf7715fc2376d456740a0886832226af78d46f7295a60a8dad944f1d09",
         "toolId": "cardano-connect-with-wallet",
         "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
         "evidenceId": "evidence:92eae4d74538a64657ccf7443bdebae974ff232deae09ce0375114f2ea7ef8ed"
+      },
+      {
+        "key": "2e9f4ff9f805e69ef12f42cbece2c1e12402f3aea7d3edc834118a06f612c2a9",
+        "toolId": "cardano-dapp-wallet-connector",
+        "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+        "evidenceId": "evidence:d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789"
+      },
+      {
+        "key": "c8e13f183949e0e42dd273d4c2664488c081852c73ebb6f96d11b23c3cc7eb0b",
+        "toolId": "cardano-js-sdk",
+        "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+        "evidenceId": "evidence:11543bf293c6e4757cccc6e5e91bf930834cc383af117ac00d63f4330b0fa52e"
       },
       {
         "key": "0529dd8881a60383cdf772cf8df90bc1968b649c9bf313af311b4458fa920b80",
@@ -28988,10 +30475,22 @@
         "evidenceId": "evidence:2dea4ab0f4a53cfd8db3cf35ddb001aaa343d1dd0a3281279a8fc68c7fcb2d7a"
       },
       {
+        "key": "817ba42fb2cfc2773bad84a0ddb6171a221e8ad88ffa2cbe604b3a3cc3d34164",
+        "toolId": "epora-wallet",
+        "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+        "evidenceId": "evidence:f4fc7df609c9a575a160a94298368e294b515539fe0a9e87da765278c0cf7f84"
+      },
+      {
         "key": "e4c5e84c0657daee34a74395b6b9af2842e6811424192b15d5f76e1aab63bcec",
         "toolId": "evolution-sdk",
         "profileId": "profile:evolution-sdk:299df18680147d54d422875c",
         "evidenceId": "evidence:686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb"
+      },
+      {
+        "key": "51e57eca3aec60b3418973934ebbf5229d4670e7ac84a38a30d18a61056e8b14",
+        "toolId": "geniusyield-sdk",
+        "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+        "evidenceId": "evidence:2d27f950d32478a67d24e98d8a4a90b661cffbed9afedc49e6c68dbae841cba1"
       },
       {
         "key": "6e0a3f82106c995a644860e50db5144def04dca1b2e4b6acc24429c7ca0cd32f",
@@ -29112,91 +30611,106 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/aa4a2fd89947ead36ae03e3194f9bf7601a09281a2efc19a3359da408d52966b.json",
-        "digest": "aa4a2fd89947ead36ae03e3194f9bf7601a09281a2efc19a3359da408d52966b",
-        "records": 1449
+        "path": "snapshots/artifacts/93b9f8b410c68e6e4066f0759b488fdeb1570549cb2e50a4baa64f187c628885.json",
+        "digest": "93b9f8b410c68e6e4066f0759b488fdeb1570549cb2e50a4baa64f187c628885",
+        "records": 1682
       },
       {
-        "path": "snapshots/artifacts/29cc67505bbecab255164a2ffe862692fa14a9ab513ca9ef5c8a1ca8c98fc67a.json",
-        "digest": "29cc67505bbecab255164a2ffe862692fa14a9ab513ca9ef5c8a1ca8c98fc67a",
-        "records": 1442
+        "path": "snapshots/artifacts/b077bb6daa4267363b045024da0e68eeff179df34ad098187e11503a5f91efe9.json",
+        "digest": "b077bb6daa4267363b045024da0e68eeff179df34ad098187e11503a5f91efe9",
+        "records": 1659
       },
       {
-        "path": "snapshots/artifacts/58596b3eec7eb00efa1e517dbf19462d77b1a4166e7030c81b63ee6a34996354.json",
-        "digest": "58596b3eec7eb00efa1e517dbf19462d77b1a4166e7030c81b63ee6a34996354",
-        "records": 1451
+        "path": "snapshots/artifacts/431f81e3903ae236d4d2158792d376b4693007f4512963de6ba1251b2ab14d44.json",
+        "digest": "431f81e3903ae236d4d2158792d376b4693007f4512963de6ba1251b2ab14d44",
+        "records": 1671
       },
       {
-        "path": "snapshots/artifacts/8e6420c8719545877fb8714f67d7d0ca9d36761e69e8f519b900ef45da8f48ab.json",
-        "digest": "8e6420c8719545877fb8714f67d7d0ca9d36761e69e8f519b900ef45da8f48ab",
-        "records": 1468
+        "path": "snapshots/artifacts/a7c485f64d6449a0c5ea0786a3052bc8105dd5222faf6171efb6d31bbb12285c.json",
+        "digest": "a7c485f64d6449a0c5ea0786a3052bc8105dd5222faf6171efb6d31bbb12285c",
+        "records": 1684
       },
       {
-        "path": "snapshots/artifacts/f73c03c211581756702e8e83cabfb638f41db8823a99abca20c7c43f6193e99e.json",
-        "digest": "f73c03c211581756702e8e83cabfb638f41db8823a99abca20c7c43f6193e99e",
-        "records": 1470
+        "path": "snapshots/artifacts/60bed744d6272ae865f711523700955303574dea48c380a20198623214bebd3b.json",
+        "digest": "60bed744d6272ae865f711523700955303574dea48c380a20198623214bebd3b",
+        "records": 1684
       },
       {
-        "path": "snapshots/artifacts/c28814b1005696f53642fbe75ee45ecf932b4724ab6bb389448e8ef64e694e7d.json",
-        "digest": "c28814b1005696f53642fbe75ee45ecf932b4724ab6bb389448e8ef64e694e7d",
-        "records": 1511
+        "path": "snapshots/artifacts/e2b48a0e496a39a58360ab5beb8706f571af4dc4e7802bca60e310e60daabc4f.json",
+        "digest": "e2b48a0e496a39a58360ab5beb8706f571af4dc4e7802bca60e310e60daabc4f",
+        "records": 1710
       },
       {
-        "path": "snapshots/artifacts/d78ce4c364f8e261186876e0a6c9126437ec50312dda4c1ae07c94afc68fd931.json",
-        "digest": "d78ce4c364f8e261186876e0a6c9126437ec50312dda4c1ae07c94afc68fd931",
-        "records": 1588
+        "path": "snapshots/artifacts/0d03cd4dcf27549a6f89e9855ba13318cae360973c2aa47cc576b2fc582056ce.json",
+        "digest": "0d03cd4dcf27549a6f89e9855ba13318cae360973c2aa47cc576b2fc582056ce",
+        "records": 1797
       },
       {
-        "path": "snapshots/artifacts/935fefb9f78386aef48f5c6d948cb6069a8d6d8b30c557999ced9809ce9c6d92.json",
-        "digest": "935fefb9f78386aef48f5c6d948cb6069a8d6d8b30c557999ced9809ce9c6d92",
-        "records": 1443
+        "path": "snapshots/artifacts/b28e9d1669e0ac65e1b38af016d80349dce085e36a5e1138df25715af2ace6a3.json",
+        "digest": "b28e9d1669e0ac65e1b38af016d80349dce085e36a5e1138df25715af2ace6a3",
+        "records": 1655
       },
       {
-        "path": "snapshots/artifacts/e8db155b8b1624865fd5dd7202a3e4fd93a58373bb4adb2c75ce2206a08e62fa.json",
-        "digest": "e8db155b8b1624865fd5dd7202a3e4fd93a58373bb4adb2c75ce2206a08e62fa",
-        "records": 1478
+        "path": "snapshots/artifacts/09705ff0ed56c3611afcec10395376fef1d9121bc523d7e4376cb4a0460b2e66.json",
+        "digest": "09705ff0ed56c3611afcec10395376fef1d9121bc523d7e4376cb4a0460b2e66",
+        "records": 1704
       },
       {
-        "path": "snapshots/artifacts/24a5a94ec7a40e311afaee289930a8088a5d249c8bbaaaca3c17a3ab8dd2398f.json",
-        "digest": "24a5a94ec7a40e311afaee289930a8088a5d249c8bbaaaca3c17a3ab8dd2398f",
-        "records": 1468
+        "path": "snapshots/artifacts/bafb2123b53e3a7650fd0d0df776ec5e08833ecdf44d01fc11dc9aab3c7657d3.json",
+        "digest": "bafb2123b53e3a7650fd0d0df776ec5e08833ecdf44d01fc11dc9aab3c7657d3",
+        "records": 1676
       },
       {
-        "path": "snapshots/artifacts/eb9b22ca231334890cf47d8806920757a4430685ddd36194825de2e512e57903.json",
-        "digest": "eb9b22ca231334890cf47d8806920757a4430685ddd36194825de2e512e57903",
-        "records": 1530
+        "path": "snapshots/artifacts/639a94be11d39616215c99e800dcd249ac5d66176d9e5fdf39f222f1dbd9e783.json",
+        "digest": "639a94be11d39616215c99e800dcd249ac5d66176d9e5fdf39f222f1dbd9e783",
+        "records": 1730
       },
       {
-        "path": "snapshots/artifacts/a5aa623405531083f2b102385783e929faf013c3e622d3f0250ff03920dba6bb.json",
-        "digest": "a5aa623405531083f2b102385783e929faf013c3e622d3f0250ff03920dba6bb",
-        "records": 1498
+        "path": "snapshots/artifacts/1f2eb24c9db2af92085b76979a8b8422967a80f9c1d9090decb3de3dd126b859.json",
+        "digest": "1f2eb24c9db2af92085b76979a8b8422967a80f9c1d9090decb3de3dd126b859",
+        "records": 1730
       },
       {
-        "path": "snapshots/artifacts/a01ace704bf3f6d6672f80dade328ec92344cbadfca28f3568b3217faa97abd5.json",
-        "digest": "a01ace704bf3f6d6672f80dade328ec92344cbadfca28f3568b3217faa97abd5",
-        "records": 1482
+        "path": "snapshots/artifacts/37fe1c48a3ec770b0f43bcd218c6b35c9370a37ac99b52a506bf0b45a229a28f.json",
+        "digest": "37fe1c48a3ec770b0f43bcd218c6b35c9370a37ac99b52a506bf0b45a229a28f",
+        "records": 1729
       },
       {
-        "path": "snapshots/artifacts/f5a66eb5d02e2156605c307114da450a0e2b4926913f61f73d07d84be8ca9348.json",
-        "digest": "f5a66eb5d02e2156605c307114da450a0e2b4926913f61f73d07d84be8ca9348",
-        "records": 1429
+        "path": "snapshots/artifacts/431a601c145e8d8fea567334b53cc795d5586f25c1f71bc62031ba9830c2e22f.json",
+        "digest": "431a601c145e8d8fea567334b53cc795d5586f25c1f71bc62031ba9830c2e22f",
+        "records": 1647
       },
       {
-        "path": "snapshots/artifacts/7a605b6bdbf37f4a5a0102203d7c181ce33e40a45fcbf967f2be90b598b74e6d.json",
-        "digest": "7a605b6bdbf37f4a5a0102203d7c181ce33e40a45fcbf967f2be90b598b74e6d",
-        "records": 1464
+        "path": "snapshots/artifacts/b1ea61216c7947574e0658635515162be11a0ffb3f08f178eb7d8654b0c5f520.json",
+        "digest": "b1ea61216c7947574e0658635515162be11a0ffb3f08f178eb7d8654b0c5f520",
+        "records": 1683
       },
       {
-        "path": "snapshots/artifacts/ebdda179d51dc559ef4f7db4671dd96a951ff6a3a4d62486d00b032ab4ca5504.json",
-        "digest": "ebdda179d51dc559ef4f7db4671dd96a951ff6a3a4d62486d00b032ab4ca5504",
-        "records": 1523
+        "path": "snapshots/artifacts/1e9d4cb5675780683c84bc0517ca238ecf5abf967a9c975ce3b8ec4720149ad5.json",
+        "digest": "1e9d4cb5675780683c84bc0517ca238ecf5abf967a9c975ce3b8ec4720149ad5",
+        "records": 1727
       }
     ],
     "occurrences": [
       {
+        "path": "snapshots/occurrences/ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa.json",
+        "digest": "ec254747e56f4062334ad7eec0356ca66cb7a693293abd7b79f828df71666eaa",
+        "records": 546
+      },
+      {
         "path": "snapshots/occurrences/8978056d5dafad48469864f4f704af8e96a5163b522214aa33c81523724c6fc4.json",
         "digest": "8978056d5dafad48469864f4f704af8e96a5163b522214aa33c81523724c6fc4",
         "records": 717
+      },
+      {
+        "path": "snapshots/occurrences/f19c08954f9315c0cf67b8bddb7d6bcfcee2bc1735a6b72c51783bc27cf99f57.json",
+        "digest": "f19c08954f9315c0cf67b8bddb7d6bcfcee2bc1735a6b72c51783bc27cf99f57",
+        "records": 1533
+      },
+      {
+        "path": "snapshots/occurrences/b8e27f63c749d257c431e3719a76004ee572fd303b6dbfed2fcbe8d2a512d69a.json",
+        "digest": "b8e27f63c749d257c431e3719a76004ee572fd303b6dbfed2fcbe8d2a512d69a",
+        "records": 2532
       },
       {
         "path": "snapshots/occurrences/9a0df0c2db82f4af4ac64208848b7376cb6538b8d6bc39665d7ba688eeb3fd78.json",
@@ -29234,9 +30748,19 @@
         "records": 549
       },
       {
+        "path": "snapshots/occurrences/d62da6c983f125c7a62142888e77c88d5d7d3b6393c2fa667338c97aa4875033.json",
+        "digest": "d62da6c983f125c7a62142888e77c88d5d7d3b6393c2fa667338c97aa4875033",
+        "records": 1429
+      },
+      {
         "path": "snapshots/occurrences/9870d31f8dbb5c2a14907f7a97d534c5e0fd43df1113dad20344c2d5d15ab476.json",
         "digest": "9870d31f8dbb5c2a14907f7a97d534c5e0fd43df1113dad20344c2d5d15ab476",
         "records": 1341
+      },
+      {
+        "path": "snapshots/occurrences/aabe80f3615478a2ae9e2da5599cc44423692c5a0a4cbd2c270600570409d6c0.json",
+        "digest": "aabe80f3615478a2ae9e2da5599cc44423692c5a0a4cbd2c270600570409d6c0",
+        "records": 371
       },
       {
         "path": "snapshots/occurrences/1160f5d87bc93610629f926e43e29f70f693e746a5af53dc05c827f224ce4386.json",
@@ -29346,9 +30870,29 @@
     ],
     "edges": [
       {
+        "path": "snapshots/edges/a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225.json",
+        "digest": "a523a687ac8956823bb211de4e82c368f5c17fa918a9ef1709ecf8c36da7d225",
+        "records": 785
+      },
+      {
         "path": "snapshots/edges/bb22a830c1016de0c2a4581409896891d01ffc4b5bd92395488138c8ed9dbab4.json",
         "digest": "bb22a830c1016de0c2a4581409896891d01ffc4b5bd92395488138c8ed9dbab4",
         "records": 1483
+      },
+      {
+        "path": "snapshots/edges/0ee8be11604bfc9ba6c388b96a9f75b0b075111c9732fba85792656c58d45190.json",
+        "digest": "0ee8be11604bfc9ba6c388b96a9f75b0b075111c9732fba85792656c58d45190",
+        "records": 3068
+      },
+      {
+        "path": "snapshots/edges/4757f58e9bcb99d8c90c2e12b705fc8df53bcc2aa74c001bf11f016791125dd2.json",
+        "digest": "4757f58e9bcb99d8c90c2e12b705fc8df53bcc2aa74c001bf11f016791125dd2",
+        "records": 2885
+      },
+      {
+        "path": "snapshots/edges/2f2d542c48aff155bc008ada2d3ca757265989fe8761db446ea45698bb7b6575.json",
+        "digest": "2f2d542c48aff155bc008ada2d3ca757265989fe8761db446ea45698bb7b6575",
+        "records": 2885
       },
       {
         "path": "snapshots/edges/c673c73d3ad51ed11a8133e370857e5dc5b8d6658c9d7278e245b1a1f9f4ba56.json",
@@ -29426,9 +30970,19 @@
         "records": 1912
       },
       {
+        "path": "snapshots/edges/1e89150b0ef193a12dcf01df63ad61b46bacc3f11f46fb9ee28283e92042f28c.json",
+        "digest": "1e89150b0ef193a12dcf01df63ad61b46bacc3f11f46fb9ee28283e92042f28c",
+        "records": 3207
+      },
+      {
         "path": "snapshots/edges/d911ed8d9faee5af3767cb6f01ee2704814ef83240adc3e0be2e97b37e095674.json",
         "digest": "d911ed8d9faee5af3767cb6f01ee2704814ef83240adc3e0be2e97b37e095674",
         "records": 3058
+      },
+      {
+        "path": "snapshots/edges/59adf2eb277cd1ee922153c289924bbfac43105b5259ea2986da2b52e7aadfd8.json",
+        "digest": "59adf2eb277cd1ee922153c289924bbfac43105b5259ea2986da2b52e7aadfd8",
+        "records": 568
       },
       {
         "path": "snapshots/edges/4b455993edf522650fe89d0d79041b4adb4e0aa3e056a90feba42cde29c1c635.json",

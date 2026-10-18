@@ -373,6 +373,102 @@
       "attemptedAt": "2026-10-18T16:02:52.941Z",
       "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
       "succeededAt": "2026-10-18T16:03:00.182Z"
+    },
+    {
+      "id": "collection:4589fb570d7de6ed8e49bbf7aa0a835982263470662ffac859dc104b38a1c890",
+      "request": {
+        "toolId": "cardano-js-sdk",
+        "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+        "adapter": "yarn-lock",
+        "roots": [
+          "@cardano-sdk/wallet",
+          "@cardano-sdk/tx-construction",
+          "@cardano-sdk/dapp-connector",
+          "@cardano-sdk/governance"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "yarn.lock"
+      },
+      "status": "succeeded",
+      "attempts": 2,
+      "attemptedAt": "2026-10-18T16:32:21.386Z",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+      "succeededAt": "2026-10-18T16:32:34.571Z"
+    },
+    {
+      "id": "collection:648c90b89006d6457e8d37170eef7b90cb0a63450adb5af3babed791c4181958",
+      "request": {
+        "toolId": "blockfrost-js",
+        "revision": "cb8c6b6c5b92bb32825d5504fb4714d9d3da50ba",
+        "adapter": "yarn-lock",
+        "roots": [
+          "@blockfrost/blockfrost-js"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "yarn.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:32:51.219Z",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21",
+      "succeededAt": "2026-10-18T16:32:59.908Z"
+    },
+    {
+      "id": "collection:1a13e98bf7bc2151cdcfd70e908e21dd87de0cf3f018cb258cc3a9ab763f2bef",
+      "request": {
+        "toolId": "geniusyield-sdk",
+        "revision": "66a6ebcedd64979d02d1bb01c520185af1489f0d",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "@geniusyield/sdk"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "pnpm-lock.yaml"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:32:59.909Z",
+      "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+      "succeededAt": "2026-10-18T16:33:07.573Z"
+    },
+    {
+      "id": "collection:9a6c15b93e169628b2a7d7b1e130926771e7cfb80aede5caa037adfa15a19c69",
+      "request": {
+        "toolId": "epora-wallet",
+        "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+        "adapter": "pnpm-lock",
+        "roots": [
+          "permission-wallet-dapp"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "code/dApp/pnpm-lock.yaml"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:37:38.615Z",
+      "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+      "succeededAt": "2026-10-18T16:37:49.803Z"
+    },
+    {
+      "id": "collection:3bfefed147ae5c9fd6af7f0aa2e732842cf1e60db1afbcb58786f6293c86ab76",
+      "request": {
+        "toolId": "cardano-dapp-wallet-connector",
+        "revision": "5d629436c7b7e7c2757355888a63cccd62fb1bca",
+        "adapter": "npm-lock",
+        "roots": [
+          "@newm.io/cardano-dapp-wallet-connector"
+        ],
+        "platform": "all-lockfile-targets",
+        "rootPaths": [
+          "."
+        ],
+        "path": "package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T16:37:49.803Z",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+      "succeededAt": "2026-10-18T16:37:57.927Z"
     }
   ]
 }

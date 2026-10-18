@@ -1,12 +1,12 @@
 {
-  "snapshot": "450ad0ee0eca82c337f5a5e1f2acc4252d18d2ec4e8c2ccc45687249bf12d6a1",
+  "snapshot": "ba13d59e1c1d8fdee1e60fc6717406bb7623be6fe8121595c9a0e75449afebf2",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 26,
-  "profiles": 30,
+  "withProfiles": 31,
+  "profiles": 35,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 243,
+  "unresolvedTools": 238,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -826,6 +826,23 @@
     },
     {
       "toolId": "blockfrost-js",
+      "id": "gap:0527de190aa619a089e4cc85",
+      "area": "resolution",
+      "reason": "Yarn source resolve@patch:resolve@npm%3A1.19.0#optional!builtin<compat/resolve>::version=1.19.0&hash=c3c19d needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:055597214cef464418c51c09",
+      "area": "integration",
+      "reason": "Blockfrost JS tag and manifest 6.2.0 select a Yarn 4 client library profile. The hosted Blockfrost service, chosen network and request configuration are not deployed components identified by this lock. Serialization native/WASM artifacts, installed peers and published package correspondence remain unverified.",
+      "nextAction": "Verify the published client artifact and selected service/network configuration, then manually review chain-data, transaction submission and serialization integration boundaries.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21",
+      "code": "sdk-scope:blockfrost-js:integration"
+    },
+    {
+      "toolId": "blockfrost-js",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -842,11 +859,35 @@
     },
     {
       "toolId": "blockfrost-js",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:431b1add092354f97d306d57",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn source typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:507c8c758062ac98642b07f8",
+      "area": "resolution",
+      "reason": "17 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:5f706340ece87e55f867cd87",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.2#optional!builtin<compat/fsevents>::version=2.3.2&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:cb8bac6dfcbdc8e76909d3bc",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
     },
     {
       "toolId": "blockfrost-js",
@@ -854,6 +895,22 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:d8bee8a6de2d2f3a89a0022b",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
+    },
+    {
+      "toolId": "blockfrost-js",
+      "id": "gap:dc8adb3969cee0fedaf3a7fb",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:blockfrost-js:fd053be60979025fd54aac21"
     },
     {
       "toolId": "blockfrost-python",
@@ -1925,11 +1982,68 @@
     },
     {
       "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:0dc67bb1fef2b4ece85992c3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:173a050a1562112ea6ebfaba",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/cypress from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet.",
       "code": "integration-unreviewed"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:2a1a28bdcec18416d6b57d27",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/@storybook/builder-webpack5/node_modules/html-webpack-plugin has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:32984e0f355b57fc2fae4d67",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:376b4151ee25bda1df04e283",
+      "area": "integration",
+      "reason": "The selected React/browser wallet connector package does not establish which injected wallet, network, mobile integration or consumer configuration is active. Client dependencies alone do not verify signing or submission behavior.",
+      "nextAction": "Capture production connector entry points and selected consumer/wallet configuration, then manually review wallet interactions and protocol boundaries.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+      "code": "sdk-scope:cardano-dapp-wallet-connector:integration"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:4033e2dc23e57a4b30160fd9",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:4055c161cb242f3bf933e8fb",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-focus-scope has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
     },
     {
       "toolId": "cardano-dapp-wallet-connector",
@@ -1940,11 +2054,156 @@
     },
     {
       "toolId": "cardano-dapp-wallet-connector",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:54506482417beb3fe9f489d9",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies babel-plugin-macros from node_modules/jest-circus/node_modules/dedent has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:548159b8b7d1e014f05293ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies vitest from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:659f9fb97d9ee8dbff6d4a66",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:67b2f4476f965a65fc65c05a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies encoding from node_modules/node-fetch has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:899eb288d8e1ebc21642b860",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:8a4677117f15fd86e83921ae",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-primitive has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:9234eda553bd54c01f65ded4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/bun from node_modules/@testing-library/jest-dom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:94a85378a9b07b79bbed317c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-presence has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:9e169ac4fc96b691068a9ece",
+      "area": "artifact",
+      "reason": "NEWM Cardano dApp Wallet Connector default-branch source has manifest 1.5.5 but npm lock root 1.5.4; runtime, development, optional and peer dependency declarations agree. The locked version remains unchanged and no published release mapping is verified.",
+      "nextAction": "Verify the package release and source/lock correspondence before attributing exposure to a published connector version.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
+      "code": "sdk-scope:cardano-dapp-wallet-connector:artifact"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:b7471e6a4d047e35f1a60a2c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-dismissable-layer has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:c7f18fbeba41a4a85acff60f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @rspack/core from node_modules/@storybook/builder-webpack5/node_modules/css-loader has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:c8169d686da5014bbafb28ae",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jest-environment-jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:c8980454b1bdcfdfcacc42ee",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @chromatic-com/playwright from node_modules/chromatic has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:e4bf26a1829572f0d7fe3893",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-portal has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:e687043f8c0f8b95955a9454",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:f69dfe547e1425100965f1f7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/@jest/reporters has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:f6ac840e479e75ce776bd7de",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/react-dom from node_modules/@radix-ui/react-dialog has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:fa9950bb1e5c97d4e0c6463c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies ts-node from node_modules/jest-config has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
+    },
+    {
+      "toolId": "cardano-dapp-wallet-connector",
+      "id": "gap:fac58579f338dea34fef03b0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-notifier from node_modules/jest-cli has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605"
     },
     {
       "toolId": "cardano-data-lite",
@@ -2196,11 +2455,43 @@
     },
     {
       "toolId": "cardano-js-sdk",
+      "id": "gap:02b4d0fad63da8de7a2dae8b",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^11.1.0 from lock:@artilleryio/int-core@npm:2.28.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:062a8c18bf163d830a97afeb",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-trace-base@npm:2.7.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:0bd6ac1ffe2f74ce1b015117",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^11.1.0 from lock:artillery-plugin-publish-metrics@npm:2.38.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:17dc74812aff3c318eb65d45",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/sdk-metrics@npm:2.8.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
     },
     {
       "toolId": "cardano-js-sdk",
@@ -2212,11 +2503,326 @@
     },
     {
       "toolId": "cardano-js-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2450396bb9a9fe7fd2be448c",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn workspace packages/hardware-trezor manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:28a4c89708401115a5e13960",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:@istanbuljs/load-nyc-config@npm:1.1.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:29037dad63c808c6472dd647",
+      "area": "resolution",
+      "reason": "The Yarn 3.2.1 metadata-v6 graph retains declared selections but leaves unresolved descriptors and workspace declaration/lock differences visible. Root resolutions, six patch locators, package extensions and Yarn plugins require separate verification; absent edges are not inferred from plausible versions. Virtual peer instances and installed platform selection remain unresolved.",
+      "nextAction": "Collect an immutable installed inventory under the pinned Yarn configuration to resolve override/patch selections and peer bindings, preserving the original lock capture and explicit gaps.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+      "code": "sdk-scope:cardano-js-sdk:resolution"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:292b7778eeff5a1bae59fc07",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.5.5 from lock:@artilleryio/int-core@npm:2.28.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:2d46d04ecec8e046eac5f002",
+      "area": "resolution",
+      "reason": "Yarn source resolve@patch:resolve@npm%3A1.22.12#~builtin<compat/resolve>::version=1.22.12&hash=07638b needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:31478f4a062e7ff6b88ab0eb",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:3b0bf530328857cd5d15e69f",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:7.2.6 from lock:@trezor/protobuf@npm:1.2.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:4bd9bcb8c9a128800bdef29d",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares plugins; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:588f7a83327b5f3b5e2aa516",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^7.4.3 from lock:pacote@npm:21.5.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:5bacfc196fc3b734d444d5c7",
+      "area": "resolution",
+      "reason": "Yarn source typescript@patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=7ad353 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:5ca345f56c8ef0e17a0ee31b",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.5.5 from lock:@grpc/proto-loader@npm:0.8.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:5e96f174de9009309b071881",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-http@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:610aa65f4304547632d9987e",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/resources@npm:2.8.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:673511c0f584757000f3d9e1",
+      "area": "resolution",
+      "reason": "Yarn source resolve@patch:resolve@npm%3A1.22.3#~builtin<compat/resolve>::version=1.22.3&hash=07638b needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:7284a8900e34e64e5f85e6ed",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^14.0.0 from lock:rpc-websockets@npm:9.3.9.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:74073bf5149d2379e7a5dda0",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-proto@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:742f203ddfae7f15fedcc0a8",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^7.5.7 from lock:@yao-pkg/pkg@npm:6.20.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:756d677dc7678938fea9d004",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/exporter-zipkin@npm:2.8.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:791027fa56a60f1e58815ac1",
+      "area": "integration",
+      "reason": "The selected wallet/transaction/governance APIs do not establish consumer wiring, configured provider or Ogmios deployment identities, hardware-wallet firmware, or distributed native/WASM artifacts. Package scope is not proof of runtime capability or hardfork behavior.",
+      "nextAction": "Capture selected application/provider configuration and production entry points, then manually review signing, transaction construction, submission and governance behavior.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+      "code": "sdk-scope:cardano-js-sdk:integration"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:7ca4334ca5de5b89586a3f0b",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^7.5.11 from lock:@lerna-lite/publish@npm:4.11.5.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:7d141920ce3c56c6ff4272d3",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:eslint@npm:7.32.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:84fe2c047471edcc28b6f4ba",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-grpc@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:8a0746630c4b101135119fd7",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:8c49d63a558ae3c2107d1a08",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^7.5.4 from lock:node-gyp@npm:12.4.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:8e2b7da184b025b9c30b1d82",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-metrics-otlp-proto@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:95db43ed9db55002020815c9",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^10.0.0 from lock:dockerode@npm:4.0.12.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:990fc2e8e97a263e89481bf6",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares packageExtensions; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:9a4fb0863dca69c40f2e2318",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-exporter-base@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:9ad3c6dd57680cfdf0b354ee",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tmp@npm:^0.0.33 from lock:external-editor@npm:3.1.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:9b2dd1148546b8c596f20dc6",
+      "area": "resolution",
+      "reason": "Yarn workspace packages/key-management manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:9dcc1105c135cd6f0ef356b5",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^8.3.2 from lock:jayson@npm:4.3.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:a83ad4276e81a7fe8e8c6203",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^6.1.11 from lock:cacache@npm:16.1.3.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:a94628d12534c72b6d6c6210",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-http@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:b1c97993ad48ffcd14070f03",
+      "area": "artifact",
+      "reason": "Selected Cardano JS SDK wallet 0.56.0, tx-construction 0.29.1, dapp-connector 0.13.31 and governance 0.11.34 manifests share hardware-ledger tag 0.17.0. The repository tag does not establish published release correspondence for these four packages. All 22 locked workspaces remain retained; orchestration, e2e and service packages are not selected roots.",
+      "nextAction": "Verify published package provenance for the four selected versions and keep their independent release mappings separate from the hardware-ledger tag.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9",
+      "code": "sdk-scope:cardano-js-sdk:artifact"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:b28593be25b23b98a964c29a",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.8.0 from lock:@opentelemetry/sdk-trace-base@npm:2.8.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:b649fd4723c07ff1e53a3f12",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for tar@npm:^6.1.2 from lock:node-gyp@npm:9.3.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:bab65241effef4a2a9cff02f",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^4.1.0 from lock:mocha@npm:10.8.2.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:be8b0941e0b51e6fb1079d13",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/resources@npm:2.7.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:c0b67814e5a7c6a84eec4f6e",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/exporter-trace-otlp-grpc@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:c6ab99b4aca1c7b9f4ca9374",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^4.1.0 from lock:@apidevtools/json-schema-ref-parser@npm:14.2.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
     },
     {
       "toolId": "cardano-js-sdk",
@@ -2224,6 +2830,142 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:d0756a4366653c20c1ab4577",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-grpc-exporter-base@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:d27add1273c32f13de51fc5f",
+      "area": "resolution",
+      "reason": "Yarn workspace packages/hardware-ledger manifest/lock selection disagrees for ts-log; no dependency edge was inferred.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:d46dc7004a361f30cd934192",
+      "area": "resolution",
+      "reason": "Yarn workspace packages/e2e manifest/lock selection disagrees for delay; no dependency edge was inferred.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:d7e4173dc489fdb29217d0fa",
+      "area": "resolution",
+      "reason": "239 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:d97b5097591f9ad54c8f3c50",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:^9.0.0 from lock:pg-boss@npm:8.4.2.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:dd5d411e38e82ab226792261",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.13.1 from lock:@eslint/eslintrc@npm:0.4.3.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:dedefe87fb1d334d03eb3ac3",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:7.2.6 from lock:@trezor/transport@npm:1.3.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:dfe88cd3448058c0182db60b",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-logs@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:e185c301a6a180ac20e9cd97",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:e7a63dbbe142d7fed8b65b37",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.3.2 from lock:dockerode@npm:4.0.12.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:e9596bcda145d4d47d334dad",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for protobufjs@npm:^7.2.5 from lock:@grpc/proto-loader@npm:0.7.15.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:e9d8c7894f2d31e0022540b7",
+      "area": "resolution",
+      "reason": "Yarn source typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=7ad353 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:f196ca5a03485133414d3977",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/otlp-transformer@npm:0.218.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:f2ad3c9c7fdb2c431c0c1973",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @opentelemetry/core@npm:2.7.1 from lock:@opentelemetry/sdk-metrics@npm:2.7.1.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:f3ad9ce6bcd2f8e5ea8c979d",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for js-yaml@npm:^3.14.1 from lock:artillery@npm:2.0.33.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:f5e49fb50d1765131674ad69",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
+    },
+    {
+      "toolId": "cardano-js-sdk",
+      "id": "gap:fda98a409db890b514798f17",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for uuid@npm:8.3.2 from lock:pouchdb@npm:7.3.0.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-js-sdk:ec36b69b5ecae45f8e237af9"
     },
     {
       "toolId": "cardano-launcher",
@@ -4635,6 +5377,14 @@
     },
     {
       "toolId": "epora-wallet",
+      "id": "gap:20680b1f870a923ef293d187",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5"
+    },
+    {
+      "toolId": "epora-wallet",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -4642,11 +5392,21 @@
     },
     {
       "toolId": "epora-wallet",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "id": "gap:5d351d56654dfd8885bbd312",
+      "area": "integration",
+      "reason": "Epora documentation describes frontend/server packages, a default Preprod network, server-side Blockfrost/Koios proxies and PostgreSQL. Separate Aiken validators and mirrored plutus.json blueprints are outside the selected npm closure. The Aiken manifest declares compiler v1.1.23 and Plutus v3; these are source declarations, not verified deployed scripts or network readiness.",
+      "nextAction": "Capture the Aiken native closure, compiled blueprint provenance, selected contract hashes, database and proxy configuration before manually reviewing permission/recovery wallet workflows.",
+      "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+      "code": "sdk-scope:epora-wallet:integration"
+    },
+    {
+      "toolId": "epora-wallet",
+      "id": "gap:89c2f79dc077680c011c7972",
+      "area": "artifact",
+      "reason": "Epora permission-wallet-dapp manifest 0.1.0 comes from default-branch source with no stable release mapping. The nested pnpm-v9 importer declarations match the manifest. This profile covers application package selections, not a released app or compiled contract inventory.",
+      "nextAction": "Verify the deployed application source/build correspondence and retain its environment and network selection explicitly.",
+      "profileId": "profile:epora-wallet:4f24d3734967c2ad6b5cecd5",
+      "code": "sdk-scope:epora-wallet:artifact"
     },
     {
       "toolId": "eternl",
@@ -4875,11 +5635,28 @@
     },
     {
       "toolId": "geniusyield-sdk",
+      "id": "gap:086a86e5aec49f3bc5101da4",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b"
+    },
+    {
+      "toolId": "geniusyield-sdk",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "geniusyield-sdk",
+      "id": "gap:0e9bb9c9a32ce4a2791f8645",
+      "area": "artifact",
+      "reason": "GeniusYield Lucid SDK manifest 2.0.0 is captured from default-branch source with no stable release mapping identified. Its pnpm importer declarations match the retained manifest, but distributed package correspondence remains unverified.",
+      "nextAction": "Identify and verify the published SDK version and source provenance without treating the default-branch revision as a stable release.",
+      "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+      "code": "sdk-scope:geniusyield-sdk:artifact"
     },
     {
       "toolId": "geniusyield-sdk",
@@ -4898,11 +5675,12 @@
     },
     {
       "toolId": "geniusyield-sdk",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "id": "gap:9968322323047d1063e5739b",
+      "area": "integration",
+      "reason": "The selected SDK declares Lucid Evolution for GeniusYield DEX interaction. Lock evidence does not identify the deployed order/DEX contracts, provider configuration, enabled integrations or transaction behavior.",
+      "nextAction": "Capture production DEX/order implementation and contract/provider configuration, then manually review the supported consumer workflows and service boundaries.",
+      "profileId": "profile:geniusyield-sdk:e6a95c7082608707db87e25b",
+      "code": "sdk-scope:geniusyield-sdk:integration"
     },
     {
       "toolId": "gero-wallet",

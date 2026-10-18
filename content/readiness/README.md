@@ -138,3 +138,10 @@ node --import tsx scripts/readiness/cli.ts collect-batch --input content/readine
 Use `--tools cardano-js-sdk --limit 1` for the larger monorepo capture. Keep
 source-backed gaps, queue failures and release distinctions visible. Existing
 discovery/challenge review packets remain owner-launched work.
+
+The Cardano JS SDK capture also exposes unresolved descriptors and workspace
+declaration/lock differences. Root resolutions, six patch locators, package
+extensions and plugins are retained as inputs requiring separate verification;
+the collector does not guess their installed effects. The NEWM connector's
+dependency declarations agree with its lock despite the root version discrepancy.
+The two pnpm application/SDK importers also match their manifest declarations.

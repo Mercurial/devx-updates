@@ -381,9 +381,9 @@ evidence model. Consumer builds, plugins and manual review tasks are not execute
 - [x] Inspect pinned production roots and add Yarn metadata-v6 support with
   regression coverage for bare ranges, workspace aliases, scope, conditions,
   unknown peers, checksums and stale declarations.
-- [ ] Collect all five selected consumers in bounded batches and retain source
+- [x] Collect all five selected consumers in bounded batches and retain source
   evidence for release, native-artifact, service and deployment gaps.
-- [ ] Validate/replay, verify cache reuse, regenerate reports, review the changes
+- [x] Validate/replay, verify cache reuse, regenerate reports, review the changes
   and check the production static export.
 
 The selected Cardano SDK package versions differ from the hardware-ledger tag;
@@ -391,6 +391,47 @@ NEWM's manifest and lock root also differ. Keep those identities distinct. Yarn
 v6 support does not resolve installed peer bindings or prove a published artifact.
 The four prepared capability reviews remain pending. Higher-level unsupported
 Blaze/Bun and PyCardano/Poetry roots remain priority work after this batch.
+
+Collection checkpoint: all five requests succeeded, adding 6,411 occurrences and
+13,398 edges. Coverage rises from 26 to 31 tools, with 35 historical profiles and
+790 retained evidence records; 238 tools still have no native profile. Cardano JS
+SDK selects four production roots while retaining all 22 workspaces. NEWM retains
+lock version 1.5.4 alongside manifest 1.5.5. Source-backed scope notes cover all
+five consumers; no capability findings or hardfork assessments were imported.
+
+Execution recovery: the first Cardano JS SDK attempt exhausted local disk space
+before its source checkout and evidence writes completed. Reproducible production
+build output/cache and clean pinned source caches were cleared; interrupted,
+unreferenced writes and checkout files were preserved in ignored recovery storage.
+The original request succeeded on its second attempt. Retained diagnostic evidence
+and the queue record preserve this interruption; no canonical evidence or Git
+history was removed. Source caches were cleared after verification to leave room
+for the final build.
+
+Verification checkpoint: all 63 behavior tests, TypeScript and readiness lint
+pass. All 35 profiles replay identically and all 790 evidence records validate.
+The completed batch attempts zero requests on rerun; native refresh reuses exactly
+five profiles. Both implementation and retained-data review axes found no
+actionable issues. Historical records are unchanged, and the four prepared review
+packet IDs remain unchanged and pending. Coverage, impact, project and comparison
+reports are regenerated against `321abcd`; the comparison adds five profiles,
+3,474 artifacts and 13,398 edges without changing or removing earlier graph records.
+
+Static export checkpoint: `NEXT_PUBLIC_BASE_PATH=/devx-updates npm run build --
+--webpack` passes outside the sandbox and exports all 311 routes. Generated pages
+for all five consumers show their exact selected roots/versions, source-backed
+scope gaps, current snapshot identity, base-path navigation and unassessed status.
+No UI interaction changes were made or re-tested; default Turbopack was not
+revalidated. The verified `out/` export is retained; disposable production build
+intermediates were cleared afterward to restore disk headroom. Implementation
+`2746cf1`, evidence, reports and the completed plan remain local; nothing was pushed.
+
+Next: prioritize unsupported higher-level production roots such as Blaze/Bun and
+PyCardano/Poetry, including their complete package-manager inputs. Do not substitute
+their nested native/test/example projects for whole-tool coverage. The prepared
+discovery/challenge reviews remain available to the owner through
+[Run the prepared reviews](./RUN-PREPARED-REVIEWS.md); target-specific compatibility
+testing still awaits a selected hardfork target and environment.
 
 ## 1. Objective
 
