@@ -189,7 +189,7 @@ not install consumer dependencies or execute project build scripts.
 
 - [x] Add evidence-backed Classic/modern Yarn capture, normalization, candidates, and recurring registration with explicit unsupported inputs.
 - [x] Verify and attempt the five pinned production requests in bounded batches; retain failures and source/release/native/service boundary gaps.
-- [ ] Validate/replay evidence, regenerate reports/comparison, check static export, review, and commit locally.
+- [x] Validate/replay evidence, regenerate reports/comparison, check static export, review, and commit locally.
 
 Lock records will be treated as declared dependency selections. Peer bindings,
 hoisting, installed-platform pruning, patches and shipped artifact correspondence
@@ -215,6 +215,34 @@ locked selection; conflicting or absent workspace selections now produce gaps
 without inferred edges, with a regression test. Neither real TyphonJS capture had
 this mismatch. Standards review's optional parser-provenance refinement is also
 implemented: cache context and toolchain labels share the exact package pins.
+
+Verification checkpoint: all 55 behavior tests, TypeScript and readiness lint pass.
+All 25 native profiles replay identically and 644 retained evidence objects validate.
+Coverage grows from 17 to 21 tools with profiles; 248 tools still have no profile.
+The snapshot contains 33,747 occurrences and 122,672 edges. Reports/comparison
+are regenerated against `214c7fc`: five historical profiles, 3,636 artifacts and
+14,988 edges added, with no historical graph records removed or changed. All 269
+tools remain hardfork-unassessed. Follow-up standards and specification reviews
+confirm the fixes and retained source/root identities, with no remaining findings.
+Implementation commits `6c72716` and `ad6f5ce` are local. Active snapshot storage
+is 61.4 MiB; never-committed intermediate chunks and unreferenced failed-import
+blobs were moved into ignored recovery state. All manifest-referenced evidence,
+graph chunks and previously committed files remain retained.
+
+Static export checkpoint: `NEXT_PUBLIC_BASE_PATH=/devx-updates npm run build --
+--webpack` passes with 311 routes. The five affected tool pages contain the current
+digest, unassessed status, explicit scope gaps, production roots or AdaLite's
+failure, and base-path links. Dashboard snapshot/comparison identifiers match.
+This uses the documented Webpack fallback for the execution environment's
+previously observed Turbopack port restriction; it is not a new successful
+Turbopack or browser-interaction check. Verified data and plan are committed
+locally; nothing was pushed.
+
+Next: continue prioritizing higher-level workflow gaps and prepare collected
+consumer evidence for owner-launched integration/capability reviews. Daedalus's
+Nix/native binaries and Cometa's bundled WASM are visible follow-up boundaries.
+AdaLite needs corrected source and renewed pin review before another meaningful
+collection attempt. Target-specific compatibility testing remains separately gated.
 
 ## 1. Objective
 

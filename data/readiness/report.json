@@ -1,11 +1,11 @@
 {
-  "snapshot": "dea5da89b9aa496c0dc4e949ab03822858f7b72fb421a4c684637646c4a68a38",
+  "snapshot": "6a4a17986b699ab52755530dd2fa1494364ece337d6099c342fbeb508b161c85",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 17,
-  "profiles": 20,
+  "withProfiles": 21,
+  "profiles": 25,
   "completeProfiles": 5,
-  "unresolvedTools": 252,
+  "unresolvedTools": 248,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -93,11 +93,27 @@
     },
     {
       "toolId": "adalite",
+      "id": "gap:0c22642a4552711f9518dad9",
+      "area": "resolution",
+      "reason": "Pinned AdaLite 7.0.2 source declares app/server workspaces (server manifest 6.18.1), but js-tokens lock version 0.0.0-use.local conflicts with resolution npm:4.0.0. No native profile is accepted. Deployment/provider and hardware-wallet behavior remain unreviewed.",
+      "nextAction": "Verify corrected immutable source and its release mapping before replacing the pinned request and retrying; do not guess which lock identity is correct.",
+      "code": "yarn-scope:adalite:resolution"
+    },
+    {
+      "toolId": "adalite",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet.",
       "code": "integration-unreviewed"
+    },
+    {
+      "toolId": "adalite",
+      "id": "gap:9bd538564d3534cf9d9a9b22",
+      "area": "resolution",
+      "reason": "Collection failed (yarn-lock): Error: Yarn version disagrees with resolution: js-tokens@npm:4.0.0",
+      "nextAction": "Inspect the native resolver error and retry this pinned profile.",
+      "code": "native-collection-failed:yarn-lock"
     },
     {
       "toolId": "adalite",
@@ -2565,6 +2581,14 @@
     },
     {
       "toolId": "cardano-web3-js",
+      "id": "gap:1c6e48018893471d51a51a78",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f"
+    },
+    {
+      "toolId": "cardano-web3-js",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -2573,11 +2597,20 @@
     },
     {
       "toolId": "cardano-web3-js",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:81f46471dfd263b5cf158965",
+      "area": "integration",
+      "reason": "Cardano Web3 tag/manifest 2.3.4 declares provider clients and cardano-wasm-libs. Source/lock evidence does not establish deployed Koios/Kupo/Ogmios/Blockfrost configurations, enabled integrations or distributed WASM identity.",
+      "nextAction": "Verify published package/WASM correspondence and manually review selected provider integrations and transaction behavior.",
+      "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
+      "code": "yarn-scope:cardano-web3-js:integration"
+    },
+    {
+      "toolId": "cardano-web3-js",
+      "id": "gap:84a1c2a418acdc59387fbd4b",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "No unambiguous Yarn selection for cardano-wasm-libs@^1.0.5 from workspace:..",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f"
     },
     {
       "toolId": "cardano-web3-js",
@@ -3347,6 +3380,14 @@
     },
     {
       "toolId": "cometa-js",
+      "id": "gap:07e5abe9d121532b46c842da",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for @types/pako@^2.0.4 from workspace:..",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+    },
+    {
+      "toolId": "cometa-js",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
@@ -3363,11 +3404,36 @@
     },
     {
       "toolId": "cometa-js",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:b46c817043b8bf6a28b0ef70",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "No unambiguous Yarn selection for buffer@^6.0.3 from workspace:..",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+    },
+    {
+      "toolId": "cometa-js",
+      "id": "gap:bb90b52c760278ad35ae8615",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+    },
+    {
+      "toolId": "cometa-js",
+      "id": "gap:bd721f6a6598112ddf354903",
+      "area": "resolution",
+      "reason": "No unambiguous Yarn selection for pako@^2.1.0 from workspace:..",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+    },
+    {
+      "toolId": "cometa-js",
+      "id": "gap:c98124ff2fe81a6013f37f1d",
+      "area": "integration",
+      "reason": "Cometa tag/manifest 1.2.0 declares no runtime npm dependencies, but README and build script describe compiled, compressed, inlined libcardano-c WASM. The Yarn graph captures development dependencies; bundled native runtime identity and build correspondence remain unresolved.",
+      "nextAction": "Pin libcardano-c source/build inputs and identify the distributed WASM/native artifact before reviewing chain-facing runtime behavior.",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9",
+      "code": "yarn-scope:cometa-js:integration"
     },
     {
       "toolId": "cometa-js",
@@ -3618,11 +3684,20 @@
     },
     {
       "toolId": "daedalus",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:29402e961fec2790a36d8e28",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0"
+    },
+    {
+      "toolId": "daedalus",
+      "id": "gap:5ecf1d2108af9644f4997a59",
+      "area": "integration",
+      "reason": "Daedalus tag/manifest 11.5.0 JavaScript lock profile excludes Nix inputs, bundled cardano-node/cardano-wallet binaries, Electron/native rebuild output and OS installers. Source flake references node 11.1.3 and wallet v2026-09-16; these are declarations, not verified shipped binary identities.",
+      "nextAction": "Collect pinned Nix/native closure and installer manifests, then manually review wallet/node integration and chain-facing capabilities.",
+      "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0",
+      "code": "yarn-scope:daedalus:integration"
     },
     {
       "toolId": "daedalus",
@@ -10173,11 +10248,35 @@
     },
     {
       "toolId": "typhonjs",
+      "id": "gap:0047f383ba52bfe7eb7d77a3",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:055e335a74c3abd7bc14d0db",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+    },
+    {
+      "toolId": "typhonjs",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:15939189733422ecc1aa0507",
+      "area": "resolution",
+      "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
     },
     {
       "toolId": "typhonjs",
@@ -10189,11 +10288,52 @@
     },
     {
       "toolId": "typhonjs",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:1e67a8b993dbc3faceadf3fa",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "24 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:561c6f537d57c4ef4b955967",
+      "area": "resolution",
+      "reason": "Yarn source typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:60873e02214d29abc0f5269e",
+      "area": "resolution",
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:611063f3a6277fdc2fd9e2e7",
+      "area": "resolution",
+      "reason": "24 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:61393123216be9f61cd049a8",
+      "area": "resolution",
+      "reason": "Yarn source typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:a931901db710e26d78cb8f29",
+      "area": "integration",
+      "reason": "TyphonJS tag/manifest 4.0.0 is a transaction library profile, not a Typhon wallet deployment. Yarn lock evidence does not establish published package correspondence, serialization correctness, direct chain-facing behavior or virtual peer contexts.",
+      "nextAction": "Verify the published library artifact and manually review transaction/signing implementation and production consumers.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
+      "code": "yarn-scope:typhonjs:integration"
     },
     {
       "toolId": "typhonjs",
@@ -10201,6 +10341,22 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:e332b47d7e204fc7ed91b0fb",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+    },
+    {
+      "toolId": "typhonjs",
+      "id": "gap:fc1158f41f3e2a941e882354",
+      "area": "resolution",
+      "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
     },
     {
       "toolId": "uplc-turbo",

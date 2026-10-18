@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "dea5da89b9aa496c0dc4e949ab03822858f7b72fb421a4c684637646c4a68a38",
-    "generatedAt": "2026-10-18T14:17:07.482Z",
+    "semanticDigest": "6a4a17986b699ab52755530dd2fa1494364ece337d6099c342fbeb508b161c85",
+    "generatedAt": "2026-10-18T15:06:46.711Z",
     "tools": [
       {
         "id": "1694-io",
@@ -139,7 +139,16 @@
         ],
         "evidenceIds": [
           "evidence:081425bc7fe21e21cccc69b365e295ca65924e820d0139491365e307a3ad5c70",
-          "evidence:e719e3822fe6bd7ff2fd72afce36f847b5fe28aa8717dca8824ac56853467ba3"
+          "evidence:0e596d160a99bd7eae2d12a424cd873ace8bf99fa4f480c0404fd0bf803e3a01",
+          "evidence:354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
+          "evidence:44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40",
+          "evidence:548e16dd4e186220c72b39f46bc7ed1a4d0035aa13917f65b98f73b42e01619e",
+          "evidence:5ad75711ae4785f25f41ace4b88f9588ac4ceedf23b305f60d4882e5b9ab0e99",
+          "evidence:c01cf498b62a116cc31ef0f16d61af6fada81649a643cc2937af640911ae92ea",
+          "evidence:d5a925b241741c8b10d63efec983f2a4521cb87898f6ec534eaa8f41e18a0cc9",
+          "evidence:d9b7ff25906c9d76bca47c569acb01f9b4596b0ee110edfcb1042d6d6b8099f5",
+          "evidence:e719e3822fe6bd7ff2fd72afce36f847b5fe28aa8717dca8824ac56853467ba3",
+          "evidence:f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe"
         ],
         "gaps": [
           {
@@ -150,11 +159,25 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:0c22642a4552711f9518dad9",
+            "area": "resolution",
+            "reason": "Pinned AdaLite 7.0.2 source declares app/server workspaces (server manifest 6.18.1), but js-tokens lock version 0.0.0-use.local conflicts with resolution npm:4.0.0. No native profile is accepted. Deployment/provider and hardware-wallet behavior remain unreviewed.",
+            "nextAction": "Verify corrected immutable source and its release mapping before replacing the pinned request and retrying; do not guess which lock identity is correct.",
+            "code": "yarn-scope:adalite:resolution"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
             "nextAction": "Export a discovery review packet.",
             "code": "integration-unreviewed"
+          },
+          {
+            "id": "gap:9bd538564d3534cf9d9a9b22",
+            "area": "resolution",
+            "reason": "Collection failed (yarn-lock): Error: Yarn version disagrees with resolution: js-tokens@npm:4.0.0",
+            "nextAction": "Inspect the native resolver error and retry this pinned profile.",
+            "code": "native-collection-failed:yarn-lock"
           },
           {
             "id": "gap:b33c4f9e67e77b9535e0f2cd",
@@ -5733,7 +5756,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -5745,6 +5768,13 @@
         ],
         "evidenceIds": [
           "evidence:19a930e362d862c049745cb6256ff42bbda3ad66063d6f1b2e9e6b4f32aac74c",
+          "evidence:7ab484e97c105055a4a9b0eaac52b117ee3d9b934230ff4ad3181bef78dd1d32",
+          "evidence:b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
+          "evidence:b9894aa07e29f131bc48221ac94c7fbfe85633a98a197ad5581876d0d18f7f8d",
+          "evidence:c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a",
+          "evidence:e04808de96e4b7fdb05340a7d0be2bdac0d50f5b0a5dfa7c74107ee17240300e",
+          "evidence:e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
+          "evidence:edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b",
           "evidence:ef7e8d584584b7d760e6c37c47d58ed5c0e426711309e50c5290a0c2d827a7e7"
         ],
         "gaps": [
@@ -5763,6 +5793,13 @@
             "code": "native-collection-failed:npm-lock"
           },
           {
+            "id": "gap:1c6e48018893471d51a51a78",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -5770,11 +5807,19 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:81f46471dfd263b5cf158965",
+            "area": "integration",
+            "reason": "Cardano Web3 tag/manifest 2.3.4 declares provider clients and cardano-wasm-libs. Source/lock evidence does not establish deployed Koios/Kupo/Ogmios/Blockfrost configurations, enabled integrations or distributed WASM identity.",
+            "nextAction": "Verify published package/WASM correspondence and manually review selected provider integrations and transaction behavior.",
+            "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
+            "code": "yarn-scope:cardano-web3-js:integration"
+          },
+          {
+            "id": "gap:84a1c2a418acdc59387fbd4b",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "No unambiguous Yarn selection for cardano-wasm-libs@^1.0.5 from workspace:..",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -7322,7 +7367,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -7333,10 +7378,25 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
           "evidence:258dc79fbd76b0a2b61b894aece996012eb979f563eebdc6d4b99ecedb2d38c0",
-          "evidence:c9e6ad9288af81d423b349bf7239690b790c4c0e6ad654b548e76aec34943c6a"
+          "evidence:2799f0ee64aa6ba10654ac0c6754b408e0f85fb5345b5154d7e01920d875dc1e",
+          "evidence:2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
+          "evidence:4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
+          "evidence:8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a",
+          "evidence:c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72",
+          "evidence:c9e6ad9288af81d423b349bf7239690b790c4c0e6ad654b548e76aec34943c6a",
+          "evidence:cbefd6bd32a8de124f666e0ef3a2b35d2bd78901f8d3b06bf922bccdb8089aa6",
+          "evidence:dda4c60833e31b1f5da1f835c55dcef50904e9d888bec1544d8df5712ac9a704"
         ],
         "gaps": [
+          {
+            "id": "gap:07e5abe9d121532b46c842da",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for @types/pako@^2.0.4 from workspace:..",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
@@ -7352,11 +7412,33 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:b46c817043b8bf6a28b0ef70",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "No unambiguous Yarn selection for buffer@^6.0.3 from workspace:..",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+          },
+          {
+            "id": "gap:bb90b52c760278ad35ae8615",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+          },
+          {
+            "id": "gap:bd721f6a6598112ddf354903",
+            "area": "resolution",
+            "reason": "No unambiguous Yarn selection for pako@^2.1.0 from workspace:..",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9"
+          },
+          {
+            "id": "gap:c98124ff2fe81a6013f37f1d",
+            "area": "integration",
+            "reason": "Cometa tag/manifest 1.2.0 declares no runtime npm dependencies, but README and build script describe compiled, compressed, inlined libcardano-c WASM. The Yarn graph captures development dependencies; bundled native runtime identity and build correspondence remain unresolved.",
+            "nextAction": "Pin libcardano-c source/build inputs and identify the distributed WASM/native artifact before reviewing chain-facing runtime behavior.",
+            "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9",
+            "code": "yarn-scope:cometa-js:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -7813,7 +7895,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -7858,8 +7940,17 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0",
+          "evidence:134c8d85520c2c8c6098e0c4d52f4466434bd16c6921bc40c599f54406f9d9f8",
           "evidence:16601b8ff0b1500faad97300d1c548298b5daffde6d0153a0201628e7a82f106",
-          "evidence:2e7b570ae829fea165abbaae8c7879953e1a79ba9b4d0b3447321b4070ec5ace"
+          "evidence:1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa",
+          "evidence:2e7b570ae829fea165abbaae8c7879953e1a79ba9b4d0b3447321b4070ec5ace",
+          "evidence:5ef22ad107599a41e04f96d237c7c53cfb5eb0d0b045a4919d7a734007c7560e",
+          "evidence:79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88",
+          "evidence:9a17b487065a8fe55c699fdad6342524e15d32040a27650d4e88371908f8a65a",
+          "evidence:b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688",
+          "evidence:d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a",
+          "evidence:fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93"
         ],
         "gaps": [
           {
@@ -7877,11 +7968,19 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:29402e961fec2790a36d8e28",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0"
+          },
+          {
+            "id": "gap:5ecf1d2108af9644f4997a59",
+            "area": "integration",
+            "reason": "Daedalus tag/manifest 11.5.0 JavaScript lock profile excludes Nix inputs, bundled cardano-node/cardano-wallet binaries, Electron/native rebuild output and OS installers. Source flake references node 11.1.3 and wallet v2026-09-16; these are declarations, not verified shipped binary identities.",
+            "nextAction": "Collect pinned Nix/native closure and installer manifests, then manually review wallet/node integration and chain-facing capabilities.",
+            "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0",
+            "code": "yarn-scope:daedalus:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -19480,7 +19579,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -19489,16 +19588,49 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
+          "evidence:20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6",
           "evidence:3f30b946bb76d4b6b91c2321c5ba41cf4305be33dc0572b1050ecfbc45940e89",
-          "evidence:9b085ba3268d97639db58996ea7ce5049f13c0a2ab590592c006e59cb675af13"
+          "evidence:4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+          "evidence:9b085ba3268d97639db58996ea7ce5049f13c0a2ab590592c006e59cb675af13",
+          "evidence:a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
+          "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
+          "evidence:a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83",
+          "evidence:b98926c533ac3b28bf78af192c1a75470ac8d4234290e4b55d1957681dcc8621",
+          "evidence:c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
+          "evidence:c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541",
+          "evidence:cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
+          "evidence:d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb",
+          "evidence:d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c"
         ],
         "gaps": [
+          {
+            "id": "gap:0047f383ba52bfe7eb7d77a3",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+          },
+          {
+            "id": "gap:055e335a74c3abd7bc14d0db",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:15939189733422ecc1aa0507",
+            "area": "resolution",
+            "reason": "Captured .yarnrc.yml declares yarnPath; its effect on installed dependency behavior needs separate verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -19508,17 +19640,67 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:1e67a8b993dbc3faceadf3fa",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "24 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+          },
+          {
+            "id": "gap:561c6f537d57c4ef4b955967",
+            "area": "resolution",
+            "reason": "Yarn source typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+          },
+          {
+            "id": "gap:60873e02214d29abc0f5269e",
+            "area": "resolution",
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+          },
+          {
+            "id": "gap:611063f3a6277fdc2fd9e2e7",
+            "area": "resolution",
+            "reason": "24 Yarn package records declare peers; consumer-specific peer bindings remain unresolved and no peer edges were guessed.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+          },
+          {
+            "id": "gap:61393123216be9f61cd049a8",
+            "area": "resolution",
+            "reason": "Yarn source typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
+          },
+          {
+            "id": "gap:a931901db710e26d78cb8f29",
+            "area": "integration",
+            "reason": "TyphonJS tag/manifest 4.0.0 is a transaction library profile, not a Typhon wallet deployment. Yarn lock evidence does not establish published package correspondence, serialization correctness, direct chain-facing behavior or virtual peer contexts.",
+            "nextAction": "Verify the published library artifact and manually review transaction/signing implementation and production consumers.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
+            "code": "yarn-scope:typhonjs:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:e332b47d7e204fc7ed91b0fb",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:5958bba13a88b8790661b312"
+          },
+          {
+            "id": "gap:fc1158f41f3e2a941e882354",
+            "area": "resolution",
+            "reason": "Yarn source fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1 needs separate Git/local/patch/artifact verification.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:35.906Z",
@@ -21572,6 +21754,87 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
+        "toolId": "cardano-web3-js",
+        "release": "v2.3.4",
+        "revision": "21aa0802533f9052b6d4bcbdc934acbbd482a006",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 21aa0802533f9052b6d4bcbdc934acbbd482a006",
+        "toolchain": "Yarn classic lock; producing Yarn version unknown; parser @yarnpkg/lockfile 1.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:27b9bf0d42453442a92bc989fef32cd68fde6a9bee329f6efd5715fa7b79318f"
+        ],
+        "inputDigest": "67b96263c3a27a4941fdaa0fc91f808faecf0de8d0cbb961e622fbf61c8b23c7",
+        "evidenceIds": [
+          "evidence:b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
+          "evidence:b9894aa07e29f131bc48221ac94c7fbfe85633a98a197ad5581876d0d18f7f8d",
+          "evidence:e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
+          "evidence:edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b"
+        ],
+        "nativeEvidenceId": "evidence:edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b",
+        "configurationEvidenceId": "evidence:b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cometa-js:966dc9baa6f8b89c653713f9",
+        "toolId": "cometa-js",
+        "release": "v1.2.0",
+        "revision": "15f0862128fd49fa3eecd4f4e2a118e60c865cde",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 15f0862128fd49fa3eecd4f4e2a118e60c865cde",
+        "toolchain": "Yarn classic lock; producing Yarn version unknown; parser @yarnpkg/lockfile 1.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:9abe6fb546b88ed5ebbf38034937a33829e114f3ff84e4c42a71356f19627b02"
+        ],
+        "inputDigest": "966dc9baa6f8b89c653713f9653673dbd8750436841ed0fa8c526a1f1bf8229c",
+        "evidenceIds": [
+          "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
+          "evidence:2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
+          "evidence:c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72",
+          "evidence:dda4c60833e31b1f5da1f835c55dcef50904e9d888bec1544d8df5712ac9a704"
+        ],
+        "nativeEvidenceId": "evidence:2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
+        "configurationEvidenceId": "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:daedalus:5c78926765a31fcbb8b185d0",
+        "toolId": "daedalus",
+        "release": "11.5.0",
+        "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 22440487d08fd1d2121394fa80c238852df5ea7d",
+        "toolchain": "Yarn classic lock; yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72; parser @yarnpkg/lockfile 1.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:c4dd7d87d997a85640cb904b4fd9674d904f44acfe52838b15a7e3f64927aaad"
+        ],
+        "inputDigest": "5c78926765a31fcbb8b185d0085a9a4bf31514d75340a46d5ec3ed4ed3442239",
+        "evidenceIds": [
+          "evidence:1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa",
+          "evidence:9a17b487065a8fe55c699fdad6342524e15d32040a27650d4e88371908f8a65a",
+          "evidence:b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688",
+          "evidence:fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93"
+        ],
+        "nativeEvidenceId": "evidence:b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688",
+        "configurationEvidenceId": "evidence:fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:dexter:f3cebd33fc6ab1d00989de83",
         "toolId": "dexter",
         "release": "unreleased:master",
@@ -22323,6 +22586,62 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:typhonjs:0fa38ad96bdd38e0564d95d4",
+        "toolId": "typhonjs",
+        "release": "v4.0.0",
+        "revision": "7190c3c67e9dc7be284842e89f06ed848b748ed2",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 7190c3c67e9dc7be284842e89f06ed848b748ed2",
+        "toolchain": "Yarn modern lock; yarn@4.13.0; parser js-yaml 5.2.1",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:326860919f4ad43375480060607124a7afbc6e526455bc43bb1ed26632730808"
+        ],
+        "inputDigest": "0fa38ad96bdd38e0564d95d4b44c27c3bcdea24fe9cae88aa25fb5481555195d",
+        "evidenceIds": [
+          "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
+          "evidence:4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+          "evidence:a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
+          "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
+          "evidence:c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c"
+        ],
+        "nativeEvidenceId": "evidence:4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+        "configurationEvidenceId": "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:typhonjs:5958bba13a88b8790661b312",
+        "toolId": "typhonjs",
+        "release": "v4.0.0",
+        "revision": "7190c3c67e9dc7be284842e89f06ed848b748ed2",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 7190c3c67e9dc7be284842e89f06ed848b748ed2",
+        "toolchain": "Yarn modern lock; yarn@4.13.0; parser @yarnpkg/parsers 3.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:17862d2756c6b94313b1b07b0158fff58d25b8dcc2a9d363f9ff2564be01b390"
+        ],
+        "inputDigest": "5958bba13a88b8790661b312c4500f2efd2c7f0ed068d27841dc44518f0eca1a",
+        "evidenceIds": [
+          "evidence:a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
+          "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
+          "evidence:a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83",
+          "evidence:c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
+          "evidence:d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb"
+        ],
+        "nativeEvidenceId": "evidence:a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83",
+        "configurationEvidenceId": "evidence:d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:weld:32b11b5bffdf83144bf95795",
         "toolId": "weld",
         "release": "@ada-anvil/weld-plugin-hodei@0.0.10",
@@ -22594,6 +22913,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/clb/tree/867ff70b4d3086f728733f25509692cda41ea0ef"
       },
       {
+        "id": "evidence:0e596d160a99bd7eae2d12a424cd873ace8bf99fa4f480c0404fd0bf803e3a01",
+        "digest": "0e596d160a99bd7eae2d12a424cd873ace8bf99fa4f480c0404fd0bf803e3a01",
+        "path": "evidence/0e596d160a99bd7eae2d12a424cd873ace8bf99fa4f480c0404fd0bf803e3a01.json.gz",
+        "description": "Source adalite/yarn.lock",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/yarn.lock"
+      },
+      {
         "id": "evidence:0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
         "digest": "0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f",
         "path": "evidence/0e8b2f2d69a7e8c95676417c92e6bbc7b7000a8d130afc09b25327df7e44810f.json.gz",
@@ -22619,6 +22945,19 @@
         "path": "evidence/10b7007199b9754cac019f557b03b97eb54f7e031a56a08b9f16527811e44e69.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/wowica/xogmios/releases/tag/v0.8.0"
+      },
+      {
+        "id": "evidence:10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0",
+        "digest": "10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0",
+        "path": "evidence/10e914dbe101bd2101ec0531f583bc3cdee2eae2d102b90f8d935c374b9067e0.json.gz",
+        "description": "Pinned Yarn workflow scope for daedalus"
+      },
+      {
+        "id": "evidence:11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
+        "digest": "11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6",
+        "path": "evidence/11bd1af7422e369fb67081263df86672d80a2b43141004468e8a5412690b75b6.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
       },
       {
         "id": "evidence:11beafd8869823b58d6ad6f6507f97db5528b62ab0c6f975f8197fdae94686a0",
@@ -22647,6 +22986,12 @@
         "path": "evidence/12efdc075da5f920a5e2b52eb57d5f64e5dcb2ef4f19d64735f6c0222d3db6ea.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/mithril/releases/tag/2630.1-hotfix"
+      },
+      {
+        "id": "evidence:134c8d85520c2c8c6098e0c4d52f4466434bd16c6921bc40c599f54406f9d9f8",
+        "digest": "134c8d85520c2c8c6098e0c4d52f4466434bd16c6921bc40c599f54406f9d9f8",
+        "path": "evidence/134c8d85520c2c8c6098e0c4d52f4466434bd16c6921bc40c599f54406f9d9f8.json.gz",
+        "description": "Collection request for daedalus"
       },
       {
         "id": "evidence:13a9ed05e4944383e1a2e169c933281571c6f932c4a565d97f84fba6e0479dbe",
@@ -22732,6 +23077,13 @@
         "sourceUrl": "https://github.com/gitmachtl/scripts/releases/tag/Update-2026-04"
       },
       {
+        "id": "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
+        "digest": "196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
+        "path": "evidence/196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/tree/15f0862128fd49fa3eecd4f4e2a118e60c865cde"
+      },
+      {
         "id": "evidence:197b6b230dd96cc4b69e870137abed968f4b802d8c9197c835337fe6d485e895",
         "digest": "197b6b230dd96cc4b69e870137abed968f4b802d8c9197c835337fe6d485e895",
         "path": "evidence/197b6b230dd96cc4b69e870137abed968f4b802d8c9197c835337fe6d485e895.json.gz",
@@ -22774,6 +23126,20 @@
         "sourceUrl": "https://github.com/ajnabi-workshop/jambhala/tree/1e2a19867266f81a36da9c0612a8cddd6fbb4c7a"
       },
       {
+        "id": "evidence:1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa",
+        "digest": "1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa",
+        "path": "evidence/1cc265a20ae5454d532b9171a58e12cd699074119caa7deb3e56d12fccf585fa.json.gz",
+        "description": "Native input daedalus/package.json",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/package.json"
+      },
+      {
+        "id": "evidence:1def7a3ba0d93329a33cf21b7afc51b6be6ff3fa48e86186bdc71b75327fb7ec",
+        "digest": "1def7a3ba0d93329a33cf21b7afc51b6be6ff3fa48e86186bdc71b75327fb7ec",
+        "path": "evidence/1def7a3ba0d93329a33cf21b7afc51b6be6ff3fa48e86186bdc71b75327fb7ec.json.gz",
+        "description": "Native input adalite/.yarnrc.yml",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/.yarnrc.yml"
+      },
+      {
         "id": "evidence:1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
         "digest": "1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78",
         "path": "evidence/1e1dcaa0e2d22f0506791749240d8edef3aba91675e970b0987eaacff6b74d78.json.gz",
@@ -22806,6 +23172,12 @@
         "path": "evidence/1fccbc899426e0a1e47fb830559e28f2f16d3fa0ae531310350f19e7830b0527.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/govtool/releases/tag/v2.0.36"
+      },
+      {
+        "id": "evidence:20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6",
+        "digest": "20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6",
+        "path": "evidence/20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6.json.gz",
+        "description": "Collection request for typhonjs"
       },
       {
         "id": "evidence:2048de0e537c7a10aa9c96fe113aa52d88444d31695f4126dbfc85662a70c889",
@@ -22961,6 +23333,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/govtool/blob/993d25ab42b6565a95aaa82ef297ac5053b3fb3e/govtool/frontend/Dockerfile"
       },
       {
+        "id": "evidence:2799f0ee64aa6ba10654ac0c6754b408e0f85fb5345b5154d7e01920d875dc1e",
+        "digest": "2799f0ee64aa6ba10654ac0c6754b408e0f85fb5345b5154d7e01920d875dc1e",
+        "path": "evidence/2799f0ee64aa6ba10654ac0c6754b408e0f85fb5345b5154d7e01920d875dc1e.json.gz",
+        "description": "Source cometa-js/scripts/compress-wasm.mjs",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/scripts/compress-wasm.mjs"
+      },
+      {
         "id": "evidence:279bf5b98daef37314ee1efc8332e24663ca2894330d33132e73ff4a18b22c05",
         "digest": "279bf5b98daef37314ee1efc8332e24663ca2894330d33132e73ff4a18b22c05",
         "path": "evidence/279bf5b98daef37314ee1efc8332e24663ca2894330d33132e73ff4a18b22c05.json.gz",
@@ -23026,6 +23405,13 @@
         "digest": "2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687",
         "path": "evidence/2a51ecf4b3028843246a3057f27e35b858d85d7e8d255fe5f1dfafdf34fdd687.json.gz",
         "description": "Authored collection scope and unresolved boundaries"
+      },
+      {
+        "id": "evidence:2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
+        "digest": "2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828",
+        "path": "evidence/2a8ddac0560723d91dc5db7e6f5083855178fa3d1bbd61c816db4748d0c18828.json.gz",
+        "description": "yarn-lock for cometa-js v1.2.0",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/tree/15f0862128fd49fa3eecd4f4e2a118e60c865cde"
       },
       {
         "id": "evidence:2a946bd1294443155521d0f94772f98c93985452bdb696d31297d4188075ad3c",
@@ -23156,6 +23542,12 @@
         "path": "evidence/331c0ac99b51a978222f0b5211544bb793a231f6a34142998eca1cbcfb84ce56.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/SAIB-Inc/Argus/tree/37a648d8d5f010526f4b4656d34559bf4c2e9eae"
+      },
+      {
+        "id": "evidence:354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
+        "digest": "354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194",
+        "path": "evidence/354a19469f5766da03132c4ddfd24e951703612b91d3bff87a41e8735736e194.json.gz",
+        "description": "Pinned Yarn workflow scope for adalite"
       },
       {
         "id": "evidence:357fe92b2e6fb91b040b5b91369d787b9eabce7f4283d8ff4b11a12ef97f5b39",
@@ -23429,6 +23821,13 @@
         "sourceUrl": "https://github.com/HarmonicPool/cardano-wallet-interface/tree/3b9451fcaf7fc79bc9e8b56f227b42657d69a21c"
       },
       {
+        "id": "evidence:44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40",
+        "digest": "44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40",
+        "path": "evidence/44ca435b60082a5dca1308021e2c11dc9aa03a4883dab05aa15c234443eaed40.json.gz",
+        "description": "Source adalite/.yarnrc.yml",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/.yarnrc.yml"
+      },
+      {
         "id": "evidence:4639181d6851669242f904474da2deffe6e1f78ac032f554b1e983e5e3f4adb1",
         "digest": "4639181d6851669242f904474da2deffe6e1f78ac032f554b1e983e5e3f4adb1",
         "path": "evidence/4639181d6851669242f904474da2deffe6e1f78ac032f554b1e983e5e3f4adb1.json.gz",
@@ -23519,11 +23918,24 @@
         "sourceUrl": "https://github.com/echovl/cardano-go/tree/5d486b0c6bdd44de894eeabec0755234f3fa3cd8"
       },
       {
+        "id": "evidence:4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+        "digest": "4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7",
+        "path": "evidence/4ade70d521e3323ed5bef4ee6a2bcc03be7581990e47cf000342ecdaf160e7d7.json.gz",
+        "description": "yarn-lock for typhonjs v4.0.0",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
+      },
+      {
         "id": "evidence:4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8",
         "digest": "4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8",
         "path": "evidence/4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/tree/e846a7c5d2747609d791d7d47d5423616718cb34"
+      },
+      {
+        "id": "evidence:4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
+        "digest": "4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6",
+        "path": "evidence/4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6.json.gz",
+        "description": "Collection request for cometa-js"
       },
       {
         "id": "evidence:4c4704847b361ea8c90fe52ff6fff8be64012d37d8bf6f40848cf9aa68757489",
@@ -23651,6 +24063,12 @@
         "sourceUrl": "https://github.com/mlabs-haskell/plutus-simple-model/tree/ec86b357e6ff0615ab02d31e4f7ebe75e3027fb0"
       },
       {
+        "id": "evidence:548e16dd4e186220c72b39f46bc7ed1a4d0035aa13917f65b98f73b42e01619e",
+        "digest": "548e16dd4e186220c72b39f46bc7ed1a4d0035aa13917f65b98f73b42e01619e",
+        "path": "evidence/548e16dd4e186220c72b39f46bc7ed1a4d0035aa13917f65b98f73b42e01619e.json.gz",
+        "description": "Failed native collection for adalite"
+      },
+      {
         "id": "evidence:55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c",
         "digest": "55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c",
         "path": "evidence/55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c.json.gz",
@@ -23728,6 +24146,13 @@
         "sourceUrl": "https://github.com/gitmachtl/cardano-signer/releases/tag/v1.35.0"
       },
       {
+        "id": "evidence:5ad75711ae4785f25f41ace4b88f9588ac4ceedf23b305f60d4882e5b9ab0e99",
+        "digest": "5ad75711ae4785f25f41ace4b88f9588ac4ceedf23b305f60d4882e5b9ab0e99",
+        "path": "evidence/5ad75711ae4785f25f41ace4b88f9588ac4ceedf23b305f60d4882e5b9ab0e99.json.gz",
+        "description": "Source adalite/app/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/app/package.json"
+      },
+      {
         "id": "evidence:5aeda0115dce5f35c0254bcb405c5ad973a66f868e1453f90de04fef06f5bf82",
         "digest": "5aeda0115dce5f35c0254bcb405c5ad973a66f868e1453f90de04fef06f5bf82",
         "path": "evidence/5aeda0115dce5f35c0254bcb405c5ad973a66f868e1453f90de04fef06f5bf82.json.gz",
@@ -23784,6 +24209,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/purus/tree/f4d50126ecccb92cf4d939f0c0a18dc5294c4692"
       },
       {
+        "id": "evidence:5ef22ad107599a41e04f96d237c7c53cfb5eb0d0b045a4919d7a734007c7560e",
+        "digest": "5ef22ad107599a41e04f96d237c7c53cfb5eb0d0b045a4919d7a734007c7560e",
+        "path": "evidence/5ef22ad107599a41e04f96d237c7c53cfb5eb0d0b045a4919d7a734007c7560e.json.gz",
+        "description": "Source daedalus/README.md",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/README.md"
+      },
+      {
         "id": "evidence:5f9590880f916af0797998e682ed1e84aa19e6ee82df23876248b58d82afd7ec",
         "digest": "5f9590880f916af0797998e682ed1e84aa19e6ee82df23876248b58d82afd7ec",
         "path": "evidence/5f9590880f916af0797998e682ed1e84aa19e6ee82df23876248b58d82afd7ec.json.gz",
@@ -23802,6 +24234,13 @@
         "digest": "61387dc028d1cc84b4c2a29fdaf1491966beee05b3877b03fac816227d18ca4b",
         "path": "evidence/61387dc028d1cc84b4c2a29fdaf1491966beee05b3877b03fac816227d18ca4b.json.gz",
         "description": "Collection request for meshjs-mesh-sdk"
+      },
+      {
+        "id": "evidence:61f0581f29045fa3f9f53f0e4a5a6312cf19407535bdd846067f9369020af89d",
+        "digest": "61f0581f29045fa3f9f53f0e4a5a6312cf19407535bdd846067f9369020af89d",
+        "path": "evidence/61f0581f29045fa3f9f53f0e4a5a6312cf19407535bdd846067f9369020af89d.json.gz",
+        "description": "Native input adalite/yarn.lock",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/yarn.lock"
       },
       {
         "id": "evidence:628589e7d03eb0580b476459d70d85c4bae57f1953ae0467bac42635cb076b08",
@@ -24156,6 +24595,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/dingo/blob/e0630ddf8a72dc0280ed8845fb1d899fae2d1051/go.mod"
       },
       {
+        "id": "evidence:79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88",
+        "digest": "79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88",
+        "path": "evidence/79048e58cd84b00f05e813e8fa1cfc04e55c0dcdd3ff876111aed2990a7e6f88.json.gz",
+        "description": "Source daedalus/scripts/rebuild-native-modules.sh",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/scripts/rebuild-native-modules.sh"
+      },
+      {
         "id": "evidence:7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
         "digest": "7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07",
         "path": "evidence/7977461b8fb179baf635e6e7828942f5d5086c36aa3a787828f499b1ff473f07.json.gz",
@@ -24173,6 +24619,12 @@
         "path": "evidence/79cf2f9110ec1f749e0e48fa84e3a761aa419df46da7b0a5b9f43c1b8605ead6.json.gz",
         "description": "npm-lock for weld @ada-anvil/weld-plugin-hodei@0.0.10",
         "sourceUrl": "https://github.com/Cardano-Forge/weld/tree/ce6cf90d721358254e8b70c1e484a5f342be4e74"
+      },
+      {
+        "id": "evidence:7ab484e97c105055a4a9b0eaac52b117ee3d9b934230ff4ad3181bef78dd1d32",
+        "digest": "7ab484e97c105055a4a9b0eaac52b117ee3d9b934230ff4ad3181bef78dd1d32",
+        "path": "evidence/7ab484e97c105055a4a9b0eaac52b117ee3d9b934230ff4ad3181bef78dd1d32.json.gz",
+        "description": "Pinned Yarn workflow scope for cardano-web3-js"
       },
       {
         "id": "evidence:7abf90cd07796b77d4db0ee65a91177ce5033e4540aec6c219d2bafe299f5bff",
@@ -24432,6 +24884,13 @@
         "path": "evidence/86c5551c2956e2403f17ee3340d98df1566b295b4e4850d7b5747ec6ec1ef596.json.gz",
         "description": "Native input hydra-sdk/pnpm-lock.yaml",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/pnpm-lock.yaml"
+      },
+      {
+        "id": "evidence:8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a",
+        "digest": "8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a",
+        "path": "evidence/8715da224c56d68d38f7d166dc59f70e1f116ffe0b189c20dc22aea8f1659a6a.json.gz",
+        "description": "Source cometa-js/README.md",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/README.md"
       },
       {
         "id": "evidence:876f87c6bcd42581f19d6eb43e11a59d88f014217f791f51f59e6745445e800f",
@@ -24711,6 +25170,13 @@
         "sourceUrl": "https://github.com/input-output-hk/offchain-metadata-tools/tree/91eba72d6e5e3b17cd49f625c9546f2c82df5a65"
       },
       {
+        "id": "evidence:952be8346beedf47598694def8d076befa1951af17303e70a386226325afd16c",
+        "digest": "952be8346beedf47598694def8d076befa1951af17303e70a386226325afd16c",
+        "path": "evidence/952be8346beedf47598694def8d076befa1951af17303e70a386226325afd16c.json.gz",
+        "description": "Native input adalite/server/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/server/package.json"
+      },
+      {
         "id": "evidence:958425701763b156cf98fee6beb312a5222b0bfa67a2f837f93bd82b2bc8afae",
         "digest": "958425701763b156cf98fee6beb312a5222b0bfa67a2f837f93bd82b2bc8afae",
         "path": "evidence/958425701763b156cf98fee6beb312a5222b0bfa67a2f837f93bd82b2bc8afae.json.gz",
@@ -24798,6 +25264,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/core/package.json"
       },
       {
+        "id": "evidence:9a17b487065a8fe55c699fdad6342524e15d32040a27650d4e88371908f8a65a",
+        "digest": "9a17b487065a8fe55c699fdad6342524e15d32040a27650d4e88371908f8a65a",
+        "path": "evidence/9a17b487065a8fe55c699fdad6342524e15d32040a27650d4e88371908f8a65a.json.gz",
+        "description": "Native input daedalus/yarn.lock",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/yarn.lock"
+      },
+      {
         "id": "evidence:9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad",
         "digest": "9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad",
         "path": "evidence/9a7d1d2682a6cdcfadf19f6f0ce64581ae2e9643a660753917d5de18d38affad.json.gz",
@@ -24881,6 +25354,13 @@
         "sourceUrl": "https://github.com/ajnabi-workshop/cardano-cli-guru/tree/2904b58b35c5cab9d1c6550b0b4be26eb272c348"
       },
       {
+        "id": "evidence:a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
+        "digest": "a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e",
+        "path": "evidence/a0bf66d44797bbab066194e8ff06b47ef33a61814835f82e1d07bfe141d4137e.json.gz",
+        "description": "Native input typhonjs/package.json",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/package.json"
+      },
+      {
         "id": "evidence:a0d170fc667c9473b409d98185a77be66a35cf64730957b1462436bcb8309fee",
         "digest": "a0d170fc667c9473b409d98185a77be66a35cf64730957b1462436bcb8309fee",
         "path": "evidence/a0d170fc667c9473b409d98185a77be66a35cf64730957b1462436bcb8309fee.json.gz",
@@ -24893,6 +25373,13 @@
         "path": "evidence/a129845ab643eb92e9a2752b20f4bfc6ae94da2693be82d0a01a94b544cb0e60.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/koios-cli/releases/tag/v2.0.0"
+      },
+      {
+        "id": "evidence:a1afa804a82fba90b4674e1e679dcc62d24ac019be411e6cf6edf7359773cf92",
+        "digest": "a1afa804a82fba90b4674e1e679dcc62d24ac019be411e6cf6edf7359773cf92",
+        "path": "evidence/a1afa804a82fba90b4674e1e679dcc62d24ac019be411e6cf6edf7359773cf92.json.gz",
+        "description": "Native input adalite/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/package.json"
       },
       {
         "id": "evidence:a1bf93b5b1ba6f80c8153cfa0ef8767cc084e482b37da6627a1c5d54c9fb419e",
@@ -24964,6 +25451,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/packages/scalus-uplc/package.json"
       },
       {
+        "id": "evidence:a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
+        "digest": "a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585",
+        "path": "evidence/a49712e9f42fa2f8ecdac67570260df446b0d675510df3270bd7384d6a9ea585.json.gz",
+        "description": "Native input typhonjs/.yarnrc.yml",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/.yarnrc.yml"
+      },
+      {
         "id": "evidence:a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c",
         "digest": "a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c",
         "path": "evidence/a5082507fc57688874609a0d6940fa5c644ed8194c4f8258599a260d6a04804c.json.gz",
@@ -25004,6 +25498,13 @@
         "path": "evidence/a701221f6779738971b7a640585fd3681d6addc3f21a84f7ce9dbfad8df7e2cf.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331"
+      },
+      {
+        "id": "evidence:a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83",
+        "digest": "a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83",
+        "path": "evidence/a79acd971a86b421f3bdb8088b6105607bea6cccf2009268799d504c1df4cb83.json.gz",
+        "description": "yarn-lock for typhonjs v4.0.0",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
       },
       {
         "id": "evidence:a842a49c57c55e3f7823b3a7f7dae5a1d60a8c5a4d5ce9421ab72610c785a181",
@@ -25201,6 +25702,13 @@
         "sourceUrl": "https://github.com/Emurgo/yoroi/releases/tag/v7.0.5"
       },
       {
+        "id": "evidence:b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688",
+        "digest": "b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688",
+        "path": "evidence/b12c58678ce695878c629bc564575291f7c6c886255cf22d680d327671602688.json.gz",
+        "description": "yarn-lock for daedalus 11.5.0",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/tree/22440487d08fd1d2121394fa80c238852df5ea7d"
+      },
+      {
         "id": "evidence:b150c4ebfc614156a3c960b5061cc5edbf25187eb562a7ddd7c59bc81e580b88",
         "digest": "b150c4ebfc614156a3c960b5061cc5edbf25187eb562a7ddd7c59bc81e580b88",
         "path": "evidence/b150c4ebfc614156a3c960b5061cc5edbf25187eb562a7ddd7c59bc81e580b88.json.gz",
@@ -25312,6 +25820,13 @@
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331/Cargo.lock"
       },
       {
+        "id": "evidence:b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
+        "digest": "b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
+        "path": "evidence/b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/xray-network/xray-js/tree/21aa0802533f9052b6d4bcbdc934acbbd482a006"
+      },
+      {
         "id": "evidence:b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802",
         "digest": "b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802",
         "path": "evidence/b77c70312010e40ff93581582fcf1f8503d7bdaac740147735c611f186594802.json.gz",
@@ -25379,6 +25894,20 @@
         "path": "evidence/b97b557367840579e95ebe7cfc7e407e0ca398b4bb132d6235f158ab76bc9b4e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/tree/c4139df12e099dbd4742d3e2c10dc52f50a4bd41"
+      },
+      {
+        "id": "evidence:b98926c533ac3b28bf78af192c1a75470ac8d4234290e4b55d1957681dcc8621",
+        "digest": "b98926c533ac3b28bf78af192c1a75470ac8d4234290e4b55d1957681dcc8621",
+        "path": "evidence/b98926c533ac3b28bf78af192c1a75470ac8d4234290e4b55d1957681dcc8621.json.gz",
+        "description": "Source typhonjs/README.md",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/README.md"
+      },
+      {
+        "id": "evidence:b9894aa07e29f131bc48221ac94c7fbfe85633a98a197ad5581876d0d18f7f8d",
+        "digest": "b9894aa07e29f131bc48221ac94c7fbfe85633a98a197ad5581876d0d18f7f8d",
+        "path": "evidence/b9894aa07e29f131bc48221ac94c7fbfe85633a98a197ad5581876d0d18f7f8d.json.gz",
+        "description": "Native input cardano-web3-js/yarn.lock",
+        "sourceUrl": "https://github.com/xray-network/xray-js/blob/21aa0802533f9052b6d4bcbdc934acbbd482a006/yarn.lock"
       },
       {
         "id": "evidence:b9b1194ce6734418881b41c28d3749a495db911f2212879d61196b26f5d68575",
@@ -25561,6 +26090,12 @@
         "sourceUrl": "https://github.com/input-output-hk/smartcode-verifier/tree/75386920ef9d9282778a4c609b900761eda3cc7c"
       },
       {
+        "id": "evidence:c01cf498b62a116cc31ef0f16d61af6fada81649a643cc2937af640911ae92ea",
+        "digest": "c01cf498b62a116cc31ef0f16d61af6fada81649a643cc2937af640911ae92ea",
+        "path": "evidence/c01cf498b62a116cc31ef0f16d61af6fada81649a643cc2937af640911ae92ea.json.gz",
+        "description": "Failed native collection for adalite"
+      },
+      {
         "id": "evidence:c094b56f34c5d15b7316e409993b373758dc32c5c27e9ad00b1939e546ec420f",
         "digest": "c094b56f34c5d15b7316e409993b373758dc32c5c27e9ad00b1939e546ec420f",
         "path": "evidence/c094b56f34c5d15b7316e409993b373758dc32c5c27e9ad00b1939e546ec420f.json.gz",
@@ -25575,6 +26110,12 @@
         "sourceUrl": "https://github.com/blockfrost/blockfrost-js/releases/tag/v6.2.0"
       },
       {
+        "id": "evidence:c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a",
+        "digest": "c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a",
+        "path": "evidence/c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a.json.gz",
+        "description": "Collection request for cardano-web3-js"
+      },
+      {
         "id": "evidence:c25d08cb716d78b67bca165f311ea3a7082962912a058a910298b75cf760db81",
         "digest": "c25d08cb716d78b67bca165f311ea3a7082962912a058a910298b75cf760db81",
         "path": "evidence/c25d08cb716d78b67bca165f311ea3a7082962912a058a910298b75cf760db81.json.gz",
@@ -25587,6 +26128,13 @@
         "path": "evidence/c2aa2d9f1e6ab43c98d4ee90bc17064d770a0158dbf22d154b41fb0c59884cca.json.gz",
         "description": "Source evolution-sdk/package.json",
         "sourceUrl": "https://github.com/IntersectMBO/evolution-sdk/blob/c4139df12e099dbd4742d3e2c10dc52f50a4bd41/package.json"
+      },
+      {
+        "id": "evidence:c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
+        "digest": "c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c",
+        "path": "evidence/c3877d9affe11fe883e7eb8ac45b0099225b3256e9b6b9871212085aff7ec29c.json.gz",
+        "description": "Native input typhonjs/yarn.lock",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/yarn.lock"
       },
       {
         "id": "evidence:c40485ab163f0ddc6f72b91e2d9f1e796b50a20a2abf62cf0b362da9175e719c",
@@ -25650,6 +26198,12 @@
         "description": "Collection request for weld"
       },
       {
+        "id": "evidence:c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541",
+        "digest": "c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541",
+        "path": "evidence/c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541.json.gz",
+        "description": "Collection request for typhonjs"
+      },
+      {
         "id": "evidence:c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6",
         "digest": "c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6",
         "path": "evidence/c688661ea4a3f84aa5b01931c812f66a4bd2b81cb5bf27a720cde62be4ec0ed6.json.gz",
@@ -25669,6 +26223,13 @@
         "path": "evidence/c6c1b15710528e6b28e9f53d62f66e3fb0f810076cd9d49c1a06b401bcce2e9c.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IndigoProtocol/iris/tree/70449cccb5602dad948794ba26b3b8596cc332c9"
+      },
+      {
+        "id": "evidence:c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72",
+        "digest": "c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72",
+        "path": "evidence/c6d6ddffcdc861d2f635ef978024f613fc4e70e748609ed318ad47782bf4ab72.json.gz",
+        "description": "Native input cometa-js/yarn.lock",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/yarn.lock"
       },
       {
         "id": "evidence:c709a2b916098eb0f71303d91ce0bdafbf21ed2b61250fa98ade8d1c69f92aef",
@@ -25769,11 +26330,24 @@
         "sourceUrl": "https://github.com/ItsDaveB/OgmiosDotnet/tree/73c1aad5e99ac2266c99f19bd1cdf273d0cf796c"
       },
       {
+        "id": "evidence:cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
+        "digest": "cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02",
+        "path": "evidence/cb29c80882a5a1b0504346fb434d41308f59a47efb916aed45c6e0f00ec72b02.json.gz",
+        "description": "Source typhonjs/.yarnrc.yml",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/.yarnrc.yml"
+      },
+      {
         "id": "evidence:cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9",
         "digest": "cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9",
         "path": "evidence/cbe9fc5eb98a26cbe7fdf11fde0dc9ae883f40fcfd8adbea79fc6a1a1cd52ee9.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/geniusyield/atlas/releases/tag/v0.14.1"
+      },
+      {
+        "id": "evidence:cbefd6bd32a8de124f666e0ef3a2b35d2bd78901f8d3b06bf922bccdb8089aa6",
+        "digest": "cbefd6bd32a8de124f666e0ef3a2b35d2bd78901f8d3b06bf922bccdb8089aa6",
+        "path": "evidence/cbefd6bd32a8de124f666e0ef3a2b35d2bd78901f8d3b06bf922bccdb8089aa6.json.gz",
+        "description": "Pinned Yarn workflow scope for cometa-js"
       },
       {
         "id": "evidence:cf8be6ff3f415a5d0c208193f6fc81242154cbd62cc6089aa66b3fc9a3249266",
@@ -25839,6 +26413,13 @@
         "sourceUrl": "https://github.com/obsidiansystems/hydra-pay/tree/51a7c177df886c80fa7f8ec0c22b63c25ebf3d72"
       },
       {
+        "id": "evidence:d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb",
+        "digest": "d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb",
+        "path": "evidence/d4220eee9a4bda589a7ba5b5e276f0d613b277b7a3eb62c3b68737532cf3aebb.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/StricaHQ/typhonjs/tree/7190c3c67e9dc7be284842e89f06ed848b748ed2"
+      },
+      {
         "id": "evidence:d466b47eb36298db8980d976b47767eaabac4e49c097d8a2e8ee2d803148ca08",
         "digest": "d466b47eb36298db8980d976b47767eaabac4e49c097d8a2e8ee2d803148ca08",
         "path": "evidence/d466b47eb36298db8980d976b47767eaabac4e49c097d8a2e8ee2d803148ca08.json.gz",
@@ -25881,6 +26462,13 @@
         "sourceUrl": "https://github.com/bloxbean/intelliada/releases/tag/v0.2.0-beta2"
       },
       {
+        "id": "evidence:d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a",
+        "digest": "d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a",
+        "path": "evidence/d539277fcd155343d433f956154ca0a7a63e9432f45f0fdd72a8b48d0864205a.json.gz",
+        "description": "Source daedalus/flake.nix",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/flake.nix"
+      },
+      {
         "id": "evidence:d57f08277f983dde7969382eb7248d826b855693a3a55af5b9222ef91ce7cf1e",
         "digest": "d57f08277f983dde7969382eb7248d826b855693a3a55af5b9222ef91ce7cf1e",
         "path": "evidence/d57f08277f983dde7969382eb7248d826b855693a3a55af5b9222ef91ce7cf1e.json.gz",
@@ -25893,6 +26481,13 @@
         "path": "evidence/d596c56895b257e6860e5232bd4c714fb350873d7e27dda08318f7fce5bdc97a.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/Invariant-0/cardano-ctf/tree/43de1e4186674f10563f30b29cc2bc1f743cf30d"
+      },
+      {
+        "id": "evidence:d5a925b241741c8b10d63efec983f2a4521cb87898f6ec534eaa8f41e18a0cc9",
+        "digest": "d5a925b241741c8b10d63efec983f2a4521cb87898f6ec534eaa8f41e18a0cc9",
+        "path": "evidence/d5a925b241741c8b10d63efec983f2a4521cb87898f6ec534eaa8f41e18a0cc9.json.gz",
+        "description": "Source adalite/server/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/server/package.json"
       },
       {
         "id": "evidence:d5dd9bcf5eefc79c54b66e184ce6952a7cc3bc283e999ec27aa0444fd15dcb3a",
@@ -25916,6 +26511,12 @@
         "sourceUrl": "https://github.com/cardano-foundation/cardano-ibc-incubator/tree/d0cdf341872a9e17914c8c0cd16e5b7f45431830"
       },
       {
+        "id": "evidence:d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c",
+        "digest": "d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c",
+        "path": "evidence/d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c.json.gz",
+        "description": "Pinned Yarn workflow scope for typhonjs"
+      },
+      {
         "id": "evidence:d78c2fba600f65cfb8c62d8b8faf9827912dd8591e0de948b71505e7c0b4ba4a",
         "digest": "d78c2fba600f65cfb8c62d8b8faf9827912dd8591e0de948b71505e7c0b4ba4a",
         "path": "evidence/d78c2fba600f65cfb8c62d8b8faf9827912dd8591e0de948b71505e7c0b4ba4a.json.gz",
@@ -25937,11 +26538,25 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/hydra-transaction/package.json"
       },
       {
+        "id": "evidence:d9b7ff25906c9d76bca47c569acb01f9b4596b0ee110edfcb1042d6d6b8099f5",
+        "digest": "d9b7ff25906c9d76bca47c569acb01f9b4596b0ee110edfcb1042d6d6b8099f5",
+        "path": "evidence/d9b7ff25906c9d76bca47c569acb01f9b4596b0ee110edfcb1042d6d6b8099f5.json.gz",
+        "description": "Source adalite/README.md",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/README.md"
+      },
+      {
         "id": "evidence:da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4",
         "digest": "da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4",
         "path": "evidence/da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/SundaeSwap-finance/gastronomy/releases/tag/v0.8.0"
+      },
+      {
+        "id": "evidence:db3bf6e408a35762162d7c61b9cc5e092368fbc39afb1674a74026d8f082f57c",
+        "digest": "db3bf6e408a35762162d7c61b9cc5e092368fbc39afb1674a74026d8f082f57c",
+        "path": "evidence/db3bf6e408a35762162d7c61b9cc5e092368fbc39afb1674a74026d8f082f57c.json.gz",
+        "description": "Native input adalite/app/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/app/package.json"
       },
       {
         "id": "evidence:db43bedf989740faab8064b05042f2ea4c44da1e99a89275a71246a16521d7db",
@@ -25979,6 +26594,13 @@
         "sourceUrl": "https://github.com/input-output-hk/devx/tree/5f05c1e1af6df3e2ec72d7ebf8d8d0ccb9a157b1"
       },
       {
+        "id": "evidence:dda4c60833e31b1f5da1f835c55dcef50904e9d888bec1544d8df5712ac9a704",
+        "digest": "dda4c60833e31b1f5da1f835c55dcef50904e9d888bec1544d8df5712ac9a704",
+        "path": "evidence/dda4c60833e31b1f5da1f835c55dcef50904e9d888bec1544d8df5712ac9a704.json.gz",
+        "description": "Native input cometa-js/package.json",
+        "sourceUrl": "https://github.com/Biglup/cometa.js/blob/15f0862128fd49fa3eecd4f4e2a118e60c865cde/package.json"
+      },
+      {
         "id": "evidence:ddbe8592ac03d8e07871f68af2dd8c30c31d9ff19e192b7960c42ede887a7ab7",
         "digest": "ddbe8592ac03d8e07871f68af2dd8c30c31d9ff19e192b7960c42ede887a7ab7",
         "path": "evidence/ddbe8592ac03d8e07871f68af2dd8c30c31d9ff19e192b7960c42ede887a7ab7.json.gz",
@@ -25998,6 +26620,13 @@
         "path": "evidence/e036434806c07e1b586348c4ee03f01bd50bdc409e57a300eb79c2da4c348d2a.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/mlabs-haskell/lambda-buffers/tree/de770f903acf1046c5a67f16129706855226cb48"
+      },
+      {
+        "id": "evidence:e04808de96e4b7fdb05340a7d0be2bdac0d50f5b0a5dfa7c74107ee17240300e",
+        "digest": "e04808de96e4b7fdb05340a7d0be2bdac0d50f5b0a5dfa7c74107ee17240300e",
+        "path": "evidence/e04808de96e4b7fdb05340a7d0be2bdac0d50f5b0a5dfa7c74107ee17240300e.json.gz",
+        "description": "Source cardano-web3-js/README.md",
+        "sourceUrl": "https://github.com/xray-network/xray-js/blob/21aa0802533f9052b6d4bcbdc934acbbd482a006/README.md"
       },
       {
         "id": "evidence:e067e9677ef52b64b8fc7b6d00e2a96277fd53c5c07766cbe173bf1e98820af1",
@@ -26026,6 +26655,13 @@
         "path": "evidence/e28226252a2fd583eca4657a624506346ad71ddf1c26f5c706bdd230804783bf.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/input-output-hk/sc-tools/tree/b4123bf1a3fca471404b804be9696bbc3e9bd471"
+      },
+      {
+        "id": "evidence:e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
+        "digest": "e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149",
+        "path": "evidence/e2d9b1eecfa232ce8454a70594df3d47471d79ac06b08410da6c005d219fa149.json.gz",
+        "description": "Native input cardano-web3-js/package.json",
+        "sourceUrl": "https://github.com/xray-network/xray-js/blob/21aa0802533f9052b6d4bcbdc934acbbd482a006/package.json"
       },
       {
         "id": "evidence:e327d140073e4b8f246f5842fb8949fb46638dcaa6e438a71747ae017c20c984",
@@ -26210,6 +26846,13 @@
         "sourceUrl": "https://github.com/bloxbean/yaci/tree/c3035c7522c41f1419608b900b206d5a16dcd7bd"
       },
       {
+        "id": "evidence:edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b",
+        "digest": "edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b",
+        "path": "evidence/edb53388de71347a55cbe7d73545a2bd15a4cf9df6edd818c5c7acbab02d901b.json.gz",
+        "description": "yarn-lock for cardano-web3-js v2.3.4",
+        "sourceUrl": "https://github.com/xray-network/xray-js/tree/21aa0802533f9052b6d4bcbdc934acbbd482a006"
+      },
+      {
         "id": "evidence:ee794106eeb50291b6bdadbb1b91dfe32e55f7c26dc5ae65658737634007f074",
         "digest": "ee794106eeb50291b6bdadbb1b91dfe32e55f7c26dc5ae65658737634007f074",
         "path": "evidence/ee794106eeb50291b6bdadbb1b91dfe32e55f7c26dc5ae65658737634007f074.json.gz",
@@ -26256,6 +26899,13 @@
         "path": "evidence/f0ad747e438f41adadc9ab5fd4189315fef37f2c9fed6f88c1e59012b05d051d.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/minswap/sdk/tree/19b4b0cd1b512e94c026d5f7be4fd3d2ae7bf528"
+      },
+      {
+        "id": "evidence:f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
+        "digest": "f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
+        "path": "evidence/f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe.json.gz",
+        "description": "Source adalite/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/package.json"
       },
       {
         "id": "evidence:f15e096cc023589cab8c1bd68a05fb712cfc1cedfb347e941854b385c1196b6e",
@@ -26454,6 +27104,13 @@
         "sourceUrl": "https://github.com/IntersectMBO/cardano-cli/tree/25f4d7a6b243d80ed7d716cc91b9c51d9265ace6"
       },
       {
+        "id": "evidence:fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93",
+        "digest": "fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93",
+        "path": "evidence/fee602614807b780ce243c7ec9b48b5d03dfa2e4b1972115705e14183f9eeb93.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/input-output-hk/daedalus/tree/22440487d08fd1d2121394fa80c238852df5ea7d"
+      },
+      {
         "id": "evidence:ff595469ad04e7fa73f55bec19b48836b522ef0f4d81cbf007b3e6842699de8a",
         "digest": "ff595469ad04e7fa73f55bec19b48836b522ef0f4d81cbf007b3e6842699de8a",
         "path": "evidence/ff595469ad04e7fa73f55bec19b48836b522ef0f4d81cbf007b3e6842699de8a.json.gz",
@@ -26475,6 +27132,24 @@
         "toolId": "cardano-peer-connect",
         "profileId": "profile:cardano-peer-connect:2f48f4a1a232665df8246f2d",
         "evidenceId": "evidence:2bf995992555ec05b5371df9bee16ac214d9d069187c6a783026d49ff2a6a869"
+      },
+      {
+        "key": "4f2d4362bf43245a89518236c66550a63feaad75695f7e770c25f7c4a9406b74",
+        "toolId": "cardano-web3-js",
+        "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
+        "evidenceId": "evidence:c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a"
+      },
+      {
+        "key": "904a7227a244e76005043380f7d3babf0bf87bd4592a7c9256ff6559b2e52dc4",
+        "toolId": "cometa-js",
+        "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9",
+        "evidenceId": "evidence:4c15654c06f6760ab383d8e4722c9b772b94bb5cd32570f35eb0fbd3317b7ff6"
+      },
+      {
+        "key": "d966478b147adc8973878112649814a2ecd79bc4bf61a40b5e8ec517538c172e",
+        "toolId": "daedalus",
+        "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0",
+        "evidenceId": "evidence:134c8d85520c2c8c6098e0c4d52f4466434bd16c6921bc40c599f54406f9d9f8"
       },
       {
         "key": "ff5973ea13d7b84604ba562326404422a33265164279f7f3afe79d2a25ba49b0",
@@ -26573,6 +27248,18 @@
         "evidenceId": "evidence:a9d1635eb2c8824cac83af6c7a81510555fcf318fbf761a5760ea08305cd60be"
       },
       {
+        "key": "3e07331d410301bae662a14d8eddcaf2863d8d599cda6c165658758abc4c83a4",
+        "toolId": "typhonjs",
+        "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
+        "evidenceId": "evidence:20098171d9162dca6a30d28844f9746b935b963390c191eecdebd6a7d715ebe6"
+      },
+      {
+        "key": "d922de3786cc492a118ba2ca1708fa73d8db3c98c8897dc4fceff0ede5cddf5d",
+        "toolId": "typhonjs",
+        "profileId": "profile:typhonjs:0fa38ad96bdd38e0564d95d4",
+        "evidenceId": "evidence:c682e9443cafca40a80b13e9f58f33028246251bdaeb3868d499aad0ae9ef541"
+      },
+      {
         "key": "49556089d3f5b3a42ec44eb724dba40a0fce5573bf455fb5ee30898a0065bb1f",
         "toolId": "weld",
         "profileId": "profile:weld:32b11b5bffdf83144bf95795",
@@ -26583,84 +27270,84 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/b2254dc76a89bcd0bac73cd98bab9843189858ca84e7fb4ce2be729d7bf0d24c.json",
-        "digest": "b2254dc76a89bcd0bac73cd98bab9843189858ca84e7fb4ce2be729d7bf0d24c",
-        "records": 914
+        "path": "snapshots/artifacts/9b21d6189d82141da6467f26f3db1a533df1569dca2f9ebdf686cf074270a064.json",
+        "digest": "9b21d6189d82141da6467f26f3db1a533df1569dca2f9ebdf686cf074270a064",
+        "records": 1148
       },
       {
-        "path": "snapshots/artifacts/47061bcc6b02b46128499c60e1430b2638035cf70597be0a4e19da707bd9fd42.json",
-        "digest": "47061bcc6b02b46128499c60e1430b2638035cf70597be0a4e19da707bd9fd42",
-        "records": 948
+        "path": "snapshots/artifacts/3421def0a3c86a3bcb622b5b6338354a141122c445c5c3a9ff7b13a01866cf2e.json",
+        "digest": "3421def0a3c86a3bcb622b5b6338354a141122c445c5c3a9ff7b13a01866cf2e",
+        "records": 1149
       },
       {
-        "path": "snapshots/artifacts/8231bbd89480a60e4028f58d78dd9ab6224eb2bac867fb9f909095cf1d30f2f6.json",
-        "digest": "8231bbd89480a60e4028f58d78dd9ab6224eb2bac867fb9f909095cf1d30f2f6",
-        "records": 879
+        "path": "snapshots/artifacts/8416a2391b6a52dc13e5c8fedcf1b2f34de5751292ed37a75ebd49f74f2521f8.json",
+        "digest": "8416a2391b6a52dc13e5c8fedcf1b2f34de5751292ed37a75ebd49f74f2521f8",
+        "records": 1130
       },
       {
-        "path": "snapshots/artifacts/ea3030a6ecc920657d214e391ee43dcee0a9cbe750036bf4c343e5481f94c174.json",
-        "digest": "ea3030a6ecc920657d214e391ee43dcee0a9cbe750036bf4c343e5481f94c174",
-        "records": 913
+        "path": "snapshots/artifacts/9600686ecc9119e6286ce04a7dd2b83f3500b751a80ccafd2131eb8748247496.json",
+        "digest": "9600686ecc9119e6286ce04a7dd2b83f3500b751a80ccafd2131eb8748247496",
+        "records": 1140
       },
       {
-        "path": "snapshots/artifacts/4723a2651bdb2076cc66698b21180a7716f7318de4d83e7616e1a7743c2c8d70.json",
-        "digest": "4723a2651bdb2076cc66698b21180a7716f7318de4d83e7616e1a7743c2c8d70",
-        "records": 942
+        "path": "snapshots/artifacts/ac48a6c7fdcd30e823ed5e1f8902a38abb9ed3d4bc5ba2bcb0eb53912e48c913.json",
+        "digest": "ac48a6c7fdcd30e823ed5e1f8902a38abb9ed3d4bc5ba2bcb0eb53912e48c913",
+        "records": 1150
       },
       {
-        "path": "snapshots/artifacts/e61f465072300f62f0eb0a6b560e27a77cc44244a73d5226b226137fabc308d6.json",
-        "digest": "e61f465072300f62f0eb0a6b560e27a77cc44244a73d5226b226137fabc308d6",
-        "records": 945
+        "path": "snapshots/artifacts/a92d78804858908ddcde6eb3008a5860adf71e0d3d9cf50fc9191756dd67a3e5.json",
+        "digest": "a92d78804858908ddcde6eb3008a5860adf71e0d3d9cf50fc9191756dd67a3e5",
+        "records": 1195
       },
       {
-        "path": "snapshots/artifacts/bc55db51b85287e291294df307ed51836a3706732c9117358b38ef896034f688.json",
-        "digest": "bc55db51b85287e291294df307ed51836a3706732c9117358b38ef896034f688",
-        "records": 958
+        "path": "snapshots/artifacts/78b4d8e6d593a0ec0c11d80a2ebaaab70bf34b3e12c5f86b14035202e96b3a0c.json",
+        "digest": "78b4d8e6d593a0ec0c11d80a2ebaaab70bf34b3e12c5f86b14035202e96b3a0c",
+        "records": 1190
       },
       {
-        "path": "snapshots/artifacts/0f28d68991fbc05cc62072548a006d24850abe8440afd74e4f6368e2c1815f3b.json",
-        "digest": "0f28d68991fbc05cc62072548a006d24850abe8440afd74e4f6368e2c1815f3b",
-        "records": 895
+        "path": "snapshots/artifacts/77542bdd22b5f40c7c268d2133232681889d4eed3685f71083201effbf536fc3.json",
+        "digest": "77542bdd22b5f40c7c268d2133232681889d4eed3685f71083201effbf536fc3",
+        "records": 1125
       },
       {
-        "path": "snapshots/artifacts/ae7cdad5ed456ea528212babc3855721680b91f417df03bc3997df3baad25182.json",
-        "digest": "ae7cdad5ed456ea528212babc3855721680b91f417df03bc3997df3baad25182",
-        "records": 924
+        "path": "snapshots/artifacts/974302bebfa7241bf72d7d0160e09b2c6e875867b0266e85a25dbe561b930157.json",
+        "digest": "974302bebfa7241bf72d7d0160e09b2c6e875867b0266e85a25dbe561b930157",
+        "records": 1150
       },
       {
-        "path": "snapshots/artifacts/1399dd0e40c44d189b68b91e1f356b37c08142bf99fb075f4ec9693b01a185aa.json",
-        "digest": "1399dd0e40c44d189b68b91e1f356b37c08142bf99fb075f4ec9693b01a185aa",
-        "records": 945
+        "path": "snapshots/artifacts/8cf36c395cac11f5a931d6ad5b367fa4661b3611b1b0470e02cd12b71b64591d.json",
+        "digest": "8cf36c395cac11f5a931d6ad5b367fa4661b3611b1b0470e02cd12b71b64591d",
+        "records": 1164
       },
       {
-        "path": "snapshots/artifacts/1fd60776ff0031d97319316ad064fcfcc2583b07cc21e808e5cf1684ab3eb111.json",
-        "digest": "1fd60776ff0031d97319316ad064fcfcc2583b07cc21e808e5cf1684ab3eb111",
-        "records": 965
+        "path": "snapshots/artifacts/b6341186c34b443fbde01fd5c6648ff3849c1e18ffa2d333428be9565f9b775c.json",
+        "digest": "b6341186c34b443fbde01fd5c6648ff3849c1e18ffa2d333428be9565f9b775c",
+        "records": 1202
       },
       {
-        "path": "snapshots/artifacts/2686905fb479bb3548e9ffd3bf8051479b570af0a66a2c6d85be0db56986b2a6.json",
-        "digest": "2686905fb479bb3548e9ffd3bf8051479b570af0a66a2c6d85be0db56986b2a6",
-        "records": 931
+        "path": "snapshots/artifacts/613973ee233b9e75159fd318053b271832ea58b534fa73cfda052209364011c1.json",
+        "digest": "613973ee233b9e75159fd318053b271832ea58b534fa73cfda052209364011c1",
+        "records": 1145
       },
       {
-        "path": "snapshots/artifacts/e1be294958d1fe9846fdb1a6901aa09ce3147fefe54272d3af6731ffea1d68d1.json",
-        "digest": "e1be294958d1fe9846fdb1a6901aa09ce3147fefe54272d3af6731ffea1d68d1",
-        "records": 951
+        "path": "snapshots/artifacts/a59aa593083aa43069b21de93ece380660ddb914c6254a0840919cc31ea80732.json",
+        "digest": "a59aa593083aa43069b21de93ece380660ddb914c6254a0840919cc31ea80732",
+        "records": 1169
       },
       {
-        "path": "snapshots/artifacts/775cf59b4b73911b4297ed07804a2f1bd13572bdd1a55f0c63b8051dcef87f85.json",
-        "digest": "775cf59b4b73911b4297ed07804a2f1bd13572bdd1a55f0c63b8051dcef87f85",
-        "records": 916
+        "path": "snapshots/artifacts/3a8d484e697581730474c9a7d88cdf1529826e80770b7bc3faf225dfc09cfccf.json",
+        "digest": "3a8d484e697581730474c9a7d88cdf1529826e80770b7bc3faf225dfc09cfccf",
+        "records": 1132
       },
       {
-        "path": "snapshots/artifacts/9c110adb98d4bb6f09b67062af1c36b6981debb36b4155bc4c6aaecd487a7754.json",
-        "digest": "9c110adb98d4bb6f09b67062af1c36b6981debb36b4155bc4c6aaecd487a7754",
-        "records": 926
+        "path": "snapshots/artifacts/b26adb2687e1486b6c41479f8f32dec81b696a3b249f7e18f774dbcc7b8ae8eb.json",
+        "digest": "b26adb2687e1486b6c41479f8f32dec81b696a3b249f7e18f774dbcc7b8ae8eb",
+        "records": 1146
       },
       {
-        "path": "snapshots/artifacts/9f28d1cacdb7d653f1e6d76abd0e5ddf2b814b63e09e15b6c148dc1049f72ada.json",
-        "digest": "9f28d1cacdb7d653f1e6d76abd0e5ddf2b814b63e09e15b6c148dc1049f72ada",
-        "records": 919
+        "path": "snapshots/artifacts/1b6c38b54631112a90cec0fd1931a4ee6200ca3ef6770dada710e2f0e883c17c.json",
+        "digest": "1b6c38b54631112a90cec0fd1931a4ee6200ca3ef6770dada710e2f0e883c17c",
+        "records": 1172
       }
     ],
     "occurrences": [
@@ -26668,6 +27355,21 @@
         "path": "snapshots/occurrences/9a0df0c2db82f4af4ac64208848b7376cb6538b8d6bc39665d7ba688eeb3fd78.json",
         "digest": "9a0df0c2db82f4af4ac64208848b7376cb6538b8d6bc39665d7ba688eeb3fd78",
         "records": 457
+      },
+      {
+        "path": "snapshots/occurrences/b28e95de3f2851330646e09e74f16363a765823b5df220019b5b1fb58c8afe73.json",
+        "digest": "b28e95de3f2851330646e09e74f16363a765823b5df220019b5b1fb58c8afe73",
+        "records": 292
+      },
+      {
+        "path": "snapshots/occurrences/d0f8ab2b33e5add9cf3df8a5c500e3cf03045cad0dd3fa2769dde1cfe8113dee.json",
+        "digest": "d0f8ab2b33e5add9cf3df8a5c500e3cf03045cad0dd3fa2769dde1cfe8113dee",
+        "records": 2023
+      },
+      {
+        "path": "snapshots/occurrences/04e10135d94e412cc0c19be93d69d8e3523bdbf1c04af8f064731de5538d6c17.json",
+        "digest": "04e10135d94e412cc0c19be93d69d8e3523bdbf1c04af8f064731de5538d6c17",
+        "records": 4082
       },
       {
         "path": "snapshots/occurrences/faa1832f17fff8630d3bfb6e04b216e42908bd39852ffbc391fdd3fa54ae4e21.json",
@@ -26760,6 +27462,16 @@
         "records": 390
       },
       {
+        "path": "snapshots/occurrences/757a04c642f6e916fedeb015658b3650ff1780faa1cd9a0af4e257bc396e7752.json",
+        "digest": "757a04c642f6e916fedeb015658b3650ff1780faa1cd9a0af4e257bc396e7752",
+        "records": 369
+      },
+      {
+        "path": "snapshots/occurrences/b894535f17bff73c89dc11b245b474ef3e83bede62feba7f93f55dd8b57cdec6.json",
+        "digest": "b894535f17bff73c89dc11b245b474ef3e83bede62feba7f93f55dd8b57cdec6",
+        "records": 369
+      },
+      {
         "path": "snapshots/occurrences/ffa4d34bdb1d6f2435c0d33c9b29f67be202a9550b806424964c4b480d42465d.json",
         "digest": "ffa4d34bdb1d6f2435c0d33c9b29f67be202a9550b806424964c4b480d42465d",
         "records": 711
@@ -26770,6 +27482,26 @@
         "path": "snapshots/edges/c673c73d3ad51ed11a8133e370857e5dc5b8d6658c9d7278e245b1a1f9f4ba56.json",
         "digest": "c673c73d3ad51ed11a8133e370857e5dc5b8d6658c9d7278e245b1a1f9f4ba56",
         "records": 853
+      },
+      {
+        "path": "snapshots/edges/4cae8c2f00e3ccc57f09478f3ac28318a88aa86d17e32d0b100f621acf8e70f2.json",
+        "digest": "4cae8c2f00e3ccc57f09478f3ac28318a88aa86d17e32d0b100f621acf8e70f2",
+        "records": 383
+      },
+      {
+        "path": "snapshots/edges/0bb2c00682869094a935c5740937fb07935921ab57fad80a9f8c68eed5f38f21.json",
+        "digest": "0bb2c00682869094a935c5740937fb07935921ab57fad80a9f8c68eed5f38f21",
+        "records": 4533
+      },
+      {
+        "path": "snapshots/edges/7bc46c84ffaad45f7a7bd02725bed900d8bf53469eda74c0733547bf102157ce.json",
+        "digest": "7bc46c84ffaad45f7a7bd02725bed900d8bf53469eda74c0733547bf102157ce",
+        "records": 4538
+      },
+      {
+        "path": "snapshots/edges/1e8d257db2bd1a6985b2ae7533582fabdc99212010608c053938664559f489d9.json",
+        "digest": "1e8d257db2bd1a6985b2ae7533582fabdc99212010608c053938664559f489d9",
+        "records": 4538
       },
       {
         "path": "snapshots/edges/d44a814867e4d60172baccc60329d345e937cd64513103c06049e70b592c063b.json",
@@ -26930,6 +27662,16 @@
         "path": "snapshots/edges/22c9199eecc9c7288178823a628baf8621aceafad448666cc8339ca5b0440028.json",
         "digest": "22c9199eecc9c7288178823a628baf8621aceafad448666cc8339ca5b0440028",
         "records": 957
+      },
+      {
+        "path": "snapshots/edges/5262bbef982f98fc4b980367c914fb2ed7a146f048d82332880ee29b46ecd776.json",
+        "digest": "5262bbef982f98fc4b980367c914fb2ed7a146f048d82332880ee29b46ecd776",
+        "records": 498
+      },
+      {
+        "path": "snapshots/edges/52c43c09c26ab28beba41e14c5e9b138de18a3948bbeb4a2becb08249e375504.json",
+        "digest": "52c43c09c26ab28beba41e14c5e9b138de18a3948bbeb4a2becb08249e375504",
+        "records": 498
       },
       {
         "path": "snapshots/edges/cbcb94cb3534994b0626738b1f4f16ccce3a1ea99004b05c746d99bf9d71f8af.json",

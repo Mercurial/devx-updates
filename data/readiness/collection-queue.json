@@ -177,6 +177,91 @@
       "attemptedAt": "2026-10-18T14:16:12.229Z",
       "profileId": "profile:dexter:f3cebd33fc6ab1d00989de83",
       "succeededAt": "2026-10-18T14:16:17.178Z"
+    },
+    {
+      "id": "collection:52a7f4949614968697fd03e972fdf098b595f80b6927b979250cb91ad97d72ce",
+      "request": {
+        "toolId": "adalite",
+        "revision": "86dd006310600fad5e145fae2af2f9bea0b79572",
+        "adapter": "yarn-lock",
+        "roots": [
+          "adalite-app",
+          "adalite-server"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "failed",
+      "attempts": 2,
+      "attemptedAt": "2026-10-18T15:01:50.708Z",
+      "error": "Error: Yarn version disagrees with resolution: js-tokens@npm:4.0.0"
+    },
+    {
+      "id": "collection:23f7099e7b9586969fa05be1a1878990afa690b4e0217b6ecc7047df4c94d6db",
+      "request": {
+        "toolId": "daedalus",
+        "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+        "adapter": "yarn-lock",
+        "roots": [
+          "daedalus"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T15:04:14.293Z",
+      "profileId": "profile:daedalus:5c78926765a31fcbb8b185d0",
+      "succeededAt": "2026-10-18T15:04:26.796Z"
+    },
+    {
+      "id": "collection:a9f0eaf09e865281e1f106f336436e4f76199ade829ed745be07af74ae0e22a2",
+      "request": {
+        "toolId": "typhonjs",
+        "revision": "7190c3c67e9dc7be284842e89f06ed848b748ed2",
+        "adapter": "yarn-lock",
+        "roots": [
+          "@stricahq/typhonjs"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 2,
+      "attemptedAt": "2026-10-18T15:01:46.561Z",
+      "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
+      "succeededAt": "2026-10-18T15:01:50.708Z"
+    },
+    {
+      "id": "collection:c0ebd5376f9510c389a8723b2bff639c59aab799aa7d3e17a49a44db6bacd76a",
+      "request": {
+        "toolId": "cometa-js",
+        "revision": "15f0862128fd49fa3eecd4f4e2a118e60c865cde",
+        "adapter": "yarn-lock",
+        "roots": [
+          "@biglup/cometa"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T15:04:26.797Z",
+      "profileId": "profile:cometa-js:966dc9baa6f8b89c653713f9",
+      "succeededAt": "2026-10-18T15:04:33.461Z"
+    },
+    {
+      "id": "collection:455621ab71c730a78ac9a77480c8d6cdbfe9cf4c84d78d87c2984e2023fb7e38",
+      "request": {
+        "toolId": "cardano-web3-js",
+        "revision": "21aa0802533f9052b6d4bcbdc934acbbd482a006",
+        "adapter": "yarn-lock",
+        "roots": [
+          "cardano-web3-js"
+        ],
+        "platform": "all-lockfile-targets"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T15:04:33.461Z",
+      "profileId": "profile:cardano-web3-js:67b96263c3a27a4941fdaa0f",
+      "succeededAt": "2026-10-18T15:04:39.429Z"
     }
   ]
 }
