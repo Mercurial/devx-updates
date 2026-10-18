@@ -189,3 +189,26 @@ review via [the handoff](./capability-reviews.md). This is Lucid Evolution,
 not original Lucid, which the owner excluded from active readiness work.
 No consumer reviews are launched automatically and no capability/compatibility
 claims are imported by preparation.
+
+## Payment service and application batch
+
+`payment-app-batch.json` selects two higher-level production workflows from
+pinned public sources. Both use pnpm project lock graphs; no consumer install,
+build, plugin or deployment was executed.
+
+| Consumer | Selected roots | Source/configuration boundary |
+| --- | --- | --- |
+| Masumi | `masumi-payment-service`, `admin-frontend` (both manifest 0.1.0) | Pinned default branch, not a stable release. Backend and frontend build separately. Seven importers retain distinct Mesh versions, peer selections, overrides and two patches. Hydra-host images, Aiken contract builds, generated clients, native/WASM artifacts and deployed services need separate evidence. |
+| Sokosumi | `web` (0.1.0), `@sokosumi/core` (version unknown) | Repository tag `macos-v1.1.1` does not establish web/Core release identity. Thirteen project importers are retained, but Apple, CMO and CLI applications are not selected roots. The pnpm 12.11.2 environment document is retained separately with a toolchain gap; its packages do not enter application exposure. |
+
+Masumi's two manifest/lock specifier differences match declared overrides;
+eleven additional payment-core lock dependencies match manifest peers. Sokosumi's
+project dependency declarations match its manifests. These checks do not verify
+installed peer activation, patch application or built distribution provenance.
+Source and configuration evidence makes the remaining boundaries reviewable.
+
+Sokosumi's payment/registry clients use configured URLs and a network. No verified
+service edge to the collected Masumi revision is inferred. Masumi's lock includes
+`lucid-cardano`; retain that dependency as consumer evidence while original Lucid
+remains excluded from standalone work. Neither new tool has a prepared capability
+review packet yet. The existing five owner-run packets remain pending and unchanged.

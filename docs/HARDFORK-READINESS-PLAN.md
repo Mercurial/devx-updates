@@ -577,6 +577,79 @@ collector remain excluded. Hardfork compatibility still needs a selected target
 and test environment.
 
 
+### Active continuation: payment service and application coverage
+
+Under ADR-1/ADR-2, inspect Masumi's payment service and Sokosumi's application
+as the next higher-level workflow batch. Select production roots from their
+pinned source, keeping contract builds, external services and deployment identity
+explicit. Original Lucid remains excluded. Existing owner-run review packets
+remain pending; this collection work does not launch their reviews.
+
+- [x] Inspect pinned manifests, lock inputs and production wiring; record root
+  selection and release caveats in a bounded collection request.
+- [x] Collect the selected profiles and retain supporting source and explicit
+  unresolved integration boundaries.
+- [x] Validate/replay, verify cache reuse, regenerate reports and comparison,
+  review and verify the static export, then commit locally.
+
+Collection checkpoint: both requests in `content/readiness/payment-app-batch.json`
+succeeded. Masumi selects backend and admin frontend manifests 0.1.0 on pinned
+default-branch source; Sokosumi selects web 0.1.0 and an unversioned Core API at
+the `macos-v1.1.1` repository tag. Neither source establishes a deployed release.
+Coverage is now 35 tools with 39 historical profiles and 1,023 evidence objects.
+The two graphs add 3,620 occurrences and 8,835 edges. Scope evidence retains 26
+Masumi and 20 Sokosumi source/configuration files, with explicit contract,
+container, native/WASM, generated-client and deployed-service boundaries.
+
+Collector checkpoint: pnpm's optional environment document is retained separately
+from the project graph; its configuration/package-manager closure remains an
+explicit toolchain frontier. Hash-only patch records resolve their files through
+workspace configuration. Unknown layouts fail rather than producing an empty
+application graph. Single-document identities remain unchanged. Masumi's actual
+`lucid-cardano` dependency remains evidence, while original Lucid is excluded
+from standalone work. No verified Sokosumi-to-Masumi service edge is inferred.
+
+Verification checkpoint: all 75 tests pass with zero skips, TypeScript and scoped
+lint pass, 1,023 evidence objects validate, and all 39 profiles replay identically.
+Masumi, Sokosumi and Lucid Evolution reuse cached native profiles. The existing
+five owner-run capability packets remain pending; this milestone imports no
+capability claims or hardfork assessments.
+
+Review and comparison checkpoint: independent standards and specification reviews
+found no actionable issues. All 46 scope files match their pinned source bytes,
+all three patch files are retained, and Sokosumi's 15 environment snapshots stay
+outside its application graph. Comparison against `d56e202` adds 1,310 artifacts,
+8,835 edges and two profiles, with zero removed or changed historical graph
+records and no capability changes. Only the two selected coverage records change.
+All five prepared packet IDs remain current and pending. Sixteen untracked
+intermediate chunk files are preserved in ignored recovery storage.
+
+Storage checkpoint: the first static build compiled and generated all 311 pages
+but exhausted disk space while copying the export. The incomplete export was
+removed; clean reproducible source checkouts were cleared, and 284 ignored
+recovery files were losslessly gzip-compressed after byte-for-byte verification.
+The recovery archive index records original paths and SHA-256 hashes. Canonical
+evidence/history, prepared packets and `.next/dev` remain intact. Only the static
+build needed retrying; passed tests, replay and reviews remained valid.
+
+Completion checkpoint: the production webpack build retry passes for all 311
+routes at `/devx-updates`. Generated Masumi and Sokosumi pages show the current
+snapshot digest, exact selected roots (including unknown Core version), scope
+gaps and unassessed status. The completed compiler cache was cleared before
+export to leave disk headroom; afterward disposable production output was
+cleared while preserving the verified `out/` and `.next/dev`. No UI behavior
+changed, so browser interactions were not re-tested; default Turbopack was not
+revalidated. The verified implementation and evidence are committed locally;
+nothing was pushed.
+
+Next: prepare workflow-specific source packets for the collected payment
+application roots, preserving the distinction between Sokosumi's configured
+clients and an identified Masumi deployment. The owner can run the existing five
+reviews independently using [Run the prepared reviews](./RUN-PREPARED-REVIEWS.md).
+SundaeSwap still needs aligned upstream lock inputs. Original Lucid remains
+excluded from standalone work, and target-specific compatibility needs a selected
+hardfork environment.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

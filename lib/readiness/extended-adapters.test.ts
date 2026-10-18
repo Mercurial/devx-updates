@@ -2,10 +2,72 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { resolveNative } from "./adapters";
 import { parseJsonStream } from "./go";
+import { parsePnpmLock, pnpmPatchPaths } from "./pnpm";
 import type { NativeInput, Resolution } from "./types";
 
 const profile: NativeInput = { toolId: "tool", release: "v1", revision: "a".repeat(40), platform: "linux/amd64", features: [], command: "native resolver", toolchain: "test", origin: "source-reconstruction", adapter: "pnpm-lock", rootNames: ["app"] };
 const evidence = { native: "output", configuration: "config" };
+// Minimal form of pnpm's documented environment + project lock layout.
+const environmentDocument = `lockfileVersion: '9.0'
+importers:
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm: {specifier: 12.11.2, version: 12.11.2}
+packages:
+  pnpm@12.11.2: {}
+snapshots:
+  pnpm@12.11.2: {}
+`;
+const projectDocument = `lockfileVersion: '9.0'
+importers:
+  .:
+    dependencies:
+      library: {specifier: ^1, version: 1.0.0}
+packages:
+  library@1.0.0: {}
+snapshots:
+  library@1.0.0: {}
+`;
+
+test("pnpm two-document collection preserves the environment without treating it as application exposure", () => {
+  const source = `---\n${environmentDocument}---\n${projectDocument}`;
+  for (const input of [source, source.replaceAll("\n", "\r\n")]) {
+    const parsed = parsePnpmLock(input);
+    assert.deepEqual(parsed.environmentLock?.snapshots, { "pnpm@12.11.2": {} });
+    const result = resolveNative({ ...parsed, manifests: { ".": { name: "app" } } }, profile, evidence);
+    assert.deepEqual(result.artifacts.map((a) => a.name).sort(), ["app", "library"]);
+    assert.deepEqual(targets(result, "workspace:.").map((e) => e.target), ["snapshot:library@1.0.0"]);
+    assert.ok(result.gaps.some((g) => g.reason.includes("environment document")));
+  }
+});
+
+test("pnpm rejects ambiguous, reversed and unsupported lock documents", () => {
+  for (const source of ["", environmentDocument, `${projectDocument}---\n${environmentDocument}`,
+    `${projectDocument}---\n${projectDocument}`, `${environmentDocument}---\n${projectDocument}---\n${projectDocument}`,
+    `${environmentDocument.replace("'9.0'", "'10.0'")}---\n${projectDocument}`,
+    `${environmentDocument.replace('configDependencies: {}', 'dependencies: {}')}---\n${projectDocument}`]) {
+    assert.throws(() => parsePnpmLock(source));
+  }
+});
+
+test("pnpm single-document captures preserve the historical raw shape and graph", () => {
+  const parsed = parsePnpmLock(projectDocument);
+  assert.deepEqual(Object.keys(parsed), ["lock"]);
+  const manifests = { ".": { name: "app" } };
+  const before = resolveNative({ lock: parsed.lock, manifests }, profile, evidence);
+  const after = resolveNative({ ...parsed, manifests }, profile, evidence);
+  assert.deepEqual(after, before);
+});
+
+test("pnpm retains patch files for object and hash-only lock entries", () => {
+  assert.deepEqual(pnpmPatchPaths({ patchedDependencies: { "lib@1": { hash: "abc", path: "patches/lib.patch" } } }, {}), ["patches/lib.patch"]);
+  const lock = { patchedDependencies: { "lib@1": "abc" } };
+  assert.deepEqual(pnpmPatchPaths(lock, { patchedDependencies: { "lib@1": "patches/lib.patch" } }), ["patches/lib.patch"]);
+  assert.throws(() => pnpmPatchPaths(lock, {}), /patch configuration/);
+  assert.throws(() => pnpmPatchPaths({ patchedDependencies: { "lib@1": { hash: "abc" } } }, {}), /patch path/);
+});
+
 function targets(result: Resolution, locator: string) {
   const node = result.occurrences.find((n) => n.locator === locator)!;
   return result.edges.filter((e) => e.from === node.id).map((e) => ({ ...e, target: result.occurrences.find((n) => n.id === e.to)!.locator }));

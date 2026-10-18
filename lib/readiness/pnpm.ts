@@ -1,7 +1,41 @@
 import { posix } from "node:path";
+import { loadAll, JSON_SCHEMA } from "js-yaml";
 import { canonical, object, text } from "./core";
 import type { AdapterContext } from "./adapter-context";
 import type { Scope } from "./types";
+
+/** pnpm writes an optional environment document before the project lock. */
+export function parsePnpmLock(source: string): { lock: Record<string, unknown>; environmentLock?: Record<string, unknown> } {
+  const documents = loadAll(source, null, { schema: JSON_SCHEMA }).map((document) => object(document, "pnpm lock document"));
+  if (documents.length !== 1 && documents.length !== 2) throw new Error("Expected one project lock document or environment and project documents");
+  for (const document of documents) {
+    if (String(document.lockfileVersion) !== "9.0") throw new Error("Only pnpm lockfile version 9.0 is supported");
+    object(document.importers, "pnpm importers");
+  }
+  const lock = documents[documents.length - 1];
+  for (const importer of Object.values(object(lock.importers))) {
+    const entry = object(importer);
+    if ("configDependencies" in entry || "packageManagerDependencies" in entry) throw new Error("Expected the project lock as the last pnpm document");
+  }
+  if (documents.length === 1) return { lock };
+  const environmentLock = documents[0];
+  const importers = object(environmentLock.importers);
+  if (Object.keys(importers).length !== 1 || !("." in importers)) throw new Error("Expected one root importer in the pnpm environment document");
+  const environment = object(importers["."]);
+  if (!("configDependencies" in environment || "packageManagerDependencies" in environment)
+      || Object.keys(environment).some((key) => !["configDependencies", "packageManagerDependencies"].includes(key))) {
+    throw new Error("Expected only configuration and package-manager dependencies in the pnpm environment document");
+  }
+  return { lock, environmentLock };
+}
+
+export function pnpmPatchPaths(lock: Record<string, unknown>, workspace: Record<string, unknown>): string[] {
+  return Object.entries(object(lock.patchedDependencies ?? {})).map(([name, patch]) => {
+    const configured = typeof patch === "string" ? object(workspace.patchedDependencies ?? {})[name] : patch;
+    const path = typeof configured === "string" ? configured : object(configured, `pnpm patch configuration for ${name}`).path;
+    return text(path, `pnpm patch path for ${name}`);
+  });
+}
 
 function packageIdentity(key: string) {
   const split = key.indexOf("@", key.startsWith("@") ? 1 : 0);
@@ -11,6 +45,10 @@ function packageIdentity(key: string) {
 }
 
 export function resolvePnpm(data: Record<string, unknown>, ctx: AdapterContext) {
+  if (data.environmentLock !== undefined) {
+    object(data.environmentLock, "pnpm environment lock");
+    ctx.gap("pnpm environment document is retained separately: configuration and package-manager dependencies are not part of this project graph. Their build/toolchain closure and executed plugin behavior remain unverified.");
+  }
   const lock = object(data.lock, "pnpm lock");
   if (String(lock.lockfileVersion) !== "9.0") throw new Error("Only pnpm lockfile version 9.0 is supported");
   const importers = object(lock.importers, "pnpm importers");

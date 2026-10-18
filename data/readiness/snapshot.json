@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "ee5d740cd912f1bbc7a6f6af9df6c2b3b833cff36f4e66e42dea04e8d7f8dcd1",
-    "generatedAt": "2026-10-18T17:43:38.604Z",
+    "semanticDigest": "87b1947c7dc8a348b5bfc12c5501f2645aefaeddcf646cf705ab63eea308499d",
+    "generatedAt": "2026-10-18T18:12:01.085Z",
     "tools": [
       {
         "id": "1694-io",
@@ -15879,7 +15879,7 @@
           "other"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -15914,8 +15914,42 @@
           "smart-contracts/registry/package.json"
         ],
         "evidenceIds": [
+          "evidence:060de79451bdfa160697528793fc6f2e36863d18b074bc1f40ef4407121c3682",
+          "evidence:0e0557a0bd96b1d1690c58cd9e1a8d90fe68ab0e42019d7c1c2567146297b560",
+          "evidence:1139e48f508969c621ceb04da21505411f0bf6fcc5725352c276f59a1f918beb",
+          "evidence:16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f",
+          "evidence:1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a",
+          "evidence:18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c",
+          "evidence:24b22367957595b3710f0c0d69d930668c677b5ec02b8e55fb61b0b2ddf4140d",
+          "evidence:2623b062722ea1769d8eaab70e559b2a050af2edb744d3d306befb3a593efe73",
+          "evidence:32a06558d6d4f7c1fa95a65dc086f4f149e2f0c4880226bf300c6ab51d473709",
+          "evidence:3d426d698c1d7e9bd27b0c5a59d7ff1f99e1afce0c25fbeeda2e142c657d8071",
+          "evidence:4079c6dddaece539317b1711bd9ebdd4e16baf5f1c4ab20abb3108f79e91f31f",
+          "evidence:46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a",
+          "evidence:4cf764e789a0abc3484fd6785b4f47d55604650774043dd8d65f5ec2dc612425",
+          "evidence:4dfafe8be162d130ae42b13fb3a8f991f36500c75aa0a5e1f253d12174ac172e",
+          "evidence:6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
           "evidence:6fc83e11447c69c2676e680f0ff2a14922b3fef01001a0794220cd09330b00bd",
-          "evidence:c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55"
+          "evidence:73130a6512033f1c9161e73cc658b1e9e52f44fffcf8560db58d70564c86ff64",
+          "evidence:73e74ea32b9ddc651817570008e32b34d7e0d9b0924a236504747de94680d168",
+          "evidence:74955f82309ce0b8890c264605f6813573b34cfc0aa7469f5ac45872624c7020",
+          "evidence:7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2",
+          "evidence:851ba7c47290ec3f332aab9e15bd8285a9638c03d3a1f8e7c976895ccc00a3d4",
+          "evidence:969b69cbd9ffbed7c570c3c84169d14f1b0d64a0e7409358981672095a1bc609",
+          "evidence:aeb8b2cfb11f1cd592a50f2944c8ccef79acb171127703ccd690f033e9fc14e1",
+          "evidence:b6407406afb6525ccc25ecdede4eef6fc96060f5a643e4e2785280e8e47a1348",
+          "evidence:bf00298631ac6fd05fdd97cccbb27aa153669db6c9477cc0067fdfee8ad5f675",
+          "evidence:c242e03dec7864970db6e014e1b198a88c0e7de142c7161e7687eef89f824156",
+          "evidence:c5d73acad7ab964309993247d45687a6224bc5ed1e77d85edcbd323c7db36d55",
+          "evidence:cdb171eeed1e0d2706f3fd483324e65d199f8c3f984bc7d60b8dce1d6e7bee07",
+          "evidence:d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686",
+          "evidence:d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294",
+          "evidence:d3b59a7e7200a7d3fb7df4b8b2a7a8747086811f863719b88086e8029d9b998b",
+          "evidence:d88186b3f995e8065a68ad1777bbc21b88ca6756752993bccc693321cc96c72a",
+          "evidence:dfbabbc7a5e7003a86eb4fea33f1584802882dcb91dc1add59fa1a39cf3d1ce1",
+          "evidence:eaac7f58b0f18fa285bd54de71a3b8b1ac43981beb36f6b1251fb87faadb32b2",
+          "evidence:f2924ec3dea7e9ce5f6d53ac3babbe29fbcc2ad87d626d5afcbb6fe0c92020c0",
+          "evidence:f3bd57a2d2b7b1e1bc443106508b22ceea708743caa03fd0e2a1d2f17fc083a0"
         ],
         "gaps": [
           {
@@ -15933,17 +15967,55 @@
             "code": "integration-unreviewed"
           },
           {
+            "id": "gap:35c4b17479fddb0172e99a18",
+            "area": "artifact",
+            "reason": "Selected masumi-payment-service and admin-frontend manifests are 0.1.0 on pinned default-branch source, not a verified stable distribution. Backend and admin frontend have separate build steps. The source declares pnpm 10.30.2; its Dockerfile installs unpinned pnpm and Node image tags.",
+            "nextAction": "Verify deployed service/frontend and container provenance against this source revision.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+            "code": "payment-app-scope:masumi:artifact"
+          },
+          {
             "id": "gap:4abbaad672af9beef40f0088",
             "area": "artifact",
             "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:4d4585cb24476be092dda79a",
+            "area": "integration",
+            "reason": "Payment-source V1/V2 dispatch and Hydra client/configuration source are retained for later review. Active payment source, contract identifiers, Blockfrost/network, Hydra and database deployments remain unverified. A lucid-cardano dependency is retained as consumer evidence; original Lucid remains excluded from standalone readiness work. No capability or service-version relationship is asserted.",
+            "nextAction": "Prepare production workflow review with explicit payment-source and deployment configuration; do not infer deployed services from package names.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+            "code": "payment-app-scope:masumi:integration"
+          },
+          {
+            "id": "gap:524adf54a56ca9dd8585cfa5",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Local or patched artifact http-cache-semantics@4.3.0(patch_hash=31ee930f09fb2810d6093b14bf15373eb06d0a4ea391a2fed254a3dd8b7b9549) needs source-content verification beyond the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
+          },
+          {
+            "id": "gap:72bc80d9f44269ccf1bc0438",
+            "area": "resolution",
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
+          },
+          {
+            "id": "gap:7ee91a109775505d3bc92c87",
+            "area": "resolution",
+            "reason": "All seven pnpm importers were checked: two manifest/lock specifier differences match recorded overrides (@opentelemetry/core and postcss); eleven payment-core lock dependencies match declared peers. Lock-resolved peer selections do not establish installed activation. Two patch files are retained but patched distribution bytes are unverified. Separate Hydra-host images, Aiken payment/registry contract builds, native/WASM outputs and generated Prisma clients are outside the selected backend/admin build closure.",
+            "nextAction": "Capture selected deployment build outputs, contract/compiler inputs and native/container provenance; retain distinct Mesh SDK versions rather than merging their resolution contexts.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+            "code": "payment-app-scope:masumi:resolution"
+          },
+          {
+            "id": "gap:80bb91a1f4bf7d5925088cca",
+            "area": "resolution",
+            "reason": "Local or patched artifact @sundaeswap/core@1.3.47(patch_hash=026cf12da9e53a1c16faf4e98d8359e0d5d34c3532b1cc212f263d7c191e446f)(@blaze-cardano/sdk@0.2.48(rxjs@7.8.2))(@sundaeswap/asset@1.0.11)(@sundaeswap/bigint-math@0.6.3)(@sundaeswap/cpp@1.0.13(@sundaeswap/asset@1.0.11)(@sundaeswap/bigint-math@0.6.3)(@sundaeswap/fraction@1.0.8))(@sundaeswap/fraction@1.0.8)(lucid-cardano@0.10.7) needs source-content verification beyond the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:48.549Z",
@@ -20722,7 +20794,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -20745,8 +20817,39 @@
           "pnpm-lock.yaml"
         ],
         "evidenceIds": [
+          "evidence:09a03d91c83443184aa2446d9332dacf37f892827c3433ee69dfa0ec8550c557",
+          "evidence:0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39",
+          "evidence:0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e",
+          "evidence:0df05253c1532e72099cfbce8e6ff2dc935ce04b18983baef18cdff45014e65e",
+          "evidence:18aabdde121d6842726220c86a81428e9e7cbb5b950a0e6de42b49e0af1314ea",
           "evidence:2a3d61842ee28d44910dba47c1c315c9cec468af9824d9b2d1902a64147ba037",
-          "evidence:7db5225ce3ed42ba207964352681df09c92df52b2a03aa13c9a19560db932d99"
+          "evidence:346074f0700444a00a94d76ee893fbc5b6c03507d3eaa1cd5d6df11287d11579",
+          "evidence:3c528515d2f48c395023c2ca9c87d9fce4ed2c926a4321014b43c17a6c7f0646",
+          "evidence:42704b9800fdbbaca83a1827b63be233ca623585fddec7a7834473b1692f4eb0",
+          "evidence:4456ec87afd5efce83f5bd948a311fbd24ed1361350ca2a6dec729a5c156d27e",
+          "evidence:49dbc8c09bd31ebeb6a8fa80b0c91f0a33c9a20fc3c9e97e3829ba8df8cc11dd",
+          "evidence:52a6d3b4244b39a70ea514010b04030c3ec8223de3ba45dbb443f96d7a1b1ae6",
+          "evidence:62985970309d0c52e6674be56a38eb7273bedd0c1eed5209a70f10eb012274a5",
+          "evidence:632669f8c03d0d628ab20ec4a0918debf996f31afc98b3ec8199eaf70f76dfb8",
+          "evidence:687986604c96690f43b42f2635df21983e1d6582533d8ba93ddcf783aaaa644d",
+          "evidence:6c3fbbf7c24c434ea0997a2b2fbd06ebfd84476d5e88da07fab4d4945bc17a8b",
+          "evidence:77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328",
+          "evidence:7a126acfd54ed0d438b97da1602421489e0021c0fb5d010532355cce877a3859",
+          "evidence:7db5225ce3ed42ba207964352681df09c92df52b2a03aa13c9a19560db932d99",
+          "evidence:91eeb4116ba1abf326c91c1ed2cd88c2347c2a6639db9d5bd4133c0455164161",
+          "evidence:958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591",
+          "evidence:afab4d1be3458b769035035f232e18720fa61e72e0d2eba91fe46d0b19555c3a",
+          "evidence:b7093e1e7135bc9b1aeb618911d59a1eadb8ab6cea6b797e8f195274605bb454",
+          "evidence:b82cfd6b309703f2d1427174943e35064ff360e41667a853140576fd5cc94de0",
+          "evidence:bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
+          "evidence:bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0",
+          "evidence:cbff068d64af23d35c47e4f83edfd6d6c0a144ae6572fd9eaeac73db389d40a3",
+          "evidence:d02866c522ee5bdb0360358e035bc28eee160c11b5c32b4d39d0df19815ff3d2",
+          "evidence:d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7",
+          "evidence:d9fadf400879f3001b1f487a5d8a521dd2605931e31247d5d500c24659df87bc",
+          "evidence:dd1d433c8381fa67357515a89e19bf3737bff3b04fee4536bf959f08e8d0f1d6",
+          "evidence:e5e43ddd4a428ef336b4e44fb423a147c9e1f17834d3df3906c57a5367fe0221",
+          "evidence:ebd1a1e87c686ee7e16a72dcb7fadbbfeead2401b67d9ba388d2a57808dbc955"
         ],
         "gaps": [
           {
@@ -20764,17 +20867,69 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:50c6727755e3e3707fc6d1b9",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Local or patched artifact @testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.2)(vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0))) needs source-content verification beyond the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+          },
+          {
+            "id": "gap:52f439e49b96ec351b5a5e57",
+            "area": "resolution",
+            "reason": "pnpm environment document is retained separately: configuration and package-manager dependencies are not part of this project graph. Their build/toolchain closure and executed plugin behavior remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+          },
+          {
+            "id": "gap:87bbaedb570bb1ac6b7321bb",
+            "area": "artifact",
+            "reason": "Selected roots are web (manifest 0.1.0) and @sokosumi/core (no manifest version) at repository tag macos-v1.1.1. That Apple release tag does not establish web/Core deployment versions; the CLI manifest is separately 1.0.4. Native Apple, CMO and CLI applications are not selected roots.",
+            "nextAction": "Identify deployed web/Core artifacts and source correspondence separately from the macOS release tag; preserve unknown Core version.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+            "code": "payment-app-scope:sokosumi:artifact"
+          },
+          {
+            "id": "gap:94a4212f1be1b6cad05df071",
+            "area": "resolution",
+            "reason": "Local or patched artifact vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0)) needs source-content verification beyond the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:d01c88adcdd23d8593c4beb6",
+            "area": "resolution",
+            "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+          },
+          {
+            "id": "gap:d896e86c68bb813b16141c68",
+            "area": "integration",
+            "reason": "Retained web/Core clients configure Core, payment and registry URLs and network at runtime. Their presence does not identify the deployed Masumi service revision or establish a verified relationship to the separately collected Masumi profile. Database, agent services, authentication and other hosted dependencies remain unreviewed; no capability findings are imported.",
+            "nextAction": "Capture production endpoint/network configuration and review workflow wiring before accepting service identity or capability findings.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+            "code": "payment-app-scope:sokosumi:integration"
+          },
+          {
+            "id": "gap:da35beffbd3f1d78d1a1ee96",
+            "area": "resolution",
+            "reason": "The pnpm 12.11.2 lock has environment and project documents. All thirteen project importer dependency declarations match their manifests. Environment packages and the full source lock are retained; their build/toolchain closure is an explicit frontier. The configured Vitest patch is retained, while patched/installed bytes, generated Prisma clients and platform-specific native outputs remain unverified.",
+            "nextAction": "Verify the selected installed platform and build outputs; investigate environment/config dependencies separately from application exposure.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+            "code": "payment-app-scope:sokosumi:resolution"
+          },
+          {
+            "id": "gap:ebd7644842e0313262277abb",
+            "area": "resolution",
+            "reason": "Local or patched artifact better-auth@1.7.9(@opentelemetry/api@1.9.1)(@prisma/client@7.10.0(prisma@7.10.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(typescript@7.0.2))(mysql2@3.15.3)(next@16.4.1(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(pg@8.23.1)(prisma@7.10.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0)))(vue@3.5.41(typescript@7.0.2)) needs source-content verification beyond the lockfile.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:sokosumi:378b837174d64744243e8d78"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:49.989Z",
@@ -25245,6 +25400,44 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:masumi:83e7be70bb0367a0e8f57796",
+        "toolId": "masumi",
+        "release": "unreleased:main",
+        "revision": "8db9e6122bfd4303bb6e2b5740392f84a4b41ab8",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed pnpm-lock.yaml and importer manifests at 8db9e6122bfd4303bb6e2b5740392f84a4b41ab8",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:0426076fe8ca968e0e7145754810b846c3708f6a90ac47fc6215df2a02568e22",
+          "occurrence:5e674f794f5168b1b1fe281fc006cdb2e3d93dd3c545aebba067bf116db91128"
+        ],
+        "inputDigest": "83e7be70bb0367a0e8f57796de1a0a4549248529657c569c051991131e1bb3c1",
+        "evidenceIds": [
+          "evidence:060de79451bdfa160697528793fc6f2e36863d18b074bc1f40ef4407121c3682",
+          "evidence:16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f",
+          "evidence:1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a",
+          "evidence:18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c",
+          "evidence:4dfafe8be162d130ae42b13fb3a8f991f36500c75aa0a5e1f253d12174ac172e",
+          "evidence:6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
+          "evidence:74955f82309ce0b8890c264605f6813573b34cfc0aa7469f5ac45872624c7020",
+          "evidence:7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2",
+          "evidence:969b69cbd9ffbed7c570c3c84169d14f1b0d64a0e7409358981672095a1bc609",
+          "evidence:cdb171eeed1e0d2706f3fd483324e65d199f8c3f984bc7d60b8dce1d6e7bee07",
+          "evidence:d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686",
+          "evidence:d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294",
+          "evidence:d88186b3f995e8065a68ad1777bbc21b88ca6756752993bccc693321cc96c72a",
+          "evidence:dfbabbc7a5e7003a86eb4fea33f1584802882dcb91dc1add59fa1a39cf3d1ce1"
+        ],
+        "nativeEvidenceId": "evidence:16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f",
+        "configurationEvidenceId": "evidence:d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294",
+        "coverage": "partial"
+      },
+      {
         "id": "profile:meshjs-mesh-sdk:e2069b2725d8fa208f4cbc63",
         "toolId": "meshjs-mesh-sdk",
         "release": "1.9.0",
@@ -25450,6 +25643,48 @@
         ],
         "nativeEvidenceId": "evidence:2e0bc5012aa7df0929adee982a9a47f6193eebcd4fec092d9b23dd3a28bfee48",
         "configurationEvidenceId": "evidence:1d7dd1bfe434c3bf586ca36321915f7575deeee8738400f8d26449e864a9d0f1",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:sokosumi:378b837174d64744243e8d78",
+        "toolId": "sokosumi",
+        "release": "macos-v1.1.1",
+        "revision": "0f908764db652adfb76348222235a809ed8797bb",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "workspace-peer-contexts"
+        ],
+        "command": "Read committed pnpm-lock.yaml and importer manifests at 0f908764db652adfb76348222235a809ed8797bb",
+        "toolchain": "pnpm lockfile format 9.0; producing pnpm version recorded in source manifests when available",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:a53f18dbe41ef55711c77254629f8f5ee2f8e4a983c0a2552252f0ea38c57b82",
+          "occurrence:2feaabd28ba3662447d54a67fc4ce332a1f967881a7bcb1da0c91ecc3acbaaeb"
+        ],
+        "inputDigest": "378b837174d64744243e8d78bed3d12ed94fff3139ee2c4499ddf588f4e25159",
+        "evidenceIds": [
+          "evidence:0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39",
+          "evidence:0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e",
+          "evidence:18aabdde121d6842726220c86a81428e9e7cbb5b950a0e6de42b49e0af1314ea",
+          "evidence:346074f0700444a00a94d76ee893fbc5b6c03507d3eaa1cd5d6df11287d11579",
+          "evidence:42704b9800fdbbaca83a1827b63be233ca623585fddec7a7834473b1692f4eb0",
+          "evidence:4456ec87afd5efce83f5bd948a311fbd24ed1361350ca2a6dec729a5c156d27e",
+          "evidence:52a6d3b4244b39a70ea514010b04030c3ec8223de3ba45dbb443f96d7a1b1ae6",
+          "evidence:687986604c96690f43b42f2635df21983e1d6582533d8ba93ddcf783aaaa644d",
+          "evidence:6c3fbbf7c24c434ea0997a2b2fbd06ebfd84476d5e88da07fab4d4945bc17a8b",
+          "evidence:77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328",
+          "evidence:7a126acfd54ed0d438b97da1602421489e0021c0fb5d010532355cce877a3859",
+          "evidence:91eeb4116ba1abf326c91c1ed2cd88c2347c2a6639db9d5bd4133c0455164161",
+          "evidence:958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591",
+          "evidence:bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
+          "evidence:bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0",
+          "evidence:d02866c522ee5bdb0360358e035bc28eee160c11b5c32b4d39d0df19815ff3d2",
+          "evidence:d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7",
+          "evidence:e5e43ddd4a428ef336b4e44fb423a147c9e1f17834d3df3906c57a5367fe0221"
+        ],
+        "nativeEvidenceId": "evidence:958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591",
+        "configurationEvidenceId": "evidence:bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0",
         "coverage": "partial"
       },
       {
@@ -25826,6 +26061,13 @@
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2"
       },
       {
+        "id": "evidence:060de79451bdfa160697528793fc6f2e36863d18b074bc1f40ef4407121c3682",
+        "digest": "060de79451bdfa160697528793fc6f2e36863d18b074bc1f40ef4407121c3682",
+        "path": "evidence/060de79451bdfa160697528793fc6f2e36863d18b074bc1f40ef4407121c3682.json.gz",
+        "description": "Native input masumi/packages/payment-core/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-core/package.json"
+      },
+      {
         "id": "evidence:062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54",
         "digest": "062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54",
         "path": "evidence/062ba8f4a842b9edc5a7a2a05f283b7831096246e010b49ac1185cbb63824a54.json.gz",
@@ -25917,6 +26159,20 @@
         "sourceUrl": "https://github.com/sidan-lab/vodka/tree/1b5f32c1227b18c7580260e4a0c313b05d32db05"
       },
       {
+        "id": "evidence:09a03d91c83443184aa2446d9332dacf37f892827c3433ee69dfa0ec8550c557",
+        "digest": "09a03d91c83443184aa2446d9332dacf37f892827c3433ee69dfa0ec8550c557",
+        "path": "evidence/09a03d91c83443184aa2446d9332dacf37f892827c3433ee69dfa0ec8550c557.json.gz",
+        "description": "Native input sokosumi/apps/web/src/config/env.secrets.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/web/src/config/env.secrets.ts"
+      },
+      {
+        "id": "evidence:0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39",
+        "digest": "0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39",
+        "path": "evidence/0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39.json.gz",
+        "description": "Native input sokosumi/packages/ai-provider/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/ai-provider/package.json"
+      },
+      {
         "id": "evidence:0afeafccee93ef5c728e9b1ec41f6cbd12dd91ed944394fd555abd21167d9e9d",
         "digest": "0afeafccee93ef5c728e9b1ec41f6cbd12dd91ed944394fd555abd21167d9e9d",
         "path": "evidence/0afeafccee93ef5c728e9b1ec41f6cbd12dd91ed944394fd555abd21167d9e9d.json.gz",
@@ -25952,6 +26208,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/tx-construction/package.json"
       },
       {
+        "id": "evidence:0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e",
+        "digest": "0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e",
+        "path": "evidence/0c2a3f726fd2b481e8adada9bc0171607aeff2f5aa7ff51b6a40163e14a0791e.json.gz",
+        "description": "Native input sokosumi/packages/soko-bot/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/soko-bot/package.json"
+      },
+      {
         "id": "evidence:0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b",
         "digest": "0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b",
         "path": "evidence/0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b.json.gz",
@@ -25971,6 +26234,20 @@
         "path": "evidence/0dc0fcdbd385d1b8adffe27f2c251a13e23edf0e43054420845a959317c77b2d.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-core/releases/tag/wallet-cordova-0.8.6"
+      },
+      {
+        "id": "evidence:0df05253c1532e72099cfbce8e6ff2dc935ce04b18983baef18cdff45014e65e",
+        "digest": "0df05253c1532e72099cfbce8e6ff2dc935ce04b18983baef18cdff45014e65e",
+        "path": "evidence/0df05253c1532e72099cfbce8e6ff2dc935ce04b18983baef18cdff45014e65e.json.gz",
+        "description": "Native input sokosumi/apps/core/src/clients/masumi-registry.client.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/src/clients/masumi-registry.client.ts"
+      },
+      {
+        "id": "evidence:0e0557a0bd96b1d1690c58cd9e1a8d90fe68ab0e42019d7c1c2567146297b560",
+        "digest": "0e0557a0bd96b1d1690c58cd9e1a8d90fe68ab0e42019d7c1c2567146297b560",
+        "path": "evidence/0e0557a0bd96b1d1690c58cd9e1a8d90fe68ab0e42019d7c1c2567146297b560.json.gz",
+        "description": "Native input masumi/packages/payment-core/src/config.ts",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-core/src/config.ts"
       },
       {
         "id": "evidence:0e316824f81c41b5f89e0a17623b12abb6723ba565beb1a73c0517585b7eed65",
@@ -26059,6 +26336,13 @@
         "path": "evidence/112791fa2d6b6a88e2ba35e9865c1919df06fe46490247e745d00e21187817fe.json.gz",
         "description": "Source cardano-js-sdk/packages/governance/README.md",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/governance/README.md"
+      },
+      {
+        "id": "evidence:1139e48f508969c621ceb04da21505411f0bf6fcc5725352c276f59a1f918beb",
+        "digest": "1139e48f508969c621ceb04da21505411f0bf6fcc5725352c276f59a1f918beb",
+        "path": "evidence/1139e48f508969c621ceb04da21505411f0bf6fcc5725352c276f59a1f918beb.json.gz",
+        "description": "Native input masumi/smart-contracts/registry/aiken.toml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/registry/aiken.toml"
       },
       {
         "id": "evidence:115083467ca3ce66383e65fcc8be53d1aa343d8d20a0925cc0ad33eb7fe8542b",
@@ -26218,6 +26502,13 @@
         "description": "Collection request for helios"
       },
       {
+        "id": "evidence:16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f",
+        "digest": "16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f",
+        "path": "evidence/16e9609714a779f315c26604402b58bbc59b800232509d3d413a2f5ddac3667f.json.gz",
+        "description": "pnpm-lock for masumi unreleased:main",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/tree/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8"
+      },
+      {
         "id": "evidence:1760a58e5c678ec8eac63e281146716c8ba6f043cb740a57105db43270efe66c",
         "digest": "1760a58e5c678ec8eac63e281146716c8ba6f043cb740a57105db43270efe66c",
         "path": "evidence/1760a58e5c678ec8eac63e281146716c8ba6f043cb740a57105db43270efe66c.json.gz",
@@ -26237,6 +26528,27 @@
         "path": "evidence/17ab81032533246717621d9df6887e9233d3d51b60c24443d81343ed9836c7aa.json.gz",
         "description": "Native input sundae-sdk/packages/math/package.json",
         "sourceUrl": "https://github.com/SundaeSwap-finance/sundae-sdk/blob/9f032253e0711e3a308068ed55cc85b5de71a348/packages/math/package.json"
+      },
+      {
+        "id": "evidence:1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a",
+        "digest": "1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a",
+        "path": "evidence/1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a.json.gz",
+        "description": "Native input masumi/packages/payment-source-v1/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-source-v1/package.json"
+      },
+      {
+        "id": "evidence:18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c",
+        "digest": "18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c",
+        "path": "evidence/18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c.json.gz",
+        "description": "Native input masumi/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/pnpm-workspace.yaml"
+      },
+      {
+        "id": "evidence:18aabdde121d6842726220c86a81428e9e7cbb5b950a0e6de42b49e0af1314ea",
+        "digest": "18aabdde121d6842726220c86a81428e9e7cbb5b950a0e6de42b49e0af1314ea",
+        "path": "evidence/18aabdde121d6842726220c86a81428e9e7cbb5b950a0e6de42b49e0af1314ea.json.gz",
+        "description": "Native input sokosumi/apps/cli/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/cli/package.json"
       },
       {
         "id": "evidence:196274fe6b9832f73f32d73aa290eafcc14d84f415f3a6eac7e702194b625e75",
@@ -26543,6 +26855,13 @@
         "sourceUrl": "https://github.com/SundaeSwap-finance/Sorbet/tree/9f5d7c05f3ffca26180eae1271229d3e825be19f"
       },
       {
+        "id": "evidence:24b22367957595b3710f0c0d69d930668c677b5ec02b8e55fb61b0b2ddf4140d",
+        "digest": "24b22367957595b3710f0c0d69d930668c677b5ec02b8e55fb61b0b2ddf4140d",
+        "path": "evidence/24b22367957595b3710f0c0d69d930668c677b5ec02b8e55fb61b0b2ddf4140d.json.gz",
+        "description": "Native input masumi/smart-contracts/registry/aiken.lock",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/registry/aiken.lock"
+      },
+      {
         "id": "evidence:24bc43fb2b4a1b1c4ca01d353baf1908c451e57ac44654103e76613f0465e47a",
         "digest": "24bc43fb2b4a1b1c4ca01d353baf1908c451e57ac44654103e76613f0465e47a",
         "path": "evidence/24bc43fb2b4a1b1c4ca01d353baf1908c451e57ac44654103e76613f0465e47a.json.gz",
@@ -26604,6 +26923,13 @@
         "path": "evidence/25fb7237eceded4ab7f61752e208f4673fdd1da1cf74942e4a594c68d6e8d063.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/src/provider-wrapper.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/provider-wrapper.ts"
+      },
+      {
+        "id": "evidence:2623b062722ea1769d8eaab70e559b2a050af2edb744d3d306befb3a593efe73",
+        "digest": "2623b062722ea1769d8eaab70e559b2a050af2edb744d3d306befb3a593efe73",
+        "path": "evidence/2623b062722ea1769d8eaab70e559b2a050af2edb744d3d306befb3a593efe73.json.gz",
+        "description": "Native input masumi/smart-contracts/registry-v2/aiken.lock",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/registry-v2/aiken.lock"
       },
       {
         "id": "evidence:26280aedbdb5ed07805290a46566eebb0aaa1acb679dd723475eb60686f1149b",
@@ -27011,6 +27337,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/typescript-config/package.json"
       },
       {
+        "id": "evidence:32a06558d6d4f7c1fa95a65dc086f4f149e2f0c4880226bf300c6ab51d473709",
+        "digest": "32a06558d6d4f7c1fa95a65dc086f4f149e2f0c4880226bf300c6ab51d473709",
+        "path": "evidence/32a06558d6d4f7c1fa95a65dc086f4f149e2f0c4880226bf300c6ab51d473709.json.gz",
+        "description": "Native input masumi/smart-contracts/payment-v2/aiken.lock",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/payment-v2/aiken.lock"
+      },
+      {
         "id": "evidence:331c0ac99b51a978222f0b5211544bb793a231f6a34142998eca1cbcfb84ce56",
         "digest": "331c0ac99b51a978222f0b5211544bb793a231f6a34142998eca1cbcfb84ce56",
         "path": "evidence/331c0ac99b51a978222f0b5211544bb793a231f6a34142998eca1cbcfb84ce56.json.gz",
@@ -27037,6 +27370,13 @@
         "path": "evidence/33ec465424f1120089c7f136a714d81e7a38d43b931c59fb9e896444e5e690fc.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/src/parse.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/parse.ts"
+      },
+      {
+        "id": "evidence:346074f0700444a00a94d76ee893fbc5b6c03507d3eaa1cd5d6df11287d11579",
+        "digest": "346074f0700444a00a94d76ee893fbc5b6c03507d3eaa1cd5d6df11287d11579",
+        "path": "evidence/346074f0700444a00a94d76ee893fbc5b6c03507d3eaa1cd5d6df11287d11579.json.gz",
+        "description": "Native input sokosumi/packages/core-client/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/core-client/package.json"
       },
       {
         "id": "evidence:347ea033b27a9a52a38d6a14d65fa2b2fb8da6cac4cd7e83293e6f7f8c3f8eb8",
@@ -27246,6 +27586,13 @@
         "sourceUrl": "https://github.com/IndigoProtocol/iris/tree/70449cccb5602dad948794ba26b3b8596cc332c9"
       },
       {
+        "id": "evidence:3c528515d2f48c395023c2ca9c87d9fce4ed2c926a4321014b43c17a6c7f0646",
+        "digest": "3c528515d2f48c395023c2ca9c87d9fce4ed2c926a4321014b43c17a6c7f0646",
+        "path": "evidence/3c528515d2f48c395023c2ca9c87d9fce4ed2c926a4321014b43c17a6c7f0646.json.gz",
+        "description": "Native input sokosumi/apps/web/src/lib/clients/core.client.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/web/src/lib/clients/core.client.ts"
+      },
+      {
         "id": "evidence:3c7a47b641f1c5fe36c102766fa6176ba46979f491267304d054d6c07bafffba",
         "digest": "3c7a47b641f1c5fe36c102766fa6176ba46979f491267304d054d6c07bafffba",
         "path": "evidence/3c7a47b641f1c5fe36c102766fa6176ba46979f491267304d054d6c07bafffba.json.gz",
@@ -27257,6 +27604,13 @@
         "path": "evidence/3d03d6a725ad6b038e94f1d4b8e5df01974ba44cd30d7961b0a233f011ededd0.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/ODATANO/ODATANO/releases/tag/v1.9.0"
+      },
+      {
+        "id": "evidence:3d426d698c1d7e9bd27b0c5a59d7ff1f99e1afce0c25fbeeda2e142c657d8071",
+        "digest": "3d426d698c1d7e9bd27b0c5a59d7ff1f99e1afce0c25fbeeda2e142c657d8071",
+        "path": "evidence/3d426d698c1d7e9bd27b0c5a59d7ff1f99e1afce0c25fbeeda2e142c657d8071.json.gz",
+        "description": "Native input masumi/smart-contracts/registry-v2/aiken.toml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/registry-v2/aiken.toml"
       },
       {
         "id": "evidence:3e0bdfa1d3ddf335e69d623f923f16578a96e792345334ba911123f8f53a976b",
@@ -27343,6 +27697,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-core/tree/a3a7f635c663b639d0c348f30e523c3290c70657"
       },
       {
+        "id": "evidence:4079c6dddaece539317b1711bd9ebdd4e16baf5f1c4ab20abb3108f79e91f31f",
+        "digest": "4079c6dddaece539317b1711bd9ebdd4e16baf5f1c4ab20abb3108f79e91f31f",
+        "path": "evidence/4079c6dddaece539317b1711bd9ebdd4e16baf5f1c4ab20abb3108f79e91f31f.json.gz",
+        "description": "Native input masumi/smart-contracts/payment/aiken.toml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/payment/aiken.toml"
+      },
+      {
         "id": "evidence:4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec",
         "digest": "4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec",
         "path": "evidence/4098dc3e9860a4aa56f9f9a18105e729c1ebf0f7a0bebc353e3b23d0ff55acec.json.gz",
@@ -27376,6 +27737,13 @@
         "path": "evidence/424ee73d0c25b2b17a286539249978c6c3f254ad370d24893e7c962e8532e4da.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/cncli/releases/tag/v6.8.2"
+      },
+      {
+        "id": "evidence:42704b9800fdbbaca83a1827b63be233ca623585fddec7a7834473b1692f4eb0",
+        "digest": "42704b9800fdbbaca83a1827b63be233ca623585fddec7a7834473b1692f4eb0",
+        "path": "evidence/42704b9800fdbbaca83a1827b63be233ca623585fddec7a7834473b1692f4eb0.json.gz",
+        "description": "Native input sokosumi/pnpm-workspace.yaml",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/pnpm-workspace.yaml"
       },
       {
         "id": "evidence:42c7fd8e8ede1b5b1f81f125e7cd0aa08c7e4c5f6f47c77694622c726a8e4772",
@@ -27448,6 +27816,13 @@
         "sourceUrl": "https://github.com/cardano-community/cncli/tree/18de896bf86bbf948a6bd7bc5d7d884628e9f1cc"
       },
       {
+        "id": "evidence:4456ec87afd5efce83f5bd948a311fbd24ed1361350ca2a6dec729a5c156d27e",
+        "digest": "4456ec87afd5efce83f5bd948a311fbd24ed1361350ca2a6dec729a5c156d27e",
+        "path": "evidence/4456ec87afd5efce83f5bd948a311fbd24ed1361350ca2a6dec729a5c156d27e.json.gz",
+        "description": "Native input sokosumi/apps/cmo/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/cmo/package.json"
+      },
+      {
         "id": "evidence:44a0d3c3e8fc21a9fb37d96413b169c076d6ef1a382ff8968d12215ae60cc3d5",
         "digest": "44a0d3c3e8fc21a9fb37d96413b169c076d6ef1a382ff8968d12215ae60cc3d5",
         "path": "evidence/44a0d3c3e8fc21a9fb37d96413b169c076d6ef1a382ff8968d12215ae60cc3d5.json.gz",
@@ -27467,6 +27842,12 @@
         "path": "evidence/458f36c121c955c3381206eecd6ee305212507661be9369f9e5ad71e459443ce.json.gz",
         "description": "Native input blaze/packages/blaze-wallet/src/index.ts",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-wallet/src/index.ts"
+      },
+      {
+        "id": "evidence:46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a",
+        "digest": "46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a",
+        "path": "evidence/46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a.json.gz",
+        "description": "Collection request for masumi"
       },
       {
         "id": "evidence:4639181d6851669242f904474da2deffe6e1f78ac032f554b1e983e5e3f4adb1",
@@ -27566,6 +27947,13 @@
         "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/tree/5d629436c7b7e7c2757355888a63cccd62fb1bca"
       },
       {
+        "id": "evidence:49dbc8c09bd31ebeb6a8fa80b0c91f0a33c9a20fc3c9e97e3829ba8df8cc11dd",
+        "digest": "49dbc8c09bd31ebeb6a8fa80b0c91f0a33c9a20fc3c9e97e3829ba8df8cc11dd",
+        "path": "evidence/49dbc8c09bd31ebeb6a8fa80b0c91f0a33c9a20fc3c9e97e3829ba8df8cc11dd.json.gz",
+        "description": "Native input sokosumi/packages/masumi/src/clients/masumi-payment.client.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/masumi/src/clients/masumi-payment.client.ts"
+      },
+      {
         "id": "evidence:4a41b1832945870c1076868195ee333fab2022c316ab0b981384f659b1945288",
         "digest": "4a41b1832945870c1076868195ee333fab2022c316ab0b981384f659b1945288",
         "path": "evidence/4a41b1832945870c1076868195ee333fab2022c316ab0b981384f659b1945288.json.gz",
@@ -27621,6 +28009,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/resolve.ts"
       },
       {
+        "id": "evidence:4cf764e789a0abc3484fd6785b4f47d55604650774043dd8d65f5ec2dc612425",
+        "digest": "4cf764e789a0abc3484fd6785b4f47d55604650774043dd8d65f5ec2dc612425",
+        "path": "evidence/4cf764e789a0abc3484fd6785b4f47d55604650774043dd8d65f5ec2dc612425.json.gz",
+        "description": "Native input masumi/Dockerfile",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/Dockerfile"
+      },
+      {
         "id": "evidence:4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
         "digest": "4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
         "path": "evidence/4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8.json.gz",
@@ -27647,6 +28042,13 @@
         "path": "evidence/4d8425bb95cb228ab05a7071c1a0156130c786f8fe9ba891682e8001b66a41be.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/bloxbean/yaci-store/releases/tag/v2.0.7"
+      },
+      {
+        "id": "evidence:4dfafe8be162d130ae42b13fb3a8f991f36500c75aa0a5e1f253d12174ac172e",
+        "digest": "4dfafe8be162d130ae42b13fb3a8f991f36500c75aa0a5e1f253d12174ac172e",
+        "path": "evidence/4dfafe8be162d130ae42b13fb3a8f991f36500c75aa0a5e1f253d12174ac172e.json.gz",
+        "description": "Native input masumi/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/pnpm-lock.yaml"
       },
       {
         "id": "evidence:4e5bc873d8a907f84360d84ff874d224b16b916b0e69cbf4710ff060e22a4a7f",
@@ -27730,6 +28132,13 @@
         "path": "evidence/526dc28956e34efef7c7418f9257495c5374eff331016357b7280a5fa69aa8cd.json.gz",
         "description": "Native input cardano-js-sdk/packages/web-extension/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/web-extension/package.json"
+      },
+      {
+        "id": "evidence:52a6d3b4244b39a70ea514010b04030c3ec8223de3ba45dbb443f96d7a1b1ae6",
+        "digest": "52a6d3b4244b39a70ea514010b04030c3ec8223de3ba45dbb443f96d7a1b1ae6",
+        "path": "evidence/52a6d3b4244b39a70ea514010b04030c3ec8223de3ba45dbb443f96d7a1b1ae6.json.gz",
+        "description": "Native input sokosumi/packages/database/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/database/package.json"
       },
       {
         "id": "evidence:52b4aba3b0ccf08e37e3a64db851649a43a5ccb7827d59035d0b4ac3cb8aa627",
@@ -28014,11 +28423,25 @@
         "sourceUrl": "https://github.com/aiken-lang/aiken/tree/bacbeb35fbc9f1db93cd2e1e93fb1d93053acb4a"
       },
       {
+        "id": "evidence:62985970309d0c52e6674be56a38eb7273bedd0c1eed5209a70f10eb012274a5",
+        "digest": "62985970309d0c52e6674be56a38eb7273bedd0c1eed5209a70f10eb012274a5",
+        "path": "evidence/62985970309d0c52e6674be56a38eb7273bedd0c1eed5209a70f10eb012274a5.json.gz",
+        "description": "Native input sokosumi/apps/core/src/index.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/src/index.ts"
+      },
+      {
         "id": "evidence:62dfdcd2a3815e8e9e0577ef42e9e0a4d5d3295808904b7e61b3283351e31b62",
         "digest": "62dfdcd2a3815e8e9e0577ef42e9e0a4d5d3295808904b7e61b3283351e31b62",
         "path": "evidence/62dfdcd2a3815e8e9e0577ef42e9e0a4d5d3295808904b7e61b3283351e31b62.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/CardanoSolutions/kupo/tree/491918a50b45ed2b3de682ee79e03c6dc09779a3"
+      },
+      {
+        "id": "evidence:632669f8c03d0d628ab20ec4a0918debf996f31afc98b3ec8199eaf70f76dfb8",
+        "digest": "632669f8c03d0d628ab20ec4a0918debf996f31afc98b3ec8199eaf70f76dfb8",
+        "path": "evidence/632669f8c03d0d628ab20ec4a0918debf996f31afc98b3ec8199eaf70f76dfb8.json.gz",
+        "description": "Native input sokosumi/apps/core/src/clients/masumi-payment.client.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/src/clients/masumi-payment.client.ts"
       },
       {
         "id": "evidence:635f863083451344d3f33eb73130c66f4aec2298032566439215e52595873c05",
@@ -28145,6 +28568,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
       },
       {
+        "id": "evidence:6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
+        "digest": "6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
+        "path": "evidence/6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af.json.gz",
+        "description": "Native input masumi/packages/payment-source-x402/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-source-x402/package.json"
+      },
+      {
         "id": "evidence:679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac",
         "digest": "679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac",
         "path": "evidence/679148d65ee1a3a3c0e896464549ace7d444726c2dddc11ac279d202b925d9ac.json.gz",
@@ -28170,6 +28600,13 @@
         "digest": "686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb",
         "path": "evidence/686ce6fc9af396b1e1d969d7ef6f85eb88d029e214fda08c70a8af0db4d099eb.json.gz",
         "description": "Collection request for evolution-sdk"
+      },
+      {
+        "id": "evidence:687986604c96690f43b42f2635df21983e1d6582533d8ba93ddcf783aaaa644d",
+        "digest": "687986604c96690f43b42f2635df21983e1d6582533d8ba93ddcf783aaaa644d",
+        "path": "evidence/687986604c96690f43b42f2635df21983e1d6582533d8ba93ddcf783aaaa644d.json.gz",
+        "description": "Native input sokosumi/patches/vitest@5.0.4.patch",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/patches/vitest@5.0.4.patch"
       },
       {
         "id": "evidence:6898d73869dcb034411ce432d7bda4514ce9738228409d88e6bff15078001556",
@@ -28239,6 +28676,13 @@
         "path": "evidence/6bdc45671d4554cfe57c7bad9b2ebd2738f95b24f62f5046727e12aef131af1e.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/bloxbean/mesmo/tree/54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1"
+      },
+      {
+        "id": "evidence:6c3fbbf7c24c434ea0997a2b2fbd06ebfd84476d5e88da07fab4d4945bc17a8b",
+        "digest": "6c3fbbf7c24c434ea0997a2b2fbd06ebfd84476d5e88da07fab4d4945bc17a8b",
+        "path": "evidence/6c3fbbf7c24c434ea0997a2b2fbd06ebfd84476d5e88da07fab4d4945bc17a8b.json.gz",
+        "description": "Native input sokosumi/pnpm-lock.yaml",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/pnpm-lock.yaml"
       },
       {
         "id": "evidence:6c595f572637083071cf61d4b135c3cea38ff84698eca0de3397f84d1b5a0d73",
@@ -28436,6 +28880,13 @@
         "sourceUrl": "https://github.com/HarmonicLabs/ouroboros-miniprotocols-ts/tree/9c26c7c24bdffb9af29d91cc59b2c5a65f98567d"
       },
       {
+        "id": "evidence:73130a6512033f1c9161e73cc658b1e9e52f44fffcf8560db58d70564c86ff64",
+        "digest": "73130a6512033f1c9161e73cc658b1e9e52f44fffcf8560db58d70564c86ff64",
+        "path": "evidence/73130a6512033f1c9161e73cc658b1e9e52f44fffcf8560db58d70564c86ff64.json.gz",
+        "description": "Native input masumi/docs/adr/0005-meshsdk-version-pinning-v1-v2.md",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/docs/adr/0005-meshsdk-version-pinning-v1-v2.md"
+      },
+      {
         "id": "evidence:7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e",
         "digest": "7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e",
         "path": "evidence/7377ab01e291b984d5989254f77608318c977d1f1e50e0964ef0c037e3bdc87e.json.gz",
@@ -28443,11 +28894,25 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/time.ts"
       },
       {
+        "id": "evidence:73e74ea32b9ddc651817570008e32b34d7e0d9b0924a236504747de94680d168",
+        "digest": "73e74ea32b9ddc651817570008e32b34d7e0d9b0924a236504747de94680d168",
+        "path": "evidence/73e74ea32b9ddc651817570008e32b34d7e0d9b0924a236504747de94680d168.json.gz",
+        "description": "Native input masumi/README.md",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/README.md"
+      },
+      {
         "id": "evidence:7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc",
         "digest": "7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc",
         "path": "evidence/7462f432c6c7bd222b9882bb5caeaa06de067473d288991f84cf166a10e790bc.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/SundaeSwap-finance/aicone/tree/753436d6caea515a6be7e607e2181afc1fa99369"
+      },
+      {
+        "id": "evidence:74955f82309ce0b8890c264605f6813573b34cfc0aa7469f5ac45872624c7020",
+        "digest": "74955f82309ce0b8890c264605f6813573b34cfc0aa7469f5ac45872624c7020",
+        "path": "evidence/74955f82309ce0b8890c264605f6813573b34cfc0aa7469f5ac45872624c7020.json.gz",
+        "description": "Native input masumi/packages/hydra-host/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/hydra-host/package.json"
       },
       {
         "id": "evidence:74aab679ee731eef5abf6709109145cc6331f23d680f451d9ce7e3fcd3d160fb",
@@ -28525,6 +28990,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/purus/tree/f4d50126ecccb92cf4d939f0c0a18dc5294c4692"
       },
       {
+        "id": "evidence:77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328",
+        "digest": "77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328",
+        "path": "evidence/77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328.json.gz",
+        "description": "Native input sokosumi/packages/utils/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/utils/package.json"
+      },
+      {
         "id": "evidence:774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
         "digest": "774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
         "path": "evidence/774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4.json.gz",
@@ -28591,6 +29063,13 @@
         "path": "evidence/79d8976a1ca0f07698f554682d947a7d826691631f3147847c99e1fadc36d74f.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/src/render/dot.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/dot.ts"
+      },
+      {
+        "id": "evidence:7a126acfd54ed0d438b97da1602421489e0021c0fb5d010532355cce877a3859",
+        "digest": "7a126acfd54ed0d438b97da1602421489e0021c0fb5d010532355cce877a3859",
+        "path": "evidence/7a126acfd54ed0d438b97da1602421489e0021c0fb5d010532355cce877a3859.json.gz",
+        "description": "Native input sokosumi/apps/web/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/web/package.json"
       },
       {
         "id": "evidence:7a8a574822ac38947544e8706ed730b97db0191b7834956f36031df70da3a695",
@@ -28738,6 +29217,13 @@
         "sourceUrl": "https://github.com/HarmonicPool/cardano-wallet-interface/tree/3b9451fcaf7fc79bc9e8b56f227b42657d69a21c"
       },
       {
+        "id": "evidence:7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2",
+        "digest": "7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2",
+        "path": "evidence/7f9a1f41050a6dabbd1f1445057ea1d3af5eddcf46b0dd9661ca6b9ba94a3db2.json.gz",
+        "description": "Native input masumi/.npmrc",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/.npmrc"
+      },
+      {
         "id": "evidence:7f9a9f01fa6d4468ad70820f7249a2764b78ccbc459ca42204944aa646d79783",
         "digest": "7f9a9f01fa6d4468ad70820f7249a2764b78ccbc459ca42204944aa646d79783",
         "path": "evidence/7f9a9f01fa6d4468ad70820f7249a2764b78ccbc459ca42204944aa646d79783.json.gz",
@@ -28882,6 +29368,13 @@
         "path": "evidence/8503450f691b693abf3eb49f3aaafddee7b0649398af8154fe6611584c538cce.json.gz",
         "description": "Native collection profile and command",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
+      },
+      {
+        "id": "evidence:851ba7c47290ec3f332aab9e15bd8285a9638c03d3a1f8e7c976895ccc00a3d4",
+        "digest": "851ba7c47290ec3f332aab9e15bd8285a9638c03d3a1f8e7c976895ccc00a3d4",
+        "path": "evidence/851ba7c47290ec3f332aab9e15bd8285a9638c03d3a1f8e7c976895ccc00a3d4.json.gz",
+        "description": "Native input masumi/src/services/hydra-host/client.ts",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/services/hydra-host/client.ts"
       },
       {
         "id": "evidence:85302a44155dc0d00cab06709e24c1e97f2295a5a82d1bd76a12857ff0e66c8f",
@@ -29328,6 +29821,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/README.md"
       },
       {
+        "id": "evidence:91eeb4116ba1abf326c91c1ed2cd88c2347c2a6639db9d5bd4133c0455164161",
+        "digest": "91eeb4116ba1abf326c91c1ed2cd88c2347c2a6639db9d5bd4133c0455164161",
+        "path": "evidence/91eeb4116ba1abf326c91c1ed2cd88c2347c2a6639db9d5bd4133c0455164161.json.gz",
+        "description": "Native input sokosumi/packages/masumi/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/masumi/package.json"
+      },
+      {
         "id": "evidence:928d5093296bec6b727a704be051e5a672ded03aa88820dc27bbfa44bb823c68",
         "digest": "928d5093296bec6b727a704be051e5a672ded03aa88820dc27bbfa44bb823c68",
         "path": "evidence/928d5093296bec6b727a704be051e5a672ded03aa88820dc27bbfa44bb823c68.json.gz",
@@ -29431,6 +29931,13 @@
         "description": "Collection request for oura"
       },
       {
+        "id": "evidence:958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591",
+        "digest": "958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591",
+        "path": "evidence/958a63638f0ef9de536576566d10e668bff5ebb9cccc3360f7759db8d3cf5591.json.gz",
+        "description": "pnpm-lock for sokosumi macos-v1.1.1",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/tree/0f908764db652adfb76348222235a809ed8797bb"
+      },
+      {
         "id": "evidence:95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
         "digest": "95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f",
         "path": "evidence/95c1cf112ee1d224da55bbcfd26e8901f94ba329de771b2d44f18e801fc8f83f.json.gz",
@@ -29455,6 +29962,13 @@
         "digest": "9637c217e05f4a29cdc333384fa3871e64a6004f38a94b937a5d1a1d229d0f11",
         "path": "evidence/9637c217e05f4a29cdc333384fa3871e64a6004f38a94b937a5d1a1d229d0f11.json.gz",
         "description": "Collection request for minswap-sdk"
+      },
+      {
+        "id": "evidence:969b69cbd9ffbed7c570c3c84169d14f1b0d64a0e7409358981672095a1bc609",
+        "digest": "969b69cbd9ffbed7c570c3c84169d14f1b0d64a0e7409358981672095a1bc609",
+        "path": "evidence/969b69cbd9ffbed7c570c3c84169d14f1b0d64a0e7409358981672095a1bc609.json.gz",
+        "description": "Native input masumi/patches/http-cache-semantics@4.3.0.patch",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/patches/http-cache-semantics@4.3.0.patch"
       },
       {
         "id": "evidence:969dfee292525b40744fe57f96e585bc5137bef87be1e62e422b2c47c4c5f67a",
@@ -30094,6 +30608,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/cardano-graphql/releases/tag/9.1.0"
       },
       {
+        "id": "evidence:aeb8b2cfb11f1cd592a50f2944c8ccef79acb171127703ccd690f033e9fc14e1",
+        "digest": "aeb8b2cfb11f1cd592a50f2944c8ccef79acb171127703ccd690f033e9fc14e1",
+        "path": "evidence/aeb8b2cfb11f1cd592a50f2944c8ccef79acb171127703ccd690f033e9fc14e1.json.gz",
+        "description": "Native input masumi/packages/hydra-host/Dockerfile",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/hydra-host/Dockerfile"
+      },
+      {
         "id": "evidence:af1cc5d90bea8699f3e56d3a0bd266cc6dd201d749c43cbaded17aad7f2bfe0e",
         "digest": "af1cc5d90bea8699f3e56d3a0bd266cc6dd201d749c43cbaded17aad7f2bfe0e",
         "path": "evidence/af1cc5d90bea8699f3e56d3a0bd266cc6dd201d749c43cbaded17aad7f2bfe0e.json.gz",
@@ -30119,6 +30640,13 @@
         "path": "evidence/af97dd6565868e4bdaeab85418569ff814abddfa21aacbe9661949c49d903f13.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/bloxbean/yano/tree/fb52ddc35b6bd0414064b5600b4144d2bd8d132f"
+      },
+      {
+        "id": "evidence:afab4d1be3458b769035035f232e18720fa61e72e0d2eba91fe46d0b19555c3a",
+        "digest": "afab4d1be3458b769035035f232e18720fa61e72e0d2eba91fe46d0b19555c3a",
+        "path": "evidence/afab4d1be3458b769035035f232e18720fa61e72e0d2eba91fe46d0b19555c3a.json.gz",
+        "description": "Native input sokosumi/packages/masumi/src/clients/masumi-registry.client.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/masumi/src/clients/masumi-registry.client.ts"
       },
       {
         "id": "evidence:afc42561d6c442be69e25bab288ab09a0b468bd2dc77ee28764dd87d0b38eb40",
@@ -30281,6 +30809,13 @@
         "sourceUrl": "https://github.com/input-output-hk/plutus-halo2-verifier-gen/tree/b95783e64082185f8cbffcf070df2358bab4275b"
       },
       {
+        "id": "evidence:b6407406afb6525ccc25ecdede4eef6fc96060f5a643e4e2785280e8e47a1348",
+        "digest": "b6407406afb6525ccc25ecdede4eef6fc96060f5a643e4e2785280e8e47a1348",
+        "path": "evidence/b6407406afb6525ccc25ecdede4eef6fc96060f5a643e4e2785280e8e47a1348.json.gz",
+        "description": "Native input masumi/src/services/payment-source-types/index.ts",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/services/payment-source-types/index.ts"
+      },
+      {
         "id": "evidence:b696c00651ba16e47aac05b5683233de34e33b0cc78d96fbed0f24593f3cf967",
         "digest": "b696c00651ba16e47aac05b5683233de34e33b0cc78d96fbed0f24593f3cf967",
         "path": "evidence/b696c00651ba16e47aac05b5683233de34e33b0cc78d96fbed0f24593f3cf967.json.gz",
@@ -30293,6 +30828,13 @@
         "path": "evidence/b700c202c396af6df160a4766fc1e3b6e0885fd884497859d89cfc61f3ca8000.json.gz",
         "description": "Native input oura/Cargo.lock",
         "sourceUrl": "https://github.com/txpipe/oura/tree/6c326ddf3e010ee955cb45358dea7522dc75e331/Cargo.lock"
+      },
+      {
+        "id": "evidence:b7093e1e7135bc9b1aeb618911d59a1eadb8ab6cea6b797e8f195274605bb454",
+        "digest": "b7093e1e7135bc9b1aeb618911d59a1eadb8ab6cea6b797e8f195274605bb454",
+        "path": "evidence/b7093e1e7135bc9b1aeb618911d59a1eadb8ab6cea6b797e8f195274605bb454.json.gz",
+        "description": "Native input sokosumi/README.md",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/README.md"
       },
       {
         "id": "evidence:b73c2c41d58c7e3bda15a508d28eb37ef067bed2e9d737251812ce3013bba573",
@@ -30348,6 +30890,13 @@
         "path": "evidence/b827675332b2a79e831b0197938beddfebf46ddf071df0fdf4df9c1c3c453867.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/nftmakerio/NMKR-Studio/tree/5c8f0d18761167611c729e6eae69be67bdd5e981"
+      },
+      {
+        "id": "evidence:b82cfd6b309703f2d1427174943e35064ff360e41667a853140576fd5cc94de0",
+        "digest": "b82cfd6b309703f2d1427174943e35064ff360e41667a853140576fd5cc94de0",
+        "path": "evidence/b82cfd6b309703f2d1427174943e35064ff360e41667a853140576fd5cc94de0.json.gz",
+        "description": "Native input sokosumi/apps/web/src/config/env.public.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/web/src/config/env.public.ts"
       },
       {
         "id": "evidence:b8577dd15d9c68c9b0c68a17064b23d5dd716241ffa2f44311c17a9a5279350a",
@@ -30454,6 +31003,13 @@
         "sourceUrl": "https://github.com/SundaeSwap-finance/aicone/tree/753436d6caea515a6be7e607e2181afc1fa99369"
       },
       {
+        "id": "evidence:bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
+        "digest": "bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15",
+        "path": "evidence/bad5817a18fa91a8277f1d8347ae782c898f7e4e1f717bbb4387cf7577c0fa15.json.gz",
+        "description": "Native input sokosumi/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/package.json"
+      },
+      {
         "id": "evidence:baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c",
         "digest": "baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c",
         "path": "evidence/baf05a498b76b3baf188c35c45f60631fa0eea444c1b9bc9acde933758f27f0c.json.gz",
@@ -30487,6 +31043,13 @@
         "path": "evidence/bb88200f53459729829f1f77a3865565998a806d7dc4765261ca7955df24b6af.json.gz",
         "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Treasury.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Treasury.ts"
+      },
+      {
+        "id": "evidence:bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0",
+        "digest": "bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0",
+        "path": "evidence/bb8e99644945eb49c30747972674d33f3f6029e3bed3b391bb74adf048d0bfc0.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/tree/0f908764db652adfb76348222235a809ed8797bb"
       },
       {
         "id": "evidence:bbf5837bc305ace6369a71cd837e9ec5e37606b447a60672debb5491c3a41b66",
@@ -30599,6 +31162,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/merkle-patricia-forestry/tree/540dfdbf61f8697c548db460dee1beff78cadb19"
       },
       {
+        "id": "evidence:bf00298631ac6fd05fdd97cccbb27aa153669db6c9477cc0067fdfee8ad5f675",
+        "digest": "bf00298631ac6fd05fdd97cccbb27aa153669db6c9477cc0067fdfee8ad5f675",
+        "path": "evidence/bf00298631ac6fd05fdd97cccbb27aa153669db6c9477cc0067fdfee8ad5f675.json.gz",
+        "description": "Native input masumi/smart-contracts/payment/aiken.lock",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/payment/aiken.lock"
+      },
+      {
         "id": "evidence:bf4d729497bd58912e29e68a41d7f5216848799d08a12856522514bffc99a5fd",
         "digest": "bf4d729497bd58912e29e68a41d7f5216848799d08a12856522514bffc99a5fd",
         "path": "evidence/bf4d729497bd58912e29e68a41d7f5216848799d08a12856522514bffc99a5fd.json.gz",
@@ -30651,6 +31221,13 @@
         "digest": "c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a",
         "path": "evidence/c219c7079a00d3524611026541aa88d9c4aa7f0813cb93319c664fa7d621728a.json.gz",
         "description": "Collection request for cardano-web3-js"
+      },
+      {
+        "id": "evidence:c242e03dec7864970db6e014e1b198a88c0e7de142c7161e7687eef89f824156",
+        "digest": "c242e03dec7864970db6e014e1b198a88c0e7de142c7161e7687eef89f824156",
+        "path": "evidence/c242e03dec7864970db6e014e1b198a88c0e7de142c7161e7687eef89f824156.json.gz",
+        "description": "Native input masumi/packages/hydra-host/docker-compose.yml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/hydra-host/docker-compose.yml"
       },
       {
         "id": "evidence:c25d08cb716d78b67bca165f311ea3a7082962912a058a910298b75cf760db81",
@@ -30991,6 +31568,13 @@
         "description": "Pinned Yarn workflow scope for cometa-js"
       },
       {
+        "id": "evidence:cbff068d64af23d35c47e4f83edfd6d6c0a144ae6572fd9eaeac73db389d40a3",
+        "digest": "cbff068d64af23d35c47e4f83edfd6d6c0a144ae6572fd9eaeac73db389d40a3",
+        "path": "evidence/cbff068d64af23d35c47e4f83edfd6d6c0a144ae6572fd9eaeac73db389d40a3.json.gz",
+        "description": "Native input sokosumi/turbo.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/turbo.json"
+      },
+      {
         "id": "evidence:cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
         "digest": "cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
         "path": "evidence/cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd.json.gz",
@@ -31002,6 +31586,13 @@
         "digest": "cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44",
         "path": "evidence/cd4a7473d95266203ab4944a0889d55eca12cac4feeb4ef4fd6ff25e48925f44.json.gz",
         "description": "Pinned SundaeSwap manifest/lock mismatch audit"
+      },
+      {
+        "id": "evidence:cdb171eeed1e0d2706f3fd483324e65d199f8c3f984bc7d60b8dce1d6e7bee07",
+        "digest": "cdb171eeed1e0d2706f3fd483324e65d199f8c3f984bc7d60b8dce1d6e7bee07",
+        "path": "evidence/cdb171eeed1e0d2706f3fd483324e65d199f8c3f984bc7d60b8dce1d6e7bee07.json.gz",
+        "description": "Native input masumi/patches/@sundaeswap__core.patch",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/patches/@sundaeswap__core.patch"
       },
       {
         "id": "evidence:cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb",
@@ -31053,6 +31644,13 @@
         "sourceUrl": "https://github.com/marlowe-lang/marlowe-ts-sdk/tree/93598c0f8e452d7679a44097c48e693d95bfd631"
       },
       {
+        "id": "evidence:d02866c522ee5bdb0360358e035bc28eee160c11b5c32b4d39d0df19815ff3d2",
+        "digest": "d02866c522ee5bdb0360358e035bc28eee160c11b5c32b4d39d0df19815ff3d2",
+        "path": "evidence/d02866c522ee5bdb0360358e035bc28eee160c11b5c32b4d39d0df19815ff3d2.json.gz",
+        "description": "Native input sokosumi/packages/net/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/net/package.json"
+      },
+      {
         "id": "evidence:d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a",
         "digest": "d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a",
         "path": "evidence/d0507f7f09c312179b0635b4e048ac7d3913bc770ef9571ee4f85fb927c3c60a.json.gz",
@@ -31067,11 +31665,32 @@
         "sourceUrl": "https://github.com/projectNEWM/cardano-dapp-wallet-connector/blob/5d629436c7b7e7c2757355888a63cccd62fb1bca/package-lock.json"
       },
       {
+        "id": "evidence:d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7",
+        "digest": "d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7",
+        "path": "evidence/d0dafb8c13ca24997ec33e7422a20b340d5d2e8594c27ff089bfb2ddd60e18e7.json.gz",
+        "description": "Native input sokosumi/packages/email/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/email/package.json"
+      },
+      {
+        "id": "evidence:d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686",
+        "digest": "d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686",
+        "path": "evidence/d10335b0d6848e8550535a2bb1520a380cbc1653fcf783586a28512d4ffa8686.json.gz",
+        "description": "Native input masumi/packages/payment-source-v2/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-source-v2/package.json"
+      },
+      {
         "id": "evidence:d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204",
         "digest": "d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204",
         "path": "evidence/d11ce7dd7935b4202e761097c6bc94cede20046399e7c6246b5543791f1d1204.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/src/render/options.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/options.ts"
+      },
+      {
+        "id": "evidence:d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294",
+        "digest": "d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294",
+        "path": "evidence/d1c7dfb14b5c30dc6a500ef3849abf0b2ef3d5890d42af43b4607e0008f8c294.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/tree/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8"
       },
       {
         "id": "evidence:d1f56bf175d2bae3da9b6f06ed83837883eed9568e84c7c99adec0823e903eda",
@@ -31149,6 +31768,13 @@
         "path": "evidence/d3750093a4094ed19eefae1c7db96dbae5d7d9e2ec0f1a419e82c134710bff5f.json.gz",
         "description": "Source geniusyield-sdk/pnpm-lock.yaml",
         "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/pnpm-lock.yaml"
+      },
+      {
+        "id": "evidence:d3b59a7e7200a7d3fb7df4b8b2a7a8747086811f863719b88086e8029d9b998b",
+        "digest": "d3b59a7e7200a7d3fb7df4b8b2a7a8747086811f863719b88086e8029d9b998b",
+        "path": "evidence/d3b59a7e7200a7d3fb7df4b8b2a7a8747086811f863719b88086e8029d9b998b.json.gz",
+        "description": "Native input masumi/src/index.ts",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/index.ts"
       },
       {
         "id": "evidence:d3ba53976395496fa0ee801a74c16900b6525f96c40bb568a884882535993979",
@@ -31303,6 +31929,13 @@
         "description": "Collection request for cardano-dapp-wallet-connector"
       },
       {
+        "id": "evidence:d88186b3f995e8065a68ad1777bbc21b88ca6756752993bccc693321cc96c72a",
+        "digest": "d88186b3f995e8065a68ad1777bbc21b88ca6756752993bccc693321cc96c72a",
+        "path": "evidence/d88186b3f995e8065a68ad1777bbc21b88ca6756752993bccc693321cc96c72a.json.gz",
+        "description": "Native input masumi/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/package.json"
+      },
+      {
         "id": "evidence:d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
         "digest": "d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca",
         "path": "evidence/d88da892ffb387262f2f18d9567454eb0be7bbc7fdcde7b3a38217a0117a29ca.json.gz",
@@ -31322,6 +31955,12 @@
         "path": "evidence/d9b7ff25906c9d76bca47c569acb01f9b4596b0ee110edfcb1042d6d6b8099f5.json.gz",
         "description": "Source adalite/README.md",
         "sourceUrl": "https://github.com/vacuumlabs/adalite/blob/86dd006310600fad5e145fae2af2f9bea0b79572/README.md"
+      },
+      {
+        "id": "evidence:d9fadf400879f3001b1f487a5d8a521dd2605931e31247d5d500c24659df87bc",
+        "digest": "d9fadf400879f3001b1f487a5d8a521dd2605931e31247d5d500c24659df87bc",
+        "path": "evidence/d9fadf400879f3001b1f487a5d8a521dd2605931e31247d5d500c24659df87bc.json.gz",
+        "description": "Collection request for sokosumi"
       },
       {
         "id": "evidence:da23ba4063731a2fa58a33f983540796db8a53b3751d6644eb757fe31e4919c4",
@@ -31385,6 +32024,12 @@
         "path": "evidence/dcc202a746c151c52673ac9f8fcfe23a7f06f0ee25dad313cbf40ab26768e61d.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/txpipe/laceanatomy/tree/1e8b05e9e1c8ad3bada3d539c549554d370cdf69"
+      },
+      {
+        "id": "evidence:dd1d433c8381fa67357515a89e19bf3737bff3b04fee4536bf959f08e8d0f1d6",
+        "digest": "dd1d433c8381fa67357515a89e19bf3737bff3b04fee4536bf959f08e8d0f1d6",
+        "path": "evidence/dd1d433c8381fa67357515a89e19bf3737bff3b04fee4536bf959f08e8d0f1d6.json.gz",
+        "description": "Sokosumi payment application collection scope"
       },
       {
         "id": "evidence:dd2f75589f6eac94eeae8e81cd705edd3b97045ca63978e7b0478be5a271888d",
@@ -31462,6 +32107,13 @@
         "path": "evidence/dfaaedaa68c42bab8a923da650ca4df5a570b6593e8713c428ff7a83d9ff3e72.json.gz",
         "description": "Native input lucid-evolution/packages/utils/src/core.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/core.ts"
+      },
+      {
+        "id": "evidence:dfbabbc7a5e7003a86eb4fea33f1584802882dcb91dc1add59fa1a39cf3d1ce1",
+        "digest": "dfbabbc7a5e7003a86eb4fea33f1584802882dcb91dc1add59fa1a39cf3d1ce1",
+        "path": "evidence/dfbabbc7a5e7003a86eb4fea33f1584802882dcb91dc1add59fa1a39cf3d1ce1.json.gz",
+        "description": "Native input masumi/frontend/package.json",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/frontend/package.json"
       },
       {
         "id": "evidence:e036434806c07e1b586348c4ee03f01bd50bdc409e57a300eb79c2da4c348d2a",
@@ -31632,6 +32284,13 @@
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2/Cargo.toml"
       },
       {
+        "id": "evidence:e5e43ddd4a428ef336b4e44fb423a147c9e1f17834d3df3906c57a5367fe0221",
+        "digest": "e5e43ddd4a428ef336b4e44fb423a147c9e1f17834d3df3906c57a5367fe0221",
+        "path": "evidence/e5e43ddd4a428ef336b4e44fb423a147c9e1f17834d3df3906c57a5367fe0221.json.gz",
+        "description": "Native input sokosumi/apps/core/package.json",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/package.json"
+      },
+      {
         "id": "evidence:e6302aa191f0e7c005a45d1e338b1ae2e69c723aab04fbc69204f9b65a25ca2a",
         "digest": "e6302aa191f0e7c005a45d1e338b1ae2e69c723aab04fbc69204f9b65a25ca2a",
         "path": "evidence/e6302aa191f0e7c005a45d1e338b1ae2e69c723aab04fbc69204f9b65a25ca2a.json.gz",
@@ -31734,6 +32393,20 @@
         "path": "evidence/ea774640bc89112361f66cee3ef04e92aea35c0127daa85d85e428f0c5be77e8.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/bloxbean/yaci-bridge/tree/aed55a0ad19002ebccb05997463306c26686d2d4"
+      },
+      {
+        "id": "evidence:eaac7f58b0f18fa285bd54de71a3b8b1ac43981beb36f6b1251fb87faadb32b2",
+        "digest": "eaac7f58b0f18fa285bd54de71a3b8b1ac43981beb36f6b1251fb87faadb32b2",
+        "path": "evidence/eaac7f58b0f18fa285bd54de71a3b8b1ac43981beb36f6b1251fb87faadb32b2.json.gz",
+        "description": "Native input masumi/frontend/next.config.ts",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/frontend/next.config.ts"
+      },
+      {
+        "id": "evidence:ebd1a1e87c686ee7e16a72dcb7fadbbfeead2401b67d9ba388d2a57808dbc955",
+        "digest": "ebd1a1e87c686ee7e16a72dcb7fadbbfeead2401b67d9ba388d2a57808dbc955",
+        "path": "evidence/ebd1a1e87c686ee7e16a72dcb7fadbbfeead2401b67d9ba388d2a57808dbc955.json.gz",
+        "description": "Native input sokosumi/apps/core/src/config/env.ts",
+        "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/apps/core/src/config/env.ts"
       },
       {
         "id": "evidence:ebe1c8763391ec37d27c48bd656914922dec613bf54062b6337d76af5f5205e8",
@@ -31924,6 +32597,13 @@
         "sourceUrl": "https://github.com/Emurgo/yoroi/tree/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6"
       },
       {
+        "id": "evidence:f2924ec3dea7e9ce5f6d53ac3babbe29fbcc2ad87d626d5afcbb6fe0c92020c0",
+        "digest": "f2924ec3dea7e9ce5f6d53ac3babbe29fbcc2ad87d626d5afcbb6fe0c92020c0",
+        "path": "evidence/f2924ec3dea7e9ce5f6d53ac3babbe29fbcc2ad87d626d5afcbb6fe0c92020c0.json.gz",
+        "description": "Native input masumi/smart-contracts/payment-v2/aiken.toml",
+        "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/smart-contracts/payment-v2/aiken.toml"
+      },
+      {
         "id": "evidence:f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c",
         "digest": "f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c",
         "path": "evidence/f34508f0223fbe57bbfe3df6b9da8bf664085c47cfc08a71c7ff6b4792eade5c.json.gz",
@@ -31943,6 +32623,12 @@
         "path": "evidence/f39316e0b9f1b7013bcfb3b240c7864f5e530a801b0608b784ace8d963dc7660.json.gz",
         "description": "Native input hydra-sdk/packages/cardano-wasm/package.json",
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/blob/d10c4596fae296a93ad0fdf215d52f9f01d63361/packages/cardano-wasm/package.json"
+      },
+      {
+        "id": "evidence:f3bd57a2d2b7b1e1bc443106508b22ceea708743caa03fd0e2a1d2f17fc083a0",
+        "digest": "f3bd57a2d2b7b1e1bc443106508b22ceea708743caa03fd0e2a1d2f17fc083a0",
+        "path": "evidence/f3bd57a2d2b7b1e1bc443106508b22ceea708743caa03fd0e2a1d2f17fc083a0.json.gz",
+        "description": "Masumi payment application collection scope"
       },
       {
         "id": "evidence:f478a2523f911a46e78515d061c2e131212e36c05159c8f9e6e4803aa497d9e9",
@@ -32351,6 +33037,12 @@
         "evidenceId": "evidence:0198fe5f8c0fc5484414ff7d278e77bf923697970c16c1a412b049718cfec000"
       },
       {
+        "key": "f294dfca918c1db830f658dd41935a2d1f1eb7ac805209773d30db785b051a25",
+        "toolId": "masumi",
+        "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+        "evidenceId": "evidence:46092f96ea8ff3f0c42227b74e65432efa12b9065028d041d99bfdf35c2c1d8a"
+      },
+      {
         "key": "b7356fd3f4f2c9cdd944c49f837f62f3c95cf27f3b4ceff99b2e4b44555e9ed1",
         "toolId": "meshjs-mesh-sdk",
         "profileId": "profile:meshjs-mesh-sdk:e2069b2725d8fa208f4cbc63",
@@ -32393,6 +33085,12 @@
         "evidenceId": "evidence:ea6221f027efaebfd711541676b9f8c25466c20948cacf91ee2b4a9b1c246b67"
       },
       {
+        "key": "e92a4506b7903819df219d28a7e3ee363adce99198d2397a0ff75eefa1845d19",
+        "toolId": "sokosumi",
+        "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+        "evidenceId": "evidence:d9fadf400879f3001b1f487a5d8a521dd2605931e31247d5d500c24659df87bc"
+      },
+      {
         "key": "3e07331d410301bae662a14d8eddcaf2863d8d599cda6c165658758abc4c83a4",
         "toolId": "typhonjs",
         "profileId": "profile:typhonjs:5958bba13a88b8790661b312",
@@ -32427,84 +33125,84 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/3a4a0fa56d0bf972667d30681f2c87875bfd09e6add1357d19b4dda07c8eaf83.json",
-        "digest": "3a4a0fa56d0bf972667d30681f2c87875bfd09e6add1357d19b4dda07c8eaf83",
-        "records": 1700
+        "path": "snapshots/artifacts/a4334a6cd648af6f8860f6d45b2e7529654e6c97e9fe24b47ae8cc478276350c.json",
+        "digest": "a4334a6cd648af6f8860f6d45b2e7529654e6c97e9fe24b47ae8cc478276350c",
+        "records": 1793
       },
       {
-        "path": "snapshots/artifacts/93f76e0f8d2302fbf68bed3559f3db63dd856274a4c5f45ff2ef2e4ee1c46f09.json",
-        "digest": "93f76e0f8d2302fbf68bed3559f3db63dd856274a4c5f45ff2ef2e4ee1c46f09",
-        "records": 1670
+        "path": "snapshots/artifacts/9ce7eab03aa6d041bff9dbd63a753c891f32205b87cc3690597087d0c0313a31.json",
+        "digest": "9ce7eab03aa6d041bff9dbd63a753c891f32205b87cc3690597087d0c0313a31",
+        "records": 1751
       },
       {
-        "path": "snapshots/artifacts/b7d42d5b4b0ce4774e2be805de9a5be47321262f95fe0972e621fc19f70f9afd.json",
-        "digest": "b7d42d5b4b0ce4774e2be805de9a5be47321262f95fe0972e621fc19f70f9afd",
-        "records": 1690
+        "path": "snapshots/artifacts/38bdbf22cb49a700367c9e9b1d3c327f3c8e48fe59e37ab56f83e7597e47aab0.json",
+        "digest": "38bdbf22cb49a700367c9e9b1d3c327f3c8e48fe59e37ab56f83e7597e47aab0",
+        "records": 1793
       },
       {
-        "path": "snapshots/artifacts/058deb8c5919e0367c9e88c58ef7a0374ed323110e513d4e93ce23a0f590a0be.json",
-        "digest": "058deb8c5919e0367c9e88c58ef7a0374ed323110e513d4e93ce23a0f590a0be",
-        "records": 1700
+        "path": "snapshots/artifacts/cd8d6fde7eeface44f886aa8eeec97296164bdf44f7bd56519c0b0071b4c56d2.json",
+        "digest": "cd8d6fde7eeface44f886aa8eeec97296164bdf44f7bd56519c0b0071b4c56d2",
+        "records": 1781
       },
       {
-        "path": "snapshots/artifacts/0d6f42f097f0dce8d084b394394ab2d37221c6f6d46250f777b3ad49bffe4cc8.json",
-        "digest": "0d6f42f097f0dce8d084b394394ab2d37221c6f6d46250f777b3ad49bffe4cc8",
-        "records": 1698
+        "path": "snapshots/artifacts/68b603c299ffd1e9bc18fee101a66037a4e5cf7f0c6543a8e0828d9b25170821.json",
+        "digest": "68b603c299ffd1e9bc18fee101a66037a4e5cf7f0c6543a8e0828d9b25170821",
+        "records": 1782
       },
       {
-        "path": "snapshots/artifacts/a9bd12fd7ad14104a2528194d1dba25f90fbd49d77d919ba8f6d918d6ff4d044.json",
-        "digest": "a9bd12fd7ad14104a2528194d1dba25f90fbd49d77d919ba8f6d918d6ff4d044",
-        "records": 1730
+        "path": "snapshots/artifacts/43d8e93f824a1e09642867dcb4b60cefce895ba3cd40459ae88a40a5edaec238.json",
+        "digest": "43d8e93f824a1e09642867dcb4b60cefce895ba3cd40459ae88a40a5edaec238",
+        "records": 1807
       },
       {
-        "path": "snapshots/artifacts/5f346b984faa16b22d9ed77abda1187663b8b6786279c3c8ee44675901d6238e.json",
-        "digest": "5f346b984faa16b22d9ed77abda1187663b8b6786279c3c8ee44675901d6238e",
-        "records": 1815
+        "path": "snapshots/artifacts/339bb53e0f84ea8eeac53a29af7df2acea91fb13c5e3a3f6e99cb8ee7de9b7c0.json",
+        "digest": "339bb53e0f84ea8eeac53a29af7df2acea91fb13c5e3a3f6e99cb8ee7de9b7c0",
+        "records": 1909
       },
       {
-        "path": "snapshots/artifacts/c5dcffa6e9214d87094d606622fa781fedf386d931b4e943c8f1f28ea206acec.json",
-        "digest": "c5dcffa6e9214d87094d606622fa781fedf386d931b4e943c8f1f28ea206acec",
-        "records": 1669
+        "path": "snapshots/artifacts/a480f4070b008fd5eac2fc69a77f25c7eae151de4c0b13827ed8478a87a796f2.json",
+        "digest": "a480f4070b008fd5eac2fc69a77f25c7eae151de4c0b13827ed8478a87a796f2",
+        "records": 1744
       },
       {
-        "path": "snapshots/artifacts/0bc3466b1fac5ec184e623be7387083be6a938f8c9187801b4163bdff00fca28.json",
-        "digest": "0bc3466b1fac5ec184e623be7387083be6a938f8c9187801b4163bdff00fca28",
-        "records": 1715
+        "path": "snapshots/artifacts/d043b06c631b2ddd37e0d351a0d8cbf02f01139149c54452db9f0284521227c5.json",
+        "digest": "d043b06c631b2ddd37e0d351a0d8cbf02f01139149c54452db9f0284521227c5",
+        "records": 1790
       },
       {
-        "path": "snapshots/artifacts/7a6bf02c65a777b205a10ae540e849f060ab0893cec78be5d8a0fcf32afa6823.json",
-        "digest": "7a6bf02c65a777b205a10ae540e849f060ab0893cec78be5d8a0fcf32afa6823",
-        "records": 1692
+        "path": "snapshots/artifacts/fd6c6590721d7b492cced36bf3fe219c66940173124a0e4fbc130874fb81b77d.json",
+        "digest": "fd6c6590721d7b492cced36bf3fe219c66940173124a0e4fbc130874fb81b77d",
+        "records": 1778
       },
       {
-        "path": "snapshots/artifacts/157eda5cb81d8376503abb58e0a3006f6b331ce30889f5f360d9c864923fb0db.json",
-        "digest": "157eda5cb81d8376503abb58e0a3006f6b331ce30889f5f360d9c864923fb0db",
-        "records": 1745
+        "path": "snapshots/artifacts/0056325cc67bba7456e7be4cd60056f641bb935059cd00239c3732050da2b3ce.json",
+        "digest": "0056325cc67bba7456e7be4cd60056f641bb935059cd00239c3732050da2b3ce",
+        "records": 1823
       },
       {
-        "path": "snapshots/artifacts/67eb75581e6a334b068b7aa4a8c06b8abd093ee18e869dd4352e6f1f24bc502c.json",
-        "digest": "67eb75581e6a334b068b7aa4a8c06b8abd093ee18e869dd4352e6f1f24bc502c",
-        "records": 1746
+        "path": "snapshots/artifacts/2a7ec1965dddbeeecdd232bc82b74528b5bde146572a7b8adbd84b709f180277.json",
+        "digest": "2a7ec1965dddbeeecdd232bc82b74528b5bde146572a7b8adbd84b709f180277",
+        "records": 1823
       },
       {
-        "path": "snapshots/artifacts/2772ab4a43bca3139181cf8925bff50f9c331741744ec3d163a12464a2867ac7.json",
-        "digest": "2772ab4a43bca3139181cf8925bff50f9c331741744ec3d163a12464a2867ac7",
-        "records": 1749
+        "path": "snapshots/artifacts/f23857c1068d810c550ead2a0b1abbed8312cb385238c5d48a297ec8d015f878.json",
+        "digest": "f23857c1068d810c550ead2a0b1abbed8312cb385238c5d48a297ec8d015f878",
+        "records": 1835
       },
       {
-        "path": "snapshots/artifacts/7a636e2a0c69f5d448b3143c9e199430c1fbbfc7330b7c7cf48f4a0d4055e5fd.json",
-        "digest": "7a636e2a0c69f5d448b3143c9e199430c1fbbfc7330b7c7cf48f4a0d4055e5fd",
-        "records": 1666
+        "path": "snapshots/artifacts/e525a276524fad95dd8d02194278f5b57820e2f5db18d5b7e09653b012b8724e.json",
+        "digest": "e525a276524fad95dd8d02194278f5b57820e2f5db18d5b7e09653b012b8724e",
+        "records": 1752
       },
       {
-        "path": "snapshots/artifacts/3e53ce118d5649af3e48ab4a8fb598de5285e170984e49f3d261fdc02e9bddf1.json",
-        "digest": "3e53ce118d5649af3e48ab4a8fb598de5285e170984e49f3d261fdc02e9bddf1",
-        "records": 1701
+        "path": "snapshots/artifacts/46695e9196f0f0124ab10aab9df1bd3a22b5574434f14118f8441bb563379dd7.json",
+        "digest": "46695e9196f0f0124ab10aab9df1bd3a22b5574434f14118f8441bb563379dd7",
+        "records": 1775
       },
       {
-        "path": "snapshots/artifacts/edf23a66a1ec89eac5fca6b303a0cf5dda899397cfd44d2b777f74e33f9a3b6b.json",
-        "digest": "edf23a66a1ec89eac5fca6b303a0cf5dda899397cfd44d2b777f74e33f9a3b6b",
-        "records": 1746
+        "path": "snapshots/artifacts/f568d3ea40c7f6a8254d83d3a50d7f22fd80393d1f42d196d45e40ba624b08c7.json",
+        "digest": "f568d3ea40c7f6a8254d83d3a50d7f22fd80393d1f42d196d45e40ba624b08c7",
+        "records": 1806
       }
     ],
     "occurrences": [
@@ -32629,6 +33327,11 @@
         "records": 930
       },
       {
+        "path": "snapshots/occurrences/c7ee179e5c864836a024175ddf2ce2640234ee4306f450390b47b5cf40ea003b.json",
+        "digest": "c7ee179e5c864836a024175ddf2ce2640234ee4306f450390b47b5cf40ea003b",
+        "records": 1775
+      },
+      {
         "path": "snapshots/occurrences/a4696b8b4ca686fbaa78e2ac2eb4413c7995d4fb8567ea63a84fbb450d2aa460.json",
         "digest": "a4696b8b4ca686fbaa78e2ac2eb4413c7995d4fb8567ea63a84fbb450d2aa460",
         "records": 1126
@@ -32667,6 +33370,11 @@
         "path": "snapshots/occurrences/127f0b04764660ff4bd6389162ca4ea0a19b75eea4c12e8e029dbc30df13edee.json",
         "digest": "127f0b04764660ff4bd6389162ca4ea0a19b75eea4c12e8e029dbc30df13edee",
         "records": 129
+      },
+      {
+        "path": "snapshots/occurrences/6a3fdf817a72b4cae75490d2a37b5ae1df35bdc8c2dd84f7b83a5a420c57d120.json",
+        "digest": "6a3fdf817a72b4cae75490d2a37b5ae1df35bdc8c2dd84f7b83a5a420c57d120",
+        "records": 1845
       },
       {
         "path": "snapshots/occurrences/757a04c642f6e916fedeb015658b3650ff1780faa1cd9a0af4e257bc396e7752.json",
@@ -32896,6 +33604,11 @@
         "records": 1687
       },
       {
+        "path": "snapshots/edges/f58982efcea98312446a85f269e2b45b08dfffb051b9ca7a24d44324fc48f9ce.json",
+        "digest": "f58982efcea98312446a85f269e2b45b08dfffb051b9ca7a24d44324fc48f9ce",
+        "records": 4298
+      },
+      {
         "path": "snapshots/edges/25382e85d2ebfad4fc187ef2705eb48317b8f9db0e80d26a4e128e99a2d7cc32.json",
         "digest": "25382e85d2ebfad4fc187ef2705eb48317b8f9db0e80d26a4e128e99a2d7cc32",
         "records": 2409
@@ -32939,6 +33652,11 @@
         "path": "snapshots/edges/732ffb15fb9a61d4d80978beff13cf07875758cd5ae35202adc7232f5a2ea533.json",
         "digest": "732ffb15fb9a61d4d80978beff13cf07875758cd5ae35202adc7232f5a2ea533",
         "records": 165
+      },
+      {
+        "path": "snapshots/edges/435e73c9e232430c96af3c9c2cdc7b541ccef79705c827d0657041f60c540137.json",
+        "digest": "435e73c9e232430c96af3c9c2cdc7b541ccef79705c827d0657041f60c540137",
+        "records": 4537
       },
       {
         "path": "snapshots/edges/5262bbef982f98fc4b980367c914fb2ed7a146f048d82332880ee29b46ecd776.json",

@@ -1,12 +1,12 @@
 {
-  "snapshot": "ee5d740cd912f1bbc7a6f6af9df6c2b3b833cff36f4e66e42dea04e8d7f8dcd1",
+  "snapshot": "87b1947c7dc8a348b5bfc12c5501f2645aefaeddcf646cf705ab63eea308499d",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 33,
-  "profiles": 37,
+  "withProfiles": 35,
+  "profiles": 39,
   "completeProfiles": 5,
   "capabilityFindings": [],
-  "unresolvedTools": 236,
+  "unresolvedTools": 234,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -9187,6 +9187,15 @@
     },
     {
       "toolId": "masumi",
+      "id": "gap:35c4b17479fddb0172e99a18",
+      "area": "artifact",
+      "reason": "Selected masumi-payment-service and admin-frontend manifests are 0.1.0 on pinned default-branch source, not a verified stable distribution. Backend and admin frontend have separate build steps. The source declares pnpm 10.30.2; its Dockerfile installs unpinned pnpm and Node image tags.",
+      "nextAction": "Verify deployed service/frontend and container provenance against this source revision.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+      "code": "payment-app-scope:masumi:artifact"
+    },
+    {
+      "toolId": "masumi",
       "id": "gap:4abbaad672af9beef40f0088",
       "area": "artifact",
       "reason": "No GitHub stable release was found; default-branch source is discovery evidence only.",
@@ -9194,11 +9203,45 @@
     },
     {
       "toolId": "masumi",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:4d4585cb24476be092dda79a",
+      "area": "integration",
+      "reason": "Payment-source V1/V2 dispatch and Hydra client/configuration source are retained for later review. Active payment source, contract identifiers, Blockfrost/network, Hydra and database deployments remain unverified. A lucid-cardano dependency is retained as consumer evidence; original Lucid remains excluded from standalone readiness work. No capability or service-version relationship is asserted.",
+      "nextAction": "Prepare production workflow review with explicit payment-source and deployment configuration; do not infer deployed services from package names.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+      "code": "payment-app-scope:masumi:integration"
+    },
+    {
+      "toolId": "masumi",
+      "id": "gap:524adf54a56ca9dd8585cfa5",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Local or patched artifact http-cache-semantics@4.3.0(patch_hash=31ee930f09fb2810d6093b14bf15373eb06d0a4ea391a2fed254a3dd8b7b9549) needs source-content verification beyond the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
+    },
+    {
+      "toolId": "masumi",
+      "id": "gap:72bc80d9f44269ccf1bc0438",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
+    },
+    {
+      "toolId": "masumi",
+      "id": "gap:7ee91a109775505d3bc92c87",
+      "area": "resolution",
+      "reason": "All seven pnpm importers were checked: two manifest/lock specifier differences match recorded overrides (@opentelemetry/core and postcss); eleven payment-core lock dependencies match declared peers. Lock-resolved peer selections do not establish installed activation. Two patch files are retained but patched distribution bytes are unverified. Separate Hydra-host images, Aiken payment/registry contract builds, native/WASM outputs and generated Prisma clients are outside the selected backend/admin build closure.",
+      "nextAction": "Capture selected deployment build outputs, contract/compiler inputs and native/container provenance; retain distinct Mesh SDK versions rather than merging their resolution contexts.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796",
+      "code": "payment-app-scope:masumi:resolution"
+    },
+    {
+      "toolId": "masumi",
+      "id": "gap:80bb91a1f4bf7d5925088cca",
+      "area": "resolution",
+      "reason": "Local or patched artifact @sundaeswap/core@1.3.47(patch_hash=026cf12da9e53a1c16faf4e98d8359e0d5d34c3532b1cc212f263d7c191e446f)(@blaze-cardano/sdk@0.2.48(rxjs@7.8.2))(@sundaeswap/asset@1.0.11)(@sundaeswap/bigint-math@0.6.3)(@sundaeswap/cpp@1.0.13(@sundaeswap/asset@1.0.11)(@sundaeswap/bigint-math@0.6.3)(@sundaeswap/fraction@1.0.8))(@sundaeswap/fraction@1.0.8)(lucid-cardano@0.10.7) needs source-content verification beyond the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:masumi:83e7be70bb0367a0e8f57796"
     },
     {
       "toolId": "masumi-registry-service",
@@ -11811,11 +11854,36 @@
     },
     {
       "toolId": "sokosumi",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:50c6727755e3e3707fc6d1b9",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Local or patched artifact @testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.2)(vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0))) needs source-content verification beyond the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:52f439e49b96ec351b5a5e57",
+      "area": "resolution",
+      "reason": "pnpm environment document is retained separately: configuration and package-manager dependencies are not part of this project graph. Their build/toolchain closure and executed plugin behavior remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:87bbaedb570bb1ac6b7321bb",
+      "area": "artifact",
+      "reason": "Selected roots are web (manifest 0.1.0) and @sokosumi/core (no manifest version) at repository tag macos-v1.1.1. That Apple release tag does not establish web/Core deployment versions; the CLI manifest is separately 1.0.4. Native Apple, CMO and CLI applications are not selected roots.",
+      "nextAction": "Identify deployed web/Core artifacts and source correspondence separately from the macOS release tag; preserve unknown Core version.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+      "code": "payment-app-scope:sokosumi:artifact"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:94a4212f1be1b6cad05df071",
+      "area": "resolution",
+      "reason": "Local or patched artifact vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0)) needs source-content verification beyond the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78"
     },
     {
       "toolId": "sokosumi",
@@ -11823,6 +11891,40 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:d01c88adcdd23d8593c4beb6",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:d896e86c68bb813b16141c68",
+      "area": "integration",
+      "reason": "Retained web/Core clients configure Core, payment and registry URLs and network at runtime. Their presence does not identify the deployed Masumi service revision or establish a verified relationship to the separately collected Masumi profile. Database, agent services, authentication and other hosted dependencies remain unreviewed; no capability findings are imported.",
+      "nextAction": "Capture production endpoint/network configuration and review workflow wiring before accepting service identity or capability findings.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+      "code": "payment-app-scope:sokosumi:integration"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:da35beffbd3f1d78d1a1ee96",
+      "area": "resolution",
+      "reason": "The pnpm 12.11.2 lock has environment and project documents. All thirteen project importer dependency declarations match their manifests. Environment packages and the full source lock are retained; their build/toolchain closure is an explicit frontier. The configured Vitest patch is retained, while patched/installed bytes, generated Prisma clients and platform-specific native outputs remain unverified.",
+      "nextAction": "Verify the selected installed platform and build outputs; investigate environment/config dependencies separately from application exposure.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78",
+      "code": "payment-app-scope:sokosumi:resolution"
+    },
+    {
+      "toolId": "sokosumi",
+      "id": "gap:ebd7644842e0313262277abb",
+      "area": "resolution",
+      "reason": "Local or patched artifact better-auth@1.7.9(@opentelemetry/api@1.9.1)(@prisma/client@7.10.0(prisma@7.10.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(typescript@7.0.2))(mysql2@3.15.3)(next@16.4.1(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(pg@8.23.1)(prisma@7.10.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@7.0.2))(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vitest@5.0.4(patch_hash=fc8076fcb017eacccb523039859b57b11146fa35e2bded1e72b0c6dab075e1af)(@opentelemetry/api@1.9.1)(@types/node@24.19.2)(happy-dom@21.0.1)(vite@8.3.4(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.2)(tsx@4.23.15)(yaml@2.9.0)))(vue@3.5.41(typescript@7.0.2)) needs source-content verification beyond the lockfile.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:sokosumi:378b837174d64744243e8d78"
     },
     {
       "toolId": "sorbet",

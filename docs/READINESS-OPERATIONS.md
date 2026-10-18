@@ -60,6 +60,17 @@ Results are reused for unchanged requests. Cargo cache keys include the toolchai
 
 pnpm collection reads committed v9 lock snapshots and importer manifests without installing dependencies. Workspace links, aliases, and peer-specific selections retain their resolution contexts. Patched/local packages and installed-platform pruning remain explicit gaps. Nested locks use `--path path/to/pnpm-lock.yaml`.
 
+Both single-document and environment-plus-project pnpm locks are supported.
+Following [pnpm's lockfile documentation](https://github.com/pnpm/pnpm.io/blob/main/docs/lockfile.md),
+the last document supplies the project graph. An optional first document is
+retained in native evidence as `environmentLock`, with an explicit unresolved
+build/toolchain boundary for its configuration and package-manager dependencies.
+Those packages are not counted as application exposure. Unexpected document
+counts, ordering or versions fail collection. Existing single-document captures
+retain their original cache identity and replay behavior; two-document captures
+use `committed-lockfile:pnpm-environment-v1`. No config plugin or install script
+is executed.
+
 Yarn collection (`--adapter yarn-lock --platform all-lockfile-targets`) reads
 Classic v1 locks using the pinned official `@yarnpkg/lockfile` parser, or modern
 Yarn YAML with metadata version 6/8/10 using `@yarnpkg/parsers`. A companion manifest is required; modern

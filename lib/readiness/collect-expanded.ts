@@ -1,6 +1,7 @@
 import { dirname, posix } from "node:path";
 import { existsSync, readFileSync } from "node:fs";
 import { load, JSON_SCHEMA } from "js-yaml";
+import { parsePnpmLock, pnpmPatchPaths } from "./pnpm";
 import { digest, object } from "./core";
 import { parseJsonStream } from "./go";
 import { pinnedCheckout, sourcePath, retainSource, execute, normalizeNativePaths } from "./source";
@@ -25,9 +26,11 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   const diagnostics: { command: string; exitCode: number; stderr: string }[] = [];
   const normalization: Record<string, string> = { [root]: "/source" };
   if (options.adapter === "pnpm-lock") {
+    const parsed = parsePnpmLock(readFileSync(sourcePath(root, path), "utf8"));
+    if (parsed.environmentLock) selection.resolverContext = "committed-lockfile:pnpm-environment-v1";
     const cached = reuseCollection(snapshot, store, options, selection);
     if (cached) return cached;
-    const lock = object(load(readFileSync(sourcePath(root, path), "utf8"), { schema: JSON_SCHEMA }));
+    const { lock } = parsed;
     const manifests: Record<string, unknown> = {};
     supportPaths = [path, posix.join(posix.dirname(path), "pnpm-workspace.yaml"), posix.join(posix.dirname(path), ".npmrc")];
     for (const importer of Object.keys(object(lock.importers))) {
@@ -35,9 +38,12 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
       const full = sourcePath(root, file);
       if (existsSync(full)) { manifests[importer] = JSON.parse(readFileSync(full, "utf8")); supportPaths.push(file); }
     }
-    for (const patch of Object.values(object(lock.patchedDependencies ?? {}))) {
-      const patchPath = object(patch).path;
-      if (typeof patchPath === "string") supportPaths.push(posix.join(posix.dirname(path), patchPath));
+    const workspacePath = sourcePath(root, posix.join(posix.dirname(path), "pnpm-workspace.yaml"));
+    const workspace = existsSync(workspacePath) ? object(load(readFileSync(workspacePath, "utf8"), { schema: JSON_SCHEMA })) : {};
+    for (const patchPath of pnpmPatchPaths(lock, workspace)) {
+      const relativePath = posix.join(posix.dirname(path), patchPath);
+      if (!existsSync(sourcePath(root, relativePath))) throw new Error(`Missing pnpm patch input ${relativePath}`);
+      supportPaths.push(relativePath);
     }
     const registries: Record<string, string> = { default: "https://registry.npmjs.org/" };
     const npmrc = sourcePath(root, posix.join(posix.dirname(path), ".npmrc"));
@@ -48,7 +54,7 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
         registries[match[1] ?? "default"] = match[2];
       }
     }
-    raw = { lock, manifests, sourceDirectory: posix.dirname(path), registries };
+    raw = { ...parsed, manifests, sourceDirectory: posix.dirname(path), registries };
     command = `Read committed ${path} and importer manifests at ${tool.revision}`;
     toolchain = `pnpm lockfile format ${lock.lockfileVersion}; producing pnpm version recorded in source manifests when available`;
     features = ["all-lockfile-targets", "workspace-peer-contexts"];
