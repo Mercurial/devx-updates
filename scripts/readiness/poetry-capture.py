@@ -64,24 +64,28 @@ def capture(directory, lock_name):
             raise ValueError("Ambiguous native Poetry package identity")
         by_native.append(matches[0])
 
-    def dependencies(package, is_root=False):
+    def dependencies(package, owner_group=None):
         result = []
-        for dep in (package.all_requires if is_root else package.requires):
-            targets = [str(i) for i, candidate in enumerate(by_native) if candidate.satisfies(dep)]
-            groups = sorted(dep.groups) if is_root else ["main"]
-            condition = {
-                "marker": str(dep.marker), "python": dep.python_versions,
-                "extras": sorted(dep.extras), "inExtras": sorted(dep.in_extras),
-            }
-            result.append({"name": dep.name, "constraint": dep.pretty_constraint,
-                           "targets": targets, "groups": groups,
-                           "optional": dep.is_optional(), "condition": condition})
+        for dep in (package.all_requires if owner_group is None else package.requires):
+            groups = sorted(dep.groups) if owner_group is None else [owner_group]
+            for group in groups:
+                targets = [f"{i}:{group}" for i, candidate in enumerate(by_native)
+                           if group in metadata[i]["groups"] and candidate.satisfies(dep)]
+                condition = {
+                    "marker": str(dep.marker), "python": dep.python_versions,
+                    "extras": sorted(dep.extras), "inExtras": sorted(dep.in_extras),
+                }
+                result.append({"name": dep.name, "constraint": dep.pretty_constraint,
+                               "targets": targets, "groups": [group],
+                               "optional": dep.is_optional(), "condition": condition})
         return result
 
     return {"formatVersion": 1, "toolchain": versions(), "lock": lock, "manifest": manifest,
-            "root": {"name": root.name, "version": str(root.version), "dependencies": dependencies(root, True)},
-            "packages": [{"id": str(i), "name": p.name, "version": str(p.version),
-                          "dependencies": dependencies(p)} for i, p in enumerate(by_native)]}
+            "root": {"name": root.name, "version": str(root.version), "dependencies": dependencies(root)},
+            "packages": [{"id": f"{i}:{group}", "lockIndex": i, "group": group,
+                          "name": p.name, "version": str(p.version),
+                          "dependencies": dependencies(p, group)}
+                         for i, p in enumerate(by_native) for group in sorted(metadata[i]["groups"])]}
 
 
 if __name__ == "__main__":

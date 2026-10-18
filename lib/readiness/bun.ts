@@ -79,8 +79,14 @@ export function resolveBun(data: Record<string, unknown>, ctx: AdapterContext) {
     }
   }
   function dependencies(locator: string, entry: Record<string, unknown>, key: string, workspace: boolean) {
-    for (const field of fields) for (const [name, value] of Object.entries(object(entry[field] ?? {}))) {
-      if (field === "dependencies" && name in object(entry.optionalDependencies ?? {})) continue;
+    const selected = new Map<string, string>();
+    // Native Bun chooses the first declaration in dev -> optional -> prod -> peer order.
+    for (const field of ["devDependencies", "optionalDependencies", "dependencies", "peerDependencies"] as const) for (const [name, value] of Object.entries(object(entry[field] ?? {}))) {
+      if (selected.has(name)) {
+        ctx.gap(`Bun ${field} ${name} from ${locator} is shadowed by ${selected.get(name)}; production-only selection requires a separate capture.`);
+        continue;
+      }
+      selected.set(name, field);
       const peer = field === "peerDependencies";
       const optional = field === "optionalDependencies" || (peer && list(entry.optionalPeers ?? []).includes(name));
       const target = workspace ? targets.get(`${key}/${name}`) ?? targets.get(name) : lookup(key, name);

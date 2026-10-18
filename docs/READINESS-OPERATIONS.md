@@ -370,8 +370,8 @@ when the tooling interpreter is available; install it to run that test in CI/loc
 
 Every group, extra declaration, marker and candidate wheel/sdist hash is retained.
 The graph preserves matching alternatives with their conditions, without selecting
-a target environment or claiming an installed distribution hash. Non-main groups
-are development scope. PEP 621 manifests and direct/local/git dependencies are
+a target environment or claiming an installed distribution hash. Each locked group has separate package occurrences, so transitive edges stay in
+their selected group. Non-main groups are development scope. PEP 621 manifests and direct/local/git dependencies are
 explicitly rejected by this first boundary; it does not run local metadata hooks.
 Build-backend dependencies, native libraries and release provenance remain gaps.
 Both adapters use collection registration, bounded batches, retry, evidence-checked
