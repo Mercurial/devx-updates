@@ -1,6 +1,7 @@
+import { compareSnapshots } from "./comparison";
 import { join } from "node:path";
 import { existsSync } from "node:fs";
-import { calculateImpact, type compareSnapshots } from "./impact";
+import { calculateImpact } from "./impact";
 import { readJson, Store } from "./store";
 import type { Snapshot } from "./types";
 import { reconcileReviewQueue, type ReviewQueueEntry } from "./review";
@@ -32,5 +33,5 @@ export function readinessChanges(): ReturnType<typeof compareSnapshots> | null {
   const path = join(process.cwd(), "data/readiness/changes.json");
   if (!existsSync(path)) return null;
   const changes = readJson(path) as ReturnType<typeof compareSnapshots>;
-  return changes.to === readinessSnapshot().semanticDigest ? changes : null;
+  return changes.schemaVersion === 2 && changes.to === readinessSnapshot().semanticDigest ? changes : null;
 }

@@ -837,6 +837,53 @@ errors. Cabal remains a documented import-only workflow; executable collection r
 follow-up work. Owner-launched consumer reviews and the Dijkstra immutable target
 and environment decisions remain independent open tracks.
 
+### Active continuation: explain snapshot changes
+
+An audit of section 4.5 found that the original comparison exposed ID/count deltas
+but did not explain version or downstream-reach changes. Comparison schema 2 adds
+before/after tool coverage and source observations, profile context changes,
+recorded version sets and exact-artifact reach changes for every exposure scope.
+Equal counts with different consumers remain visible. Each added/removed consumer
+has a witness from the appropriate snapshot: release/profile, labeled occurrences,
+actual edge sequence and retained evidence references. Parallel edges are selected
+using the same exposure rules as reach calculation, so suggested evidence cannot
+explain a verified count.
+
+Version inventories include selected roots and reachable dependencies across all
+retained profiles, excluding unrelated native-plan entries. Source namespaces and
+fork distinctions match existing impact grouping. Observations describe recorded
+changes without assuming deployment or upgrade: an additional version may coexist
+with historical selections, and an input digest alone cannot distinguish an
+adapter update from changed inputs or evidence correction.
+
+The static comparison view provides search, exposure/relationship-type filtering,
+pagination and full/filtered exports. Relationship records preserve before/after
+endpoints, types, conditions and citations even when reach is unchanged. Removed-side evidence travels with the comparison rather
+than relying on current graph records. Older comparison formats must be regenerated;
+stale comparisons remain hidden. ADR-1 and ADR-2 continue to apply: all analysis is
+performed from retained snapshots and the website needs no runtime service.
+
+Validation: all 101 readiness tests, TypeScript and scoped lint pass. The full
+current impact projection remains identical after sharing exposure rules. The
+retained Atlas comparison has one changed tool, 488 changed recorded-version
+groups, 487 artifacts with changed reach (514 exposure rows), and 5,930 added
+relationship records. The canonical snapshot digest remains unchanged.
+
+Standards review found no issues. Specification review found two issues, both
+fixed and regression-tested: unchanged reach previously hid integration record
+details, and newly cataloged unresolved tools could falsely report a source change.
+Follow-up review found no remaining actionable issues. The static export passed
+all 311 routes with `/devx-updates` as the base path. Chromium passed controlled
+fixtures and the real snapshot for all four views, search/type/scope filters,
+pagination, corrected and removed-side evidence, full/filtered exports, base-path
+links, mobile layout and console errors. Light/dark/mobile screenshots were checked.
+
+The detailed comparison is about 13 MB uncompressed, and the complete dashboard
+HTML is about 112 MiB because it embeds the existing graph reports plus comparison
+data. A subsequent performance slice should load committed report data on demand
+without losing coverage, evidence, paths or offline static hosting. Broader native
+coverage, owner-launched consumer reviews and Dijkstra assessment remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

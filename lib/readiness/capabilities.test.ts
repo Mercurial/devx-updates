@@ -1,3 +1,4 @@
+import { compareSnapshots } from "./comparison";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync, rmSync, readFileSync } from "node:fs";
@@ -8,7 +9,7 @@ import { canonical, inventory, finalize, validate } from "./core";
 import { resolveNative } from "./adapters";
 import { Store, addEvidence, mergeResolution, writeJson } from "./store";
 import { exportPacket, importReview, reviewPacket } from "./review";
-import { calculateImpact, compareSnapshots } from "./impact";
+import { calculateImpact } from "./impact";
 import { capabilityRows } from "./capabilities";
 import { rebuildNative } from "./rebuild";
 import type { Graph } from "../map-types";

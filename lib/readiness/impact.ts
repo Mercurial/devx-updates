@@ -1,5 +1,6 @@
-import type { Edge, Impact, Snapshot } from "./types";
-import { canonical, digest } from "./core";
+import { exposureBucket, followExposure, ROOT_EXPOSURE } from "./exposure";
+import type { Artifact, Edge, Impact, Snapshot } from "./types";
+import { digest } from "./core";
 
 /** Each walk stays within one resolution profile, even when artifacts are shared. */
 export function calculateImpact(snapshot: Snapshot): Impact[] {
@@ -15,7 +16,7 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
     const requiredInProfile = new Set<string>();
     const optionalInProfile = new Set<string>();
     const ownArtifacts = new Set(profile.roots.map((id) => nodes.get(id)!.artifactId));
-    const queue = profile.roots.map((id) => ({ id, path: [id], scope: "runtime", optional: false, potential: false }));
+    const queue = profile.roots.map((id) => ({ id, path: [id], ...ROOT_EXPOSURE }));
     const visited = new Set<string>();
     for (let i = 0; i < queue.length; i++) {
       const current = queue[i];
@@ -25,7 +26,7 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
       const artifactId = nodes.get(current.id)!.artifactId;
       if (!ownArtifacts.has(artifactId) && current.path.length > 1) {
         const impact = results.get(artifactId) ?? { artifactId, required: [], optional: [], build: [], development: [], potential: [], paths: {} };
-        const bucket = current.potential ? "potential" : current.scope === "development" ? "development" : current.scope === "build" ? "build" : current.optional ? "optional" : "required";
+        const bucket = exposureBucket(current);
         if (bucket === "required") requiredInProfile.add(artifactId);
         if (bucket === "optional") optionalInProfile.add(artifactId);
         else if (!impact[bucket].includes(profile.toolId)) impact[bucket].push(profile.toolId);
@@ -34,8 +35,7 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
         results.set(artifactId, impact);
       }
       for (const edge of outgoing.get(current.id) ?? []) {
-        const scope = current.scope === "development" || edge.scope === "development" ? "development" : current.scope === "build" || edge.scope === "build" ? "build" : "runtime";
-        queue.push({ id: edge.to, path: [...current.path, edge.to], scope, optional: current.optional || edge.optional, potential: current.potential || edge.verification !== "verified" });
+        queue.push({ id: edge.to, path: [...current.path, edge.to], ...followExposure(current, edge) });
       }
     }
     for (const artifactId of optionalInProfile) {
@@ -50,22 +50,10 @@ export function calculateImpact(snapshot: Snapshot): Impact[] {
   return [...results.values()].sort((a, b) => b.required.length - a.required.length || b.potential.length - a.potential.length || a.artifactId.localeCompare(b.artifactId));
 }
 
-export function compareSnapshots(before: Snapshot, after: Snapshot) {
-  const coverageValue = (tool: Snapshot["tools"][number], key: keyof Snapshot["tools"][number]) => key === "gaps" ? tool.gaps.map(({ area, reason, nextAction, profileId }) => canonical({ area, reason, nextAction, profileId })).sort() : tool[key];
-  const change = <T extends { id: string }>(left: T[], right: T[]) => {
-    const old = new Set(left.map((v) => v.id)); const next = new Set(right.map((v) => v.id));
-    const previous = new Map(left.map((v) => [v.id, canonical(v)]));
-    return { added: [...next].filter((id) => !old.has(id)).sort(), removed: [...old].filter((id) => !next.has(id)).sort(), changed: right.filter((v) => previous.has(v.id) && previous.get(v.id) !== canonical(v)).map((v) => v.id).sort() };
-  };
-  return {
-    from: before.semanticDigest, to: after.semanticDigest,
-    artifacts: change(before.artifacts, after.artifacts), edges: change(before.edges, after.edges), profiles: change(before.profiles, after.profiles),
-    capabilities: change(before.capabilities ?? [], after.capabilities ?? []),
-    coverage: after.tools.filter((tool) => {
-      const previous = before.tools.find((t) => t.id === tool.id);
-      return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError", "gaps"].some((key) => canonical(coverageValue(previous, key as keyof typeof previous)) !== canonical(coverageValue(tool, key as keyof typeof tool)));
-    }).map((tool) => ({ toolId: tool.id, artifact: tool.artifact, resolution: tool.resolution, integration: tool.integration, capability: tool.capability, revision: tool.revision, discoveryError: tool.discoveryError })),
-  };
+export function projectIdentity(artifact: Artifact) {
+  // Only collapse version-bearing sources where the package namespace is known.
+  const source = artifact.ecosystem === "npm" && artifact.source.startsWith("https://registry.npmjs.org/") ? "https://registry.npmjs.org" : artifact.source.startsWith("git+") ? artifact.source.split("#")[0] : artifact.source;
+  return { id: `project:${digest({ ecosystem: artifact.ecosystem, name: artifact.name, source })}`, name: artifact.name, ecosystem: artifact.ecosystem, source };
 }
 
 export function aggregateProjects(snapshot: Snapshot, impacts = calculateImpact(snapshot)) {
@@ -73,9 +61,7 @@ export function aggregateProjects(snapshot: Snapshot, impacts = calculateImpact(
   const groups = new Map<string, { id: string; name: string; ecosystem: string; source: string; artifactIds: string[]; versions: string[]; impact: Impact }>();
   for (const impact of impacts) {
     const artifact = artifacts.get(impact.artifactId)!;
-    // Only collapse version-bearing sources where the package namespace is known.
-    const source = artifact.ecosystem === "npm" && artifact.source.startsWith("https://registry.npmjs.org/") ? "https://registry.npmjs.org" : artifact.source.startsWith("git+") ? artifact.source.split("#")[0] : artifact.source;
-    const id = `project:${digest({ ecosystem: artifact.ecosystem, name: artifact.name, source })}`;
+    const { id, source } = projectIdentity(artifact);
     const group = groups.get(id) ?? { id, name: artifact.name, ecosystem: artifact.ecosystem, source, artifactIds: [], versions: [], impact: { artifactId: id, required: [], optional: [], build: [], development: [], potential: [], paths: {} } };
     group.artifactIds.push(artifact.id);
     if (!group.versions.includes(artifact.version ?? "unknown")) group.versions.push(artifact.version ?? "unknown");

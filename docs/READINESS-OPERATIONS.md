@@ -383,7 +383,27 @@ npm run test:readiness
   of being silently deleted. Assignment changes never alter graph evidence or
   readiness. Catalog maintainer hints are separate from assigned owners and do
   not constitute verified contact information. No issues or messages are sent.
-- `changes.json`, when generated for the current snapshot, supplies the website's snapshot comparison.
+- `changes.json` uses comparison schema version 2 and must target the current
+  snapshot digest. Regenerate older comparisons with `diff`; stale or older-format
+  files are not displayed. The website offers searchable, paginated tool changes,
+  recorded versions, relationship changes, and exact-artifact reach changes, with full and filtered JSON
+  exports. Reach changes keep required, optional, build, development and potential
+  exposure separate; equal counts with different consumers still produce a change.
+  Added, removed and corrected relationship records retain endpoints, type, scope,
+  conditions and citations independently of reach changes. Native-plan records
+  outside the selected closure remain distinguishable from counted exposure.
+  Added and removed consumers carry a supporting path from their respective
+  snapshot, including the actual scoped/verified edges and retained evidence index.
+  Removed records remain explainable even when they no longer occur in the current
+  graph. Keep both compared snapshots and their evidence for complete reconstruction.
+  Version sets include selected roots and reachable dependencies across retained
+  historical profiles. They exclude unreachable native-plan records and reuse the
+  existing conservative source namespaces; a newly observed version does not
+  imply deployment, replacement or a consumer upgrade.
+  Tool observations expose before/after coverage, gaps and source identity, added
+  or removed profiles, configuration/command/toolchain changes and review decisions.
+  Changed input hashes alone cannot distinguish a collector update from changed
+  inputs or corrected evidence; the report says so instead of inventing a cause.
 - `replay` reconstructs native graph records and admitted manual relationships,
   capability findings and decisions from retained inputs, without network access
   or evidence writes. It compares the complete graph (including unexpected or

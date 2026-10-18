@@ -1,3 +1,4 @@
+import { compareSnapshots } from "../../lib/readiness/comparison";
 import { execFileSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { resolve, join } from "node:path";
@@ -8,7 +9,7 @@ import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover } from "../../lib/readiness/discovery";
 import { githubSource } from "../../lib/readiness/source";
 import { collect, refreshNative } from "../../lib/readiness/collect";
-import { calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
+import { calculateImpact } from "../../lib/readiness/impact";
 import { acquireLock, addEvidence, mergeResolution, readJson, readSnapshot, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
 import { rebuildNative } from "../../lib/readiness/rebuild";

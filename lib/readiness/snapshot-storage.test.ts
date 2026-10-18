@@ -1,3 +1,4 @@
+import { compareSnapshots } from "./comparison";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
@@ -8,7 +9,7 @@ import { canonical, digest, finalize, inventory } from "./core";
 import { parseNativeInput, resolveNative } from "./adapters";
 import { addEvidence, mergeResolution, readJson, readSnapshot, Store, writeJson } from "./store";
 import { decodeSnapshot, MAX_SNAPSHOT_CHUNK_BYTES, snapshotFiles } from "./snapshot-storage";
-import { aggregateProjects, calculateImpact, compareSnapshots } from "./impact";
+import { aggregateProjects, calculateImpact } from "./impact";
 import { reviewPacket } from "./review";
 
 function fixture() {
