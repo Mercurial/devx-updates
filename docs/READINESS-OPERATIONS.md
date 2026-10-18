@@ -21,7 +21,7 @@ npm run readiness -- show --tool oura
 npm run readiness -- candidates
 ```
 
-`candidates` lists npm, pnpm, Cargo, Go, and uv collection starting points, including nested workspaces. Use `--tools id,id` to narrow the output. Each candidate lists configuration requirements; package hints still need verification against pinned manifests. Unsupported ecosystems remain in the coverage backlog.
+`candidates` lists npm, pnpm, Yarn, Cargo, Go, and uv collection starting points, including nested workspaces. Use `--tools id,id` to narrow the output. Each candidate lists configuration requirements; package hints still need verification against pinned manifests. Unsupported ecosystems remain in the coverage backlog.
 
 ## Collect a native profile
 
@@ -52,6 +52,30 @@ Cargo collection checks out the pinned revision in `.readiness/sources/`, then r
 Results are reused for unchanged requests. Cargo cache keys include the toolchain and configuration/environment fingerprints; changed resolver inputs invalidate reuse. Use `--refresh` to deliberately rerun a collector. Source checkouts and job caches are disposable; retained evidence is not.
 
 pnpm collection reads committed v9 lock snapshots and importer manifests without installing dependencies. Workspace links, aliases, and peer-specific selections retain their resolution contexts. Patched/local packages and installed-platform pruning remain explicit gaps. Nested locks use `--path path/to/pnpm-lock.yaml`.
+
+Yarn collection (`--adapter yarn-lock --platform all-lockfile-targets`) reads
+Classic v1 locks using the pinned official `@yarnpkg/lockfile` parser, or modern
+Yarn YAML with metadata version 8/10 using `@yarnpkg/parsers`. A companion manifest is required; modern
+workspace manifests restore package names, versions, and runtime/development scope.
+Nested projects use `--path path/to/yarn.lock`. Repository configuration and
+manifests are retained with parsed native selections; no package installation,
+user configuration, plugins or project scripts run. Registered requests refresh
+through the existing queue/cache workflow without a Yarn toolchain installation.
+
+Yarn lock records establish declared selections, not an installed dependency tree.
+Peer bindings are left unresolved; platform conditions remain conditional edges.
+Classic workspace linking, unlisted selectors, ambiguous descriptors, opaque Git/
+local/patch sources, configuration extensions, native bundles and shipped artifact
+correspondence remain explicit gaps. Modern cache checksums are retained as raw
+evidence and never substituted for npm tarball integrity. Unknown lock versions
+and conflicting workspace identities fail collection. In modern captures, registry
+identity comes from committed `.yarnrc.yml` settings (including parent directories
+within the checkout); environment-dependent registry URLs are rejected.
+
+These boundaries follow [Yarn Classic's lockfile guarantees](https://classic.yarnpkg.com/blog/2017/05/31/determinism/),
+the [official Classic parser](https://github.com/yarnpkg/yarn/tree/master/packages/lockfile),
+and modern Yarn's [virtual package model](https://yarnpkg.com/advanced/pnp-spec)
+and [registry configuration](https://yarnpkg.com/configuration/yarnrc).
 
 Go collection runs `go list -e -deps -json -mod=readonly` for runtime and test graphs. It uses explicit `GOOS/GOARCH`, disables cgo and workspace overlays, and prevents automatic toolchain downloads. Select packages with `--packages ./...` and tags with `--tags tag,tag`; defaults cover every package in the selected module. Replacements preserve their actual source identity. Missing packages and native errors produce partial coverage. This is package-import coverage for the declared configuration, not a module-lock interpretation of `go.sum`.
 
@@ -149,7 +173,7 @@ Example profile:
 
 Replace placeholders with observed values. For Cabal, import `dist-newstyle/cache/plan.json` from the declared build configuration. Preserve index states, project flags, and release/build provenance as source evidence. `release-build` is reserved for an actual release build's output; reconstructing source locally is not equivalent.
 
-Supported adapters are `npm-lock`, `pnpm-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Yarn, older pnpm lock formats, Python projects without uv locks, and other unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
+Supported adapters are `npm-lock`, `pnpm-lock`, `yarn-lock`, `cargo-metadata`, `cabal-plan`, `go-packages`, and `uv-tree`. Cabal remains import-only. Other Yarn versions/installed peer contexts, older pnpm lock formats, Python projects without uv locks, and unsupported build systems remain visible coverage work. No synthetic resolution is substituted.
 
 ## Manual review handoff
 

@@ -178,6 +178,32 @@ capability reviews of the collected consumers. Use their observed shared upstrea
 dependencies to prioritize investigation. Cabal/GHC collection and the selected
 hardfork target/environment remain separate open prerequisites.
 
+### Active continuation: Yarn-based wallet and SDK workflows
+
+The next coverage boundary is Yarn production inputs: AdaLite (web wallet),
+Daedalus (full-node desktop wallet), TyphonJS (wallet transaction SDK), Cometa
+(SDK with native/WASM bindings), and Cardano Web3 (provider-backed SDK). Source
+inspection found Classic v1 locks and modern metadata versions 8/10. This batch
+implements offline collection and retained evidence under ADR-1/ADR-2; it does
+not install consumer dependencies or execute project build scripts.
+
+- [x] Add evidence-backed Classic/modern Yarn capture, normalization, candidates, and recurring registration with explicit unsupported inputs.
+- [ ] Verify and attempt the five pinned production requests in bounded batches; retain failures and source/release/native/service boundary gaps.
+- [ ] Validate/replay evidence, regenerate reports/comparison, check static export, review, and commit locally.
+
+Lock records will be treated as declared dependency selections. Peer bindings,
+hoisting, installed-platform pruning, patches and shipped artifact correspondence
+remain unresolved unless separately evidenced. Modern Yarn cache checksums are
+not npm tarball integrity hashes. Unknown lock versions and ambiguous selections
+must fail or remain explicit gaps rather than becoming guessed verified edges.
+
+Source checkpoint: official Yarn parsers are pinned for Classic and modern input.
+AdaLite's configuration requires the modern parser's own YAML semantics; after
+parsing, its lock is rejected because `js-tokens@npm:4.0.0` declares version
+`0.0.0-use.local`. This is a retained, retryable source-data failure, not a
+successful profile. Corrected source and renewed revision review are required.
+Other selected consumers continue independently.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

@@ -8,6 +8,7 @@ import { addEvidence, Store } from "./store";
 import type { NativeInput, Snapshot } from "./types";
 import { collectionRequests, publishCollection, reuseCollection, type CollectOptions, type RefreshSelection } from "./collection";
 import { collectExpanded } from "./collect-expanded";
+import { collectYarn } from "./collect-yarn";
 import { githubSource, normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 
 const exec = promisify(execFile);
@@ -25,6 +26,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   const tool = snapshot.tools.find((t) => t.id === options.toolId);
   if (!tool?.revision || !tool.repo || !tool.release) throw new Error("Discover this tool's immutable source first");
   try {
+    if (options.adapter === "yarn-lock") return await collectYarn(snapshot, store, options);
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
     const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: options.adapter === "npm-lock" ? "committed-lockfile:npm-workspaces-v1" : "committed-lockfile" };
     const directory = options.adapter === "cargo-metadata" ? await pinnedCheckout(tool.repo, tool.revision, options.stateDir) : resolve(options.stateDir, "sources", tool.revision);

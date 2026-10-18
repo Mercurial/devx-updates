@@ -4,6 +4,7 @@ import { NATIVE_ADAPTERS } from "./types";
 import { resolvePnpm } from "./pnpm";
 import { resolveGo } from "./go";
 import { resolveUv } from "./uv";
+import { resolveYarn } from "./yarn";
 import type { AdapterContext } from "./adapter-context";
 
 export function parseNativeInput(value: unknown): NativeInput {
@@ -22,7 +23,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   const wrappedNpm = input.adapter === "npm-lock" && "formatVersion" in native;
   if (wrappedNpm && native.formatVersion !== 1) throw new Error("Unsupported npm capture format");
   const data = wrappedNpm ? object(native.lock, "npm lock") : native;
-  const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(input.adapter) ? 3 : 2 });
+  const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: ["pnpm-lock", "yarn-lock", "go-packages", "uv-tree"].includes(input.adapter) ? 3 : 2 });
   const evidenceIds = [...new Set([evidence.native, evidence.configuration, ...(evidence.supporting ?? [])])].sort();
   const profileId = `profile:${input.toolId}:${inputDigest.slice(0, 24)}`;
   const result: Resolution = {
@@ -33,7 +34,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
   const artifactIds = new Set<string>();
   const edgeIds = new Set<string>();
   const addNode = (locator: string, name: string, version: string | null, source: string, integrity: string | null) => {
-    const ecosystem = input.adapter === "pnpm-lock" ? "npm" : input.adapter === "uv-tree" ? "python" : input.adapter.split("-")[0];
+    const ecosystem = ["pnpm-lock", "yarn-lock"].includes(input.adapter) ? "npm" : input.adapter === "uv-tree" ? "python" : input.adapter.split("-")[0];
     const a = artifact({ ecosystem, name, version, source, integrity });
     if (!artifactIds.has(a.id)) { result.artifacts.push(a); artifactIds.add(a.id); }
     const id = `occurrence:${digest({ profileId, locator })}`;
@@ -58,6 +59,7 @@ export function resolveNative(raw: unknown, input: NativeInput, evidence: { nati
     if (!id) missing(`Unresolved root ${locator}`); else if (!result.profile.roots.includes(id)) result.profile.roots.push(id);
   } };
   if (input.adapter === "pnpm-lock") resolvePnpm(data, context);
+  else if (input.adapter === "yarn-lock") resolveYarn(data, context);
   else if (input.adapter === "go-packages") resolveGo(data, context);
   else if (input.adapter === "uv-tree") resolveUv(data, context);
   else if (input.adapter === "npm-lock") {

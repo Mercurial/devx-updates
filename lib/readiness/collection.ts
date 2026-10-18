@@ -58,7 +58,7 @@ export interface CollectionSelection extends Omit<CollectionRequest, "toolId" | 
   resolverContext: string;
 }
 
-export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(selection.adapter) ? 3 : 2 });
+export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: ["pnpm-lock", "yarn-lock", "go-packages", "uv-tree"].includes(selection.adapter) ? 3 : 2 });
 
 /** Both native cache hits and completed batch jobs require replayable input bytes. */
 export function retainedCollectionProfile(snapshot: Snapshot, store: Store, profileId: string | undefined, adapter: CollectAdapter) {

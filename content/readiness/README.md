@@ -51,3 +51,30 @@ Run `node --import tsx scripts/readiness/cli.ts collect-batch --input
 content/readiness/workflow-batch.json --limit 2` to advance the batch, or select
 one request with `--tools lace --limit 1`. Validate and replay separately before
 regenerating reports and committing the milestone.
+
+## Yarn wallet and SDK batch
+
+`yarn-batch.json` extends production coverage into an unsupported package manager
+instead of substituting incidental npm/Cargo manifests. These roots add web and
+full-node desktop wallets, wallet-oriented transaction construction, native/WASM
+bindings, and an SDK using several chain-data providers.
+
+| Tool / workflow | Selected production root | Pinned source/configuration caveat |
+| --- | --- | --- |
+| AdaLite / web wallet and server | `adalite-app`, `adalite-server` | Repository/root package 7.0.2, application manifest has no version, server manifest 6.18.1. Yarn 4.17.1 / lock metadata 10. Collection is blocked by conflicting lock identity: `js-tokens` declares `0.0.0-use.local` but resolves to `npm:4.0.0`. No profile is accepted; the request remains retryable pending corrected, verified source. Root build orchestration, deployed backend/providers and hardware-wallet behavior remain unassessed. |
+| Daedalus / full-node desktop wallet | `daedalus` | Source tag and manifest 11.5.0; declared Yarn 1.22.21, Classic v1 lock. JavaScript closure only: Nix inputs, bundled cardano-node/cardano-wallet, Electron/native rebuild output and platform installers need separate collection. |
+| TyphonJS / wallet transaction construction | `@stricahq/typhonjs` | Source tag/manifest 4.0.0; Yarn 4.13.0 / lock metadata 8. Published package correspondence and direct transaction/serialization behavior need evidence. This is the library profile, not a Typhon wallet deployment. |
+| Cometa / native-backed transaction SDK | `@biglup/cometa` | Source tag/manifest 1.2.0; Classic v1 lock, producing Yarn version unspecified. The manifest has no runtime npm dependencies; README/build scripts describe compiled, compressed and inlined libcardano-c WASM. The native runtime is an unresolved bundled-artifact boundary, not a dependency-free compatibility pass. |
+| Cardano Web3 / query and transaction SDK | `cardano-web3-js` | Source tag/manifest 2.3.4; Classic v1 lock, producing Yarn version unspecified. Declared Koios/Kupo/Ogmios clients and cardano-wasm-libs are captured; actual provider deployments and WASM artifact correspondence need separate review. |
+
+All captures retain exact source, manifest and lock evidence without installing
+dependencies. Classic declarations and modern workspace manifest scopes remain
+distinct; missing selectors, optional platform conditions, peer bindings, opaque
+sources and release correspondence remain visible gaps. Modern Yarn registry
+locators retain their registry identity and cache checksums are not tarball hashes.
+
+Run `node --import tsx scripts/readiness/cli.ts collect-batch --input
+content/readiness/yarn-batch.json --limit 2`, or select individual tools with
+`--tools`. Successful requests register for scheduled native refresh; other work
+stays pending or retryable. The operation remains local until separately reviewed
+publication.
