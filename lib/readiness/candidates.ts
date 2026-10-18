@@ -12,7 +12,7 @@ export function collectionCandidates(snapshot: Snapshot, toolIds?: string[]) {
       const sibling = (name: string) => posix.join(posix.dirname(path), name);
       if (file === "package-lock.json") candidates.push({ adapter: "npm-lock", path, requirements: ["npm lockfile v2/v3", "root package names", "all-platform lock scope"] });
       if (file === "pnpm-lock.yaml") candidates.push({ adapter: "pnpm-lock", path, requirements: ["pnpm lockfile v9", "workspace root package names", "all-platform lock scope"] });
-      if (file === "yarn.lock" && manifests.has(sibling("package.json"))) candidates.push({ adapter: "yarn-lock", path, requirements: ["Classic v1 or modern Yarn metadata v8/v10", "production package/workspace manifests", "all-platform lock scope; peer bindings unresolved"] });
+      if (file === "yarn.lock" && manifests.has(sibling("package.json"))) candidates.push({ adapter: "yarn-lock", path, requirements: ["Classic v1 or modern Yarn metadata v6/v8/v10", "production package/workspace manifests", "all-platform lock scope; peer bindings unresolved"] });
       if (file === "Cargo.lock" && manifests.has(sibling("Cargo.toml"))) candidates.push({ adapter: "cargo-metadata", path: sibling("Cargo.toml"), requirements: ["Cargo toolchain", "workspace root package names", "target platform"] });
       if (file === "go.mod") candidates.push({ adapter: "go-packages", path, requirements: ["Go toolchain", "module/package roots", "GOOS/GOARCH", "package patterns and build tags"] });
       if (file === "uv.lock" && manifests.has(sibling("pyproject.toml"))) candidates.push({ adapter: "uv-tree", path: sibling("pyproject.toml"), requirements: ["uv with JSON tree support", "workspace root package names", "Python version and platform"] });

@@ -101,6 +101,8 @@ test("modern Yarn selects production workspaces and keeps development, platform 
 
 test("Yarn rejects unknown formats and conflicting identities rather than selecting a plausible package", () => {
   assert.throws(() => parseYarnLock('__metadata:\n  version: 99\n'), /Unsupported modern/);
+  const unknown = modern(); unknown.lock.__metadata.version = 99;
+  assert.throws(() => resolveNative(unknown, input, evidence), /Unsupported modern/);
   assert.throws(() => parseYarnLock(`# yarn lockfile v1\n<<<<<<< HEAD\na@1:\n  version "1"\n=======\na@1:\n  version "2"\n>>>>>>> branch\n`), /conflict/);
   const raw = modern(); raw.manifests["packages/sdk"].name = "wrong";
   assert.throws(() => resolveNative(raw, input, evidence), /identity disagrees/);
@@ -112,6 +114,67 @@ test("Yarn rejects unknown formats and conflicting identities rather than select
   assert.ok(result.gaps.some((g) => g.reason.includes("Ambiguous Yarn descriptor")));
   const testIds = new Set(result.occurrences.filter((o) => o.locator.startsWith("lock:test@")).map((o) => o.id));
   assert.ok(!result.edges.some((e) => testIds.has(e.to)), "ambiguous selection cannot enter verified impact");
+});
+
+test("Yarn 3 metadata v6 resolves bare ranges and workspace aliases without inventing installed peer or artifact identity", () => {
+  // Yarn 3.2.1 Project.generateLockfile emits these fields: unprefixed dependency
+  // ranges, grouped descriptors, workspace placeholders and cache checksums.
+  const parsed = parseYarnLock(`__metadata:
+  version: 6
+  cacheKey: 8
+"monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "monorepo@workspace:."
+  dependencies:
+    tooling: ^1
+"wallet@workspace:packages/wallet":
+  version: 0.0.0-use.local
+  resolution: "wallet@workspace:packages/wallet"
+  dependencies:
+    sdk: "workspace:~"
+    test: ^1
+"sdk@workspace:~, sdk@workspace:packages/sdk":
+  version: 0.0.0-use.local
+  resolution: "sdk@workspace:packages/sdk"
+  dependencies:
+    native: ^1
+"native@npm:^1, native@npm:1.0.0":
+  version: 1.0.0
+  resolution: "native@npm:1.0.0"
+  checksum: abcdef
+  conditions: os=darwin
+  peerDependencies:
+    host: ^1
+"test@npm:^1":
+  version: 1.0.0
+  resolution: "test@npm:1.0.0"
+"tooling@npm:^1":
+  version: 1.0.0
+  resolution: "tooling@npm:1.0.0"
+`);
+  const raw = { formatVersion: 1, ...parsed, sourceDirectory: ".", manifests: {
+    ".": { name: "monorepo", devDependencies: { tooling: "^1" } },
+    "packages/wallet": { name: "wallet", version: "0.56.0", dependencies: { sdk: "workspace:~" }, devDependencies: { test: "^1" } },
+    "packages/sdk": { name: "sdk", version: "0.29.1", optionalDependencies: { native: "^1" } },
+  } };
+  const result = resolveNative(raw, { ...input, rootNames: ["wallet", "sdk"] }, evidence);
+  const node = (locator: string) => result.occurrences.find((o) => o.locator === locator)!;
+  assert.deepEqual(new Set(result.profile.roots), new Set([node("workspace:packages/wallet").id, node("workspace:packages/sdk").id]));
+  assert.equal(result.occurrences.length, 6, "retain unselected orchestration and tooling for audit");
+  assert.equal(result.occurrences.filter((o) => o.locator === "lock:native@npm:1.0.0").length, 1, "grouped descriptors share one occurrence");
+  assert.equal(result.artifacts.find((a) => a.name === "wallet")!.version, "0.56.0");
+  assert.ok(result.edges.some((e) => e.from === node("workspace:packages/wallet").id && e.to === node("workspace:packages/sdk").id && e.scope === "runtime"));
+  assert.ok(result.edges.some((e) => e.to === node("lock:test@npm:1.0.0").id && e.scope === "development"));
+  assert.ok(result.edges.some((e) => e.to === node("lock:native@npm:1.0.0").id && e.optional && e.condition === "os=darwin"));
+  assert.equal(result.artifacts.find((a) => a.name === "native")!.integrity, null);
+  assert.ok(!result.artifacts.some((a) => a.name === "host"));
+  assert.ok(result.gaps.some((g) => g.reason.includes("peer bindings")));
+  assert.ok(!result.gaps.some((g) => /No unambiguous|selection disagrees/.test(g.reason)));
+  assert.equal(result.profile.coverage, "partial");
+  raw.manifests["packages/wallet"].dependencies.sdk = "workspace:*";
+  const stale = resolveNative(raw, input, evidence);
+  assert.ok(stale.gaps.some((g) => g.reason.includes("manifest/lock selection disagrees for sdk")));
+  assert.ok(!stale.edges.some((e) => e.from === stale.profile.roots[0] && e.scope === "runtime"));
 });
 
 test("local and patched Yarn sources remain distinct across nested consumer projects", () => {

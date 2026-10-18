@@ -367,6 +367,31 @@ results through the existing evidence-decision workflow. Continue higher-level
 coverage batches alongside the remaining native-artifact/Cabal gaps; compatibility
 testing still requires a selected hardfork target and environment.
 
+### Cardano JS SDK and application integration coverage
+
+The next batch centers on Cardano JS SDK's wallet, transaction-construction,
+dApp-connector and governance workspaces. Its pinned Yarn 3.2.1 lock uses metadata
+v6, so extend the existing native parser boundary to that format. Blockfrost JS,
+GeniusYield Lucid SDK, Epora and NEWM's wallet connector add complementary
+provider, DEX and application workflows. Exact roots/revisions live in
+`content/readiness/sdk-batch.json`; the adjacent README records selection rationale
+and release/configuration limits. This continues ADR-1/ADR-2's offline, retained
+evidence model. Consumer builds, plugins and manual review tasks are not executed.
+
+- [x] Inspect pinned production roots and add Yarn metadata-v6 support with
+  regression coverage for bare ranges, workspace aliases, scope, conditions,
+  unknown peers, checksums and stale declarations.
+- [ ] Collect all five selected consumers in bounded batches and retain source
+  evidence for release, native-artifact, service and deployment gaps.
+- [ ] Validate/replay, verify cache reuse, regenerate reports, review the changes
+  and check the production static export.
+
+The selected Cardano SDK package versions differ from the hardware-ledger tag;
+NEWM's manifest and lock root also differ. Keep those identities distinct. Yarn
+v6 support does not resolve installed peer bindings or prove a published artifact.
+The four prepared capability reviews remain pending. Higher-level unsupported
+Blaze/Bun and PyCardano/Poetry roots remain priority work after this batch.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

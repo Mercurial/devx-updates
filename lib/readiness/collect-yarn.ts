@@ -7,7 +7,7 @@ import { pinnedCheckout, retainSource, sourcePath } from "./source";
 import { publishCollection, reuseCollection, type CollectOptions, type CollectionSelection } from "./collection";
 import type { Snapshot, NativeInput } from "./types";
 import type { Store } from "./store";
-import { yarnWorkspaces } from "./yarn";
+import { MODERN_YARN_LOCK_VERSIONS, yarnWorkspaces } from "./yarn";
 import packageJson from "../../package.json";
 
 const classicParserVersion = packageJson.dependencies["@yarnpkg/lockfile"];
@@ -21,7 +21,7 @@ export function parseYarnLock(content: string) {
     return { kind: "classic" as const, lock: object(parsed.object) };
   }
   const lock = object(parseSyml(content), "modern Yarn lock");
-  if (![8, 10].includes(Number(object(lock.__metadata).version))) throw new Error("Unsupported modern Yarn lock version; supported metadata versions are 8 and 10");
+  if (!(MODERN_YARN_LOCK_VERSIONS as readonly number[]).includes(Number(object(lock.__metadata).version))) throw new Error(`Unsupported modern Yarn lock version; supported metadata versions are ${MODERN_YARN_LOCK_VERSIONS.join(", ")}`);
   return { kind: "modern" as const, lock };
 }
 

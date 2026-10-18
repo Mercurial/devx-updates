@@ -3,6 +3,8 @@ import { canonical, object, text } from "./core";
 import type { AdapterContext } from "./adapter-context";
 import type { Scope } from "./types";
 
+export const MODERN_YARN_LOCK_VERSIONS = [6, 8, 10] as const;
+
 export function yarnIdent(reference: string) {
   const at = reference.indexOf("@", reference.startsWith("@") ? 1 : 0);
   if (at < 1) throw new Error(`Invalid Yarn package descriptor: ${reference}`);
@@ -29,7 +31,7 @@ export function resolveYarn(data: Record<string, unknown>, ctx: AdapterContext) 
   if (data.formatVersion !== 1 || !["classic", "modern"].includes(String(data.kind))) throw new Error("Unsupported Yarn capture format");
   const modern = data.kind === "modern";
   const lock = object(data.lock, "Yarn lock");
-  if (modern && ![8, 10].includes(Number(object(lock.__metadata).version))) throw new Error("Unsupported modern Yarn lock version");
+  if (modern && !(MODERN_YARN_LOCK_VERSIONS as readonly number[]).includes(Number(object(lock.__metadata).version))) throw new Error("Unsupported modern Yarn lock version");
   const manifests = object(data.manifests, "Yarn source manifests");
   const directory = text(data.sourceDirectory, "Yarn source directory");
   const registries = object(data.registries ?? {});

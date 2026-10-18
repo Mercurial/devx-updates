@@ -62,12 +62,20 @@ pnpm collection reads committed v9 lock snapshots and importer manifests without
 
 Yarn collection (`--adapter yarn-lock --platform all-lockfile-targets`) reads
 Classic v1 locks using the pinned official `@yarnpkg/lockfile` parser, or modern
-Yarn YAML with metadata version 8/10 using `@yarnpkg/parsers`. A companion manifest is required; modern
+Yarn YAML with metadata version 6/8/10 using `@yarnpkg/parsers`. A companion manifest is required; modern
 workspace manifests restore package names, versions, and runtime/development scope.
 Nested projects use `--path path/to/yarn.lock`. Repository configuration and
 manifests are retained with parsed native selections; no package installation,
 user configuration, plugins or project scripts run. Registered requests refresh
 through the existing queue/cache workflow without a Yarn toolchain installation.
+
+Metadata v6 covers the pinned Cardano JS SDK Yarn 3.2.1 input. Its
+[native lock writer](https://github.com/yarnpkg/berry/blob/%40yarnpkg/cli/3.2.1/packages/yarnpkg-core/sources/Project.ts#L1461)
+retains grouped descriptors, workspace placeholders, dependency/peer metadata,
+conditions and cache checksums. Bare dependency ranges are normalized for lookup;
+workspace versions come from retained manifests. Cache checksums are not tarball
+integrity and virtual peer instances still require a separate installed inventory.
+This adds an accepted input format without changing historical capture identities.
 
 Yarn lock records establish declared selections, not an installed dependency tree.
 Peer bindings are left unresolved; platform conditions remain conditional edges.

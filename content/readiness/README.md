@@ -108,3 +108,33 @@ node --import tsx scripts/readiness/cli.ts collect-batch --input content/readine
 Use `--tools` to bound an individual run; validate and replay before reports and
 publication. Existing manually launched reviews remain separate; the owner guide
 is [Run the prepared reviews](../../docs/RUN-PREPARED-REVIEWS.md).
+
+## Wallet SDK, provider and application batch
+
+`sdk-batch.json` follows the higher-level workflow priority. Cardano JS SDK is the
+main gap: collect its production wallet, transaction construction, dApp connector
+and governance packages, extending Yarn support to metadata v6 instead of
+substituting a convenient lower-level package. Four complementary consumers add
+provider-client, DEX, permission-wallet and application-connector context.
+
+| Consumer | Selected production roots | Pinned source/configuration caveat |
+| --- | --- | --- |
+| Cardano JS SDK | `@cardano-sdk/wallet`, `@cardano-sdk/tx-construction`, `@cardano-sdk/dapp-connector`, `@cardano-sdk/governance` | Selected manifest versions 0.56.0, 0.29.1, 0.13.31 and 0.11.34, respectively, at hardware-ledger tag 0.17.0. That tag does not establish release correspondence for the selected packages. Yarn 3.2.1 / metadata v6; retain all 22 workspaces but exclude orchestration/e2e/service packages from selected roots. Hardware devices, deployed providers, patches and installed peer bindings remain unresolved. |
+| Blockfrost JS | `@blockfrost/blockfrost-js` | Tag and manifest 6.2.0, declared Yarn 4.0.0 / metadata v8. Client lock coverage does not establish hosted Blockfrost versions, selected network/configuration, or serialization WASM artifact correspondence. |
+| GeniusYield Lucid SDK | `@geniusyield/sdk` | Manifest 2.0.0 on pinned default-branch source, with pnpm v9 lock and Lucid Evolution dependency. No stable release mapping identified; deployed DEX contracts, provider configuration and enabled transaction workflows need separate evidence. |
+| Epora | `permission-wallet-dapp` in `code/dApp` | Manifest 0.1.0 on pinned default-branch source; pnpm 10.0.0 / lock v9. The application root includes frontend/server packages, but does not resolve the separate Aiken validator closure, generated blueprints, database or hosted chain proxies. README describes a default Preprod deployment; no live deployment has been checked. |
+| NEWM Cardano dApp Wallet Connector | `@newm.io/cardano-dapp-wallet-connector` | Manifest 1.5.5 versus npm v2 lock root 1.5.4, on pinned default-branch source. Preserve the discrepancy. Runtime browser wallet choices and injected providers remain unreviewed. |
+
+All five requests retain `all-lockfile-targets` scope. No dependencies are
+installed and no consumer scripts, Yarn plugins or release binaries are executed.
+These are partial source reconstructions; capabilities and hardfork compatibility
+remain unassessed. Blaze/Bun, PyCardano/Poetry and native Haskell/Scala workflows
+remain explicit adapter priorities, not evidence of low risk.
+
+```sh
+node --import tsx scripts/readiness/cli.ts collect-batch --input content/readiness/sdk-batch.json --limit 2
+```
+
+Use `--tools cardano-js-sdk --limit 1` for the larger monorepo capture. Keep
+source-backed gaps, queue failures and release distinctions visible. Existing
+discovery/challenge review packets remain owner-launched work.
