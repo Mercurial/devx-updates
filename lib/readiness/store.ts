@@ -9,12 +9,14 @@ import { decodeSnapshot, snapshotFiles } from "./snapshot-storage";
 export function writeJson(path: string, data: unknown) {
   mkdirSync(dirname(path), { recursive: true });
   const temp = `${path}.${process.pid}.tmp`;
-  writeFileSync(temp, `${JSON.stringify(data, null, 2)}\n`);
+  const content = `${JSON.stringify(data, null, 2)}\n`;
+  writeFileSync(temp, path.endsWith(".json.gz") ? gzipSync(content) : content);
   renameSync(temp, path);
 }
 
 export function readJson(path: string): unknown {
-  return JSON.parse(readFileSync(path, "utf8"));
+  const content = readFileSync(path);
+  return JSON.parse((path.endsWith(".json.gz") ? gunzipSync(content) : content).toString("utf8"));
 }
 
 export function readSnapshot(path: string): Snapshot {

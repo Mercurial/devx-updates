@@ -1,5 +1,30 @@
 # Selected catalog collections
 
+## Hardware signing and wallet batch
+
+`signing-batch.json` adds production signing consumers and a developer wallet,
+using the immutable source revisions already selected by discovery. No application
+build, browser installation, signing operation or network compatibility test runs.
+
+| Consumer | Selected roots | Scope and remaining boundaries |
+| --- | --- | --- |
+| Cardano HW CLI | `cardano-hw-cli` 1.19.1, Classic Yarn v1 lock | Tag/manifest version agrees, but the manifest's embedded commit field differs from the selected revision. Node/pkg binaries, USB/HID assets, CSL WASM, Ledger/Trezor/Keystone firmware and cardano-cli interoperability need verification. Retain the Trezor postinstall patch as an artifact boundary. |
+| Cardano Dev Wallet | `cardano-wallet` 0.0.0 in `webext`, npm v3 lock | Default-branch source, without a verified browser-store release mapping. All declarations are development dependencies, including CSL and message-signing WASM imported by the wallet implementation. Preserve native development scope; the generated extension's runtime bundle still needs inventory. Blockfrost/Ogmios/Kupo deployments and Plutip remain separate boundaries. |
+| Bursa CLI/library/signer | `github.com/blinklabs-io/bursa`, root Go module | v0.19.0 source; Go 1.26.8, Linux/amd64, cgo disabled, workspace off, all module packages and test metadata. Configured Vault/SOPS/cloud signers, PKCS#11 and PostgreSQL watermarks need separate integration evidence. |
+| Bursa headless wallet | `github.com/blinklabs-io/bursa/ui`, separate `ui/go.mod` | Same source tag, separate module selection: its declared Bursa/Dingo versions differ from current standalone roots. Default headless scope excludes webview/cgo, nftmedia and integration tags. The tracked embedded HTML is only a pre-build placeholder; published desktop/mobile artifacts, built UI assets and enabled node/bootstrap settings remain unverified. |
+| Bursa wallet frontend and connector | `bursa-wallet-ui` and `bursa-connector` in separate npm v3 locks | Web package has no version; connector is 0.1.0. Preserve declared dependency scopes (connector declarations are development-only). Hardware browser transports and generated/embedded artifacts require review. |
+
+JavaScript profiles use `all-lockfile-targets` and remain partial source
+reconstructions. Complete Go metadata applies only to its declared platform,
+build-tag and package scope. It is not a successful compile/test or readiness
+claim. Native selections from each module remain distinct; no upstream checkout
+substitutes for the versions selected by its consumer. Original Lucid is not a
+standalone root. Existing owner-run review tasks are unchanged.
+
+```sh
+node --import tsx scripts/readiness/cli.ts collect-batch --input content/readiness/signing-batch.json --limit 2
+```
+
 ## Enterprise and API application batch
 
 `application-batch.json` adds three production service roots: enterprise

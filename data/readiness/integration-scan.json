@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "scannerVersion": 1,
-  "inputDigest": "2e4e4807e0cff4df73bffd8b7a9d1f0ea56e250d80ebe986a419e9a00dd57385",
+  "inputDigest": "0c98ae90a56da8572fcf28f3bfe6347a27ff98ea15c6a997a4e113ed3c98b69e",
   "limits": {
     "filesPerTool": 200,
     "bytesPerFile": 2097152,
@@ -3949,16 +3949,947 @@
       "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
       "coverage": "partial",
       "inputEvidenceIds": [
+        "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+        "evidence:0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+        "evidence:0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+        "evidence:0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+        "evidence:1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+        "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+        "evidence:241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43",
+        "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+        "evidence:3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+        "evidence:3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+        "evidence:40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27",
+        "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+        "evidence:494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+        "evidence:4e5f1196c3d5e508bfa9cb7264de567102ee3f40322a42a6b5398a534d8e00cf",
+        "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+        "evidence:51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59",
+        "evidence:55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+        "evidence:58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+        "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
         "evidence:5db0d23219e635111c371d7b3c649c1b04ae5b691c92d4408a5499bcad83a9ff",
-        "evidence:a84ad6313528eeafbdbc5237a1aa7b5ec903b10a526c2fa65f62e325b2665086"
+        "evidence:691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+        "evidence:6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027",
+        "evidence:6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b",
+        "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+        "evidence:7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf",
+        "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+        "evidence:8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab",
+        "evidence:971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+        "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+        "evidence:a84ad6313528eeafbdbc5237a1aa7b5ec903b10a526c2fa65f62e325b2665086",
+        "evidence:ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+        "evidence:be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+        "evidence:beabe3658f00309fbc2a79136aa85c14e436ff4a5875d41794345f6085486b46",
+        "evidence:c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+        "evidence:c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+        "evidence:c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322",
+        "evidence:d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2",
+        "evidence:d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7",
+        "evidence:d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+        "evidence:e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+        "evidence:e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+        "evidence:e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+        "evidence:f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c",
+        "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+        "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+        "evidence:f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+        "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+        "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150"
       ],
-      "files": [],
-      "hints": [],
+      "files": [
+        {
+          "evidenceId": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+          "path": "Dockerfile",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 223,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "path": "README.md",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 11978,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+          "path": "cmd/bursa/main.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 1271,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+          "path": "cmd/bursa/sign.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 2747,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+          "path": "cmd/bursa/tx.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 4649,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+          "path": "go.mod",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 10043,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+          "path": "go.mod",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 10043,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c",
+          "path": "go.sum",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 62240,
+          "status": "native-lock"
+        },
+        {
+          "evidenceId": "evidence:0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+          "path": "internal/signer/backend/pkcs11.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 15836,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+          "path": "internal/signer/backend/sops.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 4586,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+          "path": "internal/signer/backend/vault.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 4142,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+          "path": "internal/signer/setup.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 11528,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+          "path": "internal/signer/watermark/postgres.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 9370,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "path": "ui/README.md",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 10438,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+          "path": "ui/cmd/bursa-wallet/main.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 4482,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+          "path": "ui/cmd/bursa-wallet/ui_headless.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 1192,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+          "path": "ui/cmd/bursa-wallet/ui_webview.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 4898,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b",
+          "path": "ui/extension/package.json",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 604,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+          "path": "ui/extension/src/background.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 3206,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "path": "ui/extension/src/content.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 3120,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "path": "ui/extension/src/injected.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 8792,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+          "path": "ui/go.mod",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 16070,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+          "path": "ui/go.mod",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 16070,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+          "path": "ui/go.sum",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 90998,
+          "status": "native-lock"
+        },
+        {
+          "evidenceId": "evidence:691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+          "path": "ui/internal/supervisor/bootstrap.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 5500,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+          "path": "ui/internal/supervisor/supervisor.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 24149,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
+          "path": "ui/internal/webui/dist/index.html",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 1586,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+          "path": "ui/internal/webui/webui.go",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 2583,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab",
+          "path": "ui/web/package.json",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 1537,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2",
+          "path": "ui/web/src/hw/keystone.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 24706,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322",
+          "path": "ui/web/src/hw/ledger.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 12719,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+          "path": "ui/web/src/hw/trezor.ts",
+          "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+          "bytes": 13195,
+          "status": "scanned"
+        }
+      ],
+      "hints": [
+        {
+          "rule": "container-build-input",
+          "kind": "build",
+          "path": "Dockerfile",
+          "line": 1,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "FROM ghcr.io/blinklabs-io/go:1.26.7-1 AS build",
+          "id": "scan-hint:5a9e870eca22afc025a1835b1c8faec271d55889bbd70dca868c94da6605137a",
+          "evidenceId": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "container-build-input",
+          "kind": "build",
+          "path": "Dockerfile",
+          "line": 9,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "FROM cgr.dev/chainguard/glibc-dynamic AS bursa",
+          "id": "scan-hint:e19b2fb8dfc8de8dcf163b2a0bf2a25a082868264e3d2a3b400140b932dad0b1",
+          "evidenceId": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "container-build-input",
+          "kind": "build",
+          "path": "Dockerfile",
+          "line": 10,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "COPY --from=build /code/bursa /bin/",
+          "id": "scan-hint:b2aa2a1ad82b2b250f32a216ac66535fd9bafded6b1a5c56a61e054a6d7715c8",
+          "evidenceId": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 15,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  [Dingo](https://github.com/blinklabs-io/dingo) node and serves a wallet",
+          "id": "scan-hint:20d5d74920318c5e57df821ce95555fbc0a50fa0bf3a24160f32421357d47fde",
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 48,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html).",
+          "id": "scan-hint:ab3f3c09820cd2295bc0f11820229469131d794c48fa918d88d06308673e2eaa",
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 111,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "for example `https://wallet.example.com:8080/swagger/index.html`. Plain HTTP",
+          "id": "scan-hint:2e127ecabaecdf2b59e8993d75a0d32589330486b760bd063c4a891b47e9e349",
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 120,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  jwks_url: https://identity.example.com/.well-known/jwks.json",
+          "id": "scan-hint:f67713cf2c12917a508384b0f98ab5224e6ff47617f8428845696de2fdd794c5",
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 121,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  jwt_issuer: https://identity.example.com",
+          "id": "scan-hint:c0c186fcb4daecc732805b2f37b6f541c6c8469ef12cdd902d92a4df8da27a78",
+          "evidenceId": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "cmd/bursa/main.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:5d34446d57da92d253ef02292a53c36488ab5935427886e63cb9161096845232",
+          "evidenceId": "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "cmd/bursa/sign.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:65b3522b207efc2ed1f05c1d83dbae760600750ae6203318846f74292c6c207c",
+          "evidenceId": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "cmd/bursa/sign.go",
+          "line": 26,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\tcmd := &cobra.Command{Use: \"sign\", Short: \"CIP-8/CIP-30 message signing\"}",
+          "id": "scan-hint:85a85ab5e4b4d6ac92cbc68de7b436533c9bf21393937b33869d148f70685bdb",
+          "evidenceId": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "cmd/bursa/sign.go",
+          "line": 35,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\t\tShort: \"Sign a payload (CIP-30 signData / COSE_Sign1)\",",
+          "id": "scan-hint:c9bde8faea5e2c9f8c10fc17d93aff97a15b8fa60691cd3e3bd68ed7e63f499c",
+          "evidenceId": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "cmd/bursa/sign.go",
+          "line": 58,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\t\tShort: \"Verify a CIP-30 signData signature\",",
+          "id": "scan-hint:92afb59a8f4e76645013264b2c517ec5302958327f806702da46a3aa4b595c14",
+          "evidenceId": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "cmd/bursa/tx.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:4445ac1ae41d0d4bf7bc6fd3aa14765f14a5f9124228df2744cf961ebc91a6d7",
+          "evidenceId": "evidence:55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "generator-command",
+          "kind": "code-generation",
+          "path": "go.mod",
+          "line": 99,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\tgithub.com/envoyproxy/protoc-gen-validate v1.3.3 // indirect",
+          "id": "scan-hint:bfdaeafd9b43d89a9aa7cce9c07f4f00a070ef40d9540ac5a6007b15b236a969",
+          "evidenceId": "evidence:ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "generator-command",
+          "kind": "code-generation",
+          "path": "go.mod",
+          "line": 99,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\tgithub.com/envoyproxy/protoc-gen-validate v1.3.3 // indirect",
+          "id": "scan-hint:d1533ba7136b2ff07068d27b78171e8c68a570b9f855c18e1b58b31f6eb17b1b",
+          "evidenceId": "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "internal/signer/backend/pkcs11.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:d991972e73e3a1be4b2465b7eede8a91898f19388904fca53ea6f5f84bc01827",
+          "evidenceId": "evidence:0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "internal/signer/backend/sops.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:9c3a13028eb7fc4e5cc9e50cab3c0527e1dac68d5d20bc4643d998225f47a98a",
+          "evidenceId": "evidence:e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "internal/signer/backend/vault.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:d536b1330d3d47d6c512445a9882e1ad27c1279c1c406f18430b873ab904a63e",
+          "evidenceId": "evidence:c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "internal/signer/setup.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:eafb074c44d1d253da2331821434f2e1894b40f89eab5dca6abbebed83594d08",
+          "evidenceId": "evidence:f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "internal/signer/watermark/postgres.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//     http://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:fcbbe3d393a32c17fad06cbfa258e348374d448be3853f2e955002fa0e6edcb5",
+          "evidenceId": "evidence:c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 4,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[Dingo](https://github.com/blinklabs-io/dingo) node and serves a wallet",
+          "id": "scan-hint:51ca837fc99bec15218c572eac7b22661c6d9ccbfb083e9b60febbe53876ffdb",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 24,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[releases page](https://github.com/blinklabs-io/bursa/releases). Assets are",
+          "id": "scan-hint:0854a24697ccc1aea691adf370c5010741db9a68fa96bdf3cb3428758f4177c1",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 35,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[build attestation](https://github.com/blinklabs-io/bursa/attestations).",
+          "id": "scan-hint:b61679d8b96bc66a9de861a78ad6549e648dee7fc8956c17938b26b76e850f03",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 46,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "interface at <http://127.0.0.1:8090> for you to open in a browser.",
+          "id": "scan-hint:19e68df129c04c2652e6aa6dc5ec17a45d331fddc7efcb43883f1a9d6a7a4a93",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 49,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[Mithril](https://mithril.network) snapshot rather than replaying the chain from",
+          "id": "scan-hint:54b22d1e42247eaa52525061f5436e5fd8fe8179810f5e1e1d9f30c9051584c9",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/README.md",
+          "line": 185,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "`extension/` is the Bursa Connector browser extension: a CIP-30 provider (with",
+          "id": "scan-hint:ce99b26baf94d73cb3992e806825e95a8b3663a11fc511476a0d0c5b54f9eb31",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/README.md",
+          "line": 243,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "it, use the default `make wallet` build and open <http://127.0.0.1:8090> in a",
+          "id": "scan-hint:892d04731a8f3d66c4038b61ca7270c9ce8a90b5d4c2b28d9715486d429c0659",
+          "evidenceId": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/cmd/bursa-wallet/main.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:10802c7d0ff94144bed7f42a438893345467a324c9a71c152371a2ecafdbd142",
+          "evidenceId": "evidence:1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/cmd/bursa-wallet/ui_headless.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:9bb3519dfb380cecfbbf3691ba1df7fc918b2c300641c1165f7a5e162b2126bf",
+          "evidenceId": "evidence:e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/cmd/bursa-wallet/ui_webview.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:44465d1e9242d737ed50671eed428e45242f8a3601a0aa06812d8d4702df11d1",
+          "evidenceId": "evidence:e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/extension/src/background.ts",
+          "line": 44,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    const baseURL = `http://127.0.0.1:${parsedPort}`;",
+          "id": "scan-hint:9a72a3024b289f60cf424e3c00d2fb56488a3bf9ef6bf9e734cbfa7f9500db01",
+          "evidenceId": "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/extension/src/background.ts",
+          "line": 46,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    const response = await fetch(requestURL.toString(), {",
+          "id": "scan-hint:f6cc155a7af054ac6b96b469ca0c4b4ff2140c396c056f833ce93e4cb7185aeb",
+          "evidenceId": "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/content.ts",
+          "line": 13,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "const PROVIDER_STATUS_SOURCE = 'bursa-cip30-provider-status';",
+          "id": "scan-hint:09a5a9e9eb764f1198e850c6c0b12bb2878aad238d62b4d1b0098d2ac56beecf",
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/content.ts",
+          "line": 59,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  if (event.data?.source !== 'bursa-cip30') return;",
+          "id": "scan-hint:92b01688cc567a9552f0bd02807292cfe3c03c735a91d803bf6fd567b716ab2b",
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/content.ts",
+          "line": 71,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    // is set and response is undefined. Without this guard the page's CIP-30 call hangs",
+          "id": "scan-hint:39a8ae82ffd8928f45d1e58e4de969407676837db53c766a70e7d362d7768f11",
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/content.ts",
+          "line": 76,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "          source: 'bursa-cip30-reply',",
+          "id": "scan-hint:5a4088cdca994e056e96d2756c73a998358be3235a7d243319201bea0748aad0",
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/content.ts",
+          "line": 88,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    window.postMessage({ source: 'bursa-cip30-reply', ...response }, replyTargetOrigin);",
+          "id": "scan-hint:2c19c4ea6ef4905f403a77dcfb4bad726cc3b9b46c7ae0899a361fa5bbe1cc58",
+          "evidenceId": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 1,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "// CIP-30 injected window provider for Bursa",
+          "id": "scan-hint:8b4b26624de48763168f3a02b6e3d8218cf414148bd4100bd1bb3c22fece28e5",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 89,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      if (data?.source !== 'bursa-cip30-reply' || data?.id !== id) return;",
+          "id": "scan-hint:6be4bc6ad5f568bd0c04d7032060e071aae7b768a5e9d1a14bb03ea3c21e121d",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 112,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    window.postMessage({ source: 'bursa-cip30', id, method, params }, targetOrigin);",
+          "id": "scan-hint:c560728775f9814835d84b92dad84b56093e97a62568895cf49cb76a6f22ce32",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 214,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    // Use safeRequest for parity with enable(): rejections become CIP-30",
+          "id": "scan-hint:d737305baed6524278ff3ac3ea63200adc18ec83803fda5992794008614eed29",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 240,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "if (!window.cardano) {",
+          "id": "scan-hint:da1c953efb41fb630677b71b6ad881ac4aaea63f2969b7709ef5c8f97db01711",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 241,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  window.cardano = {};",
+          "id": "scan-hint:f5cde6c7cb7f8a570b6d0a3267b819c6d06e70df8a6f8e3d82048c51908bf116",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 243,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "window.cardano.bursa = bursaProvider;",
+          "id": "scan-hint:6cff41e58ac7613b2062653f7952bd5cff0e716bd3624081c30aa67f93ca86c2",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "ui/extension/src/injected.ts",
+          "line": 251,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    source: 'bursa-cip30-provider-status',",
+          "id": "scan-hint:deaffa0489ca49ab67ad50b96939274796b4bfcc8db79fe9dab9a164f192c8b9",
+          "evidenceId": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "generator-command",
+          "kind": "code-generation",
+          "path": "ui/go.mod",
+          "line": 116,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\tgithub.com/envoyproxy/protoc-gen-validate v1.3.3 // indirect",
+          "id": "scan-hint:1eadd9551a1f175cf2dffe9cd056c79fcc719157a07681f575efc16860d8d0be",
+          "evidenceId": "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "generator-command",
+          "kind": "code-generation",
+          "path": "ui/go.mod",
+          "line": 116,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\tgithub.com/envoyproxy/protoc-gen-validate v1.3.3 // indirect",
+          "id": "scan-hint:25e892a326fe77a1a8010a5ff9f14f4b7ed3704442c3e7e863bfde84c5302710",
+          "evidenceId": "evidence:0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/internal/supervisor/bootstrap.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:f1fd9cb71e33516c9e1541b8c27e6942c0be65f57905f08f0f51f72b47595397",
+          "evidenceId": "evidence:691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/internal/supervisor/supervisor.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:0c3be7ab017c01bd57318b206c6900543e10b080a4827ad0d61f0deaa87c621f",
+          "evidenceId": "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/internal/supervisor/supervisor.go",
+          "line": 612,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "\turl := fmt.Sprintf(\"http://127.0.0.1:%d/api/v0/blocks/latest\", s.cfg.BlockfrostPort)",
+          "id": "scan-hint:07cbb87578c0dcae0c5c3beb293a6c7ebfdcbf42c9de620da33717741a265bff",
+          "evidenceId": "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "ui/internal/webui/dist/index.html",
+          "line": 14,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      so `//go:embed dist` compiles from a clean checkout, and it is served as-is",
+          "id": "scan-hint:9951c87e611c35fb3ae41fffc47695c6e51b775baa6b743933e3272c351d5478",
+          "evidenceId": "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/internal/webui/webui.go",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//\thttp://www.apache.org/licenses/LICENSE-2.0",
+          "id": "scan-hint:e0fca4e3a7ae26e2bc1d33de2681155e37fc721a9f726e8033b8fc7104948858",
+          "evidenceId": "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "ui/internal/webui/webui.go",
+          "line": 28,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "//go:embed dist",
+          "id": "scan-hint:4014f9d1c7d8e8f81db05e5692c23feb7c469f1a659b2485a06a63e5a4aeb4ab",
+          "evidenceId": "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "ui/web/src/hw/trezor.ts",
+          "line": 65,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      : \"https://blinklabs.io\",",
+          "id": "scan-hint:055e7e2cb9b6271663a33fae41b67938600188ab7361c611c046b1f9f1733f12",
+          "evidenceId": "evidence:3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+          "disposition": "needs-review"
+        }
+      ],
       "unresolved": [
         "Only attached, retained source files at this tool's current revision were eligible. Uncaptured repository files, dependencies and deployed configuration remain unexamined.",
         "Lexical matches may be comments, documentation, examples or tests. No production scope, target identity, enabled integration or capability is established.",
-        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary.",
-        "No eligible source content was scanned."
+        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary."
       ]
     },
     {
@@ -5059,16 +5990,484 @@
       "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
       "coverage": "partial",
       "inputEvidenceIds": [
+        "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
         "evidence:3621f213c0fd4a8bccc89a1227f452fd3d3b9e790b8e0513d882f62372925fd5",
-        "evidence:4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8"
+        "evidence:4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8",
+        "evidence:4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a",
+        "evidence:54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71",
+        "evidence:5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0",
+        "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+        "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+        "evidence:68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802",
+        "evidence:763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81",
+        "evidence:b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
+        "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+        "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+        "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+        "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb"
       ],
-      "files": [],
-      "hints": [],
+      "files": [
+        {
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "path": "README.md",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 1839,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a",
+          "path": "webext/build.config.js",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 766,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71",
+          "path": "webext/build.js",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 11479,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81",
+          "path": "webext/package.json",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 835,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 4941,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 4027,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
+          "path": "webext/src/lib/CIP30/WalletApiInternal.ts",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 9441,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802",
+          "path": "webext/src/lib/Wallet.ts",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 1676,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+          "path": "webext/src/manifest.json",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 1369,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "path": "webext/wasmLoader.js",
+          "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+          "bytes": 4248,
+          "status": "scanned"
+        }
+      ],
+      "hints": [
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "README.md",
+          "line": 5,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "A browser extension that implements [CIP-30](https://cips.cardano.org/cip/CIP-30/) Cardano wallet connector with a UI that is more convenient for developers than mainstream user-oriented wallets.",
+          "id": "scan-hint:5af6771dac5da56feca0b7d0b7c5d314af42dd343a7321c4fd2b0f27b36321e8",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 5,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "A browser extension that implements [CIP-30](https://cips.cardano.org/cip/CIP-30/) Cardano wallet connector with a UI that is more convenient for developers than mainstream user-oriented wallets.",
+          "id": "scan-hint:465afc5caf713feafb696cf1c6b07b5cd9cccfd87ca408aa0c5235c335895112",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "README.md",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- Uses Blockfrost or Ogmios+Kupo as the backend",
+          "id": "scan-hint:273de7733debb044fb80a9803ace1132a40fa61c64c996198d5b0dac6c559fcc",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "README.md",
+          "line": 9,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- Allows to inspect CIP-30 method logs",
+          "id": "scan-hint:f8de6e3ed10e7f37aa33a1e5ff9504a2d572e712415b036d10ee535e41731135",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "README.md",
+          "line": 10,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- Allows to override CIP-30 API endpoint responses",
+          "id": "scan-hint:8b1cef0c9d75738f08563089143cd701be5a543c40c248dcb192fd59cd810bf8",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 13,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "[![Mozilla Add-on Users](https://img.shields.io/amo/users/cardano-dev-wallet?logo=firefox&label=Install%20for%20Firefox)](https://addons.mozilla.org/en-US/firefox/addon/cardano-dev-wallet/) [![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/afnjoihjkimddgemefealgkefejaigme?logo=chrome&label=Install%20for%20Chrome)](https://chromewebstore.google.com/detail/cardano-dev-wallet/afnjoihjkimddgemefealgkefejaigme)",
+          "id": "scan-hint:7c711a6230b1fa7de3bad326684c5d9c304e73d935ce075c0fca13d59c032a51",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 27,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- Open `http://localhost:8000/` in the browser.",
+          "id": "scan-hint:68894009e0f1dbb6adc4e30dc7680588fd35ba8b014a7949dedec1889aaa7b8e",
+          "evidenceId": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 1,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "import * as CIP30 from \"..\";",
+          "id": "scan-hint:825ca500a5a3d6201817fce50b507c82627ea50570b0a7ef6287a66cea04fed3",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 4,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "class BlockFrostBackend implements CIP30.Backend {",
+          "id": "scan-hint:548ce86478e7695830e4f546daa75d8254b4cfeb3a8d01d0945b96ef20e47dde",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 18,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  ): CIP30.NetworkName | null {",
+          "id": "scan-hint:ebc4513fd246ef54dc42819916da5c45e1145f1fedecfc132fe0a28e74656b9a",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 20,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      return CIP30.NetworkName.Mainnet;",
+          "id": "scan-hint:eed8ee3b116c83fa8ce6084874b288fe0ee679ca337deb4deea26c4544ccc9b4",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 22,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      return CIP30.NetworkName.Preview;",
+          "id": "scan-hint:a829b39ed2d642b83c50096696df158110993f56780ae733e3eab31e9dbe1df4",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 24,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      return CIP30.NetworkName.Preprod;",
+          "id": "scan-hint:b792209f3ce049cec3e408fb5bbac1b585b2f054f6b2c3bc65523ce02c7623c0",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 116,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  let resp = await fetch(url, {",
+          "id": "scan-hint:9662b22647c32935eb78aa8f487789e560799b13db996fabc711f63ac2dc7e62",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 155,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  let resp = await fetch(url, {",
+          "id": "scan-hint:570be5915be1eb72c05325fe6b6dc3a9647bbd4ab29209d23dd1b53714907a04",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/Blockfrost.ts",
+          "line": 179,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  return \"https://cardano-\" + prefix + \".blockfrost.io\";",
+          "id": "scan-hint:fa84e8a3396db00bdbb85d845bd8b72706ea674d9d3b6a81d1d20647488353f5",
+          "evidenceId": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 12,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  if (url.startsWith(\"http://\")) return url;",
+          "id": "scan-hint:b2707e98f8659388f81d38a1ee3575cdb6dd94cd81e6fd6e3ca307f319778c24",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 13,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  if (url.startsWith(\"https://\")) return url;",
+          "id": "scan-hint:56116c255bcd178da56e319d7017c7c4f9187c60b11c798e35ef59258703124e",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 14,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  return \"https://\" + url;",
+          "id": "scan-hint:ea3b763604e63dfd0ceb08ecdc9ff9634ca07d81219a260fb7c3c8b545879d90",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 51,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    let res: OgmiosSubmitTxResp = await fetch(",
+          "id": "scan-hint:b7c844ed76b0adbd85a2dd03c9cebdf20a85f0f07b80809f94fcf4a2066f4e14",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 60,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "          jsonrpc: \"2.0\",",
+          "id": "scan-hint:245220b1f2d083dabaaca781beabd48ff422b2b8f369a9ce5a8445edae172109",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 79,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      info: \"Failed to send tx using Ogmios: \" + errMsg,",
+          "id": "scan-hint:3695197cc432a2f26de5d473ca5e29303c230c0b08c32f00b1c0fe47dc0fb81f",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "protocol-or-wallet-marker",
+          "kind": "protocol",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 110,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  jsonrpc: string;",
+          "id": "scan-hint:7b383e29dc56d262226a54e97b073d41ce8ec0a1d2999a3a9b59ccc5f902841c",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+          "line": 126,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  let res = await fetch(url + \"/matches/\" + address.to_bech32() + \"?unspent\");",
+          "id": "scan-hint:36266ee22e3c1708e6f0dec4593295ae75c49991a28ad81c67776c05ef169253",
+          "evidenceId": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/src/manifest.json",
+          "line": 6,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  \"homepage_url\": \"https://github.com/mlabs-haskell/cardano-dev-wallet/\",",
+          "id": "scan-hint:43e28d4e01cd40c75520d1422e9846b09fa49e69aef23782da26ff2f0c680afb",
+          "evidenceId": "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/src/manifest.json",
+          "line": 20,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      \"resources\": [\"content-script/index.js\", \"/*.wasm\"],",
+          "id": "scan-hint:d7cf0ac988ca18a8bcc8513f23f441f07541ab54d67a5054f616021a05e58100",
+          "evidenceId": "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/wasmLoader.js",
+          "line": 22,
+          "column": 1,
+          "pointer": "/content",
+          "quote": " *    - esbuild copies the wasm file to `build-root/<filename>-[hash].wasm` and replaces",
+          "id": "scan-hint:33ae1eef3ca817d31b65685905736bb29c7be4380ab8c4655ef167c202ec0baa",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/wasmLoader.js",
+          "line": 34,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      build.onResolve({ filter: /.wasm$/ }, (args) => {",
+          "id": "scan-hint:057c820543310cf87c5ba0e41e56834dee25081a395b60b07358faa3fbc6fddc",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/wasmLoader.js",
+          "line": 51,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "        { filter: /.wasm$/, namespace: \"wasmLoaderImportStub\" },",
+          "id": "scan-hint:05113c175710ba79cfba9dec15eb5e4478e923385f8b287d8692addcdfe0a927",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/wasmLoader.js",
+          "line": 62,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "        { filter: /.wasm$/, namespace: \"wasmLoaderCopy\" },",
+          "id": "scan-hint:15993129afbf91de1982c41e17b950acbd6f276d7fde2271e47e2cb3e31e60b9",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "embedded-or-vendored-reference",
+          "kind": "bundled",
+          "path": "webext/wasmLoader.js",
+          "line": 90,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    //    const wasmPath = \"..path to the .wasm file relative to current file\"",
+          "id": "scan-hint:7e6ef14bd5e8c4d87cfeeb194adcc72957a6c166974bf33e950c8b1b7d1b56e9",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "webext/wasmLoader.js",
+          "line": 97,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    let wasm = await WebAssembly.instantiateStreaming(fetch(url), imports);",
+          "id": "scan-hint:84bd3a1d2326ce931e3e3045f4b254ed188496f4a5484663688ae90b30e550a0",
+          "evidenceId": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+          "disposition": "needs-review"
+        }
+      ],
       "unresolved": [
         "Only attached, retained source files at this tool's current revision were eligible. Uncaptured repository files, dependencies and deployed configuration remain unexamined.",
         "Lexical matches may be comments, documentation, examples or tests. No production scope, target identity, enabled integration or capability is established.",
-        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary.",
-        "No eligible source content was scanned."
+        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary."
       ]
     },
     {
@@ -5113,16 +6512,340 @@
       "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
       "coverage": "partial",
       "inputEvidenceIds": [
+        "evidence:0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322",
+        "evidence:10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f",
+        "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+        "evidence:352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+        "evidence:3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
+        "evidence:3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf",
+        "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+        "evidence:43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a",
         "evidence:4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
-        "evidence:b78c89d841e145e076b924ad0e34700be18192df9f62b8a14d812ce834cee042"
+        "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+        "evidence:6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+        "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+        "evidence:a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711",
+        "evidence:b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2",
+        "evidence:b78c89d841e145e076b924ad0e34700be18192df9f62b8a14d812ce834cee042",
+        "evidence:bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0",
+        "evidence:ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c",
+        "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1"
       ],
-      "files": [],
-      "hints": [],
+      "files": [
+        {
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "path": "README.md",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 8644,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+          "path": "package.json",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 3963,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "path": "package.json",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 3963,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f",
+          "path": "scripts/build-common.sh",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 173,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a",
+          "path": "scripts/fix-trezor-firmware.js",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 2545,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+          "path": "src/crypto-providers/keystoneCryptoProvider.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 17059,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2",
+          "path": "src/crypto-providers/ledgerCryptoProvider.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 49406,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+          "path": "src/crypto-providers/trezorCryptoProvider.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 39965,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711",
+          "path": "src/index.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 2609,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
+          "path": "src/signMessage/signMessage.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 165,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0",
+          "path": "src/transaction/transaction.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 1428,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322",
+          "path": "src/transaction/transactionValidation.ts",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 3414,
+          "status": "scanned"
+        },
+        {
+          "evidenceId": "evidence:6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+          "path": "yarn.lock",
+          "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+          "bytes": 268783,
+          "status": "native-lock"
+        }
+      ],
+      "hints": [
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 5,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "The command-line interface is based on the official [Cardano-CLI tool](https://docs.cardano.org/projects/cardano-node/en/latest/reference/cardano-node-cli-reference.html).",
+          "id": "scan-hint:c1200fc469c122ee9c744b38b3180431079cb8ed0b23b03ae0827c7cfd27ed32",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 8,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- [Trezor](https://trezor.io/)",
+          "id": "scan-hint:4b5989588f1e295bb5403d5b05afe514d2f2ca79d58165c1764f31a127a2fc19",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 9,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- [Ledger](https://www.ledger.com/)",
+          "id": "scan-hint:039d87d0d1805e0e5895d2a82775d89ac05e1c1c74a161dce33d03e0d8ae8ea8",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 10,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- [Keystone](https://keyst.one/) - NOTE: support for Keystone is developed and maintained by the Keystone team",
+          "id": "scan-hint:410e24077bc9c77b48bcb2671694f9a315bfc27fc180ba7c90d004f6efe2c6ff",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 14,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- releases https://github.com/vacuumlabs/cardano-hw-cli/releases",
+          "id": "scan-hint:3b1fa6afdd4f6584dedd47f35a20afeb55781c9d0e0f75d8d52e0f34c8b7db0c",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 15,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "- installation instructions https://github.com/vacuumlabs/cardano-hw-cli/blob/develop/docs/installation.md",
+          "id": "scan-hint:df00e733f261cb9db47ee8eac2b80490bf72a3d7de83910d90334019c30757d9",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 49,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "Verifies whether the tx file complies with [restrictions](https://github.com/cardano-foundation/CIPs/blob/master/CIP-0021/README.md) imposed by hardware wallets.",
+          "id": "scan-hint:ee54e6fda6a477e6b3717721ee8870c64b114867b5f2a85f3797c36ad62cc191",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "README.md",
+          "line": 61,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "Tries to non-destructively transform the tx file, so that it complies with [restrictions](https://github.com/cardano-foundation/CIPs/blob/master/CIP-0021/README.md) imposed by hardware wallets.",
+          "id": "scan-hint:20a4287320c68ba644d6ddd71eaf65feef420dc9b5eba97f1c6ca374ac3c9192",
+          "evidenceId": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  \"homepage\": \"https://github.com/vacuumlabs/cardano-hw-cli#readme\",",
+          "id": "scan-hint:36c77d155d82a35cad4f8e754dc32d6aa512329233465036ec247fccfba18fb1",
+          "evidenceId": "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 7,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  \"homepage\": \"https://github.com/vacuumlabs/cardano-hw-cli#readme\",",
+          "id": "scan-hint:3733bc91dbfc350d162b2c18af32b303813e1fd64f3d90657efa3e7116b4e1fb",
+          "evidenceId": "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 12,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    \"url\": \"git+https://github.com/vacuumlabs/cardano-hw-cli.git\"",
+          "id": "scan-hint:5a6da406fcf58983dc16f497fc926e4ab5103afb6efccaf1484dfd768fc37f1f",
+          "evidenceId": "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 12,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    \"url\": \"git+https://github.com/vacuumlabs/cardano-hw-cli.git\"",
+          "id": "scan-hint:867b6e928e69b0f55345c437bbfeed57dcd238249bcd6267129438ffa9f4d1c8",
+          "evidenceId": "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 15,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    \"url\": \"https://github.com/vacuumlabs/cardano-hw-cli/issues\"",
+          "id": "scan-hint:371fa8803ccf721c71313feb807626e569b4616f2daccadb12ea6d995d7049b8",
+          "evidenceId": "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "package.json",
+          "line": 15,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "    \"url\": \"https://github.com/vacuumlabs/cardano-hw-cli/issues\"",
+          "id": "scan-hint:5af54cc52750ee42310863c6337345648cb41eecf93f7e3d59e25a07405ea7da",
+          "evidenceId": "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "src/crypto-providers/keystoneCryptoProvider.ts",
+          "line": 1,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "/* NOTE: Support for Keystone is developed and maintained by the Keystone team. https://keyst.one/ */",
+          "id": "scan-hint:87221a59e73898d87f754e91435826f9caced2b5a48a7ffb4c0259b6885f498e",
+          "evidenceId": "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "src/crypto-providers/keystoneCryptoProvider.ts",
+          "line": 356,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "  // https://github.com/input-output-hk/cardano-js-sdk/blob/master/packages/key-management/src/cip8/cip30signData.ts#L52",
+          "id": "scan-hint:c622e9bda59237e9484c00644f33bbd0b47435a366e20320ae3b6ef7175a2a14",
+          "evidenceId": "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "src/crypto-providers/trezorCryptoProvider.ts",
+          "line": 93,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      appUrl: 'https://github.com/vacuumlabs/cardano-hw-cli',",
+          "id": "scan-hint:48638f4cc5a548b64033e08693079690ad84c308b3200fd7372cc53f450ed7e4",
+          "evidenceId": "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+          "disposition": "needs-review"
+        },
+        {
+          "rule": "service-call-or-url",
+          "kind": "service",
+          "path": "src/crypto-providers/trezorCryptoProvider.ts",
+          "line": 99,
+          "column": 1,
+          "pointer": "/content",
+          "quote": "      // to be inserted in the browser, see https://github.com/trezor/connect/issues/714",
+          "id": "scan-hint:c88940400a2069a170397d5a866d8c5db07131d9bb2bac98d468dbc0483bf960",
+          "evidenceId": "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+          "disposition": "needs-review"
+        }
+      ],
       "unresolved": [
         "Only attached, retained source files at this tool's current revision were eligible. Uncaptured repository files, dependencies and deployed configuration remain unexamined.",
         "Lexical matches may be comments, documentation, examples or tests. No production scope, target identity, enabled integration or capability is established.",
-        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary.",
-        "No eligible source content was scanned."
+        "No match does not establish absence of integrations. Manual source review and native resolution remain necessary."
       ]
     },
     {

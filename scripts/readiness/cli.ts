@@ -73,7 +73,7 @@ capture-source  --tool id --path source-file (retain pinned source for citations
 scan-integrations [--tools id,id] [--output report.json] (lexical leads from retained source)
 export-review   --tools id,id --output .readiness/reviews/name
 import-review   --packet packet.json --input result.json [--decisions decisions.json]
-diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json]
+diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json.gz]
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
 Native adapters: ${NATIVE_ADAPTERS.join(", ")}.

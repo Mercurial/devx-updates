@@ -1,11 +1,16 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { mkdtempSync, readFileSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { gunzipSync } from "node:zlib";
 import type { Graph } from "../map-types";
 import { canonical, finalize, inventory } from "./core";
 import { resolveNative } from "./adapters";
-import { mergeResolution } from "./store";
+import { mergeResolution, writeJson } from "./store";
 import { compareSnapshots } from "./comparison";
+import { readComparison } from "./comparison-storage";
 import { calculateImpact } from "./impact";
 import { investigationProjects, summarizeWork, workReport } from "./work";
 import { buildSiteReports } from "./site-reports";
@@ -22,6 +27,34 @@ function fixture() {
   } }, { toolId: "consumer", adapter: "npm-lock", release: "v1", revision: "a".repeat(40), platform: "all", features: [], command: "read lock", toolchain: "npm", origin: "source-reconstruction", rootNames: ["consumer"] }, { native: "evidence:fixture", configuration: "evidence:fixture" }));
   return finalize(snapshot);
 }
+
+test("compressed comparisons preserve all records and static report identity with legacy support", () => {
+  const directory = mkdtempSync(join(tmpdir(), "readiness-comparison-"));
+  try {
+    const snapshot = fixture();
+    const before = finalize({ ...snapshot, artifacts: [], occurrences: [], edges: [], profiles: [] });
+    const comparison = compareSnapshots(before, snapshot);
+    assert.ok(comparison.relationships.length > 0);
+    const plain = join(directory, "changes.json"), compressed = `${plain}.gz`;
+    assert.equal(readComparison(directory, snapshot.semanticDigest), null);
+    writeJson(plain, comparison);
+    assert.deepEqual(readComparison(directory, snapshot.semanticDigest), comparison);
+    writeJson(compressed, comparison);
+    assert.deepEqual(gunzipSync(readFileSync(compressed)), readFileSync(plain));
+    assert.throws(() => readComparison(directory, snapshot.semanticDigest), /Both changes/);
+    unlinkSync(plain);
+    const loaded = readComparison(directory, snapshot.semanticDigest);
+    assert.deepEqual(loaded, comparison);
+    assert.equal(readComparison(directory, "stale-snapshot"), null);
+    const impacts = calculateImpact(snapshot);
+    assert.deepEqual(buildSiteReports(snapshot, impacts, [], loaded), buildSiteReports(snapshot, impacts, [], comparison));
+    const bytes = readFileSync(compressed);
+    writeJson(compressed, comparison);
+    assert.deepEqual(readFileSync(compressed), bytes, "repeat writes have deterministic gzip bytes");
+    writeFileSync(compressed, bytes.subarray(0, bytes.length - 5));
+    assert.throws(() => readComparison(directory, snapshot.semanticDigest), /unexpected end|buffer/i);
+  } finally { rmSync(directory, { recursive: true, force: true }); }
+});
 
 test("static report partitions preserve full reach, paths, root-only projects, work and comparison", () => {
   const snapshot = fixture(), original = canonical(snapshot), impacts = calculateImpact(snapshot);

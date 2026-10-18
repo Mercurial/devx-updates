@@ -1,4 +1,4 @@
-import { compareSnapshots } from "./comparison";
+import { readComparison } from "./comparison-storage";
 import { join } from "node:path";
 import { existsSync } from "node:fs";
 import { calculateImpact } from "./impact";
@@ -29,9 +29,6 @@ export function reviewQueue(): { packetId: string; toolIds: string[]; status: st
   return existsSync(path) ? reconcileReviewQueue(readinessSnapshot(), readJson(path) as ReviewQueueEntry[]) : [];
 }
 
-export function readinessChanges(): ReturnType<typeof compareSnapshots> | null {
-  const path = join(process.cwd(), "data/readiness/changes.json");
-  if (!existsSync(path)) return null;
-  const changes = readJson(path) as ReturnType<typeof compareSnapshots>;
-  return changes.schemaVersion === 2 && changes.to === readinessSnapshot().semanticDigest ? changes : null;
+export function readinessChanges() {
+  return readComparison(join(process.cwd(), "data/readiness"), readinessSnapshot().semanticDigest);
 }

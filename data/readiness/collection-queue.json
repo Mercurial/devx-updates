@@ -660,6 +660,122 @@
       "attemptedAt": "2026-10-18T21:07:17.164Z",
       "profileId": "profile:bloxbean-cardano-client-library:23ed51384dd91ab286beeaa1",
       "succeededAt": "2026-10-18T21:07:54.027Z"
+    },
+    {
+      "id": "collection:d5c0aaafb56fe7b0d7f6a9ac40ec7a3b27f2f7eb22176c4bd2a7fa0125c4e032",
+      "request": {
+        "toolId": "cardano-hw-cli",
+        "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+        "adapter": "yarn-lock",
+        "roots": [
+          "cardano-hw-cli"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "yarn.lock"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:17:05.923Z",
+      "profileId": "profile:cardano-hw-cli:fca24b891602ed94eae6a326",
+      "succeededAt": "2026-10-18T21:17:14.146Z"
+    },
+    {
+      "id": "collection:77166c8dad81acb202bda55e67816032e4901ac335201c404691eae153296a32",
+      "request": {
+        "toolId": "cardano-dev-wallet",
+        "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+        "adapter": "npm-lock",
+        "roots": [
+          "cardano-wallet"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "webext/package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:17:14.146Z",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824",
+      "succeededAt": "2026-10-18T21:17:22.840Z"
+    },
+    {
+      "id": "collection:1ca989194fa3f53601a24f2b191ec86f58950ac6eb6d65efab9bad0a532e328f",
+      "request": {
+        "toolId": "bursa",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "adapter": "go-packages",
+        "roots": [
+          "github.com/blinklabs-io/bursa"
+        ],
+        "platform": "linux/amd64",
+        "path": "go.mod",
+        "patterns": [
+          "./..."
+        ],
+        "tags": []
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:17:22.840Z",
+      "profileId": "profile:bursa:fe7537b443b4c244a7da65d5",
+      "succeededAt": "2026-10-18T21:17:43.469Z"
+    },
+    {
+      "id": "collection:ae1b8bfe34e02268e7233a8cd674c374912811fc3ecafce0652a87c2c46d9519",
+      "request": {
+        "toolId": "bursa",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "adapter": "npm-lock",
+        "roots": [
+          "bursa-wallet-ui"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "ui/web/package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:17:43.470Z",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815",
+      "succeededAt": "2026-10-18T21:17:52.277Z"
+    },
+    {
+      "id": "collection:81948c9202e042e9b7b2da3050c272825706f57b54be6a1c42a680e298cc7ca9",
+      "request": {
+        "toolId": "bursa",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "adapter": "npm-lock",
+        "roots": [
+          "bursa-connector"
+        ],
+        "platform": "all-lockfile-targets",
+        "path": "ui/extension/package-lock.json"
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:17:52.278Z",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67",
+      "succeededAt": "2026-10-18T21:18:01.135Z"
+    },
+    {
+      "id": "collection:e4b2461e6aff08d8e1ebf4242784098978c866e61da31c871d640fe1f88ea576",
+      "request": {
+        "toolId": "bursa",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "adapter": "go-packages",
+        "roots": [
+          "github.com/blinklabs-io/bursa/ui"
+        ],
+        "platform": "linux/amd64",
+        "path": "ui/go.mod",
+        "patterns": [
+          "./..."
+        ],
+        "tags": []
+      },
+      "status": "succeeded",
+      "attempts": 1,
+      "attemptedAt": "2026-10-18T21:18:46.128Z",
+      "profileId": "profile:bursa:4e0905655a23986d1c9ec50e",
+      "succeededAt": "2026-10-18T21:19:06.406Z"
     }
   ]
 }

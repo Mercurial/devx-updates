@@ -52,7 +52,7 @@ jobs:
       - name: Validate and compare collected evidence
         run: |
           npm run readiness -- report
-          npm run readiness -- diff --before /tmp/readiness-before.json --output data/readiness/changes.json
+          npm run readiness -- diff --before /tmp/readiness-before.json --output data/readiness/changes.json.gz
           npm run readiness -- validate
           npm run readiness -- replay
       - name: Retain results for review

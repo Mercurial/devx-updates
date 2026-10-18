@@ -455,7 +455,7 @@ Results from stale input packets are rejected. Unrelated tools' updates do not i
 ```sh
 npm run readiness -- replay
 npm run readiness -- diff --before previous-snapshot.json --output changes.json
-npm run readiness -- diff --before-ref <git-ref> --output data/readiness/changes.json
+npm run readiness -- diff --before-ref <git-ref> --output data/readiness/changes.json.gz
 npm run test:readiness
 ```
 
@@ -509,9 +509,14 @@ npm run test:readiness
   of being silently deleted. Assignment changes never alter graph evidence or
   readiness. Catalog maintainer hints are separate from assigned owners and do
   not constitute verified contact information. No issues or messages are sent.
-- `changes.json` uses comparison schema version 2 and must target the current
+- `changes.json.gz` uses comparison schema version 2 and must target the current
   snapshot digest. Regenerate older comparisons with `diff`; stale or older-format
-  files are not displayed. The website offers searchable, paginated tool changes,
+  files are not displayed. A `.json.gz` output is lossless gzip-compressed JSON;
+  plain `.json` output remains supported. The website also reads historical
+  `changes.json`, but rejects a directory containing both filenames to avoid
+  silently selecting an obsolete report. When migrating, verify decompressed
+  equality before removing the plain copy. Compression changes repository storage,
+  not comparison contents or the browser's JSON export. The website offers searchable, paginated tool changes,
   recorded versions, relationship changes, and exact-artifact reach changes, with full and filtered JSON
   exports. Reach changes keep required, optional, build, development and potential
   exposure separate; equal counts with different consumers still produce a change.
@@ -563,6 +568,14 @@ current comparison. The static export includes these files under
 No collection, registry access or runtime server is involved (ADR-1/ADR-2).
 Requests use `NEXT_PUBLIC_BASE_PATH` (ADR-11). Serve the exported directory through
 HTTP, including when inspecting it locally without external network access.
+
+The pinned Next.js build uses `experimental.cpus: 1` in `next.config.ts` to
+limit static generation to one worker. Each worker loads the retained graph;
+duplicating it across workers can exhaust memory on small build hosts. This
+trades parallel throughput for lower memory use without omitting routes, graph
+records or TypeScript checks. Other processes still need memory, and larger
+snapshots may require further profiling. Validate changes to this setting with
+the complete export, including `NEXT_PUBLIC_BASE_PATH=/devx-updates npm run build`.
 
 Initial HTML contains tool coverage and the full catalog denominator. Other
 reports load when their tabs open; comparison loads when expanded. Impact and

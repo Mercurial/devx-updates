@@ -1120,6 +1120,68 @@ Only the task-downloaded image was removed after all workers terminated. ADR-1 a
 ADR-2 remain the persistence/publication model. Broader collection, owner-launched
 consumer reviews and the exact Dijkstra source/environment remain open.
 
+### Active continuation: signing consumers and bounded static builds
+
+`content/readiness/signing-batch.json` registers six immutable requests across
+three consumers: Cardano HW CLI v1.19.1 (Classic Yarn), Cardano Dev Wallet's
+default-branch extension (npm), and Bursa v0.19.0's separate root/UI Go modules,
+wallet frontend and connector (npm). The two Go captures use Go 1.26.8,
+Linux/amd64, cgo disabled, workspace off and default build tags; complete metadata
+does not establish a successful build, signing operation or hardfork result.
+The four JavaScript profiles remain partial source reconstructions.
+
+Both Bursa Go graphs preserve native package/test records without loader errors.
+The root module selects Gouroboros v0.210.0; the UI separately selects Gouroboros
+v0.205.5, Bursa v0.18.1-0.20260926142054-83d794689ded and Dingo v0.70.14. Current
+standalone releases do not substitute for these consumer-selected versions.
+Dev Wallet and the Bursa connector retain their development-only declarations;
+source imports do not silently promote them to verified runtime inventory.
+
+Forty-nine retained source files and artifact/integration gaps describe remaining
+boundaries: HW CLI's differing embedded commit field, Trezor postinstall patch,
+USB/HID/WASM/firmware and cardano-cli interoperability; Dev Wallet's unverified
+browser-store release mapping, generated bundle and external backends; Bursa's
+pre-build embedded HTML placeholder, excluded webview/cgo/nftmedia/integration
+configurations, hardware/cloud signers and deployed node/database services.
+No application installation, signing or compatibility test ran. Original Lucid
+remains excluded as a standalone root; existing owner-run reviews are unchanged.
+
+Coverage is now **43/269 tools**, **52 profiles**, **1,251 evidence objects**,
+**63,108 occurrences** and **221,065 edges**. Snapshot digest:
+`a984bb825fcb94eee1cda6162c87a8d5e30f55351c0e649204361720990bbb20`.
+Validation passes, all 52 native profiles replay identically, and resuming the
+six-request batch attempts zero jobs. Comparison against `ea7e310` records six
+added profiles, no changed/removed profiles and no capability changes. All tools
+remain hardfork-unassessed.
+
+The larger snapshot exposed build-host memory pressure: three static workers
+ended in SIGKILL at 87/349 pages. A one-worker build completed all 349 routes;
+process measurements also found substantial unrelated memory use, so worker
+duplication is a mitigated pressure source, not a proven exclusive cause. The
+pinned Next.js `experimental.cpus: 1` setting bounds duplicated graph loads
+without pruning routes or disabling TypeScript checks (ADR-1/ADR-2). Full export
+is the resource regression check; a shallow unit test cannot reproduce OS memory
+pressure. Future larger snapshots still require measurement.
+
+The full comparison grew to 117,646,028 bytes. Lossless `changes.json.gz` storage
+reduces it to 17,705,494 bytes; decompressed bytes equal the original, and CLI
+regeneration produces identical compressed bytes. JSON helpers retain atomic
+replacement and plain-file support. The website accepts legacy `changes.json`,
+rejects ambiguous dual files and checks the target digest. Scheduled collection
+writes compressed output. No relationships, paths, citations or exports are
+removed. A regression checks detailed comparison/static-report identity,
+deterministic gzip, stale reports, corrupt input and legacy/ambiguous filenames.
+
+All 119 readiness tests and scoped lint pass. Standards and specification reviews
+found no actionable issues in either the signing data or implementation changes.
+The one-worker export and desktop/mobile browser checks pass for all six signing
+profiles, exact graph exports, development scopes, gaps, Go filtering, base-path
+links and console errors. The final compressed-input build also exports all 349
+routes, and its browser comparison download equals retained JSON byte for byte
+(apart from the file's trailing newline).
+Broader catalog coverage, owner-launched reviews and the exact Dijkstra target
+and baseline/transition/post-fork environment remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

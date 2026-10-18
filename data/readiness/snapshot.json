@@ -4,8 +4,8 @@
     "schemaVersion": 1,
     "catalogDigest": "54aa2bbd2a4c79d46671cadd8f34dca41da1982d02f4be8993d5fe9a97ae24c9",
     "catalogRevision": "e6eb8ccf55ff305a870c70100ae865b87c911fc5",
-    "semanticDigest": "b8a2a267a8b3741c81091af76da394ec9b0d6f4d528ce8927cc7330ba0e653df",
-    "generatedAt": "2026-10-18T21:09:50.335Z",
+    "semanticDigest": "a984bb825fcb94eee1cda6162c87a8d5e30f55351c0e649204361720990bbb20",
+    "generatedAt": "2026-10-18T21:19:40.196Z",
     "tools": [
       {
         "id": "1694-io",
@@ -2745,7 +2745,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -2765,16 +2765,139 @@
           "ui/web/package.json"
         ],
         "evidenceIds": [
+          "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+          "evidence:0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+          "evidence:0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+          "evidence:0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+          "evidence:1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+          "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+          "evidence:241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43",
+          "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+          "evidence:3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+          "evidence:3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+          "evidence:40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27",
+          "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+          "evidence:494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+          "evidence:4e5f1196c3d5e508bfa9cb7264de567102ee3f40322a42a6b5398a534d8e00cf",
+          "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+          "evidence:51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59",
+          "evidence:55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+          "evidence:58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+          "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
           "evidence:5db0d23219e635111c371d7b3c649c1b04ae5b691c92d4408a5499bcad83a9ff",
-          "evidence:a84ad6313528eeafbdbc5237a1aa7b5ec903b10a526c2fa65f62e325b2665086"
+          "evidence:691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+          "evidence:6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027",
+          "evidence:6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b",
+          "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+          "evidence:7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf",
+          "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+          "evidence:8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab",
+          "evidence:971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+          "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+          "evidence:a84ad6313528eeafbdbc5237a1aa7b5ec903b10a526c2fa65f62e325b2665086",
+          "evidence:ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+          "evidence:be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+          "evidence:beabe3658f00309fbc2a79136aa85c14e436ff4a5875d41794345f6085486b46",
+          "evidence:c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+          "evidence:c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+          "evidence:c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322",
+          "evidence:d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2",
+          "evidence:d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7",
+          "evidence:d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+          "evidence:e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+          "evidence:e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+          "evidence:e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+          "evidence:f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c",
+          "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+          "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+          "evidence:f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+          "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+          "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150"
         ],
         "gaps": [
+          {
+            "id": "gap:0165962a610faeb996e756f9",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @opentelemetry/api from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:02f3e00d1fb31cb225a060de",
+            "area": "resolution",
+            "reason": "Optional peerDependencies jiti from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:036380156c7e8cb8e901cae8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-playwright from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:06c97354814febbe000841ba",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:07b0a6adc5cc8a831d06b76e",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
           {
             "id": "gap:08d723e628ab4e7048ff4ff9",
             "area": "capability",
             "reason": "Chain-facing capabilities have not been reviewed.",
             "nextAction": "Review production entry points and integration behavior.",
             "code": "capabilities-unreviewed"
+          },
+          {
+            "id": "gap:08f313234f2d6e88df90b5bc",
+            "area": "resolution",
+            "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:095a54eb881f9433d42447bb",
+            "area": "resolution",
+            "reason": "Optional peerDependencies jiti from node_modules/eslint has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:0a501edf1cd6591e26364cb6",
+            "area": "artifact",
+            "reason": "Bursa v0.19.0 is selected source. The UI web package has no version and the connector is 0.1.0. Linux/amd64 metadata with cgo disabled does not identify published desktop/mobile/container artifacts or their shipped assets.",
+            "nextAction": "Bind selected source/configurations to published artifact digests and package inventories.",
+            "code": "signing-scope:artifact"
+          },
+          {
+            "id": "gap:0c3e8541ac4cb5599ba742c8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:11c77e991a7939c8ba9cffe2",
+            "area": "resolution",
+            "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:12793bb1c247e95b70086ea7",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
           },
           {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
@@ -2784,17 +2907,332 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:2637c21bcf3b0e18c135884a",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies @opentelemetry/api from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:28b55c249ae35bf9fc009f35",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:2b8396916f174094329473a8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/node from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:3027650cd83f1db8e503302f",
+            "area": "resolution",
+            "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:32ee79abc3bb85e1363de2cd",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-preview from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:38b9553627b49e5457a4d381",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:3a3193b9293321165d60e8ce",
+            "area": "resolution",
+            "reason": "Optional peerDependencies yaml from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:3fe7f877ff895caed53b1e3a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies yaml from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:4741992fbb46e95aa86d76af",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:48caa8f86043b60cf21b9e1b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:5902313d48a47db6f7e56f59",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:5a401d05113bbafdf288e46e",
+            "area": "resolution",
+            "reason": "Optional peerDependencies jiti from node_modules/eslint has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:5f0bae24d6910c1f1d36585e",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:5ff44a7bca1d3e66e6b926f1",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-webdriverio from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:75689d249d95868e0a70087b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:76e02a0bafded04a85a7b774",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/coverage-istanbul from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:773aaa9a27c55e883f73266e",
+            "area": "resolution",
+            "reason": "Optional peerDependencies jiti from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:804d29e3b31ede34178acdc0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:830344d30ec0f80fc630fea3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:86aa15754549af0b29e913df",
+            "area": "resolution",
+            "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:8859a277ca7d99679d6b4cd3",
+            "area": "resolution",
+            "reason": "Optional peerDependencies terser from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:892220ea4fec20979eba71d5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:8d46968a9c8fdc3cd3e16648",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:91a9bbf9cfa4accf7f606651",
+            "area": "integration",
+            "reason": "Root and ui Go modules are separate consumer contexts; ui/go.mod selects an older Bursa module plus Dingo. The tracked ui/internal/webui/dist/index.html is only a pre-build placeholder; npm UI/connector captures do not establish the embedded web bundle. The connector has only development declarations. Webview/cgo, nftmedia, PKCS#11, device firmware/transports, cloud/Vault/SOPS backends, PostgreSQL watermarks, Mithril bootstrap and live networks remain separately scoped boundaries.",
+            "nextAction": "Review enabled signing/backends and bundled artifacts; collect additional build-tag/platform configurations and verify local-node and provider deployments.",
+            "code": "signing-scope:integration"
+          },
+          {
+            "id": "gap:93cf0864d69dccd4a903a363",
+            "area": "resolution",
+            "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:972287422b16c639c4f1c485",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @swc/helpers from node_modules/@swc/core has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:98a633a3cbdb55cecd2e4e38",
+            "area": "resolution",
+            "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:9dbae4fa62656ad2f66da147",
+            "area": "resolution",
+            "reason": "Optional peerDependencies terser from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:a450f62065ff34a63ec0315b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/coverage-istanbul from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:b4ac2b407859f99c3d208ba4",
+            "area": "resolution",
+            "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:b926c73cc8f4ebcc651e7ce0",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:ba9cc1fb7c59c037ea434a7a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:bbf471a59b89089e569bec88",
+            "area": "resolution",
+            "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:c04d64e24fc275871affa283",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-webdriverio from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:cb2dae7d815b0191f58b25ac",
+            "area": "resolution",
+            "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
             "area": "artifact",
             "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+          },
+          {
+            "id": "gap:db521214954eeb13913bf44c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-playwright from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:e1289af6abda07c285da015a",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:e4a11e5868347ae1c63f7041",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:e4fe902f97e36b6a480acff6",
+            "area": "resolution",
+            "reason": "Optional peerDependencies esbuild from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:e8733ad906e30c904c457da5",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @types/node from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:ea11a4f9574d466bf9662cf8",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitest/browser-preview from node_modules/vitest has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:eac0309a0ac1bab53d96b42e",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:efdefde9a7ac531878d402f1",
+            "area": "resolution",
+            "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:f75ba7921dc53a15d201a37b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies @vitejs/devtools from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+          },
+          {
+            "id": "gap:fa7f9b2157e5d9341871d5ca",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+          },
+          {
+            "id": "gap:feb299db308588ca251f279c",
+            "area": "resolution",
+            "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:bursa:be7bfd64419de5730323fb67"
           }
         ],
         "lastAttempt": "2026-10-17T16:51:47.389Z",
@@ -4450,7 +4888,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -4461,8 +4899,21 @@
           "webext/package.json"
         ],
         "evidenceIds": [
+          "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
           "evidence:3621f213c0fd4a8bccc89a1227f452fd3d3b9e790b8e0513d882f62372925fd5",
-          "evidence:4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8"
+          "evidence:4ae81fea51dc3ca85f0d70310a1a5641b4bdd5888e7a71446e856f6087f8e8a8",
+          "evidence:4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a",
+          "evidence:54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71",
+          "evidence:5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0",
+          "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+          "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+          "evidence:68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802",
+          "evidence:763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81",
+          "evidence:b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
+          "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+          "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+          "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+          "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb"
         ],
         "gaps": [
           {
@@ -4473,11 +4924,32 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:0a501edf1cd6591e26364cb6",
+            "area": "artifact",
+            "reason": "Default-branch source has webext package/lock version 0.0.0; browser-store artifacts and their source mapping are not identified.",
+            "nextAction": "Verify the browser release and bundled extension inventory at an immutable source revision.",
+            "code": "signing-scope:artifact"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
             "nextAction": "Export a discovery review packet.",
             "code": "integration-unreviewed"
+          },
+          {
+            "id": "gap:1f58648e76402145addc0396",
+            "area": "resolution",
+            "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+          },
+          {
+            "id": "gap:2bff0592d723421d1af5dbbc",
+            "area": "resolution",
+            "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
           },
           {
             "id": "gap:4abbaad672af9beef40f0088",
@@ -4486,11 +4958,46 @@
             "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:7f26be58e31f812d40320590",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Optional peerDependencies express from node_modules/addons-scanner-utils has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+          },
+          {
+            "id": "gap:9192959a0e075db6eb166266",
+            "area": "resolution",
+            "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+          },
+          {
+            "id": "gap:91a9bbf9cfa4accf7f606651",
+            "area": "integration",
+            "reason": "All npm declarations, including CSL and message-signing WASM used by WalletApiInternal.ts, are devDependencies. The native lock retains development scope; it is not evidence that the built extension has no runtime dependencies. Blockfrost/Ogmios/Kupo deployment choices, Plutip and generated extension bundles remain separate boundaries.",
+            "nextAction": "Review bundled runtime imports and built artifacts, and verify the enabled provider/network and CIP-30 signing workflow.",
+            "code": "signing-scope:integration"
+          },
+          {
+            "id": "gap:98c897afe03fc65474a0a8e7",
+            "area": "resolution",
+            "reason": "Optional peerDependencies safe-compare from node_modules/addons-scanner-utils has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+          },
+          {
+            "id": "gap:ae5ffadcfecb717cc584929b",
+            "area": "resolution",
+            "reason": "Optional peerDependencies body-parser from node_modules/addons-scanner-utils has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+          },
+          {
+            "id": "gap:e14afd5e8e75effac3fe5d9d",
+            "area": "resolution",
+            "reason": "Optional peerDependencies node-fetch from node_modules/addons-scanner-utils has no locked occurrence.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
           }
         ],
         "lastAttempt": "2026-10-17T16:52:54.502Z",
@@ -4683,7 +5190,7 @@
           "npm"
         ],
         "artifact": "partial",
-        "resolution": "unresolved",
+        "resolution": "partial",
         "integration": "unresolved",
         "capability": "unresolved",
         "readiness": "unassessed",
@@ -4692,8 +5199,24 @@
           "yarn.lock"
         ],
         "evidenceIds": [
+          "evidence:0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322",
+          "evidence:10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f",
+          "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+          "evidence:352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+          "evidence:3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
+          "evidence:3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf",
+          "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+          "evidence:43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a",
           "evidence:4d2b3056808f46a89c33b44802594938964a752356e32909549d8eaa2c777ab8",
-          "evidence:b78c89d841e145e076b924ad0e34700be18192df9f62b8a14d812ce834cee042"
+          "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "evidence:6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+          "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+          "evidence:a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711",
+          "evidence:b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2",
+          "evidence:b78c89d841e145e076b924ad0e34700be18192df9f62b8a14d812ce834cee042",
+          "evidence:bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0",
+          "evidence:ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c",
+          "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1"
         ],
         "gaps": [
           {
@@ -4704,6 +5227,13 @@
             "code": "capabilities-unreviewed"
           },
           {
+            "id": "gap:0a501edf1cd6591e26364cb6",
+            "area": "artifact",
+            "reason": "Source tag and manifest identify 1.19.1, but package.json embeds a different commit value. Published binaries, Node/pkg output, native USB/HID assets and serialization WASM correspondence are not verified.",
+            "nextAction": "Verify release attestations/checksums and built package contents against the selected source.",
+            "code": "signing-scope:artifact"
+          },
+          {
             "id": "gap:1e1b6ed6fb16f75fd33611cc",
             "area": "integration",
             "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -4711,11 +5241,18 @@
             "code": "integration-unreviewed"
           },
           {
-            "id": "gap:b33c4f9e67e77b9535e0f2cd",
+            "id": "gap:7608e5276ae082d3b6bec00f",
             "area": "resolution",
-            "reason": "No native dependency resolution has been imported.",
-            "nextAction": "Collect a native resolution for a declared release/profile.",
-            "code": "native-resolution-missing"
+            "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+            "nextAction": "Recollect a complete native build plan for this profile.",
+            "profileId": "profile:cardano-hw-cli:fca24b891602ed94eae6a326"
+          },
+          {
+            "id": "gap:91a9bbf9cfa4accf7f606651",
+            "area": "integration",
+            "reason": "The selected Classic Yarn closure includes hardware-wallet clients, but scripts/fix-trezor-firmware.js patches installed Trezor files. Ledger/Trezor/Keystone firmware, device transports, transaction restrictions and cardano-cli interoperability have not been tested or reviewed.",
+            "nextAction": "Inspect postinstall and bundled/native artifacts, then review the selected signing workflow and device/firmware configuration.",
+            "code": "signing-scope:integration"
           },
           {
             "id": "gap:ccd120d62205d2bd8fa69b2f",
@@ -25256,6 +25793,161 @@
         "coverage": "partial"
       },
       {
+        "id": "profile:bursa:4e0905655a23986d1c9ec50e",
+        "toolId": "bursa",
+        "release": "v0.19.0",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "platform": "linux/amd64",
+        "features": [
+          "cgo:0",
+          "workspace:off",
+          "packages:./..."
+        ],
+        "command": "go list -e -deps -json -mod=readonly ./...; go list -e -deps -json -mod=readonly -test ./...",
+        "toolchain": "go version go1.26.8 linux/amd64",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:f409285f85230bc2e7a66d103241f45028a3f872a4d7c493ea1a0733bf1b0b84",
+          "occurrence:ab5503f50e2831f88497a1c68021e3a74fc1f57c3bbbf3d82fb5697dd6b06a74",
+          "occurrence:becf4fbbaf475c59da9a71ff92d48d48791d82518a4e25f55da1a91fed45aa08",
+          "occurrence:5624d9a9fe9ce291156c238fabb88ab8e477687a0e1947a4f6f2ff99ded15eef",
+          "occurrence:90f214252608bf7fcabaa33eb18aae62d2dcc53132ef442d7ee893c4b36b56b3",
+          "occurrence:f8d8721a2d729f4b6f0bdcd51a99cdf4f3c6be9ac285c3fa24402677b15bafe4",
+          "occurrence:55f0330033a6c115bda0b3369e15975a4a397cc0a7be04275810b51e6b38e6da",
+          "occurrence:3fb0a5aa6b14e6251184a7935d2bf376b0029642aff29e2178ae22446784e2e6",
+          "occurrence:a8ee1d119e8441a621c313c83eed45924949524ecb1ae6b90b61e36e3f2fe1fd",
+          "occurrence:af006a5f7f4b33800d73738269b800fc07cbf9bb35619a93b9e144ca12360af8",
+          "occurrence:b283e590a511f531a19395c971ae1dd87391eb21b4a1e7658eb2eb57d17aabed",
+          "occurrence:07b52802f4d17939639438d3a2610bb939d23380fe4f034e3616810aeb8a5618",
+          "occurrence:535bf28cd5e82bc6ada7acc2e798f89df165d937256820356d7c361cf5e3bf28",
+          "occurrence:dee647403afcaa0656f04b0e9cec3048253b0c00c3b8153111f399edadef8a35",
+          "occurrence:da81bd5ed970baea6e384fed3e06614d3c55be074b8ea111d6082a2c26eb9278",
+          "occurrence:14621b449bbb612b40199807fa070e4a4e9748fbb4d6e5004bbffcaef2ece059",
+          "occurrence:13e55fa03476e4d6b612d0ad25fda3f98f05f55954c4642de95d779fe1c7c4f1",
+          "occurrence:165e5dc6abae8e22387b5f1d4bed3c1a625b4c49e437cabb6ef6fadd934cecb2",
+          "occurrence:7a5d22ecb1fddf739da4072c40d16749f97312dbd3c07e645b880b17da08c714",
+          "occurrence:50cf8cab83305f4a35d7227a9f85738ceb39e97688d2b7d6d3455f8715f0d276",
+          "occurrence:9b99cb0360ef549859948a5ffc82bb47d6594613f06b72514db31c9f5d1e867d",
+          "occurrence:bb96ba602c47b0b498e3f171b491854d6a26e884bae7d02739401f2a9f3764b7",
+          "occurrence:1a1f653f932476ce2500161267f1b02092fe93f88a9800b9d64f5c42c60710ad",
+          "occurrence:896d986f48a8d8ccf0825e0a8a1c8f8aa428e44988dddff473569235029980ad",
+          "occurrence:d463a72a7593aa22f38cea8f2a1753adfbbd9bfcc59af701b60f087455dc3161",
+          "occurrence:e420f13ffb87a9e0845f964ae97142975c3ce3364c363f98770ea1d4f50510fd",
+          "occurrence:208e8e6ecb2da9ec2bdd61f8a251d948e35ef4ce18a23d22fae4b2848d23ae58",
+          "occurrence:28cbe90fea85a777e7ec6ca747c3055053ce5ebcd5c28e3871198d1b637ed36e",
+          "occurrence:db5425128caff11070a0c5094fce02fa17f7087c6c8d8b3bf1465d59d480a53b",
+          "occurrence:376231631d94ec244bf65c4961a098c5c15cbd6444bce233ecebfcd560f1c807",
+          "occurrence:2dbbe8ef55ebd9019c83434128b84528e522275030b2e1392bd7a1722aa2b2ca",
+          "occurrence:0907d442fddc839457c634ff672d11a2653806b93aedef3b5f9cd9bf4ffed056",
+          "occurrence:54b14c6c19bf4e498e4f7941a43bb7767f8bdb6c7122398de857b64475b4bb59"
+        ],
+        "inputDigest": "4e0905655a23986d1c9ec50e0da8251029f2c9cc0fc21d176d2bdd91b958166f",
+        "evidenceIds": [
+          "evidence:3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+          "evidence:494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+          "evidence:58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+          "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1"
+        ],
+        "nativeEvidenceId": "evidence:58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+        "configurationEvidenceId": "evidence:3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+        "coverage": "complete"
+      },
+      {
+        "id": "profile:bursa:6a26e71f6a4154d687fb4815",
+        "toolId": "bursa",
+        "release": "v0.19.0",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed ui/web/package-lock.json at ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:21cc862f8ae41800c301a19c5b01f7e9c4e7efd8b38141695c3faf7d82bb133d"
+        ],
+        "inputDigest": "6a26e71f6a4154d687fb48153e1f9b262dd724bbcc8a1ec9d6ded1de01973ec2",
+        "evidenceIds": [
+          "evidence:0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+          "evidence:6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027"
+        ],
+        "nativeEvidenceId": "evidence:0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+        "configurationEvidenceId": "evidence:6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:bursa:be7bfd64419de5730323fb67",
+        "toolId": "bursa",
+        "release": "v0.19.0",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed ui/extension/package-lock.json at ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:b55c1aa929f1087b7bc364af4058538aa70abd41c54610d8ed6823f2346701cc"
+        ],
+        "inputDigest": "be7bfd64419de5730323fb67ce580a1df6bbaae69c9067cb9a2edc9cc9d26816",
+        "evidenceIds": [
+          "evidence:971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+          "evidence:d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7"
+        ],
+        "nativeEvidenceId": "evidence:d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7",
+        "configurationEvidenceId": "evidence:971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:bursa:fe7537b443b4c244a7da65d5",
+        "toolId": "bursa",
+        "release": "v0.19.0",
+        "revision": "ee3ac506f88287c349d19171f2f391ac5bb835ed",
+        "platform": "linux/amd64",
+        "features": [
+          "cgo:0",
+          "workspace:off",
+          "packages:./..."
+        ],
+        "command": "go list -e -deps -json -mod=readonly ./...; go list -e -deps -json -mod=readonly -test ./...",
+        "toolchain": "go version go1.26.8 linux/amd64",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:084d4b685116e115f1caabc57b01d382da8d6eccd554c104c714d38f20671e4a",
+          "occurrence:834333aa371412dc77f1f6dcc96232f010afe177cc2362fb32000901557c1406",
+          "occurrence:997a13fbec7f7eec03018e214c31d1dfb5e3dd7a459af612971b5557d5ba6521",
+          "occurrence:92d19b24f1f488ed9f40778ce29b33d4103cf53c3fcfd2c80d67994ca38932ba",
+          "occurrence:93a2c9cb9f79bfd97786e23d288ef11733edb7f97bf6af751d4eacedfb13bebc",
+          "occurrence:066a956bf120cfb9f4660f0678d0623f070873471680943ce13865a0bf2123f4",
+          "occurrence:ee6fe94b685e4ee1ffc18d8f68e743d1c95cc32d7d83eb041374c9673deccc4b",
+          "occurrence:08c0ec0ab7f2a290c4c2d1207167a7404ebac2890c7f770fa695d59286e3d68b",
+          "occurrence:d8b88c41d3f1ea1de5660c4a07c9ab6e1caed332aff67961ec47cba5b3dbae9a",
+          "occurrence:0979e3a0bda069c5b65399765216ff838485a2beb8f172d942d6773cad9b9a1d",
+          "occurrence:249ac6cb9f9c4203c0a099612ec44f0f3ad3e293ade053f9b08b9f9745a35f9a",
+          "occurrence:353d35686228460301427dd3843fa0d4c2a26eabd8da1171e8b0a57e51025b4d",
+          "occurrence:370c0e6af8330fd83a9f116a524b1d916948c51b88848676558482caa25375c5",
+          "occurrence:36da8157362dc971c4a8220b077a9b0e60c972fad868ec43eb58fcb8c4a18840",
+          "occurrence:92c4ebe182ed1f18ca2bb4b03688cc419441a517732d37ee9604ff29944576c6",
+          "occurrence:6735e67215ca4575277dd2d6a2ffdea1508a8341b0faa014f56ddd94bd6e499a",
+          "occurrence:97fa51c47ccf212f5d8a0c72ceb8f4096f5bc9be2b6d703c09674aa9a724d28e",
+          "occurrence:142a98912e820a013b100e283677d161c93326b159d9be1caa8aab5e7ba83614",
+          "occurrence:2fdc0652984ab2429d57434dd133c1d22322f8f5aef44a8dcf892e70c5176413",
+          "occurrence:3a133ad73989317e0b90d5946b574fbac88704d18964dd0eb39fd1944c73eaec"
+        ],
+        "inputDigest": "fe7537b443b4c244a7da65d5d759eceb583f39bc8beeaee5bedd8f19e029e736",
+        "evidenceIds": [
+          "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+          "evidence:be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+          "evidence:d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+          "evidence:f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c"
+        ],
+        "nativeEvidenceId": "evidence:d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+        "configurationEvidenceId": "evidence:be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+        "coverage": "complete"
+      },
+      {
         "id": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
         "toolId": "cardano-connect-with-wallet",
         "release": "cardano-connect-with-wallet-v0.2.22",
@@ -25302,6 +25994,57 @@
         ],
         "nativeEvidenceId": "evidence:92b9b365651bab1d2ed207a2beac9b5b81d2fff75a921e837ae1fd2f1eae35ca",
         "configurationEvidenceId": "evidence:4966c98a711cfa2d791bbd42082374695c273dd62c44ee09b44989e7cfe90082",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cardano-dev-wallet:6ed75c6080336129aa142824",
+        "toolId": "cardano-dev-wallet",
+        "release": "unreleased:master",
+        "revision": "e846a7c5d2747609d791d7d47d5423616718cb34",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "default"
+        ],
+        "command": "Read committed webext/package-lock.json at e846a7c5d2747609d791d7d47d5423616718cb34",
+        "toolchain": "npm lockfile format 3; producing npm version unknown",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:0695553ee1a2491bea16da1d5b5488de413409ff29868d2178375d92ff3cffd3"
+        ],
+        "inputDigest": "6ed75c6080336129aa1428240581a6e2e2ee1553986671fae0dc817dbc2cab12",
+        "evidenceIds": [
+          "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+          "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb"
+        ],
+        "nativeEvidenceId": "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+        "configurationEvidenceId": "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb",
+        "coverage": "partial"
+      },
+      {
+        "id": "profile:cardano-hw-cli:fca24b891602ed94eae6a326",
+        "toolId": "cardano-hw-cli",
+        "release": "v1.19.1",
+        "revision": "8977cc05622b5d635d406065d7f55541f2bb4159",
+        "platform": "all-lockfile-targets",
+        "features": [
+          "all-lockfile-targets",
+          "peer-bindings:unresolved"
+        ],
+        "command": "Read committed yarn.lock, package manifests and repository configuration at 8977cc05622b5d635d406065d7f55541f2bb4159",
+        "toolchain": "Yarn classic lock; producing Yarn version unknown; parser @yarnpkg/lockfile 1.1.0",
+        "origin": "source-reconstruction",
+        "roots": [
+          "occurrence:6aed6a10536e42bac6ad7a253adadbee4383077d76691a1a8295a45c350154ed"
+        ],
+        "inputDigest": "fca24b891602ed94eae6a326a5d6545de0325f911af219c78860c4165bba840d",
+        "evidenceIds": [
+          "evidence:352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+          "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+          "evidence:6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+          "evidence:ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c"
+        ],
+        "nativeEvidenceId": "evidence:352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+        "configurationEvidenceId": "evidence:ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c",
         "coverage": "partial"
       },
       {
@@ -26645,6 +27388,13 @@
         "sourceUrl": "https://github.com/schaier-io/epora-wallet/blob/8e6fd820d21e901f019af71eec8150400b1e9669/code/dApp/package.json"
       },
       {
+        "id": "evidence:00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+        "digest": "00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3",
+        "path": "evidence/00950a9b8a34f586017e7787f89fda92355d842029da13ea0b0392e5c78944d3.json.gz",
+        "description": "Signing workflow source bursa/ui/extension/src/background.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/extension/src/background.ts"
+      },
+      {
         "id": "evidence:010ea1d12f43b3f440e4e5ca586c477d9321f319ba0c8db16b6f5648b91a7e36",
         "digest": "010ea1d12f43b3f440e4e5ca586c477d9321f319ba0c8db16b6f5648b91a7e36",
         "path": "evidence/010ea1d12f43b3f440e4e5ca586c477d9321f319ba0c8db16b6f5648b91a7e36.json.gz",
@@ -26998,6 +27748,13 @@
         "sourceUrl": "https://github.com/sidan-lab/vodka/tree/1b5f32c1227b18c7580260e4a0c313b05d32db05"
       },
       {
+        "id": "evidence:0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+        "digest": "0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5",
+        "path": "evidence/0951d2991646a1b67b01873e8c5e84cac751f9d7f73f788a4e0dec0a4bfacbd5.json.gz",
+        "description": "Signing workflow source bursa/ui/go.mod",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/go.mod"
+      },
+      {
         "id": "evidence:099ffcee2c5fcbb3684a87bdbce05d22ceb6d0d830624bed326a2b7b3df9b820",
         "digest": "099ffcee2c5fcbb3684a87bdbce05d22ceb6d0d830624bed326a2b7b3df9b820",
         "path": "evidence/099ffcee2c5fcbb3684a87bdbce05d22ceb6d0d830624bed326a2b7b3df9b820.json.gz",
@@ -27017,6 +27774,13 @@
         "path": "evidence/0a521ee01b95ba3d4157bdfdd5e6f820b3a52df0b5a104c11476b0b606ed7a39.json.gz",
         "description": "Native input sokosumi/packages/ai-provider/package.json",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/ai-provider/package.json"
+      },
+      {
+        "id": "evidence:0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322",
+        "digest": "0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322",
+        "path": "evidence/0adeb3c6f847afd9a719daf8f4a356860fbd8a5e124e8c93fae46b062ca9f322.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/transaction/transactionValidation.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/transaction/transactionValidation.ts"
       },
       {
         "id": "evidence:0afeafccee93ef5c728e9b1ec41f6cbd12dd91ed944394fd555abd21167d9e9d",
@@ -27073,6 +27837,13 @@
         "path": "evidence/0d3d71186efae61198b77b4b9afb2a0ab70172bfad2c32a18dd60f5a358ff26b.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/fabianbormann/cardano-peer-connect/releases/tag/v1.2.21"
+      },
+      {
+        "id": "evidence:0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+        "digest": "0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc",
+        "path": "evidence/0d6a84d4e9711428a503c96ba516685afcafb2456d43e8becd39bca45ec264bc.json.gz",
+        "description": "Signing workflow source bursa/internal/signer/backend/pkcs11.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/internal/signer/backend/pkcs11.go"
       },
       {
         "id": "evidence:0d70dd2e28a545b51792a9c3456ac72138d52605b72d127d7052c2ee38b1e976",
@@ -27162,6 +27933,20 @@
         "path": "evidence/0fb7be9ee98e6b57090e481f283182b7c138488104aa076615c95e7abae35f94.json.gz",
         "description": "Source geniusyield-sdk/package.json",
         "sourceUrl": "https://github.com/geniusyield/dex-lucid/blob/66a6ebcedd64979d02d1bb01c520185af1489f0d/package.json"
+      },
+      {
+        "id": "evidence:0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+        "digest": "0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9",
+        "path": "evidence/0fe5ba1d3e182d4aaea3ae1223107bdfde5d718598a21db9d339df85c8ab2ee9.json.gz",
+        "description": "npm-lock for bursa v0.19.0",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
+        "id": "evidence:10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f",
+        "digest": "10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f",
+        "path": "evidence/10115d44e7ed3fec8619346c8560984b69c688fb038aa4625dc98945eb54499f.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/scripts/build-common.sh",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/scripts/build-common.sh"
       },
       {
         "id": "evidence:105220f22f1db6480ea83fba90782b20c3d6c355e86b7877fcb0f4b0d868ade6",
@@ -27363,6 +28148,13 @@
         "sourceUrl": "https://github.com/cardano-foundation/ledgerjs-hw-app-cardano/tree/9ce065887bfca145f7a2f46df2ea41b1b47b9640"
       },
       {
+        "id": "evidence:166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+        "digest": "166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4",
+        "path": "evidence/166744472ac8648bce1dfd84f40e7185a187a5f1d202debe3a6df4aafcd216c4.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/wasmLoader.js",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/wasmLoader.js"
+      },
+      {
         "id": "evidence:167585c5279d9c0703239b80ecbc7d2fa6919a4b9c9b123bd1e2378d4f94e010",
         "digest": "167585c5279d9c0703239b80ecbc7d2fa6919a4b9c9b123bd1e2378d4f94e010",
         "path": "evidence/167585c5279d9c0703239b80ecbc7d2fa6919a4b9c9b123bd1e2378d4f94e010.json.gz",
@@ -27416,6 +28208,13 @@
         "path": "evidence/1853e8ab2d06885980c6196d72ba7479bc870fcf5dcb9332d1bd73198660686a.json.gz",
         "description": "Native input masumi/packages/payment-source-v1/package.json",
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/packages/payment-source-v1/package.json"
+      },
+      {
+        "id": "evidence:1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+        "digest": "1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e",
+        "path": "evidence/1856731ae06bce0b5060e1b73b2f5d6bc35c5e45732966b51d75fca651059b8e.json.gz",
+        "description": "Signing workflow source bursa/ui/cmd/bursa-wallet/main.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/cmd/bursa-wallet/main.go"
       },
       {
         "id": "evidence:18918195df1c6a91e5ab1a1d7db0ae2cc0c785641a3f6f0dd3f120de45e92f9c",
@@ -27516,6 +28315,13 @@
         "sourceUrl": "https://github.com/input-output-hk/daedalus/blob/22440487d08fd1d2121394fa80c238852df5ea7d/package.json"
       },
       {
+        "id": "evidence:1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+        "digest": "1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd",
+        "path": "evidence/1d32a29cdc2ddba42b225e2325e80a78dbc2a9108fde9a9a5f7a12b1e2c0b0dd.json.gz",
+        "description": "Signing workflow source bursa/cmd/bursa/main.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/cmd/bursa/main.go"
+      },
+      {
         "id": "evidence:1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
         "digest": "1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831",
         "path": "evidence/1d6e95c23e4147b0bf219bdeba74db50070d59ec51b48e6e9450559e319fa831.json.gz",
@@ -27589,6 +28395,13 @@
         "path": "evidence/1f46e3f5c0e9e111bf9d68b6a94555efe03e7d34aa7989acbbb33cc5267139e0.json.gz",
         "description": "npm-lock for ouroboros-miniprotocols-ts unreleased:main",
         "sourceUrl": "https://github.com/HarmonicLabs/ouroboros-miniprotocols-ts/tree/9c26c7c24bdffb9af29d91cc59b2c5a65f98567d"
+      },
+      {
+        "id": "evidence:1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+        "digest": "1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14",
+        "path": "evidence/1f507741a785a104c910b4c03bf95805ec5ccdd3c9913ea41ca225cc4af5df14.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/package.json"
       },
       {
         "id": "evidence:1f9d662376e9b888fd6c2ac0e54eda38ea9f772dd59e52ef24f94ea428e34317",
@@ -27762,6 +28575,12 @@
         "path": "evidence/238f30d8b7ffb18f0d3e22506ae41982a25f46651ede57ab2aa915aa22116450.json.gz",
         "description": "Source lace/apps/lace-sdk/src/sign-cardano-tx.ts",
         "sourceUrl": "https://github.com/input-output-hk/lace/blob/e431933f34ec417996d9c28b7389e24c87868b1e/apps/lace-sdk/src/sign-cardano-tx.ts"
+      },
+      {
+        "id": "evidence:241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43",
+        "digest": "241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43",
+        "path": "evidence/241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43.json.gz",
+        "description": "Collection request for bursa"
       },
       {
         "id": "evidence:24415ae4296797d97fbe5be013787430876d27babb9bc6092192602241c4c185",
@@ -27977,6 +28796,13 @@
         "path": "evidence/283d8acb423c3f2cc40e40c27c8d784e6226961dd044c1b2f0ef544389364735.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/sidan-lab/rum/releases/tag/v0.3.4"
+      },
+      {
+        "id": "evidence:283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+        "digest": "283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60",
+        "path": "evidence/283f7315cf71c5d553398e4dd9c8df81d1f87fd5eb0e4e3bebe794921b5c4b60.json.gz",
+        "description": "Signing workflow source bursa/ui/extension/src/injected.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/extension/src/injected.ts"
       },
       {
         "id": "evidence:283f7a71aef58e9ac52c87b8e82e07c5db2d1f230d640caa860d16d616b2db6a",
@@ -28399,6 +29225,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/yarn.lock"
       },
       {
+        "id": "evidence:352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+        "digest": "352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b",
+        "path": "evidence/352cbb4575920a1b4eeed7d1c6c869cac26bb679682adb40e3d728cdde60ba4b.json.gz",
+        "description": "yarn-lock for cardano-hw-cli v1.19.1",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/tree/8977cc05622b5d635d406065d7f55541f2bb4159"
+      },
+      {
         "id": "evidence:3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
         "digest": "3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace",
         "path": "evidence/3547b4e236d553f42934d8a2e7a7a2a12fae39d463b439b84eb5a6bade498ace.json.gz",
@@ -28550,11 +29383,24 @@
         "sourceUrl": "https://github.com/CardanoSolutions/zhuli/releases/tag/0.0.2"
       },
       {
+        "id": "evidence:3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
+        "digest": "3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976",
+        "path": "evidence/3af6603a5153c7ec44757807fa8a2c78d8374e0d555a6eb0fe534c8db6850976.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/signMessage/signMessage.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/signMessage/signMessage.ts"
+      },
+      {
         "id": "evidence:3b02fd52dd44c80c723cabe832d7548f506facaa9301c3c2432f7305e8fbe7d8",
         "digest": "3b02fd52dd44c80c723cabe832d7548f506facaa9301c3c2432f7305e8fbe7d8",
         "path": "evidence/3b02fd52dd44c80c723cabe832d7548f506facaa9301c3c2432f7305e8fbe7d8.json.gz",
         "description": "npm-lock for veridian-wallet 1.2.2",
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/tree/e93a56f54451cc386ba54dd1e8e5564a884b3593"
+      },
+      {
+        "id": "evidence:3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf",
+        "digest": "3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf",
+        "path": "evidence/3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf.json.gz",
+        "description": "Collection request for cardano-hw-cli"
       },
       {
         "id": "evidence:3b2046f844843088a72a137c51c63c883251ad4c7c8faf2b8e3a48559696fcb8",
@@ -28681,11 +29527,25 @@
         "sourceUrl": "https://github.com/IntersectMBO/govtool/tree/993d25ab42b6565a95aaa82ef297ac5053b3fb3e"
       },
       {
+        "id": "evidence:3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+        "digest": "3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b",
+        "path": "evidence/3eadcb6ae5031a6c8e02a145d557de4a182bf5bed1c96bf6572145219e538b0b.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
         "id": "evidence:3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6",
         "digest": "3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6",
         "path": "evidence/3eb74ab395dbeb0e87b11900dfa2e16f262a8c1044227de0a51359fc5ca1c8e6.json.gz",
         "description": "Native input lucid-evolution/packages/lucid/src/tx-builder/internal/Pay.ts",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/Pay.ts"
+      },
+      {
+        "id": "evidence:3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+        "digest": "3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725",
+        "path": "evidence/3eb8342edd6e23cb55c96509fef0781bc915bb713d9994f66211cdac17a37725.json.gz",
+        "description": "Signing workflow source bursa/ui/web/src/hw/trezor.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/web/src/hw/trezor.ts"
       },
       {
         "id": "evidence:3f00f3bba6d8412e3e9c09a72ce1466c9c856abdc6ea165cd8109a4a7e0234a5",
@@ -28744,11 +29604,24 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/src/render/measure.ts"
       },
       {
+        "id": "evidence:40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27",
+        "digest": "40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27",
+        "path": "evidence/40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27.json.gz",
+        "description": "Collection request for bursa"
+      },
+      {
         "id": "evidence:410a427970c541b1d9f68f112b0ce710ce359b64bd1c305f5c22024ff2705f94",
         "digest": "410a427970c541b1d9f68f112b0ce710ce359b64bd1c305f5c22024ff2705f94",
         "path": "evidence/410a427970c541b1d9f68f112b0ce710ce359b64bd1c305f5c22024ff2705f94.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/boros/tree/fdec4da6c07a69252007a336f1a668f4f6d803bf"
+      },
+      {
+        "id": "evidence:415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+        "digest": "415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82",
+        "path": "evidence/415db08ebd8345064969b0fcc10f27fe051038f2eca83cbf833768906c085e82.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/crypto-providers/keystoneCryptoProvider.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/crypto-providers/keystoneCryptoProvider.ts"
       },
       {
         "id": "evidence:41b033a15797c0048a4ccff091c14a55dc65fc959b70fa4ca74ec67414d0deff",
@@ -28812,6 +29685,13 @@
         "path": "evidence/434f34b8f1b500b31d2ecd5ce1fc44c26a7019f6cab6827044a4cd2cfd58b8bd.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/cardano-foundation/cardano-wallet/tree/f293d922f1930714aca7ede3cbb5ebf3fb710af6"
+      },
+      {
+        "id": "evidence:43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a",
+        "digest": "43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a",
+        "path": "evidence/43629cdf8bd1bd07b6351a8dd7d916ba0fc131e1480aedc12cde59f5ca7ebf1a.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/scripts/fix-trezor-firmware.js",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/scripts/fix-trezor-firmware.js"
       },
       {
         "id": "evidence:437fffefc3fbab1d6abf9f3d2704ed01f77bd25d387d056d7bde91f86ff32868",
@@ -28932,6 +29812,13 @@
         "sourceUrl": "https://github.com/blinklabs-io/dingo/releases/tag/v0.84.0"
       },
       {
+        "id": "evidence:46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+        "digest": "46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e",
+        "path": "evidence/46e0b537d0ee0d7d21680d82f4f581a3970e2ff88f6a56a9cf36b50d5771bd1e.json.gz",
+        "description": "Signing workflow source bursa/ui/internal/webui/webui.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/internal/webui/webui.go"
+      },
+      {
         "id": "evidence:470923906eb8df86630098c4bb82b9bd749b445434a4dc4a8cc3fa277b5b5f42",
         "digest": "470923906eb8df86630098c4bb82b9bd749b445434a4dc4a8cc3fa277b5b5f42",
         "path": "evidence/470923906eb8df86630098c4bb82b9bd749b445434a4dc4a8cc3fa277b5b5f42.json.gz",
@@ -28999,6 +29886,13 @@
         "path": "evidence/490d000f514d565bb177078f6a3345b625381d2afa89c1426f79e08e4c0b400f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/OpShin/mockfrost/tree/4338ae89412c1163be3587e7553258e5000d83d1"
+      },
+      {
+        "id": "evidence:494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+        "digest": "494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd",
+        "path": "evidence/494d1cd732d10d253bdb3eed65fb4606271e701307b2bf53d0c261a1b3ce59dd.json.gz",
+        "description": "Native input bursa/ui/go.sum",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/go.sum"
       },
       {
         "id": "evidence:49567fa1c18acaea1a1515de99f5891cdc8f09771fb57d218b01db4040b65ce9",
@@ -29154,11 +30048,31 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/pnpm-lock.yaml"
       },
       {
+        "id": "evidence:4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a",
+        "digest": "4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a",
+        "path": "evidence/4e1be30d2e4f20feed9a76ec447ad2b1d82ef24dae17d5804a44af9b1c61e74a.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/build.config.js",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/build.config.js"
+      },
+      {
         "id": "evidence:4e5bc873d8a907f84360d84ff874d224b16b916b0e69cbf4710ff060e22a4a7f",
         "digest": "4e5bc873d8a907f84360d84ff874d224b16b916b0e69cbf4710ff060e22a4a7f",
         "path": "evidence/4e5bc873d8a907f84360d84ff874d224b16b916b0e69cbf4710ff060e22a4a7f.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/pragma-org/amaru/tree/eaf8ac3fa309f2a174c045454c276194c9312b8d"
+      },
+      {
+        "id": "evidence:4e5f1196c3d5e508bfa9cb7264de567102ee3f40322a42a6b5398a534d8e00cf",
+        "digest": "4e5f1196c3d5e508bfa9cb7264de567102ee3f40322a42a6b5398a534d8e00cf",
+        "path": "evidence/4e5f1196c3d5e508bfa9cb7264de567102ee3f40322a42a6b5398a534d8e00cf.json.gz",
+        "description": "Native command diagnostics for bursa"
+      },
+      {
+        "id": "evidence:4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+        "digest": "4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e",
+        "path": "evidence/4eb2f0a574705f263a73a8c962b70bb04210348dedf1c3eef1873288123b456e.json.gz",
+        "description": "Signing workflow source bursa/ui/internal/supervisor/supervisor.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/internal/supervisor/supervisor.go"
       },
       {
         "id": "evidence:4f5164cde87a1f1c2c2b103e20b0387fc2e67c8dfaa06ae247f7e1c3770965b0",
@@ -29193,6 +30107,12 @@
         "path": "evidence/50d532568fc11d5005bab9d55f076d6cad7d0c897f64ac0484ca83dde730d680.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/txpipe/cshell/tree/6524b5dbfea7297301b8dc9965f219a238581b14"
+      },
+      {
+        "id": "evidence:51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59",
+        "digest": "51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59",
+        "path": "evidence/51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59.json.gz",
+        "description": "Collection request for bursa"
       },
       {
         "id": "evidence:512d09510891a2ec78f942fafbd7ce7572bf31f37200a9df65f22aa0fb7172e9",
@@ -29297,6 +30217,13 @@
         "description": "Failed native collection for adalite"
       },
       {
+        "id": "evidence:54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71",
+        "digest": "54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71",
+        "path": "evidence/54923710a90b478fdabc3279ebfe9584b0d8917f85ff97d2eee3ed5985b43b71.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/build.js",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/build.js"
+      },
+      {
         "id": "evidence:54c721fb224820a305eac73975aab81952efc465307d291a2aab4b7b8bf233be",
         "digest": "54c721fb224820a305eac73975aab81952efc465307d291a2aab4b7b8bf233be",
         "path": "evidence/54c721fb224820a305eac73975aab81952efc465307d291a2aab4b7b8bf233be.json.gz",
@@ -29323,6 +30250,13 @@
         "path": "evidence/55b696a6e4214ce4ccabf47071463794b5ce443f7eef815a336808bbba6ea43c.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/schmidko/adapools/tree/72e59d841aea70d37038f76eb857570d0df72706"
+      },
+      {
+        "id": "evidence:55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+        "digest": "55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1",
+        "path": "evidence/55c0e38d66087714ce5b9400017c3c0bc574aec388763e929c0a6e602c9a3bd1.json.gz",
+        "description": "Signing workflow source bursa/cmd/bursa/tx.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/cmd/bursa/tx.go"
       },
       {
         "id": "evidence:55ef3f65d697e9581b23801e606e1647ce4adf116e0a0609daf0ff51aef21837",
@@ -29353,6 +30287,12 @@
         "sourceUrl": "https://github.com/miguelaeh/cardanocli-js/tree/2765566e12226aca7e328ec0cf67b311a479354f"
       },
       {
+        "id": "evidence:5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0",
+        "digest": "5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0",
+        "path": "evidence/5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0.json.gz",
+        "description": "Collection request for cardano-dev-wallet"
+      },
+      {
         "id": "evidence:57771eb3279a9c90f86e292fcaab0b31dbb28eca6fd35a2843f63735b7eac8a0",
         "digest": "57771eb3279a9c90f86e292fcaab0b31dbb28eca6fd35a2843f63735b7eac8a0",
         "path": "evidence/57771eb3279a9c90f86e292fcaab0b31dbb28eca6fd35a2843f63735b7eac8a0.json.gz",
@@ -29365,6 +30305,20 @@
         "path": "evidence/58576f0d6f293cb758afe6bc3d269f4eb22761df42a9ceae24fc2e4561f2375c.json.gz",
         "description": "uv-tree for opshin 0.28.0",
         "sourceUrl": "https://github.com/OpShin/opshin/tree/515329f99b51e27c65492237200c8aafd802837d"
+      },
+      {
+        "id": "evidence:58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+        "digest": "58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e",
+        "path": "evidence/58849a3d7cd7e6cac3ca27a7b0b799749177ca9f20c06bb1c0af5beb5a8a461e.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/src/lib/CIP30/Backends/OgmiosKupo.ts",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/src/lib/CIP30/Backends/OgmiosKupo.ts"
+      },
+      {
+        "id": "evidence:58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+        "digest": "58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6",
+        "path": "evidence/58968098364a90799cf5d927b2d082fb587a5b0e7a8c51070d05270941533dd6.json.gz",
+        "description": "go-packages for bursa v0.19.0",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
       },
       {
         "id": "evidence:58cf9c1e14ba723329b1003d25b043e66ef7d81ee8580ee65190d616156a3faf",
@@ -29505,6 +30459,13 @@
         "path": "evidence/5d6352c34c5306bed7fba1f47bc188119a12e4caeeee94e408663480a214212f.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/OpShin/hebi/tree/c598196f2d20b5a053d1a0dedd7e551d74299cac"
+      },
+      {
+        "id": "evidence:5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+        "digest": "5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828",
+        "path": "evidence/5da432d8b71a3298479887bbb42e7022ff3c7c2448e089dc601179449efea828.json.gz",
+        "description": "Signing workflow source bursa/cmd/bursa/sign.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/cmd/bursa/sign.go"
       },
       {
         "id": "evidence:5db0d23219e635111c371d7b3c649c1b04ae5b691c92d4408a5499bcad83a9ff",
@@ -29746,6 +30707,13 @@
         "sourceUrl": "https://github.com/Vtechcom/hydra-sdk/tree/d10c4596fae296a93ad0fdf215d52f9f01d63361"
       },
       {
+        "id": "evidence:672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+        "digest": "672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc",
+        "path": "evidence/672a9e67d1e6d13f5b008b6afc517a26b3341397eb99d7ae5d8379ca457ef0fc.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/README.md",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/README.md"
+      },
+      {
         "id": "evidence:6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
         "digest": "6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af",
         "path": "evidence/6790394509caca3c2db3c4535bfb26a4472097471a17b5ecd908702e87f516af.json.gz",
@@ -29765,6 +30733,13 @@
         "path": "evidence/67b4ba431365c1a72864c9a75a43fdb421f0458bb77218725c6bba78845b8001.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/SundaeSwap-finance/gastronomy/tree/21da645bbb5f0e1b82d448c91e2274f94b3e268c"
+      },
+      {
+        "id": "evidence:6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+        "digest": "6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9",
+        "path": "evidence/6841b2cb4406c50729cf19500075b2655b2c5c3de11a5c1b95ebc754c44d29f9.json.gz",
+        "description": "Native input cardano-hw-cli/package.json",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/package.json"
       },
       {
         "id": "evidence:6855215c2368fa5174ccbb1f86df0453c2d6c8faebbff5abc3e097289aa8344f",
@@ -29800,6 +30775,13 @@
         "description": "Collection request for ouroboros-miniprotocols-ts"
       },
       {
+        "id": "evidence:68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802",
+        "digest": "68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802",
+        "path": "evidence/68fbe4c260317df47ac6979b2768920ca8075f220fbdb5af6bea724ba0eaf802.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/src/lib/Wallet.ts",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/src/lib/Wallet.ts"
+      },
+      {
         "id": "evidence:68fff4dba9616dc1b1670f5240fe9a49c272b5df28a84d46e63d3facf5eccffa",
         "digest": "68fff4dba9616dc1b1670f5240fe9a49c272b5df28a84d46e63d3facf5eccffa",
         "path": "evidence/68fff4dba9616dc1b1670f5240fe9a49c272b5df28a84d46e63d3facf5eccffa.json.gz",
@@ -29812,6 +30794,13 @@
         "path": "evidence/691277d3155f05c64f9faedef80f9fdfab4d673fb6352a1d7e41337dcc2174a1.json.gz",
         "description": "Gradle production source bloxbean-cardano-client-library/gradle.properties",
         "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/gradle.properties"
+      },
+      {
+        "id": "evidence:691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+        "digest": "691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa",
+        "path": "evidence/691334ee1a177ed0c77732ca49bab09f06d2e172245ef52877a3962e093569aa.json.gz",
+        "description": "Signing workflow source bursa/ui/internal/supervisor/bootstrap.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/internal/supervisor/bootstrap.go"
       },
       {
         "id": "evidence:6938d5b729f5864ce860b8f9abfbfc6356f9580daff3a8cdc55f9cefcac28cff",
@@ -29884,6 +30873,13 @@
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/pnpm-lock.yaml"
       },
       {
+        "id": "evidence:6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027",
+        "digest": "6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027",
+        "path": "evidence/6c4b5fcb3959d2f1c189aefae04a4e3f767dd48f207945f6559be5c1d297d027.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
         "id": "evidence:6c595f572637083071cf61d4b135c3cea38ff84698eca0de3397f84d1b5a0d73",
         "digest": "6c595f572637083071cf61d4b135c3cea38ff84698eca0de3397f84d1b5a0d73",
         "path": "evidence/6c595f572637083071cf61d4b135c3cea38ff84698eca0de3397f84d1b5a0d73.json.gz",
@@ -29932,6 +30928,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/lucid/src/tx-builder/internal/CompleteTxBuilder.ts"
       },
       {
+        "id": "evidence:6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b",
+        "digest": "6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b",
+        "path": "evidence/6ddc5165a559dda65fdbb07a392d71cf576b17aa455227fc1bc187b89d582a4b.json.gz",
+        "description": "Signing workflow source bursa/ui/extension/package.json",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/extension/package.json"
+      },
+      {
         "id": "evidence:6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9",
         "digest": "6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9",
         "path": "evidence/6e1583877efdb334115c7b185bac855e5c289103ba5e411f9406f2d3a99aa7a9.json.gz",
@@ -29951,6 +30954,13 @@
         "path": "evidence/6ed60607365eab33e2e1ce3203b4a38c6f78a37eb99070e7fc0fe56ddd3f03be.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/IntersectMBO/plutus/releases/tag/1.72.0.0"
+      },
+      {
+        "id": "evidence:6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+        "digest": "6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7",
+        "path": "evidence/6eeb50c815448b766560820765249d69f3c36b5245037f7c36dcbe038d9584e7.json.gz",
+        "description": "Native input cardano-hw-cli/yarn.lock",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/yarn.lock"
       },
       {
         "id": "evidence:6efec5e80fa6fda27216303be7900788b7931ed83c24fcf8a45e1ce502cdbaa0",
@@ -30224,6 +31234,13 @@
         "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/blob/f1130177b02761ea15b93a92e385ae0739d27096/transaction-spec/build.gradle"
       },
       {
+        "id": "evidence:763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81",
+        "digest": "763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81",
+        "path": "evidence/763a0dc91e3f4d3e3693150de7a20df29ea9fa8d54685fdb7f03a77b1c4a0a81.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/package.json",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/package.json"
+      },
+      {
         "id": "evidence:766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
         "digest": "766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c",
         "path": "evidence/766703622ebdcff1dab628de4bf6efdd9662776769fba2609543b416303dd87c.json.gz",
@@ -30257,6 +31274,13 @@
         "path": "evidence/77005896afaf5a9c5914a150f0ca4ba89f375d87d6c8b8ceb864212e2a521328.json.gz",
         "description": "Native input sokosumi/packages/utils/package.json",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/packages/utils/package.json"
+      },
+      {
+        "id": "evidence:77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+        "digest": "77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b",
+        "path": "evidence/77287c88d45a73f6c4fb04ec62b075999856ce198c961979410bc85cd677574b.json.gz",
+        "description": "Native input bursa/go.mod",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/go.mod"
       },
       {
         "id": "evidence:774690af14f8c5c245e3cb210b3267cdb4a35a69a537990b0328dd6f7a4f6ea4",
@@ -30491,6 +31515,12 @@
         "path": "evidence/7db5225ce3ed42ba207964352681df09c92df52b2a03aa13c9a19560db932d99.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/masumi-network/sokosumi/releases/tag/macos-v1.1.1"
+      },
+      {
+        "id": "evidence:7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf",
+        "digest": "7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf",
+        "path": "evidence/7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf.json.gz",
+        "description": "Collection request for bursa"
       },
       {
         "id": "evidence:7e4315c07f997107dbba590052aea68c956940d354c57c1a94f4ba0a7f54db2f",
@@ -30799,6 +31829,13 @@
         "sourceUrl": "https://github.com/fivebinaries/go-cardano-serialization/releases/tag/v0.1"
       },
       {
+        "id": "evidence:860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+        "digest": "860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b",
+        "path": "evidence/860f58ffece085fe7bc6a87fea5964db1fafffaae2dffd615f0f64b9f33d1e8b.json.gz",
+        "description": "Signing workflow source bursa/ui/extension/src/content.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/extension/src/content.ts"
+      },
+      {
         "id": "evidence:8629a3d5572eda878d0eb268fe9816185c4ae3b6925eafb759ef02b079b2def9",
         "digest": "8629a3d5572eda878d0eb268fe9816185c4ae3b6925eafb759ef02b079b2def9",
         "path": "evidence/8629a3d5572eda878d0eb268fe9816185c4ae3b6925eafb759ef02b079b2def9.json.gz",
@@ -31027,6 +32064,13 @@
         "path": "evidence/8acb25d57732a359518870fbd63d1cc896d8428e05f522307d5fabe79d531f13.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/txpipe/metis/tree/4c07a40e26d22956bed5915ca09025073b7aa69e"
+      },
+      {
+        "id": "evidence:8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab",
+        "digest": "8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab",
+        "path": "evidence/8b095a860bf7abefe890c7fbcffa07654889b6aaebe3a0d943f558dd8b1b63ab.json.gz",
+        "description": "Signing workflow source bursa/ui/web/package.json",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/web/package.json"
       },
       {
         "id": "evidence:8b1ecc5bf000dd337366ba05269c845197701d2ad525094ff2c30d6947ca1515",
@@ -31391,6 +32435,20 @@
         "description": "Collection request for lucid-evolution"
       },
       {
+        "id": "evidence:971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+        "digest": "971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a",
+        "path": "evidence/971511a2f5709c7df3e947e3a72874fbd13c3b5ea284f26279e54a452a37d23a.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
+        "id": "evidence:974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+        "digest": "974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa",
+        "path": "evidence/974c4488c80db43e55454a4c3a94ddc0c11f11cb90dac15ac13b5f8c0ac138aa.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/crypto-providers/trezorCryptoProvider.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/crypto-providers/trezorCryptoProvider.ts"
+      },
+      {
         "id": "evidence:97666e97acd33daad2c7a42f2d4dc2ea8fe559f439fb862c553053a2a9f3e47c",
         "digest": "97666e97acd33daad2c7a42f2d4dc2ea8fe559f439fb862c553053a2a9f3e47c",
         "path": "evidence/97666e97acd33daad2c7a42f2d4dc2ea8fe559f439fb862c553053a2a9f3e47c.json.gz",
@@ -31437,6 +32495,13 @@
         "digest": "986f054550b16c97920c29f32fa883dcad75d2a77efde7d87757251041c6b16c",
         "path": "evidence/986f054550b16c97920c29f32fa883dcad75d2a77efde7d87757251041c6b16c.json.gz",
         "description": "Collection request for dolos"
+      },
+      {
+        "id": "evidence:989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+        "digest": "989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759",
+        "path": "evidence/989d9f48e01124f06f064b8465167dde83286246b26f323c27a1befee7386759.json.gz",
+        "description": "Signing workflow source bursa/Dockerfile",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/Dockerfile"
       },
       {
         "id": "evidence:98e26ec48b42678e3e86f645fb4f56adb147b6c7d46e6099aa55f08ae047886b",
@@ -31699,6 +32764,13 @@
         "path": "evidence/a13c1fdb1640debd1e8bf92ebd6a3559dc92d5c4e960618c25d9415838e104c5.json.gz",
         "description": "Source nami/package-lock.json",
         "sourceUrl": "https://github.com/input-output-hk/nami/blob/e52e0bdb02eb1ec224db26f48b0192685a30f99e/package-lock.json"
+      },
+      {
+        "id": "evidence:a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711",
+        "digest": "a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711",
+        "path": "evidence/a1992db9b65a0b1eef460dc2428ed1711d8fd01a6a60d964d8faacd34fc8e711.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/index.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/index.ts"
       },
       {
         "id": "evidence:a1afa804a82fba90b4674e1e679dcc62d24ac019be411e6cf6edf7359773cf92",
@@ -32083,6 +33155,13 @@
         "sourceUrl": "https://github.com/bloxbean/yaci/releases/tag/v0.4.7"
       },
       {
+        "id": "evidence:ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+        "digest": "ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc",
+        "path": "evidence/ad295248bfb3db63f005aa631a408b1e5a03e2cc09f8f1e72dc1484b0ba1fdbc.json.gz",
+        "description": "Signing workflow source bursa/go.mod",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/go.mod"
+      },
+      {
         "id": "evidence:ad313588db9bb497b54081bb3cb150971817e0de2f69cfc96a4d9625693796cf",
         "digest": "ad313588db9bb497b54081bb3cb150971817e0de2f69cfc96a4d9625693796cf",
         "path": "evidence/ad313588db9bb497b54081bb3cb150971817e0de2f69cfc96a4d9625693796cf.json.gz",
@@ -32256,6 +33335,13 @@
         "description": "Collection request for lace"
       },
       {
+        "id": "evidence:b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2",
+        "digest": "b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2",
+        "path": "evidence/b26a98b0673633eb887ee86115b561da069b9eeaf538fa764f87065cdbf444c2.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/crypto-providers/ledgerCryptoProvider.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/crypto-providers/ledgerCryptoProvider.ts"
+      },
+      {
         "id": "evidence:b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8",
         "digest": "b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8",
         "path": "evidence/b2c6ebb80f000d669be9056f14c23afe5d393d611227d44672adaa89da490bd8.json.gz",
@@ -32317,6 +33403,13 @@
         "path": "evidence/b4980daa769fd3575d45927b76e8488d7f0d33822510797e3389a3f58e8ab7f7.json.gz",
         "description": "Release selection and immutable source identity",
         "sourceUrl": "https://github.com/cardano-community/pg_cardano/releases/tag/v1.2.0"
+      },
+      {
+        "id": "evidence:b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
+        "digest": "b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d",
+        "path": "evidence/b4e8fd45d07185959e07fc0afefc2636c218f987661c7a747c8c212983cbf17d.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/src/lib/CIP30/WalletApiInternal.ts",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/src/lib/CIP30/WalletApiInternal.ts"
       },
       {
         "id": "evidence:b52085cbdab40436ff6c0b5e720d26a3db55b6acbaf1ad082bf6c0451284c4aa",
@@ -32597,6 +33690,13 @@
         "sourceUrl": "https://github.com/mlabs-haskell/cardano-open-oracle-protocol/releases/tag/v1.0.0"
       },
       {
+        "id": "evidence:bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0",
+        "digest": "bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0",
+        "path": "evidence/bb43cfdfa54c928b5789f7e43745d15852e7ace7aaa428d536ef10ca0578a5c0.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/src/transaction/transaction.ts",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/src/transaction/transaction.ts"
+      },
+      {
         "id": "evidence:bb5e7b71ebbef75097bd05564ef274b605b0584cd9d6ca5692b522c012c109be",
         "digest": "bb5e7b71ebbef75097bd05564ef274b605b0584cd9d6ca5692b522c012c109be",
         "path": "evidence/bb5e7b71ebbef75097bd05564ef274b605b0584cd9d6ca5692b522c012c109be.json.gz",
@@ -32728,6 +33828,13 @@
         "sourceUrl": "https://github.com/input-output-hk/smartcode-verifier/tree/75386920ef9d9282778a4c609b900761eda3cc7c"
       },
       {
+        "id": "evidence:be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+        "digest": "be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0",
+        "path": "evidence/be0f82f87308a102deb147935962e19ee993587b0a87d88e6dad502d4b81dbc0.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
+      },
+      {
         "id": "evidence:be4e40b5a5f950b2c1dd87d0b3ccf99a133c7b066494ec0f7dee5605ff90d0be",
         "digest": "be4e40b5a5f950b2c1dd87d0b3ccf99a133c7b066494ec0f7dee5605ff90d0be",
         "path": "evidence/be4e40b5a5f950b2c1dd87d0b3ccf99a133c7b066494ec0f7dee5605ff90d0be.json.gz",
@@ -32747,6 +33854,12 @@
         "path": "evidence/be77e431e58994732092aa78bd240c8c0c3f570367a5ce68e03376147654b7e3.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/Anastasia-Labs/merkle-patricia-forestry/tree/540dfdbf61f8697c548db460dee1beff78cadb19"
+      },
+      {
+        "id": "evidence:beabe3658f00309fbc2a79136aa85c14e436ff4a5875d41794345f6085486b46",
+        "digest": "beabe3658f00309fbc2a79136aa85c14e436ff4a5875d41794345f6085486b46",
+        "path": "evidence/beabe3658f00309fbc2a79136aa85c14e436ff4a5875d41794345f6085486b46.json.gz",
+        "description": "Native command diagnostics for bursa"
       },
       {
         "id": "evidence:bf00298631ac6fd05fdd97cccbb27aa153669db6c9477cc0067fdfee8ad5f675",
@@ -33064,6 +34177,13 @@
         "sourceUrl": "https://github.com/input-output-hk/cardinal-spec/tree/5e226ca6c5192ba396d0983323144a797b5d713c"
       },
       {
+        "id": "evidence:c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+        "digest": "c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9",
+        "path": "evidence/c8719ac69812dcfc36f7157c5be44f3bbd21fd6240c874bd07e36c7c85b3ddb9.json.gz",
+        "description": "Signing workflow source bursa/internal/signer/watermark/postgres.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/internal/signer/watermark/postgres.go"
+      },
+      {
         "id": "evidence:c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228",
         "digest": "c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228",
         "path": "evidence/c88008fbe8a4af11fcdb18b1fee70341e44982d9b6b55aef86b6730369050228.json.gz",
@@ -33092,11 +34212,25 @@
         "sourceUrl": "https://github.com/WingRiders/datum-explorer/tree/9e4b74840c91ba95dd4f1c80cb87a17c02562eba"
       },
       {
+        "id": "evidence:c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+        "digest": "c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea",
+        "path": "evidence/c96efbad2919b9e5e545c137b811f592630bac628c5c1284d16145dc8d201aea.json.gz",
+        "description": "Signing workflow source bursa/internal/signer/backend/vault.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/internal/signer/backend/vault.go"
+      },
+      {
         "id": "evidence:c9cb528ef5f3c5e2f635fffb6dd26ed4c5ca7c0781ace138cf3cbd341f97a89b",
         "digest": "c9cb528ef5f3c5e2f635fffb6dd26ed4c5ca7c0781ace138cf3cbd341f97a89b",
         "path": "evidence/c9cb528ef5f3c5e2f635fffb6dd26ed4c5ca7c0781ace138cf3cbd341f97a89b.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IntersectMBO/cardano-node/tree/938cba990357ae7c4b7f95c8f75dd9d31174bbeb"
+      },
+      {
+        "id": "evidence:c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322",
+        "digest": "c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322",
+        "path": "evidence/c9ccb1a310cf7f1216b999ce4b679e38cb92b5bb75f63950f0f6a05771385322.json.gz",
+        "description": "Signing workflow source bursa/ui/web/src/hw/ledger.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/web/src/hw/ledger.ts"
       },
       {
         "id": "evidence:c9db58ca4382d30279d7ff061d3731ac239a532810e0d7deb7d6e35e80b06556",
@@ -33196,6 +34330,13 @@
         "sourceUrl": "https://github.com/masumi-network/sokosumi/blob/0f908764db652adfb76348222235a809ed8797bb/turbo.json"
       },
       {
+        "id": "evidence:cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+        "digest": "cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28",
+        "path": "evidence/cc5b41a4e121b8f98aa7671de8c2412d2d550d15da301215c2bab1fdc7606b28.json.gz",
+        "description": "npm-lock for cardano-dev-wallet unreleased:master",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/tree/e846a7c5d2747609d791d7d47d5423616718cb34"
+      },
+      {
         "id": "evidence:cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
         "digest": "cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd",
         "path": "evidence/cc992fd56d693b882f28f7cf3373b972b855f5867ab568f814c792b70c2a9acd.json.gz",
@@ -33221,6 +34362,13 @@
         "path": "evidence/cdf0944de5f3fef53ab425a528fa2817f10c48b3a5af3e6a80415b24108340eb.json.gz",
         "description": "Source yoroi/mobile/app.config.js",
         "sourceUrl": "https://github.com/Emurgo/yoroi/blob/d8e3d3f93fb772f0b6bd2296e45bfac7da4fb9d6/mobile/app.config.js"
+      },
+      {
+        "id": "evidence:ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c",
+        "digest": "ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c",
+        "path": "evidence/ce28543ac4965cf1f6d19e2d673d30c56997fc7141efd31f5cc8868407cf115c.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/tree/8977cc05622b5d635d406065d7f55541f2bb4159"
       },
       {
         "id": "evidence:ce7ada93e87ebd8a698284f69eb44d4b4868a20fec1b06ca7d5eb9c6ea577a7f",
@@ -33286,6 +34434,13 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/utils/src/address.ts"
       },
       {
+        "id": "evidence:d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2",
+        "digest": "d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2",
+        "path": "evidence/d073b76122b76189cfdb20bedb0afbbe3f6ceb2d888063d64a9d89cdbfababc2.json.gz",
+        "description": "Signing workflow source bursa/ui/web/src/hw/keystone.ts",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/web/src/hw/keystone.ts"
+      },
+      {
         "id": "evidence:d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
         "digest": "d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c",
         "path": "evidence/d0ad64c765e3ef0434c5511078be7b15d1cd93de51a75837f46e8b11f42efe4c.json.gz",
@@ -33333,6 +34488,13 @@
         "path": "evidence/d1f98f072d32920fa96c2d7cd8e7affacff3e6ec1d6a2ea3354290525d182c20.json.gz",
         "description": "Native input cardano-js-sdk/packages/ogmios/package.json",
         "sourceUrl": "https://github.com/input-output-hk/cardano-js-sdk/blob/48019e49c826ea77d81be0e2d2907f94406f5e04/packages/ogmios/package.json"
+      },
+      {
+        "id": "evidence:d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7",
+        "digest": "d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7",
+        "path": "evidence/d2037b815029ed9f23c8d525194406d70a1fa13e7df95750d983bba4809d6bd7.json.gz",
+        "description": "npm-lock for bursa v0.19.0",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
       },
       {
         "id": "evidence:d213308cc0213638e492a99215d3888b4cda4dc51ce551ab51fc2b42c30af58c",
@@ -33555,6 +34717,13 @@
         "digest": "d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c",
         "path": "evidence/d76420a07aa1124143b929855e8a06cafe664a0918fccd13a77cea0a6d5f895c.json.gz",
         "description": "Pinned Yarn workflow scope for typhonjs"
+      },
+      {
+        "id": "evidence:d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+        "digest": "d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615",
+        "path": "evidence/d767304491e9856338013cdedeb0c52d795c193851e1723e1545d371b638f615.json.gz",
+        "description": "go-packages for bursa v0.19.0",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/tree/ee3ac506f88287c349d19171f2f391ac5bb835ed"
       },
       {
         "id": "evidence:d78c2fba600f65cfb8c62d8b8faf9827912dd8591e0de948b71505e7c0b4ba4a",
@@ -33952,6 +35121,13 @@
         "sourceUrl": "https://github.com/StricaHQ/typhonjs/blob/7190c3c67e9dc7be284842e89f06ed848b748ed2/src/transaction/Transaction.ts"
       },
       {
+        "id": "evidence:e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+        "digest": "e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31",
+        "path": "evidence/e51a47c8a104770fe0297b6692ceffa900997ec1729d87687c8ad9ea64402c31.json.gz",
+        "description": "Signing workflow source bursa/ui/cmd/bursa-wallet/ui_webview.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/cmd/bursa-wallet/ui_webview.go"
+      },
+      {
         "id": "evidence:e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47",
         "digest": "e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47",
         "path": "evidence/e51aaaeccf257ceb69ab56e74c49d9d4eda5712d4abccae36e4fa2b5453b3d47.json.gz",
@@ -33971,6 +35147,13 @@
         "path": "evidence/e577bc1948efbf3b0191c40217ea95d9a647f540224f0709efb4d428f1f3053b.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/Plutonomicon/plutarch-plutus/tree/93881d63bfe02ea12329fe3d5521935bb7dce18c"
+      },
+      {
+        "id": "evidence:e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+        "digest": "e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e",
+        "path": "evidence/e5a85c413770cff3ee65301c64014de2f90c3829a66649c9512c3de18cbaac5e.json.gz",
+        "description": "Signing workflow source bursa/internal/signer/backend/sops.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/internal/signer/backend/sops.go"
       },
       {
         "id": "evidence:e5a936d1eb3665c882f0139ebc92e8d95e9174ab0600cb4c12482578a8ba5d19",
@@ -34064,6 +35247,13 @@
         "sourceUrl": "https://github.com/MeshJS/mesh/tree/3df879e48f400f19eea0ebddfb00099b0809f484"
       },
       {
+        "id": "evidence:e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+        "digest": "e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd",
+        "path": "evidence/e8d15131b57e50a717b45f4db52d96d3162010fd64a88361a8581382dcd8f1cd.json.gz",
+        "description": "Signing workflow source bursa/ui/cmd/bursa-wallet/ui_headless.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/cmd/bursa-wallet/ui_headless.go"
+      },
+      {
         "id": "evidence:e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184",
         "digest": "e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184",
         "path": "evidence/e8d353984158822318b8d726bf9c661b0b14ef7778d6cbf2a86a848d590bd184.json.gz",
@@ -34076,6 +35266,13 @@
         "path": "evidence/e95e53ae6a13b4a7fd133b4287f148718d6dae511d338ac076886f1468bd4460.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/cardano-foundation/catalyst-voices/tree/665601e303e180d94f25d9eb916ce7be5e1a58ce"
+      },
+      {
+        "id": "evidence:e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+        "digest": "e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329",
+        "path": "evidence/e98575764e9b3405c9b4bc08007dc9e30a8e0ba6f8a21fbf234455c43b62a329.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/src/manifest.json",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/src/manifest.json"
       },
       {
         "id": "evidence:ea460427e298adbde3ea544f1d2fa65e49b89aefd6df18e6a53c881e0fb8f55e",
@@ -34168,6 +35365,13 @@
         "sourceUrl": "https://github.com/veridian-id/veridian-wallet/blob/e93a56f54451cc386ba54dd1e8e5564a884b3593/ios/App/Podfile"
       },
       {
+        "id": "evidence:ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+        "digest": "ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b",
+        "path": "evidence/ed20da9cee2c88478e92a0412b3a3af7f8e3be534ad5ebff641bb2062cc69e8b.json.gz",
+        "description": "Signing workflow source cardano-dev-wallet/webext/src/lib/CIP30/Backends/Blockfrost.ts",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/blob/e846a7c5d2747609d791d7d47d5423616718cb34/webext/src/lib/CIP30/Backends/Blockfrost.ts"
+      },
+      {
         "id": "evidence:ed3ed7a2b94f501bafdf2e6963ef9878ff6c23c5bc39e7a4b0f8e436d4b10357",
         "digest": "ed3ed7a2b94f501bafdf2e6963ef9878ff6c23c5bc39e7a4b0f8e436d4b10357",
         "path": "evidence/ed3ed7a2b94f501bafdf2e6963ef9878ff6c23c5bc39e7a4b0f8e436d4b10357.json.gz",
@@ -34230,11 +35434,25 @@
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/wallet/package.json"
       },
       {
+        "id": "evidence:f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c",
+        "digest": "f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c",
+        "path": "evidence/f03166517a126b88c7413001cc118c5bbc594befbb8dadc678fef7d48cdea46c.json.gz",
+        "description": "Native input bursa/go.sum",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/go.sum"
+      },
+      {
         "id": "evidence:f071fb32f559846b01bba8eb2bbe5a4222b6db657d3929c063e94e634ecf6be1",
         "digest": "f071fb32f559846b01bba8eb2bbe5a4222b6db657d3929c063e94e634ecf6be1",
         "path": "evidence/f071fb32f559846b01bba8eb2bbe5a4222b6db657d3929c063e94e634ecf6be1.json.gz",
         "description": "Pinned repository tree for manifest and integration discovery",
         "sourceUrl": "https://github.com/IndigoProtocol/dexter/tree/44a57eb0f6f80650f1ed34a7765c787afa27f1ab"
+      },
+      {
+        "id": "evidence:f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+        "digest": "f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a",
+        "path": "evidence/f079472c771e31fb12dde49ba6fa569195b2b6ae99fb0317d55c31e31744203a.json.gz",
+        "description": "Signing workflow source bursa/ui/README.md",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/README.md"
       },
       {
         "id": "evidence:f0a74146a22f5a257196af0c69cd6fc8f516975b5a088edf275cd90eb8464164",
@@ -34293,6 +35511,13 @@
         "sourceUrl": "https://github.com/bloxbean/cardano-client-lib/tree/f1130177b02761ea15b93a92e385ae0739d27096"
       },
       {
+        "id": "evidence:f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb",
+        "digest": "f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb",
+        "path": "evidence/f12d115ce825575c357b35259c546dbd0f02e6a9f4d845c5374b0465661c1cdb.json.gz",
+        "description": "Native collection profile and command",
+        "sourceUrl": "https://github.com/mlabs-haskell/cardano-dev-wallet/tree/e846a7c5d2747609d791d7d47d5423616718cb34"
+      },
+      {
         "id": "evidence:f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "digest": "f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe",
         "path": "evidence/f1368637b2bd5cdea2ad2e7da1d36f07347e404dd2586e1cf37222ab1c92d6fe.json.gz",
@@ -34333,6 +35558,13 @@
         "path": "evidence/f21e7e337519563de15649133be65ee743ed4279b6c58391d179385817b2e848.json.gz",
         "description": "Native input blaze/packages/blaze-uplc/wasm/Cargo.lock",
         "sourceUrl": "https://github.com/butaneprotocol/blaze-cardano/blob/0499975bfa4fdb324f2185657a7f17e4cea35aa1/packages/blaze-uplc/wasm/Cargo.lock"
+      },
+      {
+        "id": "evidence:f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+        "digest": "f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1",
+        "path": "evidence/f2304d99dee6173b04245577494416393cf02477d693ce81fcfebe5b09cd0dd1.json.gz",
+        "description": "Native input bursa/ui/go.mod",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/go.mod"
       },
       {
         "id": "evidence:f2868d468641175029d613645b16748155878a18f02cb4a50210d7a74ca05b7d",
@@ -34499,6 +35731,13 @@
         "path": "evidence/f6877102b13b0f5c04d4c0160430f6586f9d6597a94b000712368f667fa39bdf.json.gz",
         "description": "cargo-metadata for dolos v1.6.1",
         "sourceUrl": "https://github.com/txpipe/dolos/tree/fd6c9a256f552dbb1d61ab63242f128ab786fdc2"
+      },
+      {
+        "id": "evidence:f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+        "digest": "f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce",
+        "path": "evidence/f68af4ca90b5c4f2dcbd2394d971b2bb3b7e7061a30403b0e9279353e5173fce.json.gz",
+        "description": "Signing workflow source bursa/internal/signer/setup.go",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/internal/signer/setup.go"
       },
       {
         "id": "evidence:f6af88f87dfc20fee3f1926e4f69be69ac0e235909c733c9fedc8614fa8e5092",
@@ -34675,11 +35914,25 @@
         "sourceUrl": "https://github.com/masumi-network/masumi-payment-service/blob/8db9e6122bfd4303bb6e2b5740392f84a4b41ab8/src/utils/generator/wallet-generator/index.ts"
       },
       {
+        "id": "evidence:fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+        "digest": "fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104",
+        "path": "evidence/fd440c9e0e75c4b05db8b5d1828cb1789ff866486639bc62846414673afd4104.json.gz",
+        "description": "Signing workflow source bursa/README.md",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/README.md"
+      },
+      {
         "id": "evidence:fd7b86573efb90a9364078c8a3c011bb0ea9601efd012235b880265da6a6153f",
         "digest": "fd7b86573efb90a9364078c8a3c011bb0ea9601efd012235b880265da6a6153f",
         "path": "evidence/fd7b86573efb90a9364078c8a3c011bb0ea9601efd012235b880265da6a6153f.json.gz",
         "description": "Native input lucid-evolution/packages/tx-graph/package.json",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/tx-graph/package.json"
+      },
+      {
+        "id": "evidence:fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+        "digest": "fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1",
+        "path": "evidence/fdb5e247c83c9f01951ac96ee263e75de81beb0d8d1dcc819ca2b3127a6d73a1.json.gz",
+        "description": "Signing workflow source cardano-hw-cli/README.md",
+        "sourceUrl": "https://github.com/vacuumlabs/cardano-hw-cli/blob/8977cc05622b5d635d406065d7f55541f2bb4159/README.md"
       },
       {
         "id": "evidence:fdbc6073284e9f292ced6a93d061d9dfadfdef5340d283d1dcf0552da21a7ab8",
@@ -34736,6 +35989,13 @@
         "path": "evidence/ff7ef06f8497e3f6f84b38bb6147ff4281b910102d5f46e0cc363482a6a56351.json.gz",
         "description": "Native input lucid-evolution/packages/core-utils/package.json",
         "sourceUrl": "https://github.com/Anastasia-Labs/lucid-evolution/blob/df729a787f9084d2dc461862889ac2971ea43e07/packages/core-utils/package.json"
+      },
+      {
+        "id": "evidence:ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
+        "digest": "ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150",
+        "path": "evidence/ffdb2fd2b26c4a731c3812d376c677923a1435dbc6c8e5e688bc80088b88e150.json.gz",
+        "description": "Signing workflow source bursa/ui/internal/webui/dist/index.html",
+        "sourceUrl": "https://github.com/blinklabs-io/bursa/blob/ee3ac506f88287c349d19171f2f391ac5bb835ed/ui/internal/webui/dist/index.html"
       }
     ],
     "decisions": [],
@@ -34771,6 +36031,30 @@
         "evidenceId": "evidence:2ac13a075e6dea592e81feac052dd712c054197fe31265ef7909f97c96754167"
       },
       {
+        "key": "8e2bcdebbaee65b446ef4954810ab41d27e9610a0d7cbaff7b2af711aa2195d2",
+        "toolId": "bursa",
+        "profileId": "profile:bursa:4e0905655a23986d1c9ec50e",
+        "evidenceId": "evidence:51082f9bce38425a1e2b682b8d2407ab0f27351238ac6657a5935b5952f8be59"
+      },
+      {
+        "key": "af81f04ca18c28a1e12fb6438f36bb0a07cac1cf341ffee91def9991f91bed82",
+        "toolId": "bursa",
+        "profileId": "profile:bursa:6a26e71f6a4154d687fb4815",
+        "evidenceId": "evidence:241143a1aa973fc0f5060965787b46c926f23304dacddf1fee49eb89421caf43"
+      },
+      {
+        "key": "ef61acfd7ddf53da229ef8f0b8d3f605305cce57ba09871a17a2dc418fe6959a",
+        "toolId": "bursa",
+        "profileId": "profile:bursa:be7bfd64419de5730323fb67",
+        "evidenceId": "evidence:7dc89f191f6c5ea6204defbb4672f23b2236b0ccc146b3dd0059263824c48abf"
+      },
+      {
+        "key": "f644d917ddba53be499ddf5ad2acfa003ff215475052493921b6e5dcedb961b4",
+        "toolId": "bursa",
+        "profileId": "profile:bursa:fe7537b443b4c244a7da65d5",
+        "evidenceId": "evidence:40cc6ae9ae02c64f806cb9e9c074db50bde61b5b6ed8e23e2e9c267fc9df9d27"
+      },
+      {
         "key": "c7af70cf7715fc2376d456740a0886832226af78d46f7295a60a8dad944f1d09",
         "toolId": "cardano-connect-with-wallet",
         "profileId": "profile:cardano-connect-with-wallet:72dfbb836a37f476f0dc7a30",
@@ -34781,6 +36065,18 @@
         "toolId": "cardano-dapp-wallet-connector",
         "profileId": "profile:cardano-dapp-wallet-connector:4388ebe22bd6824801066605",
         "evidenceId": "evidence:d854ca2e07e6315b30283270bc35fccf6e26de903eb36a3eddd6122346f47789"
+      },
+      {
+        "key": "7d2f0e5942a0d934d849a38ea34a5571e3693d1ff4cb9991cbbdd79bd96a1d14",
+        "toolId": "cardano-dev-wallet",
+        "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824",
+        "evidenceId": "evidence:5764384618a7470801ac3372b44d5c1b43e5eb043e4fdcb97ecc5de5e5fe86b0"
+      },
+      {
+        "key": "5c661d5f3efea5008f344bb0d5f67808907f6f121f6d267828b89d60eedbb6fa",
+        "toolId": "cardano-hw-cli",
+        "profileId": "profile:cardano-hw-cli:fca24b891602ed94eae6a326",
+        "evidenceId": "evidence:3b09bc2c1f0e91d6aaf90cfd2e96f5996397a43c974fd3db0ad8bb8417d71ecf"
       },
       {
         "key": "c8e13f183949e0e42dd273d4c2664488c081852c73ebb6f96d11b23c3cc7eb0b",
@@ -34997,84 +36293,84 @@
   "tables": {
     "artifacts": [
       {
-        "path": "snapshots/artifacts/2d2bd892e75e285197ad7db31b06fedbc8ab08e6b2453414141c0d879c894422.json",
-        "digest": "2d2bd892e75e285197ad7db31b06fedbc8ab08e6b2453414141c0d879c894422",
-        "records": 1876
+        "path": "snapshots/artifacts/f7e4cbd229eea43f8acd8a5510fb58be3393df70acd55f6524feb5344eeaf64a.json",
+        "digest": "f7e4cbd229eea43f8acd8a5510fb58be3393df70acd55f6524feb5344eeaf64a",
+        "records": 1968
       },
       {
-        "path": "snapshots/artifacts/ba64008c63ed77598fe17d54d89ea733daf189e75956430bfded04a975a3b1c0.json",
-        "digest": "ba64008c63ed77598fe17d54d89ea733daf189e75956430bfded04a975a3b1c0",
-        "records": 1845
+        "path": "snapshots/artifacts/bbead4079f2149ba027977ec1d26771121da4a2d1188bf007723288d14fd9cf2.json",
+        "digest": "bbead4079f2149ba027977ec1d26771121da4a2d1188bf007723288d14fd9cf2",
+        "records": 1949
       },
       {
-        "path": "snapshots/artifacts/8becce486c12acf3f4a9b47b56ae00302456459298432b05da15ff1659ea6f1d.json",
-        "digest": "8becce486c12acf3f4a9b47b56ae00302456459298432b05da15ff1659ea6f1d",
-        "records": 1888
+        "path": "snapshots/artifacts/3e3f74b1f7fac6cc58e226a245493f6da3addfe4c8d82482a416f98dd5a241fc.json",
+        "digest": "3e3f74b1f7fac6cc58e226a245493f6da3addfe4c8d82482a416f98dd5a241fc",
+        "records": 1986
       },
       {
-        "path": "snapshots/artifacts/26c9c1016da7f6a0150ae130719c5cc54ba4df368e6b9e87b5caa1297148f427.json",
-        "digest": "26c9c1016da7f6a0150ae130719c5cc54ba4df368e6b9e87b5caa1297148f427",
-        "records": 1869
+        "path": "snapshots/artifacts/ba4cb748ca9627e586254af02da3b89cef050761705a610d58b605307e618419.json",
+        "digest": "ba4cb748ca9627e586254af02da3b89cef050761705a610d58b605307e618419",
+        "records": 1956
       },
       {
-        "path": "snapshots/artifacts/700134e8348bfc0c6d8ea4568a371b1dda0ca0c075f263d632fe246b4cdc414c.json",
-        "digest": "700134e8348bfc0c6d8ea4568a371b1dda0ca0c075f263d632fe246b4cdc414c",
-        "records": 1874
+        "path": "snapshots/artifacts/15546ad87e3f682914248190be67bfc88afe5026367f3eb1052becf2c998cba6.json",
+        "digest": "15546ad87e3f682914248190be67bfc88afe5026367f3eb1052becf2c998cba6",
+        "records": 1969
       },
       {
-        "path": "snapshots/artifacts/203a5ae307e2b87d58924264be52f07aea77dad1630c03f11eb12a907147bba1.json",
-        "digest": "203a5ae307e2b87d58924264be52f07aea77dad1630c03f11eb12a907147bba1",
-        "records": 1903
+        "path": "snapshots/artifacts/a030eccad8e58da91cf2aea2747e5aff91819b72d77b521fe405ec0a62d669e5.json",
+        "digest": "a030eccad8e58da91cf2aea2747e5aff91819b72d77b521fe405ec0a62d669e5",
+        "records": 1994
       },
       {
-        "path": "snapshots/artifacts/b72a0f0a07c82d22542ef3a2e88c7f79a5643a2ef76a2dc9b5c8fbe95bf6dce3.json",
-        "digest": "b72a0f0a07c82d22542ef3a2e88c7f79a5643a2ef76a2dc9b5c8fbe95bf6dce3",
-        "records": 2000
+        "path": "snapshots/artifacts/2f17f35afca901b0b7b0015a1ac553d0698f245284a7bbc857499da1ed65592f.json",
+        "digest": "2f17f35afca901b0b7b0015a1ac553d0698f245284a7bbc857499da1ed65592f",
+        "records": 2086
       },
       {
-        "path": "snapshots/artifacts/cf56290d3f65a839e2452c548b5be244fda55f5ad6f25d4e2e68c6722f367024.json",
-        "digest": "cf56290d3f65a839e2452c548b5be244fda55f5ad6f25d4e2e68c6722f367024",
-        "records": 1835
+        "path": "snapshots/artifacts/77a91f30099f0894054b1fce27842a48b506f85a6378406a85b00cbaf2b9c27d.json",
+        "digest": "77a91f30099f0894054b1fce27842a48b506f85a6378406a85b00cbaf2b9c27d",
+        "records": 1928
       },
       {
-        "path": "snapshots/artifacts/c706836482db6029ae705571fff78fb9c6162d644687ce3a863697cb0f46b882.json",
-        "digest": "c706836482db6029ae705571fff78fb9c6162d644687ce3a863697cb0f46b882",
-        "records": 1878
+        "path": "snapshots/artifacts/471c8a1b1665ed729a662f1e8201de021f6defe0fe7e1408ba8da10dd5cb22e7.json",
+        "digest": "471c8a1b1665ed729a662f1e8201de021f6defe0fe7e1408ba8da10dd5cb22e7",
+        "records": 1969
       },
       {
-        "path": "snapshots/artifacts/fed497590f554cab8206bfba2cd616dad7c1022e33822f8c336cbf14fd168b3c.json",
-        "digest": "fed497590f554cab8206bfba2cd616dad7c1022e33822f8c336cbf14fd168b3c",
-        "records": 1864
+        "path": "snapshots/artifacts/e081f5729f314dd49bb2d3f595cbaeda797b2b8c438c014fa2cf567c77409a23.json",
+        "digest": "e081f5729f314dd49bb2d3f595cbaeda797b2b8c438c014fa2cf567c77409a23",
+        "records": 1941
       },
       {
-        "path": "snapshots/artifacts/0bb456e50eace13c781bcb88f8325c6deea6d0d8b138124871dcce6621340632.json",
-        "digest": "0bb456e50eace13c781bcb88f8325c6deea6d0d8b138124871dcce6621340632",
-        "records": 1923
+        "path": "snapshots/artifacts/157bb6bc184ae49a42cdb90019d8b35a6b8541eb24f14142806a77c1b15483a3.json",
+        "digest": "157bb6bc184ae49a42cdb90019d8b35a6b8541eb24f14142806a77c1b15483a3",
+        "records": 1985
       },
       {
-        "path": "snapshots/artifacts/e7fccea8bfa6350710212f7c5cdc8d7a89f96538fc99cb01e7b8d1cd8a9e8de5.json",
-        "digest": "e7fccea8bfa6350710212f7c5cdc8d7a89f96538fc99cb01e7b8d1cd8a9e8de5",
-        "records": 1919
+        "path": "snapshots/artifacts/a2064bc6c86378924ecf8f74fa576ae7eafbdd033698db32cf54f2f0550a6843.json",
+        "digest": "a2064bc6c86378924ecf8f74fa576ae7eafbdd033698db32cf54f2f0550a6843",
+        "records": 1997
       },
       {
-        "path": "snapshots/artifacts/c93580846bff7ad04cfefca882131f4dc697a41dcd334f60c8d02ddc79749022.json",
-        "digest": "c93580846bff7ad04cfefca882131f4dc697a41dcd334f60c8d02ddc79749022",
-        "records": 1930
+        "path": "snapshots/artifacts/230a7c9b0cc9ad15257b730386ded5cd436d4bb9548c0c3e309842c3096b60d8.json",
+        "digest": "230a7c9b0cc9ad15257b730386ded5cd436d4bb9548c0c3e309842c3096b60d8",
+        "records": 2008
       },
       {
-        "path": "snapshots/artifacts/ce8ee178bcc2202bba9a84333c6f412b5ee64210fb4abdab217f3d7cf2843184.json",
-        "digest": "ce8ee178bcc2202bba9a84333c6f412b5ee64210fb4abdab217f3d7cf2843184",
-        "records": 1856
+        "path": "snapshots/artifacts/f03097ec15265175edf8aa7fda9748c8de2ae591b8ebc59cc8ad13efece65b86.json",
+        "digest": "f03097ec15265175edf8aa7fda9748c8de2ae591b8ebc59cc8ad13efece65b86",
+        "records": 1963
       },
       {
-        "path": "snapshots/artifacts/210a4659cfbfce39a8c4c20be33cb88903c18f07345ea3883682a014eb153199.json",
-        "digest": "210a4659cfbfce39a8c4c20be33cb88903c18f07345ea3883682a014eb153199",
-        "records": 1873
+        "path": "snapshots/artifacts/0bd0960e11b6379688aa9a835c9a3f0633c4a2e36a6fd42a92366cb961954e37.json",
+        "digest": "0bd0960e11b6379688aa9a835c9a3f0633c4a2e36a6fd42a92366cb961954e37",
+        "records": 1968
       },
       {
-        "path": "snapshots/artifacts/9d769d7ce6cd7af2e3ea06ce58aefb58d82f651b9a14c5f485461034f7728c3b.json",
-        "digest": "9d769d7ce6cd7af2e3ea06ce58aefb58d82f651b9a14c5f485461034f7728c3b",
-        "records": 1885
+        "path": "snapshots/artifacts/9d3c0efcfa5334dbc84cde2dfc37eaec6f22f70b2277983b8a9083faf4a2aa36.json",
+        "digest": "9d3c0efcfa5334dbc84cde2dfc37eaec6f22f70b2277983b8a9083faf4a2aa36",
+        "records": 1972
       }
     ],
     "occurrences": [
@@ -35114,6 +36410,26 @@
         "records": 97
       },
       {
+        "path": "snapshots/occurrences/9e248ae3af766ab39e710bbdc1d2375ae81d799e17996feaf514584e716caa95.json",
+        "digest": "9e248ae3af766ab39e710bbdc1d2375ae81d799e17996feaf514584e716caa95",
+        "records": 1679
+      },
+      {
+        "path": "snapshots/occurrences/77cbad1c4ccbc5bd5d5dd08812a84f4932566dd8bcc61c491642104d0906332d.json",
+        "digest": "77cbad1c4ccbc5bd5d5dd08812a84f4932566dd8bcc61c491642104d0906332d",
+        "records": 457
+      },
+      {
+        "path": "snapshots/occurrences/e8276303de5d216a5ee5561b449ef13256d69d1eb53c32d822c6e35dc6ede637.json",
+        "digest": "e8276303de5d216a5ee5561b449ef13256d69d1eb53c32d822c6e35dc6ede637",
+        "records": 263
+      },
+      {
+        "path": "snapshots/occurrences/df0a44f716b3c9fe551d536045935abd0135e47a587b52a1d44a581efdd73cf1.json",
+        "digest": "df0a44f716b3c9fe551d536045935abd0135e47a587b52a1d44a581efdd73cf1",
+        "records": 2597
+      },
+      {
         "path": "snapshots/occurrences/8978056d5dafad48469864f4f704af8e96a5163b522214aa33c81523724c6fc4.json",
         "digest": "8978056d5dafad48469864f4f704af8e96a5163b522214aa33c81523724c6fc4",
         "records": 717
@@ -35122,6 +36438,16 @@
         "path": "snapshots/occurrences/f19c08954f9315c0cf67b8bddb7d6bcfcee2bc1735a6b72c51783bc27cf99f57.json",
         "digest": "f19c08954f9315c0cf67b8bddb7d6bcfcee2bc1735a6b72c51783bc27cf99f57",
         "records": 1533
+      },
+      {
+        "path": "snapshots/occurrences/15d3312a50b3ffe37beaa36eea1d6f105f4cf7fdf682ec13959ca3d383cf51ba.json",
+        "digest": "15d3312a50b3ffe37beaa36eea1d6f105f4cf7fdf682ec13959ca3d383cf51ba",
+        "records": 475
+      },
+      {
+        "path": "snapshots/occurrences/5dedd691f91a16043190e0728b0dc62fd43a087b99525766b60efc9d7c233c44.json",
+        "digest": "5dedd691f91a16043190e0728b0dc62fd43a087b99525766b60efc9d7c233c44",
+        "records": 936
       },
       {
         "path": "snapshots/occurrences/b8e27f63c749d257c431e3719a76004ee572fd303b6dbfed2fcbe8d2a512d69a.json",
@@ -35351,6 +36677,76 @@
         "records": 247
       },
       {
+        "path": "snapshots/edges/6c5874d61a8c9b189aa6c99fc46b968acfa52544eaf74f4c8a6212d83f1017f9.json",
+        "digest": "6c5874d61a8c9b189aa6c99fc46b968acfa52544eaf74f4c8a6212d83f1017f9",
+        "records": 3888
+      },
+      {
+        "path": "snapshots/edges/c81b25ad445642f684b0d2e66841f01d81ad3f92d564cc1a466cf48ce865bfdf.json",
+        "digest": "c81b25ad445642f684b0d2e66841f01d81ad3f92d564cc1a466cf48ce865bfdf",
+        "records": 3889
+      },
+      {
+        "path": "snapshots/edges/cf88d7ab0af1b3f3b57b3fc49da41be05f83df92b76d52a7d00f78df0f317a4a.json",
+        "digest": "cf88d7ab0af1b3f3b57b3fc49da41be05f83df92b76d52a7d00f78df0f317a4a",
+        "records": 3888
+      },
+      {
+        "path": "snapshots/edges/f30f4fffea500a42c30c74a7ef4daeb3fa3e4358d708c2b05631f4df7f1e549b.json",
+        "digest": "f30f4fffea500a42c30c74a7ef4daeb3fa3e4358d708c2b05631f4df7f1e549b",
+        "records": 3889
+      },
+      {
+        "path": "snapshots/edges/16a6b7655e7914e28e16b6c32988a67584e218ee89e6aafe3510e4043e4cc4ed.json",
+        "digest": "16a6b7655e7914e28e16b6c32988a67584e218ee89e6aafe3510e4043e4cc4ed",
+        "records": 737
+      },
+      {
+        "path": "snapshots/edges/908739a55e44ff864c9ecbadf4827f37494df3aeba63515bb0c2ede9187d8765.json",
+        "digest": "908739a55e44ff864c9ecbadf4827f37494df3aeba63515bb0c2ede9187d8765",
+        "records": 398
+      },
+      {
+        "path": "snapshots/edges/ae15015944af967b10a73241f543036ad3861522b121b55e880f12a334232778.json",
+        "digest": "ae15015944af967b10a73241f543036ad3861522b121b55e880f12a334232778",
+        "records": 3167
+      },
+      {
+        "path": "snapshots/edges/432c0ab16855463cf4947c7930bc650daccda9efb5ee1bc16e92424592ba6a5f.json",
+        "digest": "432c0ab16855463cf4947c7930bc650daccda9efb5ee1bc16e92424592ba6a5f",
+        "records": 3168
+      },
+      {
+        "path": "snapshots/edges/533873ea87543de1691e025d29905c941a619b4d47e129bb9b9208626ed172dd.json",
+        "digest": "533873ea87543de1691e025d29905c941a619b4d47e129bb9b9208626ed172dd",
+        "records": 3167
+      },
+      {
+        "path": "snapshots/edges/49d131eafe3d283f64435818a454277d06b519a00cea87a40c3fd49717eb2782.json",
+        "digest": "49d131eafe3d283f64435818a454277d06b519a00cea87a40c3fd49717eb2782",
+        "records": 3168
+      },
+      {
+        "path": "snapshots/edges/5d81ce3bf0658ad7fe97ebbfd5aeff1c156e21702e882b8af1856e5521467cdb.json",
+        "digest": "5d81ce3bf0658ad7fe97ebbfd5aeff1c156e21702e882b8af1856e5521467cdb",
+        "records": 3167
+      },
+      {
+        "path": "snapshots/edges/797b75ae03b502e12b3bec2873bdc5dd25ad2e7988bf27c441313e4d914ccfbf.json",
+        "digest": "797b75ae03b502e12b3bec2873bdc5dd25ad2e7988bf27c441313e4d914ccfbf",
+        "records": 3168
+      },
+      {
+        "path": "snapshots/edges/47c2f03a3aa5167e89f551e253b289a4b7b65caa4a6cde8424dfd3e39157b718.json",
+        "digest": "47c2f03a3aa5167e89f551e253b289a4b7b65caa4a6cde8424dfd3e39157b718",
+        "records": 3168
+      },
+      {
+        "path": "snapshots/edges/7f46fdbd8943ac196a65e73bdbb358416b4b8ae4d853fb3008616b63132c2fc5.json",
+        "digest": "7f46fdbd8943ac196a65e73bdbb358416b4b8ae4d853fb3008616b63132c2fc5",
+        "records": 3168
+      },
+      {
         "path": "snapshots/edges/bb22a830c1016de0c2a4581409896891d01ffc4b5bd92395488138c8ed9dbab4.json",
         "digest": "bb22a830c1016de0c2a4581409896891d01ffc4b5bd92395488138c8ed9dbab4",
         "records": 1483
@@ -35359,6 +36755,16 @@
         "path": "snapshots/edges/0ee8be11604bfc9ba6c388b96a9f75b0b075111c9732fba85792656c58d45190.json",
         "digest": "0ee8be11604bfc9ba6c388b96a9f75b0b075111c9732fba85792656c58d45190",
         "records": 3068
+      },
+      {
+        "path": "snapshots/edges/e26effec60d2ecfc6db3facd9bd89c2531160c73fa165fa3e637fdac91ed75ea.json",
+        "digest": "e26effec60d2ecfc6db3facd9bd89c2531160c73fa165fa3e637fdac91ed75ea",
+        "records": 632
+      },
+      {
+        "path": "snapshots/edges/8dbd0c7a57a9791f0a9bf7f727799a76c70d7fd9ba4f0a5f35b04777f169866c.json",
+        "digest": "8dbd0c7a57a9791f0a9bf7f727799a76c70d7fd9ba4f0a5f35b04777f169866c",
+        "records": 1711
       },
       {
         "path": "snapshots/edges/4757f58e9bcb99d8c90c2e12b705fc8df53bcc2aa74c001bf11f016791125dd2.json",

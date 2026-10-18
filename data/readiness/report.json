@@ -1,12 +1,12 @@
 {
-  "snapshot": "b8a2a267a8b3741c81091af76da394ec9b0d6f4d528ce8927cc7330ba0e653df",
+  "snapshot": "a984bb825fcb94eee1cda6162c87a8d5e30f55351c0e649204361720990bbb20",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 40,
-  "profiles": 46,
-  "completeProfiles": 5,
+  "withProfiles": 43,
+  "profiles": 52,
+  "completeProfiles": 7,
   "capabilityFindings": [],
-  "unresolvedTools": 229,
+  "unresolvedTools": 226,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -1572,11 +1572,99 @@
     },
     {
       "toolId": "bursa",
+      "id": "gap:0165962a610faeb996e756f9",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @opentelemetry/api from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:02f3e00d1fb31cb225a060de",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:036380156c7e8cb8e901cae8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-playwright from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:06c97354814febbe000841ba",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:07b0a6adc5cc8a831d06b76e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
       "id": "gap:08d723e628ab4e7048ff4ff9",
       "area": "capability",
       "reason": "Chain-facing capabilities have not been reviewed.",
       "nextAction": "Review production entry points and integration behavior.",
       "code": "capabilities-unreviewed"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:08f313234f2d6e88df90b5bc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:095a54eb881f9433d42447bb",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/eslint has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:0a501edf1cd6591e26364cb6",
+      "area": "artifact",
+      "reason": "Bursa v0.19.0 is selected source. The UI web package has no version and the connector is 0.1.0. Linux/amd64 metadata with cgo disabled does not identify published desktop/mobile/container artifacts or their shipped assets.",
+      "nextAction": "Bind selected source/configurations to published artifact digests and package inventories.",
+      "code": "signing-scope:artifact"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:0c3e8541ac4cb5599ba742c8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:11c77e991a7939c8ba9cffe2",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:12793bb1c247e95b70086ea7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
     },
     {
       "toolId": "bursa",
@@ -1588,11 +1676,283 @@
     },
     {
       "toolId": "bursa",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:2637c21bcf3b0e18c135884a",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies @opentelemetry/api from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:28b55c249ae35bf9fc009f35",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:2b8396916f174094329473a8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/node from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:3027650cd83f1db8e503302f",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:32ee79abc3bb85e1363de2cd",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-preview from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:38b9553627b49e5457a4d381",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/ui from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:3a3193b9293321165d60e8ce",
+      "area": "resolution",
+      "reason": "Optional peerDependencies yaml from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:3fe7f877ff895caed53b1e3a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies yaml from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:4741992fbb46e95aa86d76af",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:48caa8f86043b60cf21b9e1b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:5902313d48a47db6f7e56f59",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sugarss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:5a401d05113bbafdf288e46e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/eslint has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:5f0bae24d6910c1f1d36585e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:5ff44a7bca1d3e66e6b926f1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-webdriverio from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:75689d249d95868e0a70087b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:76e02a0bafded04a85a7b774",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/coverage-istanbul from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:773aaa9a27c55e883f73266e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies jiti from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:804d29e3b31ede34178acdc0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies canvas from node_modules/jsdom has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:830344d30ec0f80fc630fea3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:86aa15754549af0b29e913df",
+      "area": "resolution",
+      "reason": "Optional peerDependencies msw from node_modules/@vitest/mocker has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:8859a277ca7d99679d6b4cd3",
+      "area": "resolution",
+      "reason": "Optional peerDependencies terser from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:892220ea4fec20979eba71d5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:8d46968a9c8fdc3cd3e16648",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:91a9bbf9cfa4accf7f606651",
+      "area": "integration",
+      "reason": "Root and ui Go modules are separate consumer contexts; ui/go.mod selects an older Bursa module plus Dingo. The tracked ui/internal/webui/dist/index.html is only a pre-build placeholder; npm UI/connector captures do not establish the embedded web bundle. The connector has only development declarations. Webview/cgo, nftmedia, PKCS#11, device firmware/transports, cloud/Vault/SOPS backends, PostgreSQL watermarks, Mithril bootstrap and live networks remain separately scoped boundaries.",
+      "nextAction": "Review enabled signing/backends and bundled artifacts; collect additional build-tag/platform configurations and verify local-node and provider deployments.",
+      "code": "signing-scope:integration"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:93cf0864d69dccd4a903a363",
+      "area": "resolution",
+      "reason": "Optional peerDependencies react-native-b4a from node_modules/b4a has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:972287422b16c639c4f1c485",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @swc/helpers from node_modules/@swc/core has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:98a633a3cbdb55cecd2e4e38",
+      "area": "resolution",
+      "reason": "Optional peerDependencies stylus from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:9dbae4fa62656ad2f66da147",
+      "area": "resolution",
+      "reason": "Optional peerDependencies terser from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:a450f62065ff34a63ec0315b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/coverage-istanbul from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:b4ac2b407859f99c3d208ba4",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:b926c73cc8f4ebcc651e7ce0",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @edge-runtime/vm from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:ba9cc1fb7c59c037ea434a7a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies happy-dom from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:bbf471a59b89089e569bec88",
+      "area": "resolution",
+      "reason": "Optional peerDependencies less from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:c04d64e24fc275871affa283",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-webdriverio from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:cb2dae7d815b0191f58b25ac",
+      "area": "resolution",
+      "reason": "Optional peerDependencies lightningcss from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
     },
     {
       "toolId": "bursa",
@@ -1600,6 +1960,94 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:db521214954eeb13913bf44c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-playwright from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:e1289af6abda07c285da015a",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser from node_modules/@vitest/coverage-v8 has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:e4a11e5868347ae1c63f7041",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:e4fe902f97e36b6a480acff6",
+      "area": "resolution",
+      "reason": "Optional peerDependencies esbuild from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:e8733ad906e30c904c457da5",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @types/node from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:ea11a4f9574d466bf9662cf8",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitest/browser-preview from node_modules/vitest has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:eac0309a0ac1bab53d96b42e",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:efdefde9a7ac531878d402f1",
+      "area": "resolution",
+      "reason": "Optional peerDependencies tsx from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:f75ba7921dc53a15d201a37b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies @vitejs/devtools from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:fa7f9b2157e5d9341871d5ca",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:6a26e71f6a4154d687fb4815"
+    },
+    {
+      "toolId": "bursa",
+      "id": "gap:feb299db308588ca251f279c",
+      "area": "resolution",
+      "reason": "Optional peerDependencies sass-embedded from node_modules/vite has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:bursa:be7bfd64419de5730323fb67"
     },
     {
       "toolId": "cab",
@@ -2780,11 +3228,35 @@
     },
     {
       "toolId": "cardano-dev-wallet",
+      "id": "gap:0a501edf1cd6591e26364cb6",
+      "area": "artifact",
+      "reason": "Default-branch source has webext package/lock version 0.0.0; browser-store artifacts and their source mapping are not identified.",
+      "nextAction": "Verify the browser release and bundled extension inventory at an immutable source revision.",
+      "code": "signing-scope:artifact"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
       "nextAction": "Export a discovery review packet.",
       "code": "integration-unreviewed"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:1f58648e76402145addc0396",
+      "area": "resolution",
+      "reason": "Lockfile graph is an all-platform selection, not an installed or release-build dependency inventory. Platform/optional pruning and shipped artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:2bff0592d723421d1af5dbbc",
+      "area": "resolution",
+      "reason": "Optional peerDependencies utf-8-validate from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
     },
     {
       "toolId": "cardano-dev-wallet",
@@ -2795,11 +3267,51 @@
     },
     {
       "toolId": "cardano-dev-wallet",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:7f26be58e31f812d40320590",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Optional peerDependencies express from node_modules/addons-scanner-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:9192959a0e075db6eb166266",
+      "area": "resolution",
+      "reason": "Optional peerDependencies bufferutil from node_modules/ws has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:91a9bbf9cfa4accf7f606651",
+      "area": "integration",
+      "reason": "All npm declarations, including CSL and message-signing WASM used by WalletApiInternal.ts, are devDependencies. The native lock retains development scope; it is not evidence that the built extension has no runtime dependencies. Blockfrost/Ogmios/Kupo deployment choices, Plutip and generated extension bundles remain separate boundaries.",
+      "nextAction": "Review bundled runtime imports and built artifacts, and verify the enabled provider/network and CIP-30 signing workflow.",
+      "code": "signing-scope:integration"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:98c897afe03fc65474a0a8e7",
+      "area": "resolution",
+      "reason": "Optional peerDependencies safe-compare from node_modules/addons-scanner-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:ae5ffadcfecb717cc584929b",
+      "area": "resolution",
+      "reason": "Optional peerDependencies body-parser from node_modules/addons-scanner-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
+    },
+    {
+      "toolId": "cardano-dev-wallet",
+      "id": "gap:e14afd5e8e75effac3fe5d9d",
+      "area": "resolution",
+      "reason": "Optional peerDependencies node-fetch from node_modules/addons-scanner-utils has no locked occurrence.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-dev-wallet:6ed75c6080336129aa142824"
     },
     {
       "toolId": "cardano-go",
@@ -2873,6 +3385,14 @@
     },
     {
       "toolId": "cardano-hw-cli",
+      "id": "gap:0a501edf1cd6591e26364cb6",
+      "area": "artifact",
+      "reason": "Source tag and manifest identify 1.19.1, but package.json embeds a different commit value. Published binaries, Node/pkg output, native USB/HID assets and serialization WASM correspondence are not verified.",
+      "nextAction": "Verify release attestations/checksums and built package contents against the selected source.",
+      "code": "signing-scope:artifact"
+    },
+    {
+      "toolId": "cardano-hw-cli",
       "id": "gap:1e1b6ed6fb16f75fd33611cc",
       "area": "integration",
       "reason": "Runtime, bundled, and service dependencies have not been reviewed.",
@@ -2881,11 +3401,19 @@
     },
     {
       "toolId": "cardano-hw-cli",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:7608e5276ae082d3b6bec00f",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "Yarn lock selections are not an installed dependency inventory. Hoisting, virtual peer contexts, platform/optional pruning, native bundles and published artifact correspondence remain unverified; Classic locks also omit transitive peer declarations.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:cardano-hw-cli:fca24b891602ed94eae6a326"
+    },
+    {
+      "toolId": "cardano-hw-cli",
+      "id": "gap:91a9bbf9cfa4accf7f606651",
+      "area": "integration",
+      "reason": "The selected Classic Yarn closure includes hardware-wallet clients, but scripts/fix-trezor-firmware.js patches installed Trezor files. Ledger/Trezor/Keystone firmware, device transports, transaction restrictions and cardano-cli interoperability have not been tested or reviewed.",
+      "nextAction": "Inspect postinstall and bundled/native artifacts, then review the selected signing workflow and device/firmware configuration.",
+      "code": "signing-scope:integration"
     },
     {
       "toolId": "cardano-hw-cli",
