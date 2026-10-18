@@ -53,6 +53,23 @@ All collectors verify retained evidence before reusing a cached profile. Go patt
 
 `npm run readiness -- refresh-native` refreshes all registered `collect` requests against the currently discovered source revisions. Unchanged inputs reuse retained profiles. One failed profile does not stop the others; failures remain gaps and the command exits unsuccessfully. Imported custom profiles are not converted into executable commands automatically.
 
+For bounded runs, use `refresh-native --tools lucid-evolution,opshin --limit 2`.
+The limit counts distinct registered requests after filtering and deduplication
+across historical revisions; multiple configurations for one tool count separately.
+Requests run in stable tool-ID order. Unknown tools and tools without registrations
+are rejected before collection. Each request logs its position before starting and
+saves successful output immediately, so retrying a stopped batch can reuse it.
+Toolchain probes have 30-second deadlines, Git operations two minutes, GitHub
+requests one minute, and native resolution commands five minutes. These are
+per-command limits, not a total batch deadline. Expired commands are force-killed
+and collection errors retain diagnostics.
+
+Run validation, replay, report generation, and the site build separately. On Linux,
+`timeout -k 5s 120s node --import tsx scripts/readiness/cli.ts replay` provides an
+outer deadline and a kill grace period. The Node loader also works in restricted
+environments that disallow the `tsx` CLI's IPC socket. Replay logs each profile;
+a timeout is an unfinished check, never a successful validation.
+
 ### Import other native output
 
 ```sh

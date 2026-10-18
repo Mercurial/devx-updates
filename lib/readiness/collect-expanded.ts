@@ -54,11 +54,11 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   } else if (options.adapter === "go-packages") {
     const [GOOS, GOARCH] = options.platform.split("/");
     const env = { ...process.env, GOOS, GOARCH, CGO_ENABLED: "0", GOWORK: "off", GOFLAGS: "", GOTOOLCHAIN: "local" };
-    const run = (args: string[]) => execute("go", args, { cwd, env, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
-    const effectiveEnvironment = object(JSON.parse((await run(["env", "-json"])).stdout));
+    const run = (args: string[], timeout = 300000) => execute("go", args, { cwd, env, timeout, killSignal: "SIGKILL", maxBuffer: 64 * 1024 * 1024 });
+    const effectiveEnvironment = object(JSON.parse((await run(["env", "-json"], 30000)).stdout));
     const environment = Object.fromEntries(["GOOS", "GOARCH", "CGO_ENABLED", "GOWORK", "GOVERSION", "GOFLAGS", "GOTOOLCHAIN", "GOAMD64", "GOARM", "GOARM64", "GO386", "GOMIPS", "GOMIPS64", "GOPPC64", "GORISCV64", "GOWASM", "GOEXPERIMENT"].map((key) => [key, effectiveEnvironment[key]]));
     for (const [key, target] of [["GOROOT", "/go"], ["GOMODCACHE", "/gomodcache"], ["GOCACHE", "/gocache"]]) if (typeof effectiveEnvironment[key] === "string") normalization[String(effectiveEnvironment[key])] = target;
-    toolchain = (await run(["version"])).stdout.trim();
+    toolchain = (await run(["version"], 30000)).stdout.trim();
     selection.patterns = options.patterns ?? ["./..."]; selection.tags = options.tags ?? [];
     if (!selection.patterns.length || selection.patterns.some((p) => !p || p.startsWith("-") || p.includes("..") && p !== "./..." && !p.endsWith("/..."))) throw new Error("Invalid Go package pattern");
     selection.resolverContext = digest({ effectiveEnvironment, toolchain });
@@ -76,14 +76,14 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   } else {
     const lockPath = posix.join(posix.dirname(path), "uv.lock");
     if (!existsSync(sourcePath(root, lockPath))) throw new Error("uv collection requires a committed uv.lock; no fresh resolution is substituted");
-    toolchain = (await execute("uv", ["--version"], { timeout: 30000 })).stdout.trim();
+    toolchain = (await execute("uv", ["--version"], { timeout: 30000, killSignal: "SIGKILL" })).stdout.trim();
     selection.pythonVersion = options.pythonVersion;
     selection.resolverContext = digest({ toolchain, targetPython: options.pythonVersion, platform: options.platform });
     if (reuseCollection(snapshot, store, options, selection)) return;
     const args = ["tree", "--locked", "--offline", "--format", "json", "--all-groups", "--depth", "255", "--python-version", options.pythonVersion!, "--python-platform", options.platform, "--no-build", "--no-python-downloads", "--no-config"];
     const env = { ...process.env };
     for (const key of Object.keys(env)) if (key.startsWith("UV_")) delete env[key];
-    const output = await execute("uv", args, { cwd, env, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
+    const output = await execute("uv", args, { cwd, env, timeout: 300000, killSignal: "SIGKILL", maxBuffer: 64 * 1024 * 1024 });
     raw = { ...object(JSON.parse(output.stdout)), collectionSourceRoot: root };
     command = `uv ${args.join(" ")}`;
     diagnostics.push({ command, exitCode: 0, stderr: output.stderr });

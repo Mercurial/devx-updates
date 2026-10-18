@@ -27,7 +27,7 @@ export async function pinnedCheckout(repo: string, revision: string, stateDir: s
   if (!repositoryReference(repo) || !/^[a-f0-9]{40,64}$/.test(revision)) throw new Error("Collection needs an immutable GitHub source identity");
   const directory = resolve(stateDir, "sources", revision);
   mkdirSync(directory, { recursive: true });
-  const git = (args: string[]) => execute("git", args, { cwd: directory, timeout: 120000, maxBuffer: 16 * 1024 * 1024 });
+  const git = (args: string[]) => execute("git", args, { cwd: directory, timeout: 120000, killSignal: "SIGKILL", maxBuffer: 16 * 1024 * 1024 });
   let matches = false;
   if (existsSync(join(directory, ".git"))) {
     if ((await git(["status", "--porcelain"])).stdout.trim()) throw new Error("Collection checkout contains local changes; preserve or reconcile them before collecting.");

@@ -44,6 +44,7 @@ collect         --tool id --adapter <collector> --roots package,package
                 --platform target [--path manifest-path] [--refresh]
                 uv-tree: --python-version 3.13; go-packages: --packages ./... --tags tag,tag
 refresh-native  Refresh registered collection profiles against discovered source revisions
+                --tools id,id --limit N --refresh (limit counts distinct requests)
 report          Emit coverage and impact reports in the data directory
 show            --tool id (coverage, manifests, and profiles)
 candidates      List supported collection starting points, including nested workspaces [--tools id,id]
@@ -91,7 +92,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     if (!values.tool || !values.roots || !values.platform || !(COLLECT_ADAPTERS as readonly unknown[]).includes(values.adapter)) throw new Error(`collect requires --tool, --adapter (${COLLECT_ADAPTERS.join(", ")}), --roots, and --platform`);
     await collect(snapshot, store, { toolId: values.tool, adapter: values.adapter as CollectAdapter, roots: values.roots.split(","), path: values.path, platform: values.platform, stateDir: values.state!, refresh: values.refresh, pythonVersion: values["python-version"], patterns: values.packages?.split(","), tags: values.tags?.split(",") });
   } else if (command === "refresh-native") {
-    const summary = await refreshNative(snapshot, store, values.state!, values.refresh);
+    const summary = await refreshNative(snapshot, store, values.state!, values.refresh, { toolIds: values.tools?.split(","), limit: values.limit === undefined ? undefined : Number(values.limit) });
     console.log(JSON.stringify(summary));
     if (summary.failed) process.exitCode = 1;
   } else if (command === "import-native") {
@@ -119,8 +120,9 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
       ecosystemBacklog: Object.fromEntries(["npm", "cargo", "cabal", "go", "python", "nix", "container", "other"].map((ecosystem) => [ecosystem, snapshot.tools.filter((t) => t.ecosystems.includes(ecosystem as typeof t.ecosystems[number])).length])),
     };
     writeJson(join(store.directory, "report.json"), report);
-    writeJson(join(store.directory, "impact.json"), calculateImpact(snapshot));
-    writeJson(join(store.directory, "projects.json"), aggregateProjects(snapshot));
+    const impacts = calculateImpact(snapshot);
+    writeJson(join(store.directory, "impact.json"), impacts);
+    writeJson(join(store.directory, "projects.json"), aggregateProjects(snapshot, impacts));
     console.log(JSON.stringify({ ...report, gaps: report.gaps.length }, null, 2));
   } else if (command === "candidates") {
     console.log(JSON.stringify(collectionCandidates(snapshot, values.tools?.split(",")), null, 2));
@@ -157,13 +159,19 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
   } else if (command === "validate") {
     store.verify(snapshot); console.log(`Validated ${snapshot.tools.length} tools, ${snapshot.profiles.length} profiles, ${snapshot.evidence.length} evidence objects.`);
   } else if (command === "replay") {
+    const records = {
+      artifacts: new Map(snapshot.artifacts.map((record) => [record.id, record])),
+      occurrences: new Map(snapshot.occurrences.map((record) => [record.id, record])),
+      edges: new Map(snapshot.edges.map((record) => [record.id, record])),
+    };
     for (const profile of snapshot.profiles) {
+      console.error(`Replaying ${profile.toolId} ${profile.id}`);
       const roles = nativeEvidence(profile);
       const evidence = (id: string) => store.readEvidence(snapshot.evidence.find((e) => e.id === id)!);
       const replayed = resolveNative(evidence(roles.native), parseNativeInput(evidence(roles.configuration)), roles);
       if (canonical(replayed.profile) !== canonical(profile)) throw new Error(`Profile replay mismatch ${profile.id}`);
       for (const key of ["artifacts", "occurrences", "edges"] as const) for (const record of replayed[key]) {
-        if (canonical(snapshot[key].find((r) => r.id === record.id)) !== canonical(record)) throw new Error(`Replay mismatch ${record.id}`);
+        if (canonical(records[key].get(record.id)) !== canonical(record)) throw new Error(`Replay mismatch ${record.id}`);
       }
     }
     console.log(`Replayed ${snapshot.profiles.length} native profiles with identical graph records.`);

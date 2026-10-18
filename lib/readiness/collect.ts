@@ -3,19 +3,18 @@ import { promisify } from "node:util";
 import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { homedir } from "node:os";
-import { digest, gap, list, object, text } from "./core";
+import { digest, gap, object, text } from "./core";
 import { github } from "./discovery";
 import { addEvidence, Store } from "./store";
 import type { NativeInput, Snapshot } from "./types";
-import { COLLECT_ADAPTERS, type CollectAdapter } from "./types";
-import { publishCollection, reuseCollection, type CollectOptions } from "./collection";
+import { collectionRequests, publishCollection, reuseCollection, type CollectOptions, type RefreshSelection } from "./collection";
 import { collectExpanded } from "./collect-expanded";
 import { normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 
 const exec = promisify(execFile);
 
 async function cargoContext(directory: string) {
-  const versions = await Promise.all([exec("cargo", ["--version"], { cwd: directory }), exec("rustc", ["--version"], { cwd: directory })]);
+  const versions = await Promise.all([exec("cargo", ["--version"], { cwd: directory, timeout: 30000, killSignal: "SIGKILL" }), exec("rustc", ["--version"], { cwd: directory, timeout: 30000, killSignal: "SIGKILL" })]);
   const toolchain = versions.map((v) => v.stdout.trim()).join("; ");
   const configPaths = [join(process.env.CARGO_HOME ?? join(homedir(), ".cargo"), "config"), join(process.env.CARGO_HOME ?? join(homedir(), ".cargo"), "config.toml"), join(directory, ".cargo/config"), join(directory, ".cargo/config.toml")];
   const configuration = configPaths.map((path) => existsSync(path) ? digest(readFileSync(path, "utf8")) : null);
@@ -52,7 +51,7 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
         sourcePath(directory, options.path);
         args.push("--manifest-path", options.path);
       }
-      const { stdout } = await exec("cargo", args, { cwd: directory, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
+      const { stdout } = await exec("cargo", args, { cwd: directory, timeout: 300000, killSignal: "SIGKILL", maxBuffer: 64 * 1024 * 1024 });
       raw = JSON.parse(stdout); command = `cargo ${args.join(" ")}`;
       // Retain the actual lock and workspace manifest alongside metadata for replay.
       for (const filename of ["Cargo.lock", options.path ?? "Cargo.toml"]) {
@@ -80,19 +79,13 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   }
 }
 
-export async function refreshNative(snapshot: Snapshot, store: Store, stateDir: string, refresh = false) {
-  const requests = new Map<string, Omit<CollectOptions, "stateDir" | "refresh">>();
-  for (const collection of snapshot.collections ?? []) {
-    const evidence = snapshot.evidence.find((e) => e.id === collection.evidenceId)!;
-    const selection = object(object(store.readEvidence(evidence)).selection);
-    if (!(COLLECT_ADAPTERS as readonly unknown[]).includes(selection.adapter)) continue;
-    const request = { toolId: collection.toolId, adapter: selection.adapter as CollectAdapter, roots: list(selection.roots).map((root) => text(root)), path: typeof selection.path === "string" && selection.path ? selection.path : undefined, platform: text(selection.platform), ...(typeof selection.pythonVersion === "string" ? { pythonVersion: selection.pythonVersion } : {}), ...(selection.patterns ? { patterns: list(selection.patterns).map((p) => text(p)) } : {}), ...(selection.tags ? { tags: list(selection.tags).map((p) => text(p)) } : {}) };
-    requests.set(digest(request), request);
-  }
+export async function refreshNative(snapshot: Snapshot, store: Store, stateDir: string, refresh = false, selection: RefreshSelection = {}) {
+  const requests = collectionRequests(snapshot, store, selection);
   let failed = 0;
-  for (const request of requests.values()) {
+  for (const [index, request] of requests.entries()) {
+    console.error(`Native refresh ${index + 1}/${requests.length}: ${request.toolId} (${request.adapter}, ${request.platform})`);
     try { await collect(snapshot, store, { ...request, stateDir, refresh }); }
     catch (error) { failed++; console.error(`Native refresh failed for ${request.toolId}: ${String(error).slice(0, 500)}`); }
   }
-  return { profilesRequested: requests.size, failed };
+  return { profilesRequested: requests.length, failed };
 }

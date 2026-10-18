@@ -64,11 +64,13 @@ Recovery verification (2026-10-18): the interrupted run's retained data validate
 ### Active continuation: bounded execution and verification
 
 - [x] Recover, validate, replay, and save the expanded native-data checkpoint.
-- [ ] Add selected-tool/limited native refresh with visible per-request progress and bounded toolchain probes.
-- [ ] Remove repeated graph work from reporting/replay; verify on the expanded snapshot.
+- [x] Add selected-tool/limited native refresh with visible per-request progress and bounded toolchain probes.
+- [x] Remove repeated graph work from reporting/replay; verify on the expanded snapshot.
 - [ ] Run focused checks, the full readiness suite, static build, and standards/spec review; record results and commit locally.
 
 Execution note: the sandbox blocks the `tsx` CLI's IPC socket. Use `node --import tsx scripts/readiness/cli.ts ...` (and `node --import tsx --test ...`) for local checks. Run each expensive check separately under a timeout with a kill grace period; this avoids restarting completed collection work after a stalled check.
+
+Bounded execution checkpoint (ADR-1/ADR-2): native refresh now accepts `--tools` and `--limit`, validates selection before collecting, deduplicates historical requests, and logs each request before it starts. Toolchain probes have 30-second limits; timed-out external commands are force-killed. Reporting reuses one impact calculation, and replay indexes retained records instead of repeatedly scanning the graph. All 36 behavior tests, TypeScript, and readiness lint pass. A selected Mesh refresh reused exactly one cached request; all 10 historical profiles replay identically. The comparison baseline is the last pre-recovery commit (`167603f`). Static build and independent implementation review are in progress.
 
 ### Remaining rollout work
 

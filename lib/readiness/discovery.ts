@@ -31,7 +31,7 @@ export function detectManifests(paths: string[]): { manifests: string[]; ecosyst
 }
 
 export async function github(endpoint: string): Promise<unknown> {
-  const { stdout } = await exec("gh", ["api", endpoint], { maxBuffer: 48 * 1024 * 1024, timeout: 60000 });
+  const { stdout } = await exec("gh", ["api", endpoint], { maxBuffer: 48 * 1024 * 1024, timeout: 60000, killSignal: "SIGKILL" });
   return JSON.parse(stdout);
 }
 
