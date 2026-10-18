@@ -1,6 +1,6 @@
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { homedir } from "node:os";
 import { digest, gap, list, object, text } from "./core";
@@ -10,6 +10,7 @@ import type { NativeInput, Snapshot } from "./types";
 import { COLLECT_ADAPTERS, type CollectAdapter } from "./types";
 import { publishCollection, reuseCollection, type CollectOptions } from "./collection";
 import { collectExpanded } from "./collect-expanded";
+import { normalizeNativePaths, pinnedCheckout, sourcePath } from "./source";
 
 const exec = promisify(execFile);
 
@@ -28,15 +29,9 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
   try {
     if (["pnpm-lock", "go-packages", "uv-tree"].includes(options.adapter)) return await collectExpanded(snapshot, store, options);
     const selection = { revision: tool.revision, adapter: options.adapter, roots: options.roots, path: options.path ?? "", platform: options.platform, resolverContext: "committed-lockfile" };
-    const directory = resolve(options.stateDir, "sources", tool.revision);
-    const git = (args: string[]) => exec("git", args, { cwd: directory, timeout: 120000, maxBuffer: 16 * 1024 * 1024 });
-    let sourceMatches = false;
-    if (options.adapter === "cargo-metadata" && existsSync(join(directory, ".git"))) {
-      if ((await git(["status", "--porcelain"])).stdout.trim()) throw new Error("Collection checkout contains local changes; preserve or reconcile them before collecting.");
-      try { sourceMatches = (await git(["rev-parse", "HEAD"])).stdout.trim() === tool.revision; } catch { sourceMatches = false; }
-      if (sourceMatches) selection.resolverContext = (await cargoContext(directory)).fingerprint;
-    }
-    if ((options.adapter === "npm-lock" || sourceMatches) && reuseCollection(snapshot, store, options, selection)) return;
+    const directory = options.adapter === "cargo-metadata" ? await pinnedCheckout(tool.repo, tool.revision, options.stateDir) : resolve(options.stateDir, "sources", tool.revision);
+    if (options.adapter === "cargo-metadata") selection.resolverContext = (await cargoContext(directory)).fingerprint;
+    if (reuseCollection(snapshot, store, options, selection)) return;
     let raw: unknown; let command: string; let toolchain: string;
     const supporting: string[] = [];
     const sourceUrl = `https://github.com/${tool.repo}/tree/${tool.revision}`;
@@ -49,20 +44,12 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
       command = `Read committed ${path} at ${tool.revision}`;
       toolchain = `npm lockfile format ${object(raw).lockfileVersion}; producing npm version unknown`;
     } else {
-      mkdirSync(directory, { recursive: true });
-      if (!existsSync(join(directory, ".git"))) {
-        await git(["init"]);
-        await git(["remote", "add", "origin", `https://github.com/${tool.repo}.git`]);
-      }
-      if (!sourceMatches) {
-        await git(["fetch", "--depth=1", "origin", tool.revision]);
-        await git(["checkout", "--detach", tool.revision]);
-      }
       const context = await cargoContext(directory);
       toolchain = context.toolchain; selection.resolverContext = context.fingerprint;
       const args = ["metadata", "--locked", "--format-version", "1", "--filter-platform", options.platform];
       if (options.path) {
         if (!tool.manifests.includes(options.path) || !options.path.endsWith("Cargo.toml")) throw new Error("Select a discovered Cargo.toml");
+        sourcePath(directory, options.path);
         args.push("--manifest-path", options.path);
       }
       const { stdout } = await exec("cargo", args, { cwd: directory, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
@@ -79,6 +66,13 @@ export async function collect(snapshot: Snapshot, store: Store, options: Collect
     const profile: NativeInput = { toolId: tool.id, release: tool.release, revision: tool.revision, platform: options.platform, features: ["default"], command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots };
     publishCollection(snapshot, store, selection, profile, raw, supporting, sourceUrl);
   } catch (error) {
+    const failure = error as Error & { cmd?: string; code?: string | number; signal?: string; stdout?: string; stderr?: string };
+    const evidence = store.evidence(normalizeNativePaths({
+      toolId: tool.id, revision: tool.revision, adapter: options.adapter,
+      command: failure.cmd ?? null, exitCode: failure.code ?? null, signal: failure.signal ?? null,
+      message: String(error), stdout: failure.stdout ?? "", stderr: failure.stderr ?? "",
+    }, { [resolve(options.stateDir, "sources", tool.revision)]: "/source" }), `Failed native collection for ${tool.id}`);
+    addEvidence(snapshot, evidence); tool.evidenceIds.push(evidence.id);
     const reason = `Collection failed (${options.adapter}): ${String(error).slice(0, 1500)}`;
     tool.gaps = tool.gaps.filter((g) => g.code !== `native-collection-failed:${options.adapter}`);
     tool.gaps.push(gap("resolution", reason, "Inspect the native resolver error and retry this pinned profile.", undefined, `native-collection-failed:${options.adapter}`));

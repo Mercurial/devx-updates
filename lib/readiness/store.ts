@@ -54,8 +54,10 @@ export class Store {
     const relative = `evidence/${hash}.json.gz`;
     const path = join(this.directory, relative);
     mkdirSync(dirname(path), { recursive: true });
+    const evidence = { id: `evidence:${hash}`, digest: hash, path: relative, description, ...(sourceUrl ? { sourceUrl } : {}) };
     if (!existsSync(path)) writeFileSync(path, gzipSync(content));
-    return { id: `evidence:${hash}`, digest: hash, path: relative, description, ...(sourceUrl ? { sourceUrl } : {}) };
+    else this.readEvidence(evidence);
+    return evidence;
   }
 
   readEvidence(evidence: Evidence): unknown {

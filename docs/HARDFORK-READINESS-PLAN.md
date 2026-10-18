@@ -53,6 +53,12 @@ Recovery checkpoint: the six new adapter tests and TypeScript checks pass. The i
 
 Expanded collector milestone: pnpm v9, Go package/test graphs, and uv JSON trees now share evidence-checked collection registration and refresh. Candidate discovery includes nested workspaces. Nine focused tests cover peer contexts, aliases, nested source identity, replacements, test scope, extras, missing selections, and cache evidence. Type checking and readiness lint pass. Real OpShin and Lucid Evolution collections succeeded; all seven registered profiles reuse cached evidence and replay identically. Report regeneration and final review follow in the next checkpoint.
 
+Review checkpoint: specification review identified cross-manager npm identity splits, nested local-package collisions, non-retryable Go loading failures, incomplete Go environment cache keys, corrupt evidence surviving recollection, and machine-local paths in collection identity. Standards review identified missing retained command diagnostics; maintainability feedback also covered checkout duplication and repeated request fields. Corrections and regression checks are in progress before evidence publication.
+
+Review correction checkpoint: public npm registry tarballs now share identities across npm/pnpm; custom registries and nested local sources remain distinct. Go retries incomplete package graphs, fingerprints effective persisted configuration, and records execution diagnostics. Recollection rejects corrupt retained bytes explicitly. New Go/uv output normalizes checkout/toolchain/cache paths before retention, and failure diagnostics remain inspectable as evidence. Cargo now shares pinned checkout handling, and collection request fields share a type. All 12 focused tests, TypeScript, and readiness lint pass. Historical profiles retain their original evidence; collector upgrades create new versioned inputs.
+
+Execution checkpoints: keep collection runs bounded to selected profiles, save each successful profile immediately, run validation separately from long report/build steps, and commit each verified milestone. Record any timeout as an unfinished check and retry that step alone rather than restarting the pipeline.
+
 ### Remaining rollout work
 
 - Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.

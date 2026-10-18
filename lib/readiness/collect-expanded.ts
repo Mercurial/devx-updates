@@ -3,7 +3,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { load, JSON_SCHEMA } from "js-yaml";
 import { digest, object } from "./core";
 import { parseJsonStream } from "./go";
-import { pinnedCheckout, sourcePath, retainSource, execute } from "./source";
+import { pinnedCheckout, sourcePath, retainSource, execute, normalizeNativePaths } from "./source";
+import { addEvidence } from "./store";
 import { publishCollection, reuseCollection, type CollectOptions, type CollectionSelection } from "./collection";
 import type { Snapshot, NativeInput } from "./types";
 import type { Store } from "./store";
@@ -21,6 +22,8 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
   const selection: CollectionSelection = { revision: tool.revision!, adapter: options.adapter, roots: options.roots, path, platform: options.platform, resolverContext: "committed-lockfile" };
   let raw: unknown; let command: string; let toolchain: string; let features: string[];
   let supportPaths: string[];
+  const diagnostics: { command: string; exitCode: number; stderr: string }[] = [];
+  const normalization: Record<string, string> = { [root]: "/source" };
   if (options.adapter === "pnpm-lock") {
     if (reuseCollection(snapshot, store, options, selection)) return;
     const lock = object(load(readFileSync(sourcePath(root, path), "utf8"), { schema: JSON_SCHEMA }));
@@ -35,7 +38,16 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
       const patchPath = object(patch).path;
       if (typeof patchPath === "string") supportPaths.push(posix.join(posix.dirname(path), patchPath));
     }
-    raw = { lock, manifests, sourceDirectory: posix.dirname(path) };
+    const registries: Record<string, string> = { default: "https://registry.npmjs.org/" };
+    const npmrc = sourcePath(root, posix.join(posix.dirname(path), ".npmrc"));
+    if (existsSync(npmrc)) for (const line of readFileSync(npmrc, "utf8").split(/\r?\n/)) {
+      const match = line.match(/^\s*(?:(@[^:]+):)?registry\s*=\s*(\S+)\s*$/);
+      if (match) {
+        if (!/^https?:\/\//.test(match[2]) || match[2].includes("${")) throw new Error("pnpm registry configuration must be an explicit URL");
+        registries[match[1] ?? "default"] = match[2];
+      }
+    }
+    raw = { lock, manifests, sourceDirectory: posix.dirname(path), registries };
     command = `Read committed ${path} and importer manifests at ${tool.revision}`;
     toolchain = `pnpm lockfile format ${lock.lockfileVersion}; producing pnpm version recorded in source manifests when available`;
     features = ["all-lockfile-targets", "workspace-peer-contexts"];
@@ -43,17 +55,22 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
     const [GOOS, GOARCH] = options.platform.split("/");
     const env = { ...process.env, GOOS, GOARCH, CGO_ENABLED: "0", GOWORK: "off", GOFLAGS: "", GOTOOLCHAIN: "local" };
     const run = (args: string[]) => execute("go", args, { cwd, env, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
-    const environment = object(JSON.parse((await run(["env", "-json", "GOOS", "GOARCH", "CGO_ENABLED", "GOWORK", "GOVERSION", "GOFLAGS", "GOTOOLCHAIN"])).stdout));
+    const effectiveEnvironment = object(JSON.parse((await run(["env", "-json"])).stdout));
+    const environment = Object.fromEntries(["GOOS", "GOARCH", "CGO_ENABLED", "GOWORK", "GOVERSION", "GOFLAGS", "GOTOOLCHAIN", "GOAMD64", "GOARM", "GOARM64", "GO386", "GOMIPS", "GOMIPS64", "GOPPC64", "GORISCV64", "GOWASM", "GOEXPERIMENT"].map((key) => [key, effectiveEnvironment[key]]));
+    for (const [key, target] of [["GOROOT", "/go"], ["GOMODCACHE", "/gomodcache"], ["GOCACHE", "/gocache"]]) if (typeof effectiveEnvironment[key] === "string") normalization[String(effectiveEnvironment[key])] = target;
     toolchain = (await run(["version"])).stdout.trim();
     selection.patterns = options.patterns ?? ["./..."]; selection.tags = options.tags ?? [];
     if (!selection.patterns.length || selection.patterns.some((p) => !p || p.startsWith("-") || p.includes("..") && p !== "./..." && !p.endsWith("/..."))) throw new Error("Invalid Go package pattern");
-    selection.resolverContext = digest({ environment, toolchain, goEnvironment: Object.fromEntries(Object.entries(env).filter(([key]) => key.startsWith("GO") && !/(TOKEN|PASSWORD|SECRET|KEY)/.test(key))) });
+    selection.resolverContext = digest({ effectiveEnvironment, toolchain });
     if (reuseCollection(snapshot, store, options, selection)) return;
     const flags = ["list", "-e", "-deps", "-json", "-mod=readonly", ...(selection.tags.length ? [`-tags=${selection.tags.join(",")}`] : [])];
-    const packages = parseJsonStream((await run([...flags, ...selection.patterns])).stdout);
-    const tests = parseJsonStream((await run([...flags, "-test", ...selection.patterns])).stdout);
+    const runtime = await run([...flags, ...selection.patterns]);
+    const test = await run([...flags, "-test", ...selection.patterns]);
+    const packages = parseJsonStream(runtime.stdout);
+    const tests = parseJsonStream(test.stdout);
     raw = { formatVersion: 1, sourceRoot: root, environment, packages, tests };
     command = `go ${[...flags, ...selection.patterns].join(" ")}; go ${[...flags, "-test", ...selection.patterns].join(" ")}`;
+    diagnostics.push({ command: command.split("; ")[0], exitCode: 0, stderr: runtime.stderr }, { command: command.split("; ")[1], exitCode: 0, stderr: test.stderr });
     features = ["cgo:0", "workspace:off", ...selection.patterns.map((p) => `packages:${p}`), ...selection.tags.map((tag) => `tag:${tag}`)];
     supportPaths = [path, posix.join(posix.dirname(path), "go.sum")];
   } else {
@@ -66,12 +83,19 @@ export async function collectExpanded(snapshot: Snapshot, store: Store, options:
     const args = ["tree", "--locked", "--offline", "--format", "json", "--all-groups", "--depth", "255", "--python-version", options.pythonVersion!, "--python-platform", options.platform, "--no-build", "--no-python-downloads", "--no-config"];
     const env = { ...process.env };
     for (const key of Object.keys(env)) if (key.startsWith("UV_")) delete env[key];
-    raw = { ...object(JSON.parse((await execute("uv", args, { cwd, env, timeout: 300000, maxBuffer: 64 * 1024 * 1024 })).stdout)), collectionSourceRoot: root };
+    const output = await execute("uv", args, { cwd, env, timeout: 300000, maxBuffer: 64 * 1024 * 1024 });
+    raw = { ...object(JSON.parse(output.stdout)), collectionSourceRoot: root };
     command = `uv ${args.join(" ")}`;
+    diagnostics.push({ command, exitCode: 0, stderr: output.stderr });
     features = [`python:${options.pythonVersion}`, "all-groups", "extras:conditional"];
     supportPaths = [lockPath, ...tool.manifests.filter((file) => file.endsWith("pyproject.toml")), posix.join(posix.dirname(path), "uv.toml")];
   }
   const supporting = retainSource(snapshot, store, tool.id, root, supportPaths);
+  if (diagnostics.length) {
+    const evidence = store.evidence(normalizeNativePaths({ cwd, diagnostics }, normalization), `Native command diagnostics for ${tool.id}`);
+    addEvidence(snapshot, evidence); tool.evidenceIds.push(evidence.id);
+  }
   const profile: NativeInput = { toolId: tool.id, release: tool.release!, revision: tool.revision!, platform: options.platform, features, command, toolchain, origin: "source-reconstruction", adapter: options.adapter, rootNames: options.roots };
-  publishCollection(snapshot, store, selection, profile, raw, supporting, `https://github.com/${tool.repo}/tree/${tool.revision}`);
+  const result = publishCollection(snapshot, store, selection, profile, normalizeNativePaths(raw, normalization), supporting, `https://github.com/${tool.repo}/tree/${tool.revision}`);
+  if (options.adapter === "go-packages" && result.profile.coverage !== "complete") throw new Error("Go package loading was incomplete; retained the partial graph for inspection and retry.");
 }

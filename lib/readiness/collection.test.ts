@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, rmSync, unlinkSync } from "node:fs";
+import { mkdtempSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { Graph } from "../map-types";
@@ -9,6 +9,7 @@ import { Store } from "./store";
 import { collectionCandidates } from "./candidates";
 import { collectionKey, publishCollection, reuseCollection, type CollectionSelection } from "./collection";
 import type { NativeInput } from "./types";
+import { normalizeNativePaths } from "./source";
 
 test("collection cache requires retained bytes and distinguishes Python and Go configurations", (t) => {
   t.mock.method(console, "log", () => {});
@@ -25,8 +26,30 @@ test("collection cache requires retained bytes and distinguishes Python and Go c
     assert.notEqual(collectionKey({ ...selection, pythonVersion: "3.13" }), collectionKey({ ...selection, pythonVersion: "3.14" }));
     assert.notEqual(collectionKey({ ...selection, patterns: ["./cmd/tool"], tags: [] }), collectionKey({ ...selection, patterns: ["./cmd/tool"], tags: ["integration"] }));
     const native = snapshot.evidence.find((e) => e.id === snapshot.profiles[0].nativeEvidenceId)!;
+    writeFileSync(join(directory, native.path), "corrupt bytes");
+    assert.equal(reuseCollection(snapshot, store, options, selection), false);
+    assert.throws(() => store.evidence({ lockfileVersion: 3, packages: { "": { name: "app", version: "1.0.0" } } }, "recollection"), /header|gzip|compression/i, "corrupt evidence cannot silently survive a successful recollection");
     unlinkSync(join(directory, native.path));
     assert.equal(reuseCollection(snapshot, store, options, selection), false, "a cached graph cannot conceal missing evidence");
+  } finally { rmSync(directory, { recursive: true }); }
+});
+
+test("native path normalization preserves relationships across relocated checkouts", () => {
+  const native = (root: string) => ({ workspace_root: root, resolution: { [`local:${root}/sdk`]: { source: { virtual: `${root}/sdk` }, dependencies: [{ id: `local:${root}/lib` }] } } });
+  assert.deepEqual(normalizeNativePaths(native("/first/checkout"), { "/first/checkout": "/source" }), normalizeNativePaths(native("/second/checkout"), { "/second/checkout": "/source" }));
+});
+
+test("Go loading failures remain retryable with unchanged request inputs", (t) => {
+  t.mock.method(console, "log", () => {});
+  const directory = mkdtempSync(join(tmpdir(), "readiness-go-retry-"));
+  try {
+    const store = new Store(directory);
+    const snapshot = inventory({ nodes: [{ id: "tool", name: "Tool", team: "Team" }] } as Graph, "catalog");
+    const selection: CollectionSelection = { revision: "a".repeat(40), adapter: "go-packages", roots: ["example.org/app"], path: "go.mod", platform: "linux/amd64", resolverContext: "go environment" };
+    const profile: NativeInput = { ...selection, toolId: "tool", release: "v1", features: [], command: "go list", toolchain: "go1.26.8", origin: "source-reconstruction", rootNames: selection.roots };
+    publishCollection(snapshot, store, selection, profile, { formatVersion: 1, sourceRoot: "/source", environment: { GOOS: "linux", GOARCH: "amd64", CGO_ENABLED: "0", GOVERSION: "go1.26.8" }, packages: [{ ImportPath: "example.org/app", Module: { Main: true, Path: "example.org/app", Dir: "/source" }, Error: { Err: "module proxy unavailable" } }], tests: [] }, [], "https://github.com/owner/repo");
+    assert.equal(snapshot.profiles[0].coverage, "partial");
+    assert.equal(reuseCollection(snapshot, store, { ...selection, toolId: "tool", stateDir: directory }, selection), false);
   } finally { rmSync(directory, { recursive: true }); }
 });
 

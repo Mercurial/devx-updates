@@ -32,8 +32,12 @@ export function resolvePnpm(data: Record<string, unknown>, ctx: AdapterContext) 
     const resolution = object(metadata.resolution ?? {});
     const local = /^(file:|link:)/.test(identity.reference) || resolution.type === "directory";
     const patch = key.match(/\(patch_hash=([^)]+)\)/)?.[1];
-    const source = local ? `source:${ctx.input.revision}:${canonical(resolution)}:${identity.reference}` : typeof resolution.tarball === "string" ? resolution.tarball : resolution.repo ? canonical(resolution) : `pnpm-registry:${identity.name}`;
     const version = typeof metadata.version === "string" ? metadata.version : /^\d+\.\d+\.\d+(?:[-+][\w.-]+)?$/.test(identity.reference) ? identity.reference : null;
+    const registries = object(data.registries ?? {});
+    const scope = identity.name.startsWith("@") ? identity.name.split("/")[0] : "default";
+    const registry = String(registries[scope] ?? registries.default ?? "https://registry.npmjs.org/").replace(/\/$/, "");
+    const tarball = `${registry}/${identity.name}/-/${identity.name.split("/").pop()}-${version}.tgz`;
+    const source = local ? `source:${ctx.input.revision}:${directory}:${canonical(resolution)}:${identity.reference}` : typeof resolution.tarball === "string" ? resolution.tarball : resolution.repo ? canonical(resolution) : version ? tarball : `pnpm-registry:${registry}:${identity.name}`;
     ctx.node(`snapshot:${key}`, typeof metadata.name === "string" ? metadata.name : identity.name, version, patch ? `${source}#patch=${patch}` : source, typeof resolution.integrity === "string" ? resolution.integrity : null);
     if (local || patch) ctx.gap(`Local or patched artifact ${key} needs source-content verification beyond the lockfile.`);
   }

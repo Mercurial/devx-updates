@@ -8,6 +8,21 @@ import type { Snapshot } from "./types";
 
 export const execute = promisify(execFile);
 
+/** Replace host-specific paths while preserving native package IDs and import relationships. */
+export function normalizeNativePaths(value: unknown, paths: Record<string, string>): unknown {
+  const replacements = Object.entries(paths).filter(([from]) => from.length > 1).sort(([a], [b]) => b.length - a.length);
+  function visit(item: unknown): unknown {
+    if (typeof item === "string") {
+      for (const [from, to] of replacements) item = (item as string).split(from).join(to);
+      return item;
+    }
+    if (Array.isArray(item)) return item.map(visit);
+    if (item && typeof item === "object") return Object.fromEntries(Object.entries(item).map(([key, child]) => [String(visit(key)), visit(child)]));
+    return item;
+  }
+  return visit(value);
+}
+
 export async function pinnedCheckout(repo: string, revision: string, stateDir: string): Promise<string> {
   if (!repositoryReference(repo) || !/^[a-f0-9]{40,64}$/.test(revision)) throw new Error("Collection needs an immutable GitHub source identity");
   const directory = resolve(stateDir, "sources", revision);

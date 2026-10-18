@@ -19,7 +19,7 @@ export function parseNativeInput(value: unknown): NativeInput {
 
 export function resolveNative(raw: unknown, input: NativeInput, evidence: { native: string; configuration: string; supporting?: string[] }): Resolution {
   const data = object(raw, "native output");
-  const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: 2 });
+  const inputDigest = digest({ raw, input, supportingEvidenceIds: [...(evidence.supporting ?? [])].sort(), adapterVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(input.adapter) ? 3 : 2 });
   const evidenceIds = [...new Set([evidence.native, evidence.configuration, ...(evidence.supporting ?? [])])].sort();
   const profileId = `profile:${input.toolId}:${inputDigest.slice(0, 24)}`;
   const result: Resolution = {

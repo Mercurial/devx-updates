@@ -1,5 +1,6 @@
 import { parseNativeInput, resolveNative } from "./adapters";
-import { digest, finalize, object, upgradeOperationalGap } from "./core";
+import { finalize, object, upgradeOperationalGap } from "./core";
+import { collectionKey, type CollectionSelection } from "./collection";
 import { addEvidence, mergeResolution, Store } from "./store";
 import type { Profile, Snapshot } from "./types";
 
@@ -31,7 +32,7 @@ export function rebuildNative(snapshot: Snapshot, store: Store): Snapshot {
     if (!profileId) continue;
     const toolId = next.profiles.find((p) => p.id === profileId)!.toolId;
     const selection = object(request.selection);
-    const key = digest({ ...selection, collectorVersion: 2 });
+    const key = snapshot.collections?.find((c) => c.evidenceId === evidence.id)?.key ?? collectionKey(selection as unknown as CollectionSelection);
     const updated = store.evidence({ selection, profileId }, `Collection request for ${toolId}`);
     addEvidence(next, updated);
     if (!next.collections.some((c) => c.key === key && c.toolId === toolId)) next.collections.push({ key, toolId, profileId, evidenceId: updated.id });

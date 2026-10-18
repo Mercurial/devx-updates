@@ -3,32 +3,29 @@ import { resolveNative } from "./adapters";
 import { addEvidence, mergeResolution, Store } from "./store";
 import type { CollectAdapter, NativeInput, Snapshot } from "./types";
 
-export interface CollectOptions {
+export interface CollectionRequest {
   toolId: string;
   adapter: CollectAdapter;
   roots: string[];
   path?: string;
   platform: string;
+  pythonVersion?: string;
+  patterns?: string[];
+  tags?: string[];
+}
+
+export interface CollectOptions extends CollectionRequest {
   stateDir: string;
   refresh?: boolean;
-  pythonVersion?: string;
-  patterns?: string[];
-  tags?: string[];
 }
 
-export interface CollectionSelection {
+export interface CollectionSelection extends Omit<CollectionRequest, "toolId" | "path"> {
   revision: string;
-  adapter: CollectAdapter;
-  roots: string[];
   path: string;
-  platform: string;
   resolverContext: string;
-  pythonVersion?: string;
-  patterns?: string[];
-  tags?: string[];
 }
 
-export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: 2 });
+export const collectionKey = (selection: CollectionSelection) => digest({ ...selection, collectorVersion: ["pnpm-lock", "go-packages", "uv-tree"].includes(selection.adapter) ? 3 : 2 });
 
 export function reuseCollection(snapshot: Snapshot, store: Store, options: CollectOptions, selection: CollectionSelection): boolean {
   if (options.refresh) return false;
@@ -36,6 +33,7 @@ export function reuseCollection(snapshot: Snapshot, store: Store, options: Colle
   const request = snapshot.collections?.find((c) => c.key === key && c.toolId === options.toolId);
   const profile = request && snapshot.profiles.find((p) => p.id === request.profileId);
   if (!profile) return false;
+  if (selection.adapter === "go-packages" && profile.coverage !== "complete") return false;
   // A cache hit must still have its retained input bytes, not just a graph reference.
   for (const id of profile.evidenceIds) {
     const evidence = snapshot.evidence.find((e) => e.id === id);
@@ -61,4 +59,5 @@ export function publishCollection(snapshot: Snapshot, store: Store, selection: C
   tool.gaps = tool.gaps.filter((g) => g.code !== `native-collection-failed:${profile.adapter}`);
   store.save(snapshot);
   console.log(`Collected ${tool.id}: ${result.occurrences.length} occurrences, ${result.edges.length} edges, ${result.profile.coverage} profile`);
+  return result;
 }

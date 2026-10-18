@@ -33,11 +33,21 @@ test("pnpm aliases resolve to actual package identity and missing snapshots stay
 });
 
 test("nested pnpm workspaces retain their checkout-relative source identity", () => {
-  const raw = { manifests: { ".": { name: "app", version: "1" } }, lock: { lockfileVersion: "9.0", importers: { ".": {} }, packages: {}, snapshots: {} } };
+  const raw = { manifests: { ".": { name: "app", version: "1" } }, lock: { lockfileVersion: "9.0", importers: { ".": { dependencies: { lib: { version: "file:vendor/lib" } } } }, packages: { "lib@file:vendor/lib": { version: "1.0.0", resolution: { directory: "vendor/lib", type: "directory" } } }, snapshots: { "lib@file:vendor/lib": {} } } };
   const first = resolveNative({ ...raw, sourceDirectory: "first" }, profile, evidence);
   const second = resolveNative({ ...raw, sourceDirectory: "second" }, profile, evidence);
   assert.notEqual(first.artifacts[0].id, second.artifacts[0].id);
   assert.match(first.artifacts[0].source, /:first$/);
+  assert.notEqual(first.artifacts.find((a) => a.name === "lib")!.id, second.artifacts.find((a) => a.name === "lib")!.id);
+});
+
+test("npm and pnpm share public registry artifacts while custom registries stay distinct", () => {
+  const npm = resolveNative({ lockfileVersion: 3, packages: { "": { name: "app", dependencies: { lib: "1" } }, "node_modules/lib": { version: "1.0.0", resolved: "https://registry.npmjs.org/lib/-/lib-1.0.0.tgz", integrity: "sha512-lib" } } }, { ...profile, adapter: "npm-lock" }, evidence);
+  const raw = { manifests: { ".": { name: "app" } }, lock: { lockfileVersion: "9.0", importers: { ".": { dependencies: { lib: { version: "1.0.0" } } } }, packages: { "lib@1.0.0": { resolution: { integrity: "sha512-lib" } } }, snapshots: { "lib@1.0.0": {} } } };
+  const pnpm = resolveNative(raw, profile, evidence);
+  assert.equal(npm.artifacts.find((a) => a.name === "lib")!.id, pnpm.artifacts.find((a) => a.name === "lib")!.id);
+  const custom = resolveNative({ ...raw, registries: { default: "https://registry.example.org/" } }, profile, evidence);
+  assert.notEqual(custom.artifacts.find((a) => a.name === "lib")!.id, pnpm.artifacts.find((a) => a.name === "lib")!.id);
 });
 
 test("Go native JSON stream handles escaped braces and rejects truncated output", () => {
