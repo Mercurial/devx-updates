@@ -47,7 +47,7 @@ Three correctness findings were fixed and regression-tested: missing Cargo resol
 - [x] Recover interrupted pnpm, Go, and uv work; validate retained snapshot and replay the five existing native profiles, including Gouroboros.
 - [x] Finish adapter edge cases, evidence/cache handling, expanded collection candidates, and recurring toolchain setup.
 - [x] Verify pnpm and uv against real pinned catalog sources and expand the registered native profiles.
-- [ ] Regenerate coverage/impact/comparison reports, review implementation, and commit verified milestones locally.
+- [x] Regenerate coverage/impact/comparison reports, review implementation, and commit verified milestones locally.
 
 Recovery checkpoint: the six new adapter tests and TypeScript checks pass. The interrupted snapshot contains 269 tools, five profiles, and 476 valid retained evidence objects. Go 1.26.8 and uv 0.12.22 are available; Cabal is still unavailable. This continuation implements the offline collection and retained-data boundaries in ADR-1 and ADR-2.
 
@@ -66,16 +66,18 @@ Recovery verification (2026-10-18): the interrupted run's retained data validate
 - [x] Recover, validate, replay, and save the expanded native-data checkpoint.
 - [x] Add selected-tool/limited native refresh with visible per-request progress and bounded toolchain probes.
 - [x] Remove repeated graph work from reporting/replay; verify on the expanded snapshot.
-- [ ] Run focused checks, the full readiness suite, static build, and standards/spec review; record results and commit locally.
+- [x] Run focused checks, the full readiness suite, static build, and standards/spec review; record results and commit locally.
 
-Execution note: the sandbox blocks the `tsx` CLI's IPC socket. Use `node --import tsx scripts/readiness/cli.ts ...` (and `node --import tsx --test ...`) for local checks. Run each expensive check separately under a timeout with a kill grace period; this avoids restarting completed collection work after a stalled check.
+Execution note: the sandbox blocks the `tsx` CLI's IPC socket. Use `node --import tsx scripts/readiness/cli.ts ...` for local checks; on this Node 24 environment, `node --import tsx --test --test-isolation=none lib/readiness/*.test.ts` reports the individual behavior tests without subprocess isolation. Run each expensive check separately under a timeout with a kill grace period; this avoids restarting completed collection work after a stalled check.
 
-Bounded execution checkpoint (ADR-1/ADR-2): native refresh now accepts `--tools` and `--limit`, validates selection before collecting, deduplicates historical requests, and logs each request before it starts. Toolchain probes have 30-second limits; timed-out external commands are force-killed. Reporting reuses one impact calculation, and replay indexes retained records instead of repeatedly scanning the graph. All 36 behavior tests, TypeScript, and readiness lint pass. A selected Mesh refresh reused exactly one cached request; all 10 historical profiles replay identically. The comparison baseline is the last pre-recovery commit (`167603f`). Static build and independent implementation review are in progress.
+Bounded execution checkpoint (ADR-1/ADR-2): native refresh now accepts `--tools` and `--limit`, validates selection before collecting, deduplicates historical requests, and logs each request before it starts. Toolchain probes have 30-second limits; timed-out external commands are force-killed. Reporting reuses one impact calculation, and replay indexes retained records instead of repeatedly scanning the graph. All 36 behavior tests, TypeScript, and readiness lint pass. A selected Mesh refresh reused exactly one cached request; all 10 historical profiles replay identically. Regenerated coverage/impact/project reports are byte-for-byte unchanged. The comparison baseline is the last pre-recovery commit (`167603f`). The production build passes and exports 311 routes with `/devx-updates` as the base path; generated Lucid Evolution, OpShin, and Gouroboros pages retain base-path links and unassessed status.
+
+Review completion: independent standards review found no actionable issues; specification review found no blocking issues and reran the focused collection tests. One nonblocking validation limitation remains: the new tests exercise bounded selection and failure continuation, but do not simulate a native command being force-killed at its timeout. Local milestone commits: `bc2258d` retains the expanded native evidence; `fab2e0f` implements bounded refresh and streamlined verification. Nothing was pushed. The continuation checklist is complete; catalog rollout and target-specific testing remain open below.
 
 ### Remaining rollout work
 
 - Complete phase 3 coverage: expand beyond the npm/Cargo pilot, run a real Cabal plan, add adapters for the detected unsupported ecosystems, and return manual integration/capability reviews. These are visible coverage gaps, not passing assessments.
-- Extend registered profiles as supported release/platform/feature policies are verified. The current npm/Cargo registrations refresh automatically; custom imported profiles require their ecosystem collector or explicit reimport. Publication remains a separate reviewed change.
+- Extend registered profiles as supported release/platform/feature policies are verified. Registered npm, pnpm, Cargo, Go, and uv requests refresh automatically; custom imported profiles require their ecosystem collector or explicit reimport. Start subsequent collection work with `candidates --tools ...`, select pinned manifests and configurations, and commit validated batches. Publication remains a separate reviewed change.
 - Phase 6 remains gated on hardfork-specific change analysis and the target test environment.
 
 ## 1. Objective
