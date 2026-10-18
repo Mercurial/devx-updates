@@ -1,11 +1,11 @@
 {
-  "snapshot": "9c3216cd050bd99b59c65cc39bb3c8b2ff3ca59934d5d1ec359ee97687bab090",
+  "snapshot": "fb46044c8e180b5bedf26c81e116a4de85b88929f45e2f761f19d0b6fd5683da",
   "tools": 269,
   "discovered": 227,
-  "withProfiles": 4,
-  "profiles": 4,
-  "completeProfiles": 2,
-  "unresolvedTools": 265,
+  "withProfiles": 7,
+  "profiles": 10,
+  "completeProfiles": 4,
+  "unresolvedTools": 262,
   "gaps": [
     {
       "toolId": "1694-io",
@@ -4477,14 +4477,6 @@
     },
     {
       "toolId": "gouroboros",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
-      "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
-    },
-    {
-      "toolId": "gouroboros",
       "id": "gap:ccd120d62205d2bd8fa69b2f",
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
@@ -5480,11 +5472,19 @@
     },
     {
       "toolId": "lucid-evolution",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:628ae020fe6252576239deeb",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lucid-evolution:837579d4ca1dcc6020f157ef"
+    },
+    {
+      "toolId": "lucid-evolution",
+      "id": "gap:88a9175d18cf6bbec12efbf3",
+      "area": "resolution",
+      "reason": "pnpm lock graph includes all recorded platform/optional selections. Installed-platform pruning, patches, and published artifact correspondence remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:lucid-evolution:82ef3bc2a8877a35a7fe4310"
     },
     {
       "toolId": "lucid-evolution",
@@ -6861,11 +6861,11 @@
     },
     {
       "toolId": "opshin",
-      "id": "gap:b33c4f9e67e77b9535e0f2cd",
+      "id": "gap:81739413c38eb5405f991166",
       "area": "resolution",
-      "reason": "No native dependency resolution has been imported.",
-      "nextAction": "Collect a native resolution for a declared release/profile.",
-      "code": "native-resolution-missing"
+      "reason": "uv tree captures runtime, extra, and development metadata for the declared Python/platform. Build-backend dependencies and the installed wheel/sdist selection remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:opshin:4fa2485503aab7964b0c2398"
     },
     {
       "toolId": "opshin",
@@ -6873,6 +6873,14 @@
       "area": "artifact",
       "reason": "Source release identified; published package/binary correspondence and supported profiles need verification.",
       "nextAction": "Confirm distribution artifacts and production configuration with release evidence."
+    },
+    {
+      "toolId": "opshin",
+      "id": "gap:d96a3b4d7e53f19f5dce1b1d",
+      "area": "resolution",
+      "reason": "uv tree captures runtime, extra, and development metadata for the declared Python/platform. Build-backend dependencies and the installed wheel/sdist selection remain unverified.",
+      "nextAction": "Recollect a complete native build plan for this profile.",
+      "profileId": "profile:opshin:cb786ec365e6a46cc52bf170"
     },
     {
       "toolId": "orcfax",

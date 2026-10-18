@@ -46,7 +46,7 @@ Three correctness findings were fixed and regression-tested: missing Cargo resol
 
 - [x] Recover interrupted pnpm, Go, and uv work; validate retained snapshot and replay the five existing native profiles, including Gouroboros.
 - [x] Finish adapter edge cases, evidence/cache handling, expanded collection candidates, and recurring toolchain setup.
-- [ ] Verify pnpm and uv against real pinned catalog sources and expand the registered native profiles.
+- [x] Verify pnpm and uv against real pinned catalog sources and expand the registered native profiles.
 - [ ] Regenerate coverage/impact/comparison reports, review implementation, and commit verified milestones locally.
 
 Recovery checkpoint: the six new adapter tests and TypeScript checks pass. The interrupted snapshot contains 269 tools, five profiles, and 476 valid retained evidence objects. Go 1.26.8 and uv 0.12.22 are available; Cabal is still unavailable. This continuation implements the offline collection and retained-data boundaries in ADR-1 and ADR-2.
@@ -58,6 +58,17 @@ Review checkpoint: specification review identified cross-manager npm identity sp
 Review correction checkpoint: public npm registry tarballs now share identities across npm/pnpm; custom registries and nested local sources remain distinct. Go retries incomplete package graphs, fingerprints effective persisted configuration, and records execution diagnostics. Recollection rejects corrupt retained bytes explicitly. New Go/uv output normalizes checkout/toolchain/cache paths before retention, and failure diagnostics remain inspectable as evidence. Cargo now shares pinned checkout handling, and collection request fields share a type. All 12 focused tests, TypeScript, and readiness lint pass. Historical profiles retain their original evidence; collector upgrades create new versioned inputs.
 
 Execution checkpoints: keep collection runs bounded to selected profiles, save each successful profile immediately, run validation separately from long report/build steps, and commit each verified milestone. Record any timeout as an unfinished check and retry that step alone rather than restarting the pipeline.
+
+Recovery verification (2026-10-18): the interrupted run's retained data validates and all 10 historical native profiles replay identically. The snapshot accounts for 269 tools, seven tools with profiles, 516 evidence objects, 7,392 occurrences, and 32,328 edges. Pinned Lucid Evolution/pnpm and OpShin/uv collections are retained alongside the upgraded Go inputs; historical profiles remain available. Coverage, impact, project reach, and comparison reports were regenerated. All tools remain hardfork-unassessed; 262 tools still need native profiles.
+
+### Active continuation: bounded execution and verification
+
+- [x] Recover, validate, replay, and save the expanded native-data checkpoint.
+- [ ] Add selected-tool/limited native refresh with visible per-request progress and bounded toolchain probes.
+- [ ] Remove repeated graph work from reporting/replay; verify on the expanded snapshot.
+- [ ] Run focused checks, the full readiness suite, static build, and standards/spec review; record results and commit locally.
+
+Execution note: the sandbox blocks the `tsx` CLI's IPC socket. Use `node --import tsx scripts/readiness/cli.ts ...` (and `node --import tsx --test ...`) for local checks. Run each expensive check separately under a timeout with a kill grace period; this avoids restarting completed collection work after a stalled check.
 
 ### Remaining rollout work
 
