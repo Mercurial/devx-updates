@@ -10,6 +10,11 @@ export function toolSubgraph(snapshot: Snapshot, toolIds: string[]) {
   const nodeIds = new Set(occurrences.map((n) => n.id));
   const artifactIds = new Set(occurrences.map((n) => n.artifactId));
   const edges = snapshot.edges.filter((e) => nodeIds.has(e.from));
-  const evidenceIds = new Set([...tools.flatMap((t) => t.evidenceIds), ...profiles.flatMap((p) => p.evidenceIds), ...occurrences.flatMap((n) => n.evidenceIds), ...edges.flatMap((e) => e.evidenceIds)]);
-  return { tools, profiles, occurrences, artifacts: snapshot.artifacts.filter((a) => artifactIds.has(a.id)), edges, evidence: snapshot.evidence.filter((e) => evidenceIds.has(e.id)) };
+  const capabilities = (snapshot.capabilities ?? []).filter((c) => selected.has(c.toolId));
+  const capabilityIds = new Set(capabilities.map((c) => c.id));
+  const capabilityDecisions = (snapshot.capabilityDecisions ?? []).filter((d) => capabilityIds.has(d.capabilityId));
+  const edgeIds = new Set(edges.map((e) => e.id));
+  const decisions = snapshot.decisions.filter((d) => edgeIds.has(d.edgeId));
+  const evidenceIds = new Set([...tools.flatMap((t) => t.evidenceIds), ...profiles.flatMap((p) => p.evidenceIds), ...occurrences.flatMap((n) => n.evidenceIds), ...edges.flatMap((e) => e.evidenceIds), ...capabilities.flatMap((c) => c.evidenceIds), ...capabilityDecisions.flatMap((d) => d.evidenceIds), ...decisions.flatMap((d) => d.evidenceIds)]);
+  return { tools, profiles, occurrences, artifacts: snapshot.artifacts.filter((a) => artifactIds.has(a.id)), edges, ...(capabilities.length ? { capabilities, capabilityDecisions } : {}), ...(decisions.length ? { decisions } : {}), evidence: snapshot.evidence.filter((e) => evidenceIds.has(e.id)) };
 }

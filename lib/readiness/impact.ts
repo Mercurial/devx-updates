@@ -60,10 +60,11 @@ export function compareSnapshots(before: Snapshot, after: Snapshot) {
   return {
     from: before.semanticDigest, to: after.semanticDigest,
     artifacts: change(before.artifacts, after.artifacts), edges: change(before.edges, after.edges), profiles: change(before.profiles, after.profiles),
+    capabilities: change(before.capabilities ?? [], after.capabilities ?? []),
     coverage: after.tools.filter((tool) => {
       const previous = before.tools.find((t) => t.id === tool.id);
       return !previous || ["artifact", "resolution", "integration", "capability", "revision", "discoveryError", "gaps"].some((key) => canonical(coverageValue(previous, key as keyof typeof previous)) !== canonical(coverageValue(tool, key as keyof typeof tool)));
-    }).map((tool) => ({ toolId: tool.id, artifact: tool.artifact, resolution: tool.resolution, integration: tool.integration, revision: tool.revision, discoveryError: tool.discoveryError })),
+    }).map((tool) => ({ toolId: tool.id, artifact: tool.artifact, resolution: tool.resolution, integration: tool.integration, capability: tool.capability, revision: tool.revision, discoveryError: tool.discoveryError })),
   };
 }
 

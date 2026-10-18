@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { artifact, canonical, digest, finalize, gap, list, object, text } from "./core";
 import { addEvidence, readJson, Store, writeJson } from "./store";
-import type { Edge, Snapshot, Verification } from "./types";
+import { CAPABILITY_LABELS, type CapabilityFinding, type Edge, type Snapshot, type Verification } from "./types";
 import { toolSubgraph } from "./graph";
 
 export interface ReviewQueueEntry { packetId: string; toolIds: string[]; status: string }
@@ -18,8 +18,9 @@ export function reviewPacket(snapshot: Snapshot, toolIds: string[]) {
   });
   if (!tools.length || new Set(toolIds).size !== tools.length) throw new Error("Select unique known tools for review");
   const context = { ...graph, tools };
-  const inputDigest = digest(context);
-  return { schemaVersion: 1, taskBriefVersion: 1, packetId: `packet:${inputDigest}`, inputDigest, toolIds: [...toolIds].sort(), context };
+  const taskBriefVersion = 2;
+  const inputDigest = digest({ taskBriefVersion, context });
+  return { schemaVersion: 1, taskBriefVersion, packetId: `packet:${inputDigest}`, inputDigest, toolIds: [...toolIds].sort(), context };
 }
 
 export function exportPacket(snapshot: Snapshot, store: Store, toolIds: string[], output: string) {
@@ -29,6 +30,7 @@ export function exportPacket(snapshot: Snapshot, store: Store, toolIds: string[]
   for (const evidence of packet.context.evidence) writeJson(join(output, "evidence", `${evidence.digest}.json`), store.readEvidence(evidence));
   writeJson(join(output, "result-template.json"), { packetId: packet.packetId, inputDigest: packet.inputDigest, completion: "partial", inspectedAreas: [], unreviewedAreas: ["Fill in remaining coverage"], findings: [] });
   writeFileSync(join(output, "TASKS.md"), readFileSync("docs/DEPENDENCY-REVIEW-TASKS.md", "utf8"));
+  writeFileSync(join(output, "CAPABILITIES.md"), readFileSync("docs/CAPABILITY-REVIEW-FORMAT.md", "utf8"));
   const indexPath = join(store.directory, "reviews.json");
   const index = reconcileReviewQueue(snapshot, existsSync(indexPath) ? readJson(indexPath) as ReviewQueueEntry[] : []);
   const existing = index.find((r) => r.packetId === packet.packetId);
@@ -65,7 +67,7 @@ export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknow
   const resultId = `evidence:${digest(canonical({ result: rawResult, decisions: rawDecisions ?? null }))}`;
   if (snapshot.evidence.some((e) => e.id === resultId)) return snapshot;
   const current = reviewPacket(snapshot, toolIds);
-  if (packet.packetId !== current.packetId || packet.inputDigest !== current.inputDigest || result.packetId !== current.packetId || result.inputDigest !== current.inputDigest) throw new Error("Stale or mismatched review packet; export current inputs and revalidate findings");
+  if (packet.schemaVersion !== current.schemaVersion || packet.taskBriefVersion !== current.taskBriefVersion || packet.packetId !== current.packetId || packet.inputDigest !== current.inputDigest || result.packetId !== current.packetId || result.inputDigest !== current.inputDigest) throw new Error("Stale or mismatched review packet; export current inputs and revalidate findings");
   if (!["complete", "partial"].includes(result.completion as string)) throw new Error("Result needs a completion state");
   list(result.inspectedAreas).forEach((v) => text(v)); list(result.unreviewedAreas).forEach((v) => text(v));
   const allowed = new Set(current.context.evidence.map((e) => e.id));
@@ -78,6 +80,7 @@ export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknow
   const next = structuredClone(snapshot);
   const submission = store.evidence({ result: rawResult, decisions: rawDecisions ?? null }, `Review submission ${current.packetId}`);
   addEvidence(next, submission);
+  const capabilityIds = new Set<string>();
   for (const finding of findings) {
     const id = text(finding.id);
     const toolId = text(finding.toolId);
@@ -101,7 +104,43 @@ export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknow
       tool.evidenceIds.push(submission.id);
       continue;
     }
-    if (finding.kind !== "relationship") throw new Error("Import supports relationship and gap findings; record other unresolved questions as gaps");
+    if (finding.kind === "capability") {
+      const profileId = text(finding.profileId);
+      const profile = next.profiles.find((p) => p.id === profileId);
+      if (profile?.toolId !== toolId) throw new Error("Capability profile is outside the tool scope");
+      const capability = text(finding.capability) as CapabilityFinding["capability"];
+      if (!Object.hasOwn(CAPABILITY_LABELS, capability)) throw new Error("Unknown capability vocabulary; record an extension request as a gap");
+      const scope = text(finding.scope) as CapabilityFinding["scope"];
+      if (!["runtime", "build", "development"].includes(scope)) throw new Error("Invalid capability scope");
+      const condition = finding.condition === null ? null : text(finding.condition);
+      const hasPinnedSource = list(finding.citations).some((raw) => {
+        const citation = object(raw);
+        const source = snapshot.evidence.find((e) => e.id === citation.evidenceId)!;
+        const captured = store.readEvidence(source);
+        if (!captured || typeof captured !== "object" || Array.isArray(captured)) return false;
+        const value = captured as Record<string, unknown>;
+        return citation.pointer === "/content" && typeof value.content === "string" && value.revision === profile.revision;
+      });
+      if (!hasPinnedSource) throw new Error("A capability requires a checked /content citation from source at the profile revision");
+      const fields = { toolId, profileId, capability, scope, condition };
+      const capabilityId = `capability:${digest(fields)}`;
+      if (capabilityIds.has(capabilityId)) throw new Error("Duplicate capability scope in submission");
+      capabilityIds.add(capabilityId);
+      const existing = next.capabilities?.find((c) => c.id === capabilityId);
+      if (existing && existing.verification !== verification && (!decision || decision.previousVerification !== existing.verification)) throw new Error("Changing a prior capability decision requires explicit previousVerification");
+      if (existing) {
+        existing.verification = verification;
+        existing.evidenceIds = [...new Set([...existing.evidenceIds, ...evidenceIds])].sort();
+        existing.rationale = rationale;
+      } else (next.capabilities ??= []).push({ id: capabilityId, ...fields, verification, rationale, evidenceIds });
+      (next.capabilityDecisions ??= []).push({ id: `decision:${digest({ packetId: current.packetId, finding: id, submission: submission.id })}`, packetId: current.packetId, capabilityId, verification, rationale: decision ? text(decision.rationale) : rationale, method: decision ? text(decision.method) : "unreviewed-suggestion", evidenceIds });
+      tool.capability = "partial";
+      const frontier = gap("capability", "Capability findings cover individual profiles and conditions; unexamined behaviors and configurations remain unresolved.", "Review remaining production entry points and configurations; retain historical findings when source changes.", undefined, "capabilities-unreviewed");
+      tool.gaps = tool.gaps.filter((g) => g.code !== frontier.code); tool.gaps.push(frontier);
+      tool.evidenceIds.push(submission.id);
+      continue;
+    }
+    if (finding.kind !== "relationship") throw new Error("Import supports relationship, capability and gap findings; record other unresolved questions as gaps");
     if (!citations.length) throw new Error("A relationship requires at least one checked citation");
     const from = text(finding.from);
     const consumer = next.occurrences.find((n) => n.id === from);

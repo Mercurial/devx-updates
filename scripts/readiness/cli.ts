@@ -16,6 +16,7 @@ import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../li
 import { collectionCandidates } from "../../lib/readiness/candidates";
 import { collectBatch } from "../../lib/readiness/batch";
 import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
+import { capabilityRows } from "../../lib/readiness/capabilities";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -126,6 +127,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
       withProfiles: new Set(snapshot.profiles.map((p) => p.toolId)).size,
       profiles: snapshot.profiles.length,
       completeProfiles: snapshot.profiles.filter((p) => p.coverage === "complete").length,
+      capabilityFindings: capabilityRows(snapshot),
       unresolvedTools: snapshot.tools.filter((t) => t.resolution === "unresolved").length,
       gaps: snapshot.tools.flatMap((tool) => tool.gaps.map((g) => ({ toolId: tool.id, ...g }))),
       ecosystemBacklog: Object.fromEntries(["npm", "cargo", "cabal", "go", "python", "nix", "container", "other"].map((ecosystem) => [ecosystem, snapshot.tools.filter((t) => t.ecosystems.includes(ecosystem as typeof t.ecosystems[number])).length])),

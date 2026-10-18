@@ -12,7 +12,7 @@ export function nativeEvidence(profile: Profile, allowLegacy = false): { native:
 }
 
 export function rebuildNative(snapshot: Snapshot, store: Store): Snapshot {
-  if (snapshot.decisions.length || snapshot.edges.some((e) => e.type !== "package")) throw new Error("Rebuild would invalidate manual relationships. Export and reconcile their decisions before upgrading native graph records.");
+  if (snapshot.decisions.length || snapshot.capabilities?.length || snapshot.capabilityDecisions?.length || snapshot.edges.some((e) => e.type !== "package")) throw new Error("Rebuild would invalidate manual relationships or capabilities. Export and reconcile their decisions before upgrading native graph records.");
   const next = structuredClone(snapshot);
   next.profiles = []; next.artifacts = []; next.occurrences = []; next.edges = []; next.collections = [];
   for (const tool of next.tools) tool.gaps = tool.gaps.filter((g) => !g.profileId).map(upgradeOperationalGap);

@@ -107,6 +107,35 @@ export interface Decision {
   evidenceIds: string[];
 }
 
+export const CAPABILITY_LABELS = {
+  "transaction-construction": "Transaction construction",
+  serialization: "Serialization / deserialization",
+  "script-compilation": "Script compilation",
+  "script-evaluation": "Script evaluation",
+  "chain-synchronization": "Chain synchronization",
+  "chain-decoding": "Chain decoding",
+  query: "Chain query",
+  submission: "Transaction submission",
+  "wallet-signing": "Wallet signing",
+  "wallet-integration": "Wallet integration",
+  governance: "Governance operations",
+} as const;
+export type CapabilityName = keyof typeof CAPABILITY_LABELS;
+
+export interface CapabilityFinding {
+  id: string;
+  toolId: string;
+  profileId: string;
+  capability: CapabilityName;
+  scope: Scope;
+  condition: string | null;
+  verification: Verification;
+  rationale: string;
+  evidenceIds: string[];
+}
+
+export interface CapabilityDecision extends Omit<Decision, "edgeId"> { capabilityId: string }
+
 export interface Snapshot {
   schemaVersion: 1;
   catalogDigest: string;
@@ -120,6 +149,8 @@ export interface Snapshot {
   edges: Edge[];
   evidence: Evidence[];
   decisions: Decision[];
+  capabilities?: CapabilityFinding[];
+  capabilityDecisions?: CapabilityDecision[];
   collections?: { key: string; toolId: string; profileId: string; evidenceId: string }[];
 }
 

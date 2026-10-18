@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import type { Graph } from "../map-types";
-import type { Artifact, Gap, Snapshot, Tool } from "./types";
+import { CAPABILITY_LABELS, type Artifact, type Gap, type Snapshot, type Tool } from "./types";
 
 export function canonical(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
@@ -69,7 +69,7 @@ export function inventory(catalog: Graph, revision: string, now = new Date().toI
 
 export function finalize(snapshot: Snapshot): Snapshot {
   snapshot.collections?.sort((a, b) => `${a.toolId}:${a.key}`.localeCompare(`${b.toolId}:${b.key}`, "en"));
-  for (const values of [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions]) {
+  for (const values of [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions, snapshot.capabilities ?? [], snapshot.capabilityDecisions ?? []]) {
     values.sort((a, b) => a.id.localeCompare(b.id, "en"));
   }
   for (const tool of snapshot.tools) {
@@ -89,7 +89,7 @@ export function finalize(snapshot: Snapshot): Snapshot {
 
 export function validate(snapshot: Snapshot): void {
   if (snapshot.schemaVersion !== 1) throw new Error("Unsupported snapshot schema");
-  const indexes = [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions].map((values) => {
+  const indexes = [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions, snapshot.capabilities ?? [], snapshot.capabilityDecisions ?? []].map((values) => {
     const ids = new Set(values.map((v) => text(v.id, "id")));
     if (ids.size !== values.length) throw new Error("Duplicate IDs in snapshot");
     return ids;
@@ -127,5 +127,21 @@ export function validate(snapshot: Snapshot): void {
     if (from.profileId !== to.profileId) throw new Error("Edges cannot cross resolution profiles");
   }
   for (const d of snapshot.decisions) { refs([d.edgeId], edges, "edge"); refs(d.evidenceIds, evidence, "evidence"); }
+  for (const c of snapshot.capabilities ?? []) {
+    refs([c.toolId], tools, "tool"); refs([c.profileId], profiles, "profile"); refs(c.evidenceIds, evidence, "evidence");
+    if (snapshot.profiles.find((p) => p.id === c.profileId)?.toolId !== c.toolId) throw new Error("Capability profile belongs to another tool");
+    if (!Object.hasOwn(CAPABILITY_LABELS, c.capability)) throw new Error("Unknown capability vocabulary");
+    if (!["runtime", "build", "development"].includes(c.scope)) throw new Error("Invalid capability scope");
+    if (!["verified", "suggested", "disputed", "rejected"].includes(c.verification)) throw new Error("Invalid capability verification");
+    if (c.condition !== null) text(c.condition, "capability condition");
+    text(c.rationale, "capability rationale");
+    if (!c.evidenceIds.length) throw new Error("Capabilities must carry evidence");
+  }
+  for (const d of snapshot.capabilityDecisions ?? []) {
+    refs([d.capabilityId], indexes[7], "capability"); refs(d.evidenceIds, evidence, "evidence");
+    if (!["verified", "suggested", "disputed", "rejected"].includes(d.verification)) throw new Error("Invalid capability decision");
+    text(d.packetId); text(d.rationale); text(d.method);
+    if (!d.evidenceIds.length) throw new Error("Capability decisions must carry evidence");
+  }
   for (const c of snapshot.collections ?? []) { refs([c.toolId], tools, "tool"); refs([c.profileId], profiles, "profile"); refs([c.evidenceId], evidence, "evidence"); }
 }

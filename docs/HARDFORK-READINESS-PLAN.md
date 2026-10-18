@@ -244,6 +244,26 @@ Nix/native binaries and Cometa's bundled WASM are visible follow-up boundaries.
 AdaLite needs corrected source and renewed pin review before another meaningful
 collection attempt. Target-specific compatibility testing remains separately gated.
 
+### Active continuation: capability review workflow
+
+The next milestone closes the gap between package coverage and the higher-level
+behaviors needed for later hardfork analysis (sections 6.3, 7 and 8). Implement
+structured capability findings across manual import, evidence/decision history,
+reports, filters and tool details. This follows ADR-1/ADR-2: collection and review
+remain offline, with the site reading retained data at build time.
+
+- [ ] Add profile-scoped capability findings, checked source citations, explicit verification decisions, history, stale-source handling and replayable storage.
+- [ ] Expose capability findings and filters in static reports, tool pages, snapshot comparisons and JSON exports.
+- [ ] Prepare pinned source packets for Lace mobile, GovTool frontend, TyphonJS and Cometa; retain pending owner-launched reviews without inventing findings.
+- [ ] Validate behavior, review implementation, check static export/browser flows, and commit the milestone locally.
+
+Capability vocabulary covers transaction construction, serialization, script
+compilation/evaluation, synchronization/decoding, query, submission, signing,
+wallet integration and governance. Findings default to suggested; exact citations
+do not establish semantic truth. Only explicit evidence decisions verify claims.
+Coverage stays partial, historical profiles retain their source identity, and
+readiness stays unassessed. Target-specific compatibility remains out of scope.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

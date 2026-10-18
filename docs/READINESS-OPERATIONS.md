@@ -186,7 +186,17 @@ npm run readiness -- export-review --tools oura --output .readiness/reviews/oura
 
 The packet contains selected tools, profiles, graph records, evidence hashes, decompressed evidence, a result template, and the [task briefs](./DEPENDENCY-REVIEW-TASKS.md). Run discovery and challenge tasks manually. Capture additional sources and export a new packet if the first review needs evidence outside its packet.
 
-The implemented interchange format is JSON. Import supports relationship and gap findings; identity/capability questions can be retained as gaps until their specialized workflows are added. A tool needs a native profile before a relationship can be attached to a consumer occurrence. Review tasks for other tools can still return evidence gaps.
+The implemented interchange format is JSON. Import supports relationship, capability and gap findings; identity questions remain gaps. A tool needs a native profile before a relationship or capability can be attached to its context. Review tasks for other tools can still return evidence gaps. Capability findings use the [versioned capability format](./CAPABILITY-REVIEW-FORMAT.md), copied into every packet as `CAPABILITIES.md`.
+
+Task brief version 2 binds the review contract to the packet digest and includes
+capability findings and prior decisions. Re-export version-1 pending packets;
+their old IDs become `needs-revalidation`. Historical snapshots without capability
+fields keep their semantic identity; no empty capability tables are added on read.
+The Capabilities dashboard view filters by behavior, verification, source
+applicability and runtime/build/development scope. Tool pages and JSON exports
+retain profile conditions, evidence and decision history. Reports and snapshot
+comparisons include capabilities without adding dependency reach or compatibility
+claims. Native rebuild refuses to discard manual capability findings.
 
 Relationship finding shape, inside the exported result template's `findings` array:
 
