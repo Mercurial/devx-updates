@@ -300,7 +300,24 @@ npm run test:readiness
 - `impact.json` contains distinct downstream tools and explanatory paths per scope/profile.
 - `projects.json` unions downstream tools across package versions within known source namespaces. Forks and ambiguous sources stay separate.
 - `changes.json`, when generated for the current snapshot, supplies the website's snapshot comparison.
-- `replay` reconstructs native graph records from retained evidence, without network access.
+- `replay` reconstructs native graph records and admitted manual relationships,
+  capability findings and decisions from retained inputs, without network access
+  or evidence writes. It compares the complete graph (including unexpected or
+  missing records) and checks review-created gaps, coverage changes and tool
+  evidence links. Source-discovery metadata is retained as input, not rediscovered
+  by replay.
+- New review imports archive the checked original packet as content-addressed
+  evidence. `snapshot.reviewSubmissions` links each accepted submission to its
+  packet archive. Keep both evidence objects, their cited inputs and prior
+  submissions in backups. Inventory refresh preserves this history. Review order
+  comes from predecessor submissions in packet inputs, not timestamps or filename
+  ordering; later releases do not invalidate replay of historical decisions.
+- Older manual imports without archived packet context fail replay explicitly.
+  The original packet and pre-import snapshot are required to recover that
+  history; replay never invents a baseline from the current graph. Reimport into
+  a separate restored pre-import snapshot, then reconcile subsequent inputs and
+  decisions before replacing canonical data. A native-only snapshot needs no
+  migration. Identical accepted submissions remain idempotent.
 - Native output and configuration evidence have explicit roles. `rebuild-native` upgrades native graph records after an adapter change using retained evidence, and marks affected review packets for revalidation. It refuses to overwrite graphs containing manual relationships or decisions that need reconciliation.
 - Semantic digests exclude operational timestamps. Resolver inputs, command/toolchain, profile, and native output remain part of profile identity.
 - Required exposure takes precedence over optional exposure within a profile. A tool may still appear in both columns when it has different exposure in different profiles; project totals union tools rather than summing version counts.

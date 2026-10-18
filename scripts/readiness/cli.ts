@@ -3,7 +3,7 @@ import { existsSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { parseArgs } from "node:util";
 import type { Graph } from "../../lib/map-types";
-import { canonical, finalize, inventory, object } from "../../lib/readiness/core";
+import { finalize, inventory, object } from "../../lib/readiness/core";
 import { parseNativeInput, resolveNative } from "../../lib/readiness/adapters";
 import { discover } from "../../lib/readiness/discovery";
 import { githubSource } from "../../lib/readiness/source";
@@ -11,7 +11,8 @@ import { collect, refreshNative } from "../../lib/readiness/collect";
 import { aggregateProjects, calculateImpact, compareSnapshots } from "../../lib/readiness/impact";
 import { acquireLock, addEvidence, mergeResolution, readJson, readSnapshot, Store, writeJson } from "../../lib/readiness/store";
 import { exportPacket, importReview, reconcileReviewQueue, type ReviewQueueEntry } from "../../lib/readiness/review";
-import { nativeEvidence, rebuildNative } from "../../lib/readiness/rebuild";
+import { rebuildNative } from "../../lib/readiness/rebuild";
+import { replaySnapshot } from "../../lib/readiness/replay";
 import { COLLECT_ADAPTERS, NATIVE_ADAPTERS, type CollectAdapter } from "../../lib/readiness/types";
 import { collectionCandidates } from "../../lib/readiness/candidates";
 import { collectBatch } from "../../lib/readiness/batch";
@@ -59,7 +60,7 @@ candidates      List supported collection starting points, including nested work
 validate        Validate snapshot, references, semantic digest, and evidence checksums
 compact-storage Rewrite snapshot storage as verified JSON chunks without changing graph data
 export-snapshot --output snapshot.json (self-contained graph for comparison or backup)
-replay          Reconstruct native profiles from retained evidence and compare graph records
+replay          Reconstruct native graphs and manual findings from retained evidence/packets
 rebuild-native  Upgrade native graph records using retained inputs (no network)
 capture-source  --tool id --path source-file (retain pinned source for citations)
 export-review   --tools id,id --output .readiness/reviews/name
@@ -89,6 +90,7 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
       Object.assign(next, { profiles: previous.profiles, artifacts: previous.artifacts, occurrences: previous.occurrences, edges: previous.edges, evidence: previous.evidence, decisions: previous.decisions, ...(previous.collections ? { collections: previous.collections } : {}) });
       if (previous.capabilities) next.capabilities = previous.capabilities;
       if (previous.capabilityDecisions) next.capabilityDecisions = previous.capabilityDecisions;
+      if (previous.reviewSubmissions) next.reviewSubmissions = previous.reviewSubmissions;
       if (previous.catalogDigest === next.catalogDigest) next.catalogRevision = previous.catalogRevision;
     }
     store.save(next);
@@ -183,22 +185,8 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
   } else if (command === "validate") {
     store.verify(snapshot); console.log(`Validated ${snapshot.tools.length} tools, ${snapshot.profiles.length} profiles, ${snapshot.evidence.length} evidence objects.`);
   } else if (command === "replay") {
-    const records = {
-      artifacts: new Map(snapshot.artifacts.map((record) => [record.id, record])),
-      occurrences: new Map(snapshot.occurrences.map((record) => [record.id, record])),
-      edges: new Map(snapshot.edges.map((record) => [record.id, record])),
-    };
-    for (const profile of snapshot.profiles) {
-      console.error(`Replaying ${profile.toolId} ${profile.id}`);
-      const roles = nativeEvidence(profile);
-      const evidence = (id: string) => store.readEvidence(snapshot.evidence.find((e) => e.id === id)!);
-      const replayed = resolveNative(evidence(roles.native), parseNativeInput(evidence(roles.configuration)), roles);
-      if (canonical(replayed.profile) !== canonical(profile)) throw new Error(`Profile replay mismatch ${profile.id}`);
-      for (const key of ["artifacts", "occurrences", "edges"] as const) for (const record of replayed[key]) {
-        if (canonical(records[key].get(record.id)) !== canonical(record)) throw new Error(`Replay mismatch ${record.id}`);
-      }
-    }
-    console.log(`Replayed ${snapshot.profiles.length} native profiles with identical graph records.`);
+    const result = replaySnapshot(snapshot, store, (message) => console.error(message));
+    console.log(`Replayed ${result.profiles} native profiles and ${result.reviews} review submissions with identical graph records and review contributions.`);
   } else if (command === "rebuild-native") {
     const next = rebuildNative(snapshot, store);
     store.save(next);

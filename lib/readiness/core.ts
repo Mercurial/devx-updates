@@ -69,6 +69,7 @@ export function inventory(catalog: Graph, revision: string, now = new Date().toI
 }
 
 export function finalize(snapshot: Snapshot): Snapshot {
+  snapshot.reviewSubmissions?.sort((a, b) => a.submissionEvidenceId.localeCompare(b.submissionEvidenceId, "en"));
   snapshot.collections?.sort((a, b) => `${a.toolId}:${a.key}`.localeCompare(`${b.toolId}:${b.key}`, "en"));
   for (const values of [snapshot.tools, snapshot.profiles, snapshot.artifacts, snapshot.occurrences, snapshot.edges, snapshot.evidence, snapshot.decisions, snapshot.capabilities ?? [], snapshot.capabilityDecisions ?? []]) {
     values.sort((a, b) => a.id.localeCompare(b.id, "en"));
@@ -145,4 +146,10 @@ export function validate(snapshot: Snapshot): void {
     if (!d.evidenceIds.length) throw new Error("Capability decisions must carry evidence");
   }
   for (const c of snapshot.collections ?? []) { refs([c.toolId], tools, "tool"); refs([c.profileId], profiles, "profile"); refs([c.evidenceId], evidence, "evidence"); }
+  const submissions = new Set<string>();
+  for (const review of snapshot.reviewSubmissions ?? []) {
+    refs([review.submissionEvidenceId, review.packetEvidenceId], evidence, "review evidence");
+    if (submissions.has(review.submissionEvidenceId)) throw new Error("Duplicate review submission");
+    submissions.add(review.submissionEvidenceId);
+  }
 }

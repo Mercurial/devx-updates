@@ -7,6 +7,7 @@ import { toolSubgraph } from "./graph";
 import { capabilityCondition } from "./capabilities";
 
 export interface ReviewQueueEntry { packetId: string; toolIds: string[]; status: string }
+export type ReviewEvidenceStore = Pick<Store, "readEvidence" | "evidence">;
 
 export function reconcileReviewQueue(snapshot: Snapshot, entries: ReviewQueueEntry[]): ReviewQueueEntry[] {
   return entries.map((entry) => entry.status === "pending" && entry.packetId !== reviewPacket(snapshot, entry.toolIds).packetId ? { ...entry, status: "needs-revalidation" } : entry);
@@ -41,7 +42,7 @@ export function exportPacket(snapshot: Snapshot, store: Store, toolIds: string[]
   return packet;
 }
 
-export function checkCitation(raw: unknown, snapshot: Snapshot, store: Store, allowed: Set<string>): string {
+export function checkCitation(raw: unknown, snapshot: Snapshot, store: ReviewEvidenceStore, allowed: Set<string>): string {
   const citation = object(raw, "citation");
   const evidenceId = text(citation.evidenceId);
   if (!allowed.has(evidenceId)) throw new Error("Citation is outside the review packet");
@@ -61,7 +62,7 @@ export function checkCitation(raw: unknown, snapshot: Snapshot, store: Store, al
 }
 
 /** Validate on a copy: a partially invalid result cannot mutate the canonical graph. */
-export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknown, rawResult: unknown, rawDecisions?: unknown): Snapshot {
+export function importReview(snapshot: Snapshot, store: ReviewEvidenceStore, rawPacket: unknown, rawResult: unknown, rawDecisions?: unknown): Snapshot {
   const packet = object(rawPacket, "packet");
   const result = object(rawResult, "result");
   const toolIds = list(packet.toolIds).map((id) => text(id));
@@ -79,8 +80,12 @@ export function importReview(snapshot: Snapshot, store: Store, rawPacket: unknow
   if (decisions.some((d) => !ids.includes(text(d.findingId)))) throw new Error("Decision refers to an unknown finding");
   if (new Set(decisions.map((d) => d.findingId)).size !== decisions.length) throw new Error("Duplicate decisions");
   const next = structuredClone(snapshot);
+  // Archive the checked current context, never an untrusted caller-supplied body.
+  const archivedPacket = store.evidence(current, `Review packet ${current.packetId}`);
+  addEvidence(next, archivedPacket);
   const submission = store.evidence({ result: rawResult, decisions: rawDecisions ?? null }, `Review submission ${current.packetId}`);
   addEvidence(next, submission);
+  (next.reviewSubmissions ??= []).push({ submissionEvidenceId: submission.id, packetEvidenceId: archivedPacket.id });
   const capabilityIds = new Set<string>();
   for (const finding of findings) {
     const id = text(finding.id);

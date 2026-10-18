@@ -179,13 +179,16 @@ code blocks for the three files.
    # Example for Lace; substitute paths for the chosen tool.
    node --import tsx scripts/readiness/cli.ts import-review --packet .readiness/reviews/capabilities/lace/packet.json --input .readiness/review-results/lace/submission.json --decisions .readiness/review-results/lace/decisions.json
    node --import tsx scripts/readiness/cli.ts validate
+   node --import tsx scripts/readiness/cli.ts replay
    node --import tsx scripts/readiness/cli.ts report
    ```
 
    Omit `--decisions ...` when importing suggestions only. The importer checks
    packet freshness, scope, source citations and allowed transitions atomically;
    it does not replace human semantic verification. An unchanged resubmission is
-   idempotent. After importing suggestions, export a fresh packet before submitting
+   idempotent. Accepted imports retain the original packet alongside the submitted
+   result and decisions; replay checks their graph and coverage contributions.
+   After importing suggestions, export a fresh packet before submitting
    later decisions. Do not change old packet IDs or evidence to bypass rejection.
 
 5. Inspect the tool pages, capability states, gaps and dependency impact. Review

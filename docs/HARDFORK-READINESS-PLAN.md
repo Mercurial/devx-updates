@@ -708,6 +708,46 @@ artifact coverage alongside target analysis; original Lucid remains excluded
 from standalone work. This verified milestone remains local; nothing was pushed.
 
 
+### Active continuation: replay of admitted review findings
+
+Close the section 7 / phase 5 reproducibility gap under ADR-1/ADR-2. The existing
+replay command checked native records only, and accepted submissions lacked their
+original packet context. That was insufficient to reconstruct admitted manual
+relationships, capability findings, decision history or review-created gaps.
+
+- [x] Archive checked packet context with explicit submission/evidence references
+  and preserve those references through inventory and snapshot storage.
+- [x] Reconstruct native and manual graph records offline, order review decisions
+  by their prior inputs, and reject missing, altered or unexplained graph records.
+- [x] Check review-created gaps, coverage changes and tool evidence links; surface
+  legacy submissions without archived context as an explicit replay limitation.
+- [x] Verify focused/full tests, retained catalog replay and unchanged prepared
+  packets; review and commit the implementation locally.
+
+Focused checks cover chained and independent reviews, empty/gap-only results,
+historical findings across a later native release, altered graph/decision/coverage
+records, missing archives, and unproven records inserted into an archived context.
+The CLI regression proves altered manual verification now fails replay, even when
+native records still match. No consumer review was launched or imported into the
+catalog; Dijkstra source-pin clarification remains pending independently.
+
+Verification checkpoint: all 82 readiness tests pass, including CLI subprocess
+and native Poetry checks; TypeScript and readiness lint pass. The retained catalog
+replays all 39 native profiles and validates all 1,062 evidence objects. No real
+manual submissions have returned. All seven pending packet identities and the
+catalog semantic digest remain unchanged. No framework or canonical data changed,
+so this checkpoint retains the previously verified static export without claiming
+a new build or browser run.
+
+Standards review: the contribution fields now share one per-tool record; no
+remaining findings. Specification review caught overlapping packet scopes where
+findings affect different tools. Replay now reconstructs each review from its
+validated causal predecessors and merges only changed records, preventing later
+independent work from contaminating or being overwritten by older contexts. A
+regression covers both receipt orders; follow-up review found no remaining issue.
+This milestone implements section 7 / phase 5 under ADR-1/ADR-2. Catalog coverage,
+owner-launched consumer reviews and target-specific testing remain open.
+
 ## 1. Objective
 
 Identify tools that may stop working after the next Cardano hardfork early enough to help their maintainers ship fixes. Explain each finding, identify the upstream components involved, and prioritize work that benefits the greatest number of affected tools.

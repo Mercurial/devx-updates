@@ -151,6 +151,7 @@ export interface Snapshot {
   decisions: Decision[];
   capabilities?: CapabilityFinding[];
   capabilityDecisions?: CapabilityDecision[];
+  reviewSubmissions?: { submissionEvidenceId: string; packetEvidenceId: string }[];
   collections?: { key: string; toolId: string; profileId: string; evidenceId: string }[];
 }
 

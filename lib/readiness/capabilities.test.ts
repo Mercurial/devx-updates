@@ -96,6 +96,7 @@ test("inventory preserves imported capability decisions and review context acros
     const changed = store.load();
     assert.deepEqual(changed.capabilities, reviewed.capabilities);
     assert.deepEqual(changed.capabilityDecisions, reviewed.capabilityDecisions);
+    assert.deepEqual(changed.reviewSubmissions, reviewed.reviewSubmissions);
     assert.deepEqual(changed.evidence, reviewed.evidence);
     assert.equal(changed.tools.find((tool) => tool.id === "wallet")!.name, "Renamed wallet");
     assert.equal(changed.tools.find((tool) => tool.id === "new")!.capability, "unresolved");
