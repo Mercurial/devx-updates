@@ -27,7 +27,7 @@ const ID = /^[a-z0-9]+(?:[.-][a-z0-9]+)*$/;
 const REVISION = /^[a-f0-9]{40}$/;
 const REPO = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
 
-function oneOf<T extends string>(value: unknown, allowed: readonly T[], label: string): T {
+export function oneOf<T extends string>(value: unknown, allowed: readonly T[], label: string): T {
   if (!allowed.includes(value as T)) throw new Error(`${label} must be one of ${allowed.join(", ")}`);
   return value as T;
 }
@@ -39,7 +39,7 @@ function ids(value: unknown, label: string, known: Set<string>): string[] {
   return items;
 }
 
-function uniqueIds<T extends { id: string }>(items: T[], label: string): Set<string> {
+export function uniqueIds<T extends { id: string }>(items: T[], label: string): Set<string> {
   const seen = new Set<string>();
   for (const { id } of items) {
     if (!ID.test(id) || seen.has(id)) throw new Error(`${label} id ${id} is malformed or duplicated`);
@@ -48,7 +48,7 @@ function uniqueIds<T extends { id: string }>(items: T[], label: string): Set<str
   return seen;
 }
 
-function citation(value: unknown, label: string): Citation {
+export function citation(value: unknown, label: string): Citation {
   const c = object(value, label);
   const repo = text(c.repo, `${label}.repo`), revision = text(c.revision, `${label}.revision`), path = text(c.path, `${label}.path`), quote = text(c.quote, `${label}.quote`);
   if (!REPO.test(repo) || !REVISION.test(revision)) throw new Error(`${label} needs an owner/repo and an immutable 40-character revision`);
@@ -95,15 +95,18 @@ export type SourceReader = (repo: string, revision: string, path: string) => Pro
 
 /** Check every citation's quote still sits on its recorded line at the pinned revision. */
 export async function verifyCitations(register: ChangeRegister, read: SourceReader): Promise<string[]> {
+  return verifyQuotes(register.changes.flatMap((change) => change.citations.map((c): [string, Citation] => [change.id, c])), read);
+}
+
+/** Read each pinned file once and report every labelled quote that is not on its recorded line. */
+export async function verifyQuotes(citations: [string, Citation][], read: SourceReader): Promise<string[]> {
   const files = new Map<string, Promise<string[]>>();
   const failures: string[] = [];
-  for (const change of register.changes) {
-    for (const c of change.citations) {
-      const key = `${c.repo}@${c.revision}:${c.path}`;
-      if (!files.has(key)) files.set(key, read(c.repo, c.revision, c.path).then((content) => content.split("\n")));
-      const lines = await files.get(key)!;
-      if (!lines[c.line - 1]?.includes(c.quote)) failures.push(`${change.id}: ${key}:${c.line} does not contain ${JSON.stringify(c.quote)}`);
-    }
+  for (const [label, c] of citations) {
+    const key = `${c.repo}@${c.revision}:${c.path}`;
+    if (!files.has(key)) files.set(key, read(c.repo, c.revision, c.path).then((content) => content.split("\n")));
+    const lines = await files.get(key)!;
+    if (!lines[c.line - 1]?.includes(c.quote)) failures.push(`${label}: ${key}:${c.line} does not contain ${JSON.stringify(c.quote)}`);
   }
   return failures;
 }

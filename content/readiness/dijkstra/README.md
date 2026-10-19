@@ -1,4 +1,4 @@
-# Dijkstra change register
+# Dijkstra change and boundary registers
 
 `changes.json` lists what the Dijkstra hard fork (protocol version 12) changes,
 which **surface** each change touches, when it takes effect, and the exact source
@@ -69,11 +69,47 @@ scope and activation follow the Hard Fork Working Group's
   are needed for devnet setup (R4).
 - JSON representations in cardano-api/cli beyond the era commands.
 
+## Boundary register (`boundary.json`)
+
+`boundary.json` records the 61 catalog components that implement a changed
+surface directly, observed at their default-branch heads on 2026-10-19, with a
+status for each surface group: `gap` (cited code cannot work against the
+target), `no-evidence` (nothing found; never a pass), `tracked`, `in-progress`,
+`released` and `verified` (R4). A component counts as its worst status. Source
+evidence is pinned like the change register; issue and pull-request evidence
+records URL, state and date.
+
+| Worst status | Components |
+| --- | --- |
+| gap | cardano-wallet, Adder, ouroboros-miniprotocols-ts (node-to-client); Hydra (stops at the fork); CSL (no PlutusV4); cardano-js-sdk and cardano-c (protocol parameters); Scalus (V4 evaluation) |
+| no-evidence | 37 components, including CML, cardano-client-lib, PyCardano, Oura, Dolos, Mithril, cncli, Koios, Blockfrost RYO, Aiken, OpShin, Helios, Plutarch, Mesh, Lucid Evolution and both hardware-wallet libraries |
+| tracked | Apollo |
+| in-progress | Pallas, Yaci, Amaru, Dingo, Ogmios, Kupo, db-sync, yaci-store, UTxO RPC, Blaze, Kuber, Yaci DevKit |
+| released | Gouroboros, Plutus, plutigo |
+
+What it shows:
+
+1. **Node-to-client breaks are concrete and early.** cardano-wallet proposes
+   only V16–V22, ouroboros-miniprotocols-ts defaults to V16–V19, and Adder pins
+   gouroboros v0.209.0 (V21 at most). gouroboros added V23 only in v0.213.0
+   (2026-10-14), so every Go consumer below it is exposed; Pallas has offered
+   V23 since v0.35.1.
+2. **"Supports Dijkstra" usually means an earlier Dijkstra.** cardano-ledger-dijkstra
+   0.2.0.1 (Ogmios 7.0.0, Kupo 2.12, db-sync main) and 0.3.0.0 (cardano-wallet)
+   still have the segregated block body and the old header; Pallas 1.4.0 and
+   cardano-c main lack the newest parameter keys and the PlutusV4 witness key.
+   Only gouroboros's vendored CDDL matches the target.
+3. **Most of the boundary has nothing yet.** CSL, CML, cardano-client-lib,
+   PyCardano, Aiken and the other script compilers show no Dijkstra work, and
+   the chain followers built on Pallas (Oura, Dolos, Mithril) wait for a Pallas
+   release with Dijkstra traversal.
+
 ## Checking it
 
 ```sh
 node --import tsx scripts/readiness/cli.ts check-changes                   # structure and vocabulary
 node --import tsx scripts/readiness/cli.ts check-changes --verify-sources  # re-read every quote via gh
+node --import tsx scripts/readiness/cli.ts check-boundary [--verify-sources] # boundary register, worst status per component
 ```
 
 Every citation records repository, 40-character revision, path, line and an

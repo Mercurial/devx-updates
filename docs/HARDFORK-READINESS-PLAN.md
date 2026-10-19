@@ -14,7 +14,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection for registered profiles.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 - [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
-- [ ] R2: boundary-component register with per-component Dijkstra status.
+- [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
 - [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers).
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
@@ -148,6 +148,45 @@ above expose: serialization libraries (CSL, CML, Pallas, Gouroboros, cardano-js-
 core, cardano-client-lib, PyCardano, cometa, plu-ts/harmoniclabs), chain-sync and
 query services (Ogmios, Kupo, db-sync, cardano-wallet, Oura, Dolos), evaluators
 and script languages, and API providers.
+
+### R2 checkpoint (2026-10-19)
+
+`content/readiness/dijkstra/boundary.json` records 61 catalog components that
+implement a changed surface directly (ledger codecs, node-to-client clients,
+chain indexers and query services, nodes, script toolchains, transaction
+builders, hardware signing, devnet tooling). Each was observed at its
+default-branch head; status is recorded per surface group as `gap`,
+`no-evidence`, `tracked`, `in-progress`, `released` or `verified`, with 45
+pinned source citations and 40 issue/pull-request references. `check-boundary
+--verify-sources` re-read all source citations successfully; three new tests
+pass with the suite (129 tests).
+
+Worst status per component: 8 gap, 37 no-evidence, 1 tracked, 12 in-progress,
+3 released, 0 verified. Findings that change priorities:
+
+- **Node-to-client gaps exist today.** cardano-wallet offers V16–V22 only,
+  ouroboros-miniprotocols-ts defaults to V16–V19, and Adder pins gouroboros
+  v0.209.0 (≤V21). gouroboros gained V23 in v0.213.0 (2026-10-14), so its
+  consumers below that release that open node-to-client connections (for
+  example cardano-node-api v0.202.7 and txtop v0.208.5) are R5 propagation
+  targets. Haskell clients that
+  take versions from ouroboros-consensus ≥3.0.1 and Pallas ≥0.35.1 offer V23.
+- **Earlier Dijkstra definitions are the common case.** Ogmios 7.0.0, Kupo 2.12
+  and db-sync use cardano-ledger-dijkstra 0.2.0.1 and cardano-wallet uses
+  0.3.0.0; both differ from 0.4.0.0 in block body and header. Pallas 1.4.0
+  vendors CDDL from ledger 1587f21a; cardano-js-sdk stops at parameter key 37
+  and cardano-c at 48. Only gouroboros v0.213.7 matches the target CDDL.
+- **Hydra stops at the fork**: its chain follower throws on a Dijkstra block.
+- **37 components show no Dijkstra work**, including CSL, CML,
+  cardano-client-lib, PyCardano, Aiken, OpShin, Helios, Plutarch, Mesh and the
+  hardware-wallet libraries. These are the first maintainer questions for R5.
+
+Limits: API providers whose code is not public (Blockfrost, Koios as a
+service, Maestro and others) are not yet covered; a head observation says
+nothing about unpublished work; statuses must be re-observed before use. Next:
+R3 classifies all 269 tools by direct dependencies on these components,
+service calls and era/format markers, using `dependsOn` and the component
+versions where readiness was first released.
 
 ### Implementation log
 

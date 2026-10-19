@@ -398,6 +398,19 @@ npm run readiness -- check-changes --verify-sources  # also re-read every cited 
 `--verify-sources` needs GitHub access and fails if any quote has left its
 recorded line. Regenerate citations only from immutable revisions.
 
+`content/readiness/dijkstra/boundary.json` records each boundary component's
+Dijkstra status per surface. It is validated against the change register's
+surfaces; `released` needs a named release and every status except
+`no-evidence` needs evidence.
+
+```sh
+npm run readiness -- check-boundary                   # counts components by worst status
+npm run readiness -- check-boundary --verify-sources  # also re-read every source citation
+```
+
+Statuses age quickly: re-observe a component (new head, release and trackers)
+before relying on an entry older than a week.
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow
