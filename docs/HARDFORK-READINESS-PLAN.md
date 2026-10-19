@@ -1,6 +1,6 @@
 # Dependency mapping and hardfork readiness
 
-Status: operational collection and reporting are implemented; catalog-wide dependency coverage is still being expanded. The completed checkpoint through `933f819` was pushed to `origin/hardfork-readiness` at the owner's request. New work remains local until another push is requested.
+Status: **revised 2026-10-19 — change-first assessment.** The dependency-graph pipeline (phases 1–5) is retained but no longer drives the work; see [Plan revision](#plan-revision-2026-10-19-change-first-assessment). The completed checkpoint through `933f819` was pushed to `origin/hardfork-readiness` at the owner's request. New work remains local until another push is requested.
 
 ## Implementation progress
 
@@ -13,6 +13,141 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
 - [x] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection for registered profiles.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
+- [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
+- [ ] R2: boundary-component register with per-component Dijkstra status.
+- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers).
+- [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
+- [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
+
+## Plan revision (2026-10-19): change-first assessment
+
+### Why the plan changed
+
+The goal (section 1) is to find tools that may stop working after Dijkstra in
+time for maintainers to ship fixes. An audit of the retained data at snapshot
+`d19a7de8…` showed that the dependency-first approach answers a different
+question — *what depends on what* — and cannot reach the goal on its own:
+
+- **Breakage comes from the changed surface, not from having dependencies.** A
+  tool is affected when it touches something Dijkstra changes: transaction/block
+  CBOR, the era list, node-to-client protocol versions and local state queries,
+  protocol parameters and cost models, the Plutus ledger API, CLI/API output,
+  indexer schemas or provider responses. A package graph records none of that.
+- **The ranking degenerated to popularity.** With zero capability findings, the
+  investigation queue ranks by reach alone. Its top 74 entries are generic npm
+  packages (`ws`, `bech32`, `@types/node`, `ms`, …); the first Cardano component,
+  `@emurgo/cardano-serialization-lib-nodejs`, is at #76 and `@meshsdk/core` near
+  #1,633.
+- **Service coupling, the most common breakage channel, is unmodeled.** Calls to
+  Blockfrost, Koios, Ogmios, Kupo, db-sync or a node socket exist only as
+  `needs-review` lexical leads or documented gaps; no service edge is verified.
+- **Collection order is inverted for this question.** Batches started with
+  higher-level consumers. The layer that implements the changed formats —
+  cardano-node/cli, ledger, Plutus, Ogmios, Kupo, db-sync, cardano-wallet, CSL,
+  CML, Pallas, cquisitor, Aiken, Scalus, plu-ts, all API providers, L2s and
+  oracles — has no assessed root. Of 47 Cabal tools only Atlas is collected.
+- **Effort does not match the deadline.** After roughly 50 commits: 45/269 tools
+  have a native profile (7 of 55 profiles complete), 0 capability findings, 0
+  returned reviews, 0 hardfork assessments, ~327 MB of retained data. Recent
+  milestones were dominated by storage, replay and build-resource work.
+
+### What stays
+
+Coverage records for all 269 tools, the evidence/replay discipline, reverse
+reach, the static dashboard and the "unknown is never a pass" rule (section 1)
+remain. Reverse reach becomes the **propagation** tool (R5): once a boundary
+component ships Dijkstra support, it lists who must upgrade. For that step,
+direct dependencies on boundary components matter far more than complete
+transitive closures.
+
+### What changes
+
+1. **Change analysis first (R1).** Phase 6's change-to-capability mapping is no
+   longer gated on catalog coverage or an immutable node tag. Read the Dijkstra
+   era sources (ledger CDDL and rules, consensus/HFC and network protocol
+   versions, Plutus ledger API, cardano-api/cli) at pinned released component
+   versions. The cardano-node 11.2 tag is still required for test environments
+   (R4) and for binding final assessments (section 3), not for identifying the
+   changed surface.
+2. **Boundary register (R2).** List the components that implement a changed
+   surface directly — ledger/CDDL implementations in each language, chain-sync
+   and query clients, indexers, API providers, script toolchains — and track
+   each one's Dijkstra status with cited evidence (`no-evidence`, `in-progress`,
+   `released`, `verified`).
+3. **Cheap classification of every tool (R3).** For all 269 tools record which
+   surfaces they touch via: direct dependencies on boundary components, service
+   calls, and era/format markers (hard-coded era lists, era tags, raw CBOR or CLI
+   output parsing). This extends the existing lexical scanner with surface rules;
+   it does not require full native closures.
+4. **Verification on a Dijkstra-enabled network (R4)** for boundary components
+   first, then representative consumers per surface, following phase 6's
+   acceptance rules.
+5. **Propagation and outreach (R5)** through direct reverse dependencies, plus
+   direct maintainer questions in parallel.
+
+### Paused
+
+Broad transitive native collection batches are paused. New collection is
+admitted only when R2/R3 show it is needed to decide whether a specific tool
+touches a changed surface. Storage, replay and dashboard work is limited to
+what R1–R5 require. Existing collection queues, profiles and pending review
+packets stay intact and replayable.
+
+### Revised prioritization
+
+Section 8's rollout priority (higher-level consumers first) is superseded:
+rank by **which changed surfaces a tool touches**, then by downstream reach of
+the boundary components involved, then by evidence gaps. Missing evidence still
+counts as risk, never as a pass.
+
+### R1 acceptance
+
+- Every Dijkstra change entry cites an exact repository, immutable revision and
+  file location, and names the surface it affects.
+- Each entry states its basis: `source-verified` (read in pinned code/CDDL),
+  `documented` (changelog/CIP at a pinned revision) or `provisional` (open
+  branch/PR, not yet released).
+- The surface vocabulary is closed and used by R2/R3 records.
+- Versions are bound to what the provisional 11.2 integration branch selects,
+  and differences from the latest released component versions are recorded.
+
+### R1 checkpoint (2026-10-19)
+
+`content/readiness/dijkstra/changes.json` records 17 changes across 12 surfaces,
+all `source-verified`, with 58 citations (repository, 40-character revision,
+path, line, exact quote). Its README summarizes them for readers. Components are
+the newest CHaP versions at the 11.2 branch's index-state (ledger-dijkstra
+0.4.0.0, consensus 5.1.0.1, network 1.3.0.0, plutus-ledger-api 1.71.0.0,
+cardano-api 11.8.0.0, cardano-cli 11.3.0.0); no build plan was solved. PR #6736
+stacks on #6677 with identical pins. Feature scope and v12/v13 activation follow
+the HFWG scope issue #6634.
+
+Findings that change priorities:
+
+- **Node-to-client V23 only.** Consensus 5.1.x (also 5.1.0.2) offers only
+  `NodeToClientV_23`; 11.1.x offered V16–V23. Clients that cannot negotiate V23
+  break when nodes upgrade to 11.2, before the fork.
+- **Every block decoder breaks at v12**: non-segregated body, per-transaction
+  `is_valid`, header `header_version_info`, Leios/Peras fields.
+- **Conway-built transactions can be rejected after the fork.** Consensus
+  re-decodes older-era transactions as Dijkstra, and Dijkstra drops certificate
+  types 0/1, array-encoded redeemers and empty multiasset maps. At the pinned
+  commit `cardano-cli latest` still means Conway.
+- PlutusV4, guards, nested transactions, account enhancements and 23 new
+  protocol parameters extend closed enums (script/redeemer/native-script tags,
+  body keys 23–27, parameter keys 34–56).
+
+`check-changes` validates the closed vocabulary, pinned revisions and references;
+`--verify-sources` re-read all 58 quotes via GitHub successfully. Three new
+behavior tests pass with the existing suite (126 tests). TypeScript and lint pass.
+
+R1 remaining: node-to-node (Leios mini-protocol) changes, local-state-query result
+encodings and Dijkstra genesis configuration. The last two also gate R4's
+devnet. Next: R2 boundary register, starting with the components the findings
+above expose: serialization libraries (CSL, CML, Pallas, Gouroboros, cardano-js-sdk
+core, cardano-client-lib, PyCardano, cometa, plu-ts/harmoniclabs), chain-sync and
+query services (Ogmios, Kupo, db-sync, cardano-wallet, Oura, Dolos), evaluators
+and script languages, and API providers.
 
 ### Implementation log
 
@@ -1305,6 +1440,12 @@ Retain the distinction between owner-selected version, verified immutable input,
 and test environment; no compatibility findings are authorized by this selection
 alone. Catalog collection and review preparation can continue independently.
 
+Update (2026-10-19): still no 11.2 tag. PR #6736 (`fmaste/prepare-11.2`,
+`c2468b05`) targets the #6677 branch and changes only benchmarking/workbench
+files; both select CHaP `0f444414` at index-state `2026-10-09T14:30:01Z`. The
+HFWG scope for Dijkstra is tracked in issue #6634. R1 binds its change register
+to the branch's component versions, not to a node tag.
+
 Do not describe a tool as safe merely because it is inactive, has no resolved package dependencies, or does not connect directly to a node.
 
 ## 4. What the product looks like
@@ -1523,6 +1664,8 @@ Store at least one explanatory path per included tool and preserve the graph for
 
 ### Prioritization
 
+> Superseded by the [2026-10-19 plan revision](#plan-revision-2026-10-19-change-first-assessment): rank by changed surfaces touched first.
+
 For catalog rollout, prioritize higher-level consumers that add coverage of
 transaction construction, wallet signing/integration, submission, query, and
 application workflows. Their selected closures expose shared upstream components
@@ -1656,6 +1799,8 @@ Acceptance:
 - Published snapshots can be reconstructed from retained evidence and decisions.
 
 ### Phase 6: hardfork assessment and remediation
+
+> Revised 2026-10-19: change-to-capability mapping starts now as R1 and is no longer gated on catalog coverage; the test environment (R4) still needs the pinned 11.2 source. See the [plan revision](#plan-revision-2026-10-19-change-first-assessment).
 
 Begin detailed design when the target changes and test environment are ready. Coverage gaps should continue to be closed in parallel with compatibility assessment.
 

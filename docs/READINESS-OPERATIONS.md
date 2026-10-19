@@ -385,6 +385,19 @@ input digest are recorded separately. Existing packet identities, pending states
 and accepted graph decisions are unchanged by creating this derived aid. The owner
 continues to decide when to launch discovery and challenge reviews.
 
+## Check the hardfork change register
+
+`content/readiness/dijkstra/changes.json` lists the Dijkstra changes, their
+surfaces and the pinned source lines they rest on (see its README).
+
+```sh
+npm run readiness -- check-changes                   # structure, closed vocabulary, pinned revisions
+npm run readiness -- check-changes --verify-sources  # also re-read every cited quote via gh
+```
+
+`--verify-sources` needs GitHub access and fails if any quote has left its
+recorded line. Regenerate citations only from immutable revisions.
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow

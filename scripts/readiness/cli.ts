@@ -22,6 +22,7 @@ import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 import { capabilityRows } from "../../lib/readiness/capabilities";
 import { investigationProjects, parseAssignments, summarizeWork, workReport } from "../../lib/readiness/work";
 import { scanIntegrations } from "../../lib/readiness/integration-scan";
+import { changesBySurface, parseChangeRegister, verifyCitations } from "../../lib/readiness/dijkstra";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -36,6 +37,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   "root-paths": { type: "string" },
   configurations: { type: "string" },
   "python-version": { type: "string" }, packages: { type: "string" }, tags: { type: "string" },
+  "verify-sources": { type: "boolean" },
 } });
 
 const store = new Store(resolve(values.directory!));
@@ -74,6 +76,8 @@ scan-integrations [--tools id,id] [--output report.json] (lexical leads from ret
 export-review   --tools id,id --output .readiness/reviews/name
 import-review   --packet packet.json --input result.json [--decisions decisions.json]
 diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json.gz]
+check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sources]
+                Validate the hardfork change register; optionally re-read every cited quote via gh
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
 Native adapters: ${NATIVE_ADAPTERS.join(", ")}.
@@ -103,6 +107,15 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     }
     store.save(next);
     console.log(`Accounted for ${next.tools.length} tools; catalog ${next.catalogDigest.slice(0, 12)}`);
+    return;
+  }
+  if (command === "check-changes") {
+    const register = parseChangeRegister(readJson(values.input ?? "content/readiness/dijkstra/changes.json"));
+    const failures = values["verify-sources"] ? await verifyCitations(register, (repo, revision, path) => githubSource(repo, revision, path)) : [];
+    for (const failure of failures) console.error(failure);
+    if (failures.length) throw new Error(`${failures.length} citations no longer match their pinned sources`);
+    const citations = register.changes.reduce((sum, c) => sum + c.citations.length, 0);
+    console.log(JSON.stringify({ changes: register.changes.length, citations, sourcesVerified: Boolean(values["verify-sources"]), bySurface: changesBySurface(register) }, null, 2));
     return;
   }
   const snapshot = store.load();
