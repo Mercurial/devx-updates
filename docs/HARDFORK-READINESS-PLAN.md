@@ -348,8 +348,15 @@ undetermined (cardano-node-api). The site groups undecided links by component:
 inherited gaps not read yet (117 tools) and links waiting on a component
 verdict.
 
-Next: read the 221 unread gap links, starting with the Ogmios and Blockfrost
-consumers.
+All 221 links are now read (393 lead entries, 913 decisions, quotes
+re-verified): 97 tools have a confirmed gap, 82 of them through a service.
+Fixing the service layer (Blockfrost RYO, Ogmios, Kupo, Koios, db-sync)
+unlocks 61 tools; adding CSL, Scalus, cardano-js-sdk, cardano-wallet and
+ouroboros-miniprotocols-ts unlocks 81. Six tools have a released upstream fix.
+The unlock report now records a greedy `fixOrder`.
+
+Next: R4 devnet checks for the service layer and the six tools with a
+released fix, and hosted-provider entries in R2 to replace the RYO proxy.
 
 ### Implementation log
 

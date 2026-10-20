@@ -70,9 +70,9 @@ export default function DijkstraPage() {
       </p>
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{([
-        [confirmedTools.length, "Tools with a confirmed gap", `${confirmed.reduce((n, l) => n + l.surfaces.length, 0)} confirmed tool/dependency/surface decisions`],
+        [confirmedTools.length, "Tools with a confirmed gap", `of ${touched} tools touching a changed surface; ${confirmed.reduce((n, l) => n + l.surfaces.length, 0)} confirmed tool/dependency/surface decisions`],
         [unlocks.bumpReady.length, "Upstream fix released", `The tool must upgrade; ${ownWork} also need their own era work`],
-        [count(unread), "Inherited gaps not read yet", `of ${touched} tools touching a changed surface through shipped code or services`],
+        [unlocks.fixOrder.at(-1)?.unlocked ?? 0, "Unlocked by upstream fixes", `if all ${unlocks.fixOrder.length} blocking components ship the support`],
         [changes.changes.length, "Cited changes", `${changes.surfaces.length} surfaces, ${changes.unchanged.length} areas checked unchanged`],
       ] as const).map(([count, label, detail]) => (
         <div key={label} className="rounded-xl border border-border bg-surface p-4 sm:p-5">
@@ -85,10 +85,23 @@ export default function DijkstraPage() {
       <section aria-labelledby="unlocks" className="scroll-mt-24">
         <h2 id="unlocks" className="font-display text-2xl font-semibold">What a fix unlocks</h2>
         <p className="mt-2 max-w-3xl text-sm text-muted">
-          Components whose own gap blocks other tools. A tool is unlocked once every upstream blocker it has is fixed;
-          unlocked components then count as fixed for their own consumers. Downstream tools have a shipped link that
-          has not been confirmed as a gap.
+          A tool is unlocked once every upstream blocker it has is fixed; unlocked components then count as fixed for
+          their own consumers. Most SDKs wait on several services at once (for example Kupo for UTxOs, Ogmios for
+          submission and Blockfrost for parameters), so single fixes understate the effect. The fix order adds, at each
+          step, the component that unlocks the most tools on top of the earlier steps.
         </p>
+        <ol className="mt-4 space-y-2">{unlocks.fixOrder.map((f, i) => (
+          <li key={f.component} className="rounded-xl border border-border bg-surface px-4 py-3">
+            <details>
+              <summary className="cursor-pointer text-sm">
+                <span className="tabular-nums text-muted">{i + 1}.</span> <span className="font-medium">{f.component}</span>{" "}
+                <span className="text-muted">· +{f.added.length} → {f.unlocked} tools unlocked</span>
+              </summary>
+              <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm">{f.added.map((t) => <li key={t}><ToolLink id={t} /></li>)}</ul>
+            </details>
+          </li>
+        ))}</ol>
+        <h3 className="mt-6 text-lg font-semibold">Each fix on its own</h3>
         <div className="mt-4 grid gap-4 lg:grid-cols-2">{unlocks.components.map((c) => (
           <article key={c.component} className="rounded-xl border border-border bg-surface p-5">
             <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -147,11 +160,11 @@ export default function DijkstraPage() {
       <section aria-labelledby="unread" className="scroll-mt-24">
         <h2 id="unread" className="font-display text-2xl font-semibold">Inherited gaps not read yet</h2>
         <p className="mt-2 max-w-3xl text-sm text-muted">
-          These {count(unread)} tools reach a component with a cited gap through shipped code or a service call, but
-          nobody has read whether they use the gapped capability. Until a reading confirms or clears each one, the link is
-          a likely blocker, not a confirmed one. Hosted Blockfrost consumers inherit the self-hosted backend&apos;s verdict.
+          Tools that reach a component with a cited gap through shipped code or a service call, but whose use of the
+          gapped capability nobody has read yet. Until a reading confirms or clears each one, the link is a likely
+          blocker, not a confirmed one. Hosted Blockfrost consumers inherit the self-hosted backend&apos;s verdict.
         </p>
-        <WaitingList groups={unread} />
+        {unread.length ? <WaitingList groups={unread} /> : <p className="mt-4 text-sm">None: every inherited gap has a decision.</p>}
       </section>
 
       <section aria-labelledby="no-verdict" className="scroll-mt-24">

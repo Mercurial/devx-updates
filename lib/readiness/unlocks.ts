@@ -119,6 +119,11 @@ export interface UnlockReport {
   bumpReady: { tool: string; pins: string[]; steps: PinStep[]; ownStatus?: Status; unread: string[] }[];
   /** Components whose fix unlocks at least one tool, most unlocks first. */
   components: (ComponentUnlocks & { ownGap: string[] })[];
+  /**
+   * Many tools wait on several components at once, so single fixes understate the effect. Greedy order: each step adds
+   * the component that unlocks the most tools on top of the earlier steps; `unlocked` is the running total.
+   */
+  fixOrder: { component: string; added: string[]; unlocked: number }[];
   blockers: ToolBlockers[];
 }
 
@@ -138,5 +143,25 @@ export function unlockReport(tools: ToolClassification[], leads: LeadRegister, b
     .map((id) => ({ ...unlocksOf(id, blockers, tools), ownGap: boundary.components.find((c) => c.id === id)?.assessments.filter((a) => a.status === "gap").flatMap((a) => a.surfaces) ?? [] }))
     .filter((c) => c.unlocks.length || c.partial.length)
     .sort((a, b) => b.unlocks.length - a.unlocks.length || b.partial.length - a.partial.length || (a.component < b.component ? -1 : 1));
-  return { schemaVersion: 1, generatedAt: new Date().toISOString(), bumpReady, components, blockers };
+  return { schemaVersion: 1, generatedAt: new Date().toISOString(), bumpReady, components, fixOrder: fixOrder(candidates, blockers), blockers };
+}
+
+function fixOrder(candidates: string[], blockers: ToolBlockers[]): UnlockReport["fixOrder"] {
+  const order: UnlockReport["fixOrder"] = [];
+  const chosen: string[] = [];
+  let unlocked = new Set<string>();
+  for (let left = [...candidates]; left.length;) {
+    const scored = left.map((id) => {
+      const result = unlocksOf([...chosen, id], blockers);
+      return { id, tools: new Set(result.unlocks.map((u) => u.tool)), partial: result.partial.length };
+    }).sort((a, b) => b.tools.size - a.tools.size || a.partial - b.partial || (a.id < b.id ? -1 : 1));
+    const best = scored[0];
+    chosen.push(best.id);
+    left = left.filter((id) => id !== best.id);
+    order.push({ component: best.id, added: [...best.tools].filter((t) => !unlocked.has(t)).sort(), unlocked: best.tools.size });
+    unlocked = best.tools;
+  }
+  // Fixes that unlock nothing more on top of all the others are not part of the order.
+  while (order.length && !order[order.length - 1].added.length) order.pop();
+  return order;
 }

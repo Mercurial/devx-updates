@@ -11,7 +11,7 @@
       "tool": "atlas",
       "revision": "c3adfb416242ea25a244bfaa1614213eecdc55d9",
       "eraHandling": "own-work",
-      "summary": "Fixes its ledger era to Conway: node queries and transaction submission are built in ShelleyBasedEraConway, so after the fork they target the wrong era until each is generalised or moved to Dijkstra.",
+      "summary": "Fixes its ledger era to Conway: node queries and transaction submission are built in ShelleyBasedEraConway, and provider era histories are parsed as exactly seven eras, so after the fork they target the wrong era or fail until each is generalised or moved to Dijkstra.",
       "evidence": [
         {
           "repo": "geniusyield/atlas",
@@ -33,6 +33,13 @@
           "path": "src/GeniusYield/Providers/Node.hs",
           "line": 51,
           "quote": "  res <- Api.submitTxToNodeLocal info $ Api.TxInMode Api.ShelleyBasedEraConway (txToApi tx)"
+        },
+        {
+          "repo": "geniusyield/atlas",
+          "revision": "c3adfb416242ea25a244bfaa1614213eecdc55d9",
+          "path": "src/GeniusYield/Providers/Common.hs",
+          "line": 157,
+          "quote": "parseEraHist mkEra [byronEra, shelleyEra, allegraEra, maryEra, alonzoEra, babbageEra, conwayEra] ="
         }
       ]
     },

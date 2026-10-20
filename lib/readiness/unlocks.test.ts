@@ -65,3 +65,10 @@ test("inherited gaps without a decision are listed as unread", () => {
   assert.deepEqual(blockers.unread, [{ via: "ogmios", surfaces: ["block-encoding"] }]);
   assert.deepEqual(unlockReport([unread], leads, boundary).bumpReady.map((b) => b.unread), [["ogmios"]], "a bump-ready tool still shows what is unread");
 });
+
+test("the fix order adds, at each step, the component that unlocks the most on top of the earlier ones", () => {
+  assert.deepEqual(unlockReport(tools, leads, boundary).fixOrder, [
+    { component: "scalus", added: ["dapp", "indexer", "mesh"], unlocked: 3 },
+    { component: "sdk", added: ["wallet"], unlocked: 4 },
+  ]);
+});

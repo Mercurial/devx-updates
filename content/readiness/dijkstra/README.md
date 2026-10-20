@@ -266,6 +266,30 @@ wrong cardano-node-api lead (it evaluates PlutusV4 at line 1233 of
 --reclassify` recomputes at the recorded revisions, reusing cached scans and
 rescanning at the same revision when the rules changed.
 
+### Service-layer reading (2026-10-20)
+
+Moving Ogmios, Kupo, db-sync, Koios and Blockfrost RYO to `gap` added 221
+inherited links across 117 tools; every one is now decided (`leads.json` has
+393 entries, 913 tool/dependency/surface decisions, all quotes re-read with
+`--verify-sources`). Service links are decided per capability the tool uses:
+
+| Service | Reached when shipped code… | Tools confirmed |
+| --- | --- | --- |
+| Ogmios | follows the chain (block, transaction, era), submits (transaction, era), evaluates (Plutus, transaction) or reads parameters | 37 |
+| Kupo | reads any indexed data; Kupo cannot index Dijkstra blocks, so matches stop at the fork | 21 |
+| db-sync | reads chain tables (block, transaction, era); parameters and pools only through `epoch_param` and pool tables | 13 |
+| Koios | reads era fields (`/tip`, block and epoch info) or `/epoch_params` / `/cli_protocol_params` | 22 |
+| Blockfrost RYO | calls `/network/eras` (throws on protocol 12) or the epoch parameter endpoints | 41 |
+
+97 tools now have a confirmed gap (70 outside the boundary, 27 boundary
+components). Typical not-reached cases: tools that implement these APIs
+themselves (Dingo, Dolos, Yaci Store, Yano, Gerolamo), providers used only for
+UTxOs and submission, and services named only in comments, fixtures or
+deployment examples. Undetermined: CAB and CTL relay through code outside the
+repository, and koios-python exposes a generic Ogmios passthrough. Atlas also
+parses provider era histories as exactly seven eras, so its Ogmios and
+Blockfrost providers fail once the history includes Dijkstra.
+
 ## Unlock report (`unlocks.json`)
 
 `unlocks` turns the three registers into the dependency view: what a fix in
@@ -278,24 +302,32 @@ unlocked boundary component then counts as fixed for its own consumers, so
 chains such as Scalus → Mesh → dApps are followed. `downstream` lists tools
 with an unconfirmed shipped link to anything unlocked.
 
-| Fix | Unlocks | Still waiting |
+Most SDKs wait on several services at once (Kupo for UTxOs, Ogmios for
+submission, Blockfrost or Koios for parameters), so single fixes understate the
+effect. `fixOrder` adds, at each step, the component that unlocks the most
+tools on top of the earlier steps:
+
+| Step | Fix | Tools unlocked (running total) |
 | --- | --- | --- |
-| CSL (PlutusV4 language) | Yoroi, cardano-dev-wallet, cardano-hw-cli, csl-mobile-bridge, Hydra SDK, Masumi, cardano-rosetta-legacy, Whisky, Cquisitor | |
-| Scalus (V4 evaluation) | Evolution SDK, Lucid Evolution, yaci-store, Yano | Mesh also needs cardano-js-sdk |
-| cardano-js-sdk (parameter keys 38–56) | Blaze, Lace, Nami | Mesh also needs Scalus |
-| cardano-wallet (V23 proposal) | Daedalus, cardano-wallet-js | |
-| ouroboros-miniprotocols-ts (V23) | Gerolamo | |
+| 1 | Blockfrost RYO | 14 |
+| 2 | Ogmios | 27 |
+| 3 | Kupo | 39 |
+| 4 | Koios | 52 |
+| 5 | db-sync | 61 |
+| 6 | CSL | 70 |
+| 7 | Scalus | 74 |
+| 8 | cardano-js-sdk | 78 |
+| 9 | cardano-wallet | 80 |
+| 10 | ouroboros-miniprotocols-ts | 81 |
 
-Fixing Scalus and cardano-js-sdk together also unlocks Mesh and reaches twelve
-downstream tools with unconfirmed links (for example Sundae SDK through Blaze,
-cardano-rosetta-java and cf-ledger-sync through yaci-store, GeniusYield SDK
-through Lucid Evolution).
+The service layer alone (steps 1–5) unlocks 61 tools; Adder and Hydra stay
+blocked by their own gaps.
 
-**11 tools have a released upstream fix**, so the next move is theirs:
-txtop, Bursa, cardano-node-api and the IBC incubator (gouroboros v0.213.0);
-Scrolls (Pallas v0.35.1); cf-ledger-sync (yaci v0.3.10); Marlowe, Marconi,
-sc-tools, Midgard and Atlas (cardano-api 11.8). Ogmios, Kupo and Kuber left
-this list on 2026-10-20: their own R2 status is now a gap.
+**6 tools have a released upstream fix**, so the next move is theirs: txtop,
+Bursa and cardano-node-api (gouroboros v0.213.0); cf-ledger-sync (yaci
+v0.3.10); Marlowe and Marconi (cardano-api 11.8). The IBC incubator, Scrolls,
+sc-tools, Midgard and Atlas left this list once their service links were read:
+they also wait on Ogmios, Kupo or Blockfrost.
 
 Raising the pin is only the minimum. The unlock report derives each step's
 distance (`steps`): ten of the eleven cross a breaking release (a 0.x minor
@@ -310,8 +342,6 @@ revision, whether the tool's own code handles the new era:
 | generic (only era-generic library entry points) | txtop, Scrolls |
 | undetermined | cardano-node-api (UTxO results decoded as Babbage outputs) |
 
-Seven of the eleven also inherit gaps through Ogmios, Kupo, db-sync, Koios or
-Blockfrost RYO that have not been read yet (`unread`).
 
 ```sh
 node --import tsx scripts/readiness/cli.ts check-upgrades [--verify-sources]  # every bump-ready tool read, none stale
