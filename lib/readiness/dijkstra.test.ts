@@ -39,6 +39,9 @@ test("the register rejects open vocabularies, unpinned citations and unsupported
   ];
   for (const [name, register, error] of invalid) assert.throws(() => parseChangeRegister(register), error, name);
   assert.doesNotThrow(() => parseChangeRegister(mutate((r) => { r.changes[0].basis = "provisional"; r.changes[0].citations = []; })), "provisional claims may await citations");
+  const unchanged = (citations: unknown[]) => mutate((r) => { Object.assign(r, { unchanged: [{ id: "n2n", title: "Node-to-node", summary: "Same versions.", citations }] }); });
+  assert.equal(parseChangeRegister(unchanged([base().changes[0].citations[0]])).unchanged[0].id, "n2n");
+  assert.throws(() => parseChangeRegister(unchanged([])), /unchanged\[0\] needs at least one citation/, "an absence of change is cited too");
 });
 
 test("citation verification reads each pinned file once and reports moved or missing quotes", async () => {

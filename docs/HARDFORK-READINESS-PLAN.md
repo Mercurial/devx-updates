@@ -13,7 +13,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
 - [x] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection for registered profiles.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
-- [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
+- [x] R1: Dijkstra change register and surface vocabulary — 19 changes and 2 checked-unchanged areas, 71 verified citations; JSON representations beyond the era commands remain a known limit.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
 - [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap decided from shipped code (21 tools outside the boundary and 16 boundary components confirmed); unlock report derived.
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
@@ -149,6 +149,18 @@ core, cardano-client-lib, PyCardano, cometa, plu-ts/harmoniclabs), chain-sync an
 query services (Ogmios, Kupo, db-sync, cardano-wallet, Oura, Dolos), evaluators
 and script languages, and API providers.
 
+### R1 completion (2026-10-20)
+
+The remaining reads are in `changes.json`. Two changes were added:
+`dijkstra-genesis-config` (a new `node-configuration` surface: the node reads
+the Dijkstra genesis and fork epoch only with `ExperimentalHardForksEnabled`,
+which also switches it to forging protocol version 12, and cardano-testnet's
+default configuration leaves that flag off) and `query-pparams-encoding`
+(local-state-query protocol parameters grow from 31 to 54 positional fields in
+the Dijkstra era). Node-to-node versions and the query set were read and found
+unchanged; the register now records such cited absences in `unchanged`. R3 got a
+`genesis-config` marker for configuration and genesis generators.
+
 ### R2 checkpoint (2026-10-19)
 
 `content/readiness/dijkstra/boundary.json` records 61 catalog components that
@@ -276,8 +288,8 @@ earliest tag containing every cited quote), and `classify-surfaces
 ### Boundary propagation and unlocks (2026-10-20)
 
 The 26 dependency gaps between boundary components were decided the same way
-(`leads.json` now holds 170 decisions: 90 confirmed, 59 not reached,
-21 undetermined). 16 boundary components have a confirmed gap through another
+(`leads.json` now holds 170 decisions: 90 confirmed, 65 not reached,
+15 undetermined). 16 boundary components have a confirmed gap through another
 component: Evolution SDK, Lucid Evolution, Mesh and yaci-store through Scalus;
 Blaze and Mesh through cardano-js-sdk; Whisky and Cquisitor through CSL; Adder,
 Scrolls and cf-ledger-sync through node-to-client libraries without V23; and

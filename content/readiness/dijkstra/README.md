@@ -44,6 +44,11 @@ scope and activation follow the Hard Fork Working Group's
 | stake-pool-registration | `pool-bls-key` | Pool explorers/registries, SPO tooling |
 | cardano-cli / cardano-api-haskell | `cli-dijkstra` | Operator scripts, Haskell consumers |
 | consensus-participation | `leios-peras-consensus` | Block producers |
+| node-configuration | `dijkstra-genesis-config` | Configuration and genesis generators, devnet tools, SPO tooling |
+
+`query-pparams-encoding` also touches protocol-parameters and node-to-client:
+local-state-query answers for current and future protocol parameters grow from
+Conway's 31 positional fields to 54.
 
 ## Findings that need attention first
 
@@ -61,12 +66,29 @@ scope and activation follow the Hard Fork Working Group's
 4. **Closed enums.** New native-script type 6, redeemer tag 6, script/language
    tag for PlutusV4, body keys 23–27, witness key 8, parameter keys 34–56.
 
+## Checked and unchanged
+
+`unchanged` in `changes.json` cites areas read at the target and found unchanged:
+
+- **Node-to-node versions** (`node-to-node-versions`): node 11.2 offers V14–V16
+  with V15 as latest released, exactly like node 11.1. Peras diffusion is behind
+  consensus feature flags and the node starts with none, so relays and
+  alternative node implementations see no node-to-node change at the upgrade.
+- **Local-state-query set** (`query-set`): only Shelley query version 15 inside
+  V23, as before. Answers change shape with the era instead
+  (`query-pparams-encoding`).
+
+## Devnet setup (R4)
+
+`dijkstra-genesis-config` is what a Dijkstra devnet needs: the node reads
+`DijkstraGenesisFile` and `TestDijkstraHardForkAtEpoch` only with
+`ExperimentalHardForksEnabled: true`, which also makes it forge protocol
+version 12. cardano-testnet's default configuration leaves that flag off since
+PR 6541, so a `--dijkstra-era` testnet must set it explicitly. The genesis file
+holds the 24 upgrade parameters, including the PlutusV4 cost model as an array.
+
 ## Not yet covered
 
-- Node-to-node changes (new Leios mini-protocols) and their effect on relays and
-  alternative node implementations.
-- Local-state-query result encodings and Dijkstra genesis configuration, which
-  are needed for devnet setup (R4).
 - JSON representations in cardano-api/cli beyond the era commands.
 
 ## Boundary register (`boundary.json`)
@@ -124,7 +146,9 @@ inherits. Each tool's repository was scanned at its default-branch head:
   or the submit API.
 - **marker**: closed era lists, PlutusV3 enums, cost models, raw CBOR codecs,
   segregated block-body fields, legacy stake certificates, script context,
-  pool registration or node-to-client code. Markers show a surface is touched
+  pool registration, node-to-client code or node configuration and genesis
+  files (35 tools, among them Guild Operators, Yaci DevKit, Hydra, Mithril,
+  Dandelion and Plutip). Markers show a surface is touched
   but never set readiness.
 
 Prose (docs, READMEs, changelogs) and comments in manifests never establish
@@ -172,14 +196,14 @@ decided in `leads.json`.
 `leads.json` decides, for every tool that inherits a gap (35 outside the
 boundary and 23 boundary components inheriting from other components), whether
 shipped code actually reaches it, per tool, dependency and surface
-(170 decisions in 85 entries, each quoting the lines it rests on):
+(170 decisions in 86 entries, each quoting the lines it rests on):
 
 - `confirmed`: a shipped path uses the gapped capability, so the tool fails or
   misbehaves after the hardfork until the dependency moves (90 surfaces).
 - `not-reached`: shipped code uses the dependency only outside the gap
-  (59 surfaces).
+  (65 surfaces).
 - `undetermined`: reading cannot decide; R4 execution or the maintainer must
-  (21 surfaces).
+  (15 surfaces).
 
 **21 tools outside the boundary have a confirmed gap:**
 

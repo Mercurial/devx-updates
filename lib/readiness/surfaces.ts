@@ -109,6 +109,8 @@ export const RULES: Rule[] = [
   marker("legacy-stake-certificate", /\bstake[_-]?registration\b|\bStakeRegistration\b|\bstake[_-]?deregistration\b|\bStakeDeregistration\b/i, ["transaction-encoding"]),
   marker("script-context", /\bScriptContext\b|\bTxInfo\b|\bscript[_-]context\b/, ["plutus-script-context"]),
   marker("pool-registration", /\bpool[_-]?registration\b|\bPoolRegistration\b|\bpool[_-]?params\b|\bPoolParams\b/i, ["stake-pool-registration"]),
+  // Configuration and genesis generators: every node configuration names the Conway genesis, a Dijkstra one adds another.
+  marker("genesis-config", /\b(?:ConwayGenesisFile|ConwayGenesisHash|conway-genesis\.json|DijkstraGenesisFile|TestConwayHardForkAtEpoch)\b/, ["node-configuration"]),
   marker("node-to-client", /\bNodeToClient\b|\bnode[-_ ]to[-_ ]client\b|\bn2c\b|\bLocalStateQuery\b|\blocal[-_ ]?state[-_ ]?query\b/i, ["node-to-client-protocol"]),
 ];
 

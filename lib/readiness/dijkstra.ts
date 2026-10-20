@@ -21,6 +21,8 @@ export interface ChangeRegister {
   scope: { id: string; title: string; activation: Activation }[];
   surfaces: { id: string; description: string }[];
   changes: Change[];
+  /** Areas read at the target and found unchanged, so the absence of a change is itself cited. */
+  unchanged: { id: string; title: string; summary: string; citations: Citation[] }[];
 }
 
 const ID = /^[a-z0-9]+(?:[.-][a-z0-9]+)*$/;
@@ -88,14 +90,21 @@ export function parseChangeRegister(raw: unknown): ChangeRegister {
   const used = new Set(changes.flatMap((c) => c.surfaces));
   const unused = surfaces.filter((s) => !used.has(s.id)).map((s) => s.id);
   if (unused.length) throw new Error(`Surfaces without any change: ${unused.join(", ")}`);
-  return { schemaVersion: 1, target, scope, surfaces, changes };
+  const unchanged = (root.unchanged === undefined ? [] : list(root.unchanged, "unchanged")).map((item, i) => {
+    const label = `unchanged[${i}]`, u = object(item, label);
+    const citations = list(u.citations, `${label}.citations`).map((entry, j) => citation(entry, `${label}.citations[${j}]`));
+    if (!citations.length) throw new Error(`${label} needs at least one citation`);
+    return { id: text(u.id, `${label}.id`), title: text(u.title, `${label}.title`), summary: text(u.summary, `${label}.summary`), citations };
+  });
+  uniqueIds(unchanged, "unchanged");
+  return { schemaVersion: 1, target, scope, surfaces, changes, unchanged };
 }
 
 export type SourceReader = (repo: string, revision: string, path: string) => Promise<string>;
 
 /** Check every citation's quote still sits on its recorded line at the pinned revision. */
 export async function verifyCitations(register: ChangeRegister, read: SourceReader): Promise<string[]> {
-  return verifyQuotes(register.changes.flatMap((change) => change.citations.map((c): [string, Citation] => [change.id, c])), read);
+  return verifyQuotes([...register.changes, ...register.unchanged].flatMap((entry) => entry.citations.map((c): [string, Citation] => [entry.id, c])), read);
 }
 
 /** Read each pinned file once and report every labelled quote that is not on its recorded line. */

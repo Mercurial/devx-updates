@@ -72,9 +72,24 @@
     "protocol-parameters",
     "transaction-rules"
    ],
-   "decision": "undetermined",
-   "summary": "No shipped path reads blocks, protocol parameters, consensus data or applies ledger rules; left to execution.",
-   "evidence": []
+   "decision": "not-reached",
+   "summary": "txtop imports only the gouroboros root, ledger and ledger/common packages and uses LocalTxMonitor; it reads no blocks or protocol parameters and applies no ledger or consensus rules.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/txtop",
+     "revision": "86a013e714aff6eb704326f7b646f9ab967e41db",
+     "path": "main.go",
+     "line": 32,
+     "quote": "\"github.com/blinklabs-io/gouroboros/ledger\""
+    },
+    {
+     "repo": "blinklabs-io/txtop",
+     "revision": "86a013e714aff6eb704326f7b646f9ab967e41db",
+     "path": "main.go",
+     "line": 351,
+     "quote": "txRawBytes, err := oConn.LocalTxMonitor().Client.NextTx()"
+    }
+   ]
   },
   {
    "tool": "txtop",
@@ -219,12 +234,30 @@
    "via": "gouroboros",
    "surfaces": [
     "block-encoding",
+    "protocol-parameters"
+   ],
+   "decision": "not-reached",
+   "summary": "Bursa decodes no blocks, and reads the fee-relevant protocol parameters from cardano-cli JSON with its own parser rather than gouroboros types.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/bursa",
+     "revision": "129d9340ff83afbe151f00e9eaaf7714a0961866",
+     "path": "transaction.go",
+     "line": 421,
+     "quote": "func ParseProtocolParams(data []byte) (ProtocolParams, error) {"
+    }
+   ]
+  },
+  {
+   "tool": "bursa",
+   "revision": "129d9340ff83afbe151f00e9eaaf7714a0961866",
+   "via": "gouroboros",
+   "surfaces": [
     "consensus-participation",
-    "protocol-parameters",
     "transaction-rules"
    ],
    "decision": "undetermined",
-   "summary": "Block, parameter, consensus and rule surfaces have no identified shipped path; left to execution.",
+   "summary": "Bursa generates KES and VRF keys and builds transactions; whether Peras/Leios participation or the Dijkstra rules affect them needs execution.",
    "evidence": []
   },
   {

@@ -8,7 +8,7 @@ import type { ChangeRegister } from "./dijkstra";
 import { classifyTool, rankClassifications, RULES, scannable, scanSources, type RepositoryActivity, type Scan, type ToolClassification } from "./surfaces";
 
 /** Rule identity: cached scans are reused only while the rule set is unchanged. */
-export const SCANNER_VERSION = 10;
+export const SCANNER_VERSION = 11;
 export const RULES_DIGEST = digest([SCANNER_VERSION, ...RULES.map((r) => [r.id, r.pattern.source, r.pattern.flags, r.files?.source ?? null, r.component ?? null, r.surfaces ?? null, r.readiness ?? null, r.excludeSurfaces ?? null])]);
 
 const git = (cwd: string, args: string[], timeout = 300000) =>

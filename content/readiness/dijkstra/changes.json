@@ -210,6 +210,10 @@
     {
       "id": "consensus-participation",
       "description": "Block production and voting duties of node operators."
+    },
+    {
+      "id": "node-configuration",
+      "description": "Node configuration keys and genesis files that operators, devnet and testnet tooling generate or read."
     }
   ],
   "changes": [
@@ -920,6 +924,195 @@
           "path": "eras/dijkstra/impl/CHANGELOG.md",
           "line": 71,
           "quote": "seats the Leios voting committee (CIP-0164)"
+        }
+      ]
+    },
+    {
+      "id": "dijkstra-genesis-config",
+      "title": "Dijkstra genesis file and experimental hard-fork gating in node configuration",
+      "scope": [
+        "era",
+        "node-release"
+      ],
+      "activation": "node-11.2-upgrade",
+      "surfaces": [
+        "node-configuration",
+        "protocol-parameters"
+      ],
+      "compatibility": "interface-change",
+      "basis": "source-verified",
+      "summary": "Node 11.2 reads DijkstraGenesisFile (and optional DijkstraGenesisHash) and the TestDijkstraHardForkAt* keys only when ExperimentalHardForksEnabled is true; without a file it uses an empty genesis. The genesis holds the Dijkstra upgrade parameters (reference-script limits, pool leverage and margin, the PlutusV4 cost model as an array, Leios and Peras parameters, reference-input costs). The same flag switches the node's protocol version from 11 to 12, and cardano-testnet's default configuration leaves it off.",
+      "affects": "Configuration and genesis generators and devnet tools (cardano-testnet, Yaci DevKit, cardano-up, SPO guild tooling, Docker images), anything that hashes or validates the set of genesis files, and R4 devnet setup.",
+      "citations": [
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Configuration/POM.hs",
+          "line": 648,
+          "quote": "npcDijkstraGenesisFile     <- v .:  \"DijkstraGenesisFile\""
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Configuration/POM.hs",
+          "line": 361,
+          "quote": "<*> (if npcExperimentalHardForksEnabled hfp then Just <$> parseDijkstraProtocol v else pure Nothing)"
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Configuration/POM.hs",
+          "line": 687,
+          "quote": "then (,) <$>  v .:? \"TestDijkstraHardForkAtEpoch\" <*> v .:? \"TestDijkstraHardForkAtVersion\""
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Protocol/Cardano.hs",
+          "line": 139,
+          "quote": "Nothing -> pure Dijkstra.emptyDijkstraGenesis"
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Protocol/Cardano.hs",
+          "line": 193,
+          "quote": "then ProtVer (natVersion @12) 0"
+        },
+        {
+          "repo": "IntersectMBO/cardano-ledger",
+          "revision": "54e24ba4858b5f5cb4c5f6f0adfa3d7cae669b7a",
+          "path": "eras/dijkstra/impl/src/Cardano/Ledger/Dijkstra/Genesis.hs",
+          "line": 33,
+          "quote": "{ dgUpgradePParams :: UpgradeDijkstraPParams Identity DijkstraEra"
+        },
+        {
+          "repo": "IntersectMBO/cardano-ledger",
+          "revision": "54e24ba4858b5f5cb4c5f6f0adfa3d7cae669b7a",
+          "path": "eras/dijkstra/impl/src/Cardano/Ledger/Dijkstra/PParams.hs",
+          "line": 450,
+          "quote": "udppPlutusV4CostModel <- parseCostModelAsArray False PlutusV4 =<< o .: \"plutusV4CostModel\""
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-testnet/CHANGELOG.md",
+          "line": 51,
+          "quote": "- Disable `ExperimentalHardForksEnabled` in the default testnet config."
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-testnet/src/Testnet/Defaults.hs",
+          "line": 318,
+          "quote": ", (\"TestDijkstraHardForkAtEpoch\", Aeson.Number 0)"
+        }
+      ]
+    },
+    {
+      "id": "query-pparams-encoding",
+      "title": "Protocol parameters returned by local state query grow from 31 to 54 positional fields",
+      "scope": [
+        "era",
+        "leios",
+        "peras",
+        "refscript-params"
+      ],
+      "activation": "pv12",
+      "surfaces": [
+        "protocol-parameters",
+        "node-to-client-protocol"
+      ],
+      "compatibility": "decode-break",
+      "basis": "source-verified",
+      "summary": "Protocol parameters are encoded as a CBOR array of the era's parameter list. Dijkstra keeps Conway's 31 entries in order and appends 23 (reference-script limits and cost, pool leverage and margin, Leios, Peras, reference-input costs), so GetCurrentPParams and GetFuturePParams answers become 54-element arrays once the era is Dijkstra.",
+      "affects": "Local-state-query clients that decode current or future protocol parameters with a fixed Conway length: query libraries, fee calculators, Ogmios/Kupo-style bridges, wallets reading parameters through the node.",
+      "citations": [
+        {
+          "repo": "IntersectMBO/cardano-ledger",
+          "revision": "54e24ba4858b5f5cb4c5f6f0adfa3d7cae669b7a",
+          "path": "libs/cardano-ledger-core/src/Cardano/Ledger/Core/PParams.hs",
+          "line": 206,
+          "quote": "encodeListLen (fromIntegral (length (eraPParams @era)))"
+        },
+        {
+          "repo": "IntersectMBO/cardano-ledger",
+          "revision": "54e24ba4858b5f5cb4c5f6f0adfa3d7cae669b7a",
+          "path": "eras/dijkstra/impl/src/Cardano/Ledger/Dijkstra/PParams.hs",
+          "line": 773,
+          "quote": "    , ppMaxRefScriptSizePerBlock"
+        },
+        {
+          "repo": "IntersectMBO/cardano-ledger",
+          "revision": "54e24ba4858b5f5cb4c5f6f0adfa3d7cae669b7a",
+          "path": "eras/dijkstra/impl/src/Cardano/Ledger/Dijkstra/PParams.hs",
+          "line": 795,
+          "quote": "    , ppRefInputsCostPerDatumByte"
+        },
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "4ab9e25069c24be341fb96887a416443f822d01c",
+          "path": "ouroboros-consensus-cardano/src/shelley/Ouroboros/Consensus/Shelley/Ledger/Query.hs",
+          "line": 131,
+          "quote": "  GetCurrentPParams ::"
+        }
+      ]
+    }
+  ],
+  "unchanged": [
+    {
+      "id": "node-to-node-versions",
+      "title": "Node-to-node versions and running mini-protocols",
+      "summary": "Node 11.2 offers node-to-node V14-V16 with V15 as the latest released version, exactly as node 11.1. Consensus carries Peras certificate and vote diffusion behind feature flags, and the node starts with an empty flag set, so relays and alternative node implementations see no node-to-node change at the 11.2 upgrade; Peras and Leios diffusion arrive with their intra-era activation.",
+      "citations": [
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "4ab9e25069c24be341fb96887a416443f822d01c",
+          "path": "ouroboros-consensus-cardano/src/ouroboros-consensus-cardano/Ouroboros/Consensus/Cardano/Node.hs",
+          "line": 324,
+          "quote": "[ (NodeToNodeV_14, CardanoNodeToNodeVersion2)"
+        },
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "4ab9e25069c24be341fb96887a416443f822d01c",
+          "path": "ouroboros-consensus-cardano/src/ouroboros-consensus-cardano/Ouroboros/Consensus/Cardano/Node.hs",
+          "line": 349,
+          "quote": "latestReleasedNodeVersion _prx = (Just NodeToNodeV_15, Just NodeToClientV_23)"
+        },
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "82ecba329d7d054340bf707d44fe6e9ac27cec40",
+          "path": "ouroboros-consensus-cardano/src/ouroboros-consensus-cardano/Ouroboros/Consensus/Cardano/Node.hs",
+          "line": 439,
+          "quote": "[ (NodeToNodeV_14, CardanoNodeToNodeVersion2)"
+        },
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "82ecba329d7d054340bf707d44fe6e9ac27cec40",
+          "path": "ouroboros-consensus-cardano/src/ouroboros-consensus-cardano/Ouroboros/Consensus/Cardano/Node.hs",
+          "line": 456,
+          "quote": "latestReleasedNodeVersion _prx = (Just NodeToNodeV_15, Just NodeToClientV_23)"
+        },
+        {
+          "repo": "IntersectMBO/cardano-node",
+          "revision": "34ae34db891105d2d17ad9b2704cb56423103da6",
+          "path": "cardano-node/src/Cardano/Node/Run.hs",
+          "line": 430,
+          "quote": ", rnFeatureFlags = mempty -- TODO(10.7) forward this to CLI options?"
+        }
+      ]
+    },
+    {
+      "id": "query-set",
+      "title": "Local state query set",
+      "summary": "Inside node-to-client V23 the Shelley-based query version is ShelleyNodeToClientVersion15 only, the same query set as the baseline: no query is added or removed. What changes is the era of the answers (see query-pparams-encoding).",
+      "citations": [
+        {
+          "repo": "IntersectMBO/ouroboros-consensus",
+          "revision": "4ab9e25069c24be341fb96887a416443f822d01c",
+          "path": "ouroboros-consensus-cardano/src/shelley/Ouroboros/Consensus/Shelley/Ledger/NetworkProtocolVersion.hs",
+          "line": 36,
+          "quote": "[ (NodeToClientV_23, ShelleyNodeToClientVersion15)"
         }
       ]
     }
