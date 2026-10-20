@@ -411,6 +411,22 @@ npm run readiness -- check-boundary --verify-sources  # also re-read every sourc
 Statuses age quickly: re-observe a component (new head, release and trackers)
 before relying on an entry older than a week.
 
+`content/readiness/dijkstra/classification.json` classifies every catalog tool
+by the changed surfaces it touches (R3). It is regenerated from default-branch
+heads:
+
+```sh
+npm run readiness -- classify-surfaces                     # all tools, six repositories at a time
+npm run readiness -- classify-surfaces --tools ogmios,kupo # a subset (writes the same output file)
+```
+
+Each repository is fetched shallowly with files over 1 MiB omitted, scanned and
+then deleted; scans are cached in `.readiness/surface-scans/` per revision and
+rule digest, so an interrupted run resumes and an unchanged repository is not
+fetched again. Hits are lexical leads: a dependency or service hit inherits the
+R2 status of the component behind it, markers only show that a surface is
+touched, and prose (docs, READMEs, changelogs) never establishes exposure.
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow

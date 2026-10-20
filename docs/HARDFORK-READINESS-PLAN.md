@@ -15,7 +15,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 - [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
-- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers).
+- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — first full scan delivered (227 scanned, 42 without public source); quote confirmation of top-ranked leads remains.
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
@@ -187,6 +187,45 @@ nothing about unpublished work; statuses must be re-observed before use. Next:
 R3 classifies all 269 tools by direct dependencies on these components,
 service calls and era/format markers, using `dependsOn` and the component
 versions where readiness was first released.
+
+### R3 checkpoint (2026-10-19)
+
+`content/readiness/dijkstra/classification.json` classifies all 269 catalog
+tools. `classify-surfaces` fetches each repository's default-branch head
+shallowly (files over 1 MiB omitted), applies closed surface rules, caches the
+scan per revision and rule digest, and deletes the checkout. 227 tools were
+scanned; 42 have no public repository. Rules are lexical leads with recorded
+path, line and quote; prose never establishes exposure and markers never set
+readiness.
+
+Exposure: 65 implements (61 boundary components and the four 11.2 upstream
+tools), 93 dependency, 42 service, 9 marker only, 18 none found, 42 unknown.
+Readiness for tools outside the boundary: 35 gap, 20 in-progress, 13 upstream,
+2 released, 58 no-evidence and 76 unassessed.
+
+Findings that change priorities:
+
+- **Gaps propagate further than R2 shows.** 35 non-boundary tools inherit a
+  gap: Daedalus and cardano-wallet-js (cardano-wallet node-to-client), Gerolamo
+  (ouroboros-miniprotocols-ts), six Go tools pinned below gouroboros v0.213.0,
+  19 CSL consumers that cannot represent PlutusV4, and Lace, Daedalus, Nami and
+  Hyperledger Identus through cardano-js-sdk protocol parameters.
+- **Version constraints, not component status, decide many cases.** The
+  classifier compares each manifest constraint with the release R2 records
+  (exact Go pins, Cargo/Poetry caret, Cabal PVP majors, lower bounds ignored).
+- **Service coupling is the widest channel**: Blockfrost 80 tools, node
+  sockets 75, Ogmios 65, cardano-cli 52, Koios 38, db-sync 35, Kupo 32. Hosted
+  provider readiness is not yet assessed, so these surfaces stay `no-evidence`
+  or `unassessed`.
+
+Limits: lexical rules cannot tell whether a dependency's changed feature is
+used; tests and examples count as code; umbrella Pallas crates are attributed
+the node-to-client surface whether or not the mini-protocols are used; the 42
+tools without public source need documented-service or maintainer evidence.
+Next: confirm the top-ranked leads from their quotes, add hosted API providers
+to R2, then start R4 devnet checks for the components behind the most
+inherited gaps (cardano-wallet, gouroboros consumers, CSL, cardano-js-sdk) and
+R5 outreach for the 37 no-evidence boundary components.
 
 ### Implementation log
 

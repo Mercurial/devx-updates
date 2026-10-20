@@ -1,4 +1,4 @@
-# Dijkstra change and boundary registers
+# Dijkstra change, boundary and classification registers
 
 `changes.json` lists what the Dijkstra hard fork (protocol version 12) changes,
 which **surface** each change touches, when it takes effect, and the exact source
@@ -104,12 +104,74 @@ What it shows:
    the chain followers built on Pallas (Oura, Dolos, Mithril) wait for a Pallas
    release with Dijkstra traversal.
 
+## Classification of all catalog tools (`classification.json`)
+
+`classification.json` records, for every one of the 269 catalog tools, which
+changed surfaces it touches, through which channel, and the readiness it
+inherits. Each tool's repository was scanned at its default-branch head:
+
+- **implements**: the tool is a boundary component (R2) or the 11.2 component
+  set itself (cardano-node, cardano-cli, cardano-submit-api, cardano-testnet).
+- **dependency**: a manifest depends on a boundary component or on the Haskell
+  ledger/consensus/API packages. When R2 names the release that added a
+  surface's support, a version constraint that cannot reach that release is a
+  `gap` (Go pins exactly, Cargo and Poetry default to caret, Cabal `^>=` is a
+  PVP major, lower bounds never count).
+- **service**: code calls Blockfrost, Koios, Maestro, Ogmios, Kupo, db-sync,
+  UTxO RPC/Dolos, the cardano-wallet API, a node socket, cardano-cli commands
+  or the submit API.
+- **marker**: closed era lists, PlutusV3 enums, cost models, raw CBOR codecs,
+  segregated block-body fields, legacy stake certificates, script context,
+  pool registration or node-to-client code. Markers show a surface is touched
+  but never set readiness.
+
+Prose (docs, READMEs, changelogs) and comments in manifests never establish
+exposure. Every hit records path, line and a quote at the scanned revision.
+
+| Exposure | Tools |
+| --- | --- |
+| implements | 65 |
+| dependency | 93 |
+| service | 42 |
+| marker only | 9 |
+| none found | 18 |
+| no public source | 42 |
+
+Changed surfaces touched through coupling (implements, dependency or service):
+transaction encoding 181, era identity 178, protocol parameters 178,
+PlutusV4/language 166, block encoding 142, node-to-client 135, transaction
+rules 135, stake-pool registration 125, script context 75, cardano-cli 52,
+consensus participation 29, cardano-api 28. The most used services are
+Blockfrost (80), node sockets (75), Ogmios (65), cardano-cli (52), Koios (38),
+db-sync (35) and Kupo (32).
+
+What it adds to R2:
+
+1. **35 tools outside the boundary inherit a gap.** Node-to-client: Daedalus
+   and cardano-wallet-js through cardano-wallet; Gerolamo through
+   ouroboros-miniprotocols-ts; Bursa, cardano-node-api, cardano-up, txtop,
+   Chrysalis and the IBC incubator through gouroboros below v0.213.0. PlutusV4:
+   19 tools through CSL (Yoroi, GovTool, Catalyst Voices, cardano-signer,
+   cardano-hw-cli, Marlowe and others). Protocol parameters: Lace, Daedalus,
+   Nami and Hyperledger Identus through cardano-js-sdk.
+2. **Pinned versions matter more than the component's status.** gouroboros is
+   released, but six Go tools pin versions without V23; Pallas has offered V23
+   since v0.35.1, but Scrolls, Mumak and Gastronomy pin older umbrella crates.
+3. **42 catalog entries have no public source** (hosted wallets, explorers,
+   API providers such as Blockfrost, Maestro, NOWNodes and GetBlock). Their
+   exposure can only come from documented services or maintainers (R5).
+
+The scan is lexical. A dependency proves coupling to a component, not use of a
+changed feature; a service hit can be a test or an example. Use the recorded
+quotes to confirm before contacting maintainers.
+
 ## Checking it
 
 ```sh
 node --import tsx scripts/readiness/cli.ts check-changes                   # structure and vocabulary
 node --import tsx scripts/readiness/cli.ts check-changes --verify-sources  # re-read every quote via gh
 node --import tsx scripts/readiness/cli.ts check-boundary [--verify-sources] # boundary register, worst status per component
+node --import tsx scripts/readiness/cli.ts classify-surfaces                  # rescan every catalog tool (resumable)
 ```
 
 Every citation records repository, 40-character revision, path, line and an

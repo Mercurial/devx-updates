@@ -1,6 +1,6 @@
 import { compareSnapshots } from "../../lib/readiness/comparison";
 import { execFileSync } from "node:child_process";
-import { existsSync } from "node:fs";
+import { existsSync, writeFileSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { parseArgs } from "node:util";
 import type { Graph } from "../../lib/map-types";
@@ -24,6 +24,7 @@ import { investigationProjects, parseAssignments, summarizeWork, workReport } fr
 import { scanIntegrations } from "../../lib/readiness/integration-scan";
 import { changesBySurface, parseChangeRegister, verifyCitations } from "../../lib/readiness/dijkstra";
 import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../../lib/readiness/boundary";
+import { classifyCatalog } from "../../lib/readiness/surface-collect";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -79,6 +80,7 @@ import-review   --packet packet.json --input result.json [--decisions decisions.
 diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json.gz]
 check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sources]
 check-boundary  [--input content/readiness/dijkstra/boundary.json] [--verify-sources]
+classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness]
                 Validate the hardfork change register; optionally re-read every cited quote via gh
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
@@ -128,6 +130,17 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     if (failures.length) throw new Error(`${failures.length} citations no longer match their pinned sources`);
     const evidence = register.components.reduce((sum, c) => sum + c.assessments.reduce((n, a) => n + a.evidence.length, 0), 0);
     console.log(JSON.stringify({ components: register.components.length, evidence, sourcesVerified: Boolean(values["verify-sources"]), byWorstStatus: statusSummary(register) }, null, 2));
+    return;
+  }
+  if (command === "classify-surfaces") {
+    const changes = parseChangeRegister(readJson("content/readiness/dijkstra/changes.json"));
+    const boundary = parseBoundaryRegister(readJson("content/readiness/dijkstra/boundary.json"), changes);
+    const wanted = values.tools?.split(",");
+    const tools = store.load().tools.filter((t) => !wanted || wanted.includes(t.id));
+    if (wanted && tools.length !== wanted.length) throw new Error("--tools names an unknown tool");
+    const register = await classifyCatalog(tools.map((t) => ({ id: t.id, repo: t.repo })), boundary, changes, { stateDir: values.state!, log: (line) => console.error(line) });
+    writeFileSync(values.output ?? "content/readiness/dijkstra/classification.json", `${JSON.stringify(register, null, 1)}\n`);
+    console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary }));
     return;
   }
   const snapshot = store.load();
