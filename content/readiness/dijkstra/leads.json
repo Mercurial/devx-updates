@@ -518,33 +518,6 @@
    ]
   },
   {
-   "tool": "hydra-sdk",
-   "revision": "2829131cb08249ad468da6d96c131050286e1987",
-   "via": "scalus",
-   "surfaces": [
-    "plutus-script-context",
-    "transaction-encoding"
-   ],
-   "decision": "not-reached",
-   "summary": "Scalus is declared by the evaluator package but imported only by its differential conformance test.",
-   "evidence": [
-    {
-     "repo": "Vtechcom/hydra-sdk",
-     "revision": "2829131cb08249ad468da6d96c131050286e1987",
-     "path": "packages/evaluator/package.json",
-     "line": 60,
-     "quote": "\"scalus\": \"0.17.0\","
-    },
-    {
-     "repo": "Vtechcom/hydra-sdk",
-     "revision": "2829131cb08249ad468da6d96c131050286e1987",
-     "path": "packages/evaluator/__tests__/conformance/differential.test.ts",
-     "line": 10,
-     "quote": "import { Scalus, SlotConfig } from 'scalus'"
-    }
-   ]
-  },
-  {
    "tool": "masumi",
    "revision": "dd0a1e12e2e9fddba028512355d0eaf7cc85efac",
    "via": "cardano-serialization-lib-csl",
@@ -1184,6 +1157,624 @@
      "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
      "line": 52,
      "quote": ", plutus-ledger-api  ^>=1.49"
+    }
+   ]
+  },
+  {
+   "tool": "amaru",
+   "revision": "81c9ac4ebd3550f84377868f31bd30381deca3c6",
+   "via": "pallas",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "not-reached",
+   "summary": "Amaru uses pallas-network 0.34.0 only for a node-to-node peer client during bootstrap.",
+   "evidence": [
+    {
+     "repo": "pragma-org/amaru",
+     "revision": "81c9ac4ebd3550f84377868f31bd30381deca3c6",
+     "path": "Cargo.toml",
+     "line": 73,
+     "quote": "pallas-network = \"0.34.0\""
+    },
+    {
+     "repo": "pragma-org/amaru",
+     "revision": "81c9ac4ebd3550f84377868f31bd30381deca3c6",
+     "path": "crates/amaru-bootstrap/src/bootstrap/mod.rs",
+     "line": 295,
+     "quote": "PeerClient::connect(peer_address, network.to_network_magic().as_u64()).await.inspect_err(|err| {"
+    }
+   ]
+  },
+  {
+   "tool": "scrolls",
+   "revision": "ba25d652ec162617c3363b20c5eff5910a874a73",
+   "via": "pallas",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "confirmed",
+   "summary": "The n2c source connects through Pallas 0.30.1, which predates V23; last pushed 2025-01.",
+   "evidence": [
+    {
+     "repo": "txpipe/scrolls",
+     "revision": "ba25d652ec162617c3363b20c5eff5910a874a73",
+     "path": "Cargo.toml",
+     "line": 15,
+     "quote": "pallas = \"0.30.1\""
+    },
+    {
+     "repo": "txpipe/scrolls",
+     "revision": "ba25d652ec162617c3363b20c5eff5910a874a73",
+     "path": "src/sources/n2c.rs",
+     "line": 9,
+     "quote": "use pallas::network::facades::NodeClient;"
+    }
+   ]
+  },
+  {
+   "tool": "cf-ledger-sync",
+   "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+   "via": "yaci",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "confirmed",
+   "summary": "The optional node-socket path for current protocol parameters runs on yaci 0.3.4.1, before V23 (v0.3.10).",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cf-ledger-sync",
+     "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+     "path": "gradle/libs.versions.toml",
+     "line": 2,
+     "quote": "yaci = \"com.bloxbean.cardano:yaci:0.3.4.1\""
+    },
+    {
+     "repo": "cardano-foundation/cf-ledger-sync",
+     "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+     "path": "config/application.properties",
+     "line": 40,
+     "quote": "# local Cardano node using node-to-client protocol"
+    }
+   ]
+  },
+  {
+   "tool": "ogmios",
+   "revision": "435189aea2d9a047dc395a6f1cdef737d52f1cbe",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "not-reached",
+   "summary": "ouroboros-consensus 3.0.1 (node 10.7.1/11.0.1) already offers node-to-client V23.",
+   "evidence": [
+    {
+     "repo": "CardanoSolutions/ogmios",
+     "revision": "435189aea2d9a047dc395a6f1cdef737d52f1cbe",
+     "path": "server/cabal.project",
+     "line": 21,
+     "quote": "  , any.ouroboros-consensus ^>= 3.0.1"
+    }
+   ]
+  },
+  {
+   "tool": "ogmios",
+   "revision": "435189aea2d9a047dc395a6f1cdef737d52f1cbe",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "block-encoding",
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "The consensus pin fixes an earlier ledger whose Dijkstra block body and header differ from the target (R2: cardano-ledger-dijkstra 0.2.0.1).",
+   "evidence": [
+    {
+     "repo": "CardanoSolutions/ogmios",
+     "revision": "435189aea2d9a047dc395a6f1cdef737d52f1cbe",
+     "path": "server/cabal.project",
+     "line": 21,
+     "quote": "  , any.ouroboros-consensus ^>= 3.0.1"
+    }
+   ]
+  },
+  {
+   "tool": "kupo",
+   "revision": "1c7346789188d7a1a05343e7888ad8f08854cbca",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "not-reached",
+   "summary": "ouroboros-consensus 3.0.1 (node 10.7.1/11.0.1) already offers node-to-client V23.",
+   "evidence": [
+    {
+     "repo": "CardanoSolutions/kupo",
+     "revision": "1c7346789188d7a1a05343e7888ad8f08854cbca",
+     "path": "cabal.project",
+     "line": 53,
+     "quote": "  , any.ouroboros-consensus ^>= 3.0.1"
+    }
+   ]
+  },
+  {
+   "tool": "kupo",
+   "revision": "1c7346789188d7a1a05343e7888ad8f08854cbca",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "block-encoding",
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "The consensus pin fixes an earlier ledger whose Dijkstra block body and header differ from the target (R2: cardano-ledger-dijkstra 0.2.0.1).",
+   "evidence": [
+    {
+     "repo": "CardanoSolutions/kupo",
+     "revision": "1c7346789188d7a1a05343e7888ad8f08854cbca",
+     "path": "cabal.project",
+     "line": 53,
+     "quote": "  , any.ouroboros-consensus ^>= 3.0.1"
+    }
+   ]
+  },
+  {
+   "tool": "kuber",
+   "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "not-reached",
+   "summary": "ouroboros-consensus 3.0.1 (node 10.7.1/11.0.1) already offers node-to-client V23.",
+   "evidence": [
+    {
+     "repo": "dQuadrant/kuber",
+     "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+     "path": "cabal.project",
+     "line": 21,
+     "quote": "  , any.ouroboros-consensus == 3.0.1.0"
+    }
+   ]
+  },
+  {
+   "tool": "kuber",
+   "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "block-encoding",
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "The consensus pin fixes an earlier ledger whose Dijkstra block body and header differ from the target (R2: cardano-ledger-dijkstra 0.2.0.1).",
+   "evidence": [
+    {
+     "repo": "dQuadrant/kuber",
+     "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+     "path": "cabal.project",
+     "line": 21,
+     "quote": "  , any.ouroboros-consensus == 3.0.1.0"
+    }
+   ]
+  },
+  {
+   "tool": "kuber",
+   "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+   "via": "cardano-api",
+   "surfaces": [
+    "cardano-api-haskell",
+    "era-identity",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Fee and ex-unit endpoints dispatch on Babbage and Conway only, on cardano-api 11.0.",
+   "evidence": [
+    {
+     "repo": "dQuadrant/kuber",
+     "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
+     "path": "kuber-server/src/Kuber/Server/Core.hs",
+     "line": 59,
+     "quote": "_ -> kError FeatureNotSupported (\"calculateMinFee: only BabbageEra and ConwayEra supported got : \" ++ show cera)"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-wallet",
+   "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "not-reached",
+   "summary": "Consensus 4.2.1.0 offers V23; the wallet's own V16-V22 proposal is the R2 gap.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-wallet",
+     "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+     "path": "cabal.project",
+     "line": 200,
+     "quote": "  , ouroboros-consensus ==4.2.1.0"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-wallet",
+   "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+   "via": "ouroboros-consensus",
+   "surfaces": [
+    "block-encoding",
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "The node 11.1.x component set carries cardano-ledger-dijkstra 0.3.0.0, whose block body and header differ from the target.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-wallet",
+     "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+     "path": "cabal.project",
+     "line": 200,
+     "quote": "  , ouroboros-consensus ==4.2.1.0"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-wallet",
+   "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+   "via": "cardano-api",
+   "surfaces": [
+    "cardano-api-haskell",
+    "era-identity",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "cardano-api 11.6.0.0 is the node 11.1.x API; the wallet's Dijkstra handling is built on it.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-wallet",
+     "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+     "path": "cabal.project",
+     "line": 175,
+     "quote": "  , cardano-api ==11.6.0.0"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-wallet",
+   "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+   "via": "cardano-ledger-conway",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "transaction-encoding",
+    "transaction-rules"
+   ],
+   "decision": "confirmed",
+   "summary": "The ledger set is the node 11.1.x one (conway 1.23.0.0), not the target.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-wallet",
+     "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+     "path": "cabal.project",
+     "line": 189,
+     "quote": "  , cardano-ledger-conway ==1.23.0.0"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-wallet",
+   "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+   "via": "plutus-plutus-core",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "PlutusV4 is additive; the binding constraint is the ledger pin above.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-wallet",
+     "revision": "2fc5c383c94bb907deaa0cd27b1b407f86224b6c",
+     "path": "cabal.project",
+     "line": 210,
+     "quote": "  , plutus-ledger-api ==1.70.0.0"
+    }
+   ]
+  },
+  {
+   "tool": "adder",
+   "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+   "via": "gouroboros",
+   "surfaces": [
+    "node-to-client-protocol"
+   ],
+   "decision": "confirmed",
+   "summary": "Mempool and chain-sync inputs open node-to-client connections on gouroboros v0.209.0 (V21 at most).",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/adder",
+     "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+     "path": "input/mempool/mempool.go",
+     "line": 236,
+     "quote": "ouroboros.WithNodeToNode(false),"
+    }
+   ]
+  },
+  {
+   "tool": "adder",
+   "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+   "via": "gouroboros",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "transaction-encoding",
+    "plutus-language",
+    "stake-pool-registration"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes blocks and mempool transactions with pre-target ledger types.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/adder",
+     "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+     "path": "input/utxorpc/mapper.go",
+     "line": 95,
+     "quote": "block, err := ledger.NewBlockFromCbor(wb.Type, wb.RawBlock)"
+    },
+    {
+     "repo": "blinklabs-io/adder",
+     "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+     "path": "input/mempool/mempool.go",
+     "line": 412,
+     "quote": "return ledger.NewTransactionFromCbor(txType, data)"
+    }
+   ]
+  },
+  {
+   "tool": "adder",
+   "revision": "3b61c0bcf5c6c40376f3dee6cdc73dda9a1562cb",
+   "via": "gouroboros",
+   "surfaces": [
+    "consensus-participation",
+    "protocol-parameters",
+    "transaction-rules"
+   ],
+   "decision": "undetermined",
+   "summary": "Parameter, consensus and rule surfaces have no identified shipped path; left to execution.",
+   "evidence": []
+  },
+  {
+   "tool": "atlas",
+   "revision": "c3adfb416242ea25a244bfaa1614213eecdc55d9",
+   "via": "cardano-api",
+   "surfaces": [
+    "cardano-api-haskell",
+    "era-identity",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Node queries are fixed to the Conway era on cardano-api 10.13.1.",
+   "evidence": [
+    {
+     "repo": "geniusyield/atlas",
+     "revision": "c3adfb416242ea25a244bfaa1614213eecdc55d9",
+     "path": "src/GeniusYield/CardanoApi/Query.hs",
+     "line": 49,
+     "quote": "queryConwayEra info q = do"
+    }
+   ]
+  },
+  {
+   "tool": "hydra",
+   "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+   "via": "cardano-api",
+   "surfaces": [
+    "cardano-api-haskell",
+    "era-identity",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The direct chain follower connects through cardano-api ^>=11.7 and stops on an unknown era.",
+   "evidence": [
+    {
+     "repo": "cardano-scaling/hydra",
+     "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+     "path": "hydra-node/src/Hydra/Chain/Direct.hs",
+     "line": 277,
+     "quote": "| EraNotSupportedYet {otherEraName :: Text}"
+    }
+   ]
+  },
+  {
+   "tool": "hydra",
+   "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+   "via": "plutus-plutus-core",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Head scripts target existing Plutus versions; PlutusV4 is additive.",
+   "evidence": [
+    {
+     "repo": "cardano-scaling/hydra",
+     "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+     "path": "cabal.project",
+     "line": 55,
+     "quote": "plutus-core == 1.68.0.0,"
+    }
+   ]
+  },
+  {
+   "tool": "plutarch",
+   "revision": "87e11994c45b6af4768e5b6146d9c94879e279b5",
+   "via": "plutus-plutus-core",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Existing script versions stay valid; the pin blocks PlutusV4 authoring, which is Plutarch's own R2 surface.",
+   "evidence": [
+    {
+     "repo": "Plutonomicon/plutarch-plutus",
+     "revision": "87e11994c45b6af4768e5b6146d9c94879e279b5",
+     "path": "plutarch.cabal",
+     "line": 162,
+     "quote": ", plutus-core           ==1.65.0.0"
+    }
+   ]
+  },
+  {
+   "tool": "lucid-evolution",
+   "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+   "via": "scalus",
+   "surfaces": [
+    "plutus-script-context",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The scalus-uplc evaluator loads Scalus for ex-unit evaluation, which does not implement PlutusV4.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/lucid-evolution",
+     "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+     "path": "packages/scalus-uplc/src/index.ts",
+     "line": 19,
+     "quote": "const loadScalus = (): Promise<Scalus> => (scalusModule ??= import(\"scalus\"));"
+    }
+   ]
+  },
+  {
+   "tool": "evolution-sdk",
+   "revision": "55322695020b4aca2cf49731b595a975b587344c",
+   "via": "scalus",
+   "surfaces": [
+    "plutus-script-context",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The scalus-uplc evaluator calls Scalus for ex-unit evaluation.",
+   "evidence": [
+    {
+     "repo": "IntersectMBO/evolution-sdk",
+     "revision": "55322695020b4aca2cf49731b595a975b587344c",
+     "path": "packages/scalus-uplc/src/Evaluator.ts",
+     "line": 98,
+     "quote": "try: () => ScalusLib.Scalus.evalPlutusScripts(txBytes, utxosBytes, slotConfig, costModels),"
+    }
+   ]
+  },
+  {
+   "tool": "meshjs-mesh-sdk",
+   "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+   "via": "scalus",
+   "surfaces": [
+    "plutus-script-context",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The offline evaluator calls Scalus for ex-unit evaluation.",
+   "evidence": [
+    {
+     "repo": "MeshJS/mesh",
+     "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+     "path": "packages/mesh-core-cst/src/offline-providers/offline-evaluator-scalus.ts",
+     "line": 148,
+     "quote": "return evalPlutusScripts("
+    }
+   ]
+  },
+  {
+   "tool": "meshjs-mesh-sdk",
+   "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+   "via": "cardano-js-sdk",
+   "surfaces": [
+    "protocol-parameters"
+   ],
+   "decision": "confirmed",
+   "summary": "Governance proposals are converted to @cardano-sdk/core 0.46.12 parameter updates, which stop at key 37.",
+   "evidence": [
+    {
+     "repo": "MeshJS/mesh",
+     "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+     "path": "packages/mesh-core-cst/src/utils/proposal.ts",
+     "line": 94,
+     "quote": "const toCardanoProtocolParamUpdate = ("
+    }
+   ]
+  },
+  {
+   "tool": "blaze",
+   "revision": "0499975bfa4fdb324f2185657a7f17e4cea35aa1",
+   "via": "cardano-js-sdk",
+   "surfaces": [
+    "protocol-parameters"
+   ],
+   "decision": "confirmed",
+   "summary": "blaze-core re-exports @cardano-sdk/core serialization, so its parameter-update ceiling is Blaze's.",
+   "evidence": [
+    {
+     "repo": "butaneprotocol/blaze-cardano",
+     "revision": "0499975bfa4fdb324f2185657a7f17e4cea35aa1",
+     "path": "packages/blaze-core/src/cardano.ts",
+     "line": 1,
+     "quote": "export { Cardano, Serialization } from \"@cardano-sdk/core\";"
+    }
+   ]
+  },
+  {
+   "tool": "yaci-store",
+   "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+   "via": "scalus",
+   "surfaces": [
+    "plutus-script-context",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The submit component evaluates scripts with Scalus.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci-store",
+     "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+     "path": "components/submit/src/main/java/com/bloxbean/cardano/yaci/store/submit/service/scalus/ScalusTxEvaluationService.java",
+     "line": 22,
+     "quote": "import scalus.bloxbean.ScalusTransactionEvaluator;"
+    }
+   ]
+  },
+  {
+   "tool": "whisky",
+   "revision": "18b019150e33879d3b2d66e29f0bd92397089bb5",
+   "via": "cardano-serialization-lib-csl",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "Transaction utilities decode supplied transactions with CSL.",
+   "evidence": [
+    {
+     "repo": "sidan-lab/whisky",
+     "revision": "18b019150e33879d3b2d66e29f0bd92397089bb5",
+     "path": "packages/whisky-csl/src/utils/transaction.rs",
+     "line": 12,
+     "quote": "let csl_tx = csl::FixedTransaction::from_hex(tx_hex).map_err(WError::from_err("
+    }
+   ]
+  },
+  {
+   "tool": "cquisitor-lib",
+   "revision": "d2c95bbb59938dcccbadc03710230e2ca73fb9ce",
+   "via": "cardano-serialization-lib-csl",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "A transaction decoder and validator: it decodes arbitrary transactions with CSL.",
+   "evidence": [
+    {
+     "repo": "cardananium/cquisitor-lib",
+     "revision": "d2c95bbb59938dcccbadc03710230e2ca73fb9ce",
+     "path": "src/csl_decoders/specific_decoders.rs",
+     "line": 20,
+     "quote": "let fixed_tx = csl::FixedTransaction::from_hex(input)"
     }
    ]
   }

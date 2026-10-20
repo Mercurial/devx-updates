@@ -52,7 +52,10 @@ export function parseLeadRegister(raw: unknown, changes: ChangeRegister): LeadRe
   return { schemaVersion: 1, reviewed: r.reviewed, method: r.method, leads };
 }
 
-/** Shipped, non-marker channels that inherit a gap, keyed by the component or package they come through. */
+/**
+ * Shipped, non-marker channels that inherit a gap, keyed by the component or package they come through. Boundary
+ * components are included: a gap one component inherits from another is R2 propagation and is decided the same way.
+ */
 export function gapLeads(tool: ToolClassification): Map<string, string[]> {
   const out = new Map<string, string[]>();
   for (const s of tool.surfaces) for (const c of s.channels) {
@@ -67,8 +70,6 @@ export function gapLeads(tool: ToolClassification): Map<string, string[]> {
 export interface LeadCoverage {
   reviewed: number; byDecision: Record<Decision, number>;
   unreviewed: { tool: string; via: string; surfaces: string[] }[]; stale: string[]; orphaned: string[];
-  /** Boundary components inheriting a gap from another component: R2 propagation, assessed with the components themselves. */
-  boundary: { tool: string; via: string; surfaces: string[] }[];
   /** Tools with at least one confirmed gap. */
   confirmedTools: string[];
 }
@@ -76,11 +77,10 @@ export interface LeadCoverage {
 /** Which classification gaps have a decision, which decisions were read at an older revision, and which match no gap. */
 export function leadCoverage(register: LeadRegister, tools: ToolClassification[]): LeadCoverage {
   const decided = new Map<string, Lead>(register.leads.flatMap((l) => l.surfaces.map((s): [string, Lead] => [`${l.tool}\0${l.via}\0${s}`, l])));
-  const coverage: LeadCoverage = { reviewed: 0, byDecision: { confirmed: 0, "not-reached": 0, undetermined: 0 }, unreviewed: [], stale: [], orphaned: [], boundary: [], confirmedTools: [] };
+  const coverage: LeadCoverage = { reviewed: 0, byDecision: { confirmed: 0, "not-reached": 0, undetermined: 0 }, unreviewed: [], stale: [], orphaned: [], confirmedTools: [] };
   const open = new Set(decided.keys());
   const stale = new Set<string>(), confirmed = new Set<string>();
   for (const tool of tools) for (const [via, surfaces] of gapLeads(tool)) {
-    if (tool.exposure === "implements") { coverage.boundary.push({ tool: tool.id, via, surfaces }); continue; }
     const missing: string[] = [];
     for (const surface of surfaces) {
       const key = `${tool.id}\0${via}\0${surface}`, lead = decided.get(key);

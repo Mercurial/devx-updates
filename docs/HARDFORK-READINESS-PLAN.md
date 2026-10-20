@@ -15,7 +15,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 - [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
-- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap outside the boundary decided from shipped code (21 tools confirmed); boundary-to-boundary propagation (26 dependency gaps) remains with R2.
+- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap decided from shipped code (21 tools outside the boundary and 16 boundary components confirmed); unlock report derived.
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
@@ -273,11 +273,35 @@ evaluate PlutusV4). R2 now records `firstReleases` per release line (the
 earliest tag containing every cited quote), and `classify-surfaces
 --reclassify` recomputes without fetching so that lead revisions stay valid.
 
-Next: assess the 26 boundary-to-boundary dependency gaps inside R2
-(Mesh, Evolution SDK and yaci-store through Scalus; Blaze, Mesh and Lucid
-Evolution through cardano-js-sdk; cf-ledger-sync through yaci;
-Scrolls and Amaru through Pallas), add hosted API providers to R2, then start R4
-devnet checks with the confirmed node-to-client and decoding gaps.
+### Boundary propagation and unlocks (2026-10-20)
+
+The 26 dependency gaps between boundary components were decided the same way
+(`leads.json` now holds 170 decisions: 90 confirmed, 59 not reached,
+21 undetermined). 16 boundary components have a confirmed gap through another
+component: Evolution SDK, Lucid Evolution, Mesh and yaci-store through Scalus;
+Blaze and Mesh through cardano-js-sdk; Whisky and Cquisitor through CSL; Adder,
+Scrolls and cf-ledger-sync through node-to-client libraries without V23; and
+Ogmios, Kupo, Kuber, Atlas, Hydra and cardano-wallet through Haskell pins below
+the 11.2 component set.
+
+Two more scanner corrections (scanner version 10): development-only manifest
+declarations are auxiliary (a published npm library's devDependencies, Cargo
+dev-dependencies, Cabal test suites, Gradle test configurations, Maven test
+scope), while applications keep their bundled devDependencies; and tools
+sharing one repository revision get separate checkouts.
+`classify-surfaces --reclassify` rescans at the recorded revisions so lead
+decisions stay valid.
+
+`unlocks` (`content/readiness/dijkstra/unlocks.json`) derives the dependency
+view the owner asked for: which tools a fix in one component unlocks, directly
+and through components it unblocks, which still wait on something else, and
+which tools are bump-ready. CSL unlocks nine tools, Scalus four (Mesh also needs
+cardano-js-sdk), cardano-js-sdk three, cardano-wallet two and
+ouroboros-miniprotocols-ts one; fourteen tools only have to raise a pin.
+
+Next: add hosted API providers to R2, then start R4 devnet checks with the
+upstream fixes that unlock the most tools (CSL, Scalus, cardano-js-sdk) and the
+bump-ready node-to-client consumers.
 
 ### Implementation log
 

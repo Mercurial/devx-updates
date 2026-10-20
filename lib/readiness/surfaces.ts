@@ -149,6 +149,58 @@ function packageDependencies(content: string): Set<string> | null {
   } catch { return null; }
 }
 
+function publishedLibrary(content: string): boolean {
+  try {
+    const json = JSON.parse(content) as Record<string, unknown>;
+    return json.private !== true && ["main", "module", "exports", "types"].some((k) => json[k] !== undefined);
+  } catch { return false; }
+}
+
+/**
+ * Manifest lines that declare development-only dependencies: npm `devDependencies` of a published library, Cargo `dev-dependencies` tables,
+ * Cabal `test-suite`/`benchmark` stanzas, Gradle test configurations and Maven test-scoped dependencies.
+ */
+export function developmentLines(path: string, content: string): Set<number> {
+  const lines = content.split("\n"), dev = new Set<number>();
+  if (/(?:^|\/)package\.json$/.test(path)) {
+    // Applications bundle their devDependencies; only a published library leaves them behind.
+    if (!publishedLibrary(content)) return dev;
+    let depth = 0, inside = false;
+    lines.forEach((line, i) => {
+      if (!inside && /^\s*"devDependencies"\s*:\s*\{/.test(line)) { inside = true; depth = 0; }
+      if (!inside) return;
+      dev.add(i + 1);
+      depth += (line.match(/\{/g)?.length ?? 0) - (line.match(/\}/g)?.length ?? 0);
+      if (depth <= 0) inside = false;
+    });
+  } else if (/(?:^|\/)Cargo\.toml$/.test(path)) {
+    let inside = false;
+    lines.forEach((line, i) => {
+      const header = /^\s*\[([^\]]+)\]/.exec(line);
+      if (header) inside = /(?:^|\.)dev-dependencies(?:\.|$)/.test(header[1].replace(/'[^']*'|"[^"]*"/g, "t"));
+      if (inside) dev.add(i + 1);
+    });
+  } else if (/\.cabal$/.test(path)) {
+    let inside = false;
+    lines.forEach((line, i) => {
+      if (/^[A-Za-z]/.test(line)) inside = /^(?:test-suite|benchmark)\b/i.test(line);
+      if (inside) dev.add(i + 1);
+    });
+  } else if (/(?:^|\/)build\.gradle(?:\.kts)?$/.test(path)) {
+    lines.forEach((line, i) => { if (/^\s*(?:test|androidTest|testFixtures|integrationTest)[A-Za-z]*\s*[("' ]/.test(line)) dev.add(i + 1); });
+  } else if (/(?:^|\/)pom\.xml$/.test(path)) {
+    let start = -1;
+    lines.forEach((line, i) => {
+      if (/<dependency>/.test(line)) start = i;
+      if (start >= 0 && /<\/dependency>/.test(line)) {
+        if (lines.slice(start, i + 1).some((l) => /<scope>\s*test\s*<\/scope>/.test(l))) for (let j = start; j <= i; j++) dev.add(j + 1);
+        start = -1;
+      }
+    });
+  }
+  return dev;
+}
+
 const MANIFEST_PROSE = /^\s*(?:#|--|\/\/|\/\*|\*|<!--|;)|^\s*["']?(?:description|summary|synopsis|repository|homepage|documentation|authors?|keywords|license|readme)["']?\s*[=:]/i;
 
 export function scannable(path: string, bytes: number): boolean {
@@ -166,6 +218,7 @@ export function scanSources(files: SourceFile[], self?: string, rules = RULES): 
     let starts: number[] | undefined;
     const prose = DOCS.test(file.path), aux = !prose && AUXILIARY.test(file.path);
     const npm = /(?:^|\/)package\.json$/.test(file.path) ? packageDependencies(file.content) : undefined;
+    let development: Set<number> | undefined;
     for (const rule of rules) {
       if (rule.files && !rule.files.test(file.path)) continue;
       if (rule.component !== undefined && rule.component === self) continue;
@@ -184,16 +237,19 @@ export function scanSources(files: SourceFile[], self?: string, rules = RULES): 
       if (!lines.size) continue;
       const hit = hits.get(rule.id) ?? { rule: rule.id, files: 0, lines: 0, auxLines: 0, docLines: 0, examples: [] };
       hit.files++;
-      if (prose) hit.docLines += lines.size; else if (aux) hit.auxLines += lines.size; else hit.lines += lines.size;
+      // Development-only manifest declarations are auxiliary like test code.
+      if (rule.channel === "dependency" && !prose && !aux) development ??= developmentLines(file.path, file.content);
+      const rank = (line: number) => (prose ? 2 : aux || development?.has(line) ? 1 : 0);
       const pool = pools.get(rule.id) ?? [[], [], []];
-      const bucket = pool[prose ? 2 : aux ? 1 : 0];
-      for (const line of [...lines].slice(0, SCAN_LIMITS.examplesPerRule - bucket.length)) {
-        bucket.push({ path: file.path, line, quote: lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters) });
+      for (const line of lines) {
+        const r = rank(line);
+        if (r === 2) hit.docLines++; else if (r === 1) hit.auxLines++; else hit.lines++;
+        if (pool[r].length < SCAN_LIMITS.examplesPerRule) pool[r].push({ path: file.path, line, quote: lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters) });
       }
       pools.set(rule.id, pool);
       // Versioned shipped manifest lines, so constraint checks are not limited to the first examples.
       if (rule.channel === "dependency" && !prose && !aux) {
-        for (const line of lines) {
+        for (const line of [...lines].filter((l) => rank(l) === 0)) {
           const quote = lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters);
           if (!/\d+\.\d+/.test(quote) || (hit.pins ??= []).length >= SCAN_LIMITS.pinsPerRule) continue;
           hit.pins.push({ path: file.path, line, quote });

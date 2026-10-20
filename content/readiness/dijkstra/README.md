@@ -1,4 +1,4 @@
-# Dijkstra change, boundary, classification and lead registers
+# Dijkstra change, boundary, classification and lead registers, and the unlock report
 
 `changes.json` lists what the Dijkstra hard fork (protocol version 12) changes,
 which **surface** each change touches, when it takes effect, and the exact source
@@ -130,7 +130,11 @@ inherits. Each tool's repository was scanned at its default-branch head:
 Prose (docs, READMEs, changelogs) and comments in manifests never establish
 exposure. Tests, examples, benchmarks, demos, playgrounds and workshops are
 **auxiliary**: their hits are kept with `scope: "auxiliary"` but never set
-readiness, and a tool coupled only there has exposure `auxiliary`. Every hit
+readiness, and a tool coupled only there has exposure `auxiliary`. So are
+development-only manifest declarations: a published npm library's
+`devDependencies` (applications bundle theirs and keep them shipped), Cargo
+`dev-dependencies`, Cabal `test-suite`/`benchmark` stanzas, Gradle test
+configurations and Maven test scope. Every hit
 records path, line and a quote at the scanned revision; dependency hits also
 keep up to twelve versioned manifest lines (`pins`) for the constraint checks.
 Each scanned tool records whether its repository is archived and when it was
@@ -139,8 +143,8 @@ last pushed.
 | Exposure | Tools |
 | --- | --- |
 | implements | 65 |
-| dependency | 87 |
-| service | 44 |
+| dependency | 86 |
+| service | 45 |
 | auxiliary only | 4 |
 | marker only | 9 |
 | none found | 18 |
@@ -148,10 +152,10 @@ last pushed.
 
 Changed surfaces touched through shipped coupling (implements, dependency or
 service): transaction encoding 176, era identity 173, protocol parameters 173,
-PlutusV4/language 159, block encoding 139, node-to-client 131, transaction
-rules 130, stake-pool registration 119, script context 69, cardano-cli 43,
+PlutusV4/language 159, block encoding 138, node-to-client 131, transaction
+rules 128, stake-pool registration 117, script context 68, cardano-cli 43,
 consensus participation 28, cardano-api 26. The most used services are
-Blockfrost (67), Ogmios (62), node sockets (61), cardano-cli (43), Koios (37),
+Blockfrost (66), Ogmios (62), node sockets (61), cardano-cli (43), Koios (37),
 db-sync (34) and Kupo (31).
 
 Readiness of the 204 tools outside the boundary: 35 gap, 21 in-progress,
@@ -165,18 +169,19 @@ decided in `leads.json`.
 
 ## Lead confirmation (`leads.json`)
 
-`leads.json` decides, for each of the 35 tools outside the boundary that
-inherit a gap, whether shipped code actually reaches it, per tool, dependency
-and surface (114 decisions in 56 entries, each quoting the lines it rests on):
+`leads.json` decides, for every tool that inherits a gap (35 outside the
+boundary and 23 boundary components inheriting from other components), whether
+shipped code actually reaches it, per tool, dependency and surface
+(170 decisions in 85 entries, each quoting the lines it rests on):
 
 - `confirmed`: a shipped path uses the gapped capability, so the tool fails or
-  misbehaves after the hardfork until the dependency moves (46 surfaces).
+  misbehaves after the hardfork until the dependency moves (90 surfaces).
 - `not-reached`: shipped code uses the dependency only outside the gap
-  (50 surfaces).
+  (59 surfaces).
 - `undetermined`: reading cannot decide; R4 execution or the maintainer must
-  (18 surfaces).
+  (21 surfaces).
 
-**21 tools have a confirmed gap:**
+**21 tools outside the boundary have a confirmed gap:**
 
 | Through | Tools | What breaks |
 | --- | --- | --- |
@@ -211,10 +216,16 @@ no longer count as shipped), the plutus-ledger-api rule is limited to Haskell
 manifests (Plutip's Rust crate of the same name was misattributed), and
 upstream Haskell pins are compared with the component set.
 
-`check-leads` also lists 26 dependency gaps between boundary components (for
-example Mesh, Evolution SDK and yaci-store through Scalus, Blaze and Mesh
-through cardano-js-sdk, cf-ledger-sync through yaci, Scrolls and Amaru through
-Pallas).
+**16 boundary components have a confirmed gap through another component:**
+Evolution SDK, Lucid Evolution, Mesh and yaci-store through Scalus
+evaluation; Blaze (re-exports the serialization) and Mesh (governance
+proposals) through cardano-js-sdk; Whisky and Cquisitor through CSL
+transaction decoding; Adder and Scrolls through node-to-client libraries
+without V23 (gouroboros v0.209.0, Pallas 0.30.1); cf-ledger-sync through
+yaci 0.3.4.1 on its optional node-socket path; and Ogmios, Kupo, Kuber, Atlas,
+Hydra and cardano-wallet through Haskell pins below the 11.2 component set.
+Amaru's Pallas pin is not reached (node-to-node only), and consensus 3.0.1 and
+4.2.1.0 already offer node-to-client V23.
 
 Version gaps are judged against `firstReleases` in `boundary.json`: the earliest
 tag on each release line whose source contains every cited quote (yaci has V23
@@ -224,8 +235,45 @@ pins against the release R2 happened to observe flagged Dingo, yaci-devkit,
 Apollo and several plutigo pins that already had the support, and produced a
 wrong cardano-node-api lead (it evaluates PlutusV4 at line 1233 of
 `internal/utxorpc/submit.go`). After a boundary edit, `classify-surfaces
---reclassify` recomputes from the recorded revisions and cached scans without
-fetching. These are R2 propagation and are assessed with the
+--reclassify` recomputes at the recorded revisions, reusing cached scans and
+rescanning at the same revision when the rules changed.
+
+## Unlock report (`unlocks.json`)
+
+`unlocks` turns the three registers into the dependency view: what a fix in
+one component unlocks. Each confirmed gap is one of three blockers:
+`upstream-fix` (the component behind it has no release with the support),
+`own-bump` (a release exists; the tool only raises its pin) or `own-gap` (a
+boundary component's own R2 gap). A tool is unlocked when all its upstream
+blockers come through fixed components and it has no gap of its own; an
+unlocked boundary component then counts as fixed for its own consumers, so
+chains such as Scalus → Mesh → dApps are followed. `downstream` lists tools
+with an unconfirmed shipped link to anything unlocked.
+
+| Fix | Unlocks | Still waiting |
+| --- | --- | --- |
+| CSL (PlutusV4 language) | Yoroi, cardano-dev-wallet, cardano-hw-cli, csl-mobile-bridge, Hydra SDK, Masumi, cardano-rosetta-legacy, Whisky, Cquisitor | |
+| Scalus (V4 evaluation) | Evolution SDK, Lucid Evolution, yaci-store, Yano | Mesh also needs cardano-js-sdk |
+| cardano-js-sdk (parameter keys 38–56) | Blaze, Lace, Nami | Mesh also needs Scalus |
+| cardano-wallet (V23 proposal) | Daedalus, cardano-wallet-js | |
+| ouroboros-miniprotocols-ts (V23) | Gerolamo | |
+
+Fixing Scalus and cardano-js-sdk together also unlocks Mesh and reaches twelve
+downstream tools with unconfirmed links (for example Sundae SDK through Blaze,
+cardano-rosetta-java and cf-ledger-sync through yaci-store, GeniusYield SDK
+through Lucid Evolution).
+
+**14 tools are bump-ready**: every confirmed gap has a release with the
+support, so the tool only has to raise its pin: txtop, Bursa, cardano-node-api
+and the IBC incubator (gouroboros v0.213.0); Scrolls (Pallas v0.35.1 or
+v1.0.0); cf-ledger-sync (yaci v0.3.10 or v0.4.2); Marlowe, Marconi, sc-tools,
+Midgard and Atlas (cardano-api 11.8); and Ogmios, Kupo and Kuber, for which the
+bump is a port to the 11.2 component set (their R2 status stays in-progress).
+
+```sh
+node --import tsx scripts/readiness/cli.ts unlocks                                # write unlocks.json and print the summary
+node --import tsx scripts/readiness/cli.ts unlocks --component scalus,cardano-js-sdk  # what fixing these together unlocks
+``` These are R2 propagation and are assessed with the
 components themselves.
 
 ## Checking it

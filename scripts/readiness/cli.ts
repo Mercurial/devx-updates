@@ -26,13 +26,14 @@ import { changesBySurface, parseChangeRegister, verifyCitations } from "../../li
 import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../../lib/readiness/boundary";
 import { classifyCatalog, reclassifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
 import { leadCoverage, parseLeadRegister, verifyLeadSources } from "../../lib/readiness/leads";
+import { unlockReport, unlocksOf, toolBlockers } from "../../lib/readiness/unlocks";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
   state: { type: "string", default: ".readiness" },
   catalog: { type: "string", default: "data/cardano-graph.json" },
   assignments: { type: "string", default: "content/readiness/work-assignments.json" },
-  tools: { type: "string" }, limit: { type: "string" }, refresh: { type: "boolean" },
+  tools: { type: "string" }, component: { type: "string" }, limit: { type: "string" }, refresh: { type: "boolean" },
   profile: { type: "string" }, input: { type: "string" }, output: { type: "string" }, before: { type: "string" },
   tool: { type: "string" }, adapter: { type: "string" }, roots: { type: "string" }, path: { type: "string" }, platform: { type: "string" },
   packet: { type: "string" }, decisions: { type: "string" },
@@ -83,6 +84,8 @@ check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sour
 check-boundary  [--input content/readiness/dijkstra/boundary.json] [--verify-sources]
 classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness] [--reclassify]
 check-leads     [--input content/readiness/dijkstra/leads.json] [--verify-sources]
+unlocks         [--component scalus[,cardano-js-sdk]] [--output content/readiness/dijkstra/unlocks.json]
+                What a fix in one component unlocks, directly and through other components
                 Validate the hardfork change register; optionally re-read every cited quote via gh
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
@@ -139,8 +142,8 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const boundary = parseBoundaryRegister(readJson("content/readiness/dijkstra/boundary.json"), changes);
     const output = values.output ?? "content/readiness/dijkstra/classification.json";
     if (values.reclassify) {
-      // Same revisions and cached scans, current registers: keeps lead decisions valid.
-      const register = reclassifyCatalog(readJson(output) as ClassificationRegister, boundary, changes, values.state!);
+      // Same revisions, current rules and registers: keeps lead decisions valid.
+      const register = await reclassifyCatalog(readJson(output) as ClassificationRegister, boundary, changes, { stateDir: values.state!, log: (line) => console.error(line) });
       writeFileSync(output, `${JSON.stringify(register, null, 1)}\n`);
       console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary, reclassified: true }));
       return;
@@ -151,6 +154,22 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const register = await classifyCatalog(tools.map((t) => ({ id: t.id, repo: t.repo })), boundary, changes, { stateDir: values.state!, log: (line) => console.error(line) });
     writeFileSync(output, `${JSON.stringify(register, null, 1)}\n`);
     console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary }));
+    return;
+  }
+  if (command === "unlocks") {
+    const changes = parseChangeRegister(readJson("content/readiness/dijkstra/changes.json"));
+    const boundary = parseBoundaryRegister(readJson("content/readiness/dijkstra/boundary.json"), changes);
+    const leads = parseLeadRegister(readJson("content/readiness/dijkstra/leads.json"), changes);
+    const { tools } = readJson("content/readiness/dijkstra/classification.json") as ClassificationRegister;
+    if (values.component) {
+      const fixes = values.component.split(",");
+      for (const id of fixes) if (!boundary.components.some((c) => c.id === id) && !leads.leads.some((l) => l.via === id)) throw new Error(`Unknown component ${id}`);
+      console.log(JSON.stringify(unlocksOf(fixes, toolBlockers(tools, leads, boundary), tools), null, 2));
+      return;
+    }
+    const report = unlockReport(tools, leads, boundary);
+    writeFileSync(values.output ?? "content/readiness/dijkstra/unlocks.json", `${JSON.stringify(report, null, 1)}\n`);
+    console.log(JSON.stringify({ bumpReady: report.bumpReady.map((t) => t.tool), components: report.components.map((c) => `${c.component}: ${c.unlocks.length} unlocked, ${c.partial.length} partial, ${c.downstream.length} downstream`) }, null, 2));
     return;
   }
   if (command === "check-leads") {

@@ -50,6 +50,21 @@ test("scanning finds dependencies only in dependency positions and separates pro
   assert.equal(gouroboros.examples[0].path, "src/attestation/go.mod", "shipped examples come first");
   assert.deepEqual([hit(scoped, "dependency:cardano-js-sdk")!.lines, hit(scoped, "dependency:cardano-js-sdk")!.auxLines], [0, 1]);
   assert.equal(hit(scoped, "dependency:plutus-plutus-core"), undefined, "the Rust plutus-ledger-api crate is not the Haskell package");
+  const dev = scanSources([
+    { path: "package.json", content: JSON.stringify({ main: "dist/index.js", dependencies: { "@meshsdk/core": "1.9.1" }, devDependencies: { "@emurgo/cardano-serialization-lib-nodejs": "14.1.2" } }, null, 2) },
+    { path: "app/package.json", content: JSON.stringify({ private: true, devDependencies: { "@cardano-sdk/core": "0.47.1" } }, null, 2) },
+    { path: "Cargo.toml", content: '[dependencies]\npallas-network = "0.35.1"\n\n[dev-dependencies]\npallas-traverse = "0.30.0"\n' },
+    { path: "lib.cabal", content: "library\n  build-depends: base\n\ntest-suite spec\n  build-depends:\n    , plutus-tx ^>=1.40\n" },
+    { path: "build.gradle", content: "implementation 'com.bloxbean.cardano:yaci:0.4.7'\ntestImplementation 'com.bloxbean.cardano:cardano-client-lib:0.6.0'\n" },
+  ]);
+  const counts = (rule: string) => { const h = hit(dev, rule)!; return [h.lines, h.auxLines]; };
+  assert.deepEqual(counts("dependency:meshjs-mesh-sdk"), [1, 0]);
+  assert.deepEqual(counts("dependency:cardano-serialization-lib-csl"), [0, 1], "a published library's devDependencies are not shipped");
+  assert.deepEqual(counts("dependency:cardano-js-sdk"), [1, 0], "an application bundles its devDependencies");
+  assert.deepEqual([counts("dependency:pallas"), counts("dependency:pallas-codecs")], [[1, 0], [0, 1]], "Cargo dev-dependencies are not shipped");
+  assert.deepEqual(counts("dependency:plutus-plutus-core"), [0, 1], "Cabal test-suite stanzas are not shipped");
+  assert.deepEqual([counts("dependency:yaci"), counts("dependency:bloxbean-cardano-client-library")], [[1, 0], [0, 1]], "Gradle test configurations are not shipped");
+  assert.equal(hit(dev, "dependency:plutus-plutus-core")!.pins, undefined, "auxiliary lines are never pins");
   const prose = scanSources([
     { path: "Cargo.toml", content: 'description = "Wrapper around the cardano-serialization-lib"\n# pallas = "0.1"\n' },
     { path: "run.sh", content: "# accepts cardano-cli style JSON\ncardano-cli latest transaction build\n" },

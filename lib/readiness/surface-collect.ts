@@ -8,7 +8,7 @@ import type { ChangeRegister } from "./dijkstra";
 import { classifyTool, rankClassifications, RULES, scannable, scanSources, type RepositoryActivity, type Scan, type ToolClassification } from "./surfaces";
 
 /** Rule identity: cached scans are reused only while the rule set is unchanged. */
-export const SCANNER_VERSION = 8;
+export const SCANNER_VERSION = 10;
 export const RULES_DIGEST = digest([SCANNER_VERSION, ...RULES.map((r) => [r.id, r.pattern.source, r.pattern.flags, r.files?.source ?? null, r.component ?? null, r.surfaces ?? null, r.readiness ?? null, r.excludeSurfaces ?? null])]);
 
 const git = (cwd: string, args: string[], timeout = 300000) =>
@@ -30,8 +30,8 @@ async function activity(repo: string, stateDir: string): Promise<RepositoryActiv
 }
 
 /** Shallow, blob-limited checkout; scanning skips larger files anyway. */
-async function checkout(repo: string, revision: string, stateDir: string): Promise<string> {
-  const directory = resolve(stateDir, "surface-sources", revision);
+async function checkout(repo: string, revision: string, stateDir: string, key = revision): Promise<string> {
+  const directory = resolve(stateDir, "surface-sources", key);
   rmSync(directory, { recursive: true, force: true });
   mkdirSync(directory, { recursive: true });
   await git(directory, ["init", "-q"]);
@@ -62,19 +62,39 @@ export interface ClassificationRegister {
 }
 
 /**
- * Recompute a classification after a boundary or change-register edit, from the recorded revisions and cached scans:
- * nothing is fetched, so revisions (and lead decisions read at them) stay valid.
+ * Recompute a classification at the recorded revisions after a register or rule change: cached scans are reused, and a
+ * scan the current rules lack is redone at the same revision. Default-branch heads are not re-observed, so lead
+ * decisions read at those revisions stay valid.
  */
-export function reclassifyCatalog(previous: ClassificationRegister, boundary: BoundaryRegister, changes: ChangeRegister, stateDir: string): ClassificationRegister {
-  const cacheDir = resolve(stateDir, "surface-scans");
-  const tools = previous.tools.map((tool) => {
-    if (tool.scan.status !== "scanned") return classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, { status: tool.scan.status, note: tool.scan.note ?? "" }, boundary, changes);
-    const cache = join(cacheDir, `${tool.revision}-${tool.id}-${RULES_DIGEST.slice(0, 16)}.json`);
-    if (!existsSync(cache)) throw new Error(`No cached scan for ${tool.id} at ${tool.revision} with the current rules; run classify-surfaces`);
-    const scan = JSON.parse(readFileSync(cache, "utf8")) as Scan;
-    return { ...classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, scan, boundary, changes), ...(tool.activity && { activity: tool.activity }) };
-  });
-  return summarize(rankClassifications(tools), boundary, changes);
+export async function reclassifyCatalog(
+  previous: ClassificationRegister, boundary: BoundaryRegister, changes: ChangeRegister,
+  options: { stateDir: string; concurrency?: number; log?: (line: string) => void },
+): Promise<ClassificationRegister> {
+  const cacheDir = resolve(options.stateDir, "surface-scans");
+  mkdirSync(cacheDir, { recursive: true });
+  const queue = [...previous.tools];
+  const results: ToolClassification[] = [];
+  const work = async () => {
+    for (let tool = queue.shift(); tool; tool = queue.shift()) {
+      if (tool.scan.status !== "scanned" || !tool.repo || !tool.revision) {
+        results.push(classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, { status: tool.scan.status === "scanned" ? "checkout-failed" : tool.scan.status, note: tool.scan.note ?? "" }, boundary, changes));
+        continue;
+      }
+      const cache = join(cacheDir, `${tool.revision}-${tool.id}-${RULES_DIGEST.slice(0, 16)}.json`);
+      let scan: Scan;
+      if (existsSync(cache)) scan = JSON.parse(readFileSync(cache, "utf8")) as Scan;
+      else {
+        // Several catalog tools can share a repository revision; each scan gets its own checkout.
+        const directory = await checkout(tool.repo, tool.revision, options.stateDir, `${tool.revision}-${tool.id}`);
+        try { scan = await scanCheckout(directory, tool.id); } finally { rmSync(directory, { recursive: true, force: true }); }
+        writeFileSync(cache, JSON.stringify(scan));
+        options.log?.(`${tool.id} ${tool.revision.slice(0, 10)} rescanned files=${scan.files} hits=${scan.hits.length}`);
+      }
+      results.push({ ...classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, scan, boundary, changes), ...(tool.activity && { activity: tool.activity }) });
+    }
+  };
+  await Promise.all(Array.from({ length: options.concurrency ?? 6 }, work));
+  return summarize(rankClassifications(results), boundary, changes);
 }
 
 function summarize(ranked: ToolClassification[], boundary: BoundaryRegister, changes: ChangeRegister): ClassificationRegister {

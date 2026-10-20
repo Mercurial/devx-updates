@@ -29,7 +29,7 @@ test("lead decisions need quoted evidence at the lead revision, once per surface
   assert.equal(parseLeadRegister(register([lead(), lead({ surfaces: ["transaction-encoding"], decision: "not-reached" })]), changes).leads.length, 2, "one dependency can split by surface");
 });
 
-test("coverage counts per surface, flags stale and orphaned decisions, and keeps boundary propagation apart", () => {
+test("coverage counts per surface and flags stale and orphaned decisions", () => {
   const leads = parseLeadRegister(register([lead(), lead({ tool: "gone" })]), changes);
   const tools = [
     tool("t", [["node-to-client-protocol", [channel("gouroboros@0.209.0<v0.213.0")]], ["transaction-encoding", [channel("gouroboros@0.209.0<v0.213.7"), channel("ogmios", "auxiliary")]]]),
@@ -38,9 +38,10 @@ test("coverage counts per surface, flags stale and orphaned decisions, and keeps
   ];
   const coverage = leadCoverage(leads, tools);
   assert.equal(coverage.reviewed, 1);
-  assert.deepEqual(coverage.unreviewed, [{ tool: "t", via: "gouroboros", surfaces: ["transaction-encoding"] }], "auxiliary and non-gap channels need no decision");
+  assert.deepEqual(coverage.unreviewed, [
+    { tool: "t", via: "gouroboros", surfaces: ["transaction-encoding"] }, { tool: "sdk", via: "scalus", surfaces: ["plutus-script-context"] },
+  ], "auxiliary and non-gap channels need no decision; boundary propagation does");
   assert.deepEqual(coverage.orphaned, ["gone/gouroboros/node-to-client-protocol"]);
-  assert.deepEqual(coverage.boundary, [{ tool: "sdk", via: "scalus", surfaces: ["plutus-script-context"] }]);
   assert.deepEqual(coverage.confirmedTools, ["t"]);
   assert.deepEqual(leadCoverage(leads, [{ ...tools[0], revision: "c".repeat(40) }]).stale, ["t/gouroboros"]);
 });

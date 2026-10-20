@@ -450,7 +450,13 @@ npm run readiness -- check-leads --verify-sources  # also re-read every quoted l
 older revision than the new scan (`stale`) and decisions that no longer match a
 gap (`orphaned`, which fails the command). Decide each new or stale lead by
 reading the tool's shipped code at the classified revision and record the quoted
-lines in `content/readiness/dijkstra/leads.json`.
+lines in `content/readiness/dijkstra/leads.json`. Then regenerate the unlock
+report:
+
+```sh
+npm run readiness -- unlocks                                    # content/readiness/dijkstra/unlocks.json
+npm run readiness -- unlocks --component scalus,cardano-js-sdk  # what fixing these together unlocks
+```
 
 ## Manual review handoff
 

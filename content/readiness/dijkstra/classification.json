@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T09:25:18.746Z",
- "rulesDigest": "75ed0c6422effee3f44d27a99162ed525f2d78d3ed6f9403da112027a25f6427",
+ "generatedAt": "2026-10-20T09:47:22.667Z",
+ "rulesDigest": "134cdbb8edf4ae03da40090b466639164d5b2beb3dc3a356ce67ef493e0d235d",
  "changeTarget": {
   "name": "Dijkstra",
   "majorProtocolVersion": 12,
@@ -90,8 +90,8 @@
  "boundaryRetrieved": "2026-10-19",
  "summary": {
   "implements": 65,
-  "dependency": 87,
-  "service": 44,
+  "dependency": 86,
+  "service": 45,
   "unknown": 42,
   "auxiliary": 4,
   "marker": 9,
@@ -1032,14 +1032,14 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@4.2.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 30,
+       "lines": 25,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 8,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -1059,7 +1059,7 @@
        "channel": "dependency",
        "via": "cardano-api@11.6.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 12,
+       "lines": 10,
        "scope": "shipped"
       }
      ],
@@ -1099,21 +1099,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.6.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 12,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "cardano-ledger-conway@1.23.0.0<1.24.0.0",
        "readiness": "gap",
-       "lines": 74,
+       "lines": 58,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "ouroboros-consensus@4.2.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 30,
+       "lines": 25,
        "scope": "shipped"
       },
       {
@@ -1154,7 +1154,7 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@4.2.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 30,
+       "lines": 25,
        "scope": "shipped"
       },
       {
@@ -1228,7 +1228,7 @@
        "channel": "dependency",
        "via": "cardano-ledger-conway@1.23.0.0<1.24.0.0",
        "readiness": "gap",
-       "lines": 74,
+       "lines": 58,
        "scope": "shipped"
       },
       {
@@ -1282,21 +1282,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.6.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 12,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "cardano-ledger-conway@1.23.0.0<1.24.0.0",
        "readiness": "gap",
-       "lines": 74,
+       "lines": 58,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 8,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -1330,7 +1330,7 @@
        "channel": "dependency",
        "via": "cardano-ledger-conway@1.23.0.0<1.24.0.0",
        "readiness": "gap",
-       "lines": 74,
+       "lines": 58,
        "scope": "shipped"
       }
      ],
@@ -1341,8 +1341,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 10,
-     "lines": 12,
-     "auxLines": 2,
+     "lines": 10,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -1372,8 +1372,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 12,
-     "lines": 74,
-     "auxLines": 1,
+     "lines": 58,
+     "auxLines": 17,
      "docLines": 0,
      "examples": [
       {
@@ -1438,8 +1438,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 8,
-     "lines": 30,
-     "auxLines": 0,
+     "lines": 25,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
       {
@@ -1673,8 +1673,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 9,
-     "lines": 8,
-     "auxLines": 0,
+     "lines": 7,
+     "auxLines": 1,
      "docLines": 1,
      "examples": [
       {
@@ -1925,14 +1925,14 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 5,
+       "lines": 4,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -1959,7 +1959,7 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 6,
+       "lines": 5,
        "scope": "shipped"
       }
      ],
@@ -1992,21 +1992,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 6,
+       "lines": 5,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 20,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 5,
+       "lines": 4,
        "scope": "shipped"
       },
       {
@@ -2033,7 +2033,7 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1.0<5.1.0.1",
        "readiness": "gap",
-       "lines": 5,
+       "lines": 4,
        "scope": "shipped"
       },
       {
@@ -2067,7 +2067,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 9,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -2087,7 +2087,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 9,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -2107,7 +2107,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 20,
        "scope": "shipped"
       },
       {
@@ -2154,21 +2154,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 6,
+       "lines": 5,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 20,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -2195,7 +2195,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 20,
        "scope": "shipped"
       }
      ],
@@ -2206,8 +2206,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 5,
-     "lines": 6,
-     "auxLines": 1,
+     "lines": 5,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -2247,8 +2247,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 4,
-     "lines": 23,
-     "auxLines": 0,
+     "lines": 20,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
       {
@@ -2307,19 +2307,14 @@
        "path": "kuber.cabal",
        "line": 85,
        "quote": ", cardano-ledger-conway >= 1.22.1.0"
-      },
-      {
-       "path": "kuber.cabal",
-       "line": 137,
-       "quote": ", cardano-ledger-alonzo >= 1.6.0"
       }
      ]
     },
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 3,
-     "lines": 5,
-     "auxLines": 0,
+     "lines": 4,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -2359,8 +2354,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 3,
-     "lines": 9,
-     "auxLines": 0,
+     "lines": 7,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -2459,8 +2454,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 4,
-     "lines": 7,
-     "auxLines": 0,
+     "lines": 6,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -3107,7 +3102,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -3148,7 +3143,7 @@
        "channel": "dependency",
        "via": "cardano-api@10.13.1<11.8.0.0",
        "readiness": "gap",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       }
      ],
@@ -3161,7 +3156,7 @@
        "channel": "dependency",
        "via": "cardano-api@10.13.1<11.8.0.0",
        "readiness": "gap",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -3175,7 +3170,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -3209,7 +3204,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -3257,7 +3252,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 10,
+       "lines": 8,
        "scope": "shipped"
       },
       {
@@ -3291,7 +3286,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 10,
+       "lines": 8,
        "scope": "shipped"
       },
       {
@@ -3365,7 +3360,7 @@
        "channel": "dependency",
        "via": "cardano-api@10.13.1<11.8.0.0",
        "readiness": "gap",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -3443,8 +3438,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 1,
-     "lines": 2,
-     "auxLines": 0,
+     "lines": 1,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -3493,8 +3488,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 2,
-     "lines": 8,
-     "auxLines": 0,
+     "lines": 7,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -3517,8 +3512,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 3,
-     "lines": 10,
-     "auxLines": 0,
+     "lines": 8,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -3801,7 +3796,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -3815,7 +3810,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "in-progress",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       }
      ],
@@ -3855,7 +3850,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -3883,7 +3878,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "in-progress",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       }
      ],
@@ -3917,7 +3912,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "released",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       }
      ],
@@ -3937,7 +3932,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -3951,7 +3946,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "in-progress",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       }
      ],
@@ -3984,7 +3979,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -4012,7 +4007,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "in-progress",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       }
      ],
@@ -4032,7 +4027,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -4066,14 +4061,14 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "ledgerjs-hw-app-cardano",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -4101,7 +4096,7 @@
        "channel": "service",
        "via": "ogmios",
        "readiness": "in-progress",
-       "lines": 94,
+       "lines": 91,
        "scope": "shipped"
       },
       {
@@ -4128,14 +4123,14 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "ledgerjs-hw-app-cardano",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       }
      ],
@@ -4146,15 +4141,10 @@
     {
      "rule": "dependency:cardano-multiplatform-lib-cml",
      "files": 2,
-     "lines": 7,
-     "auxLines": 2,
+     "lines": 6,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/crypto/package.json",
-       "line": 41,
-       "quote": "\"@dcspark/cardano-multiplatform-lib-nodejs\": \"^3.1.1\","
-      },
       {
        "path": "packages/crypto/package.json",
        "line": 54,
@@ -4164,14 +4154,14 @@
        "path": "packages/crypto/package.json",
        "line": 55,
        "quote": "\"@dcspark/cardano-multiplatform-lib-browser\": \"^3.1.1\","
+      },
+      {
+       "path": "packages/crypto/package.json",
+       "line": 56,
+       "quote": "\"@dcspark/cardano-multiplatform-lib-nodejs\": \"^3.1.1\""
       }
      ],
      "pins": [
-      {
-       "path": "packages/crypto/package.json",
-       "line": 41,
-       "quote": "\"@dcspark/cardano-multiplatform-lib-nodejs\": \"^3.1.1\","
-      },
       {
        "path": "packages/crypto/package.json",
        "line": 54,
@@ -4192,8 +4182,8 @@
     {
      "rule": "dependency:ledgerjs-hw-app-cardano",
      "files": 3,
-     "lines": 2,
-     "auxLines": 1,
+     "lines": 1,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -4202,13 +4192,13 @@
        "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"^8.0.0\","
       },
       {
-       "path": "packages/wallet/package.json",
-       "line": 42,
+       "path": "packages/e2e/package.json",
+       "line": 77,
        "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"^8.0.0\","
       },
       {
-       "path": "packages/e2e/package.json",
-       "line": 77,
+       "path": "packages/wallet/package.json",
+       "line": 42,
        "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"^8.0.0\","
       }
      ],
@@ -4216,11 +4206,6 @@
       {
        "path": "packages/hardware-ledger/package.json",
        "line": 51,
-       "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"^8.0.0\","
-      },
-      {
-       "path": "packages/wallet/package.json",
-       "line": 42,
        "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"^8.0.0\","
       }
      ]
@@ -4501,8 +4486,8 @@
     {
      "rule": "service:ogmios",
      "files": 112,
-     "lines": 94,
-     "auxLines": 132,
+     "lines": 91,
+     "auxLines": 135,
      "docLines": 346,
      "examples": [
       {
@@ -4578,14 +4563,14 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 6,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 14,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -4619,7 +4604,7 @@
        "channel": "dependency",
        "via": "cardano-api@11.7<11.8.0.0",
        "readiness": "gap",
-       "lines": 56,
+       "lines": 33,
        "scope": "shipped"
       }
      ],
@@ -4652,21 +4637,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.7<11.8.0.0",
        "readiness": "gap",
-       "lines": 56,
+       "lines": 33,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -4700,7 +4685,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 8,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -4741,7 +4726,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.68.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 28,
+       "lines": 20,
        "scope": "shipped"
       },
       {
@@ -4768,7 +4753,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.68.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 28,
+       "lines": 20,
        "scope": "shipped"
       },
       {
@@ -4788,7 +4773,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
@@ -4815,21 +4800,21 @@
        "channel": "dependency",
        "via": "cardano-api@11.7<11.8.0.0",
        "readiness": "gap",
-       "lines": 56,
+       "lines": 33,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 14,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -4856,7 +4841,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       }
      ],
@@ -4886,8 +4871,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 10,
-     "lines": 56,
-     "auxLines": 0,
+     "lines": 33,
+     "auxLines": 23,
      "docLines": 0,
      "examples": [
       {
@@ -4917,8 +4902,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 46,
-     "auxLines": 0,
+     "lines": 34,
+     "auxLines": 12,
      "docLines": 0,
      "examples": [
       {
@@ -4941,8 +4926,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 3,
-     "lines": 8,
-     "auxLines": 0,
+     "lines": 6,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -4965,8 +4950,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 7,
-     "lines": 28,
-     "auxLines": 0,
+     "lines": 20,
+     "auxLines": 8,
      "docLines": 0,
      "examples": [
       {
@@ -5005,11 +4990,6 @@
        "path": "cabal.project",
        "line": 58,
        "quote": "plutus-ledger-api == 1.68.0.0,"
-      },
-      {
-       "path": "hydra-node/hydra-node.cabal",
-       "line": 491,
-       "quote": ", plutus-ledger-api               >=1.1.1.0"
       },
       {
        "path": "hydra-plutus-extras/hydra-plutus-extras.cabal",
@@ -5161,8 +5141,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 13,
-     "lines": 14,
-     "auxLines": 1,
+     "lines": 13,
+     "auxLines": 2,
      "docLines": 2,
      "examples": [
       {
@@ -5408,7 +5388,7 @@
        "via": "cardano-js-sdk",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5497,7 +5477,7 @@
        "via": "cardano-js-sdk",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5572,7 +5552,7 @@
        "via": "cardano-js-sdk",
        "readiness": "gap",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5610,7 +5590,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "no-evidence"
     },
     {
      "surface": "stake-pool-registration",
@@ -5627,7 +5607,7 @@
        "via": "cardano-js-sdk",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5661,7 +5641,7 @@
        "via": "cardano-js-sdk",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5737,7 +5717,7 @@
        "via": "cardano-js-sdk",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -5773,17 +5753,10 @@
     {
      "rule": "dependency:cardano-js-sdk",
      "files": 1,
-     "lines": 1,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/utils/package.json",
-       "line": 49,
-       "quote": "\"@cardano-sdk/core\": \"^0.46.10\","
-      }
-     ],
-     "pins": [
       {
        "path": "packages/utils/package.json",
        "line": 49,
@@ -6254,8 +6227,8 @@
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 15,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6309,21 +6282,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6405,21 +6378,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "in-progress",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6436,7 +6409,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "no-evidence"
+     "readiness": "tracked"
     },
     {
      "surface": "plutus-script-context",
@@ -6480,21 +6453,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6542,21 +6515,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6590,21 +6563,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -6617,8 +6590,8 @@
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 15,
+       "scope": "auxiliary"
       },
       {
        "channel": "service",
@@ -6666,21 +6639,21 @@
        "via": "evolution-sdk",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
        "lines": 3,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
        "lines": 2,
-       "scope": "shipped"
+       "scope": "auxiliary"
       }
      ],
      "readiness": "no-evidence"
@@ -6738,17 +6711,10 @@
     {
      "rule": "dependency:evolution-sdk",
      "files": 1,
-     "lines": 1,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 40,
-       "quote": "\"@evolution-sdk/evolution\": \"0.5.13\","
-      }
-     ],
-     "pins": [
       {
        "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
        "line": 40,
@@ -6759,27 +6725,10 @@
     {
      "rule": "dependency:lucid-evolution",
      "files": 1,
-     "lines": 3,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 41,
-       "quote": "\"@lucid-evolution/lucid\": \"^0.6.2\","
-      },
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 42,
-       "quote": "\"@lucid-evolution/uplc\": \"^0.2.22\","
-      },
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 50,
-       "quote": "\"@lucid-evolution/provider\": \"^0.2.0\""
-      }
-     ],
-     "pins": [
       {
        "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
        "line": 41,
@@ -6800,22 +6749,10 @@
     {
      "rule": "dependency:meshjs-mesh-sdk",
      "files": 1,
-     "lines": 2,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 43,
-       "quote": "\"@meshsdk/core\": \"^1.9.0-beta.98\","
-      },
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 44,
-       "quote": "\"@meshsdk/core-cst\": \"1.9.1\","
-      }
-     ],
-     "pins": [
       {
        "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
        "line": 43,
@@ -6960,15 +6897,10 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 11,
-     "lines": 1,
-     "auxLines": 14,
+     "lines": 0,
+     "auxLines": 15,
      "docLines": 8,
      "examples": [
-      {
-       "path": "scalus-cardano-ledger/js/src/main/npm/package.json",
-       "line": 46,
-       "quote": "\"cbor-x\": \"^1.6.0\","
-      },
       {
        "path": "scalus-cardano-ledger/js/src/main/npm/__tests__/balance-mesh.test.ts",
        "line": 10,
@@ -6978,6 +6910,11 @@
        "path": "scalus-cardano-ledger/js/src/main/npm/__tests__/balance.test.ts",
        "line": 9,
        "quote": "import { Decoder, Encoder } from \"cbor-x\";"
+      },
+      {
+       "path": "scalus-cardano-ledger/js/src/main/npm/__tests__/balance.test.ts",
+       "line": 14,
+       "quote": "// `tagUint8Array: false` writes a plain CBOR byte string; cbor-x otherwise emits tag 64,"
       }
      ]
     },
@@ -10005,7 +9942,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -10036,7 +9973,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "no-evidence"
+     "readiness": "in-progress"
     },
     {
      "surface": "era-identity",
@@ -10053,7 +9990,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "service",
@@ -10142,7 +10079,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -10210,7 +10147,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -10265,7 +10202,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -10292,14 +10229,14 @@
        "via": "cardano-hw-interop-lib",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "dependency",
@@ -10375,7 +10312,7 @@
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       }
      ],
      "readiness": "no-evidence"
@@ -10404,17 +10341,10 @@
     {
      "rule": "dependency:cardano-hw-interop-lib",
      "files": 1,
-     "lines": 1,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/evolution/package.json",
-       "line": 50,
-       "quote": "\"cardano-hw-interop-lib\": \"3.1.0\","
-      }
-     ],
-     "pins": [
       {
        "path": "packages/evolution/package.json",
        "line": 50,
@@ -10425,17 +10355,10 @@
     {
      "rule": "dependency:cardano-multiplatform-lib-cml",
      "files": 1,
-     "lines": 1,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/evolution/package.json",
-       "line": 47,
-       "quote": "\"@dcspark/cardano-multiplatform-lib-nodejs\": \"^6.2.0\","
-      }
-     ],
-     "pins": [
       {
        "path": "packages/evolution/package.json",
        "line": 47,
@@ -12210,7 +12133,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12313,7 +12236,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "tracked",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12374,7 +12297,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12429,7 +12352,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12470,7 +12393,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12546,7 +12469,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 9,
        "scope": "shipped"
       },
       {
@@ -12564,15 +12487,10 @@
     {
      "rule": "dependency:bloxbean-cardano-client-library",
      "files": 6,
-     "lines": 10,
-     "auxLines": 0,
+     "lines": 9,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "aggregates/governance-rules/build.gradle",
-       "line": 3,
-       "quote": "testImplementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.6.2'"
-      },
       {
        "path": "components/common/build.gradle",
        "line": 10,
@@ -12582,14 +12500,14 @@
        "path": "components/core/build.gradle",
        "line": 8,
        "quote": "exclude group: \"com.bloxbean.cardano\", module: \"cardano-client-core\""
+      },
+      {
+       "path": "components/events/build.gradle",
+       "line": 3,
+       "quote": "exclude group: \"com.bloxbean.cardano\", module: \"cardano-client-core\""
       }
      ],
      "pins": [
-      {
-       "path": "aggregates/governance-rules/build.gradle",
-       "line": 3,
-       "quote": "testImplementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.6.2'"
-      },
       {
        "path": "gradle/libs.versions.toml",
        "line": 3,
@@ -13783,7 +13701,7 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1<5.1.0.1",
        "readiness": "gap",
-       "lines": 46,
+       "lines": 39,
        "scope": "shipped"
       },
       {
@@ -13810,14 +13728,14 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 38,
+       "lines": 28,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1<5.1.0.1",
        "readiness": "gap",
-       "lines": 46,
+       "lines": 39,
        "scope": "shipped"
       },
       {
@@ -13844,7 +13762,7 @@
        "channel": "dependency",
        "via": "ouroboros-consensus@3.0.1<5.1.0.1",
        "readiness": "gap",
-       "lines": 46,
+       "lines": 39,
        "scope": "shipped"
       },
       {
@@ -13925,7 +13843,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 38,
+       "lines": 28,
        "scope": "shipped"
       },
       {
@@ -13952,7 +13870,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 38,
+       "lines": 28,
        "scope": "shipped"
       },
       {
@@ -13972,7 +13890,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 38,
+       "lines": 28,
        "scope": "shipped"
       }
      ],
@@ -13983,8 +13901,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 3,
-     "lines": 38,
-     "auxLines": 0,
+     "lines": 28,
+     "auxLines": 10,
      "docLines": 0,
      "examples": [
       {
@@ -14014,8 +13932,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 5,
-     "lines": 46,
-     "auxLines": 0,
+     "lines": 39,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -14338,380 +14256,6 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-09-13T07:24:46Z"
-   }
-  },
-  {
-   "id": "cardano-data-lite",
-   "repo": "mlabs-haskell/cardano-data-lite",
-   "revision": "b099b3d11b009b971f918217bc15a769555be8fb",
-   "scan": {
-    "status": "scanned",
-    "files": 111,
-    "skipped": 30
-   },
-   "exposure": "implements",
-   "readiness": "gap",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:segregated-block-body",
-       "readiness": "unassessed",
-       "lines": 177,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 18,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 116,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 112,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 146,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "cardano-data-lite",
-       "readiness": "no-evidence",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "cardano-serialization-lib-csl",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:cardano-serialization-lib-csl",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "package.json",
-       "line": 43,
-       "quote": "\"@emurgo/cardano-serialization-lib-nodejs-gc\": \"^14.1\","
-      }
-     ],
-     "pins": [
-      {
-       "path": "package.json",
-       "line": 43,
-       "quote": "\"@emurgo/cardano-serialization-lib-nodejs-gc\": \"^14.1\","
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 9,
-     "lines": 116,
-     "auxLines": 0,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 212,
-       "quote": ";     For example, the script_integrity_data corresponding to the all zero costmodel for V1"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 221,
-       "quote": ";     For example, the script_integrity_data corresponding to the all zero costmodel for V2"
-      },
-      {
-       "path": "conway-cddl/yaml/conway.yaml",
-       "line": 905,
-       "quote": "# ;     For example, the script_integrity_data corresponding to the all zero costmodel for V1"
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 9,
-     "lines": 146,
-     "auxLines": 2,
-     "docLines": 4,
-     "examples": [
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 276,
-       "quote": "[ stake_registration"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 277,
-       "quote": "// stake_deregistration"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 295,
-       "quote": "stake_registration = (0, stake_credential) ; to be deprecated in era after Conway"
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 7,
-     "lines": 18,
-     "auxLines": 0,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 227,
-       "quote": "; For PlutusV3 (language id 2), the language view is the following:"
-      },
-      {
-       "path": "conway-cddl/yaml/conway.yaml",
-       "line": 920,
-       "quote": "# ; For PlutusV3 (language id 2), the language view is the following:"
-      },
-      {
-       "path": "conway-cddl/yaml/conway.yaml",
-       "line": 1885,
-       "quote": "- name: plutus_v3"
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 8,
-     "lines": 112,
-     "auxLines": 1,
-     "docLines": 7,
-     "examples": [
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 279,
-       "quote": "// pool_registration"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 300,
-       "quote": "pool_registration = (3, pool_params)"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 342,
-       "quote": "pool_params = ( operator:       pool_keyhash"
-      }
-     ]
-    },
-    {
-     "rule": "marker:segregated-block-body",
-     "files": 6,
-     "lines": 177,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 3,
-       "quote": ", transaction_bodies         : [* transaction_body]"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 4,
-       "quote": ", transaction_witness_sets   : [* transaction_witness_set]"
-      },
-      {
-       "path": "conway-cddl/conway.cddl",
-       "line": 6,
-       "quote": ", invalid_transactions       : [* transaction_index ]"
-      }
-     ]
-    },
-    {
-     "rule": "service:blockfrost",
-     "files": 2,
-     "lines": 1,
-     "auxLines": 4,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "package.json",
-       "line": 42,
-       "quote": "\"@blockfrost/blockfrost-js\": \"^5.5.0\","
-      },
-      {
-       "path": "tests/serialization/get_transactions.ts",
-       "line": 1,
-       "quote": "import { BlockFrostAPI } from \"@blockfrost/blockfrost-js\";"
-      },
-      {
-       "path": "tests/serialization/get_transactions.ts",
-       "line": 16,
-       "quote": "const bf = new BlockFrostAPI({ projectId: projectId, network: \"mainnet\" });"
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2025-12-26T10:37:02Z"
    }
   },
   {
@@ -15452,7 +14996,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.65.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 20,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -15479,7 +15023,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.65.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 20,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -15510,8 +15054,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 5,
-     "lines": 20,
-     "auxLines": 0,
+     "lines": 15,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
       {
@@ -19278,7 +18822,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19327,7 +18871,7 @@
        "channel": "service",
        "via": "utxorpc",
        "readiness": "in-progress",
-       "lines": 410,
+       "lines": 402,
        "scope": "shipped"
       }
      ],
@@ -19340,7 +18884,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       }
      ],
@@ -19367,7 +18911,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19415,7 +18959,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "released",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19470,7 +19014,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19524,7 +19068,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19572,7 +19116,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19613,7 +19157,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -19669,7 +19213,7 @@
        "channel": "service",
        "via": "utxorpc",
        "readiness": "in-progress",
-       "lines": 410,
+       "lines": 402,
        "scope": "shipped"
       }
      ],
@@ -19696,7 +19240,7 @@
        "channel": "dependency",
        "via": "pallas",
        "readiness": "in-progress",
-       "lines": 4,
+       "lines": 2,
        "scope": "shipped"
       }
      ],
@@ -19747,23 +19291,23 @@
     {
      "rule": "dependency:pallas",
      "files": 3,
-     "lines": 4,
-     "auxLines": 0,
+     "lines": 2,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
-      {
-       "path": "Cargo.toml",
-       "line": 116,
-       "quote": "pallas = { workspace = true }"
-      },
       {
        "path": "Cargo.toml",
        "line": 234,
        "quote": "pallas = { version = \"1.3.0\", features = [\"hardano\", \"phase2\", \"unstable\"] }"
       },
       {
-       "path": "crates/snapshot/Cargo.toml",
-       "line": 54,
+       "path": "xtask/Cargo.toml",
+       "line": 25,
+       "quote": "pallas = { workspace = true }"
+      },
+      {
+       "path": "Cargo.toml",
+       "line": 116,
        "quote": "pallas = { workspace = true }"
       }
      ],
@@ -20147,8 +19691,8 @@
     {
      "rule": "service:utxorpc",
      "files": 271,
-     "lines": 410,
-     "auxLines": 667,
+     "lines": 402,
+     "auxLines": 675,
      "docLines": 660,
      "examples": [
       {
@@ -20882,8 +20426,8 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -20964,8 +20508,8 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -21011,8 +20555,8 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -21052,8 +20596,8 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -21063,7 +20607,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "no-evidence"
+     "readiness": "unassessed"
     },
     {
      "surface": "transaction-encoding",
@@ -21079,8 +20623,8 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -21127,33 +20671,26 @@
        "channel": "dependency",
        "via": "buildooor",
        "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
+       "lines": 2,
+       "scope": "auxiliary"
       }
      ],
-     "readiness": "no-evidence"
+     "readiness": "unassessed"
     }
    ],
    "hits": [
     {
      "rule": "dependency:buildooor",
      "files": 2,
-     "lines": 1,
-     "auxLines": 1,
+     "lines": 0,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/pebble/package.json",
-       "line": 69,
-       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.6\","
-      },
       {
        "path": "examples/package.json",
        "line": 18,
        "quote": "\"@harmoniclabs/buildooor\": \"^0.2.9\""
-      }
-     ],
-     "pins": [
+      },
       {
        "path": "packages/pebble/package.json",
        "line": 69,
@@ -23243,7 +22780,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       },
       {
@@ -23283,7 +22820,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       },
       {
@@ -23330,7 +22867,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       }
      ],
@@ -23343,7 +22880,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       },
       {
@@ -23363,7 +22900,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       },
       {
@@ -23397,7 +22934,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       },
       {
@@ -23424,7 +22961,7 @@
        "channel": "dependency",
        "via": "cardano-multiplatform-lib-cml",
        "readiness": "no-evidence",
-       "lines": 18,
+       "lines": 17,
        "scope": "shipped"
       }
      ],
@@ -23435,8 +22972,8 @@
     {
      "rule": "dependency:cardano-multiplatform-lib-cml",
      "files": 7,
-     "lines": 18,
-     "auxLines": 1,
+     "lines": 17,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -23475,11 +23012,6 @@
        "path": "Cargo.toml",
        "line": 18,
        "quote": "cml-multi-era = { version = \"6.0.0\" }"
-      },
-      {
-       "path": "webserver/client/package.json",
-       "line": 30,
-       "quote": "\"@dcspark/cardano-multiplatform-lib-nodejs\": \"6.0.1\","
       },
       {
        "path": "webserver/server/package.json",
@@ -24180,7 +23712,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -24220,7 +23752,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "tracked",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -24260,7 +23792,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -24280,7 +23812,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -24300,7 +23832,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -24327,7 +23859,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 16,
+       "lines": 14,
        "scope": "shipped"
       }
      ],
@@ -24338,8 +23870,8 @@
     {
      "rule": "dependency:bloxbean-cardano-client-library",
      "files": 12,
-     "lines": 16,
-     "auxLines": 7,
+     "lines": 14,
+     "auxLines": 9,
      "docLines": 0,
      "examples": [
       {
@@ -24368,11 +23900,6 @@
        "path": "julc-blueprint/build.gradle",
        "line": 11,
        "quote": "implementation 'com.bloxbean.cardano:cardano-client-lib:0.7.1'"
-      },
-      {
-       "path": "julc-blueprint/build.gradle",
-       "line": 19,
-       "quote": "testImplementation 'com.bloxbean.cardano:cardano-client-plutus:0.8.0-pre2'"
       },
       {
        "path": "julc-cardano-client-lib/build.gradle",
@@ -28524,6 +28051,373 @@
    }
   },
   {
+   "id": "cardano-data-lite",
+   "repo": "mlabs-haskell/cardano-data-lite",
+   "revision": "b099b3d11b009b971f918217bc15a769555be8fb",
+   "scan": {
+    "status": "scanned",
+    "files": 111,
+    "skipped": 30
+   },
+   "exposure": "implements",
+   "readiness": "no-evidence",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:segregated-block-body",
+       "readiness": "unassessed",
+       "lines": 177,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "unassessed"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 5,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "gap",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 18,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 116,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 5,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 112,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 146,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 5,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "cardano-data-lite",
+       "readiness": "no-evidence",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "cardano-serialization-lib-csl",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "no-evidence"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:cardano-serialization-lib-csl",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 1,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "package.json",
+       "line": 43,
+       "quote": "\"@emurgo/cardano-serialization-lib-nodejs-gc\": \"^14.1\","
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 9,
+     "lines": 116,
+     "auxLines": 0,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 212,
+       "quote": ";     For example, the script_integrity_data corresponding to the all zero costmodel for V1"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 221,
+       "quote": ";     For example, the script_integrity_data corresponding to the all zero costmodel for V2"
+      },
+      {
+       "path": "conway-cddl/yaml/conway.yaml",
+       "line": 905,
+       "quote": "# ;     For example, the script_integrity_data corresponding to the all zero costmodel for V1"
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 9,
+     "lines": 146,
+     "auxLines": 2,
+     "docLines": 4,
+     "examples": [
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 276,
+       "quote": "[ stake_registration"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 277,
+       "quote": "// stake_deregistration"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 295,
+       "quote": "stake_registration = (0, stake_credential) ; to be deprecated in era after Conway"
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 7,
+     "lines": 18,
+     "auxLines": 0,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 227,
+       "quote": "; For PlutusV3 (language id 2), the language view is the following:"
+      },
+      {
+       "path": "conway-cddl/yaml/conway.yaml",
+       "line": 920,
+       "quote": "# ; For PlutusV3 (language id 2), the language view is the following:"
+      },
+      {
+       "path": "conway-cddl/yaml/conway.yaml",
+       "line": 1885,
+       "quote": "- name: plutus_v3"
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 8,
+     "lines": 112,
+     "auxLines": 1,
+     "docLines": 7,
+     "examples": [
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 279,
+       "quote": "// pool_registration"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 300,
+       "quote": "pool_registration = (3, pool_params)"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 342,
+       "quote": "pool_params = ( operator:       pool_keyhash"
+      }
+     ]
+    },
+    {
+     "rule": "marker:segregated-block-body",
+     "files": 6,
+     "lines": 177,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 3,
+       "quote": ", transaction_bodies         : [* transaction_body]"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 4,
+       "quote": ", transaction_witness_sets   : [* transaction_witness_set]"
+      },
+      {
+       "path": "conway-cddl/conway.cddl",
+       "line": 6,
+       "quote": ", invalid_transactions       : [* transaction_index ]"
+      }
+     ]
+    },
+    {
+     "rule": "service:blockfrost",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 5,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "package.json",
+       "line": 42,
+       "quote": "\"@blockfrost/blockfrost-js\": \"^5.5.0\","
+      },
+      {
+       "path": "tests/serialization/get_transactions.ts",
+       "line": 1,
+       "quote": "import { BlockFrostAPI } from \"@blockfrost/blockfrost-js\";"
+      },
+      {
+       "path": "tests/serialization/get_transactions.ts",
+       "line": 16,
+       "quote": "const bf = new BlockFrostAPI({ projectId: projectId, network: \"mainnet\" });"
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2025-12-26T10:37:02Z"
+   }
+  },
+  {
    "id": "cardano-graphql",
    "repo": "cardano-foundation/cardano-graphql",
    "revision": "fcfe3154115ef176788a60b2eae925ee42aabd7c",
@@ -30168,7 +30062,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 19,
        "scope": "shipped"
       },
       {
@@ -30188,7 +30082,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       }
      ],
@@ -30221,21 +30115,21 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 31,
+       "lines": 20,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 19,
        "scope": "shipped"
       }
      ],
@@ -30255,7 +30149,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 19,
        "scope": "shipped"
       },
       {
@@ -30322,7 +30216,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 31,
+       "lines": 20,
        "scope": "shipped"
       },
       {
@@ -30369,14 +30263,14 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 31,
+       "lines": 20,
        "scope": "shipped"
       },
       {
@@ -30403,7 +30297,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 31,
+       "lines": 20,
        "scope": "shipped"
       }
      ],
@@ -30414,8 +30308,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 4,
-     "lines": 4,
-     "auxLines": 0,
+     "lines": 3,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -30424,13 +30318,13 @@
        "quote": ", cardano-api:plutus-core"
       },
       {
-       "path": "cardano-chain-gen/cardano-chain-gen.cabal",
-       "line": 165,
+       "path": "cardano-db-tool/cardano-db-tool.cabal",
+       "line": 61,
        "quote": ", cardano-api"
       },
       {
-       "path": "cardano-db-tool/cardano-db-tool.cabal",
-       "line": 61,
+       "path": "cardano-smash-server/cardano-smash-server.cabal",
+       "line": 65,
        "quote": ", cardano-api"
       }
      ]
@@ -30438,8 +30332,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 31,
-     "auxLines": 1,
+     "lines": 20,
+     "auxLines": 12,
      "docLines": 0,
      "examples": [
       {
@@ -30465,11 +30359,6 @@
        "quote": ", cardano-ledger-shelley >= 1.12.3.0"
       },
       {
-       "path": "cardano-chain-gen/cardano-chain-gen.cabal",
-       "line": 174,
-       "quote": ", cardano-ledger-shelley >= 1.12.3.0"
-      },
-      {
        "path": "cardano-db-sync/cardano-db-sync.cabal",
        "line": 172,
        "quote": ", cardano-ledger-conway >= 1.17.3"
@@ -30478,11 +30367,6 @@
        "path": "cardano-db-sync/cardano-db-sync.cabal",
        "line": 178,
        "quote": ", cardano-ledger-shelley >= 1.12.3.0"
-      },
-      {
-       "path": "cardano-db-sync/cardano-db-sync.cabal",
-       "line": 398,
-       "quote": ", cardano-ledger-shelley:{cardano-ledger-shelley,testlib} >= 1.12.3.0"
       },
       {
        "path": "cardano-db-tool/cardano-db-tool.cabal",
@@ -30494,8 +30378,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 3,
-     "lines": 23,
-     "auxLines": 0,
+     "lines": 19,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -32405,8 +32289,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 2,
-     "lines": 6,
-     "auxLines": 0,
+     "lines": 4,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -32436,8 +32320,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 3,
-     "lines": 11,
-     "auxLines": 0,
+     "lines": 7,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -32639,8 +32523,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 2,
-     "lines": 5,
-     "auxLines": 0,
+     "lines": 4,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -32906,8 +32790,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 6,
-     "lines": 8,
-     "auxLines": 5,
+     "lines": 4,
+     "auxLines": 9,
      "docLines": 0,
      "examples": [
       {
@@ -32916,13 +32800,13 @@
        "quote": "build-depends:        cardano-api"
       },
       {
-       "path": "cardano-node-chairman/cardano-node-chairman.cabal",
-       "line": 68,
-       "quote": "build-depends:      , cardano-api"
-      },
-      {
        "path": "cardano-node/cardano-node.cabal",
        "line": 136,
+       "quote": ", cardano-api ^>= 11.7"
+      },
+      {
+       "path": "cardano-submit-api/cardano-submit-api.cabal",
+       "line": 42,
        "quote": ", cardano-api ^>= 11.7"
       }
      ],
@@ -32947,8 +32831,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 23,
-     "auxLines": 6,
+     "lines": 18,
+     "auxLines": 11,
      "docLines": 0,
      "examples": [
       {
@@ -32983,8 +32867,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 10,
-     "lines": 19,
-     "auxLines": 4,
+     "lines": 13,
+     "auxLines": 10,
      "docLines": 0,
      "examples": [
       {
@@ -33216,8 +33100,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 6,
-     "lines": 11,
-     "auxLines": 5,
+     "lines": 9,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -33384,8 +33268,8 @@
     {
      "rule": "service:submit-api",
      "files": 32,
-     "lines": 56,
-     "auxLines": 10,
+     "lines": 54,
+     "auxLines": 12,
      "docLines": 28,
      "examples": [
       {
@@ -33608,8 +33492,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 6,
-     "lines": 8,
-     "auxLines": 5,
+     "lines": 4,
+     "auxLines": 9,
      "docLines": 0,
      "examples": [
       {
@@ -33618,13 +33502,13 @@
        "quote": "build-depends:        cardano-api"
       },
       {
-       "path": "cardano-node-chairman/cardano-node-chairman.cabal",
-       "line": 68,
-       "quote": "build-depends:      , cardano-api"
-      },
-      {
        "path": "cardano-node/cardano-node.cabal",
        "line": 136,
+       "quote": ", cardano-api ^>= 11.7"
+      },
+      {
+       "path": "cardano-submit-api/cardano-submit-api.cabal",
+       "line": 42,
        "quote": ", cardano-api ^>= 11.7"
       }
      ],
@@ -33649,8 +33533,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 23,
-     "auxLines": 6,
+     "lines": 18,
+     "auxLines": 11,
      "docLines": 0,
      "examples": [
       {
@@ -33685,8 +33569,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 10,
-     "lines": 19,
-     "auxLines": 4,
+     "lines": 13,
+     "auxLines": 10,
      "docLines": 0,
      "examples": [
       {
@@ -33918,8 +33802,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 6,
-     "lines": 11,
-     "auxLines": 5,
+     "lines": 9,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -34086,8 +33970,8 @@
     {
      "rule": "service:submit-api",
      "files": 32,
-     "lines": 56,
-     "auxLines": 10,
+     "lines": 54,
+     "auxLines": 12,
      "docLines": 28,
      "examples": [
       {
@@ -34310,8 +34194,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 6,
-     "lines": 8,
-     "auxLines": 5,
+     "lines": 4,
+     "auxLines": 9,
      "docLines": 0,
      "examples": [
       {
@@ -34320,13 +34204,13 @@
        "quote": "build-depends:        cardano-api"
       },
       {
-       "path": "cardano-node-chairman/cardano-node-chairman.cabal",
-       "line": 68,
-       "quote": "build-depends:      , cardano-api"
-      },
-      {
        "path": "cardano-node/cardano-node.cabal",
        "line": 136,
+       "quote": ", cardano-api ^>= 11.7"
+      },
+      {
+       "path": "cardano-submit-api/cardano-submit-api.cabal",
+       "line": 42,
        "quote": ", cardano-api ^>= 11.7"
       }
      ],
@@ -34351,8 +34235,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 23,
-     "auxLines": 6,
+     "lines": 18,
+     "auxLines": 11,
      "docLines": 0,
      "examples": [
       {
@@ -34387,8 +34271,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 10,
-     "lines": 19,
-     "auxLines": 4,
+     "lines": 13,
+     "auxLines": 10,
      "docLines": 0,
      "examples": [
       {
@@ -34620,8 +34504,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 6,
-     "lines": 11,
-     "auxLines": 5,
+     "lines": 9,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -34788,8 +34672,8 @@
     {
      "rule": "service:submit-api",
      "files": 32,
-     "lines": 56,
-     "auxLines": 10,
+     "lines": 54,
+     "auxLines": 12,
      "docLines": 28,
      "examples": [
       {
@@ -36269,7 +36153,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36400,7 +36284,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "in-progress",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36489,7 +36373,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36565,7 +36449,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36620,7 +36504,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36724,7 +36608,7 @@
        "channel": "dependency",
        "via": "lucid-evolution",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -36879,8 +36763,8 @@
     {
      "rule": "dependency:lucid-evolution",
      "files": 7,
-     "lines": 15,
-     "auxLines": 0,
+     "lines": 13,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -36947,17 +36831,17 @@
       },
       {
        "path": "packages/cardano-ibc-trace-registry/package.json",
-       "line": 29,
-       "quote": "\"@lucid-evolution/lucid\": \"^0.6.5\","
-      },
-      {
-       "path": "packages/cardano-ibc-trace-registry/package.json",
        "line": 34,
        "quote": "\"@lucid-evolution/lucid\": \"^0.6.5\""
       },
       {
        "path": "packages/cardano-ibc-tx-builder-runtime/package.json",
        "line": 71,
+       "quote": "\"@lucid-evolution/lucid\": \"^0.6.5\","
+      },
+      {
+       "path": "packages/cardano-ibc-tx-builder-runtime/package.json",
+       "line": 89,
        "quote": "\"@lucid-evolution/lucid\": \"^0.6.5\","
       }
      ]
@@ -37505,7 +37389,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 17,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -37532,7 +37416,7 @@
        "channel": "dependency",
        "via": "cardano-api@11.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 25,
+       "lines": 21,
        "scope": "shipped"
       }
      ],
@@ -37558,14 +37442,14 @@
        "channel": "dependency",
        "via": "cardano-api@11.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 25,
+       "lines": 21,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 36,
+       "lines": 31,
        "scope": "shipped"
       },
       {
@@ -37579,7 +37463,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 17,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -37599,7 +37483,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 17,
+       "lines": 14,
        "scope": "shipped"
       },
       {
@@ -37640,7 +37524,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.63<1.71.0.0",
        "readiness": "gap",
-       "lines": 53,
+       "lines": 45,
        "scope": "shipped"
       },
       {
@@ -37660,14 +37544,14 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.63<1.71.0.0",
        "readiness": "gap",
-       "lines": 53,
+       "lines": 45,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:script-context",
        "readiness": "unassessed",
-       "lines": 34,
+       "lines": 33,
        "scope": "shipped"
       }
      ],
@@ -37680,7 +37564,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 36,
+       "lines": 31,
        "scope": "shipped"
       },
       {
@@ -37727,14 +37611,14 @@
        "channel": "dependency",
        "via": "cardano-api@11.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 25,
+       "lines": 21,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 36,
+       "lines": 31,
        "scope": "shipped"
       },
       {
@@ -37768,7 +37652,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 36,
+       "lines": 31,
        "scope": "shipped"
       },
       {
@@ -37786,8 +37670,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 9,
-     "lines": 25,
-     "auxLines": 0,
+     "lines": 21,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -37817,8 +37701,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 6,
-     "lines": 36,
-     "auxLines": 0,
+     "lines": 31,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
       {
@@ -37862,8 +37746,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 4,
-     "lines": 17,
-     "auxLines": 0,
+     "lines": 14,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
       {
@@ -37886,8 +37770,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 11,
-     "lines": 53,
-     "auxLines": 0,
+     "lines": 45,
+     "auxLines": 8,
      "docLines": 0,
      "examples": [
       {
@@ -38056,15 +37940,10 @@
     {
      "rule": "marker:script-context",
      "files": 20,
-     "lines": 34,
-     "auxLines": 74,
+     "lines": 33,
+     "auxLines": 75,
      "docLines": 2,
      "examples": [
-      {
-       "path": "marlowe-plutus/marlowe-plutus.cabal",
-       "line": 278,
-       "quote": "Spec.PlutusTx.ScriptContext"
-      },
       {
        "path": "marlowe-plutus/src/Marlowe/Plutus/Analysis/Safety/Transaction.hs",
        "line": 208,
@@ -38074,6 +37953,11 @@
        "path": "marlowe-plutus/src/Marlowe/Plutus/Analysis/Safety/Transaction.hs",
        "line": 210,
        "quote": "scriptContext = P.ScriptContext{..}"
+      },
+      {
+       "path": "marlowe-plutus/src/Marlowe/Plutus/Analysis/Safety/Transaction.hs",
+       "line": 415,
+       "quote": "-> P.ScriptContext"
       }
      ]
     },
@@ -40751,7 +40635,7 @@
        "via": "scalus",
        "readiness": "in-progress",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -40785,7 +40669,7 @@
        "via": "scalus",
        "readiness": "gap",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -40795,7 +40679,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "unassessed"
     },
     {
      "surface": "protocol-parameters",
@@ -40866,7 +40750,7 @@
        "via": "scalus",
        "readiness": "gap",
        "lines": 1,
-       "scope": "shipped"
+       "scope": "auxiliary"
       },
       {
        "channel": "marker",
@@ -40897,7 +40781,7 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "no-evidence"
     },
     {
      "surface": "transaction-rules",
@@ -40977,17 +40861,10 @@
     {
      "rule": "dependency:scalus",
      "files": 1,
-     "lines": 1,
-     "auxLines": 0,
+     "lines": 0,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
-      {
-       "path": "packages/evaluator/package.json",
-       "line": 60,
-       "quote": "\"scalus\": \"0.17.0\","
-      }
-     ],
-     "pins": [
       {
        "path": "packages/evaluator/package.json",
        "line": 60,
@@ -41274,14 +41151,14 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 24,
+       "lines": 15,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 5,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -41301,7 +41178,7 @@
        "channel": "dependency",
        "via": "cardano-api@8.20<11.8.0.0",
        "readiness": "gap",
-       "lines": 15,
+       "lines": 10,
        "scope": "shipped"
       }
      ],
@@ -41314,21 +41191,21 @@
        "channel": "dependency",
        "via": "cardano-api@8.20<11.8.0.0",
        "readiness": "gap",
-       "lines": 15,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 13,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 24,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -41355,7 +41232,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 24,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -41382,7 +41259,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.9<1.71.0.0",
        "readiness": "gap",
-       "lines": 25,
+       "lines": 12,
        "scope": "shipped"
       },
       {
@@ -41402,7 +41279,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.9<1.71.0.0",
        "readiness": "gap",
-       "lines": 25,
+       "lines": 12,
        "scope": "shipped"
       }
      ],
@@ -41415,7 +41292,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -41455,21 +41332,21 @@
        "channel": "dependency",
        "via": "cardano-api@8.20<11.8.0.0",
        "readiness": "gap",
-       "lines": 15,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 13,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 5,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -41489,7 +41366,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 13,
        "scope": "shipped"
       }
      ],
@@ -41500,8 +41377,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 7,
-     "lines": 15,
-     "auxLines": 0,
+     "lines": 10,
+     "auxLines": 5,
      "docLines": 1,
      "examples": [
       {
@@ -41516,8 +41393,8 @@
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 183,
-       "quote": ", cardano-api                  ^>=8.20"
+       "line": 282,
+       "quote": ", cardano-api                   ^>=8.20"
       }
      ],
      "pins": [
@@ -41525,11 +41402,6 @@
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
        "line": 111,
        "quote": ", cardano-api             ^>=8.20"
-      },
-      {
-       "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 183,
-       "quote": ", cardano-api                  ^>=8.20"
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
@@ -41552,19 +41424,9 @@
        "quote": ", cardano-api                   ^>=8.20"
       },
       {
-       "path": "marconi-cardano-core/marconi-cardano-core.cabal",
-       "line": 238,
-       "quote": ", cardano-api                  ^>=8.20"
-      },
-      {
        "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
        "line": 84,
        "quote": ", cardano-api                   ^>=8.20"
-      },
-      {
-       "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
-       "line": 147,
-       "quote": ", cardano-api                  ^>=8.20"
       },
       {
        "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
@@ -41575,19 +41437,14 @@
        "path": "marconi-sidechain/marconi-sidechain.cabal",
        "line": 90,
        "quote": ", cardano-api           ^>=8.20"
-      },
-      {
-       "path": "marconi-sidechain/marconi-sidechain.cabal",
-       "line": 166,
-       "quote": ", cardano-api             ^>=8.20"
       }
      ]
     },
     {
      "rule": "dependency:cardano-ledger",
      "files": 5,
-     "lines": 23,
-     "auxLines": 0,
+     "lines": 13,
+     "auxLines": 10,
      "docLines": 0,
      "examples": [
       {
@@ -41602,21 +41459,11 @@
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 187,
-       "quote": ", cardano-ledger-alonzo        >=1.3.1.1"
+       "line": 285,
+       "quote": ", cardano-ledger-core"
       }
      ],
      "pins": [
-      {
-       "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 187,
-       "quote": ", cardano-ledger-alonzo        >=1.3.1.1"
-      },
-      {
-       "path": "marconi-cardano-core/marconi-cardano-core.cabal",
-       "line": 242,
-       "quote": ", cardano-ledger-alonzo        >=1.3.1.1"
-      },
       {
        "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
        "line": 85,
@@ -41631,19 +41478,14 @@
        "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
        "line": 88,
        "quote": ", cardano-ledger-conway         >=1.5"
-      },
-      {
-       "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
-       "line": 150,
-       "quote": ", cardano-ledger-alonzo        >=1.3.1.1"
       }
      ]
     },
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 4,
-     "lines": 24,
-     "auxLines": 0,
+     "lines": 15,
+     "auxLines": 9,
      "docLines": 0,
      "examples": [
       {
@@ -41658,40 +41500,35 @@
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 193,
-       "quote": ", ouroboros-consensus"
+       "line": 289,
+       "quote": ", ouroboros-network-protocols"
       }
      ]
     },
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 4,
-     "lines": 25,
-     "auxLines": 0,
+     "lines": 12,
+     "auxLines": 13,
      "docLines": 0,
      "examples": [
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 196,
+       "line": 290,
        "quote": ", plutus-core"
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 197,
-       "quote": ", plutus-ledger-api            ^>=1.9"
+       "line": 292,
+       "quote": ", plutus-ledger-api             ^>=1.9"
       },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 198,
+       "line": 293,
        "quote": ", plutus-tx"
       }
      ],
      "pins": [
-      {
-       "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 197,
-       "quote": ", plutus-ledger-api            ^>=1.9"
-      },
       {
        "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
        "line": 292,
@@ -41701,16 +41538,6 @@
        "path": "marconi-cardano-core/marconi-cardano-core.cabal",
        "line": 192,
        "quote": ", plutus-ledger-api             ^>=1.9"
-      },
-      {
-       "path": "marconi-cardano-core/marconi-cardano-core.cabal",
-       "line": 252,
-       "quote": ", plutus-ledger-api            ^>=1.9"
-      },
-      {
-       "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
-       "line": 160,
-       "quote": ", plutus-ledger-api            ^>=1.9"
       },
       {
        "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
@@ -41803,23 +41630,23 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 3,
-     "lines": 5,
-     "auxLines": 0,
+     "lines": 2,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
-      {
-       "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
-       "line": 212,
-       "quote": ", cborg"
-      },
       {
        "path": "marconi-cardano-core/marconi-cardano-core.cabal",
        "line": 95,
        "quote": ", cborg"
       },
       {
-       "path": "marconi-cardano-core/marconi-cardano-core.cabal",
-       "line": 267,
+       "path": "marconi-cardano-indexers/marconi-cardano-indexers.cabal",
+       "line": 106,
+       "quote": ", cborg"
+      },
+      {
+       "path": "marconi-cardano-chain-index/marconi-cardano-chain-index.cabal",
+       "line": 212,
        "quote": ", cborg"
       }
      ]
@@ -41987,7 +41814,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -42069,7 +41896,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -42123,7 +41950,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -42171,7 +41998,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       }
      ],
@@ -42191,7 +42018,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -42232,7 +42059,7 @@
        "channel": "dependency",
        "via": "meshjs-mesh-sdk",
        "readiness": "no-evidence",
-       "lines": 17,
+       "lines": 15,
        "scope": "shipped"
       }
      ],
@@ -42308,8 +42135,8 @@
     {
      "rule": "dependency:meshjs-mesh-sdk",
      "files": 10,
-     "lines": 17,
-     "auxLines": 0,
+     "lines": 15,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -42318,13 +42145,13 @@
        "quote": "\"@meshsdk/core\": \"1.9.0-beta.96\","
       },
       {
-       "path": "package.json",
-       "line": 116,
-       "quote": "\"@meshsdk/core\": \"1.9.0-beta.96\","
+       "path": "packages/hydra-host/package.json",
+       "line": 23,
+       "quote": "\"@meshsdk/core-cst\": \"1.9.0-beta.90\","
       },
       {
-       "path": "package.json",
-       "line": 117,
+       "path": "packages/payment-core/package.json",
+       "line": 43,
        "quote": "\"@meshsdk/core-cst\": \"1.9.0-beta.90\","
       }
      ],
@@ -42333,16 +42160,6 @@
        "path": "frontend/package.json",
        "line": 24,
        "quote": "\"@meshsdk/core\": \"1.9.0-beta.96\","
-      },
-      {
-       "path": "package.json",
-       "line": 116,
-       "quote": "\"@meshsdk/core\": \"1.9.0-beta.96\","
-      },
-      {
-       "path": "package.json",
-       "line": 117,
-       "quote": "\"@meshsdk/core-cst\": \"1.9.0-beta.90\","
       },
       {
        "path": "packages/hydra-host/package.json",
@@ -42388,6 +42205,16 @@
        "path": "smart-contracts/payment/package.json",
        "line": 14,
        "quote": "\"@meshsdk/contract\": \"^1.9.0-beta.94\","
+      },
+      {
+       "path": "smart-contracts/payment/package.json",
+       "line": 15,
+       "quote": "\"@meshsdk/core\": \"1.9.0-beta.94\","
+      },
+      {
+       "path": "smart-contracts/registry-v2/package.json",
+       "line": 19,
+       "quote": "\"@meshsdk/core\": \"1.9.0-beta.102\","
       }
      ]
     },
@@ -43900,7 +43727,7 @@
        "channel": "dependency",
        "via": "julc",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 10,
        "scope": "shipped"
       },
       {
@@ -43955,7 +43782,7 @@
        "channel": "dependency",
        "via": "julc",
        "readiness": "no-evidence",
-       "lines": 15,
+       "lines": 10,
        "scope": "shipped"
       },
       {
@@ -44278,8 +44105,8 @@
     {
      "rule": "dependency:julc",
      "files": 5,
-     "lines": 15,
-     "auxLines": 2,
+     "lines": 10,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -44294,8 +44121,8 @@
       },
       {
        "path": "appchain/onchain/appchain-anchor-onchain/build.gradle",
-       "line": 21,
-       "quote": "testImplementation \"org.julclang:julc-stdlib:${libs.versions.julc.get()}\""
+       "line": 37,
+       "quote": "systemProperty 'julc.source-check', System.getProperty('julc.source-check', 'false')"
       }
      ],
      "pins": [
@@ -45019,7 +44846,7 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 16,
+       "lines": 11,
        "scope": "shipped"
       }
      ],
@@ -45032,14 +44859,14 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 16,
+       "lines": 11,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
@@ -45093,7 +44920,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.63.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 20,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -45113,7 +44940,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.63.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 20,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -45133,7 +44960,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
@@ -45160,14 +44987,14 @@
        "channel": "dependency",
        "via": "cardano-api@11.0.0.0<11.8.0.0",
        "readiness": "gap",
-       "lines": 16,
+       "lines": 11,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       },
       {
@@ -45194,7 +45021,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 46,
+       "lines": 34,
        "scope": "shipped"
       }
      ],
@@ -45205,8 +45032,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 10,
-     "lines": 16,
-     "auxLines": 0,
+     "lines": 11,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
       {
@@ -45220,8 +45047,8 @@
        "quote": ", cardano-api                  ==11.0.0.0"
       },
       {
-       "path": "src/base/convex-base.cabal",
-       "line": 142,
+       "path": "src/blockfrost/convex-blockfrost.cabal",
+       "line": 54,
        "quote": ", cardano-api"
       }
      ],
@@ -45241,8 +45068,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 8,
-     "lines": 46,
-     "auxLines": 0,
+     "lines": 34,
+     "auxLines": 12,
      "docLines": 0,
      "examples": [
       {
@@ -45289,8 +45116,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 7,
-     "lines": 20,
-     "auxLines": 0,
+     "lines": 13,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -49537,7 +49364,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.49<1.71.0.0",
        "readiness": "gap",
-       "lines": 9,
+       "lines": 4,
        "scope": "shipped"
       },
       {
@@ -49564,7 +49391,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.49<1.71.0.0",
        "readiness": "gap",
-       "lines": 9,
+       "lines": 4,
        "scope": "shipped"
       }
      ],
@@ -49700,8 +49527,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 1,
-     "lines": 9,
-     "auxLines": 0,
+     "lines": 4,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
       {
@@ -49740,26 +49567,6 @@
        "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
        "line": 54,
        "quote": ", plutus-tx-plugin   ^>=1.49"
-      },
-      {
-       "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
-       "line": 75,
-       "quote": ", plutus-core           ^>=1.49"
-      },
-      {
-       "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
-       "line": 77,
-       "quote": ", plutus-ledger-api     ^>=1.49"
-      },
-      {
-       "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
-       "line": 78,
-       "quote": ", plutus-tx             ^>=1.49"
-      },
-      {
-       "path": "plinth-verifier/plutus-halo2/plutus-halo2.cabal",
-       "line": 79,
-       "quote": ", plutus-tx-plugin      ^>=1.49"
       }
      ]
     },
@@ -49859,7 +49666,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -49879,7 +49686,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -49899,7 +49706,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "gap",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -49932,7 +49739,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -49959,7 +49766,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -49979,7 +49786,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -50020,7 +49827,7 @@
        "channel": "dependency",
        "via": "cardano-serialization-lib-csl",
        "readiness": "no-evidence",
-       "lines": 2,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -50038,8 +49845,8 @@
     {
      "rule": "dependency:cardano-serialization-lib-csl",
      "files": 1,
-     "lines": 2,
-     "auxLines": 0,
+     "lines": 1,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -50058,11 +49865,6 @@
        "path": "mobile/package.json",
        "line": 39,
        "quote": "\"@emurgo/cardano-serialization-lib-browser\": \"14.1.2\","
-      },
-      {
-       "path": "mobile/package.json",
-       "line": 159,
-       "quote": "\"@emurgo/cardano-serialization-lib-nodejs\": \"14.1.2\","
       }
      ]
     },
@@ -52083,7 +51885,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.30.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 3,
+       "lines": 2,
        "scope": "shipped"
       }
      ],
@@ -52096,7 +51898,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core@1.30.0.0<1.71.0.0",
        "readiness": "gap",
-       "lines": 3,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -52127,8 +51929,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 1,
-     "lines": 3,
-     "auxLines": 0,
+     "lines": 2,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -52151,11 +51953,6 @@
       {
        "path": "purescript.cabal",
        "line": 226,
-       "quote": "plutus-core ==1.30.0.0,"
-      },
-      {
-       "path": "purescript.cabal",
-       "line": 550,
        "quote": "plutus-core ==1.30.0.0,"
       }
      ]
@@ -55209,607 +55006,6 @@
    }
   },
   {
-   "id": "pebble",
-   "repo": "HarmonicLabs/pebble",
-   "revision": "d6a5a75575d6091bc0bd3f63d5daa225d6772677",
-   "scan": {
-    "status": "scanned",
-    "files": 676,
-    "skipped": 34
-   },
-   "exposure": "dependency",
-   "readiness": "no-evidence",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "cardano-cli",
-     "channels": [
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "service:cardano-cli",
-       "readiness": "upstream",
-       "lines": 19,
-       "scope": "auxiliary"
-      }
-     ],
-     "readiness": "unassessed"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "released",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:node-socket",
-       "readiness": "upstream",
-       "lines": 5,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "released",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 14,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "plutus-script-context",
-     "channels": [
-      {
-       "channel": "marker",
-       "via": "marker:script-context",
-       "readiness": "unassessed",
-       "lines": 6,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "unassessed"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 3,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 6,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "buildooor",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:buildooor",
-     "files": 2,
-     "lines": 1,
-     "auxLines": 1,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble/package.json",
-       "line": 69,
-       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.6\","
-      },
-      {
-       "path": "examples/package.json",
-       "line": 18,
-       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.9\""
-      }
-     ],
-     "pins": [
-      {
-       "path": "packages/pebble/package.json",
-       "line": 69,
-       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.6\","
-      }
-     ]
-    },
-    {
-     "rule": "marker:cli-era-command",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 9,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "examples/devnet/update-costmodel.sh",
-       "line": 42,
-       "quote": "cardano-cli conway governance action create-protocol-parameters-update \\"
-      },
-      {
-       "path": "examples/devnet/update-costmodel.sh",
-       "line": 53,
-       "quote": "cardano-cli conway transaction build --testnet-magic $MAGIC \\"
-      },
-      {
-       "path": "examples/devnet/update-costmodel.sh",
-       "line": 57,
-       "quote": "cardano-cli conway transaction sign --testnet-magic $MAGIC --tx-body-file \"$W/act.raw\" \\"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 8,
-     "lines": 1,
-     "auxLines": 17,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble/package.json",
-       "line": 57,
-       "quote": "\"@harmoniclabs/cardano-costmodels-ts\": \"^1.6.1\","
-      },
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 52,
-       "quote": "const CM = _require(\"@harmoniclabs/cardano-costmodels-ts/dist/CostModels.js\");"
-      },
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 66,
-       "quote": "v: new CborBytes(Cbor.encode(new CborArray(pp.costModels.PlutusV1.map(cn), { indefinite: true }))),"
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 2,
-     "lines": 6,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
-       "line": 252,
-       "quote": "StakeRegistration {"
-      },
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
-       "line": 256,
-       "quote": "StakeDeRegistration {"
-      },
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
-       "line": 623,
-       "quote": "//     StakeRegistration {"
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 6,
-     "lines": 0,
-     "auxLines": 14,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 69,
-       "quote": "if (opts.mustHaveV3) entries.push({ k: new CborUInt(2), v: new CborArray(pp.costModels.PlutusV3.map(cn)) });"
-      },
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 125,
-       "quote": "? Script.plutusV3(hexToBytes(o.referenceScript.script.cborHex))"
-      },
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 310,
-       "quote": "* PlutusV3 script."
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 2,
-     "lines": 3,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
-       "line": 280,
-       "quote": "PoolRegistration {"
-      },
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
-       "line": 651,
-       "quote": "//     PoolRegistration {"
-      },
-      {
-       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
-       "line": 702,
-       "quote": "PoolRegistration: {"
-      }
-     ]
-    },
-    {
-     "rule": "marker:script-context",
-     "files": 11,
-     "lines": 6,
-     "auxLines": 9,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "packages/pebble/src/compiler/AstCompiler/AstCompiler.ts",
-       "line": 140,
-       "quote": "* (ScriptContext, built-in functions, etc.)"
-      },
-      {
-       "path": "packages/pebble/src/compiler/AstCompiler/AstCompiler.ts",
-       "line": 2628,
-       "quote": "new Identifier( \"ScriptContext\", contractDecl.name.range ),"
-      },
-      {
-       "path": "packages/pebble/src/compiler/AstCompiler/internal/_deriveContractBody/_deriveContractBody.ts",
-       "line": 106,
-       "quote": "// func main( ...params, ctx: ScriptContext ) : void {"
-      }
-     ]
-    },
-    {
-     "rule": "service:blockfrost",
-     "files": 2,
-     "lines": 0,
-     "auxLines": 1,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "examples/_shared/preprod.ts",
-       "line": 9,
-       "quote": "//      BLOCKFROST_PROJECT_ID=preprod...      # a real blockfrost.io key"
-      },
-      {
-       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
-       "line": 17,
-       "quote": "`curl https://cardano-preprod.blockfrost.io/api/v0/txs/<hash>` or the"
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 3,
-     "lines": 0,
-     "auxLines": 19,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "examples/devnet/bootstrap-devnet.sh",
-       "line": 39,
-       "quote": "cardano-cli query protocol-parameters --testnet-magic 42 --out-file \"$D/pparams.json\""
-      },
-      {
-       "path": "examples/devnet/start-dijkstra.sh",
-       "line": 38,
-       "quote": "SHH=$(cardano-cli hash genesis-file --genesis \"$D/shelley-genesis.json\")"
-      },
-      {
-       "path": "examples/devnet/start-dijkstra.sh",
-       "line": 40,
-       "quote": "BYH=$(cardano-cli byron genesis print-genesis-hash --genesis-json \"$D/byron-genesis.json\")"
-      }
-     ]
-    },
-    {
-     "rule": "service:koios",
-     "files": 2,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 374,
-       "quote": "envLines.push(\"KOIOS_URL=https://api.koios.rest/api/v1/\");"
-      },
-      {
-       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
-       "line": 88,
-       "quote": "re-verified against [Koios](https://api.koios.rest) on 2026-08-01."
-      },
-      {
-       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
-       "line": 163,
-       "quote": "curl -X POST https://api.koios.rest/api/v1/tx_info \\"
-      }
-     ]
-    },
-    {
-     "rule": "service:kupo",
-     "files": 1,
-     "lines": 5,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 11,
-       "quote": "provider: \"blockfrost\" | \"koios\" | \"kupmios\" | \"local-node\" | \"utxo-rpc\" | \"maestro\";"
-      },
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 77,
-       "quote": "name: \"Kupo + Ogmios (Kupmios)\","
-      },
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 78,
-       "quote": "value: \"kupmios\","
-      }
-     ]
-    },
-    {
-     "rule": "service:node-socket",
-     "files": 4,
-     "lines": 0,
-     "auxLines": 5,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "examples/_shared/devnet.ts",
-       "line": 79,
-       "quote": "env: { ...process.env, CARDANO_NODE_SOCKET_PATH: SOCKET },"
-      },
-      {
-       "path": "examples/devnet/bootstrap-devnet.sh",
-       "line": 38,
-       "quote": "export CARDANO_NODE_SOCKET_PATH=\"$D/socket/node1/sock\""
-      },
-      {
-       "path": "examples/devnet/start-dijkstra.sh",
-       "line": 54,
-       "quote": "--socket-path \"$D/socket/$n/sock\" \\"
-      }
-     ]
-    },
-    {
-     "rule": "service:ogmios",
-     "files": 1,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 77,
-       "quote": "name: \"Kupo + Ogmios (Kupmios)\","
-      },
-      {
-       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
-       "line": 79,
-       "quote": "description: \"Use Kupo + Ogmios to index the chain yourself.\","
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-09-09T00:24:34Z"
-   }
-  },
-  {
    "id": "cardano-client-bindings",
    "repo": "bloxbean/mesmo",
    "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
@@ -56799,14 +55995,14 @@
        "channel": "dependency",
        "via": "plutarch",
        "readiness": "no-evidence",
-       "lines": 24,
+       "lines": 15,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 14,
+       "lines": 8,
        "scope": "shipped"
       },
       {
@@ -56833,14 +56029,14 @@
        "channel": "dependency",
        "via": "plutarch",
        "readiness": "no-evidence",
-       "lines": 24,
+       "lines": 15,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 14,
+       "lines": 8,
        "scope": "shipped"
       },
       {
@@ -57002,8 +56198,8 @@
     {
      "rule": "dependency:plutarch",
      "files": 6,
-     "lines": 24,
-     "auxLines": 0,
+     "lines": 15,
+     "auxLines": 9,
      "docLines": 8,
      "examples": [
       {
@@ -57053,8 +56249,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 7,
-     "lines": 14,
-     "auxLines": 0,
+     "lines": 8,
+     "auxLines": 6,
      "docLines": 2,
      "examples": [
       {
@@ -57093,16 +56289,6 @@
        "path": "testsuites/lbt-plutus/lbt-plutus-haskell/lbt-plutus-haskell.cabal",
        "line": 98,
        "quote": ", plutus-tx              >=1.1"
-      },
-      {
-       "path": "testsuites/lbt-plutus/lbt-plutus-plutustx/lbt-plutus-plutustx.cabal",
-       "line": 106,
-       "quote": ", plutus-core                     >=1.20"
-      },
-      {
-       "path": "testsuites/lbt-plutus/lbt-plutus-plutustx/lbt-plutus-plutustx.cabal",
-       "line": 107,
-       "quote": ", plutus-ledger-api               >=1.20"
       }
      ]
     },
@@ -59661,7 +58847,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       }
      ],
@@ -59681,7 +58867,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 7,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -59813,8 +58999,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 2,
-     "lines": 7,
-     "auxLines": 0,
+     "lines": 6,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -59975,7 +59161,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -60029,7 +59215,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -60056,7 +59242,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -60090,7 +59276,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       }
      ],
@@ -60103,7 +59289,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       },
       {
@@ -60137,7 +59323,7 @@
        "channel": "dependency",
        "via": "blaze",
        "readiness": "in-progress",
-       "lines": 9,
+       "lines": 6,
        "scope": "shipped"
       }
      ],
@@ -60148,8 +59334,8 @@
     {
      "rule": "dependency:blaze",
      "files": 6,
-     "lines": 9,
-     "auxLines": 3,
+     "lines": 6,
+     "auxLines": 6,
      "docLines": 0,
      "examples": [
       {
@@ -60159,13 +59345,13 @@
       },
       {
        "path": "packages/core/package.json",
-       "line": 72,
-       "quote": "\"@blaze-cardano/core\": \"^0.9.1\","
+       "line": 82,
+       "quote": "\"@blaze-cardano/sdk\": \"^0.3.1\","
       },
       {
        "path": "packages/core/package.json",
-       "line": 73,
-       "quote": "\"@blaze-cardano/emulator\": \"^0.5.2\","
+       "line": 83,
+       "quote": "\"@blaze-cardano/data\": \"^0.6.9\","
       }
      ],
      "pins": [
@@ -60173,16 +59359,6 @@
        "path": "packages/cli/package.json",
        "line": 43,
        "quote": "\"@blaze-cardano/sdk\": \"^0.3.1\""
-      },
-      {
-       "path": "packages/core/package.json",
-       "line": 72,
-       "quote": "\"@blaze-cardano/core\": \"^0.9.1\","
-      },
-      {
-       "path": "packages/core/package.json",
-       "line": 73,
-       "quote": "\"@blaze-cardano/emulator\": \"^0.5.2\","
       },
       {
        "path": "packages/core/package.json",
@@ -60198,11 +59374,6 @@
        "path": "packages/gummiworm/package.json",
        "line": 52,
        "quote": "\"@blaze-cardano/sdk\": \"^0.3.1\","
-      },
-      {
-       "path": "packages/yield-farming/package.json",
-       "line": 50,
-       "quote": "\"@blaze-cardano/emulator\": \"^0.5.2\","
       },
       {
        "path": "packages/yield-farming/package.json",
@@ -60359,7 +59530,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       }
      ],
@@ -60372,14 +59543,14 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "tracked",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "julc",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -60399,7 +59570,7 @@
        "channel": "dependency",
        "via": "julc",
        "readiness": "no-evidence",
-       "lines": 10,
+       "lines": 7,
        "scope": "shipped"
       },
       {
@@ -60419,7 +59590,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -60439,7 +59610,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       }
      ],
@@ -60452,7 +59623,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       },
       {
@@ -60472,7 +59643,7 @@
        "channel": "dependency",
        "via": "bloxbean-cardano-client-library",
        "readiness": "no-evidence",
-       "lines": 3,
+       "lines": 1,
        "scope": "shipped"
       }
      ],
@@ -60483,32 +59654,32 @@
     {
      "rule": "dependency:bloxbean-cardano-client-library",
      "files": 3,
-     "lines": 3,
-     "auxLines": 3,
+     "lines": 1,
+     "auxLines": 5,
      "docLines": 0,
      "examples": [
-      {
-       "path": "zeroj-circuit-lib/build.gradle",
-       "line": 190,
-       "quote": "testImplementation \"com.bloxbean.cardano:cardano-client-crypto:${rootProject.ext.cclVersion}\""
-      },
       {
        "path": "zeroj-onchain-julc/build.gradle",
        "line": 57,
        "quote": "implementation \"com.bloxbean.cardano:cardano-client-crypto:${rootProject.ext.cclVersion}\""
       },
       {
-       "path": "zeroj-onchain-julc/build.gradle",
-       "line": 75,
-       "quote": "testImplementation \"com.bloxbean.cardano:cardano-client-plutus:${rootProject.ext.cclVersion}\""
+       "path": "zeroj-circuit-lib/build.gradle",
+       "line": 190,
+       "quote": "testImplementation \"com.bloxbean.cardano:cardano-client-crypto:${rootProject.ext.cclVersion}\""
+      },
+      {
+       "path": "zeroj-integration-tests/build.gradle",
+       "line": 57,
+       "quote": "testImplementation \"com.bloxbean.cardano:cardano-client-lib:${rootProject.ext.cclVersion}\""
       }
      ]
     },
     {
      "rule": "dependency:julc",
      "files": 6,
-     "lines": 10,
-     "auxLines": 9,
+     "lines": 7,
+     "auxLines": 12,
      "docLines": 0,
      "examples": [
       {
@@ -62599,14 +61770,14 @@
        "channel": "dependency",
        "via": "plutarch",
        "readiness": "no-evidence",
-       "lines": 14,
+       "lines": 12,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 16,
+       "lines": 12,
        "scope": "shipped"
       }
      ],
@@ -62619,14 +61790,14 @@
        "channel": "dependency",
        "via": "plutarch",
        "readiness": "no-evidence",
-       "lines": 14,
+       "lines": 12,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 16,
+       "lines": 12,
        "scope": "shipped"
       },
       {
@@ -62657,8 +61828,8 @@
     {
      "rule": "dependency:plutarch",
      "files": 2,
-     "lines": 14,
-     "auxLines": 0,
+     "lines": 12,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -62681,8 +61852,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 6,
-     "lines": 16,
-     "auxLines": 0,
+     "lines": 12,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -65110,7 +64281,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 3,
+       "lines": 2,
        "scope": "shipped"
       }
      ],
@@ -65136,7 +64307,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 3,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -65183,7 +64354,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 8,
+       "lines": 4,
        "scope": "shipped"
       }
      ],
@@ -65196,7 +64367,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 8,
+       "lines": 4,
        "scope": "shipped"
       },
       {
@@ -65236,7 +64407,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 3,
+       "lines": 2,
        "scope": "shipped"
       },
       {
@@ -65281,8 +64452,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 5,
-     "lines": 3,
-     "auxLines": 6,
+     "lines": 2,
+     "auxLines": 7,
      "docLines": 0,
      "examples": [
       {
@@ -65291,14 +64462,14 @@
        "quote": ", cardano-api"
       },
       {
-       "path": "bot-plutus-interface.cabal",
-       "line": 208,
-       "quote": ", cardano-api"
-      },
-      {
        "path": "flake.nix",
        "line": 235,
        "quote": "\"cardano-api\""
+      },
+      {
+       "path": "bot-plutus-interface.cabal",
+       "line": 208,
+       "quote": ", cardano-api"
       }
      ]
     },
@@ -65353,8 +64524,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 4,
-     "lines": 8,
-     "auxLines": 12,
+     "lines": 4,
+     "auxLines": 16,
      "docLines": 0,
      "examples": [
       {
@@ -65856,7 +65027,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       }
      ],
@@ -65869,14 +65040,14 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
@@ -65909,7 +65080,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 19,
+       "lines": 15,
        "scope": "shipped"
       }
      ],
@@ -65922,7 +65093,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 19,
+       "lines": 15,
        "scope": "shipped"
       },
       {
@@ -65942,7 +65113,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       }
      ],
@@ -65955,14 +65126,14 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       },
       {
@@ -65982,7 +65153,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 4,
+       "lines": 3,
        "scope": "shipped"
       }
      ],
@@ -65993,8 +65164,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 2,
-     "lines": 4,
-     "auxLines": 0,
+     "lines": 3,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -66008,17 +65179,17 @@
        "quote": "cardano-api -any,"
       },
       {
-       "path": "pluto.cabal",
-       "line": 155,
-       "quote": "cardano-api -any,"
+       "path": "stack.yaml",
+       "line": 165,
+       "quote": "- cardano-api"
       }
      ]
     },
     {
      "rule": "dependency:cardano-ledger",
      "files": 2,
-     "lines": 4,
-     "auxLines": 0,
+     "lines": 3,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -66032,9 +65203,9 @@
        "quote": "cardano-ledger-alonzo -any,"
       },
       {
-       "path": "pluto.cabal",
-       "line": 157,
-       "quote": "cardano-ledger-alonzo -any,"
+       "path": "stack.yaml",
+       "line": 145,
+       "quote": "- cardano-ledger-core"
       }
      ]
     },
@@ -66065,8 +65236,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 2,
-     "lines": 19,
-     "auxLines": 0,
+     "lines": 15,
+     "auxLines": 4,
      "docLines": 0,
      "examples": [
       {
@@ -67072,7 +66243,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 22,
        "scope": "shipped"
       },
       {
@@ -67092,7 +66263,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 11,
+       "lines": 10,
        "scope": "shipped"
       }
      ],
@@ -67105,21 +66276,21 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 11,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 16,
+       "lines": 13,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 22,
        "scope": "shipped"
       }
      ],
@@ -67132,7 +66303,7 @@
        "channel": "dependency",
        "via": "dependency:ouroboros-consensus",
        "readiness": "upstream",
-       "lines": 23,
+       "lines": 22,
        "scope": "shipped"
       },
       {
@@ -67152,7 +66323,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 30,
+       "lines": 22,
        "scope": "shipped"
       }
      ],
@@ -67165,7 +66336,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 30,
+       "lines": 22,
        "scope": "shipped"
       }
      ],
@@ -67178,7 +66349,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 16,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -67198,14 +66369,14 @@
        "channel": "dependency",
        "via": "dependency:cardano-api",
        "readiness": "upstream",
-       "lines": 11,
+       "lines": 10,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 16,
+       "lines": 13,
        "scope": "shipped"
       },
       {
@@ -67232,7 +66403,7 @@
        "channel": "dependency",
        "via": "dependency:cardano-ledger",
        "readiness": "upstream",
-       "lines": 16,
+       "lines": 13,
        "scope": "shipped"
       }
      ],
@@ -67243,8 +66414,8 @@
     {
      "rule": "dependency:cardano-api",
      "files": 9,
-     "lines": 11,
-     "auxLines": 0,
+     "lines": 10,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -67267,8 +66438,8 @@
     {
      "rule": "dependency:cardano-ledger",
      "files": 3,
-     "lines": 16,
-     "auxLines": 0,
+     "lines": 13,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
       {
@@ -67291,8 +66462,8 @@
     {
      "rule": "dependency:ouroboros-consensus",
      "files": 5,
-     "lines": 23,
-     "auxLines": 0,
+     "lines": 22,
+     "auxLines": 1,
      "docLines": 0,
      "examples": [
       {
@@ -67315,8 +66486,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 9,
-     "lines": 30,
-     "auxLines": 0,
+     "lines": 22,
+     "auxLines": 8,
      "docLines": 0,
      "examples": [
       {
@@ -67738,7 +66909,7 @@
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 20,
+       "lines": 18,
        "scope": "shipped"
       }
      ],
@@ -67751,7 +66922,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 163,
+       "lines": 90,
        "scope": "shipped"
       },
       {
@@ -67771,14 +66942,14 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 163,
+       "lines": 90,
        "scope": "shipped"
       },
       {
        "channel": "marker",
        "via": "marker:script-context",
        "readiness": "unassessed",
-       "lines": 362,
+       "lines": 361,
        "scope": "shipped"
       }
      ],
@@ -67791,7 +66962,7 @@
        "channel": "marker",
        "via": "marker:cost-models-or-parameters",
        "readiness": "unassessed",
-       "lines": 128,
+       "lines": 126,
        "scope": "shipped"
       }
      ],
@@ -67817,7 +66988,7 @@
        "channel": "marker",
        "via": "marker:raw-cbor-codec",
        "readiness": "unassessed",
-       "lines": 20,
+       "lines": 18,
        "scope": "shipped"
       }
      ],
@@ -67828,8 +66999,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 11,
-     "lines": 163,
-     "auxLines": 119,
+     "lines": 90,
+     "auxLines": 192,
      "docLines": 18,
      "examples": [
       {
@@ -67871,21 +67042,6 @@
       },
       {
        "path": "cardano-constitution/cardano-constitution.cabal",
-       "line": 136,
-       "quote": ", plutus-core                      ^>=1.72"
-      },
-      {
-       "path": "cardano-constitution/cardano-constitution.cabal",
-       "line": 138,
-       "quote": ", plutus-ledger-api                ^>=1.72"
-      },
-      {
-       "path": "cardano-constitution/cardano-constitution.cabal",
-       "line": 139,
-       "quote": ", plutus-tx                        ^>=1.72"
-      },
-      {
-       "path": "cardano-constitution/cardano-constitution.cabal",
        "line": 156,
        "quote": ", plutus-ledger-api     ^>=1.72"
       },
@@ -67900,14 +67056,29 @@
        "quote": ", plutus-ledger-api                ^>=1.72"
       },
       {
-       "path": "plutus-conformance/plutus-conformance.cabal",
-       "line": 91,
-       "quote": ", plutus-core         ^>=1.72"
+       "path": "plutus-core/plutus-core.cabal",
+       "line": 570,
+       "quote": ", plutus-core                      ^>=1.72"
       },
       {
-       "path": "plutus-conformance/plutus-conformance.cabal",
-       "line": 103,
-       "quote": ", plutus-core         ^>=1.72"
+       "path": "plutus-core/plutus-core.cabal",
+       "line": 678,
+       "quote": ", plutus-core          ^>=1.72"
+      },
+      {
+       "path": "plutus-core/plutus-core.cabal",
+       "line": 827,
+       "quote": ", plutus-core                 ^>=1.72"
+      },
+      {
+       "path": "plutus-core/plutus-core.cabal",
+       "line": 865,
+       "quote": ", plutus-core            ^>=1.72"
+      },
+      {
+       "path": "plutus-core/plutus-core.cabal",
+       "line": 917,
+       "quote": ", plutus-core            ^>=1.72"
       }
      ]
     },
@@ -67928,8 +67099,8 @@
     {
      "rule": "marker:cost-models-or-parameters",
      "files": 85,
-     "lines": 128,
-     "auxLines": 40,
+     "lines": 126,
+     "auxLines": 42,
      "docLines": 210,
      "examples": [
       {
@@ -68014,8 +67185,8 @@
     {
      "rule": "marker:raw-cbor-codec",
      "files": 7,
-     "lines": 20,
-     "auxLines": 0,
+     "lines": 18,
+     "auxLines": 2,
      "docLines": 0,
      "examples": [
       {
@@ -68038,8 +67209,8 @@
     {
      "rule": "marker:script-context",
      "files": 94,
-     "lines": 362,
-     "auxLines": 507,
+     "lines": 361,
+     "auxLines": 508,
      "docLines": 61,
      "examples": [
       {
@@ -68146,7 +67317,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 6,
+       "lines": 3,
        "scope": "shipped"
       }
      ],
@@ -68159,7 +67330,7 @@
        "channel": "dependency",
        "via": "plutus-plutus-core",
        "readiness": "released",
-       "lines": 6,
+       "lines": 3,
        "scope": "shipped"
       },
       {
@@ -68177,8 +67348,8 @@
     {
      "rule": "dependency:plutus-plutus-core",
      "files": 1,
-     "lines": 6,
-     "auxLines": 0,
+     "lines": 3,
+     "auxLines": 3,
      "docLines": 0,
      "examples": [
       {
@@ -70237,6 +69408,600 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-06-29T09:35:16Z"
+   }
+  },
+  {
+   "id": "pebble",
+   "repo": "HarmonicLabs/pebble",
+   "revision": "d6a5a75575d6091bc0bd3f63d5daa225d6772677",
+   "scan": {
+    "status": "scanned",
+    "files": 676,
+    "skipped": 34
+   },
+   "exposure": "service",
+   "readiness": "no-evidence",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "cardano-cli",
+     "channels": [
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "service:cardano-cli",
+       "readiness": "upstream",
+       "lines": 19,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "unassessed"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "released",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:node-socket",
+       "readiness": "upstream",
+       "lines": 5,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "released",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 14,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "plutus-script-context",
+     "channels": [
+      {
+       "channel": "marker",
+       "via": "marker:script-context",
+       "readiness": "unassessed",
+       "lines": 6,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "unassessed"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 3,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "unassessed"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 6,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "buildooor",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "unassessed"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:buildooor",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 2,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "examples/package.json",
+       "line": 18,
+       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.9\""
+      },
+      {
+       "path": "packages/pebble/package.json",
+       "line": 69,
+       "quote": "\"@harmoniclabs/buildooor\": \"^0.2.6\","
+      }
+     ]
+    },
+    {
+     "rule": "marker:cli-era-command",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 9,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "examples/devnet/update-costmodel.sh",
+       "line": 42,
+       "quote": "cardano-cli conway governance action create-protocol-parameters-update \\"
+      },
+      {
+       "path": "examples/devnet/update-costmodel.sh",
+       "line": 53,
+       "quote": "cardano-cli conway transaction build --testnet-magic $MAGIC \\"
+      },
+      {
+       "path": "examples/devnet/update-costmodel.sh",
+       "line": 57,
+       "quote": "cardano-cli conway transaction sign --testnet-magic $MAGIC --tx-body-file \"$W/act.raw\" \\"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 8,
+     "lines": 1,
+     "auxLines": 17,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "packages/pebble/package.json",
+       "line": 57,
+       "quote": "\"@harmoniclabs/cardano-costmodels-ts\": \"^1.6.1\","
+      },
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 52,
+       "quote": "const CM = _require(\"@harmoniclabs/cardano-costmodels-ts/dist/CostModels.js\");"
+      },
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 66,
+       "quote": "v: new CborBytes(Cbor.encode(new CborArray(pp.costModels.PlutusV1.map(cn), { indefinite: true }))),"
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 2,
+     "lines": 6,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
+       "line": 252,
+       "quote": "StakeRegistration {"
+      },
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
+       "line": 256,
+       "quote": "StakeDeRegistration {"
+      },
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
+       "line": 623,
+       "quote": "//     StakeRegistration {"
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 6,
+     "lines": 0,
+     "auxLines": 14,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 69,
+       "quote": "if (opts.mustHaveV3) entries.push({ k: new CborUInt(2), v: new CborArray(pp.costModels.PlutusV3.map(cn)) });"
+      },
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 125,
+       "quote": "? Script.plutusV3(hexToBytes(o.referenceScript.script.cborHex))"
+      },
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 310,
+       "quote": "* PlutusV3 script."
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 2,
+     "lines": 3,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/prelude/preludeTypesSrc.ts",
+       "line": 280,
+       "quote": "PoolRegistration {"
+      },
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
+       "line": 651,
+       "quote": "//     PoolRegistration {"
+      },
+      {
+       "path": "packages/pebble/src/compiler/tir/program/stdScope/stdScope.ts",
+       "line": 702,
+       "quote": "PoolRegistration: {"
+      }
+     ]
+    },
+    {
+     "rule": "marker:script-context",
+     "files": 11,
+     "lines": 6,
+     "auxLines": 9,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "packages/pebble/src/compiler/AstCompiler/AstCompiler.ts",
+       "line": 140,
+       "quote": "* (ScriptContext, built-in functions, etc.)"
+      },
+      {
+       "path": "packages/pebble/src/compiler/AstCompiler/AstCompiler.ts",
+       "line": 2628,
+       "quote": "new Identifier( \"ScriptContext\", contractDecl.name.range ),"
+      },
+      {
+       "path": "packages/pebble/src/compiler/AstCompiler/internal/_deriveContractBody/_deriveContractBody.ts",
+       "line": 106,
+       "quote": "// func main( ...params, ctx: ScriptContext ) : void {"
+      }
+     ]
+    },
+    {
+     "rule": "service:blockfrost",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 1,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "examples/_shared/preprod.ts",
+       "line": 9,
+       "quote": "//      BLOCKFROST_PROJECT_ID=preprod...      # a real blockfrost.io key"
+      },
+      {
+       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
+       "line": 17,
+       "quote": "`curl https://cardano-preprod.blockfrost.io/api/v0/txs/<hash>` or the"
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 3,
+     "lines": 0,
+     "auxLines": 19,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "examples/devnet/bootstrap-devnet.sh",
+       "line": 39,
+       "quote": "cardano-cli query protocol-parameters --testnet-magic 42 --out-file \"$D/pparams.json\""
+      },
+      {
+       "path": "examples/devnet/start-dijkstra.sh",
+       "line": 38,
+       "quote": "SHH=$(cardano-cli hash genesis-file --genesis \"$D/shelley-genesis.json\")"
+      },
+      {
+       "path": "examples/devnet/start-dijkstra.sh",
+       "line": 40,
+       "quote": "BYH=$(cardano-cli byron genesis print-genesis-hash --genesis-json \"$D/byron-genesis.json\")"
+      }
+     ]
+    },
+    {
+     "rule": "service:koios",
+     "files": 2,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 374,
+       "quote": "envLines.push(\"KOIOS_URL=https://api.koios.rest/api/v1/\");"
+      },
+      {
+       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
+       "line": 88,
+       "quote": "re-verified against [Koios](https://api.koios.rest) on 2026-08-01."
+      },
+      {
+       "path": "examples/onchain-evidence/DEPLOYMENTS.md",
+       "line": 163,
+       "quote": "curl -X POST https://api.koios.rest/api/v1/tx_info \\"
+      }
+     ]
+    },
+    {
+     "rule": "service:kupo",
+     "files": 1,
+     "lines": 5,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 11,
+       "quote": "provider: \"blockfrost\" | \"koios\" | \"kupmios\" | \"local-node\" | \"utxo-rpc\" | \"maestro\";"
+      },
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 77,
+       "quote": "name: \"Kupo + Ogmios (Kupmios)\","
+      },
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 78,
+       "quote": "value: \"kupmios\","
+      }
+     ]
+    },
+    {
+     "rule": "service:node-socket",
+     "files": 4,
+     "lines": 0,
+     "auxLines": 5,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "examples/_shared/devnet.ts",
+       "line": 79,
+       "quote": "env: { ...process.env, CARDANO_NODE_SOCKET_PATH: SOCKET },"
+      },
+      {
+       "path": "examples/devnet/bootstrap-devnet.sh",
+       "line": 38,
+       "quote": "export CARDANO_NODE_SOCKET_PATH=\"$D/socket/node1/sock\""
+      },
+      {
+       "path": "examples/devnet/start-dijkstra.sh",
+       "line": 54,
+       "quote": "--socket-path \"$D/socket/$n/sock\" \\"
+      }
+     ]
+    },
+    {
+     "rule": "service:ogmios",
+     "files": 1,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 77,
+       "quote": "name: \"Kupo + Ogmios (Kupmios)\","
+      },
+      {
+       "path": "packages/pebble-cli/src/init/initPebbleProject.ts",
+       "line": 79,
+       "quote": "description: \"Use Kupo + Ogmios to index the chain yourself.\","
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-09-09T00:24:34Z"
    }
   },
   {
