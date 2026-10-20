@@ -8,7 +8,8 @@
     "Codec readiness is compared with the target ledger CDDL (cardano-ledger 54e24ba4) after removing comments and whitespace; Haskell consumers are compared through the cardano-ledger-dijkstra version their CHaP index-state or constraints select.",
     "Status is per surface group; a component is only as ready as its worst assessment. no-evidence is never a pass.",
     "firstReleases names, per release line, the earliest tag whose source contains every cited source quote (for gouroboros ledger types: the earliest tag whose vendored Dijkstra CDDL is identical to the one compared with the target; for plutus-ledger-api: the target component-set version). Consumer pins are judged only against firstReleases.",
-    "in-progress needs visible work toward the target definitions (a branch, an open pull request, or unreleased code on the default branch). A release built only against superseded Dijkstra definitions, with no such work, is a gap."
+    "in-progress needs visible work toward the target definitions (a branch, an open pull request, or unreleased code on the default branch). A release built only against superseded Dijkstra definitions, with no such work, is a gap.",
+    "R4: a devnet result can back an assessment as evidence of kind devnet, naming the check in devnet.json and the version exercised. verified needs a passing result; a failing result cannot back released or verified. Where the target CDDL and the node disagree, the node at the integration revision decides: its Dijkstra header is the ten-field Praos header (devnet check block-shape)."
   ],
   "components": [
     {
@@ -170,7 +171,7 @@
             "block-encoding"
           ],
           "status": "gap",
-          "summary": "The header body still carries protocol_version, which Dijkstra replaces with header_version_info; the block keeps Conway's segregated body.",
+          "summary": "The block keeps Conway's segregated body. Its header body still carries protocol_version, which the target CDDL replaces with header_version_info, but that ten-field header is what the 11.2 integration node emits (devnet check block-shape).",
           "evidence": [
             {
               "kind": "source",
@@ -286,7 +287,7 @@
             "stake-pool-registration"
           ],
           "status": "in-progress",
-          "summary": "Dijkstra primitives are released since v1.3.0 but are generated from ledger commit 1587f21a, not the 11.2 component set: compared with the target CDDL they still use protocol_version in the header, lack protocol-parameter keys 49-56 and lack witness-set key 8 (PlutusV4).",
+          "summary": "Dijkstra primitives are released since v1.3.0 but are generated from ledger commit 1587f21a, not the 11.2 component set: compared with the target CDDL they lack protocol-parameter keys 49-56 and witness-set key 8 (PlutusV4). They still use protocol_version in the header, which matches what the 11.2 integration node emits (devnet check block-shape).",
           "evidence": [
             {
               "kind": "source",
@@ -374,11 +375,11 @@
       ],
       "observed": {
         "branch": "main",
-        "revision": "c2cb81f55d3f4c2f38d310185b080dfdabdba1cb",
-        "date": "2026-10-18",
+        "revision": "3e68f5722aa149d4ddbd6a53ee53a4cc119c4695",
+        "date": "2026-10-20",
         "release": {
-          "tag": "v0.213.7",
-          "date": "2026-10-18"
+          "tag": "v0.213.9",
+          "date": "2026-10-20"
         }
       },
       "dependsOn": [],
@@ -387,7 +388,7 @@
           "surfaces": [
             "node-to-client-protocol"
           ],
-          "status": "released",
+          "status": "verified",
           "summary": "Node-to-client V23 was added in v0.213.0; v0.209.0 to v0.212.6 stop at V21 or V22, so consumers pinned below v0.213.0 cannot handshake with 11.2.",
           "releasedIn": {
             "tag": "v0.213.0",
@@ -407,18 +408,26 @@
               "path": "protocol/versions.go",
               "line": 226,
               "quote": "(23 + ProtocolVersionNtCOffset): {"
+            },
+            {
+              "kind": "devnet",
+              "check": "n2c-handshake",
+              "version": "v0.213.0"
+            },
+            {
+              "kind": "devnet",
+              "check": "n2c-handshake",
+              "version": "v0.213.9"
             }
           ]
         },
         {
           "surfaces": [
-            "era-identity",
             "transaction-encoding",
             "transaction-rules",
             "plutus-language",
             "protocol-parameters",
             "stake-pool-registration",
-            "block-encoding",
             "consensus-participation"
           ],
           "status": "released",
@@ -455,6 +464,50 @@
               "title": "feat: add current Dijkstra protocol parameters",
               "state": "merged",
               "date": "2026-10-08"
+            }
+          ]
+        },
+        {
+          "surfaces": [
+            "era-identity",
+            "block-encoding"
+          ],
+          "status": "gap",
+          "summary": "Against the 11.2 integration node, v0.213.0 to v0.213.9 stop at the first Dijkstra block: the decoder requires the twelve-field header of the target CDDL, while the node emits the ten-field Praos header (devnet check block-shape). DetermineTransactionType places a transaction in Dijkstra only when its body has key 23, 25 or 26 or a credential guard, so it rejects ordinary Dijkstra transactions, and LocalTxMonitor's NextTx drops the era id that would let a caller decode them anyway (tx-era-detection). No branch or open pull request addresses either on 2026-10-20.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "blinklabs-io/gouroboros",
+              "revision": "3e68f5722aa149d4ddbd6a53ee53a4cc119c4695",
+              "path": "ledger/dijkstra/dijkstra.go",
+              "line": 501,
+              "quote": "if len(bodyElems) != dijkstraHeaderBodyFieldCount {"
+            },
+            {
+              "kind": "source",
+              "repo": "blinklabs-io/gouroboros",
+              "revision": "3e68f5722aa149d4ddbd6a53ee53a4cc119c4695",
+              "path": "ledger/tx.go",
+              "line": 279,
+              "quote": "for _, field := range []uint{23, 25, 26} {"
+            },
+            {
+              "kind": "source",
+              "repo": "blinklabs-io/gouroboros",
+              "revision": "3e68f5722aa149d4ddbd6a53ee53a4cc119c4695",
+              "path": "protocol/localtxmonitor/client.go",
+              "line": 289,
+              "quote": "deliverResult(c, c.nextTxResultChan, msgReplyNextTx.Transaction.Tx)"
+            },
+            {
+              "kind": "devnet",
+              "check": "block-shape",
+              "version": "v0.213.9"
+            },
+            {
+              "kind": "devnet",
+              "check": "tx-era-detection",
+              "version": "v0.213.9"
             }
           ]
         }
@@ -2275,7 +2328,7 @@
           "surfaces": [
             "node-to-client-protocol"
           ],
-          "status": "released",
+          "status": "verified",
           "summary": "Takes its version table from ouroboros-consensus; v7.0.0 builds on cardano-node 11.0.1 (ouroboros-consensus 3.0.1), which includes V23.",
           "releasedIn": {
             "tag": "v7.0.0",
@@ -2297,6 +2350,11 @@
               "path": "server/cabal.project",
               "line": 17,
               "quote": "  , any.cardano-node == 11.0.1"
+            },
+            {
+              "kind": "devnet",
+              "check": "n2c-handshake",
+              "version": "v7.0.0"
             }
           ]
         },
@@ -2309,7 +2367,7 @@
             "plutus-language"
           ],
           "status": "gap",
-          "summary": "v7.0.0 ships preliminary Dijkstra and PlutusV4 support built against cardano-node 11.0.1 (CHaP index 2026-05-08, cardano-ledger-dijkstra 0.2.0.1), whose CDDL differs from the target in 454 normalized lines, including the block body and header. The default branch is still the v7.0.0 release commit (2026-06-20) and no branch or open pull request targets the 11.2 component set.",
+          "summary": "v7.0.0 ships preliminary Dijkstra and PlutusV4 support built against cardano-node 11.0.1 (CHaP index 2026-05-08, cardano-ledger-dijkstra 0.2.0.1), whose CDDL differs from the target in 454 normalized lines, including the block body and header. The default branch is still the v7.0.0 release commit (2026-06-20) and no branch or open pull request targets the 11.2 component set. On the devnet v7.0.0 exits at the first Dijkstra block.",
           "evidence": [
             {
               "kind": "source",
@@ -2326,6 +2384,11 @@
               "path": "server/cabal.project",
               "line": 14,
               "quote": "  , cardano-haskell-packages 2026-05-08T13:26:45Z"
+            },
+            {
+              "kind": "devnet",
+              "check": "service-decoding",
+              "version": "v7.0.0"
             }
           ]
         }
@@ -2358,7 +2421,7 @@
           "surfaces": [
             "node-to-client-protocol"
           ],
-          "status": "released",
+          "status": "verified",
           "summary": "Takes its version table from ouroboros-consensus; v2.12 builds on cardano-node 11.0.1, which includes V23.",
           "releasedIn": {
             "tag": "v2.12",
@@ -2372,6 +2435,11 @@
               "path": "src/Kupo/Control/MonadOuroboros.hs",
               "line": 169,
               "quote": "supportedNodeToClientVersions (Proxy @(BlockT IO))"
+            },
+            {
+              "kind": "devnet",
+              "check": "n2c-handshake",
+              "version": "v2.12"
             }
           ]
         },
@@ -2382,7 +2450,7 @@
             "transaction-encoding"
           ],
           "status": "gap",
-          "summary": "Handles Dijkstra blocks through cardano-node 11.0.1 libraries (cardano-ledger-dijkstra 0.2.0.1), which predate the 11.2 block and header format. The default branch has only test changes since v2.12 and no branch or open pull request targets the 11.2 component set.",
+          "summary": "Handles Dijkstra blocks through cardano-node 11.0.1 libraries (cardano-ledger-dijkstra 0.2.0.1), which predate the 11.2 block format; on the devnet v2.12 stops at the first Dijkstra block. The default branch has only test changes since v2.12 and no branch or open pull request targets the 11.2 component set.",
           "evidence": [
             {
               "kind": "source",
@@ -2398,6 +2466,11 @@
               "title": "Add cardano-node 11.0.1 support",
               "state": "merged",
               "date": "2026-07-18"
+            },
+            {
+              "kind": "devnet",
+              "check": "service-decoding",
+              "version": "v2.12"
             }
           ]
         }
@@ -2545,7 +2618,7 @@
             "transaction-rules"
           ],
           "status": "in-progress",
-          "summary": "Dijkstra support is being closed stub by stub on cardano-ledger-dijkstra 0.3.0.0 (node 11.1.x), whose block body and header still differ from the target; the API still errors on the Dijkstra era.",
+          "summary": "Dijkstra support is being closed stub by stub on cardano-ledger-dijkstra 0.3.0.0 (node 11.1.x), whose block body still differs from the target; the API still errors on the Dijkstra era.",
           "evidence": [
             {
               "kind": "source",
@@ -3301,7 +3374,7 @@
             "block-encoding"
           ],
           "status": "in-progress",
-          "summary": "Pins Pallas main at a 2026-10-13 commit, after v1.4.0, so it follows Pallas's unreleased Dijkstra block traversal; those definitions still predate the target header (R2).",
+          "summary": "Pins Pallas main at a 2026-10-13 commit, after v1.4.0, so it follows Pallas's unreleased Dijkstra block traversal.",
           "evidence": [
             {
               "kind": "source",

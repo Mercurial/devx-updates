@@ -4,7 +4,8 @@
   "method": [
     "Every bump-ready tool was read at its classified revision for era-specific code in shipped paths: fixed era types, exhaustive era cases, era tables and per-era parameter or schema handling.",
     "own-work needs a quoted line that stops before Dijkstra; prepared and generic need the quoted lines that make the era handling Dijkstra-aware or era-generic; undetermined records what a run must settle.",
-    "Version distance is derived, not recorded: the unlock report compares each pin with the first fixed release on its line (PVP for the Haskell component set, semver otherwise)."
+    "Version distance is derived, not recorded: the unlock report compares each pin with the first fixed release on its line (PVP for the Haskell component set, semver otherwise).",
+    "R4: devnet results replace a reading where a run decided it (devnet.json)."
   ],
   "upgrades": [
     {
@@ -76,7 +77,7 @@
       "tool": "cardano-ibc-incubator",
       "revision": "5377651afad44901eee18044c6edce58a0e880fa",
       "eraHandling": "own-work",
-      "summary": "The light client decodes every block header as a Babbage header and switches on Babbage and Conway blocks only; Dijkstra has its own header type in gouroboros, so the client needs a Dijkstra case besides the bump.",
+      "summary": "The light client decodes every block header as a Babbage header and switches on Babbage and Conway blocks only; it needs a Dijkstra case besides the bump. Its Babbage header decoding matches the ten-field header the 11.2 integration node emits (devnet check block-shape), not the twelve-field one gouroboros v0.213.x requires.",
       "evidence": [
         {
           "repo": "cardano-foundation/cardano-ibc-incubator",
@@ -97,15 +98,22 @@
     {
       "tool": "cardano-node-api",
       "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
-      "eraHandling": "undetermined",
-      "summary": "Its protocol-parameter switch already has a Dijkstra case and mempool transactions go through era-generic decoding, but UTxO query results are decoded into the Babbage output type; whether Dijkstra outputs decode that way needs a run against a Dijkstra node.",
+      "eraHandling": "own-work",
+      "summary": "Raising gouroboros is not enough. No adder release builds against gouroboros v0.213.x (adder's main branch still pins v0.209.0), its own code needs the new TxInfo arguments, and it hands PlutusV4 scripts the PlutusV3 script context. With those build fixes made locally, the devnet shows its Babbage-typed UTxO decoding reads Dijkstra outputs; its submission and mempool listing still fail on gouroboros's era detection (devnet checks tool-upgrades, tx-era-detection).",
       "evidence": [
         {
           "repo": "blinklabs-io/cardano-node-api",
           "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
           "path": "internal/utxorpc/submit.go",
-          "line": 470,
-          "quote": "\tcase *ledger.DijkstraProtocolParameters:"
+          "line": 353,
+          "quote": "case plutusScriptV3, plutusScriptV4:"
+        },
+        {
+          "repo": "blinklabs-io/cardano-node-api",
+          "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
+          "path": "internal/utxorpc/submit.go",
+          "line": 354,
+          "quote": "return script.NewTxInfoV3FromTransaction("
         },
         {
           "repo": "blinklabs-io/cardano-node-api",
@@ -273,7 +281,7 @@
       "tool": "txtop",
       "revision": "86a013e714aff6eb704326f7b646f9ab967e41db",
       "eraHandling": "generic",
-      "summary": "Decodes mempool transactions through gouroboros's era-generic entry points and names no era itself.",
+      "summary": "Decodes mempool transactions through gouroboros's era-generic entry points and names no era itself. On the devnet the upgraded build connects and shows mempool sizes, but gouroboros's era detection rejects ordinary Dijkstra transactions, so its transaction list stays empty until gouroboros fixes that (devnet checks tool-upgrades, tx-era-detection).",
       "evidence": [
         {
           "repo": "blinklabs-io/txtop",

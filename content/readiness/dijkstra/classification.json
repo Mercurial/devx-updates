@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T15:36:42.954Z",
+ "generatedAt": "2026-10-20T18:59:07.851Z",
  "rulesDigest": "21943e437a6632aceb372d2843953221b5a9b47e337d6cf9289182f3e3c01f7d",
  "changeTarget": {
   "name": "Dijkstra",
@@ -321,7 +321,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       }
@@ -1878,7 +1878,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "shipped"
       }
@@ -2659,7 +2659,7 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
@@ -2768,7 +2768,7 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
@@ -2843,7 +2843,7 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "shipped"
       },
@@ -2864,7 +2864,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 90,
        "scope": "shipped"
       },
@@ -2878,7 +2878,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 7,
        "scope": "shipped"
       }
@@ -3656,6 +3656,653 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-10-20T08:53:51Z"
+   }
+  },
+  {
+   "id": "gouroboros",
+   "repo": "blinklabs-io/gouroboros",
+   "revision": "c2cb81f55d3f4c2f38d310185b080dfdabdba1cb",
+   "scan": {
+    "status": "scanned",
+    "files": 977,
+    "skipped": 11
+   },
+   "exposure": "implements",
+   "readiness": "gap",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "gap",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 13,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:segregated-block-body",
+       "readiness": "unassessed",
+       "lines": 180,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 489,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "gap"
+    },
+    {
+     "surface": "cardano-cli",
+     "channels": [
+      {
+       "channel": "service",
+       "via": "service:cardano-cli",
+       "readiness": "upstream",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "consensus-participation",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "gap",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:closed-era-list",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "gap"
+    },
+    {
+     "surface": "node-configuration",
+     "channels": [
+      {
+       "channel": "marker",
+       "via": "marker:genesis-config",
+       "readiness": "unassessed",
+       "lines": 2,
+       "scope": "auxiliary"
+      }
+     ],
+     "readiness": "unassessed"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "verified",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:node-to-client",
+       "readiness": "unassessed",
+       "lines": 135,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:node-socket",
+       "readiness": "upstream",
+       "lines": 3,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 16,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "plutus-script-context",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:script-context",
+       "readiness": "unassessed",
+       "lines": 43,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 185,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 24,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 13,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 489,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:plutigo",
+     "files": 2,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:utxorpc",
+     "files": 2,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ]
+    },
+    {
+     "rule": "marker:closed-era-list",
+     "files": 14,
+     "lines": 9,
+     "auxLines": 9,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "ledger/common/common.go",
+       "line": 2616,
+       "quote": "// Redeemers can be either an array (Alonzo-Babbage) or map (Conway+)."
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 178,
+       "quote": "// no protocol version and has no branch, and Alonzo, Babbage and Conway all"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 637,
+       "quote": "// Pre-Conway eras (Alonzo/Babbage transVITime) use `PV1.to` for an"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 49,
+     "lines": 185,
+     "auxLines": 191,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 25,
+       "quote": "MaxTxExUnits common.ExUnits"
+      },
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 33,
+       "quote": "e.MaxTxExUnits.Steps,"
+      },
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 34,
+       "quote": "e.MaxTxExUnits.Memory,"
+      }
+     ]
+    },
+    {
+     "rule": "marker:genesis-config",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 2,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "internal/test/peersharing-interop/fetch-configs.sh",
+       "line": 21,
+       "quote": "conway-genesis.json"
+      },
+      {
+       "path": "internal/test/peersharing-interop/fetch-configs.sh",
+       "line": 75,
+       "quote": "| .ConwayGenesisFile = \"/configs/conway-genesis.json\""
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 5,
+     "lines": 5,
+     "auxLines": 3,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/block_state.go",
+       "line": 801,
+       "quote": "func (b *BlockLedgerState) StakeRegistration("
+      },
+      {
+       "path": "ledger/common/block_state.go",
+       "line": 804,
+       "quote": "return b.base.StakeRegistration(stakeKey)"
+      },
+      {
+       "path": "ledger/common/certs.go",
+       "line": 355,
+       "quote": "StakeRegistration: stakeCred,"
+      }
+     ]
+    },
+    {
+     "rule": "marker:node-to-client",
+     "files": 86,
+     "lines": 135,
+     "auxLines": 384,
+     "docLines": 38,
+     "examples": [
+      {
+       "path": "connection.go",
+       "line": 47,
+       "quote": "\"github.com/blinklabs-io/gouroboros/protocol/localstatequery\""
+      },
+      {
+       "path": "connection.go",
+       "line": 108,
+       "quote": "localStateQuery         *localstatequery.LocalStateQuery"
+      },
+      {
+       "path": "connection.go",
+       "line": 109,
+       "quote": "localStateQueryConfig   *localstatequery.Config"
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 31,
+     "lines": 16,
+     "auxLines": 49,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "ledger/alonzo/genesis.go",
+       "line": 56,
+       "quote": "case \"PlutusV3\":"
+      },
+      {
+       "path": "ledger/alonzo/pparams.go",
+       "line": 264,
+       "quote": "case \"PlutusV3\":"
+      },
+      {
+       "path": "ledger/common/common.go",
+       "line": 2814,
+       "quote": "// 0x00 = native script, 0x01 = PlutusV1, 0x02 = PlutusV2, 0x03 = PlutusV3"
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 16,
+     "lines": 24,
+     "auxLines": 33,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/certs.go",
+       "line": 1643,
+       "quote": "PoolRegistration: &utxorpc.PoolRegistrationCert{"
+      },
+      {
+       "path": "ledger/common/rewards.go",
+       "line": 89,
+       "quote": "PoolParams map[PoolKeyHash]*PoolRegistrationCertificate"
+      },
+      {
+       "path": "ledger/common/rewards.go",
+       "line": 412,
+       "quote": "poolParams, exists := snapshot.PoolParams[poolID]"
+      }
+     ]
+    },
+    {
+     "rule": "marker:raw-cbor-codec",
+     "files": 18,
+     "lines": 13,
+     "auxLines": 5,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "cbor/bytestring.go",
+       "line": 21,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      },
+      {
+       "path": "cbor/cbor.go",
+       "line": 18,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      },
+      {
+       "path": "cbor/decode.go",
+       "line": 26,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      }
+     ]
+    },
+    {
+     "rule": "marker:script-context",
+     "files": 22,
+     "lines": 43,
+     "auxLines": 43,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 37,
+       "quote": "type ScriptContext interface {"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 43,
+       "quote": "TxInfo  TxInfo"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 52,
+       "quote": "s.TxInfo.ToPlutusData(),"
+      }
+     ]
+    },
+    {
+     "rule": "marker:segregated-block-body",
+     "files": 30,
+     "lines": 180,
+     "auxLines": 150,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "cbor/cardano_diagnostic.go",
+       "line": 83,
+       "quote": "// [header, tx_bodies, tx_witnesses, auxiliary_data_set, invalid_transactions];"
+      },
+      {
+       "path": "cbor/cardano_labels.go",
+       "line": 63,
+       "quote": "\"transaction_bodies\","
+      },
+      {
+       "path": "cbor/cardano_labels.go",
+       "line": 66,
+       "quote": "\"invalid_transactions\","
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "protocol/localstatequery/queries.go",
+       "line": 511,
+       "quote": "// is used by cardano-cli query stake-address-info."
+      }
+     ]
+    },
+    {
+     "rule": "service:node-socket",
+     "files": 10,
+     "lines": 3,
+     "auxLines": 12,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 48,
+       "quote": "if [ -S \"$NODE_IPC_DIR/node.socket\" ] &&"
+      },
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 51,
+       "quote": "docker exec cardano-node chmod 0666 /ipc/node.socket"
+      },
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 60,
+       "quote": "GOUROBOROS_CARDANO_NODE_SOCKET_PATH: /tmp/cardano-node-ipc/node.socket"
+      }
+     ]
+    },
+    {
+     "rule": "service:utxorpc",
+     "files": 55,
+     "lines": 489,
+     "auxLines": 419,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "ledger/allegra/allegra.go",
+       "line": 25,
+       "quote": "utxorpc \"github.com/utxorpc/go-codegen/utxorpc/v1alpha/cardano\""
+      },
+      {
+       "path": "ledger/allegra/allegra.go",
+       "line": 188,
+       "quote": "func (b *AllegraBlock) Utxorpc() (*utxorpc.Block, error) {"
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-10-20T08:54:03Z"
    }
   },
   {
@@ -4539,7 +5186,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       },
@@ -4553,7 +5200,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 22,
        "scope": "shipped"
       }
@@ -5307,7 +5954,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 91,
        "scope": "shipped"
       }
@@ -6131,7 +6778,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "auxiliary"
       },
@@ -6904,7 +7551,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 77,
        "scope": "shipped"
       },
@@ -6918,7 +7565,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 82,
        "scope": "shipped"
       }
@@ -8412,7 +9059,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -8466,7 +9113,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -8508,7 +9155,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 49,
        "scope": "shipped"
       },
@@ -8913,7 +9560,7 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
@@ -8981,7 +9628,7 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
@@ -9015,26 +9662,26 @@
       {
        "channel": "dependency",
        "via": "gouroboros",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 36,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 81,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -9687,7 +10334,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 17,
        "scope": "shipped"
       },
@@ -9701,7 +10348,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 14,
        "scope": "shipped"
       }
@@ -11086,7 +11733,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 76,
        "scope": "shipped"
       },
@@ -11100,7 +11747,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 72,
        "scope": "shipped"
       }
@@ -11825,7 +12472,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 75,
        "scope": "shipped"
       },
@@ -11839,7 +12486,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 9,
        "scope": "shipped"
       }
@@ -12691,7 +13338,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 85,
        "scope": "shipped"
       },
@@ -12705,7 +13352,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 76,
        "scope": "shipped"
       }
@@ -13542,7 +14189,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 5,
        "scope": "shipped"
       },
@@ -13556,12 +14203,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -14185,12 +14832,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -15982,7 +16629,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 81,
        "scope": "shipped"
       },
@@ -15996,7 +16643,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 125,
        "scope": "shipped"
       }
@@ -16964,7 +17611,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 54,
        "scope": "shipped"
       }
@@ -17830,19 +18477,19 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 21,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 74,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -18619,14 +19266,14 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 26,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 64,
        "scope": "shipped"
       }
@@ -19731,12 +20378,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 3,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -20613,7 +21260,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "shipped"
       }
@@ -21383,7 +22030,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 6,
        "scope": "shipped"
       }
@@ -22059,12 +22706,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 17,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -23024,12 +23671,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 3,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -23817,7 +24464,7 @@
       {
        "channel": "implements",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 0,
        "scope": "shipped"
       },
@@ -24931,7 +25578,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 10,
        "scope": "shipped"
       }
@@ -26279,12 +26926,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -26648,7 +27295,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 104,
        "scope": "auxiliary"
       }
@@ -29517,7 +30164,7 @@
       {
        "channel": "implements",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 0,
        "scope": "shipped"
       },
@@ -29545,7 +30192,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 44,
        "scope": "shipped"
       }
@@ -31280,653 +31927,6 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-09-22T10:43:44Z"
-   }
-  },
-  {
-   "id": "gouroboros",
-   "repo": "blinklabs-io/gouroboros",
-   "revision": "c2cb81f55d3f4c2f38d310185b080dfdabdba1cb",
-   "scan": {
-    "status": "scanned",
-    "files": 977,
-    "skipped": 11
-   },
-   "exposure": "implements",
-   "readiness": "in-progress",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 13,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:segregated-block-body",
-       "readiness": "unassessed",
-       "lines": 180,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 489,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "cardano-cli",
-     "channels": [
-      {
-       "channel": "service",
-       "via": "service:cardano-cli",
-       "readiness": "upstream",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "consensus-participation",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:closed-era-list",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "node-configuration",
-     "channels": [
-      {
-       "channel": "marker",
-       "via": "marker:genesis-config",
-       "readiness": "unassessed",
-       "lines": 2,
-       "scope": "auxiliary"
-      }
-     ],
-     "readiness": "unassessed"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:node-to-client",
-       "readiness": "unassessed",
-       "lines": 135,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:node-socket",
-       "readiness": "upstream",
-       "lines": 3,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "plutigo",
-       "readiness": "released",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 16,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "plutus-script-context",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "plutigo",
-       "readiness": "released",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:script-context",
-       "readiness": "unassessed",
-       "lines": 43,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 185,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 24,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 13,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 489,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:plutigo",
-     "files": 2,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:utxorpc",
-     "files": 2,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ]
-    },
-    {
-     "rule": "marker:closed-era-list",
-     "files": 14,
-     "lines": 9,
-     "auxLines": 9,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "ledger/common/common.go",
-       "line": 2616,
-       "quote": "// Redeemers can be either an array (Alonzo-Babbage) or map (Conway+)."
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 178,
-       "quote": "// no protocol version and has no branch, and Alonzo, Babbage and Conway all"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 637,
-       "quote": "// Pre-Conway eras (Alonzo/Babbage transVITime) use `PV1.to` for an"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 49,
-     "lines": 185,
-     "auxLines": 191,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 25,
-       "quote": "MaxTxExUnits common.ExUnits"
-      },
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 33,
-       "quote": "e.MaxTxExUnits.Steps,"
-      },
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 34,
-       "quote": "e.MaxTxExUnits.Memory,"
-      }
-     ]
-    },
-    {
-     "rule": "marker:genesis-config",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 2,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "internal/test/peersharing-interop/fetch-configs.sh",
-       "line": 21,
-       "quote": "conway-genesis.json"
-      },
-      {
-       "path": "internal/test/peersharing-interop/fetch-configs.sh",
-       "line": 75,
-       "quote": "| .ConwayGenesisFile = \"/configs/conway-genesis.json\""
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 5,
-     "lines": 5,
-     "auxLines": 3,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/block_state.go",
-       "line": 801,
-       "quote": "func (b *BlockLedgerState) StakeRegistration("
-      },
-      {
-       "path": "ledger/common/block_state.go",
-       "line": 804,
-       "quote": "return b.base.StakeRegistration(stakeKey)"
-      },
-      {
-       "path": "ledger/common/certs.go",
-       "line": 355,
-       "quote": "StakeRegistration: stakeCred,"
-      }
-     ]
-    },
-    {
-     "rule": "marker:node-to-client",
-     "files": 86,
-     "lines": 135,
-     "auxLines": 384,
-     "docLines": 38,
-     "examples": [
-      {
-       "path": "connection.go",
-       "line": 47,
-       "quote": "\"github.com/blinklabs-io/gouroboros/protocol/localstatequery\""
-      },
-      {
-       "path": "connection.go",
-       "line": 108,
-       "quote": "localStateQuery         *localstatequery.LocalStateQuery"
-      },
-      {
-       "path": "connection.go",
-       "line": 109,
-       "quote": "localStateQueryConfig   *localstatequery.Config"
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 31,
-     "lines": 16,
-     "auxLines": 49,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "ledger/alonzo/genesis.go",
-       "line": 56,
-       "quote": "case \"PlutusV3\":"
-      },
-      {
-       "path": "ledger/alonzo/pparams.go",
-       "line": 264,
-       "quote": "case \"PlutusV3\":"
-      },
-      {
-       "path": "ledger/common/common.go",
-       "line": 2814,
-       "quote": "// 0x00 = native script, 0x01 = PlutusV1, 0x02 = PlutusV2, 0x03 = PlutusV3"
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 16,
-     "lines": 24,
-     "auxLines": 33,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/certs.go",
-       "line": 1643,
-       "quote": "PoolRegistration: &utxorpc.PoolRegistrationCert{"
-      },
-      {
-       "path": "ledger/common/rewards.go",
-       "line": 89,
-       "quote": "PoolParams map[PoolKeyHash]*PoolRegistrationCertificate"
-      },
-      {
-       "path": "ledger/common/rewards.go",
-       "line": 412,
-       "quote": "poolParams, exists := snapshot.PoolParams[poolID]"
-      }
-     ]
-    },
-    {
-     "rule": "marker:raw-cbor-codec",
-     "files": 18,
-     "lines": 13,
-     "auxLines": 5,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "cbor/bytestring.go",
-       "line": 21,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      },
-      {
-       "path": "cbor/cbor.go",
-       "line": 18,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      },
-      {
-       "path": "cbor/decode.go",
-       "line": 26,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      }
-     ]
-    },
-    {
-     "rule": "marker:script-context",
-     "files": 22,
-     "lines": 43,
-     "auxLines": 43,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 37,
-       "quote": "type ScriptContext interface {"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 43,
-       "quote": "TxInfo  TxInfo"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 52,
-       "quote": "s.TxInfo.ToPlutusData(),"
-      }
-     ]
-    },
-    {
-     "rule": "marker:segregated-block-body",
-     "files": 30,
-     "lines": 180,
-     "auxLines": 150,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "cbor/cardano_diagnostic.go",
-       "line": 83,
-       "quote": "// [header, tx_bodies, tx_witnesses, auxiliary_data_set, invalid_transactions];"
-      },
-      {
-       "path": "cbor/cardano_labels.go",
-       "line": 63,
-       "quote": "\"transaction_bodies\","
-      },
-      {
-       "path": "cbor/cardano_labels.go",
-       "line": 66,
-       "quote": "\"invalid_transactions\","
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "protocol/localstatequery/queries.go",
-       "line": 511,
-       "quote": "// is used by cardano-cli query stake-address-info."
-      }
-     ]
-    },
-    {
-     "rule": "service:node-socket",
-     "files": 10,
-     "lines": 3,
-     "auxLines": 12,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 48,
-       "quote": "if [ -S \"$NODE_IPC_DIR/node.socket\" ] &&"
-      },
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 51,
-       "quote": "docker exec cardano-node chmod 0666 /ipc/node.socket"
-      },
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 60,
-       "quote": "GOUROBOROS_CARDANO_NODE_SOCKET_PATH: /tmp/cardano-node-ipc/node.socket"
-      }
-     ]
-    },
-    {
-     "rule": "service:utxorpc",
-     "files": 55,
-     "lines": 489,
-     "auxLines": 419,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "ledger/allegra/allegra.go",
-       "line": 25,
-       "quote": "utxorpc \"github.com/utxorpc/go-codegen/utxorpc/v1alpha/cardano\""
-      },
-      {
-       "path": "ledger/allegra/allegra.go",
-       "line": 188,
-       "quote": "func (b *AllegraBlock) Utxorpc() (*utxorpc.Block, error) {"
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-10-20T08:54:03Z"
    }
   },
   {
@@ -35623,7 +35623,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 9,
        "scope": "auxiliary"
       }
@@ -36250,7 +36250,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36352,7 +36352,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36449,7 +36449,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 229,
        "scope": "shipped"
       },
@@ -36463,7 +36463,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 310,
        "scope": "shipped"
       }
@@ -38075,7 +38075,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -38142,7 +38142,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -39509,7 +39509,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 10,
        "scope": "shipped"
       },
@@ -40185,7 +40185,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       },
@@ -40199,7 +40199,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 7,
        "scope": "shipped"
       }
@@ -40914,7 +40914,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 284,
        "scope": "shipped"
       }
@@ -42270,7 +42270,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 13,
        "scope": "shipped"
       }
@@ -43211,7 +43211,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43258,7 +43258,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43687,7 +43687,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43734,7 +43734,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -44581,7 +44581,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 5,
        "scope": "shipped"
       },
@@ -44595,7 +44595,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 8,
        "scope": "shipped"
       }
@@ -45333,7 +45333,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 12,
        "scope": "shipped"
       }
@@ -45979,7 +45979,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 3,
        "scope": "shipped"
       }
@@ -46697,14 +46697,14 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 7,
        "scope": "shipped"
       }
@@ -47920,7 +47920,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -47967,7 +47967,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -48344,12 +48344,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 21,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -49557,12 +49557,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 6,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -50634,19 +50634,19 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 24,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 8,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -51147,12 +51147,12 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -51877,12 +51877,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 17,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -52505,12 +52505,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -52768,7 +52768,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 10,
        "scope": "shipped"
       },
@@ -52782,7 +52782,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 11,
        "scope": "shipped"
       }
@@ -53495,12 +53495,12 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 29,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -56746,12 +56746,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 5,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -58422,19 +58422,19 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 6,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -68688,7 +68688,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -68770,7 +68770,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.0",
+       "via": "gouroboros",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -68840,7 +68840,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 19,
        "scope": "shipped"
       },
@@ -68854,7 +68854,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 10,
        "scope": "shipped"
       }
@@ -69560,7 +69560,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 5,
        "scope": "shipped"
       },
@@ -69574,12 +69574,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -70153,7 +70153,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 70,
        "scope": "shipped"
       },
@@ -70167,7 +70167,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 104,
        "scope": "shipped"
       }
@@ -70542,7 +70542,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 50,
        "scope": "shipped"
       }
@@ -71422,12 +71422,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 1,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -71939,19 +71939,19 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 15,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 13,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -72653,7 +72653,7 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 8,
        "scope": "shipped"
       },
@@ -73008,19 +73008,19 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 6,
        "scope": "shipped"
       },
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 6,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -73642,7 +73642,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 2,
        "scope": "auxiliary"
       }
@@ -73830,12 +73830,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 3,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -73997,12 +73997,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 14,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -74362,12 +74362,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 75,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -74519,12 +74519,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 35,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -74702,12 +74702,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 7,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -74869,12 +74869,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -75062,12 +75062,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 24,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -75267,12 +75267,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 16945,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -75470,12 +75470,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 28,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -75634,12 +75634,12 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 3,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "protocol-parameters",
@@ -76171,7 +76171,7 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 5,
        "scope": "shipped"
       }
@@ -76321,12 +76321,12 @@
       {
        "channel": "service",
        "via": "ogmios",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 20,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "plutus-language",
@@ -77123,12 +77123,12 @@
       {
        "channel": "service",
        "via": "kupo",
-       "readiness": "released",
+       "readiness": "verified",
        "lines": 4,
        "scope": "shipped"
       }
      ],
-     "readiness": "released"
+     "readiness": "verified"
     },
     {
      "surface": "protocol-parameters",

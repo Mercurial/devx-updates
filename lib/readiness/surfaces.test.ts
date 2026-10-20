@@ -85,7 +85,7 @@ test("classification inherits R2 readiness through coupling, not through markers
   assert.equal(n2c.readiness, "gap");
   assert.equal(tool.surfaces.some((s) => s.channels.some((c) => c.via === "ogmios")), false, "documentation mentions are not coupling");
   const current = classifyTool({ id: "current", repo: "o/c", revision: "f".repeat(40) }, scanSources([{ path: "go.mod", content: "require github.com/blinklabs-io/gouroboros v0.213.7\n" }]), boundary, changes);
-  assert.equal(current.surfaces.find((s) => s.surface === "node-to-client-protocol")!.readiness, "released");
+  assert.equal(current.surfaces.find((s) => s.surface === "node-to-client-protocol")!.readiness, "verified", "V23 passed the devnet handshake (R4)");
   const reaches = (quote: string, path: string, needed: string) => { const c = readConstraint(quote, path); return c && admits(c, needed.split(".").map(Number)); };
   assert.equal(reaches('pallas = { git = "https://github.com/txpipe/pallas" }', "Cargo.toml", "0.35.1"), null, "git references carry no version");
   assert.equal(reaches('pallas-traverse = "0.35.0"', "Cargo.toml", "0.35.1"), true, "Cargo defaults to caret");

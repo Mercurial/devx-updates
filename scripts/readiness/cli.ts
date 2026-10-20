@@ -22,13 +22,14 @@ import { readGitSnapshot } from "../../lib/readiness/snapshot-history";
 import { capabilityRows } from "../../lib/readiness/capabilities";
 import { investigationProjects, parseAssignments, summarizeWork, workReport } from "../../lib/readiness/work";
 import { scanIntegrations } from "../../lib/readiness/integration-scan";
-import { changesBySurface, parseChangeRegister, verifyCitations } from "../../lib/readiness/dijkstra";
-import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../../lib/readiness/boundary";
+import { changesBySurface, parseChangeRegister, verifyCitations, type ChangeRegister } from "../../lib/readiness/dijkstra";
+import { parseBoundaryRegister, statusSummary, verifyBoundarySources, type BoundaryRegister } from "../../lib/readiness/boundary";
 import { classifyCatalog, reclassifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
 import { leadCoverage, parseLeadRegister, verifyLeadSources } from "../../lib/readiness/leads";
 import { unlockReport, unlocksOf, toolBlockers } from "../../lib/readiness/unlocks";
 import { parseUpgradeRegister, upgradeCoverage, verifyUpgradeSources } from "../../lib/readiness/upgrades";
 import { targetVersions } from "../../lib/readiness/surfaces";
+import { devnetConsistency, parseDevnetRegister } from "../../lib/readiness/devnet";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -49,6 +50,14 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
 const store = new Store(resolve(values.directory!));
 function required(key: "profile" | "input" | "output" | "before") {
   const value = values[key]; if (!value) throw new Error(`--${key} is required`); return value;
+}
+
+/** The devnet register, its subjects checked against the change, boundary and classification registers. */
+function loadDevnet(changes: ChangeRegister, boundary: BoundaryRegister) {
+  const { tools } = readJson("content/readiness/dijkstra/classification.json") as ClassificationRegister;
+  return parseDevnetRegister(readJson("content/readiness/dijkstra/devnet.json"), {
+    changes: new Set(changes.changes.map((c) => c.id)), components: new Set(boundary.components.map((c) => c.id)), tools: new Set(tools.map((t) => t.id)),
+  });
 }
 
 async function main() {
@@ -88,6 +97,7 @@ classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classificat
 check-leads     [--input content/readiness/dijkstra/leads.json] [--verify-sources]
 check-upgrades  [--verify-sources]
                 Own era handling of every bump-ready tool (content/readiness/dijkstra/upgrades.json)
+check-devnet    Devnet results (content/readiness/dijkstra/devnet.json): subjects, recipes, and the boundary evidence citing them
 unlocks         [--component scalus[,cardano-js-sdk]] [--output content/readiness/dijkstra/unlocks.json]
                 What a fix in one component unlocks, directly and through other components
                 Validate the hardfork change register; optionally re-read every cited quote via gh
@@ -137,6 +147,10 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const failures = values["verify-sources"] ? await verifyBoundarySources(register, (repo, revision, path) => githubSource(repo, revision, path)) : [];
     for (const failure of failures) console.error(failure);
     if (failures.length) throw new Error(`${failures.length} citations no longer match their pinned sources`);
+    const devnet = loadDevnet(changes, register);
+    const inconsistent = devnetConsistency(register, devnet);
+    for (const problem of inconsistent) console.error(problem);
+    if (inconsistent.length) throw new Error(`${inconsistent.length} assessments disagree with the devnet register`);
     const evidence = register.components.reduce((sum, c) => sum + c.assessments.reduce((n, a) => n + a.evidence.length, 0), 0);
     console.log(JSON.stringify({ components: register.components.length, evidence, sourcesVerified: Boolean(values["verify-sources"]), byWorstStatus: statusSummary(register) }, null, 2));
     return;
@@ -187,6 +201,18 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const byHandling = Object.fromEntries(register.upgrades.map((u) => u.eraHandling).map((h, _, all) => [h, all.filter((x) => x === h).length]));
     console.log(JSON.stringify({ upgrades: register.upgrades.length, sourcesVerified: Boolean(values["verify-sources"]), byHandling, ...coverage }, null, 2));
     if (coverage.orphaned.length) throw new Error(`Upgrades match no classified tool: ${coverage.orphaned.join(", ")}`);
+    return;
+  }
+  if (command === "check-devnet") {
+    const changes = parseChangeRegister(readJson("content/readiness/dijkstra/changes.json"));
+    const boundary = parseBoundaryRegister(readJson("content/readiness/dijkstra/boundary.json"), changes);
+    const devnet = loadDevnet(changes, boundary);
+    const missing = [devnet.run.recipe, ...devnet.checks.flatMap((c) => c.recipe)].filter((path) => !existsSync(path));
+    const inconsistent = devnetConsistency(boundary, devnet);
+    for (const problem of [...missing.map((path) => `missing recipe ${path}`), ...inconsistent]) console.error(problem);
+    const results = devnet.checks.flatMap((c) => c.results);
+    console.log(JSON.stringify({ checks: devnet.checks.length, results: results.length, failing: results.filter((r) => r.outcome === "fail").map((r) => `${r.kind} ${r.id}${r.version ? ` ${r.version}` : ""}`) }, null, 2));
+    if (missing.length || inconsistent.length) throw new Error("The devnet register does not match the recipe or the boundary register");
     return;
   }
   if (command === "check-leads") {

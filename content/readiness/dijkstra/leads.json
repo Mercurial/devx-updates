@@ -5,7 +5,8 @@
   "Every shipped gap channel in classification.json was read at the classified revision in the tool's shipped code (tests, examples, benchmarks, demos and CI scripts excluded).",
   "confirmed: a shipped path uses the gapped capability, so the tool fails or misbehaves after the hardfork until the dependency moves; not-reached: shipped code uses the dependency only outside it; undetermined: reading cannot decide.",
   "Each decision quotes the lines it rests on; check-leads --verify-sources re-reads every quote at its pinned revision.",
-  "Service links are decided per capability used: Ogmios chain-sync reaches block, transaction and era surfaces, submission reaches transaction and era, evaluation reaches Plutus and transaction, and the parameter query reaches protocol parameters; any read of Kupo or db-sync chain data reaches block, transaction and era (neither indexes Dijkstra blocks), db-sync parameter and pool surfaces only through epoch_param and pool tables; Blockfrost era identity only through /network/eras and parameters through the epoch parameter endpoints; Koios era identity through era fields (/tip, block and epoch info) and parameters through /epoch_params or /cli_protocol_params. Hosted Blockfrost and Koios consumers inherit the self-hosted verdicts."
+  "Service links are decided per capability used: Ogmios chain-sync reaches block, transaction and era surfaces, submission reaches transaction and era, evaluation reaches Plutus and transaction, and the parameter query reaches protocol parameters; any read of Kupo or db-sync chain data reaches block, transaction and era (neither indexes Dijkstra blocks), db-sync parameter and pool surfaces only through epoch_param and pool tables; Blockfrost era identity only through /network/eras and parameters through the epoch parameter endpoints; Koios era identity through era fields (/tip, block and epoch info) and parameters through /epoch_params or /cli_protocol_params. Hosted Blockfrost and Koios consumers inherit the self-hosted verdicts.",
+  "gouroboros era identity and block encoding (R4 devnet) are reached when shipped code passes raw transaction bytes to DetermineTransactionType or decodes blocks or headers received from a node; building and serializing its own transactions with gouroboros types does not reach them."
  ],
  "leads": [
   {
@@ -10333,6 +10334,64 @@
      "path": "zeroj-onchain-julc/build.gradle",
      "line": 57,
      "quote": "implementation \"com.bloxbean.cardano:cardano-client-crypto:${rootProject.ext.cclVersion}\""
+    }
+   ]
+  },
+  {
+   "tool": "dingo",
+   "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
+   "via": "gouroboros",
+   "surfaces": [
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "Transactions submitted over UTxO RPC go through gouroboros's era detection, which rejects ordinary Dijkstra transactions.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/dingo",
+     "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
+     "path": "api/utxorpc/submit.go",
+     "line": 72,
+     "quote": "txType, err := safedecode.TransactionType(txRawBytes)"
+    }
+   ]
+  },
+  {
+   "tool": "dingo",
+   "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
+   "via": "gouroboros",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Chain-sync decodes block headers with gouroboros, which requires the twelve-field Dijkstra header that the 11.2 integration node does not emit.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/dingo",
+     "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
+     "path": "ouroboros/chainsync.go",
+     "line": 2354,
+     "quote": "header, err = gledger.NewBlockHeaderFromCbor(blockType, raw)"
+    }
+   ]
+  },
+  {
+   "tool": "apollo",
+   "revision": "ce93350dd2ca6bd8fa6278dad1559edf492340d5",
+   "via": "gouroboros",
+   "surfaces": [
+    "block-encoding",
+    "era-identity"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and serializes its own Conway transactions with gouroboros ledger types; chain data comes through its Ogmios and Blockfrost backends, and it neither decodes blocks nor detects transaction eras with gouroboros.",
+   "evidence": [
+    {
+     "repo": "Salvionied/apollo",
+     "revision": "ce93350dd2ca6bd8fa6278dad1559edf492340d5",
+     "path": "apollo.go",
+     "line": 1975,
+     "quote": "a.tx = &conway.ConwayTransaction{"
     }
    ]
   }

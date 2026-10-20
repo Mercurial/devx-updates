@@ -22,7 +22,9 @@ export type Role = (typeof ROLES)[number];
 export type Status = (typeof STATUSES)[number];
 
 export interface Tracker { kind: "tracker"; url: string; title: string; state: (typeof TRACKER_STATES)[number]; date: string }
-export type Evidence = ({ kind: "source" } & Citation) | Tracker;
+/** A devnet result (R4) for this component at `version`; `devnetConsistency` checks it against the devnet register. */
+export interface DevnetEvidence { kind: "devnet"; check: string; version: string }
+export type Evidence = ({ kind: "source" } & Citation) | Tracker | DevnetEvidence;
 export interface Release { tag: string; date: string }
 /**
  * `releasedIn` is a release confirmed to contain the support. `firstReleases` is the earliest release on each release
@@ -55,7 +57,8 @@ function release(value: unknown, label: string): Release {
 function evidence(value: unknown, label: string): Evidence {
   const e = object(value, label);
   if (e.kind === "source") return { kind: "source", ...citation(e, label) };
-  if (e.kind !== "tracker") throw new Error(`${label}.kind must be source or tracker`);
+  if (e.kind === "devnet") return { kind: "devnet", check: text(e.check, `${label}.check`), version: text(e.version, `${label}.version`) };
+  if (e.kind !== "tracker") throw new Error(`${label}.kind must be source, tracker or devnet`);
   const url = text(e.url, `${label}.url`);
   if (!TRACKER.test(url)) throw new Error(`${label}.url must be a GitHub issue or pull request`);
   return { kind: "tracker", url, title: text(e.title, `${label}.title`), state: oneOf(e.state, TRACKER_STATES, `${label}.state`), date: date(e.date, `${label}.date`) };
@@ -87,6 +90,7 @@ export function parseBoundaryRegister(raw: unknown, changes: ChangeRegister): Bo
       // An absence is recorded against the observed revision; every other status must point at what it rests on.
       if (status !== "no-evidence" && !found.length) throw new Error(`${at} needs evidence for status ${status}`);
       if ((status === "released" || status === "verified") && a.releasedIn === undefined) throw new Error(`${at} needs releasedIn for status ${status}`);
+      if (status === "verified" && !found.some((e) => e.kind === "devnet")) throw new Error(`${at} needs devnet evidence for status verified`);
       if (a.firstReleases !== undefined && a.releasedIn === undefined) throw new Error(`${at} needs releasedIn alongside firstReleases`);
       const firsts = a.firstReleases === undefined ? undefined : list(a.firstReleases, `${at}.firstReleases`).map((r, k) => release(r, `${at}.firstReleases[${k}]`));
       if (firsts && !firsts.length) throw new Error(`${at}.firstReleases must not be empty`);
