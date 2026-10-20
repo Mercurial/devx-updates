@@ -1,61 +1,162 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T12:15:21.983Z",
+ "generatedAt": "2026-10-20T12:22:04.493Z",
  "bumpReady": [
   {
    "tool": "atlas",
    "pins": [
     "cardano-api@10.13.1<11.8.0.0"
    ],
-   "ownStatus": "no-evidence"
+   "steps": [
+    {
+     "package": "cardano-api",
+     "from": "10.13.1",
+     "to": "11.8.0.0",
+     "breaking": true
+    }
+   ],
+   "ownStatus": "no-evidence",
+   "unread": [
+    "kupo",
+    "ogmios",
+    "blockfrost-backend-ryo"
+   ]
   },
   {
    "tool": "bursa",
    "pins": [
     "gouroboros@0.212.5<v0.213.0"
-   ]
+   ],
+   "steps": [
+    {
+     "package": "gouroboros",
+     "from": "0.212.5",
+     "to": "v0.213.0",
+     "breaking": true
+    }
+   ],
+   "unread": []
   },
   {
    "tool": "cardano-ibc-incubator",
    "pins": [
     "gouroboros@0.205.4<v0.213.0"
+   ],
+   "steps": [
+    {
+     "package": "gouroboros",
+     "from": "0.205.4",
+     "to": "v0.213.0",
+     "breaking": true
+    }
+   ],
+   "unread": [
+    "cardano-db-sync",
+    "kupo",
+    "ogmios",
+    "blockfrost-backend-ryo",
+    "koios"
    ]
   },
   {
    "tool": "cardano-node-api",
    "pins": [
     "gouroboros@0.202.7<v0.213.0"
-   ]
+   ],
+   "steps": [
+    {
+     "package": "gouroboros",
+     "from": "0.202.7",
+     "to": "v0.213.0",
+     "breaking": true
+    }
+   ],
+   "unread": []
   },
   {
    "tool": "cf-ledger-sync",
    "pins": [
     "yaci@0.3.4.1<v0.3.10|v0.4.2"
    ],
-   "ownStatus": "no-evidence"
+   "steps": [
+    {
+     "package": "yaci",
+     "from": "0.3.4.1",
+     "to": "v0.3.10",
+     "breaking": false
+    }
+   ],
+   "ownStatus": "no-evidence",
+   "unread": [
+    "cardano-db-sync",
+    "ogmios"
+   ]
   },
   {
    "tool": "marconi",
    "pins": [
     "cardano-api@8.20<11.8.0.0"
-   ]
+   ],
+   "steps": [
+    {
+     "package": "cardano-api",
+     "from": "8.20",
+     "to": "11.8.0.0",
+     "breaking": true
+    }
+   ],
+   "unread": []
   },
   {
    "tool": "marlowe",
    "pins": [
     "cardano-api@11.0<11.8.0.0"
+   ],
+   "steps": [
+    {
+     "package": "cardano-api",
+     "from": "11.0",
+     "to": "11.8.0.0",
+     "breaking": true
+    }
+   ],
+   "unread": [
+    "kupo"
    ]
   },
   {
    "tool": "midgard",
    "pins": [
     "cardano-api@10.21.0.0<11.8.0.0"
+   ],
+   "steps": [
+    {
+     "package": "cardano-api",
+     "from": "10.21.0.0",
+     "to": "11.8.0.0",
+     "breaking": true
+    }
+   ],
+   "unread": [
+    "kupo",
+    "ogmios"
    ]
   },
   {
    "tool": "sc-tools",
    "pins": [
     "cardano-api@11.0.0.0<11.8.0.0"
+   ],
+   "steps": [
+    {
+     "package": "cardano-api",
+     "from": "11.0.0.0",
+     "to": "11.8.0.0",
+     "breaking": true
+    }
+   ],
+   "unread": [
+    "blockfrost-backend-ryo"
    ]
   },
   {
@@ -63,13 +164,33 @@
    "pins": [
     "pallas@0.30.1<v0.35.1|v1.0.0"
    ],
-   "ownStatus": "no-evidence"
+   "steps": [
+    {
+     "package": "pallas",
+     "from": "0.30.1",
+     "to": "v0.35.1",
+     "breaking": true
+    }
+   ],
+   "ownStatus": "no-evidence",
+   "unread": [
+    "ogmios"
+   ]
   },
   {
    "tool": "txtop",
    "pins": [
     "gouroboros@0.208.5<v0.213.0"
-   ]
+   ],
+   "steps": [
+    {
+     "package": "gouroboros",
+     "from": "0.208.5",
+     "to": "v0.213.0",
+     "breaking": true
+    }
+   ],
+   "unread": []
   }
  ],
  "components": [
@@ -359,6 +480,60 @@
  ],
  "blockers": [
   {
+   "tool": "adalite",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "adapools-xyz",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "adastat-api",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
    "tool": "adder",
    "boundary": true,
    "blockers": [
@@ -393,7 +568,17 @@
      ]
     }
    ],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "amaru",
@@ -402,6 +587,59 @@
    "undetermined": [],
    "cleared": [
     "pallas"
+   ],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "apollo",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -420,7 +658,34 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "blaze",
@@ -435,7 +700,34 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "blockfrost-backend-ryo",
@@ -451,7 +743,51 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "blockfrost-cardano-cli",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "blockfrost-go",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "blockfrost-js",
@@ -460,6 +796,92 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "blockfrost-python",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "bloxbean-cardano-client-library",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -490,6 +912,26 @@
    "cleared": [
     "gouroboros",
     "plutigo"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "cab",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -506,7 +948,66 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
+  },
+  {
+   "tool": "cardano-cli-guru",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-client-bindings",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ctf",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-db-sync",
@@ -525,7 +1026,8 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
   },
   {
    "tool": "cardano-dev-wallet",
@@ -540,7 +1042,69 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-go",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-graphql",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-hw-cli",
@@ -555,7 +1119,27 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
+  },
+  {
+   "tool": "cardano-hw-interop-lib",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-ibc-incubator",
@@ -593,6 +1177,50 @@
    "cleared": [
     "gouroboros",
     "plutigo"
+   ],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -608,7 +1236,36 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-mcp",
@@ -617,6 +1274,30 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -647,7 +1328,8 @@
      ]
     }
    ],
-   "cleared": []
+   "cleared": [],
+   "unread": []
   },
   {
    "tool": "cardano-rosetta-legacy",
@@ -662,7 +1344,19 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-serialization-lib-csl",
@@ -677,7 +1371,8 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
   },
   {
    "tool": "cardano-signer",
@@ -686,6 +1381,67 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "cardano-token-registry",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-transaction-lib-ctl",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -695,7 +1451,8 @@
    "undetermined": [],
    "cleared": [
     "gouroboros"
-   ]
+   ],
+   "unread": []
   },
   {
    "tool": "cardano-wallet",
@@ -743,6 +1500,18 @@
    "cleared": [
     "ouroboros-consensus",
     "plutus-plutus-core"
+   ],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -757,7 +1526,23 @@
      ]
     }
    ],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "cardano-wallet-js",
@@ -774,6 +1559,95 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "cardano-wallet-sdk-dart",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardano-web3-js",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cardanosharp",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "carp",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -783,6 +1657,63 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "catalyst-voices",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cf-java-rewards-calculation",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -799,7 +1730,63 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "chrysalis",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "clb",
@@ -808,6 +1795,46 @@
    "undetermined": [],
    "cleared": [
     "cardano-api"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "cometa-js",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cquisitor",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -823,7 +1850,75 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "create-evolution-app",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "cscli",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "csl-mobile-bridge",
@@ -838,7 +1933,24 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
+  },
+  {
+   "tool": "dab",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "daedalus",
@@ -855,6 +1967,273 @@
    "undetermined": [],
    "cleared": [
     "cardano-js-sdk"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "dandelion-apis",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "de-uplc",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "de-uplc-web",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "devx",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "dexter",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "dingo",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "dolos",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "elm-cardano",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "epora-wallet",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -871,7 +2250,74 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "gamechanger-gcscript",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "gastronomy",
@@ -880,6 +2326,15 @@
    "undetermined": [],
    "cleared": [
     "pallas"
+   ],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -895,7 +2350,39 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "go-cardano-serialization",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "govtool",
@@ -904,6 +2391,86 @@
    "undetermined": [],
    "cleared": [
     "cardano-serialization-lib-csl"
+   ],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "guild-operators-suite",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -933,6 +2500,15 @@
    "undetermined": [],
    "cleared": [
     "plutus-plutus-core"
+   ],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -948,7 +2524,80 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "intelliada",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "iris",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "kogmios",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "koios",
@@ -964,7 +2613,103 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "koios-cli",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "koios-go-client",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "koios-java-client",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "koios-python",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "kuber",
@@ -1001,6 +2746,18 @@
    "undetermined": [],
    "cleared": [
     "ouroboros-consensus"
+   ],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -1029,6 +2786,18 @@
    "undetermined": [],
    "cleared": [
     "ouroboros-consensus"
+   ],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -1044,7 +2813,89 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "lambda-buffers",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "libcardano",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "lucid",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "lucid-evolution",
@@ -1060,7 +2911,41 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "marconi",
@@ -1086,7 +2971,8 @@
      ]
     }
    ],
-   "cleared": []
+   "cleared": [],
+   "unread": []
   },
   {
    "tool": "marlowe",
@@ -1107,6 +2993,32 @@
    "cleared": [
     "cardano-serialization-lib-csl",
     "plutus-plutus-core"
+   ],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "marlowe-ts-sdk",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -1122,7 +3034,49 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "masumi-registry-service",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "meshjs-mesh-sdk",
@@ -1145,7 +3099,53 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "metis",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "midgard",
@@ -1163,7 +3163,106 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "minswap-sdk",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "mithril",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "mockfrost",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "mumak",
@@ -1172,7 +3271,8 @@
    "undetermined": [],
    "cleared": [
     "pallas"
-   ]
+   ],
+   "unread": []
   },
   {
    "tool": "nami",
@@ -1187,7 +3287,104 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "naumachia",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "nmkr-studio-api",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "odatano",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "offchain-metadata-tools",
@@ -1196,7 +3393,8 @@
    "undetermined": [],
    "cleared": [
     "cardano-api"
-   ]
+   ],
+   "unread": []
   },
   {
    "tool": "ogmios",
@@ -1226,6 +3424,45 @@
    "undetermined": [],
    "cleared": [
     "ouroboros-consensus"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "ogmiosdotnet",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "ogmiosdotnet-blockchainevents",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -1241,7 +3478,76 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": []
+  },
+  {
+   "tool": "pebble",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "plu-ts",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "plutarch",
@@ -1250,7 +3556,8 @@
    "undetermined": [],
    "cleared": [
     "plutus-plutus-core"
-   ]
+   ],
+   "unread": []
   },
   {
    "tool": "plutip",
@@ -1260,7 +3567,8 @@
    "cleared": [
     "cardano-api",
     "ouroboros-network"
-   ]
+   ],
+   "unread": []
   },
   {
    "tool": "plutus-halo2-verifier-gen",
@@ -1270,6 +3578,41 @@
    "cleared": [
     "cardano-serialization-lib-csl",
     "plutus-plutus-core"
+   ],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "plutus-pioneer-program",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -1279,6 +3622,65 @@
    "undetermined": [],
    "cleared": [
     "plutus-plutus-core"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "pycardano",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "rum",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -1299,6 +3701,15 @@
    "undetermined": [],
    "cleared": [
     "plutus-plutus-core"
+   ],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
    ]
   },
   {
@@ -1315,7 +3726,33 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "scrolls",
@@ -1331,7 +3768,145 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "sorbet",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "stakepool-operator-scripts",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "sundae-sdk",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "sutra",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "toolkit-for-cardano",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "txtop",
@@ -1354,6 +3929,42 @@
    "cleared": [
     "gouroboros",
     "plutigo"
+   ],
+   "unread": []
+  },
+  {
+   "tool": "use-cardano",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "veridian-wallet",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
    ]
   },
   {
@@ -1369,7 +3980,62 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "xogmios",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "yaci-devkit",
+   "boundary": true,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "kupo",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    }
+   ]
   },
   {
    "tool": "yaci-store",
@@ -1385,7 +4051,43 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "yano",
@@ -1401,7 +4103,43 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "cardano-db-sync",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "protocol-parameters",
+      "stake-pool-registration",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "ogmios",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "plutus-language",
+      "protocol-parameters",
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    },
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   },
   {
    "tool": "yoroi",
@@ -1416,7 +4154,32 @@
     }
    ],
    "undetermined": [],
-   "cleared": []
+   "cleared": [],
+   "unread": [
+    {
+     "via": "koios",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "zhuli",
+   "boundary": false,
+   "blockers": [],
+   "undetermined": [],
+   "cleared": [],
+   "unread": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ]
   }
  ]
 }

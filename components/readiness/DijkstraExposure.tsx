@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { citationUrl, componentStatus, dijkstraSite, toolLeads } from "@/lib/readiness/dijkstra-site";
+import { citationUrl, componentStatus, dijkstraSite, toolLeads, toolUpgrade, waitingLinks } from "@/lib/readiness/dijkstra-site";
 
 const Chip = ({ children }: { children: React.ReactNode }) => (
   <span className="inline-block rounded-md border border-border bg-surface-2 px-1.5 py-0.5 font-mono text-[11px] leading-tight text-muted">{children}</span>
@@ -14,6 +14,9 @@ export default function DijkstraExposure({ id }: { id: string }) {
   const blockers = site.unlocks.blockers.find((b) => b.tool === id);
   const status = componentStatus(site, id);
   const shipped = tool?.surfaces.filter((s) => s.channels.some((c) => c.scope === "shipped")) ?? [];
+  const bump = site.unlocks.bumpReady.find((b) => b.tool === id);
+  const upgrade = toolUpgrade(site, id);
+  const waiting = waitingLinks(site, id);
   return <section id="dijkstra" className="scroll-mt-24 space-y-4 rounded-xl border border-border bg-surface p-5">
     <div className="flex flex-wrap items-baseline justify-between gap-2">
       <h2 className="font-display text-xl font-semibold">Dijkstra hardfork</h2>
@@ -38,8 +41,34 @@ export default function DijkstraExposure({ id }: { id: string }) {
       <h3 className="text-sm font-medium">Blocked by</h3>
       <ul className="mt-1 space-y-1 text-sm">{blockers.blockers.map((b) => (
         <li key={`${b.kind}:${b.via}`} className="flex flex-wrap items-center gap-1">
-          <span className={b.kind === "own-bump" ? "text-status-progress" : "text-status-blocked"}>{b.kind === "own-bump" ? "raise pin" : b.kind === "own-gap" ? "own gap" : "upstream fix"}</span>
+          <span className={b.kind === "own-bump" ? "text-status-progress" : "text-status-blocked"}>{b.kind === "own-bump" ? "upgrade" : b.kind === "own-gap" ? "own gap" : "upstream fix"}</span>
           <span>{b.kind === "own-bump" ? b.pin : b.via}</span>{b.surfaces.map((s) => <Chip key={s}>{s}</Chip>)}
+        </li>
+      ))}</ul>
+    </div>}
+    {bump && <div>
+      <h3 className="text-sm font-medium">Upstream fix released: upgrade</h3>
+      <ul className="mt-1 space-y-1 text-sm">{bump.steps.map((st) => (
+        <li key={st.package}><span className="font-mono text-xs">{st.package} {st.from} → {st.to}</span>{" "}
+          <span className={`text-xs ${st.breaking ? "text-status-blocked" : "text-status-progress"}`}>{st.breaking ? "crosses a breaking release" : "same release line"}</span></li>
+      ))}</ul>
+      {upgrade ? <div className="mt-2 text-sm">
+        <p><span className="font-medium">Own era handling: {upgrade.eraHandling}.</span> <span className="text-muted">{upgrade.summary}</span></p>
+        <ul className="mt-1 space-y-1">{upgrade.evidence.map((c) => (
+          <li key={`${c.path}:${c.line}`} className="text-xs">
+            <a href={citationUrl(c)} target="_blank" rel="noreferrer" className="break-all">{c.path}:{c.line}</a>
+            <code className="mt-0.5 block overflow-x-auto whitespace-pre text-muted">{c.quote}</code>
+          </li>
+        ))}</ul>
+      </div> : <p className="mt-1 text-sm text-muted">Own era handling not read yet.</p>}
+    </div>}
+    {waiting.length > 0 && <div>
+      <h3 className="text-sm font-medium">Waiting on</h3>
+      <ul className="mt-1 space-y-1 text-sm">{waiting.map((g) => (
+        <li key={`${g.via}:${g.unread}`} className="flex flex-wrap items-center gap-1">
+          <Link href={`/map/readiness/${g.via}`}>{g.via}</Link>
+          <span className={g.unread ? "text-status-blocked" : "text-muted"}>{g.unread ? "gap, not read yet" : `${g.status}, no verdict`}</span>
+          {g.tools[0].surfaces.map((s) => <Chip key={s}>{s}</Chip>)}
         </li>
       ))}</ul>
     </div>}

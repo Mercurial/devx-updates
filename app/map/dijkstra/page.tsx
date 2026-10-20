@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
-import { citationUrl, componentStatus, dijkstraSite } from "@/lib/readiness/dijkstra-site";
-import type { Lead } from "@/lib/readiness/leads";
+import { citationUrl, componentStatus, dijkstraSite, toolUpgrade, waitingLinks, type Waiting } from "@/lib/readiness/dijkstra-site";
+import type { Citation } from "@/lib/readiness/dijkstra";
 
 export const metadata: Metadata = {
   title: "Dijkstra hardfork readiness",
@@ -14,7 +14,27 @@ const Chip = ({ children }: { children: React.ReactNode }) => (
 );
 const ToolLink = ({ id }: { id: string }) => <Link href={`/map/readiness/${id}`} className="font-medium">{id}</Link>;
 
-function Evidence({ lead }: { lead: Lead }) {
+const HANDLING = {
+  "own-work": ["Own code must change", "text-status-blocked"],
+  prepared: ["Already has Dijkstra cases", "text-status-progress"],
+  generic: ["Era-generic", "text-status-progress"],
+  undetermined: ["Undetermined", "text-muted"],
+} as const;
+
+function WaitingList({ groups }: { groups: Waiting[] }) {
+  return <div className="mt-4 space-y-2">{groups.map((g) => (
+    <details key={`${g.via}:${g.unread}`} className="rounded-xl border border-border bg-surface px-4 py-3">
+      <summary className="cursor-pointer text-sm">
+        <span className="font-medium">{g.via}</span> <span className="text-muted">· {g.status} · {g.tools.length} {g.tools.length === 1 ? "tool" : "tools"}</span>
+      </summary>
+      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">{g.tools.map((t) => (
+        <li key={t.tool}><ToolLink id={t.tool} /> <span className="text-xs text-muted">{t.surfaces.join(", ")}</span></li>
+      ))}</ul>
+    </details>
+  ))}</div>;
+}
+
+function Evidence({ lead }: { lead: { evidence: Citation[] } }) {
   return <ul className="mt-1 space-y-1">{lead.evidence.map((c) => (
     <li key={`${c.path}:${c.line}`} className="text-xs">
       <a href={citationUrl(c)} target="_blank" rel="noreferrer" className="break-all">{c.path}:{c.line}</a>
@@ -30,6 +50,10 @@ export default function DijkstraPage() {
   const confirmedTools = [...new Set(confirmed.map((l) => l.tool))].sort();
   const touched = [...classification.tools.values()].filter((t) => t.surfaces.some((s) => s.channels.some((c) => c.scope === "shipped"))).length;
   const others = leads.leads.filter((l) => l.decision !== "confirmed");
+  const waiting = waitingLinks(site);
+  const unread = waiting.filter((g) => g.unread), open = waiting.filter((g) => !g.unread);
+  const count = (groups: Waiting[]) => new Set(groups.flatMap((g) => g.tools.map((t) => t.tool))).size;
+  const ownWork = unlocks.bumpReady.filter((b) => toolUpgrade(site, b.tool)?.eraHandling === "own-work").length;
   return <div className="map-view" style={{ overflow: "visible" }}>
     <div className="mx-auto max-w-7xl space-y-9 px-4 py-7 sm:px-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -47,8 +71,8 @@ export default function DijkstraPage() {
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{([
         [confirmedTools.length, "Tools with a confirmed gap", `${confirmed.reduce((n, l) => n + l.surfaces.length, 0)} confirmed tool/dependency/surface decisions`],
-        [unlocks.bumpReady.length, "Only need to raise a pin", "A release with the support already exists"],
-        [touched, "Tools touching a changed surface", `of ${classification.tools.size} catalog tools, through shipped code or services`],
+        [unlocks.bumpReady.length, "Upstream fix released", `The tool must upgrade; ${ownWork} also need their own era work`],
+        [count(unread), "Inherited gaps not read yet", `of ${touched} tools touching a changed surface through shipped code or services`],
         [changes.changes.length, "Cited changes", `${changes.surfaces.length} surfaces, ${changes.unchanged.length} areas checked unchanged`],
       ] as const).map(([count, label, detail]) => (
         <div key={label} className="rounded-xl border border-border bg-surface p-4 sm:p-5">
@@ -89,23 +113,55 @@ export default function DijkstraPage() {
       </section>
 
       <section aria-labelledby="bump-ready" className="scroll-mt-24">
-        <h2 id="bump-ready" className="font-display text-2xl font-semibold">Only need to raise a pin</h2>
+        <h2 id="bump-ready" className="font-display text-2xl font-semibold">Upstream fix released: the tool must upgrade</h2>
         <p className="mt-2 max-w-3xl text-sm text-muted">
-          Every confirmed gap comes from a dependency pinned below the first release with the support. For a boundary
-          component the bump can be a port to the 11.2 component set.
+          Every confirmed gap of these tools has a released fix upstream, so the next move is theirs. Raising the pin is
+          the minimum: a step across a breaking release changes the library&apos;s API, and code that names eras needs a
+          Dijkstra case of its own. Inherited gaps nobody has read yet may add blockers.
         </p>
         <div className="mt-4 overflow-x-auto rounded-xl border border-border bg-surface">
           <table className="w-full text-left text-sm">
-            <thead className="text-xs uppercase tracking-wide text-muted"><tr><th className="px-4 py-3">Tool</th><th className="px-4 py-3">Pinned below the first fixed release</th><th className="px-4 py-3">Own R2 status</th></tr></thead>
-            <tbody>{unlocks.bumpReady.map((b) => (
-              <tr key={b.tool} className="border-t border-border align-top">
-                <td className="px-4 py-3"><ToolLink id={b.tool} /></td>
-                <td className="px-4 py-3"><div className="flex flex-wrap gap-1">{b.pins.map((p) => <Chip key={p}>{p}</Chip>)}</div></td>
-                <td className="px-4 py-3 text-muted">{b.ownStatus ?? "not a boundary component"}</td>
-              </tr>
-            ))}</tbody>
+            <thead className="text-xs uppercase tracking-wide text-muted"><tr>
+              <th className="px-4 py-3">Tool</th><th className="px-4 py-3">Upgrade</th><th className="px-4 py-3">Own era handling</th><th className="px-4 py-3">Not read yet</th>
+            </tr></thead>
+            <tbody>{unlocks.bumpReady.map((b) => {
+              const upgrade = toolUpgrade(site, b.tool);
+              const [label, tone] = upgrade ? HANDLING[upgrade.eraHandling] : ["Not read", "text-muted"];
+              return <tr key={b.tool} className="border-t border-border align-top">
+                <td className="px-4 py-3"><ToolLink id={b.tool} />{b.ownStatus && <div className="text-xs text-muted">R2 {b.ownStatus}</div>}</td>
+                <td className="px-4 py-3"><ul className="space-y-1">{b.steps.map((st) => (
+                  <li key={st.package} className="whitespace-nowrap"><span className="font-mono text-xs">{st.package} {st.from} → {st.to}</span>{" "}
+                    <span className={`text-xs ${st.breaking ? "text-status-blocked" : "text-status-progress"}`}>{st.breaking ? "breaking" : "same line"}</span></li>
+                ))}</ul></td>
+                <td className="min-w-64 px-4 py-3">
+                  <span className={`font-medium ${tone}`}>{label}</span>
+                  {upgrade && <details className="mt-1"><summary className="cursor-pointer text-xs text-muted">{upgrade.summary}</summary><Evidence lead={upgrade} /></details>}
+                </td>
+                <td className="px-4 py-3 text-xs text-muted">{b.unread.length ? b.unread.join(", ") : "none"}</td>
+              </tr>;
+            })}</tbody>
           </table>
         </div>
+      </section>
+
+      <section aria-labelledby="unread" className="scroll-mt-24">
+        <h2 id="unread" className="font-display text-2xl font-semibold">Inherited gaps not read yet</h2>
+        <p className="mt-2 max-w-3xl text-sm text-muted">
+          These {count(unread)} tools reach a component with a cited gap through shipped code or a service call, but
+          nobody has read whether they use the gapped capability. Until a reading confirms or clears each one, the link is
+          a likely blocker, not a confirmed one. Hosted Blockfrost consumers inherit the self-hosted backend&apos;s verdict.
+        </p>
+        <WaitingList groups={unread} />
+      </section>
+
+      <section aria-labelledby="no-verdict" className="scroll-mt-24">
+        <h2 id="no-verdict" className="font-display text-2xl font-semibold">Waiting on a component verdict</h2>
+        <p className="mt-2 max-w-3xl text-sm text-muted">
+          These {count(open)} tools reach a component that has no verdict on the surface they use: nothing found
+          (no-evidence, never a pass), an acknowledged issue, or work toward the target that is not released. Assessing
+          the component settles every tool listed under it.
+        </p>
+        <WaitingList groups={open} />
       </section>
 
       <section aria-labelledby="confirmed" className="scroll-mt-24">

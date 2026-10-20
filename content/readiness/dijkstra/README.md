@@ -291,25 +291,40 @@ downstream tools with unconfirmed links (for example Sundae SDK through Blaze,
 cardano-rosetta-java and cf-ledger-sync through yaci-store, GeniusYield SDK
 through Lucid Evolution).
 
-**11 tools are bump-ready**: every confirmed gap has a release with the
-support: txtop, Bursa, cardano-node-api and the IBC incubator (gouroboros
-v0.213.0); Scrolls (Pallas v0.35.1 or v1.0.0); cf-ledger-sync (yaci v0.3.10 or
-v0.4.2); Marlowe, Marconi, sc-tools, Midgard and Atlas (cardano-api 11.8).
-Ogmios, Kupo and Kuber left this list on 2026-10-20: their own R2 status is now
-a gap, so the port to the 11.2 component set is theirs to do.
+**11 tools have a released upstream fix**, so the next move is theirs:
+txtop, Bursa, cardano-node-api and the IBC incubator (gouroboros v0.213.0);
+Scrolls (Pallas v0.35.1); cf-ledger-sync (yaci v0.3.10); Marlowe, Marconi,
+sc-tools, Midgard and Atlas (cardano-api 11.8). Ogmios, Kupo and Kuber left
+this list on 2026-10-20: their own R2 status is now a gap.
+
+Raising the pin is only the minimum. The unlock report derives each step's
+distance (`steps`): ten of the eleven cross a breaking release (a 0.x minor
+under semver, A.B under the Haskell PVP); only cf-ledger-sync stays on its
+yaci line. `upgrades.json` records, with quoted lines at the classified
+revision, whether the tool's own code handles the new era:
+
+| Own era handling | Tools |
+| --- | --- |
+| own-work (names eras and stops before Dijkstra) | Atlas, Marconi, Marlowe, sc-tools, Midgard (Conway-typed builders and queries), cf-ledger-sync (era enum and genesis transitions end at Conway), IBC incubator (Babbage header decoding) |
+| prepared (already has Dijkstra cases) | Bursa |
+| generic (only era-generic library entry points) | txtop, Scrolls |
+| undetermined | cardano-node-api (UTxO results decoded as Babbage outputs) |
+
+Seven of the eleven also inherit gaps through Ogmios, Kupo, db-sync, Koios or
+Blockfrost RYO that have not been read yet (`unread`).
 
 ```sh
-node --import tsx scripts/readiness/cli.ts unlocks                                # write unlocks.json and print the summary
-node --import tsx scripts/readiness/cli.ts unlocks --component scalus,cardano-js-sdk  # what fixing these together unlocks
-``` These are R2 propagation and are assessed with the
-components themselves.
+node --import tsx scripts/readiness/cli.ts check-upgrades [--verify-sources]  # every bump-ready tool read, none stale
+```
 
 ## On the site
 
 `/map/dijkstra` renders these registers at build time: what each fix unlocks,
-the bump-ready tools, every confirmed gap with its quoted lines, and the cited
-changes. Each tool page under `/map/readiness/<id>` has a Dijkstra section with
-its exposure, blockers and lead decisions. A malformed register fails the build.
+the tools whose upstream fix is released (upgrade distance and own era
+handling), inherited gaps not read yet and links waiting on a component
+verdict (both grouped by component), every confirmed gap with its quoted lines,
+and the cited changes. Each tool page under `/map/readiness/<id>` has a Dijkstra section with
+its exposure, blockers, upgrade, what it waits on and lead decisions. A malformed register fails the build.
 
 ## Checking it
 

@@ -1,6 +1,7 @@
 import { worstStatus, type BoundaryRegister, type Status } from "./boundary";
-import type { LeadRegister } from "./leads";
+import { gapLeads, type LeadRegister } from "./leads";
 import type { ToolClassification } from "./surfaces";
+import { pinStep, type PinStep } from "./upgrades";
 
 /**
  * Unlock analysis (plan revision R3/R4): which tools a fix in one component clears, directly and through other
@@ -14,8 +15,14 @@ import type { ToolClassification } from "./surfaces";
  */
 export type BlockerKind = "upstream-fix" | "own-bump" | "own-gap";
 export interface Blocker { via: string; kind: BlockerKind; surfaces: string[]; pin?: string }
-/** `cleared` lists dependencies whose gap was read as not reached. */
-export interface ToolBlockers { tool: string; boundary: boolean; blockers: Blocker[]; undetermined: { via: string; surfaces: string[] }[]; cleared: string[] }
+/**
+ * `cleared` lists dependencies whose gap was read as not reached; `unread` lists inherited gaps nobody has decided yet,
+ * which may turn into further blockers.
+ */
+export interface ToolBlockers {
+  tool: string; boundary: boolean; blockers: Blocker[]; undetermined: { via: string; surfaces: string[] }[]; cleared: string[];
+  unread: { via: string; surfaces: string[] }[];
+}
 
 export function toolBlockers(tools: ToolClassification[], leads: LeadRegister, boundary: BoundaryRegister): ToolBlockers[] {
   const components = new Map(boundary.components.map((c) => [c.id, c]));
@@ -42,7 +49,9 @@ export function toolBlockers(tools: ToolClassification[], leads: LeadRegister, b
         else blockers.push({ via: lead.via, kind, surfaces: [surface], ...(pin && { pin }) });
       }
     }
-    if (blockers.length || undetermined.length || cleared.size) out.push({ tool: tool.id, boundary: Boolean(own), blockers, undetermined, cleared: [...cleared].sort() });
+    const decided = new Set(leads.leads.filter((l) => l.tool === tool.id).flatMap((l) => l.surfaces.map((s) => `${l.via}\0${s}`)));
+    const unread = [...gapLeads(tool)].map(([via, surfaces]) => ({ via, surfaces: surfaces.filter((s) => !decided.has(`${via}\0${s}`)) })).filter((u) => u.surfaces.length);
+    if (blockers.length || undetermined.length || cleared.size || unread.length) out.push({ tool: tool.id, boundary: Boolean(own), blockers, undetermined, cleared: [...cleared].sort(), unread });
   }
   return out.sort((a, b) => (a.tool < b.tool ? -1 : 1));
 }
@@ -103,20 +112,26 @@ export function unlocksOf(component: string | string[], all: ToolBlockers[], too
 export interface UnlockReport {
   schemaVersion: 1; generatedAt: string;
   /**
-   * Tools with confirmed gaps whose only remaining action is their own pin bump. For a boundary component the bump can
-   * be a port to the 11.2 component set; `ownStatus` is its worst R2 status.
+   * Tools whose every confirmed gap has a released upstream fix, so the next move is theirs: upgrade the dependency
+   * (`steps`, and whether that crosses a breaking version) and handle the era in their own code (upgrades.json).
+   * `ownStatus` is a boundary component's worst R2 status; `unread` lists inherited gaps not yet decided.
    */
-  bumpReady: { tool: string; pins: string[]; ownStatus?: Status }[];
+  bumpReady: { tool: string; pins: string[]; steps: PinStep[]; ownStatus?: Status; unread: string[] }[];
   /** Components whose fix unlocks at least one tool, most unlocks first. */
   components: (ComponentUnlocks & { ownGap: string[] })[];
   blockers: ToolBlockers[];
 }
 
-export function unlockReport(tools: ToolClassification[], leads: LeadRegister, boundary: BoundaryRegister): UnlockReport {
+/** `pvp` names the packages versioned by the Haskell PVP (the target component set), for breaking-step detection. */
+export function unlockReport(tools: ToolClassification[], leads: LeadRegister, boundary: BoundaryRegister, pvp: ReadonlySet<string> = new Set()): UnlockReport {
   const blockers = toolBlockers(tools, leads, boundary);
   const bumpReady = blockers.filter((t) => t.blockers.length && !upstream(t).length).map((t) => {
     const own = boundary.components.find((c) => c.id === t.tool);
-    return { tool: t.tool, pins: t.blockers.map((b) => b.pin!), ...(own && { ownStatus: worstStatus(own) }) };
+    const pins = t.blockers.map((b) => b.pin!);
+    return {
+      tool: t.tool, pins, steps: pins.map((p) => pinStep(p, pvp)).filter((s): s is PinStep => s !== undefined),
+      ...(own && { ownStatus: worstStatus(own) }), unread: t.unread.map((u) => u.via),
+    };
   });
   const candidates = [...new Set(blockers.flatMap((t) => upstream(t).map((b) => b.via)))].sort();
   const components = candidates

@@ -458,6 +458,14 @@ npm run readiness -- unlocks                                    # content/readin
 npm run readiness -- unlocks --component scalus,cardano-js-sdk  # what fixing these together unlocks
 ```
 
+Every bump-ready tool needs an own-era-handling reading in
+`content/readiness/dijkstra/upgrades.json` at its classified revision:
+
+```sh
+npm run readiness -- check-upgrades                   # lists missing and stale readings
+npm run readiness -- check-upgrades --verify-sources  # also re-read every quoted line
+```
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow

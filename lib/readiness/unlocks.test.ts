@@ -50,8 +50,18 @@ test("a fix unlocks direct consumers, then consumers of what it unblocked, and l
   ]);
   assert.deepEqual(scalus.partial, [{ tool: "wallet", stillBlockedBy: ["sdk"] }]);
   const report = unlockReport(tools, leads, boundary);
-  assert.deepEqual(report.bumpReady, [{ tool: "cli", pins: ["gouroboros@0.209.0<v0.213.0"] }]);
+  assert.deepEqual(report.bumpReady, [{ tool: "cli", pins: ["gouroboros@0.209.0<v0.213.0"], steps: [{ package: "gouroboros", from: "0.209.0", to: "v0.213.0", breaking: true }], unread: [] }]);
   const ported = unlockReport([tool("gouroboros", [["block-encoding", "ouroboros-consensus@3.0.1<5.1.0.1"]])], { ...leads, leads: [lead("gouroboros", "ouroboros-consensus", "block-encoding")] } as unknown as LeadRegister, boundary);
-  assert.deepEqual(ported.bumpReady, [{ tool: "gouroboros", pins: ["ouroboros-consensus@3.0.1<5.1.0.1"], ownStatus: "in-progress" }], "a boundary component's bump carries its own status");
+  assert.deepEqual(ported.bumpReady, [{
+    tool: "gouroboros", pins: ["ouroboros-consensus@3.0.1<5.1.0.1"], steps: [{ package: "ouroboros-consensus", from: "3.0.1", to: "5.1.0.1", breaking: true }],
+    ownStatus: "in-progress", unread: [],
+  }], "a boundary component's bump carries its own status");
   assert.deepEqual(report.components.map((c) => [c.component, c.unlocks.length, c.ownGap]), [["scalus", 3, ["plutus-script-context"]], ["mesh", 1, []], ["sdk", 0, ["protocol-parameters"]]]);
+});
+
+test("inherited gaps without a decision are listed as unread", () => {
+  const unread = tool("cli", [["node-to-client-protocol", "gouroboros@0.209.0<v0.213.0"], ["block-encoding", "ogmios"]]);
+  const [blockers] = toolBlockers([unread], leads, boundary);
+  assert.deepEqual(blockers.unread, [{ via: "ogmios", surfaces: ["block-encoding"] }]);
+  assert.deepEqual(unlockReport([unread], leads, boundary).bumpReady.map((b) => b.unread), [["ogmios"]], "a bump-ready tool still shows what is unread");
 });

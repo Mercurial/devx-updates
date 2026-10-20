@@ -340,6 +340,17 @@ links undecided (Blockfrost RYO 63, Ogmios 59, Koios 37, db-sync 31, Kupo 31).
 Hosted Blockfrost consumers inherit the RYO verdict until hosted providers have
 their own R2 entries.
 
+Bump-ready no longer means "raise a pin". The unlock report derives each pin's
+step and whether it crosses a breaking release (10 of 11 do), and
+`upgrades.json` records each bump-ready tool's own era handling from quoted
+shipped code: 7 own-work, 1 prepared (Bursa), 2 generic (txtop, Scrolls), 1
+undetermined (cardano-node-api). The site groups undecided links by component:
+inherited gaps not read yet (117 tools) and links waiting on a component
+verdict.
+
+Next: read the 221 unread gap links, starting with the Ogmios and Blockfrost
+consumers.
+
 ### Implementation log
 
 - Planning baseline: documented features, assumptions, architecture, phased acceptance criteria, and manual review assignments. Existing invitation-script edits are outside this work.

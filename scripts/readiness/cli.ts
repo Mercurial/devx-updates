@@ -27,6 +27,8 @@ import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../
 import { classifyCatalog, reclassifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
 import { leadCoverage, parseLeadRegister, verifyLeadSources } from "../../lib/readiness/leads";
 import { unlockReport, unlocksOf, toolBlockers } from "../../lib/readiness/unlocks";
+import { parseUpgradeRegister, upgradeCoverage, verifyUpgradeSources } from "../../lib/readiness/upgrades";
+import { targetVersions } from "../../lib/readiness/surfaces";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -84,6 +86,8 @@ check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sour
 check-boundary  [--input content/readiness/dijkstra/boundary.json] [--verify-sources]
 classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness] [--reclassify]
 check-leads     [--input content/readiness/dijkstra/leads.json] [--verify-sources]
+check-upgrades  [--verify-sources]
+                Own era handling of every bump-ready tool (content/readiness/dijkstra/upgrades.json)
 unlocks         [--component scalus[,cardano-js-sdk]] [--output content/readiness/dijkstra/unlocks.json]
                 What a fix in one component unlocks, directly and through other components
                 Validate the hardfork change register; optionally re-read every cited quote via gh
@@ -167,9 +171,22 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
       console.log(JSON.stringify(unlocksOf(fixes, toolBlockers(tools, leads, boundary), tools), null, 2));
       return;
     }
-    const report = unlockReport(tools, leads, boundary);
+    const report = unlockReport(tools, leads, boundary, new Set(targetVersions(changes).keys()));
     writeFileSync(values.output ?? "content/readiness/dijkstra/unlocks.json", `${JSON.stringify(report, null, 1)}\n`);
     console.log(JSON.stringify({ bumpReady: report.bumpReady.map((t) => t.tool), components: report.components.map((c) => `${c.component}: ${c.unlocks.length} unlocked, ${c.partial.length} partial, ${c.downstream.length} downstream`) }, null, 2));
+    return;
+  }
+  if (command === "check-upgrades") {
+    const register = parseUpgradeRegister(readJson("content/readiness/dijkstra/upgrades.json"));
+    const { tools } = readJson("content/readiness/dijkstra/classification.json") as ClassificationRegister;
+    const { bumpReady } = readJson("content/readiness/dijkstra/unlocks.json") as { bumpReady: { tool: string }[] };
+    const failures = values["verify-sources"] ? await verifyUpgradeSources(register, (repo, revision, path) => githubSource(repo, revision, path)) : [];
+    for (const failure of failures) console.error(failure);
+    if (failures.length) throw new Error(`${failures.length} upgrade citations no longer match their pinned sources`);
+    const coverage = upgradeCoverage(register, bumpReady.map((b) => b.tool), new Map(tools.map((t) => [t.id, t.revision])));
+    const byHandling = Object.fromEntries(register.upgrades.map((u) => u.eraHandling).map((h, _, all) => [h, all.filter((x) => x === h).length]));
+    console.log(JSON.stringify({ upgrades: register.upgrades.length, sourcesVerified: Boolean(values["verify-sources"]), byHandling, ...coverage }, null, 2));
+    if (coverage.orphaned.length) throw new Error(`Upgrades match no classified tool: ${coverage.orphaned.join(", ")}`);
     return;
   }
   if (command === "check-leads") {
