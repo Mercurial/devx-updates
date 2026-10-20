@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { citationUrl, dijkstraSite, toolLeads } from "./dijkstra-site";
+import { citationUrl, devnetResults, dijkstraSite, toolLeads } from "./dijkstra-site";
 
 test("the site view loads every committed Dijkstra register and links to pinned lines", () => {
   const site = dijkstraSite();
@@ -11,4 +11,6 @@ test("the site view loads every committed Dijkstra register and links to pinned 
   const lace = toolLeads(site, "lace").map((l) => l.decision);
   assert.ok(lace.includes("confirmed") && lace.lastIndexOf("confirmed") < lace.indexOf("not-reached"), "confirmed decisions come first");
   assert.match(citationUrl(site.changes.changes[0].citations[0]), /^https:\/\/github\.com\/[^/]+\/[^/]+\/blob\/[0-9a-f]{40}\/.+#L\d+$/);
+  assert.deepEqual([...new Set(devnetResults(site, "txtop").map((r) => r.result.kind))], ["tool"], "tool pages show their devnet results");
+  assert.ok(devnetResults(site, "gouroboros").some((r) => r.result.outcome === "fail"), "components show failing devnet results too");
 });

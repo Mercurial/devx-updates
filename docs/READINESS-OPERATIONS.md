@@ -466,6 +466,15 @@ npm run readiness -- check-upgrades                   # lists missing and stale 
 npm run readiness -- check-upgrades --verify-sources  # also re-read every quoted line
 ```
 
+Devnet results (R4) live in `content/readiness/dijkstra/devnet.json`; the
+recipe that produced them is `scripts/readiness/devnet/README.md`. After
+editing either register:
+
+```sh
+npm run readiness -- check-devnet     # known subjects, recipe files present, boundary evidence consistent
+npm run readiness -- check-boundary   # also fails when an assessment disagrees with a devnet result it cites
+```
+
 ## Manual review handoff
 
 For the four prepared higher-level consumer packets, follow

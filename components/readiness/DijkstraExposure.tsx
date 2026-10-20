@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { citationUrl, componentStatus, dijkstraSite, toolLeads, toolUpgrade, waitingLinks } from "@/lib/readiness/dijkstra-site";
+import { citationUrl, componentStatus, devnetResults, dijkstraSite, toolLeads, toolUpgrade, waitingLinks } from "@/lib/readiness/dijkstra-site";
 
 const Chip = ({ children }: { children: React.ReactNode }) => (
   <span className="inline-block rounded-md border border-border bg-surface-2 px-1.5 py-0.5 font-mono text-[11px] leading-tight text-muted">{children}</span>
@@ -17,6 +17,7 @@ export default function DijkstraExposure({ id }: { id: string }) {
   const bump = site.unlocks.bumpReady.find((b) => b.tool === id);
   const upgrade = toolUpgrade(site, id);
   const waiting = waitingLinks(site, id);
+  const devnet = devnetResults(site, id);
   return <section id="dijkstra" className="scroll-mt-24 space-y-4 rounded-xl border border-border bg-surface p-5">
     <div className="flex flex-wrap items-baseline justify-between gap-2">
       <h2 className="font-display text-xl font-semibold">Dijkstra hardfork</h2>
@@ -37,6 +38,17 @@ export default function DijkstraExposure({ id }: { id: string }) {
       </details>}
       {tool.scan.status !== "scanned" && <p className="text-sm text-muted">{tool.scan.note}</p>}
     </>}
+    {devnet.length > 0 && <div>
+      <h3 className="text-sm font-medium">On the devnet</h3>
+      <ul className="mt-1 space-y-1 text-sm">{devnet.map(({ check, result }) => (
+        <li key={`${check.id}:${result.kind}:${result.version ?? ""}`}>
+          <span className={`font-medium ${result.outcome === "pass" ? "text-status-done" : "text-status-blocked"}`}>{result.outcome}</span>{" "}
+          <Link href={`/map/dijkstra#devnet-${check.id}`}>{check.title}</Link>
+          {result.version && <span className="text-xs text-muted"> · {result.version}</span>}
+          {result.note && <span className="text-xs text-muted"> · {result.note}</span>}
+        </li>
+      ))}</ul>
+    </div>}
     {blockers && blockers.blockers.length > 0 && <div>
       <h3 className="text-sm font-medium">Blocked by</h3>
       <ul className="mt-1 space-y-1 text-sm">{blockers.blockers.map((b) => (

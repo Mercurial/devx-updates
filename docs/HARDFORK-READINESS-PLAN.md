@@ -16,7 +16,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] R1: Dijkstra change register and surface vocabulary — 19 changes and 2 checked-unchanged areas, 71 verified citations; JSON representations beyond the era commands remain a known limit.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
 - [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap decided from shipped code (21 tools outside the boundary and 16 boundary components confirmed); unlock report derived.
-- [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
+- [ ] R4: devnet/testnet verification of boundary components, then representative consumers. First run 2026-10-20 (`devnet.json`).
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
 ## Plan revision (2026-10-19): change-first assessment
@@ -372,6 +372,35 @@ of their own. Four tools have a released upstream fix.
 
 Next: R4 devnet checks for the service layer and the four tools with a released
 fix, and hosted-provider entries in R2 to replace the RYO proxy.
+
+#### Checkpoint 2026-10-20: first devnet run (R4)
+
+The integration node `34ae34db` ran a local one-pool devnet: Dijkstra at epoch
+2, then protocol version 12 through two governance hard forks. Seven checks
+(`content/readiness/dijkstra/devnet.json`, recipe in
+`scripts/readiness/devnet`) record 28 results, 12 failing:
+
+- Confirmed: the fork, 54 parameters, V23-only handshake, the non-segregated
+  block body, three-element mempool transactions, which Conway transactions
+  survive the fork, and the rejection of deposit-less registrations.
+- Contradicted: `header-version-info`. The node still emits the ten-field Praos
+  header; the CDDL's header is not what ships at the integration revision.
+- Ogmios v7.0.0 and Kupo v2.12 connect (V23 verified) and exit at the first
+  Dijkstra block.
+- gouroboros v0.213.0–v0.213.9 handshake (verified), but require the CDDL
+  header and cannot place ordinary Dijkstra transactions: a gap on block
+  encoding and era identity. txtop and cardano-node-api are therefore no
+  longer bump-ready. cardano-node-api additionally needs adder and its own
+  code changed to build on v0.213.x, and gives PlutusV4 scripts the V3 context.
+- Boundary evidence can now cite a devnet result; `verified` needs a pass.
+
+Worst status per component: 48 gap, 2 no-evidence, 1 tracked, 8 in-progress,
+2 released (the three verified components keep a gap elsewhere). The fix order
+unlocks 74 tools across 16 upstream fixes; 2 tools are bump-ready.
+
+Next: db-sync with Postgres, Blockfrost and Koios on a machine with more disk;
+the Haskell bump-ready tools; and devnet runs of the codecs whose block support
+follows the CDDL header (Pallas main, CML, cardano-js-sdk).
 
 ### Implementation log
 

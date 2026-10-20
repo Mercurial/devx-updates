@@ -56,13 +56,17 @@ Conway's 31 positional fields to 54.
    Clients that cannot negotiate V23 disconnect as soon as a node upgrades,
    *before* the fork activates. This is the earliest break in the timeline.
 2. **Every block decoder breaks at the fork.** The block body is no longer
-   segregated, `invalid_transactions` is gone, and the header replaces
-   `protocol_version`.
+   segregated and `invalid_transactions` is gone. The target CDDL also replaces
+   the header's `protocol_version`, but the node at the integration revision
+   still emits the ten-field Praos header (devnet check `block-shape`), so a
+   decoder that follows the CDDL header breaks too.
 3. **Conway-built transactions can fail after the fork.** Consensus re-decodes
    older-era transactions as Dijkstra (`mempool-cross-era`), and Dijkstra drops
    certificate types 0/1 and array-encoded redeemers (`removed-encodings`). At
    the pinned commit, `cardano-cli latest` still builds Conway transactions.
-   Which real transactions survive must be confirmed on a devnet (R4).
+   On the devnet, Conway-built payments, deposit registrations, required
+   signers and metadata are accepted; a deposit-less registration is rejected
+   as an era mismatch (`cross-era-submission`).
 4. **Closed enums.** New native-script type 6, redeemer tag 6, script/language
    tag for PlutusV4, body keys 23–27, witness key 8, parameter keys 34–56.
 
@@ -86,6 +90,40 @@ Conway's 31 positional fields to 54.
 version 12. cardano-testnet's default configuration leaves that flag off since
 PR 6541, so a `--dijkstra-era` testnet must set it explicitly. The genesis file
 holds the 24 upgrade parameters, including the PlutusV4 cost model as an array.
+
+## Devnet run (`devnet.json`, R4)
+
+On 2026-10-20 the integration node (`34ae34db`, IOG's static Hydra build) ran
+a one-pool devnet that forked to Dijkstra at epoch 2. The test trigger left the
+protocol version at 10, so two governance hard forks raised it to 12 before the
+checks. The recipe and probes are in `scripts/readiness/devnet` (see its
+README). Each check records a pass or fail per change, component or tool
+version, with the output it rests on:
+
+| Check | Result |
+| --- | --- |
+| `fork-to-pv12` | Dijkstra at protocol version 12; 54 protocol parameters |
+| `n2c-handshake` | Only V23 is accepted; gouroboros 0.208.5 is refused, v0.213.x, Ogmios v7.0.0 and Kupo v2.12 connect |
+| `cross-era-submission` | Conway payments, deposit registrations, required signers and metadata accepted; deposit-less registration rejected; the mempool returns every transaction in the three-element Dijkstra form |
+| `block-shape` | Non-segregated body confirmed; the header is still the ten-field Praos header with `[12, 0]`, contradicting `header-version-info`; gouroboros v0.213.0–v0.213.9 stop at the first Dijkstra block |
+| `service-decoding` | Ogmios v7.0.0 and Kupo v2.12 exit at the first Dijkstra block |
+| `tx-era-detection` | gouroboros's `DetermineTransactionType` cannot place ordinary Dijkstra transactions, and `NextTx` drops the era id; txtop's mempool view and cardano-node-api's submission and mempool listing fail |
+| `tool-upgrades` | txtop builds unchanged on v0.213.0 and connects; cardano-node-api builds on no v0.213.x without patching adder and its own code, and then reads Dijkstra UTxOs |
+
+Consequences in the registers: gouroboros is a gap on era identity and block
+encoding. Its V23 support, and Ogmios's and Kupo's, is `verified`. Boundary
+evidence of kind `devnet` cites a check and version: `verified` needs a pass,
+and a failing result cannot back `released`. txtop and cardano-node-api are no
+longer bump-ready, and summaries that relied on the CDDL header (CML, Pallas,
+Kupo, cardano-wallet, cncli, IBC incubator) now say what the node emits.
+
+Not run here: db-sync, Blockfrost and Koios (Postgres needs more disk than
+was free), Haskell tools (Marlowe, Marconi), and other codecs that follow the
+CDDL header (Pallas main, CML, cardano-js-sdk).
+
+```sh
+npm run readiness -- check-devnet   # subjects known, recipes present, boundary evidence consistent
+```
 
 ## Not yet covered
 
@@ -337,18 +375,22 @@ unlocks the most tools on top of the earlier steps (2026-10-20):
 | 4 | Kupo | 43 |
 | 5 | db-sync | 51 |
 | 6 | CSL | 56 |
-| 7 | ledgerjs-hw-app-cardano | 58 |
-| 8 | cardano-js-sdk | 60 |
-| 9 | cardano-wallet | 62 |
-| 10 | cardano-client-lib | 64 |
-| 11–15 | Scalus, cquisitor-lib, cardano-hw-interop-lib, CML, ouroboros-miniprotocols-ts | 71 |
+| 7 | gouroboros | 59 |
+| 8 | ledgerjs-hw-app-cardano | 61 |
+| 9 | cardano-js-sdk | 63 |
+| 10 | cardano-wallet | 65 |
+| 11 | cardano-client-lib | 67 |
+| 12 | Scalus | 69 |
+| 13–16 | cquisitor-lib, cardano-hw-interop-lib, CML, ouroboros-miniprotocols-ts | 74 |
 
 Tools that are boundary components with a gap of their own (Mesh, Lucid
 Evolution, Evolution SDK, yaci-store, Adder, Hydra and others) are never
 unlocked by upstream fixes alone.
 
-**4 tools have a released upstream fix**, so the next move is theirs: txtop and
-cardano-node-api (gouroboros v0.213.0), Marlowe and Marconi (cardano-api 11.8).
+**2 tools have a released upstream fix**, so the next move is theirs: Marlowe
+and Marconi (cardano-api 11.8). txtop and cardano-node-api were bump-ready
+until the devnet showed gouroboros v0.213.x cannot decode the node's Dijkstra
+blocks or place ordinary Dijkstra transactions.
 Bursa now also waits on ledgerjs-hw-app-cardano, and cf-ledger-sync has its own
 gap.
 
@@ -360,10 +402,9 @@ revision, whether the tool's own code handles the new era:
 
 | Own era handling | Tools |
 | --- | --- |
-| own-work (names eras and stops before Dijkstra) | Atlas, Marconi, Marlowe, sc-tools, Midgard (Conway-typed builders and queries), cf-ledger-sync (era enum and genesis transitions end at Conway), IBC incubator (Babbage header decoding) |
+| own-work (names eras and stops before Dijkstra) | Atlas, Marconi, Marlowe, sc-tools, Midgard (Conway-typed builders and queries), cf-ledger-sync (era enum and genesis transitions end at Conway), IBC incubator (no Dijkstra block case), cardano-node-api (PlutusV4 gets the V3 context; adder and its own calls break on v0.213.x) |
 | prepared (already has Dijkstra cases) | Bursa |
 | generic (only era-generic library entry points) | txtop, Scrolls |
-| undetermined | cardano-node-api (UTxO results decoded as Babbage outputs) |
 
 
 ```sh
@@ -376,8 +417,8 @@ node --import tsx scripts/readiness/cli.ts check-upgrades [--verify-sources]  # 
 the tools whose upstream fix is released (upgrade distance and own era
 handling), inherited gaps not read yet and links waiting on a component
 verdict (both grouped by component), every confirmed gap with its quoted lines,
-and the cited changes. Each tool page under `/map/readiness/<id>` has a Dijkstra section with
-its exposure, blockers, upgrade, what it waits on and lead decisions. A malformed register fails the build.
+the devnet checks, and the cited changes with their devnet outcome. Each tool page under `/map/readiness/<id>` has a Dijkstra section with
+its exposure, devnet results, blockers, upgrade, what it waits on and lead decisions. A malformed register fails the build.
 
 ## Checking it
 

@@ -1,6 +1,7 @@
 import { join } from "node:path";
 import { parseBoundaryRegister, worstStatus, type BoundaryRegister } from "./boundary";
 import { parseChangeRegister, type ChangeRegister, type Citation } from "./dijkstra";
+import { devnetConsistency, parseDevnetRegister, resultsFor, type DevnetRegister, type SubjectKind } from "./devnet";
 import { parseLeadRegister, type Lead, type LeadRegister } from "./leads";
 import { readJson } from "./store";
 import type { ClassificationRegister } from "./surface-collect";
@@ -13,7 +14,7 @@ import { parseUpgradeRegister, type UpgradeRegister } from "./upgrades";
  * content/readiness/dijkstra and validated with the same parsers the CLI uses, so a malformed register fails the build.
  */
 export interface DijkstraSite {
-  changes: ChangeRegister; boundary: BoundaryRegister; leads: LeadRegister; unlocks: UnlockReport; upgrades: UpgradeRegister;
+  changes: ChangeRegister; boundary: BoundaryRegister; leads: LeadRegister; unlocks: UnlockReport; upgrades: UpgradeRegister; devnet: DevnetRegister;
   classification: { generatedAt: string; summary: Record<string, number>; tools: Map<string, ToolClassification> };
 }
 
@@ -29,8 +30,13 @@ export function dijkstraSite(): DijkstraSite {
   // Derived at build time from the committed registers, so the page never disagrees with them.
   const unlocks = unlockReport(register.tools, leads, boundary, new Set(targetVersions(changes).keys()));
   const upgrades = parseUpgradeRegister(readJson(join(dir, "upgrades.json")));
+  const devnet = parseDevnetRegister(readJson(join(dir, "devnet.json")), {
+    changes: new Set(changes.changes.map((c) => c.id)), components: new Set(boundary.components.map((c) => c.id)), tools: new Set(register.tools.map((t) => t.id)),
+  });
+  const inconsistent = devnetConsistency(boundary, devnet);
+  if (inconsistent.length) throw new Error(`Boundary and devnet registers disagree: ${inconsistent.join("; ")}`);
   cached = {
-    changes, boundary, leads, unlocks, upgrades,
+    changes, boundary, leads, unlocks, upgrades, devnet,
     classification: { generatedAt: register.generatedAt, summary: register.summary, tools: new Map(register.tools.map((t) => [t.id, t])) },
   };
   return cached;
@@ -81,3 +87,7 @@ export function waitingLinks(site: DijkstraSite, only?: string): Waiting[] {
 }
 
 export const toolUpgrade = (site: DijkstraSite, id: string) => site.upgrades.upgrades.find((u) => u.tool === id);
+
+/** Devnet results about a tool, whether recorded against it as a tool or as a boundary component. */
+export const devnetResults = (site: DijkstraSite, id: string) =>
+  (["tool", "component"] as SubjectKind[]).flatMap((kind) => resultsFor(site.devnet, kind, id));

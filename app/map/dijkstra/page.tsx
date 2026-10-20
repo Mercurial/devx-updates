@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import { citationUrl, componentStatus, dijkstraSite, toolUpgrade, waitingLinks, type Waiting } from "@/lib/readiness/dijkstra-site";
 import type { Citation } from "@/lib/readiness/dijkstra";
+import { resultsFor, type Result } from "@/lib/readiness/devnet";
 
 export const metadata: Metadata = {
   title: "Dijkstra hardfork readiness",
@@ -34,6 +35,14 @@ function WaitingList({ groups }: { groups: Waiting[] }) {
   ))}</div>;
 }
 
+const OUTCOME = { pass: "text-status-done", fail: "text-status-blocked" } as const;
+
+function Subject({ result }: { result: Result }) {
+  return result.kind === "change"
+    ? <a href={`#change-${result.id}`} className="font-medium">{result.id}</a>
+    : <ToolLink id={result.id} />;
+}
+
 function Evidence({ lead }: { lead: { evidence: Citation[] } }) {
   return <ul className="mt-1 space-y-1">{lead.evidence.map((c) => (
     <li key={`${c.path}:${c.line}`} className="text-xs">
@@ -54,6 +63,11 @@ export default function DijkstraPage() {
   const unread = waiting.filter((g) => g.unread), open = waiting.filter((g) => !g.unread);
   const count = (groups: Waiting[]) => new Set(groups.flatMap((g) => g.tools.map((t) => t.tool))).size;
   const ownWork = unlocks.bumpReady.filter((b) => toolUpgrade(site, b.tool)?.eraHandling === "own-work").length;
+  const { devnet } = site;
+  const results = devnet.checks.flatMap((c) => c.results);
+  const changeOutcomes = changes.changes.map((c) => resultsFor(devnet, "change", c.id).map((r) => r.result.outcome));
+  const contradicted = changeOutcomes.filter((o) => o.includes("fail")).length;
+  const confirmedChanges = changeOutcomes.filter((o) => o.length && !o.includes("fail")).length;
   return <div className="map-view" style={{ overflow: "visible" }}>
     <div className="mx-auto max-w-7xl space-y-9 px-4 py-7 sm:px-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -65,15 +79,16 @@ export default function DijkstraPage() {
       </div>
       <p className="max-w-3xl text-muted">
         Which tools the Dijkstra hardfork breaks, through which dependency, and what each upstream fix unlocks. Every
-        decision quotes the shipped code it rests on, read at a pinned revision. Nothing here has been run against a
-        node yet: devnet verification is the next step, and a tool without a confirmed gap is not a pass.
+        decision quotes the shipped code it rests on, read at a pinned revision. A devnet run of the 11.2 integration
+        node checks the changes and a first set of components against a real chain; a tool without a confirmed gap is
+        still not a pass unless it passed there.
       </p>
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{([
         [confirmedTools.length, "Tools with a confirmed gap", `of ${touched} tools touching a changed surface; ${confirmed.reduce((n, l) => n + l.surfaces.length, 0)} confirmed tool/dependency/surface decisions`],
         [unlocks.bumpReady.length, "Upstream fix released", `The tool must upgrade; ${ownWork} also need their own era work`],
         [unlocks.fixOrder.at(-1)?.unlocked ?? 0, "Unlocked by upstream fixes", `if all ${unlocks.fixOrder.length} blocking components ship the support`],
-        [changes.changes.length, "Cited changes", `${changes.surfaces.length} surfaces, ${changes.unchanged.length} areas checked unchanged`],
+        [changes.changes.length, "Cited changes", `${changes.surfaces.length} surfaces; on the devnet ${confirmedChanges} confirmed, ${contradicted} contradicted`],
       ] as const).map(([count, label, detail]) => (
         <div key={label} className="rounded-xl border border-border bg-surface p-4 sm:p-5">
           <div className="font-display text-3xl font-semibold tabular-nums">{count}</div>
@@ -81,6 +96,39 @@ export default function DijkstraPage() {
           <div className="mt-1 text-xs text-muted">{detail}</div>
         </div>
       ))}</div>
+
+      <section aria-labelledby="devnet" className="scroll-mt-24">
+        <h2 id="devnet" className="font-display text-2xl font-semibold">Devnet run</h2>
+        <p className="mt-2 max-w-3xl text-sm text-muted">
+          {devnet.run.date}: cardano-node <a href={`https://github.com/${devnet.run.node.repo}/tree/${devnet.run.node.revision}`} target="_blank" rel="noreferrer" className="font-mono">{devnet.run.node.revision.slice(0, 10)}</a>{" "}
+          (11.2 integration branch) on a local one-pool devnet, forked to Dijkstra and raised to protocol version 12
+          through governance. {results.filter((r) => r.outcome === "fail").length} of {results.length} results failed.
+          The recipe is in scripts/readiness/devnet.
+        </p>
+        <details className="mt-2 max-w-3xl text-sm">
+          <summary className="cursor-pointer text-muted">Setup</summary>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-muted">{devnet.run.setup.map((line) => <li key={line}>{line}</li>)}</ul>
+        </details>
+        <div className="mt-4 grid gap-4 lg:grid-cols-2">{devnet.checks.map((c) => (
+          <article key={c.id} id={`devnet-${c.id}`} className="min-w-0 scroll-mt-24 rounded-xl border border-border bg-surface p-5">
+            <h3 className="font-display text-lg font-semibold">{c.title}</h3>
+            <ul className="mt-3 space-y-1 text-sm">{c.results.map((r) => (
+              <li key={`${r.kind}:${r.id}:${r.version ?? ""}`} className="flex flex-wrap items-baseline gap-x-2">
+                <span className={`font-medium ${OUTCOME[r.outcome]}`}>{r.outcome}</span>
+                <Subject result={r} />
+                {r.version && <span className="text-xs text-muted">{r.version}</span>}
+                {r.note && <span className="text-xs text-muted">· {r.note}</span>}
+              </li>
+            ))}</ul>
+            <p className="mt-3 text-sm text-muted">{c.summary}</p>
+            <details className="mt-3 text-xs">
+              <summary className="cursor-pointer text-muted">Observed output</summary>
+              <ul className="mt-2 space-y-1">{c.observed.map((o) => <li key={o}><code className="block overflow-x-auto whitespace-pre text-muted">{o}</code></li>)}</ul>
+              <p className="mt-2 break-all text-muted">Recipe: {c.recipe.join(", ")}</p>
+            </details>
+          </article>
+        ))}</div>
+      </section>
 
       <section aria-labelledby="unlocks" className="scroll-mt-24">
         <h2 id="unlocks" className="font-display text-2xl font-semibold">What a fix unlocks</h2>
@@ -215,9 +263,15 @@ export default function DijkstraPage() {
           node upgrade itself, the fork to protocol version 12, or a later intra-era step.
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2">{changes.changes.map((c) => (
-          <article key={c.id} className="rounded-xl border border-border bg-surface p-4">
+          <article key={c.id} id={`change-${c.id}`} className="scroll-mt-24 rounded-xl border border-border bg-surface p-4">
             <h3 className="text-sm font-semibold">{c.title}</h3>
             <p className="mt-1 flex flex-wrap gap-1"><Chip>{c.activation}</Chip><Chip>{c.compatibility}</Chip>{c.surfaces.map((s) => <Chip key={s}>{s}</Chip>)}</p>
+            {resultsFor(devnet, "change", c.id).map(({ check, result }) => (
+              <p key={check.id} className="mt-2 text-xs">
+                <span className={`font-medium ${OUTCOME[result.outcome]}`}>devnet {result.outcome === "pass" ? "confirmed" : "contradicted"}</span>{" "}
+                <a href={`#devnet-${check.id}`}>{check.title}</a>{result.note && <span className="text-muted"> · {result.note}</span>}
+              </p>
+            ))}
             <p className="mt-2 text-sm text-muted">{c.summary}</p>
             <details className="mt-2 text-xs"><summary className="cursor-pointer text-muted">{c.citations.length} citations</summary>
               <ul className="mt-2 space-y-1">{c.citations.map((q) => <li key={`${q.repo}:${q.path}:${q.line}`}><a href={citationUrl(q)} target="_blank" rel="noreferrer" className="break-all">{q.repo} {q.path}:{q.line}</a></li>)}</ul>
@@ -229,7 +283,7 @@ export default function DijkstraPage() {
       </section>
 
       <p className="text-xs text-muted">
-        Classification {classification.generatedAt.slice(0, 10)} · boundary register {site.boundary.retrieved} · leads reviewed {leads.reviewed}.
+        Classification {classification.generatedAt.slice(0, 10)} · boundary register {site.boundary.retrieved} · leads reviewed {leads.reviewed} · devnet run {devnet.run.date}.
         Registers: content/readiness/dijkstra.
       </p>
     </div>
