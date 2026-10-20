@@ -5,10 +5,10 @@ import { repositoryReference } from "./discovery";
 import { execute } from "./source";
 import type { BoundaryRegister } from "./boundary";
 import type { ChangeRegister } from "./dijkstra";
-import { classifyTool, rankClassifications, RULES, scannable, scanSources, type Scan, type ToolClassification } from "./surfaces";
+import { classifyTool, rankClassifications, RULES, scannable, scanSources, type RepositoryActivity, type Scan, type ToolClassification } from "./surfaces";
 
 /** Rule identity: cached scans are reused only while the rule set is unchanged. */
-export const SCANNER_VERSION = 6;
+export const SCANNER_VERSION = 8;
 export const RULES_DIGEST = digest([SCANNER_VERSION, ...RULES.map((r) => [r.id, r.pattern.source, r.pattern.flags, r.files?.source ?? null, r.component ?? null, r.surfaces ?? null, r.readiness ?? null, r.excludeSurfaces ?? null])]);
 
 const git = (cwd: string, args: string[], timeout = 300000) =>
@@ -18,6 +18,15 @@ async function defaultHead(repo: string, stateDir: string): Promise<string> {
   const head = (await git(stateDir, ["ls-remote", `https://github.com/${repo}.git`, "HEAD"], 60000)).stdout.split(/\s/)[0];
   if (!/^[a-f0-9]{40}$/.test(head)) throw new Error(`No default-branch head for ${repo}`);
   return head;
+}
+
+/** Archive state and last push; unavailable metadata is omitted rather than guessed. */
+async function activity(repo: string, stateDir: string): Promise<RepositoryActivity | undefined> {
+  try {
+    const out = (await execute("gh", ["api", `repos/${repo}`, "--jq", "{archived: .archived, pushedAt: .pushed_at}"], { cwd: stateDir, timeout: 60000 })).stdout;
+    const parsed = JSON.parse(out) as RepositoryActivity;
+    return typeof parsed.archived === "boolean" && typeof parsed.pushedAt === "string" ? parsed : undefined;
+  } catch { return undefined; }
 }
 
 /** Shallow, blob-limited checkout; scanning skips larger files anyway. */
@@ -77,6 +86,7 @@ export async function classifyCatalog(
         for (const tool of members) results.push(classifyTool({ id: tool.id, repo, revision: null }, { status: "checkout-failed", note: (error as Error).message.split("\n")[0] }, boundary, changes));
         continue;
       }
+      const state = await activity(repo, options.stateDir);
       let directory: string | undefined;
       try {
         for (const tool of members) {
@@ -88,7 +98,7 @@ export async function classifyCatalog(
             scan = await scanCheckout(directory, tool.id);
             writeFileSync(cache, JSON.stringify(scan));
           }
-          results.push(classifyTool({ id: tool.id, repo, revision }, scan, boundary, changes));
+          results.push({ ...classifyTool({ id: tool.id, repo, revision }, scan, boundary, changes), ...(state && { activity: state }) });
           options.log?.(`${tool.id} ${revision.slice(0, 10)} files=${scan.files} hits=${scan.hits.length}`);
         }
       } catch (error) {

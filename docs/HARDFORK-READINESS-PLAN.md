@@ -15,7 +15,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 - [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
-- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — first full scan delivered (227 scanned, 42 without public source); quote confirmation of top-ranked leads remains.
+- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap outside the boundary decided from shipped code (21 tools confirmed); boundary-to-boundary propagation (31 dependency gaps) remains with R2.
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
@@ -226,6 +226,48 @@ Next: confirm the top-ranked leads from their quotes, add hosted API providers
 to R2, then start R4 devnet checks for the components behind the most
 inherited gaps (cardano-wallet, gouroboros consumers, CSL, cardano-js-sdk) and
 R5 outreach for the 37 no-evidence boundary components.
+
+### R3 lead confirmation (2026-10-20)
+
+Every inherited gap outside the boundary was read in shipped code at the
+classified revision and decided in `content/readiness/dijkstra/leads.json`
+(`check-leads`): 118 tool/dependency/surface decisions, 48 confirmed,
+52 not reached, 18 undetermined, every quote re-read on GitHub.
+
+Reading first corrected the scanner (scanner version 8): tests, examples,
+benchmarks, demos and workshops are auxiliary and never set readiness; the
+plutus-ledger-api rule is limited to Haskell manifests; Haskell pins of the
+upstream packages are compared with the R1 component-set versions (cardano-api
+11.8.0.0 and so on); dependency hits keep every versioned manifest line; and
+each repository's archive state and last push are recorded. The exposure counts
+became 65 implements, 87 dependency, 44 service, 4 auxiliary, 9 marker,
+18 none found, 42 unknown; 35 tools outside the boundary still inherit a gap
+(Chrysalis, Catalyst Voices, Hyperledger Identus and Plutip's misattribution
+dropped out; Midgard, CLB, offchain-metadata-tools and Plutip entered through
+cardano-api pins).
+
+Findings that change priorities:
+
+- **21 tools have a confirmed gap.** Node-to-client: txtop, cardano-node-api,
+  Gerolamo (its own responder offers V16–V19 only), Daedalus and
+  cardano-wallet-js. Transaction decoding with CSL (no PlutusV4): Yoroi,
+  cardano-dev-wallet, cardano-hw-cli, Hydra SDK, Masumi, cardano-rosetta-legacy
+  and csl-mobile-bridge. cardano-js-sdk parameter keys: Lace and Nami.
+  Pre-target ledger types: Bursa and the IBC incubator. Scalus evaluation:
+  Yano. Old cardano-api: Marlowe, Marconi, sc-tools and Midgard.
+- **Half of the CSL coupling is not reached.** PlutusV4 is additive, so tools
+  that use CSL only for addresses, keys, metadata or their own PlutusV3
+  transactions keep working; only decoders of foreign transactions break.
+- **Archived repositories carry confirmed gaps** (cardano-node-api,
+  cardano-rosetta-legacy, Nami). Outreach for those means users and forks, not
+  maintainers.
+
+Outreach (R5) is done by the project owner; this work only prepares the
+evidence. Next: assess the 31 boundary-to-boundary dependency gaps inside R2
+(Mesh, Evolution SDK and yaci-store through Scalus; Blaze, Mesh and Lucid
+Evolution through cardano-js-sdk; yaci-devkit and cf-ledger-sync through yaci;
+Scrolls and Amaru through Pallas), add hosted API providers to R2, then start R4
+devnet checks with the confirmed node-to-client and decoding gaps.
 
 ### Implementation log
 

@@ -24,7 +24,8 @@ import { investigationProjects, parseAssignments, summarizeWork, workReport } fr
 import { scanIntegrations } from "../../lib/readiness/integration-scan";
 import { changesBySurface, parseChangeRegister, verifyCitations } from "../../lib/readiness/dijkstra";
 import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../../lib/readiness/boundary";
-import { classifyCatalog } from "../../lib/readiness/surface-collect";
+import { classifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
+import { leadCoverage, parseLeadRegister, verifyLeadSources } from "../../lib/readiness/leads";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   directory: { type: "string", default: "data/readiness" },
@@ -81,6 +82,7 @@ diff            --before old-snapshot.json | --before-ref git-ref [--output chan
 check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sources]
 check-boundary  [--input content/readiness/dijkstra/boundary.json] [--verify-sources]
 classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness]
+check-leads     [--input content/readiness/dijkstra/leads.json] [--verify-sources]
                 Validate the hardfork change register; optionally re-read every cited quote via gh
 
 Common options: --directory data/readiness --state .readiness --catalog data/cardano-graph.json
@@ -141,6 +143,18 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
     const register = await classifyCatalog(tools.map((t) => ({ id: t.id, repo: t.repo })), boundary, changes, { stateDir: values.state!, log: (line) => console.error(line) });
     writeFileSync(values.output ?? "content/readiness/dijkstra/classification.json", `${JSON.stringify(register, null, 1)}\n`);
     console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary }));
+    return;
+  }
+  if (command === "check-leads") {
+    const changes = parseChangeRegister(readJson("content/readiness/dijkstra/changes.json"));
+    const register = parseLeadRegister(readJson(values.input ?? "content/readiness/dijkstra/leads.json"), changes);
+    const classification = readJson("content/readiness/dijkstra/classification.json") as ClassificationRegister;
+    const failures = values["verify-sources"] ? await verifyLeadSources(register, (repo, revision, path) => githubSource(repo, revision, path)) : [];
+    for (const failure of failures) console.error(failure);
+    if (failures.length) throw new Error(`${failures.length} lead citations no longer match their pinned sources`);
+    const coverage = leadCoverage(register, classification.tools);
+    console.log(JSON.stringify({ leads: register.leads.length, sourcesVerified: Boolean(values["verify-sources"]), ...coverage }, null, 2));
+    if (coverage.orphaned.length) throw new Error(`Leads match no classified gap: ${coverage.orphaned.join(", ")}`);
     return;
   }
   const snapshot = store.load();

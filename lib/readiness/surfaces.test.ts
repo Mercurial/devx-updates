@@ -39,6 +39,17 @@ test("scanning finds dependencies only in dependency positions and separates pro
   assert.equal(hit(scan, "service:ogmios"), undefined, "vendored directories are skipped");
   assert.equal(hit(scan, "service:kupo"), undefined, "editor and assistant configuration is skipped");
   assert.equal(scanSources([{ path: "Cargo.toml", content: 'pallas = "1"' }], "pallas").hits.length, 0, "a component does not depend on itself");
+  const scoped = scanSources([
+    { path: "benchmarks/ChainSyncBench/go.mod", content: "require github.com/blinklabs-io/gouroboros v0.159.2\n" },
+    { path: "workshops/issuer/package.json", content: JSON.stringify({ dependencies: { "@cardano-sdk/core": "^0.41.4" } }, null, 2) },
+    { path: "src/attestation/go.mod", content: "require github.com/blinklabs-io/gouroboros v0.213.7\n" },
+    { path: "plutip-rust/Cargo.toml", content: 'plutus-ledger-api = { version = "0.2.1" }\n' },
+  ]);
+  const gouroboros = hit(scoped, "dependency:gouroboros")!;
+  assert.deepEqual([gouroboros.lines, gouroboros.auxLines], [1, 1], "benchmarks are auxiliary; directory names merely containing 'test' are not");
+  assert.equal(gouroboros.examples[0].path, "src/attestation/go.mod", "shipped examples come first");
+  assert.deepEqual([hit(scoped, "dependency:cardano-js-sdk")!.lines, hit(scoped, "dependency:cardano-js-sdk")!.auxLines], [0, 1]);
+  assert.equal(hit(scoped, "dependency:plutus-plutus-core"), undefined, "the Rust plutus-ledger-api crate is not the Haskell package");
   const prose = scanSources([
     { path: "Cargo.toml", content: 'description = "Wrapper around the cardano-serialization-lib"\n# pallas = "0.1"\n' },
     { path: "run.sh", content: "# accepts cardano-cli style JSON\ncardano-cli latest transaction build\n" },
@@ -80,6 +91,16 @@ test("classification inherits R2 readiness through coupling, not through markers
 
   const markersOnly = classifyTool({ id: "m", repo: "o/m", revision: "b".repeat(40) }, scanSources([{ path: "a.ts", content: "PlutusV3" }]), boundary, changes);
   assert.deepEqual([markersOnly.exposure, markersOnly.readiness], ["marker", "unassessed"]);
+  const haskell = classifyTool({ id: "hs", repo: "o/h", revision: "8".repeat(40) }, scanSources([
+    { path: "app/app.cabal", content: "library\n  build-depends:\n    , cardano-api\n    , ouroboros-consensus\n    , cardano-ledger-core\n" },
+    { path: "cabal.project", content: "constraints:\n  , cardano-api ==11.0.0.0\n  , cardano-ledger-conway >=1.19\n" },
+  ]), boundary, changes);
+  const api = haskell.surfaces.find((s) => s.surface === "cardano-api-haskell")!;
+  assert.deepEqual([api.channels[0].via, api.readiness], ["cardano-api@11.0.0.0<11.8.0.0", "gap"], "pins are read from every versioned manifest line, not only the examples");
+  assert.equal(haskell.surfaces.find((s) => s.surface === "node-to-client-protocol")!.readiness, "upstream", "unversioned upstream names stay upstream");
+  const benchOnly = classifyTool({ id: "bench", repo: "o/b", revision: "9".repeat(40) }, scanSources([{ path: "benchmarks/go.mod", content: "require github.com/blinklabs-io/gouroboros v0.159.2\n" }]), boundary, changes);
+  assert.deepEqual([benchOnly.exposure, benchOnly.readiness], ["auxiliary", "unassessed"], "auxiliary coupling never sets readiness");
+  assert.ok(benchOnly.surfaces.every((s) => s.channels.every((c) => c.scope === "auxiliary")));
   const none = classifyTool({ id: "n", repo: "o/n", revision: "c".repeat(40) }, scanSources([{ path: "a.ts", content: "x" }]), boundary, changes);
   assert.equal(none.exposure, "none-found");
   const hidden = classifyTool({ id: "eternl", repo: "eternl.io", revision: null }, { status: "no-public-source", note: "website" }, boundary, changes);
@@ -90,6 +111,6 @@ test("classification inherits R2 readiness through coupling, not through markers
   const upstream = classifyTool({ id: "cardano-cli", repo: "IntersectMBO/cardano-cli", revision: "e".repeat(40) }, scanSources([]), boundary, changes);
   assert.deepEqual([upstream.exposure, upstream.readiness, upstream.surfaces.length], ["implements", "upstream", changes.surfaces.length]);
 
-  const ranked = rankClassifications([none, markersOnly, hidden, tool, own]).map((t) => t.id);
-  assert.deepEqual(ranked, ["cardano-wallet", "example", "eternl", "m", "n"]);
+  const ranked = rankClassifications([none, markersOnly, benchOnly, hidden, tool, own]).map((t) => t.id);
+  assert.deepEqual(ranked, ["cardano-wallet", "example", "eternl", "bench", "m", "n"]);
 });

@@ -1,4 +1,4 @@
-# Dijkstra change, boundary and classification registers
+# Dijkstra change, boundary, classification and lead registers
 
 `changes.json` lists what the Dijkstra hard fork (protocol version 12) changes,
 which **surface** each change touches, when it takes effect, and the exact source
@@ -116,7 +116,9 @@ inherits. Each tool's repository was scanned at its default-branch head:
   ledger/consensus/API packages. When R2 names the release that added a
   surface's support, a version constraint that cannot reach that release is a
   `gap` (Go pins exactly, Cargo and Poetry default to caret, Cabal `^>=` is a
-  PVP major, lower bounds never count).
+  PVP major, lower bounds never count). Haskell pins of cardano-api,
+  cardano-ledger, ouroboros-consensus/-network and plutus-ledger-api are
+  compared the same way with the 11.2 component-set versions above.
 - **service**: code calls Blockfrost, Koios, Maestro, Ogmios, Kupo, db-sync,
   UTxO RPC/Dolos, the cardano-wallet API, a node socket, cardano-cli commands
   or the submit API.
@@ -126,44 +128,95 @@ inherits. Each tool's repository was scanned at its default-branch head:
   but never set readiness.
 
 Prose (docs, READMEs, changelogs) and comments in manifests never establish
-exposure. Every hit records path, line and a quote at the scanned revision.
+exposure. Tests, examples, benchmarks, demos, playgrounds and workshops are
+**auxiliary**: their hits are kept with `scope: "auxiliary"` but never set
+readiness, and a tool coupled only there has exposure `auxiliary`. Every hit
+records path, line and a quote at the scanned revision; dependency hits also
+keep up to twelve versioned manifest lines (`pins`) for the constraint checks.
+Each scanned tool records whether its repository is archived and when it was
+last pushed.
 
 | Exposure | Tools |
 | --- | --- |
 | implements | 65 |
-| dependency | 93 |
-| service | 42 |
+| dependency | 87 |
+| service | 44 |
+| auxiliary only | 4 |
 | marker only | 9 |
 | none found | 18 |
 | no public source | 42 |
 
-Changed surfaces touched through coupling (implements, dependency or service):
-transaction encoding 181, era identity 178, protocol parameters 178,
-PlutusV4/language 166, block encoding 142, node-to-client 135, transaction
-rules 135, stake-pool registration 125, script context 75, cardano-cli 52,
-consensus participation 29, cardano-api 28. The most used services are
-Blockfrost (80), node sockets (75), Ogmios (65), cardano-cli (52), Koios (38),
-db-sync (35) and Kupo (32).
+Changed surfaces touched through shipped coupling (implements, dependency or
+service): transaction encoding 176, era identity 173, protocol parameters 173,
+PlutusV4/language 159, block encoding 139, node-to-client 131, transaction
+rules 130, stake-pool registration 119, script context 69, cardano-cli 43,
+consensus participation 28, cardano-api 26. The most used services are
+Blockfrost (67), Ogmios (62), node sockets (61), cardano-cli (43), Koios (37),
+db-sync (34) and Kupo (31).
 
-What it adds to R2:
+Readiness of the 204 tools outside the boundary: 35 gap, 21 in-progress,
+11 upstream, 2 released, 55 no-evidence, 80 unassessed. Nine catalog
+repositories are archived, among them cardano-node-api, cardano-rosetta-legacy
+and Nami.
 
-1. **35 tools outside the boundary inherit a gap.** Node-to-client: Daedalus
-   and cardano-wallet-js through cardano-wallet; Gerolamo through
-   ouroboros-miniprotocols-ts; Bursa, cardano-node-api, cardano-up, txtop,
-   Chrysalis and the IBC incubator through gouroboros below v0.213.0. PlutusV4:
-   19 tools through CSL (Yoroi, GovTool, Catalyst Voices, cardano-signer,
-   cardano-hw-cli, Marlowe and others). Protocol parameters: Lace, Daedalus,
-   Nami and Hyperledger Identus through cardano-js-sdk.
-2. **Pinned versions matter more than the component's status.** gouroboros is
-   released, but six Go tools pin versions without V23; Pallas has offered V23
-   since v0.35.1, but Scrolls, Mumak and Gastronomy pin older umbrella crates.
-3. **42 catalog entries have no public source** (hosted wallets, explorers,
-   API providers such as Blockfrost, Maestro, NOWNodes and GetBlock). Their
-   exposure can only come from documented services or maintainers (R5).
+The scan is lexical: a dependency proves coupling to a component, not use of a
+changed feature. Every inherited gap is therefore read in shipped code and
+decided in `leads.json`.
 
-The scan is lexical. A dependency proves coupling to a component, not use of a
-changed feature; a service hit can be a test or an example. Use the recorded
-quotes to confirm before contacting maintainers.
+## Lead confirmation (`leads.json`)
+
+`leads.json` decides, for each of the 35 tools outside the boundary that
+inherit a gap, whether shipped code actually reaches it, per tool, dependency
+and surface (118 decisions in 58 entries, each quoting the lines it rests on):
+
+- `confirmed`: a shipped path uses the gapped capability, so the tool fails or
+  misbehaves after the hardfork until the dependency moves (48 surfaces).
+- `not-reached`: shipped code uses the dependency only outside the gap
+  (52 surfaces).
+- `undetermined`: reading cannot decide; R4 execution or the maintainer must
+  (18 surfaces).
+
+**21 tools have a confirmed gap:**
+
+| Through | Tools | What breaks |
+| --- | --- | --- |
+| gouroboros below v0.213.0 / v0.213.7 | txtop, cardano-node-api (archived), Bursa, IBC incubator | txtop and cardano-node-api open node-to-client connections without V23; all four decode transactions or blocks with pre-target ledger types |
+| plutigo v0.8.0 | cardano-node-api | evaluates scripts for PlutusV1–V3 only |
+| ouroboros-miniprotocols-ts | Gerolamo | its own node-to-client responder offers only V16–V19, so 11.2 clients cannot connect |
+| cardano-wallet | Daedalus, cardano-wallet-js | both run on the wallet's REST API, whose backend cannot connect to 11.2 |
+| CSL (no PlutusV4) | Yoroi, cardano-dev-wallet, cardano-hw-cli, Hydra SDK, Masumi, cardano-rosetta-legacy (archived), csl-mobile-bridge | decode transactions or witnesses they did not build; csl-mobile-bridge re-exports the API |
+| cardano-js-sdk (parameter keys stop at 37) | Lace, Nami (archived) | decode transactions with parameter updates for keys 38–56 |
+| Scalus (no V4 evaluation) | Yano | evaluates scripts through Scalus |
+| cardano-api below 11.8 | Marlowe, Marconi, sc-tools, Midgard | follow the node or build and submit transactions fixed to the Conway era |
+
+What reading changed:
+
+1. **Most CSL coupling is not reached.** Blockfrost-js, GovTool,
+   cardano-signer, catalyst-core, cardano-mcp, cardano-wallet-js and the halo2
+   submitter use CSL for addresses, keys, metadata or their own PlutusV3
+   transactions. PlutusV4 is additive, so only tools that decode foreign
+   transactions break.
+2. **Pallas and plutigo pins rarely matter.** Gastronomy and Mumak never use
+   `pallas::network`; plutigo appears only as an indirect Go requirement in
+   Bursa, cardano-up, txtop and the IBC incubator. cardano-up uses gouroboros
+   only for network names.
+3. **Haskell pins split in two.** Pins below the target cardano-api break
+   tools that follow the node or submit transactions (Marlowe, Marconi,
+   sc-tools, Midgard). Plutus pins below 1.71 do not break existing scripts,
+   and offline emulators and local clusters (CLB, Plutip) keep running but
+   cannot exercise Dijkstra.
+
+Scanner corrections from this pass: auxiliary scope (Chrysalis's gouroboros
+benchmark, Catalyst Voices's wallet tester and Hyperledger Identus's workshops
+no longer count as shipped), the plutus-ledger-api rule is limited to Haskell
+manifests (Plutip's Rust crate of the same name was misattributed), and
+upstream Haskell pins are compared with the component set.
+
+`check-leads` also lists 31 dependency gaps between boundary components (for
+example Mesh, Evolution SDK and yaci-store through Scalus, Blaze and Mesh
+through cardano-js-sdk, yaci-devkit and cf-ledger-sync through yaci, Scrolls
+and Amaru through Pallas). These are R2 propagation and are assessed with the
+components themselves.
 
 ## Checking it
 
@@ -172,6 +225,7 @@ node --import tsx scripts/readiness/cli.ts check-changes                   # str
 node --import tsx scripts/readiness/cli.ts check-changes --verify-sources  # re-read every quote via gh
 node --import tsx scripts/readiness/cli.ts check-boundary [--verify-sources] # boundary register, worst status per component
 node --import tsx scripts/readiness/cli.ts classify-surfaces                  # rescan every catalog tool (resumable)
+node --import tsx scripts/readiness/cli.ts check-leads [--verify-sources]     # every shipped gap decided, none stale
 ```
 
 Every citation records repository, 40-character revision, path, line and an

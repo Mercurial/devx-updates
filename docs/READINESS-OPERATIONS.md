@@ -426,6 +426,23 @@ rule digest, so an interrupted run resumes and an unchanged repository is not
 fetched again. Hits are lexical leads: a dependency or service hit inherits the
 R2 status of the component behind it, markers only show that a surface is
 touched, and prose (docs, READMEs, changelogs) never establishes exposure.
+Tests, examples, benchmarks and demos are kept as auxiliary hits that never set
+readiness. The run also records each repository's archive state and last push
+through `gh api`. Changing a rule or the scanner bumps `SCANNER_VERSION`, which
+invalidates the cache; delete `.readiness/surface-scans/` to force a rescan.
+
+After a rescan, confirm the inherited gaps:
+
+```sh
+npm run readiness -- check-leads                   # every shipped gap decided, none stale or orphaned
+npm run readiness -- check-leads --verify-sources  # also re-read every quoted line at its revision
+```
+
+`check-leads` lists gaps without a decision (`unreviewed`), decisions read at an
+older revision than the new scan (`stale`) and decisions that no longer match a
+gap (`orphaned`, which fails the command). Decide each new or stale lead by
+reading the tool's shipped code at the classified revision and record the quoted
+lines in `content/readiness/dijkstra/leads.json`.
 
 ## Manual review handoff
 

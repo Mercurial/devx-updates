@@ -1,0 +1,53 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { parseChangeRegister } from "./dijkstra";
+import { leadCoverage, parseLeadRegister } from "./leads";
+import type { ToolClassification } from "./surfaces";
+
+const changes = parseChangeRegister(JSON.parse(readFileSync("content/readiness/dijkstra/changes.json", "utf8")));
+const revision = "a".repeat(40);
+const quote = (line: number) => ({ repo: "o/t", revision, path: "main.go", line, quote: "ouroboros.WithNodeToNode(false)," });
+const lead = (overrides: Record<string, unknown> = {}) => ({
+  tool: "t", revision, via: "gouroboros", surfaces: ["node-to-client-protocol"], decision: "confirmed", summary: "Opens a node-to-client connection.", evidence: [quote(3)], ...overrides,
+});
+const register = (leads: unknown[]) => ({ schemaVersion: 1, reviewed: "2026-10-20", method: ["read shipped code"], leads });
+const channel = (via: string, scope = "shipped", readiness = "gap") => ({ channel: "dependency" as const, via, readiness: readiness as "gap", lines: 1, scope: scope as "shipped" });
+const tool = (id: string, surfaces: [string, ReturnType<typeof channel>[]][], exposure = "dependency"): ToolClassification => ({
+  id, repo: "o/t", revision, scan: { status: "scanned", files: 1, skipped: 0 }, exposure: exposure as "dependency", readiness: "gap", hits: [],
+  surfaces: surfaces.map(([surface, channels]) => ({ surface, channels, readiness: "gap" })),
+});
+
+test("lead decisions need quoted evidence at the lead revision, once per surface", () => {
+  assert.equal(parseLeadRegister(register([lead()]), changes).leads.length, 1);
+  assert.equal(parseLeadRegister(register([lead({ decision: "undetermined", evidence: [] })]), changes).leads[0].decision, "undetermined");
+  assert.throws(() => parseLeadRegister(register([lead({ evidence: [] })]), changes), /confirmed needs evidence/);
+  assert.throws(() => parseLeadRegister(register([lead({ decision: "not-reached", evidence: [] })]), changes), /not-reached needs evidence/);
+  assert.throws(() => parseLeadRegister(register([lead({ evidence: [{ ...quote(3), revision: "b".repeat(40) }] })]), changes), /lead revision/);
+  assert.throws(() => parseLeadRegister(register([lead({ surfaces: ["mempool"] })]), changes), /change register/);
+  assert.throws(() => parseLeadRegister(register([lead(), lead({ decision: "not-reached" })]), changes), /decided twice/);
+  assert.equal(parseLeadRegister(register([lead(), lead({ surfaces: ["transaction-encoding"], decision: "not-reached" })]), changes).leads.length, 2, "one dependency can split by surface");
+});
+
+test("coverage counts per surface, flags stale and orphaned decisions, and keeps boundary propagation apart", () => {
+  const leads = parseLeadRegister(register([lead(), lead({ tool: "gone" })]), changes);
+  const tools = [
+    tool("t", [["node-to-client-protocol", [channel("gouroboros@0.209.0<v0.213.0")]], ["transaction-encoding", [channel("gouroboros@0.209.0<v0.213.7"), channel("ogmios", "auxiliary")]]]),
+    tool("sdk", [["plutus-script-context", [channel("scalus")]]], "implements"),
+    tool("ok", [["plutus-language", [channel("plutus-plutus-core", "shipped", "released")]]]),
+  ];
+  const coverage = leadCoverage(leads, tools);
+  assert.equal(coverage.reviewed, 1);
+  assert.deepEqual(coverage.unreviewed, [{ tool: "t", via: "gouroboros", surfaces: ["transaction-encoding"] }], "auxiliary and non-gap channels need no decision");
+  assert.deepEqual(coverage.orphaned, ["gone/gouroboros/node-to-client-protocol"]);
+  assert.deepEqual(coverage.boundary, [{ tool: "sdk", via: "scalus", surfaces: ["plutus-script-context"] }]);
+  assert.deepEqual(coverage.confirmedTools, ["t"]);
+  assert.deepEqual(leadCoverage(leads, [{ ...tools[0], revision: "c".repeat(40) }]).stale, ["t/gouroboros"]);
+});
+
+test("the committed lead register decides every shipped gap in the committed classification", () => {
+  const leads = parseLeadRegister(JSON.parse(readFileSync("content/readiness/dijkstra/leads.json", "utf8")), changes);
+  const { tools } = JSON.parse(readFileSync("content/readiness/dijkstra/classification.json", "utf8")) as { tools: ToolClassification[] };
+  const coverage = leadCoverage(leads, tools);
+  assert.deepEqual([coverage.unreviewed, coverage.stale, coverage.orphaned], [[], [], []]);
+});

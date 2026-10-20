@@ -25,6 +25,7 @@ export interface Rule {
 }
 
 const MANIFEST = /(?:^|\/)(?:package\.json|Cargo\.toml|go\.mod|pom\.xml|build\.gradle(?:\.kts)?|settings\.gradle(?:\.kts)?|libs\.versions\.toml|[^/]+\.cabal|cabal\.project|package\.yaml|stack\.yaml|pyproject\.toml|requirements[^/]*\.txt|setup\.py|setup\.cfg|Pipfile|[^/]+\.csproj|Directory\.Packages\.props|pubspec\.yaml|spago\.(?:dhall|yaml)|packages\.dhall|elm\.json|build\.sbt|deps\.edn|mix\.exs|Gemfile|deno\.json|flake\.nix|aiken\.toml|composer\.json|CMakeLists\.txt|conanfile\.(?:txt|py)|vcpkg\.json|Package\.swift|Podfile)$/;
+const HASKELL = /(?:^|\/)(?:[^/]+\.cabal|cabal\.project(?:\.[^/]+)?|package\.yaml|stack\.yaml)$/;
 const ERA_NAMES = ["byron", "shelley", "allegra", "mary", "alonzo", "babbage", "conway"];
 
 const dep = (component: string, pattern: RegExp): Rule => ({ id: `dependency:${component}`, channel: "dependency", component, pattern, files: MANIFEST });
@@ -65,7 +66,8 @@ export const RULES: Rule[] = [
   dep("cardano-hw-interop-lib", /\bcardano-hw-interop-lib\b/),
   dep("amaru", /^\s*amaru-[a-z-]+\s*=/m),
   dep("hydra", /\bhydra-(?:node|cardano-api|tx|plutus|prelude)\b/),
-  dep("plutus-plutus-core", /\bplutus-(?:ledger-api|tx|core|tx-plugin)\b/),
+  // Haskell manifests only: the Rust plutus-ledger-api crate is a separate project.
+  { ...dep("plutus-plutus-core", /\bplutus-(?:ledger-api|tx|core|tx-plugin)\b/), files: HASKELL },
   dep("opshin", /\bopshin\b/),
   dep("helios", /@helios-lang\/|@hyperionbt\/helios\b/),
   dep("plutarch", /\bplutarch(?:-[a-z-]+)?\b/),
@@ -114,12 +116,22 @@ export const RULES: Rule[] = [
 const SKIP = /(?:^|\/)(?:node_modules|vendor|dist|build|target|\.git|\.yarn|bower_components|\.next|out|coverage|\.claude[^/]*|\.cursor|\.codex|\.windsurf|\.agents?)\/|(?:^|\/)(?:\.eslintcache|CLAUDE\.md|AGENTS\.md|GEMINI\.md|\.cursorrules|copilot-instructions\.md)$/;
 const LOCKS = /(?:^|\/)(?:package-lock\.json|npm-shrinkwrap\.json|pnpm-lock\.yaml|yarn\.lock|bun\.lockb?|poetry\.lock|uv\.lock|Cargo\.lock|go\.sum|Gemfile\.lock|composer\.lock|flake\.lock|cabal\.project\.freeze|gradle\.lockfile|packages\.lock\.json)$/;
 const BINARY = /\.(?:png|jpe?g|gif|webp|ico|svg|pdf|woff2?|ttf|otf|eot|zip|gz|tgz|xz|bz2|wasm|so|dylib|dll|a|o|jar|class|bin|mp4|mp3|lock|min\.js|map|plutus|cbor|der|db|sqlite)$/i;
-export const SCAN_LIMITS = { bytesPerFile: 1024 * 1024, examplesPerRule: 3, quoteCharacters: 200 } as const;
+export const SCAN_LIMITS = { bytesPerFile: 1024 * 1024, examplesPerRule: 3, pinsPerRule: 12, quoteCharacters: 200 } as const;
+
+/**
+ * Tests, examples, benchmarks, demos and workshops couple a repository to a component without shipping that coupling to
+ * users. Their hits are kept as auxiliary channels that never set readiness.
+ */
+const AUXILIARY = /(?:^|\/)(?:[^/]*[-_.])?(?:tests?|__tests__|tester|testkit|testing|testdata|specs?|e2e|examples?|samples?|demos?|bench(?:mark)?(?:s|es)?|playgrounds?|workshops?|tutorials?|fixtures?|mocks?)(?:[-_.][^/]*)?\/|(?:^|\/)[^/]*(?:[._-](?:test|spec|bench)|Spec|Test|Tests|Bench)\.[a-z]+$/i;
+export const auxiliary = (path: string) => AUXILIARY.test(path);
 
 export interface SourceFile { path: string; content: string }
 export interface Example { path: string; line: number; quote: string }
-/** `lines` counts code, manifest, test and example lines; `docLines` counts prose, which never establishes exposure. */
-export interface Hit { rule: string; files: number; lines: number; docLines: number; examples: Example[] }
+/**
+ * `lines` counts shipped code and manifests; `auxLines` tests, examples, benchmarks and demos; `docLines` prose, which
+ * never establishes exposure. Examples prefer shipped code, then auxiliary code, then prose.
+ */
+export interface Hit { rule: string; files: number; lines: number; auxLines: number; docLines: number; examples: Example[]; pins?: Example[] }
 export interface Scan { files: number; skipped: number; hits: Hit[] }
 
 const DOCS = /(?:^|\/)(?:docs?|documentation|_backup|archive|website|site)\/|\.(?:md|mdx|markdown|rst|adoc|txt|tex|org)$|(?:^|\/)(?:CHANGELOG|CHANGES|HISTORY|NEWS|README|AUTHORS)(?:\.[^/]*)?$/i;
@@ -146,12 +158,13 @@ export function scannable(path: string, bytes: number): boolean {
 /** Each rule is one global scan per file; line numbers are computed only for hits. */
 export function scanSources(files: SourceFile[], self?: string, rules = RULES): Scan {
   const hits = new Map<string, Hit>();
+  const pools = new Map<string, Example[][]>();
   let scanned = 0, skipped = 0;
   for (const file of [...files].sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0))) {
     if (!scannable(file.path, Buffer.byteLength(file.content)) || file.content.includes("\0")) { skipped++; continue; }
     scanned++;
     let starts: number[] | undefined;
-    const prose = DOCS.test(file.path);
+    const prose = DOCS.test(file.path), aux = !prose && AUXILIARY.test(file.path);
     const npm = /(?:^|\/)package\.json$/.test(file.path) ? packageDependencies(file.content) : undefined;
     for (const rule of rules) {
       if (rule.files && !rule.files.test(file.path)) continue;
@@ -169,18 +182,27 @@ export function scanSources(files: SourceFile[], self?: string, rules = RULES): 
         lines.add(line);
       }
       if (!lines.size) continue;
-      const hit = hits.get(rule.id) ?? { rule: rule.id, files: 0, lines: 0, docLines: 0, examples: [] };
+      const hit = hits.get(rule.id) ?? { rule: rule.id, files: 0, lines: 0, auxLines: 0, docLines: 0, examples: [] };
       hit.files++;
-      if (prose) hit.docLines += lines.size; else hit.lines += lines.size;
-      // Prefer code examples; prose examples only fill a rule that has no code hit yet.
-      if (prose && hit.lines) { hits.set(rule.id, hit); continue; }
-      if (!prose && hit.examples.length && hit.lines === lines.size) hit.examples = [];
-      for (const line of [...lines].slice(0, SCAN_LIMITS.examplesPerRule - hit.examples.length)) {
-        hit.examples.push({ path: file.path, line, quote: lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters) });
+      if (prose) hit.docLines += lines.size; else if (aux) hit.auxLines += lines.size; else hit.lines += lines.size;
+      const pool = pools.get(rule.id) ?? [[], [], []];
+      const bucket = pool[prose ? 2 : aux ? 1 : 0];
+      for (const line of [...lines].slice(0, SCAN_LIMITS.examplesPerRule - bucket.length)) {
+        bucket.push({ path: file.path, line, quote: lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters) });
+      }
+      pools.set(rule.id, pool);
+      // Versioned shipped manifest lines, so constraint checks are not limited to the first examples.
+      if (rule.channel === "dependency" && !prose && !aux) {
+        for (const line of lines) {
+          const quote = lineText(file.content, starts!, line).trim().slice(0, SCAN_LIMITS.quoteCharacters);
+          if (!/\d+\.\d+/.test(quote) || (hit.pins ??= []).length >= SCAN_LIMITS.pinsPerRule) continue;
+          hit.pins.push({ path: file.path, line, quote });
+        }
       }
       hits.set(rule.id, hit);
     }
   }
+  for (const [id, pool] of pools) hits.get(id)!.examples = pool.flat().slice(0, SCAN_LIMITS.examplesPerRule);
   return { files: scanned, skipped, hits: [...hits.values()].sort((a, b) => (a.rule < b.rule ? -1 : 1)) };
 }
 
@@ -251,6 +273,22 @@ export function admits(c: Constraint, needed: number[]): boolean {
   return compareVersions(needed, upper) < 0;
 }
 
+/** Package versions of the target component set (R1), against which upstream Haskell pins are compared. */
+export function targetVersions(changes: ChangeRegister): Map<string, string> {
+  const selection = (changes.target as { componentSelection?: { components?: { package?: unknown; version?: unknown }[] } }).componentSelection;
+  return new Map((selection?.components ?? []).filter((c) => typeof c.package === "string" && typeof c.version === "string").map((c) => [c.package as string, c.version as string]));
+}
+
+/** An upstream pin that cannot reach the target component set's version is a gap; unversioned names stay `upstream`. */
+function upstreamPin(targets: Map<string, string>, pins: Example[]): { readiness: Readiness; via: string } | null {
+  for (const pin of pins) for (const [name, version] of targets) {
+    if (!new RegExp(`(?:^|[^\\w-])${name}(?![\\w-])`).test(pin.quote)) continue;
+    const c = readConstraint(pin.quote.slice(pin.quote.indexOf(name) + name.length), pin.path);
+    if (c && !admits(c, parts(version))) return { readiness: "gap", via: `${name}@${c.version.join(".")}<${version}` };
+  }
+  return null;
+}
+
 /** A consumer whose constraint cannot reach the release that added a surface's support has a gap on that surface. */
 function inherited(component: Component, surface: string, examples: Example[]): { readiness: Readiness; via: string } {
   const status = worstStatus(component, surface);
@@ -263,13 +301,17 @@ function inherited(component: Component, surface: string, examples: Example[]): 
   return { readiness: status, via: component.id };
 }
 
-export interface SurfaceExposure { surface: string; channels: { channel: Channel; via: string; readiness: Readiness; lines: number }[]; readiness: Readiness }
+export type Scope = "shipped" | "auxiliary";
+export interface SurfaceExposure { surface: string; channels: { channel: Channel; via: string; readiness: Readiness; lines: number; scope: Scope }[]; readiness: Readiness }
 /** The 11.2 component set itself: these tools define the target rather than consume it. */
 export const UPSTREAM_TOOLS = new Set(["cardano-node", "cardano-cli", "cardano-submit-api", "cardano-testnet"]);
-export type Exposure = "implements" | "dependency" | "service" | "marker" | "none-found" | "unknown";
+export type Exposure = "implements" | "dependency" | "service" | "marker" | "auxiliary" | "none-found" | "unknown";
+/** Repository state at classification time; archived or long-idle repositories change how a gap is followed up. */
+export interface RepositoryActivity { archived: boolean; pushedAt: string }
 export interface ToolClassification {
   id: string; repo: string | null; revision: string | null;
   scan: { status: "scanned" | "no-public-source" | "checkout-failed"; files: number; skipped: number; note?: string };
+  activity?: RepositoryActivity;
   exposure: Exposure; readiness: Readiness; surfaces: SurfaceExposure[]; hits: Hit[];
 }
 
@@ -284,13 +326,14 @@ export function classifyTool(
   const known = new Set(changes.surfaces.map((s) => s.id));
   const components = new Map(boundary.components.map((c) => [c.id, c]));
   const bySurface = new Map<string, SurfaceExposure>();
-  const add = (surface: string, channel: Channel, via: string, readiness: Readiness, lines: number) => {
+  const sets = (c: { channel: Channel; scope: Scope }) => c.channel !== "marker" && c.scope === "shipped";
+  const add = (surface: string, channel: Channel, via: string, readiness: Readiness, lines: number, scope: Scope = "shipped") => {
     if (!known.has(surface)) throw new Error(`Rule ${via} names unknown surface ${surface}`);
     const entry = bySurface.get(surface) ?? { surface, channels: [], readiness: "unassessed" as Readiness };
-    const coupled = entry.channels.some((c) => c.channel !== "marker");
-    entry.channels.push({ channel, via, readiness, lines });
-    // Markers show a surface is touched; readiness comes from what the tool is coupled to.
-    if (channel !== "marker") entry.readiness = coupled ? worse(entry.readiness, readiness) : readiness;
+    const coupled = entry.channels.some(sets);
+    entry.channels.push({ channel, via, readiness, lines, scope });
+    // Markers and auxiliary code show a surface is touched; readiness comes from what shipped code is coupled to.
+    if (sets({ channel, scope })) entry.readiness = coupled ? worse(entry.readiness, readiness) : readiness;
     bySurface.set(surface, entry);
   };
   const own = components.get(tool.id);
@@ -298,25 +341,32 @@ export function classifyTool(
   const isUpstream = UPSTREAM_TOOLS.has(tool.id);
   const hits = "hits" in scan ? scan.hits : [];
   const ruleById = new Map(rules.map((r) => [r.id, r]));
+  const targets = targetVersions(changes);
   for (const hit of hits) {
     const rule = ruleById.get(hit.rule);
     if (!rule) throw new Error(`Unknown rule ${hit.rule}`);
-    if (!hit.lines || isUpstream) continue;
+    if (!(hit.lines || hit.auxLines) || isUpstream) continue;
+    const scope: Scope = hit.lines ? "shipped" : "auxiliary", lines = hit.lines || hit.auxLines;
     if (rule.component !== undefined) {
       const component = components.get(rule.component);
       if (!component) throw new Error(`Rule ${rule.id} names unknown component ${rule.component}`);
       for (const s of component.surfaces.filter((x) => !rule.excludeSurfaces?.includes(x))) {
-        const { readiness, via } = rule.channel === "dependency" ? inherited(component, s, hit.examples) : { readiness: worstStatus(component, s), via: rule.component };
-        add(s, rule.channel, via, readiness, hit.lines);
+        const { readiness, via } = rule.channel === "dependency" ? inherited(component, s, hit.pins ?? hit.examples) : { readiness: worstStatus(component, s), via: rule.component };
+        add(s, rule.channel, via, readiness, lines, scope);
       }
-    } else for (const s of rule.surfaces ?? []) add(s, rule.channel, rule.id, rule.readiness ?? "unassessed", hit.lines);
+    } else {
+      const pinned = rule.channel === "dependency" && rule.readiness === "upstream" && scope === "shipped" ? upstreamPin(targets, hit.pins ?? []) : null;
+      for (const s of rule.surfaces ?? []) add(s, rule.channel, pinned?.via ?? rule.id, pinned?.readiness ?? rule.readiness ?? "unassessed", lines, scope);
+    }
   }
   if (isUpstream) for (const s of changes.surfaces) add(s.id, "implements", tool.id, "upstream", 0);
   const surfaces = [...bySurface.values()].sort((a, b) => (a.surface < b.surface ? -1 : 1));
-  const channels = new Set(surfaces.flatMap((s) => s.channels.map((c) => c.channel)));
+  const all = surfaces.flatMap((s) => s.channels);
+  const channels = new Set(all.filter((c) => c.scope === "shipped").map((c) => c.channel));
   const exposure: Exposure = !("hits" in scan) && !own && !isUpstream ? "unknown"
-    : (["implements", "dependency", "service", "marker"] as const).find((c) => channels.has(c)) ?? "none-found";
-  const coupled = surfaces.filter((s) => s.channels.some((c) => c.channel !== "marker"));
+    : (["implements", "dependency", "service"] as const).find((c) => channels.has(c))
+      ?? (all.some((c) => c.scope === "auxiliary" && c.channel !== "marker") ? "auxiliary" : channels.has("marker") ? "marker" : "none-found");
+  const coupled = surfaces.filter((s) => s.channels.some(sets));
   const readiness = coupled.reduce<Readiness>((w, s) => worse(w, s.readiness), coupled.length ? "verified" : "unassessed");
   return {
     id: tool.id, repo: tool.repo, revision: tool.revision,
@@ -327,7 +377,7 @@ export function classifyTool(
 
 /** Investigation order: closest coupling first, then worst inherited readiness, then breadth. */
 export function rankClassifications(items: ToolClassification[]): ToolClassification[] {
-  const tier: Exposure[] = ["implements", "dependency", "service", "unknown", "marker", "none-found"];
+  const tier: Exposure[] = ["implements", "dependency", "service", "unknown", "auxiliary", "marker", "none-found"];
   return [...items].sort((a, b) => tier.indexOf(a.exposure) - tier.indexOf(b.exposure)
     || READINESS_ORDER.indexOf(a.readiness) - READINESS_ORDER.indexOf(b.readiness)
     || b.surfaces.length - a.surfaces.length || (a.id < b.id ? -1 : 1));
