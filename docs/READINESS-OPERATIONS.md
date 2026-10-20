@@ -431,6 +431,14 @@ readiness. The run also records each repository's archive state and last push
 through `gh api`. Changing a rule or the scanner bumps `SCANNER_VERSION`, which
 invalidates the cache; delete `.readiness/surface-scans/` to force a rescan.
 
+After editing `boundary.json` or `changes.json`, recompute the classification
+from the recorded revisions and cached scans, without fetching, so that lead
+decisions read at those revisions stay valid:
+
+```sh
+npm run readiness -- classify-surfaces --reclassify
+```
+
 After a rescan, confirm the inherited gaps:
 
 ```sh

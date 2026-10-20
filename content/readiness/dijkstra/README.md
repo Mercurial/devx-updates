@@ -98,7 +98,7 @@ What it shows:
    0.2.0.1 (Ogmios 7.0.0, Kupo 2.12, db-sync main) and 0.3.0.0 (cardano-wallet)
    still have the segregated block body and the old header; Pallas 1.4.0 and
    cardano-c main lack the newest parameter keys and the PlutusV4 witness key.
-   Only gouroboros's vendored CDDL matches the target.
+   Only gouroboros's vendored CDDL (v0.213.0 and later) matches the target.
 3. **Most of the boundary has nothing yet.** CSL, CML, cardano-client-lib,
    PyCardano, Aiken and the other script compilers show no Dijkstra work, and
    the chain followers built on Pallas (Oura, Dolos, Mithril) wait for a Pallas
@@ -167,12 +167,12 @@ decided in `leads.json`.
 
 `leads.json` decides, for each of the 35 tools outside the boundary that
 inherit a gap, whether shipped code actually reaches it, per tool, dependency
-and surface (118 decisions in 58 entries, each quoting the lines it rests on):
+and surface (114 decisions in 56 entries, each quoting the lines it rests on):
 
 - `confirmed`: a shipped path uses the gapped capability, so the tool fails or
-  misbehaves after the hardfork until the dependency moves (48 surfaces).
+  misbehaves after the hardfork until the dependency moves (46 surfaces).
 - `not-reached`: shipped code uses the dependency only outside the gap
-  (52 surfaces).
+  (50 surfaces).
 - `undetermined`: reading cannot decide; R4 execution or the maintainer must
   (18 surfaces).
 
@@ -180,8 +180,7 @@ and surface (118 decisions in 58 entries, each quoting the lines it rests on):
 
 | Through | Tools | What breaks |
 | --- | --- | --- |
-| gouroboros below v0.213.0 / v0.213.7 | txtop, cardano-node-api (archived), Bursa, IBC incubator | txtop and cardano-node-api open node-to-client connections without V23; all four decode transactions or blocks with pre-target ledger types |
-| plutigo v0.8.0 | cardano-node-api | evaluates scripts for PlutusV1–V3 only |
+| gouroboros below v0.213.0 | txtop, cardano-node-api (archived), Bursa, IBC incubator | txtop and cardano-node-api open node-to-client connections without V23; all four decode transactions or blocks with pre-target ledger types |
 | ouroboros-miniprotocols-ts | Gerolamo | its own node-to-client responder offers only V16–V19, so 11.2 clients cannot connect |
 | cardano-wallet | Daedalus, cardano-wallet-js | both run on the wallet's REST API, whose backend cannot connect to 11.2 |
 | CSL (no PlutusV4) | Yoroi, cardano-dev-wallet, cardano-hw-cli, Hydra SDK, Masumi, cardano-rosetta-legacy (archived), csl-mobile-bridge | decode transactions or witnesses they did not build; csl-mobile-bridge re-exports the API |
@@ -197,9 +196,9 @@ What reading changed:
    transactions. PlutusV4 is additive, so only tools that decode foreign
    transactions break.
 2. **Pallas and plutigo pins rarely matter.** Gastronomy and Mumak never use
-   `pallas::network`; plutigo appears only as an indirect Go requirement in
-   Bursa, cardano-up, txtop and the IBC incubator. cardano-up uses gouroboros
-   only for network names.
+   `pallas::network`; plutigo below v0.8.0 appears only as an indirect Go
+   requirement (txtop, the IBC incubator). cardano-up uses gouroboros only for
+   network names.
 3. **Haskell pins split in two.** Pins below the target cardano-api break
    tools that follow the node or submit transactions (Marlowe, Marconi,
    sc-tools, Midgard). Plutus pins below 1.71 do not break existing scripts,
@@ -212,10 +211,21 @@ no longer count as shipped), the plutus-ledger-api rule is limited to Haskell
 manifests (Plutip's Rust crate of the same name was misattributed), and
 upstream Haskell pins are compared with the component set.
 
-`check-leads` also lists 31 dependency gaps between boundary components (for
+`check-leads` also lists 26 dependency gaps between boundary components (for
 example Mesh, Evolution SDK and yaci-store through Scalus, Blaze and Mesh
-through cardano-js-sdk, yaci-devkit and cf-ledger-sync through yaci, Scrolls
-and Amaru through Pallas). These are R2 propagation and are assessed with the
+through cardano-js-sdk, cf-ledger-sync through yaci, Scrolls and Amaru through
+Pallas).
+
+Version gaps are judged against `firstReleases` in `boundary.json`: the earliest
+tag on each release line whose source contains every cited quote (yaci has V23
+from v0.3.10 and v0.4.2, Pallas from v0.35.1 and v1.0.0, gouroboros's
+target-identical CDDL from v0.213.0, plutigo's V4 context from v0.8.0). Judging
+pins against the release R2 happened to observe flagged Dingo, yaci-devkit,
+Apollo and several plutigo pins that already had the support, and produced a
+wrong cardano-node-api lead (it evaluates PlutusV4 at line 1233 of
+`internal/utxorpc/submit.go`). After a boundary edit, `classify-surfaces
+--reclassify` recomputes from the recorded revisions and cached scans without
+fetching. These are R2 propagation and are assessed with the
 components themselves.
 
 ## Checking it
@@ -225,6 +235,7 @@ node --import tsx scripts/readiness/cli.ts check-changes                   # str
 node --import tsx scripts/readiness/cli.ts check-changes --verify-sources  # re-read every quote via gh
 node --import tsx scripts/readiness/cli.ts check-boundary [--verify-sources] # boundary register, worst status per component
 node --import tsx scripts/readiness/cli.ts classify-surfaces                  # rescan every catalog tool (resumable)
+node --import tsx scripts/readiness/cli.ts classify-surfaces --reclassify     # recompute after a register edit, no fetching
 node --import tsx scripts/readiness/cli.ts check-leads [--verify-sources]     # every shipped gap decided, none stale
 ```
 

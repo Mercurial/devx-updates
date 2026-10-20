@@ -166,33 +166,6 @@
    "evidence": []
   },
   {
-   "tool": "cardano-node-api",
-   "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
-   "via": "plutigo",
-   "surfaces": [
-    "plutus-language",
-    "plutus-script-context"
-   ],
-   "decision": "confirmed",
-   "summary": "Evaluates submitted scripts with plutigo v0.8.0 for PlutusV1-V3 only; PlutusV4 scripts cannot be evaluated.",
-   "evidence": [
-    {
-     "repo": "blinklabs-io/cardano-node-api",
-     "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
-     "path": "internal/utxorpc/submit.go",
-     "line": 37,
-     "quote": "\"github.com/blinklabs-io/plutigo/cek\""
-    },
-    {
-     "repo": "blinklabs-io/cardano-node-api",
-     "revision": "136815536d9d5e6de09c5b1d206714f7ec7118b8",
-     "path": "internal/utxorpc/submit.go",
-     "line": 1133,
-     "quote": "langVersion := cek.LanguageVersionV2"
-    }
-   ]
-  },
-  {
    "tool": "bursa",
    "revision": "129d9340ff83afbe151f00e9eaaf7714a0961866",
    "via": "gouroboros",
@@ -298,26 +271,6 @@
      "path": "pkgmgr/pkgmgr.go",
      "line": 816,
      "quote": "tmpNetwork, ok := ouroboros.NetworkByName(newContext.Network)"
-    }
-   ]
-  },
-  {
-   "tool": "cardano-up",
-   "revision": "1149903ef0161c71be248852c861ae0c4211c5d5",
-   "via": "plutigo",
-   "surfaces": [
-    "plutus-language",
-    "plutus-script-context"
-   ],
-   "decision": "not-reached",
-   "summary": "plutigo is an indirect module requirement with no import.",
-   "evidence": [
-    {
-     "repo": "blinklabs-io/cardano-up",
-     "revision": "1149903ef0161c71be248852c861ae0c4211c5d5",
-     "path": "go.mod",
-     "line": 29,
-     "quote": "github.com/blinklabs-io/plutigo v0.9.1 // indirect"
     }
    ]
   },

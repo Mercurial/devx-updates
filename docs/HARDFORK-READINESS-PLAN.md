@@ -15,7 +15,7 @@ This checklist records delivered behavior and verification, not just code starte
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
 - [ ] R1: Dijkstra change register and surface vocabulary — core register delivered (17 changes, 58 verified citations); node-to-node, query-encoding and genesis reads remain.
 - [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
-- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap outside the boundary decided from shipped code (21 tools confirmed); boundary-to-boundary propagation (31 dependency gaps) remains with R2.
+- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap outside the boundary decided from shipped code (21 tools confirmed); boundary-to-boundary propagation (26 dependency gaps) remains with R2.
 - [ ] R4: devnet/testnet verification of boundary components, then representative consumers.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
@@ -175,7 +175,7 @@ Worst status per component: 8 gap, 37 no-evidence, 1 tracked, 12 in-progress,
   and db-sync use cardano-ledger-dijkstra 0.2.0.1 and cardano-wallet uses
   0.3.0.0; both differ from 0.4.0.0 in block body and header. Pallas 1.4.0
   vendors CDDL from ledger 1587f21a; cardano-js-sdk stops at parameter key 37
-  and cardano-c at 48. Only gouroboros v0.213.7 matches the target CDDL.
+  and cardano-c at 48. Only gouroboros (v0.213.0 and later) matches the target CDDL.
 - **Hydra stops at the fork**: its chain follower throws on a Dijkstra block.
 - **37 components show no Dijkstra work**, including CSL, CML,
   cardano-client-lib, PyCardano, Aiken, OpShin, Helios, Plutarch, Mesh and the
@@ -231,8 +231,8 @@ R5 outreach for the 37 no-evidence boundary components.
 
 Every inherited gap outside the boundary was read in shipped code at the
 classified revision and decided in `content/readiness/dijkstra/leads.json`
-(`check-leads`): 118 tool/dependency/surface decisions, 48 confirmed,
-52 not reached, 18 undetermined, every quote re-read on GitHub.
+(`check-leads`): 114 tool/dependency/surface decisions, 46 confirmed,
+50 not reached, 18 undetermined, every quote re-read on GitHub.
 
 Reading first corrected the scanner (scanner version 8): tests, examples,
 benchmarks, demos and workshops are auxiliary and never set readiness; the
@@ -263,9 +263,19 @@ Findings that change priorities:
   maintainers.
 
 Outreach (R5) is done by the project owner; this work only prepares the
-evidence. Next: assess the 31 boundary-to-boundary dependency gaps inside R2
+evidence.
+
+Pins are judged against verified first releases. R2's `releasedIn` names a
+release confirmed to contain the support, not the first one; judging pins
+against it flagged Dingo, yaci-devkit, Apollo and several plutigo pins that
+already had the support, and produced one wrong lead (cardano-node-api does
+evaluate PlutusV4). R2 now records `firstReleases` per release line (the
+earliest tag containing every cited quote), and `classify-surfaces
+--reclassify` recomputes without fetching so that lead revisions stay valid.
+
+Next: assess the 26 boundary-to-boundary dependency gaps inside R2
 (Mesh, Evolution SDK and yaci-store through Scalus; Blaze, Mesh and Lucid
-Evolution through cardano-js-sdk; yaci-devkit and cf-ledger-sync through yaci;
+Evolution through cardano-js-sdk; cf-ledger-sync through yaci;
 Scrolls and Amaru through Pallas), add hosted API providers to R2, then start R4
 devnet checks with the confirmed node-to-client and decoding gaps.
 

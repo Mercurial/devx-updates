@@ -24,7 +24,7 @@ import { investigationProjects, parseAssignments, summarizeWork, workReport } fr
 import { scanIntegrations } from "../../lib/readiness/integration-scan";
 import { changesBySurface, parseChangeRegister, verifyCitations } from "../../lib/readiness/dijkstra";
 import { parseBoundaryRegister, statusSummary, verifyBoundarySources } from "../../lib/readiness/boundary";
-import { classifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
+import { classifyCatalog, reclassifyCatalog, type ClassificationRegister } from "../../lib/readiness/surface-collect";
 import { leadCoverage, parseLeadRegister, verifyLeadSources } from "../../lib/readiness/leads";
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
@@ -40,7 +40,7 @@ const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   "root-paths": { type: "string" },
   configurations: { type: "string" },
   "python-version": { type: "string" }, packages: { type: "string" }, tags: { type: "string" },
-  "verify-sources": { type: "boolean" },
+  "verify-sources": { type: "boolean" }, reclassify: { type: "boolean" },
 } });
 
 const store = new Store(resolve(values.directory!));
@@ -81,7 +81,7 @@ import-review   --packet packet.json --input result.json [--decisions decisions.
 diff            --before old-snapshot.json | --before-ref git-ref [--output changes.json.gz]
 check-changes   [--input content/readiness/dijkstra/changes.json] [--verify-sources]
 check-boundary  [--input content/readiness/dijkstra/boundary.json] [--verify-sources]
-classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness]
+classify-surfaces [--tools a,b] [--output content/readiness/dijkstra/classification.json] [--state .readiness] [--reclassify]
 check-leads     [--input content/readiness/dijkstra/leads.json] [--verify-sources]
                 Validate the hardfork change register; optionally re-read every cited quote via gh
 
@@ -137,11 +137,19 @@ Runnable collectors: ${COLLECT_ADAPTERS.join(", ")}.`);
   if (command === "classify-surfaces") {
     const changes = parseChangeRegister(readJson("content/readiness/dijkstra/changes.json"));
     const boundary = parseBoundaryRegister(readJson("content/readiness/dijkstra/boundary.json"), changes);
+    const output = values.output ?? "content/readiness/dijkstra/classification.json";
+    if (values.reclassify) {
+      // Same revisions and cached scans, current registers: keeps lead decisions valid.
+      const register = reclassifyCatalog(readJson(output) as ClassificationRegister, boundary, changes, values.state!);
+      writeFileSync(output, `${JSON.stringify(register, null, 1)}\n`);
+      console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary, reclassified: true }));
+      return;
+    }
     const wanted = values.tools?.split(",");
     const tools = store.load().tools.filter((t) => !wanted || wanted.includes(t.id));
     if (wanted && tools.length !== wanted.length) throw new Error("--tools names an unknown tool");
     const register = await classifyCatalog(tools.map((t) => ({ id: t.id, repo: t.repo })), boundary, changes, { stateDir: values.state!, log: (line) => console.error(line) });
-    writeFileSync(values.output ?? "content/readiness/dijkstra/classification.json", `${JSON.stringify(register, null, 1)}\n`);
+    writeFileSync(output, `${JSON.stringify(register, null, 1)}\n`);
     console.log(JSON.stringify({ tools: register.tools.length, byExposure: register.summary }));
     return;
   }

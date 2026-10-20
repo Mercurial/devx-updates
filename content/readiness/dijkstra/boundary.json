@@ -6,7 +6,8 @@
     "Each repository was cloned at its default-branch head (observed.revision) and searched case-insensitively for Dijkstra; GitHub issues and pull requests mentioning Dijkstra were retrieved the same day.",
     "Node-to-client readiness is whether the client offers V23 (wire value 32791), the only version ouroboros-consensus 5.1.0.1 accepts.",
     "Codec readiness is compared with the target ledger CDDL (cardano-ledger 54e24ba4) after removing comments and whitespace; Haskell consumers are compared through the cardano-ledger-dijkstra version their CHaP index-state or constraints select.",
-    "Status is per surface group; a component is only as ready as its worst assessment. no-evidence is never a pass."
+    "Status is per surface group; a component is only as ready as its worst assessment. no-evidence is never a pass.",
+    "firstReleases names, per release line, the earliest tag whose source contains every cited source quote (for gouroboros ledger types: the earliest tag whose vendored Dijkstra CDDL is identical to the one compared with the target; for plutus-ledger-api: the target component-set version). Consumer pins are judged only against firstReleases."
   ],
   "components": [
     {
@@ -150,6 +151,16 @@
             "tag": "v0.35.1",
             "date": "2026-05-05"
           },
+          "firstReleases": [
+            {
+              "tag": "v0.35.1",
+              "date": "2026-05-05"
+            },
+            {
+              "tag": "v1.0.0",
+              "date": "2026-05-11"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",
@@ -285,6 +296,12 @@
             "tag": "v0.213.0",
             "date": "2026-10-14"
           },
+          "firstReleases": [
+            {
+              "tag": "v0.213.0",
+              "date": "2026-10-14"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",
@@ -313,6 +330,12 @@
             "tag": "v0.213.7",
             "date": "2026-10-18"
           },
+          "firstReleases": [
+            {
+              "tag": "v0.213.0",
+              "date": "2026-10-14"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",
@@ -514,6 +537,16 @@
             "tag": "v0.4.7",
             "date": "2026-10-11"
           },
+          "firstReleases": [
+            {
+              "tag": "v0.3.10",
+              "date": "2026-05-07"
+            },
+            {
+              "tag": "v0.4.2",
+              "date": "2026-05-07"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",
@@ -555,7 +588,7 @@
             {
               "kind": "tracker",
               "url": "https://github.com/bloxbean/yaci/pull/167",
-              "title": "feat: Leios network mini-protocols (LeiosNotify/LeiosFetch) for Musashi \u2014 transport-only [ADR 0007]",
+              "title": "feat: Leios network mini-protocols (LeiosNotify/LeiosFetch) for Musashi — transport-only [ADR 0007]",
               "state": "open",
               "date": "2026-07-01"
             }
@@ -2541,6 +2574,12 @@
             "tag": "1.71.0.0",
             "date": "2026-09-30"
           },
+          "firstReleases": [
+            {
+              "tag": "1.71.0.0",
+              "date": "2026-09-30"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",
@@ -2789,6 +2828,12 @@
             "tag": "v0.9.10",
             "date": "2026-10-19"
           },
+          "firstReleases": [
+            {
+              "tag": "v0.8.0",
+              "date": "2026-09-30"
+            }
+          ],
           "evidence": [
             {
               "kind": "source",

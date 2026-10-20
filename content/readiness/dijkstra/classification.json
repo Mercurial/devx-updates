@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T09:12:30.585Z",
+ "generatedAt": "2026-10-20T09:25:18.746Z",
  "rulesDigest": "75ed0c6422effee3f44d27a99162ed525f2d78d3ed6f9403da112027a25f6427",
  "changeTarget": {
   "name": "Dijkstra",
@@ -286,7 +286,7 @@
       },
       {
        "channel": "dependency",
-       "via": "pallas@0.34.0<v0.35.1",
+       "via": "pallas@0.34.0<v0.35.1|v1.0.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -1907,1608 +1907,6 @@
    }
   },
   {
-   "id": "dingo",
-   "repo": "blinklabs-io/dingo",
-   "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
-   "scan": {
-    "status": "scanned",
-    "files": 2342,
-    "skipped": 940
-   },
-   "exposure": "implements",
-   "readiness": "gap",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:segregated-block-body",
-       "readiness": "unassessed",
-       "lines": 62,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "in-progress",
-       "lines": 20,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 90,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 7,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 323,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "cardano-cli",
-     "channels": [
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 17,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "service:cardano-cli",
-       "readiness": "upstream",
-       "lines": 4,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "consensus-participation",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 17,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:closed-era-list",
-       "readiness": "unassessed",
-       "lines": 8,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "in-progress",
-       "lines": 20,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 73,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 90,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 7,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:node-to-client",
-       "readiness": "unassessed",
-       "lines": 208,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "released",
-       "lines": 20,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "released",
-       "lines": 90,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:node-socket",
-       "readiness": "upstream",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "released",
-       "lines": 7,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "plutigo",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 14,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 7,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "plutus-script-context",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "plutigo",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:script-context",
-       "readiness": "unassessed",
-       "lines": 5,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 224,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "in-progress",
-       "lines": 20,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 73,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 7,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 160,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "in-progress",
-       "lines": 20,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 38,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "cardano-db-sync",
-       "readiness": "in-progress",
-       "lines": 20,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "koios",
-       "readiness": "no-evidence",
-       "lines": 73,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 90,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 7,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 323,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "dingo",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros@0.213.5<v0.213.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:gouroboros",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 22,
-       "quote": "github.com/blinklabs-io/gouroboros v0.213.5"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 22,
-       "quote": "github.com/blinklabs-io/gouroboros v0.213.5"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:plutigo",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 24,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.10"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 24,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.10"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:utxorpc",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 43,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 43,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cli-era-command",
-     "files": 2,
-     "lines": 0,
-     "auxLines": 17,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "internal/test/devnet/configurator.sh",
-       "line": 96,
-       "quote": "pool_hash=\"$(cardano-cli latest stake-pool id \\"
-      },
-      {
-       "path": "internal/test/erastest/tests_test.go",
-       "line": 268,
-       "quote": "\"cardano-cli conway query protocol-parameters \"+"
-      },
-      {
-       "path": "internal/test/erastest/tests_test.go",
-       "line": 316,
-       "quote": "\"cardano-cli conway governance drep key-gen \"+"
-      }
-     ]
-    },
-    {
-     "rule": "marker:closed-era-list",
-     "files": 23,
-     "lines": 8,
-     "auxLines": 15,
-     "docLines": 5,
-     "examples": [
-      {
-       "path": "api/mcp/resources.go",
-       "line": 296,
-       "quote": "- Era-aware ledger supporting Byron, Shelley, Allegra, Mary, Alonzo, Babbage, and Conway."
-      },
-      {
-       "path": "api/mcp/tools_cardano_extended.go",
-       "line": 710,
-       "quote": "return nil, nil, errors.New(\"alonzo word-based minimum UTxO sizing is unsupported; supply coins_per_byte for Babbage/Conway sizing\")"
-      },
-      {
-       "path": "ledger/candidate_nonce.go",
-       "line": 663,
-       "quote": "// Alonzo=4, Babbage=5, Conway=6. Byron has no Praos randomness"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 112,
-     "lines": 224,
-     "auxLines": 537,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "api/blockfrost/adapter.go",
-       "line": 645,
-       "quote": "// non-cost-model numeric reads), not an internal validation/fee-computation"
-      },
-      {
-       "path": "api/blockfrost/adapter.go",
-       "line": 2900,
-       "quote": "fillAlonzoPParamsInfo(&info, pp.MinPoolCost, pp.AdaPerUtxoByte, pp.ExecutionCosts, pp.MaxTxExUnits, pp.MaxBlockExUnits, pp.MaxValueSize, pp.CollateralPercentage, pp.MaxCollateralInputs, pp.CostModels)"
-      },
-      {
-       "path": "api/blockfrost/adapter.go",
-       "line": 2903,
-       "quote": "fillAlonzoPParamsInfo(&info, pp.MinPoolCost, pp.AdaPerUtxoByte, pp.ExecutionCosts, pp.MaxTxExUnits, pp.MaxBlockExUnits, pp.MaxValueSize, pp.CollateralPercentage, pp.MaxCollateralInputs, pp.CostModels)"
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 28,
-     "lines": 38,
-     "auxLines": 33,
-     "docLines": 9,
-     "examples": [
-      {
-       "path": "database/models/account.go",
-       "line": 267,
-       "quote": "type StakeDeregistration struct {"
-      },
-      {
-       "path": "database/models/account.go",
-       "line": 275,
-       "quote": "type StakeRegistration struct {"
-      },
-      {
-       "path": "database/plugin/metadata/sqlstore/account_history.go",
-       "line": 72,
-       "quote": "\"stake_deregistration\","
-      }
-     ]
-    },
-    {
-     "rule": "marker:node-to-client",
-     "files": 109,
-     "lines": 208,
-     "auxLines": 231,
-     "docLines": 30,
-     "examples": [
-      {
-       "path": "api/mesh/construction.go",
-       "line": 335,
-       "quote": "// protocol parameters\" surface (LocalStateQuery, Blockfrost, UTXORPC)."
-      },
-      {
-       "path": "api/utxorpc/readstate.go",
-       "line": 107,
-       "quote": "// ledger.PoolStakeDistribution that also answers the node-to-client"
-      },
-      {
-       "path": "chainsync/chainsync.go",
-       "line": 101,
-       "quote": "// chainsync server-side client (node-to-client connections)."
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 34,
-     "lines": 14,
-     "auxLines": 47,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "api/blockfrost/adapter.go",
-       "line": 3073,
-       "quote": "return \"PlutusV3\""
-      },
-      {
-       "path": "api/blockfrost/adapter_governance_params.go",
-       "line": 144,
-       "quote": "names := map[uint]string{0: \"PlutusV1\", 1: \"PlutusV2\", 2: \"PlutusV3\"}"
-      },
-      {
-       "path": "api/blockfrost/adapter_scripts.go",
-       "line": 44,
-       "quote": "return \"plutusV3\", nil"
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 107,
-     "lines": 160,
-     "auxLines": 233,
-     "docLines": 22,
-     "examples": [
-      {
-       "path": "api/blockfrost/adapter_pools_list.go",
-       "line": 49,
-       "quote": "// pool_registration row count instead (verified via EXPLAIN on all three"
-      },
-      {
-       "path": "api/mesh/operations.go",
-       "line": 26,
-       "quote": "OpPoolRegistration         = \"poolRegistration\""
-      },
-      {
-       "path": "database/models/pool.go",
-       "line": 52,
-       "quote": "// The actual parent-child relationship is PoolRegistration -> Owners/Relays."
-      }
-     ]
-    },
-    {
-     "rule": "marker:raw-cbor-codec",
-     "files": 16,
-     "lines": 9,
-     "auxLines": 15,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "database/plugin/metadata/internal/certutil/pool.go",
-       "line": 29,
-       "quote": "// 29-byte reward address (1 header byte + 28 hash bytes). fxamacker/cbor"
-      },
-      {
-       "path": "go.mod",
-       "line": 29,
-       "quote": "github.com/fxamacker/cbor/v2 v2.9.6"
-      },
-      {
-       "path": "internal/node/load.go",
-       "line": 48,
-       "quote": "fxcbor \"github.com/fxamacker/cbor/v2\""
-      }
-     ]
-    },
-    {
-     "rule": "marker:script-context",
-     "files": 15,
-     "lines": 5,
-     "auxLines": 38,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/eras/babbage.go",
-       "line": 319,
-       "quote": "// per-redeemer TxInfo rebuild)."
-      },
-      {
-       "path": "ledger/eras/conway.go",
-       "line": 1112,
-       "quote": "// newTxInfoCache builds the per-tx PlutusV1/V2/V3 TxInfo cache, shared by"
-      },
-      {
-       "path": "ledger/eras/conway.go",
-       "line": 1115,
-       "quote": "// a TxInfo re-derives the whole transaction's Plutus-Data-encoded inputs,"
-      }
-     ]
-    },
-    {
-     "rule": "marker:segregated-block-body",
-     "files": 28,
-     "lines": 62,
-     "auxLines": 96,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "database/models/leios_block.go",
-       "line": 33,
-       "quote": "// block: [header, transaction_bodies, transaction_witness_sets,"
-      },
-      {
-       "path": "database/models/leios_block.go",
-       "line": 34,
-       "quote": "// transaction_metadata, invalid_transactions]."
-      },
-      {
-       "path": "internal/cborconformance/decode.go",
-       "line": 757,
-       "quote": "invalidTransactions := fields[4]"
-      }
-     ]
-    },
-    {
-     "rule": "service:blockfrost",
-     "files": 4,
-     "lines": 3,
-     "auxLines": 19,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "api/blockfrost/handlers.go",
-       "line": 92,
-       "quote": "URL:     \"https://blockfrost.io/\","
-      },
-      {
-       "path": "go.mod",
-       "line": 25,
-       "quote": "github.com/blockfrost/blockfrost-go v0.5.0"
-      },
-      {
-       "path": "node_lifecycle.go",
-       "line": 1013,
-       "quote": "// servers (utxorpc, midnightServer, blockfrostAPI, kupoAPI, meshAPI,"
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 9,
-     "lines": 4,
-     "auxLines": 24,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "dingo.yaml.example",
-       "line": 682,
-       "quote": "# vote signing key generated by `cardano-cli dijkstra node key-gen-BLS`."
-      },
-      {
-       "path": "keystore/keyfile.go",
-       "line": 30,
-       "quote": "// keyFileEnvelope represents the JSON structure of a cardano-cli key file."
-      },
-      {
-       "path": "ledger/leader/election.go",
-       "line": 955,
-       "quote": "// schedule that disagrees with `cardano-cli query leadership-schedule` can"
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-db-sync",
-     "files": 16,
-     "lines": 20,
-     "auxLines": 9,
-     "docLines": 8,
-     "examples": [
-      {
-       "path": "api/blockfrost/adapter.go",
-       "line": 2773,
-       "quote": "// become spendable in newEpoch = snapshot+3. cardano-db-sync, which"
-      },
-      {
-       "path": "api/blockfrost/adapter_governance.go",
-       "line": 576,
-       "quote": "// governance action id (transaction id, then index). This is db-sync's"
-      },
-      {
-       "path": "api/mcp/doc.go",
-       "line": 29,
-       "quote": "//     dingo://schema/table/<name>, dingo://dbsync/cheatsheet, dingo://docs/...)"
-      }
-     ]
-    },
-    {
-     "rule": "service:koios",
-     "files": 19,
-     "lines": 73,
-     "auxLines": 46,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "cmd/node-parity/from_genesis.go",
-       "line": 389,
-       "quote": "koios *koiosparity.KoiosClient,"
-      },
-      {
-       "path": "cmd/node-parity/from_genesis.go",
-       "line": 429,
-       "quote": ") (*koiosparity.KoiosClient, error) {"
-      },
-      {
-       "path": "config.go",
-       "line": 98,
-       "quote": "// BaseURL overrides the public koios.rest host for the network, for a"
-      }
-     ]
-    },
-    {
-     "rule": "service:kupo",
-     "files": 35,
-     "lines": 90,
-     "auxLines": 19,
-     "docLines": 7,
-     "examples": [
-      {
-       "path": "api/kupo/adapter.go",
-       "line": 15,
-       "quote": "package kupo"
-      },
-      {
-       "path": "api/kupo/adapter.go",
-       "line": 44,
-       "quote": "// metadataBlockAtOrAfterSlot resolves the block a Kupo metadata request"
-      },
-      {
-       "path": "api/kupo/adapter.go",
-       "line": 50,
-       "quote": "// expiry is contiguous from genesis, so the block Kupo would return is not"
-      }
-     ]
-    },
-    {
-     "rule": "service:node-socket",
-     "files": 8,
-     "lines": 5,
-     "auxLines": 22,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "Dockerfile",
-       "line": 128,
-       "quote": "ENV CARDANO_NODE_SOCKET_PATH=/ipc/dingo.socket"
-      },
-      {
-       "path": "bin/entrypoint.sh",
-       "line": 52,
-       "quote": "CARDANO_NODE_SOCKET_PATH=\"${DINGO_SOCKET_PATH}\""
-      },
-      {
-       "path": "bin/entrypoint.sh",
-       "line": 58,
-       "quote": "export CARDANO_NODE_SOCKET_PATH"
-      }
-     ]
-    },
-    {
-     "rule": "service:ogmios",
-     "files": 2,
-     "lines": 7,
-     "auxLines": 2,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "api/blockfrost/evaluate.go",
-       "line": 37,
-       "quote": "// ogmiosEvaluateVersion is the Ogmios major version whose response"
-      },
-      {
-       "path": "api/blockfrost/evaluate.go",
-       "line": 55,
-       "quote": "// endpoints return: the Ogmios v5 EvaluateTx response that Blockfrost passes"
-      },
-      {
-       "path": "api/blockfrost/evaluate.go",
-       "line": 69,
-       "quote": "// evaluation under the key Ogmios uses for them."
-      }
-     ]
-    },
-    {
-     "rule": "service:utxorpc",
-     "files": 96,
-     "lines": 323,
-     "auxLines": 250,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": ".npmignore",
-       "line": 27,
-       "quote": "utxorpc"
-      },
-      {
-       "path": "api/kupo/server.go",
-       "line": 238,
-       "quote": "// WriteTimeout deliberately 0, as in api/utxorpc: /matches"
-      },
-      {
-       "path": "api/mesh/construction.go",
-       "line": 335,
-       "quote": "// protocol parameters\" surface (LocalStateQuery, Blockfrost, UTXORPC)."
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-10-20T08:53:51Z"
-   }
-  },
-  {
-   "id": "gouroboros",
-   "repo": "blinklabs-io/gouroboros",
-   "revision": "c2cb81f55d3f4c2f38d310185b080dfdabdba1cb",
-   "scan": {
-    "status": "scanned",
-    "files": 977,
-    "skipped": 11
-   },
-   "exposure": "implements",
-   "readiness": "gap",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 13,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:segregated-block-body",
-       "readiness": "unassessed",
-       "lines": 180,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 489,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "cardano-cli",
-     "channels": [
-      {
-       "channel": "service",
-       "via": "service:cardano-cli",
-       "readiness": "upstream",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "consensus-participation",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:closed-era-list",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:node-to-client",
-       "readiness": "unassessed",
-       "lines": 135,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:node-socket",
-       "readiness": "upstream",
-       "lines": 3,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "plutigo@0.9.7<v0.9.10",
-       "readiness": "gap",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 16,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "plutus-script-context",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "plutigo@0.9.7<v0.9.10",
-       "readiness": "gap",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:script-context",
-       "readiness": "unassessed",
-       "lines": 43,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 185,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 24,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 5,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 13,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 489,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 0,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:plutigo",
-     "files": 2,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 8,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:utxorpc",
-     "files": 2,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "tools/go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      }
-     ]
-    },
-    {
-     "rule": "marker:closed-era-list",
-     "files": 14,
-     "lines": 9,
-     "auxLines": 9,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "ledger/common/common.go",
-       "line": 2616,
-       "quote": "// Redeemers can be either an array (Alonzo-Babbage) or map (Conway+)."
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 178,
-       "quote": "// no protocol version and has no branch, and Alonzo, Babbage and Conway all"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 637,
-       "quote": "// Pre-Conway eras (Alonzo/Babbage transVITime) use `PV1.to` for an"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 49,
-     "lines": 185,
-     "auxLines": 191,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 25,
-       "quote": "MaxTxExUnits common.ExUnits"
-      },
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 33,
-       "quote": "e.MaxTxExUnits.Steps,"
-      },
-      {
-       "path": "ledger/alonzo/errors.go",
-       "line": 34,
-       "quote": "e.MaxTxExUnits.Memory,"
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 5,
-     "lines": 5,
-     "auxLines": 3,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/block_state.go",
-       "line": 801,
-       "quote": "func (b *BlockLedgerState) StakeRegistration("
-      },
-      {
-       "path": "ledger/common/block_state.go",
-       "line": 804,
-       "quote": "return b.base.StakeRegistration(stakeKey)"
-      },
-      {
-       "path": "ledger/common/certs.go",
-       "line": 355,
-       "quote": "StakeRegistration: stakeCred,"
-      }
-     ]
-    },
-    {
-     "rule": "marker:node-to-client",
-     "files": 86,
-     "lines": 135,
-     "auxLines": 384,
-     "docLines": 38,
-     "examples": [
-      {
-       "path": "connection.go",
-       "line": 47,
-       "quote": "\"github.com/blinklabs-io/gouroboros/protocol/localstatequery\""
-      },
-      {
-       "path": "connection.go",
-       "line": 108,
-       "quote": "localStateQuery         *localstatequery.LocalStateQuery"
-      },
-      {
-       "path": "connection.go",
-       "line": 109,
-       "quote": "localStateQueryConfig   *localstatequery.Config"
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 31,
-     "lines": 16,
-     "auxLines": 49,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "ledger/alonzo/genesis.go",
-       "line": 56,
-       "quote": "case \"PlutusV3\":"
-      },
-      {
-       "path": "ledger/alonzo/pparams.go",
-       "line": 264,
-       "quote": "case \"PlutusV3\":"
-      },
-      {
-       "path": "ledger/common/common.go",
-       "line": 2814,
-       "quote": "// 0x00 = native script, 0x01 = PlutusV1, 0x02 = PlutusV2, 0x03 = PlutusV3"
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 16,
-     "lines": 24,
-     "auxLines": 33,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/certs.go",
-       "line": 1643,
-       "quote": "PoolRegistration: &utxorpc.PoolRegistrationCert{"
-      },
-      {
-       "path": "ledger/common/rewards.go",
-       "line": 89,
-       "quote": "PoolParams map[PoolKeyHash]*PoolRegistrationCertificate"
-      },
-      {
-       "path": "ledger/common/rewards.go",
-       "line": 412,
-       "quote": "poolParams, exists := snapshot.PoolParams[poolID]"
-      }
-     ]
-    },
-    {
-     "rule": "marker:raw-cbor-codec",
-     "files": 18,
-     "lines": 13,
-     "auxLines": 5,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "cbor/bytestring.go",
-       "line": 21,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      },
-      {
-       "path": "cbor/cbor.go",
-       "line": 18,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      },
-      {
-       "path": "cbor/decode.go",
-       "line": 26,
-       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
-      }
-     ]
-    },
-    {
-     "rule": "marker:script-context",
-     "files": 22,
-     "lines": 43,
-     "auxLines": 43,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 37,
-       "quote": "type ScriptContext interface {"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 43,
-       "quote": "TxInfo  TxInfo"
-      },
-      {
-       "path": "ledger/common/script/context.go",
-       "line": 52,
-       "quote": "s.TxInfo.ToPlutusData(),"
-      }
-     ]
-    },
-    {
-     "rule": "marker:segregated-block-body",
-     "files": 30,
-     "lines": 180,
-     "auxLines": 150,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "cbor/cardano_diagnostic.go",
-       "line": 83,
-       "quote": "// [header, tx_bodies, tx_witnesses, auxiliary_data_set, invalid_transactions];"
-      },
-      {
-       "path": "cbor/cardano_labels.go",
-       "line": 63,
-       "quote": "\"transaction_bodies\","
-      },
-      {
-       "path": "cbor/cardano_labels.go",
-       "line": 66,
-       "quote": "\"invalid_transactions\","
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "protocol/localstatequery/queries.go",
-       "line": 511,
-       "quote": "// is used by cardano-cli query stake-address-info."
-      }
-     ]
-    },
-    {
-     "rule": "service:node-socket",
-     "files": 10,
-     "lines": 3,
-     "auxLines": 12,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 48,
-       "quote": "if [ -S \"$NODE_IPC_DIR/node.socket\" ] &&"
-      },
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 51,
-       "quote": "docker exec cardano-node chmod 0666 /ipc/node.socket"
-      },
-      {
-       "path": ".github/workflows/cardano-node-integration.yml",
-       "line": 60,
-       "quote": "GOUROBOROS_CARDANO_NODE_SOCKET_PATH: /tmp/cardano-node-ipc/node.socket"
-      }
-     ]
-    },
-    {
-     "rule": "service:utxorpc",
-     "files": 55,
-     "lines": 489,
-     "auxLines": 419,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "ledger/allegra/allegra.go",
-       "line": 25,
-       "quote": "utxorpc \"github.com/utxorpc/go-codegen/utxorpc/v1alpha/cardano\""
-      },
-      {
-       "path": "ledger/allegra/allegra.go",
-       "line": 188,
-       "quote": "func (b *AllegraBlock) Utxorpc() (*utxorpc.Block, error) {"
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-10-20T08:54:03Z"
-   }
-  },
-  {
    "id": "kuber",
    "repo": "dQuadrant/kuber",
    "revision": "2c559089e394ea7bc8a9bbde968bcdfb2ef7fac5",
@@ -4207,7 +2605,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4248,7 +2646,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4261,7 +2659,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4322,15 +2720,15 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       }
@@ -4342,20 +2740,20 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "released"
     },
     {
      "surface": "protocol-parameters",
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4375,7 +2773,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4402,7 +2800,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4443,7 +2841,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.209.0<v0.213.7",
+       "via": "gouroboros@0.209.0<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -4688,664 +3086,6 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-10-19T18:03:51Z"
-   }
-  },
-  {
-   "id": "apollo",
-   "repo": "Salvionied/apollo",
-   "revision": "ce93350dd2ca6bd8fa6278dad1559edf492340d5",
-   "scan": {
-    "status": "scanned",
-    "files": 160,
-    "skipped": 4
-   },
-   "exposure": "implements",
-   "readiness": "gap",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 36,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 26,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "consensus-participation",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 36,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "released",
-       "lines": 36,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "released",
-       "lines": 81,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "released"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "plutigo@0.9.7<v0.9.10",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 7,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "plutus-script-context",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "plutigo@0.9.7<v0.9.10",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 49,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "tracked"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 2,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:raw-cbor-codec",
-       "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 36,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "utxorpc",
-       "readiness": "in-progress",
-       "lines": 26,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "apollo",
-       "readiness": "tracked",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "gouroboros",
-       "readiness": "released",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "tracked"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:gouroboros",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 10,
-       "quote": "github.com/blinklabs-io/gouroboros v0.213.7"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 10,
-       "quote": "github.com/blinklabs-io/gouroboros v0.213.7"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:plutigo",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 11,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 11,
-       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:utxorpc",
-     "files": 1,
-     "lines": 2,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 13,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-sdk v0.1.0"
-      }
-     ],
-     "pins": [
-      {
-       "path": "go.mod",
-       "line": 13,
-       "quote": "github.com/utxorpc/go-codegen v0.19.2"
-      },
-      {
-       "path": "go.mod",
-       "line": 14,
-       "quote": "github.com/utxorpc/go-sdk v0.1.0"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cli-era-command",
-     "files": 5,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 11,
-     "examples": [
-      {
-       "path": "docs/conway_governance/committee_methods.md",
-       "line": 77,
-       "quote": "cardano-cli conway governance committee create-hot-key-authorization-certificate \\"
-      },
-      {
-       "path": "docs/conway_governance/committee_methods.md",
-       "line": 125,
-       "quote": "cardano-cli conway governance committee create-cold-key-resignation-certificate \\"
-      },
-      {
-       "path": "docs/conway_governance/drep_methods.md",
-       "line": 108,
-       "quote": "cardano-cli conway governance drep registration-certificate \\"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 20,
-     "lines": 49,
-     "auxLines": 13,
-     "docLines": 10,
-     "examples": [
-      {
-       "path": "apollo.go",
-       "line": 2973,
-       "quote": "usedCostModels, err := a.usedScriptCostModels(inputs, pp.CostModels)"
-      },
-      {
-       "path": "backend/base.go",
-       "line": 239,
-       "quote": "CostModels                       map[string][]int64 `json:\"cost_models\"`"
-      },
-      {
-       "path": "backend/blockfrost/blockfrost.go",
-       "line": 130,
-       "quote": "// Deep copy CostModels to prevent callers from mutating the cache."
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 2,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "docs/staking_functionalities/deregister_methods.md",
-       "line": 13,
-       "quote": "`credOrAddr` can be: `*common.Credential`, `common.Credential`, `common.Address`, `string` (bech32), or `nil` (uses wallet). Appends a `StakeDeregistration` certificate."
-      },
-      {
-       "path": "docs/staking_functionalities/register_methods.md",
-       "line": 17,
-       "quote": "`credOrAddr` can be: `*common.Credential`, `common.Credential`, `common.Address`, `string` (bech32), or `nil` (uses wallet). Appends a `StakeRegistration` certificate."
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 13,
-     "lines": 7,
-     "auxLines": 16,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": "apollo.go",
-       "line": 3098,
-       "quote": "used[\"PlutusV3\"] = struct{}{}"
-      },
-      {
-       "path": "apollo.go",
-       "line": 3919,
-       "quote": "used[\"PlutusV3\"] = struct{}{}"
-      },
-      {
-       "path": "backend/blockfrost/blockfrost.go",
-       "line": 603,
-       "quote": "ref.PlutusV3 = &scriptHex"
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "CHANGELOG.md",
-       "line": 374,
-       "quote": "builder state, and invalid pool-registration margins are handled rather than"
-      }
-     ]
-    },
-    {
-     "rule": "marker:raw-cbor-codec",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "go.mod",
-       "line": 31,
-       "quote": "github.com/fxamacker/cbor/v2 v2.9.6 // indirect"
-      }
-     ]
-    },
-    {
-     "rule": "service:blockfrost",
-     "files": 1,
-     "lines": 3,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "constants/constants.go",
-       "line": 7,
-       "quote": "const BlockfrostBaseUrlMainnet = \"https://cardano-mainnet.blockfrost.io/api/v0\""
-      },
-      {
-       "path": "constants/constants.go",
-       "line": 8,
-       "quote": "const BlockfrostBaseUrlPreview = \"https://cardano-preview.blockfrost.io/api/v0\""
-      },
-      {
-       "path": "constants/constants.go",
-       "line": 9,
-       "quote": "const BlockfrostBaseUrlPreprod = \"https://cardano-preprod.blockfrost.io/api/v0\""
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 10,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 21,
-     "examples": [
-      {
-       "path": "docs/conway_governance/committee_methods.md",
-       "line": 77,
-       "quote": "cardano-cli conway governance committee create-hot-key-authorization-certificate \\"
-      },
-      {
-       "path": "docs/conway_governance/committee_methods.md",
-       "line": 125,
-       "quote": "cardano-cli conway governance committee create-cold-key-resignation-certificate \\"
-      },
-      {
-       "path": "docs/conway_governance/drep_methods.md",
-       "line": 108,
-       "quote": "cardano-cli conway governance drep registration-certificate \\"
-      }
-     ]
-    },
-    {
-     "rule": "service:kupo",
-     "files": 13,
-     "lines": 36,
-     "auxLines": 11,
-     "docLines": 10,
-     "examples": [
-      {
-       "path": "backend/ogmios/client.go",
-       "line": 64,
-       "quote": "// KupoClient is the Kupo query surface OgmiosChainContext depends on. Ogmios"
-      },
-      {
-       "path": "backend/ogmios/client.go",
-       "line": 66,
-       "quote": "// context built without a Kupo client reports neither CapabilityUtxos nor"
-      },
-      {
-       "path": "backend/ogmios/client.go",
-       "line": 114,
-       "quote": "// kupoBaseURL validates a Kupo endpoint and returns the base URL to request."
-      }
-     ]
-    },
-    {
-     "rule": "service:ogmios",
-     "files": 21,
-     "lines": 81,
-     "auxLines": 34,
-     "docLines": 33,
-     "examples": [
-      {
-       "path": "apollo.go",
-       "line": 2632,
-       "quote": "// fee (key 2). Strict evaluators (Ogmios, and Blockfrost which proxies it)"
-      },
-      {
-       "path": "backend/blockfrost/blockfrost.go",
-       "line": 346,
-       "quote": "// unsafe for asset-bearing additional UTxOs (Ogmios jsonwsp base16/base64"
-      },
-      {
-       "path": "backend/blockfrost/blockfrost.go",
-       "line": 374,
-       "quote": "// scripts into a large JSON body. Hosted Blockfrost→Ogmios rejects that"
-      }
-     ]
-    },
-    {
-     "rule": "service:utxorpc",
-     "files": 16,
-     "lines": 26,
-     "auxLines": 26,
-     "docLines": 16,
-     "examples": [
-      {
-       "path": "apollo.go",
-       "line": 2677,
-       "quote": "// argument or reject it outright, and backend/utxorpc rejects it, so"
-      },
-      {
-       "path": "backend/utxorpc/doc.go",
-       "line": 1,
-       "quote": "// Package utxorpc implements the Apollo chain backend on top of the UTxO RPC"
-      },
-      {
-       "path": "backend/utxorpc/doc.go",
-       "line": 2,
-       "quote": "// protocol. It prefers the utxorpc.v1beta services and falls back to v1alpha"
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-10-19T16:53:13Z"
    }
   },
   {
@@ -13993,7 +11733,7 @@
       },
       {
        "channel": "dependency",
-       "via": "pallas@0.30.1<v0.35.1",
+       "via": "pallas@0.30.1<v0.35.1|v1.0.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -14401,971 +12141,6 @@
    "activity": {
     "archived": false,
     "pushedAt": "2025-01-13T19:53:39Z"
-   }
-  },
-  {
-   "id": "yaci-devkit",
-   "repo": "bloxbean/yaci-devkit",
-   "revision": "e67d385799b40aab0992d0b3616dfd8c14ed5ff8",
-   "scan": {
-    "status": "scanned",
-    "files": 650,
-    "skipped": 37
-   },
-   "exposure": "implements",
-   "readiness": "gap",
-   "surfaces": [
-    {
-     "surface": "block-encoding",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:segregated-block-body",
-       "readiness": "unassessed",
-       "lines": 9,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 125,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "in-progress"
-    },
-    {
-     "surface": "cardano-cli",
-     "channels": [
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:cardano-cli",
-       "readiness": "upstream",
-       "lines": 10,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "upstream"
-    },
-    {
-     "surface": "era-identity",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "yaci-devkit",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cli-era-command",
-       "readiness": "unassessed",
-       "lines": 3,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:closed-era-list",
-       "readiness": "unassessed",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 10,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 125,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "node-to-client-protocol",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "yaci@0.4.3<v0.4.7",
-       "readiness": "gap",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:node-to-client",
-       "readiness": "unassessed",
-       "lines": 43,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "released",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:node-socket",
-       "readiness": "upstream",
-       "lines": 10,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "released",
-       "lines": 125,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "gap"
-    },
-    {
-     "surface": "plutus-language",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "tracked",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:plutus-language-enum",
-       "readiness": "unassessed",
-       "lines": 24,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 125,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "tracked"
-    },
-    {
-     "surface": "protocol-parameters",
-     "channels": [
-      {
-       "channel": "implements",
-       "via": "yaci-devkit",
-       "readiness": "in-progress",
-       "lines": 0,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:cost-models-or-parameters",
-       "readiness": "unassessed",
-       "lines": 53,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 10,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 125,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "stake-pool-registration",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:pool-registration",
-       "readiness": "unassessed",
-       "lines": 16,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-encoding",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      },
-      {
-       "channel": "marker",
-       "via": "marker:legacy-stake-certificate",
-       "readiness": "unassessed",
-       "lines": 8,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "blockfrost-backend-ryo",
-       "readiness": "no-evidence",
-       "lines": 10,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "service",
-       "via": "kupo",
-       "readiness": "in-progress",
-       "lines": 81,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "ogmios",
-       "readiness": "in-progress",
-       "lines": 125,
-       "scope": "shipped"
-      },
-      {
-       "channel": "service",
-       "via": "service:submit-api",
-       "readiness": "upstream",
-       "lines": 12,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    },
-    {
-     "surface": "transaction-rules",
-     "channels": [
-      {
-       "channel": "dependency",
-       "via": "bloxbean-cardano-client-library",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "shipped"
-      },
-      {
-       "channel": "dependency",
-       "via": "evolution-sdk",
-       "readiness": "no-evidence",
-       "lines": 2,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "lucid-evolution",
-       "readiness": "no-evidence",
-       "lines": 1,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "meshjs-mesh-sdk",
-       "readiness": "no-evidence",
-       "lines": 4,
-       "scope": "auxiliary"
-      },
-      {
-       "channel": "dependency",
-       "via": "yaci",
-       "readiness": "in-progress",
-       "lines": 1,
-       "scope": "shipped"
-      }
-     ],
-     "readiness": "no-evidence"
-    }
-   ],
-   "hits": [
-    {
-     "rule": "dependency:bloxbean-cardano-client-library",
-     "files": 1,
-     "lines": 4,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 42,
-       "quote": "exclude group: 'com.bloxbean.cardano', module: 'cardano-client-core'"
-      },
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 44,
-       "quote": "implementation 'com.bloxbean.cardano:cardano-client-lib:0.7.2'"
-      },
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 45,
-       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend:0.7.2'"
-      }
-     ],
-     "pins": [
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 44,
-       "quote": "implementation 'com.bloxbean.cardano:cardano-client-lib:0.7.2'"
-      },
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 45,
-       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend:0.7.2'"
-      },
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 46,
-       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.7.2'"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:evolution-sdk",
-     "files": 2,
-     "lines": 0,
-     "auxLines": 2,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "e2e-tests/evolution-sdk/package.json",
-       "line": 13,
-       "quote": "\"@evolution-sdk/evolution\": \"0.5.15\""
-      },
-      {
-       "path": "examples/evolution-sdk/package.json",
-       "line": 13,
-       "quote": "\"@evolution-sdk/evolution\": \"^0.5.8\""
-      }
-     ]
-    },
-    {
-     "rule": "dependency:lucid-evolution",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 1,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "e2e-tests/lucid-evo/package.json",
-       "line": 12,
-       "quote": "\"@lucid-evolution/lucid\": \"0.6.5\""
-      }
-     ]
-    },
-    {
-     "rule": "dependency:meshjs-mesh-sdk",
-     "files": 2,
-     "lines": 0,
-     "auxLines": 4,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "e2e-tests/meshjs/package.json",
-       "line": 12,
-       "quote": "\"@meshsdk/core\": \"1.9.1\","
-      },
-      {
-       "path": "e2e-tests/meshjs/package.json",
-       "line": 13,
-       "quote": "\"@meshsdk/core-cst\": \"1.9.1\","
-      },
-      {
-       "path": "e2e-tests/meshjs/package.json",
-       "line": 14,
-       "quote": "\"@meshsdk/common\": \"1.9.1\""
-      }
-     ]
-    },
-    {
-     "rule": "dependency:pycardano",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "e2e-tests/pycardano/requirements.txt",
-       "line": 1,
-       "quote": "pycardano==0.19.2"
-      }
-     ]
-    },
-    {
-     "rule": "dependency:yaci",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 41,
-       "quote": "implementation('com.bloxbean.cardano:yaci:0.4.3') {"
-      }
-     ],
-     "pins": [
-      {
-       "path": "applications/cli/build.gradle",
-       "line": 41,
-       "quote": "implementation('com.bloxbean.cardano:yaci:0.4.3') {"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cli-era-command",
-     "files": 2,
-     "lines": 3,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
-       "line": 11,
-       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address key-gen \\"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
-       "line": 21,
-       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address build \\"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/pool-registration.sh",
-       "line": 13,
-       "quote": "${BIN_FOLDER}/cardano-cli latest stake-pool registration-certificate \\"
-      }
-     ]
-    },
-    {
-     "rule": "marker:closed-era-list",
-     "files": 1,
-     "lines": 1,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/yano/YanoService.java",
-       "line": 138,
-       "quote": "String[] genesisFiles = {\"shelley-genesis.json\", \"byron-genesis.json\", \"alonzo-genesis.json\", \"conway-genesis.json\"};"
-      }
-     ]
-    },
-    {
-     "rule": "marker:cost-models-or-parameters",
-     "files": 25,
-     "lines": 53,
-     "auxLines": 10,
-     "docLines": 3,
-     "examples": [
-      {
-       "path": ".github/scripts/homebrew-formula.sh",
-       "line": 74,
-       "quote": "# yaci.cli.bundled-config-dir is only the default for yaci.cli.plutus-costmodels-path (see application.properties),"
-      },
-      {
-       "path": "Earthfile",
-       "line": 50,
-       "quote": "COPY  config/plutus-costmodels-v10.json /app/yaci-devkit-${tag}/config/"
-      },
-      {
-       "path": "Earthfile",
-       "line": 51,
-       "quote": "COPY  config/plutus-costmodels-v11.json /app/yaci-devkit-${tag}/config/"
-      }
-     ]
-    },
-    {
-     "rule": "marker:legacy-stake-certificate",
-     "files": 4,
-     "lines": 8,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/viewer/src/routes/certificates/stake-deregistrations/+page.svelte",
-       "line": 9,
-       "quote": "interface StakeDeregistration {"
-      },
-      {
-       "path": "applications/viewer/src/routes/certificates/stake-deregistrations/+page.svelte",
-       "line": 79,
-       "quote": "{#each data.stakeDeregistrations as deregistration: StakeDeregistration, index}"
-      },
-      {
-       "path": "applications/viewer/src/routes/certificates/stake-registrations/+page.svelte",
-       "line": 9,
-       "quote": "interface StakeRegistration {"
-      }
-     ]
-    },
-    {
-     "rule": "marker:node-to-client",
-     "files": 19,
-     "lines": 43,
-     "auxLines": 4,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 112,
-       "quote": "#   yaci-store-n2c -> haskell-only / companion / yano-primary (N2C local-state-query)"
-      },
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 113,
-       "quote": "#   yaci-store-all -> yano-only (no N2C; derives protocol params from epoch_param)"
-      },
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 115,
-       "quote": "RUN chmod +x /app/store/yaci-store-n2c /app/store/yaci-store-all"
-      }
-     ]
-    },
-    {
-     "rule": "marker:plutus-language-enum",
-     "files": 29,
-     "lines": 24,
-     "auxLines": 20,
-     "docLines": 8,
-     "examples": [
-      {
-       "path": "applications/cli/config/plutus-costmodels-v10.json",
-       "line": 347,
-       "quote": "\"PlutusV3\": ["
-      },
-      {
-       "path": "applications/cli/config/plutus-costmodels-v11.json",
-       "line": 670,
-       "quote": "\"PlutusV3\": ["
-      },
-      {
-       "path": "applications/cli/docker/plutus-costmodels-v10.json",
-       "line": 347,
-       "quote": "\"PlutusV3\": ["
-      }
-     ]
-    },
-    {
-     "rule": "marker:pool-registration",
-     "files": 4,
-     "lines": 16,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
-       "line": 18,
-       "quote": "import com.bloxbean.cardano.client.transaction.spec.cert.PoolRegistration;"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
-       "line": 218,
-       "quote": "PoolRegistration poolRegistration = poolKeyGeneratorService.getPoolRegistrationCert(nodeName, writer)"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
-       "line": 221,
-       "quote": "String poolId = Bech32.encode(poolRegistration.getOperator(), \"pool\");"
-      }
-     ]
-    },
-    {
-     "rule": "marker:raw-cbor-codec",
-     "files": 1,
-     "lines": 0,
-     "auxLines": 0,
-     "docLines": 2,
-     "examples": [
-      {
-       "path": "e2e-tests/pycardano/requirements.txt",
-       "line": 2,
-       "quote": "# cbor2 6.x removed names that cbor2pure 5.8 (a pycardano dependency) imports"
-      },
-      {
-       "path": "e2e-tests/pycardano/requirements.txt",
-       "line": 3,
-       "quote": "cbor2<6"
-      }
-     ]
-    },
-    {
-     "rule": "marker:segregated-block-body",
-     "files": 1,
-     "lines": 9,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
-       "line": 110,
-       "quote": "List<TransactionBody> transactionBodies = block.getTransactionBodies();"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
-       "line": 113,
-       "quote": "transactionBodies.stream().forEach(transactionBody -> {"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
-       "line": 133,
-       "quote": "if (transactionBodies != null)"
-      }
-     ]
-    },
-    {
-     "rule": "service:blockfrost",
-     "files": 4,
-     "lines": 0,
-     "auxLines": 10,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "e2e-tests/meshjs/payment.ts",
-       "line": 1,
-       "quote": "import {BlockfrostProvider, MeshWallet, Transaction} from \"@meshsdk/core\";"
-      },
-      {
-       "path": "e2e-tests/meshjs/payment.ts",
-       "line": 3,
-       "quote": "// Mesh's BlockfrostProvider pointed at Yaci Store's Blockfrost-compatible API"
-      },
-      {
-       "path": "e2e-tests/meshjs/payment.ts",
-       "line": 4,
-       "quote": "const provider = new BlockfrostProvider(process.env.YACI_STORE_URL ?? 'http://localhost:8080/api/v1');"
-      }
-     ]
-    },
-    {
-     "rule": "service:cardano-cli",
-     "files": 4,
-     "lines": 10,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-cert.sh",
-       "line": 7,
-       "quote": "${BIN_FOLDER}/cardano-cli node issue-op-cert \\"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
-       "line": 7,
-       "quote": "${BIN_FOLDER}/cardano-cli address key-gen \\"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
-       "line": 11,
-       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address key-gen \\"
-      }
-     ]
-    },
-    {
-     "rule": "service:kupo",
-     "files": 34,
-     "lines": 81,
-     "auxLines": 9,
-     "docLines": 54,
-     "examples": [
-      {
-       "path": ".github/scripts/homebrew-formula.sh",
-       "line": 26,
-       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo\" ;;"
-      },
-      {
-       "path": ".github/scripts/homebrew-formula.sh",
-       "line": 29,
-       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo (beta)\" ;;"
-      },
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 98,
-       "quote": "#Kupo download"
-      }
-     ]
-    },
-    {
-     "rule": "service:node-socket",
-     "files": 10,
-     "lines": 10,
-     "auxLines": 0,
-     "docLines": 0,
-     "examples": [
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 141,
-       "quote": "ENV CARDANO_NODE_SOCKET_PATH=/clusters/nodes/default/node/node.sock"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/node-2/node.sh",
-       "line": 9,
-       "quote": "--socket-path node.sock \\"
-      },
-      {
-       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/node-3/node.sh",
-       "line": 9,
-       "quote": "--socket-path node.sock \\"
-      }
-     ]
-    },
-    {
-     "rule": "service:ogmios",
-     "files": 42,
-     "lines": 125,
-     "auxLines": 8,
-     "docLines": 66,
-     "examples": [
-      {
-       "path": ".github/scripts/homebrew-formula.sh",
-       "line": 26,
-       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo\" ;;"
-      },
-      {
-       "path": ".github/scripts/homebrew-formula.sh",
-       "line": 29,
-       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo (beta)\" ;;"
-      },
-      {
-       "path": "applications/cli/Earthfile",
-       "line": 94,
-       "quote": "#Ogmios download"
-      }
-     ]
-    },
-    {
-     "rule": "service:submit-api",
-     "files": 13,
-     "lines": 12,
-     "auxLines": 2,
-     "docLines": 1,
-     "examples": [
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/common/DownloadService.java",
-       "line": 93,
-       "quote": "Path cardanoSubmitApi = Path.of(clusterConfig.getCLIBinFolder(), \"cardano-submit-api\");"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/ClusterService.java",
-       "line": 349,
-       "quote": "writer.accept(error(\"You can also manually download and copy cardano-node, cardano-cli, cardano-submit-api \" +"
-      },
-      {
-       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/ClusterStartService.java",
-       "line": 649,
-       "quote": "//Check if cardano-submit-api exists"
-      }
-     ]
-    }
-   ],
-   "activity": {
-    "archived": false,
-    "pushedAt": "2026-10-19T11:42:44Z"
    }
   },
   {
@@ -16349,7 +13124,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "yaci@0.3.4.1<v0.4.7",
+       "via": "yaci@0.3.4.1<v0.3.10|v0.4.2",
        "readiness": "gap",
        "lines": 9,
        "scope": "shipped"
@@ -18973,6 +15748,993 @@
    }
   },
   {
+   "id": "dingo",
+   "repo": "blinklabs-io/dingo",
+   "revision": "fdc2e62c63930ab261a0d0c90e4de5462a5e0bca",
+   "scan": {
+    "status": "scanned",
+    "files": 2342,
+    "skipped": 940
+   },
+   "exposure": "implements",
+   "readiness": "no-evidence",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:segregated-block-body",
+       "readiness": "unassessed",
+       "lines": 62,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "in-progress",
+       "lines": 20,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 90,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 7,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 323,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "cardano-cli",
+     "channels": [
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 17,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "service:cardano-cli",
+       "readiness": "upstream",
+       "lines": 4,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "consensus-participation",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 17,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:closed-era-list",
+       "readiness": "unassessed",
+       "lines": 8,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "in-progress",
+       "lines": 20,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 73,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 90,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 7,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:node-to-client",
+       "readiness": "unassessed",
+       "lines": 208,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "released",
+       "lines": 20,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "released",
+       "lines": 90,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:node-socket",
+       "readiness": "upstream",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "released",
+       "lines": 7,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 14,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 7,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "plutus-script-context",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:script-context",
+       "readiness": "unassessed",
+       "lines": 5,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 224,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "in-progress",
+       "lines": 20,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 73,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 7,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 160,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "in-progress",
+       "lines": 20,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 38,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "cardano-db-sync",
+       "readiness": "in-progress",
+       "lines": 20,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "koios",
+       "readiness": "no-evidence",
+       "lines": 73,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 90,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 7,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 323,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "dingo",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:gouroboros",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 22,
+       "quote": "github.com/blinklabs-io/gouroboros v0.213.5"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 22,
+       "quote": "github.com/blinklabs-io/gouroboros v0.213.5"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:plutigo",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 24,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.10"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 24,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.10"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:utxorpc",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 43,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 43,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cli-era-command",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 17,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "internal/test/devnet/configurator.sh",
+       "line": 96,
+       "quote": "pool_hash=\"$(cardano-cli latest stake-pool id \\"
+      },
+      {
+       "path": "internal/test/erastest/tests_test.go",
+       "line": 268,
+       "quote": "\"cardano-cli conway query protocol-parameters \"+"
+      },
+      {
+       "path": "internal/test/erastest/tests_test.go",
+       "line": 316,
+       "quote": "\"cardano-cli conway governance drep key-gen \"+"
+      }
+     ]
+    },
+    {
+     "rule": "marker:closed-era-list",
+     "files": 23,
+     "lines": 8,
+     "auxLines": 15,
+     "docLines": 5,
+     "examples": [
+      {
+       "path": "api/mcp/resources.go",
+       "line": 296,
+       "quote": "- Era-aware ledger supporting Byron, Shelley, Allegra, Mary, Alonzo, Babbage, and Conway."
+      },
+      {
+       "path": "api/mcp/tools_cardano_extended.go",
+       "line": 710,
+       "quote": "return nil, nil, errors.New(\"alonzo word-based minimum UTxO sizing is unsupported; supply coins_per_byte for Babbage/Conway sizing\")"
+      },
+      {
+       "path": "ledger/candidate_nonce.go",
+       "line": 663,
+       "quote": "// Alonzo=4, Babbage=5, Conway=6. Byron has no Praos randomness"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 112,
+     "lines": 224,
+     "auxLines": 537,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "api/blockfrost/adapter.go",
+       "line": 645,
+       "quote": "// non-cost-model numeric reads), not an internal validation/fee-computation"
+      },
+      {
+       "path": "api/blockfrost/adapter.go",
+       "line": 2900,
+       "quote": "fillAlonzoPParamsInfo(&info, pp.MinPoolCost, pp.AdaPerUtxoByte, pp.ExecutionCosts, pp.MaxTxExUnits, pp.MaxBlockExUnits, pp.MaxValueSize, pp.CollateralPercentage, pp.MaxCollateralInputs, pp.CostModels)"
+      },
+      {
+       "path": "api/blockfrost/adapter.go",
+       "line": 2903,
+       "quote": "fillAlonzoPParamsInfo(&info, pp.MinPoolCost, pp.AdaPerUtxoByte, pp.ExecutionCosts, pp.MaxTxExUnits, pp.MaxBlockExUnits, pp.MaxValueSize, pp.CollateralPercentage, pp.MaxCollateralInputs, pp.CostModels)"
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 28,
+     "lines": 38,
+     "auxLines": 33,
+     "docLines": 9,
+     "examples": [
+      {
+       "path": "database/models/account.go",
+       "line": 267,
+       "quote": "type StakeDeregistration struct {"
+      },
+      {
+       "path": "database/models/account.go",
+       "line": 275,
+       "quote": "type StakeRegistration struct {"
+      },
+      {
+       "path": "database/plugin/metadata/sqlstore/account_history.go",
+       "line": 72,
+       "quote": "\"stake_deregistration\","
+      }
+     ]
+    },
+    {
+     "rule": "marker:node-to-client",
+     "files": 109,
+     "lines": 208,
+     "auxLines": 231,
+     "docLines": 30,
+     "examples": [
+      {
+       "path": "api/mesh/construction.go",
+       "line": 335,
+       "quote": "// protocol parameters\" surface (LocalStateQuery, Blockfrost, UTXORPC)."
+      },
+      {
+       "path": "api/utxorpc/readstate.go",
+       "line": 107,
+       "quote": "// ledger.PoolStakeDistribution that also answers the node-to-client"
+      },
+      {
+       "path": "chainsync/chainsync.go",
+       "line": 101,
+       "quote": "// chainsync server-side client (node-to-client connections)."
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 34,
+     "lines": 14,
+     "auxLines": 47,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "api/blockfrost/adapter.go",
+       "line": 3073,
+       "quote": "return \"PlutusV3\""
+      },
+      {
+       "path": "api/blockfrost/adapter_governance_params.go",
+       "line": 144,
+       "quote": "names := map[uint]string{0: \"PlutusV1\", 1: \"PlutusV2\", 2: \"PlutusV3\"}"
+      },
+      {
+       "path": "api/blockfrost/adapter_scripts.go",
+       "line": 44,
+       "quote": "return \"plutusV3\", nil"
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 107,
+     "lines": 160,
+     "auxLines": 233,
+     "docLines": 22,
+     "examples": [
+      {
+       "path": "api/blockfrost/adapter_pools_list.go",
+       "line": 49,
+       "quote": "// pool_registration row count instead (verified via EXPLAIN on all three"
+      },
+      {
+       "path": "api/mesh/operations.go",
+       "line": 26,
+       "quote": "OpPoolRegistration         = \"poolRegistration\""
+      },
+      {
+       "path": "database/models/pool.go",
+       "line": 52,
+       "quote": "// The actual parent-child relationship is PoolRegistration -> Owners/Relays."
+      }
+     ]
+    },
+    {
+     "rule": "marker:raw-cbor-codec",
+     "files": 16,
+     "lines": 9,
+     "auxLines": 15,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "database/plugin/metadata/internal/certutil/pool.go",
+       "line": 29,
+       "quote": "// 29-byte reward address (1 header byte + 28 hash bytes). fxamacker/cbor"
+      },
+      {
+       "path": "go.mod",
+       "line": 29,
+       "quote": "github.com/fxamacker/cbor/v2 v2.9.6"
+      },
+      {
+       "path": "internal/node/load.go",
+       "line": 48,
+       "quote": "fxcbor \"github.com/fxamacker/cbor/v2\""
+      }
+     ]
+    },
+    {
+     "rule": "marker:script-context",
+     "files": 15,
+     "lines": 5,
+     "auxLines": 38,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/eras/babbage.go",
+       "line": 319,
+       "quote": "// per-redeemer TxInfo rebuild)."
+      },
+      {
+       "path": "ledger/eras/conway.go",
+       "line": 1112,
+       "quote": "// newTxInfoCache builds the per-tx PlutusV1/V2/V3 TxInfo cache, shared by"
+      },
+      {
+       "path": "ledger/eras/conway.go",
+       "line": 1115,
+       "quote": "// a TxInfo re-derives the whole transaction's Plutus-Data-encoded inputs,"
+      }
+     ]
+    },
+    {
+     "rule": "marker:segregated-block-body",
+     "files": 28,
+     "lines": 62,
+     "auxLines": 96,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "database/models/leios_block.go",
+       "line": 33,
+       "quote": "// block: [header, transaction_bodies, transaction_witness_sets,"
+      },
+      {
+       "path": "database/models/leios_block.go",
+       "line": 34,
+       "quote": "// transaction_metadata, invalid_transactions]."
+      },
+      {
+       "path": "internal/cborconformance/decode.go",
+       "line": 757,
+       "quote": "invalidTransactions := fields[4]"
+      }
+     ]
+    },
+    {
+     "rule": "service:blockfrost",
+     "files": 4,
+     "lines": 3,
+     "auxLines": 19,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "api/blockfrost/handlers.go",
+       "line": 92,
+       "quote": "URL:     \"https://blockfrost.io/\","
+      },
+      {
+       "path": "go.mod",
+       "line": 25,
+       "quote": "github.com/blockfrost/blockfrost-go v0.5.0"
+      },
+      {
+       "path": "node_lifecycle.go",
+       "line": 1013,
+       "quote": "// servers (utxorpc, midnightServer, blockfrostAPI, kupoAPI, meshAPI,"
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 9,
+     "lines": 4,
+     "auxLines": 24,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "dingo.yaml.example",
+       "line": 682,
+       "quote": "# vote signing key generated by `cardano-cli dijkstra node key-gen-BLS`."
+      },
+      {
+       "path": "keystore/keyfile.go",
+       "line": 30,
+       "quote": "// keyFileEnvelope represents the JSON structure of a cardano-cli key file."
+      },
+      {
+       "path": "ledger/leader/election.go",
+       "line": 955,
+       "quote": "// schedule that disagrees with `cardano-cli query leadership-schedule` can"
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-db-sync",
+     "files": 16,
+     "lines": 20,
+     "auxLines": 9,
+     "docLines": 8,
+     "examples": [
+      {
+       "path": "api/blockfrost/adapter.go",
+       "line": 2773,
+       "quote": "// become spendable in newEpoch = snapshot+3. cardano-db-sync, which"
+      },
+      {
+       "path": "api/blockfrost/adapter_governance.go",
+       "line": 576,
+       "quote": "// governance action id (transaction id, then index). This is db-sync's"
+      },
+      {
+       "path": "api/mcp/doc.go",
+       "line": 29,
+       "quote": "//     dingo://schema/table/<name>, dingo://dbsync/cheatsheet, dingo://docs/...)"
+      }
+     ]
+    },
+    {
+     "rule": "service:koios",
+     "files": 19,
+     "lines": 73,
+     "auxLines": 46,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "cmd/node-parity/from_genesis.go",
+       "line": 389,
+       "quote": "koios *koiosparity.KoiosClient,"
+      },
+      {
+       "path": "cmd/node-parity/from_genesis.go",
+       "line": 429,
+       "quote": ") (*koiosparity.KoiosClient, error) {"
+      },
+      {
+       "path": "config.go",
+       "line": 98,
+       "quote": "// BaseURL overrides the public koios.rest host for the network, for a"
+      }
+     ]
+    },
+    {
+     "rule": "service:kupo",
+     "files": 35,
+     "lines": 90,
+     "auxLines": 19,
+     "docLines": 7,
+     "examples": [
+      {
+       "path": "api/kupo/adapter.go",
+       "line": 15,
+       "quote": "package kupo"
+      },
+      {
+       "path": "api/kupo/adapter.go",
+       "line": 44,
+       "quote": "// metadataBlockAtOrAfterSlot resolves the block a Kupo metadata request"
+      },
+      {
+       "path": "api/kupo/adapter.go",
+       "line": 50,
+       "quote": "// expiry is contiguous from genesis, so the block Kupo would return is not"
+      }
+     ]
+    },
+    {
+     "rule": "service:node-socket",
+     "files": 8,
+     "lines": 5,
+     "auxLines": 22,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "Dockerfile",
+       "line": 128,
+       "quote": "ENV CARDANO_NODE_SOCKET_PATH=/ipc/dingo.socket"
+      },
+      {
+       "path": "bin/entrypoint.sh",
+       "line": 52,
+       "quote": "CARDANO_NODE_SOCKET_PATH=\"${DINGO_SOCKET_PATH}\""
+      },
+      {
+       "path": "bin/entrypoint.sh",
+       "line": 58,
+       "quote": "export CARDANO_NODE_SOCKET_PATH"
+      }
+     ]
+    },
+    {
+     "rule": "service:ogmios",
+     "files": 2,
+     "lines": 7,
+     "auxLines": 2,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "api/blockfrost/evaluate.go",
+       "line": 37,
+       "quote": "// ogmiosEvaluateVersion is the Ogmios major version whose response"
+      },
+      {
+       "path": "api/blockfrost/evaluate.go",
+       "line": 55,
+       "quote": "// endpoints return: the Ogmios v5 EvaluateTx response that Blockfrost passes"
+      },
+      {
+       "path": "api/blockfrost/evaluate.go",
+       "line": 69,
+       "quote": "// evaluation under the key Ogmios uses for them."
+      }
+     ]
+    },
+    {
+     "rule": "service:utxorpc",
+     "files": 96,
+     "lines": 323,
+     "auxLines": 250,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": ".npmignore",
+       "line": 27,
+       "quote": "utxorpc"
+      },
+      {
+       "path": "api/kupo/server.go",
+       "line": 238,
+       "quote": "// WriteTimeout deliberately 0, as in api/utxorpc: /matches"
+      },
+      {
+       "path": "api/mesh/construction.go",
+       "line": 335,
+       "quote": "// protocol parameters\" surface (LocalStateQuery, Blockfrost, UTXORPC)."
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-10-20T08:53:51Z"
+   }
+  },
+  {
    "id": "pycardano",
    "repo": "Python-Cardano/pycardano",
    "revision": "877be3ad9a2221fce7eac777c9927430cbc3b868",
@@ -19728,6 +17490,664 @@
    "activity": {
     "archived": false,
     "pushedAt": "2026-10-18T01:54:27Z"
+   }
+  },
+  {
+   "id": "apollo",
+   "repo": "Salvionied/apollo",
+   "revision": "ce93350dd2ca6bd8fa6278dad1559edf492340d5",
+   "scan": {
+    "status": "scanned",
+    "files": 160,
+    "skipped": 4
+   },
+   "exposure": "implements",
+   "readiness": "no-evidence",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 36,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 26,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "consensus-participation",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 36,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "released",
+       "lines": 36,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "released",
+       "lines": 81,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 7,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "tracked"
+    },
+    {
+     "surface": "plutus-script-context",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 49,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "tracked"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 36,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 26,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "apollo",
+       "readiness": "tracked",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "tracked"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:gouroboros",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 10,
+       "quote": "github.com/blinklabs-io/gouroboros v0.213.7"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 10,
+       "quote": "github.com/blinklabs-io/gouroboros v0.213.7"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:plutigo",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 11,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 11,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:utxorpc",
+     "files": 1,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 13,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-sdk v0.1.0"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 13,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-sdk v0.1.0"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cli-era-command",
+     "files": 5,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 11,
+     "examples": [
+      {
+       "path": "docs/conway_governance/committee_methods.md",
+       "line": 77,
+       "quote": "cardano-cli conway governance committee create-hot-key-authorization-certificate \\"
+      },
+      {
+       "path": "docs/conway_governance/committee_methods.md",
+       "line": 125,
+       "quote": "cardano-cli conway governance committee create-cold-key-resignation-certificate \\"
+      },
+      {
+       "path": "docs/conway_governance/drep_methods.md",
+       "line": 108,
+       "quote": "cardano-cli conway governance drep registration-certificate \\"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 20,
+     "lines": 49,
+     "auxLines": 13,
+     "docLines": 10,
+     "examples": [
+      {
+       "path": "apollo.go",
+       "line": 2973,
+       "quote": "usedCostModels, err := a.usedScriptCostModels(inputs, pp.CostModels)"
+      },
+      {
+       "path": "backend/base.go",
+       "line": 239,
+       "quote": "CostModels                       map[string][]int64 `json:\"cost_models\"`"
+      },
+      {
+       "path": "backend/blockfrost/blockfrost.go",
+       "line": 130,
+       "quote": "// Deep copy CostModels to prevent callers from mutating the cache."
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "docs/staking_functionalities/deregister_methods.md",
+       "line": 13,
+       "quote": "`credOrAddr` can be: `*common.Credential`, `common.Credential`, `common.Address`, `string` (bech32), or `nil` (uses wallet). Appends a `StakeDeregistration` certificate."
+      },
+      {
+       "path": "docs/staking_functionalities/register_methods.md",
+       "line": 17,
+       "quote": "`credOrAddr` can be: `*common.Credential`, `common.Credential`, `common.Address`, `string` (bech32), or `nil` (uses wallet). Appends a `StakeRegistration` certificate."
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 13,
+     "lines": 7,
+     "auxLines": 16,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "apollo.go",
+       "line": 3098,
+       "quote": "used[\"PlutusV3\"] = struct{}{}"
+      },
+      {
+       "path": "apollo.go",
+       "line": 3919,
+       "quote": "used[\"PlutusV3\"] = struct{}{}"
+      },
+      {
+       "path": "backend/blockfrost/blockfrost.go",
+       "line": 603,
+       "quote": "ref.PlutusV3 = &scriptHex"
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "CHANGELOG.md",
+       "line": 374,
+       "quote": "builder state, and invalid pool-registration margins are handled rather than"
+      }
+     ]
+    },
+    {
+     "rule": "marker:raw-cbor-codec",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 31,
+       "quote": "github.com/fxamacker/cbor/v2 v2.9.6 // indirect"
+      }
+     ]
+    },
+    {
+     "rule": "service:blockfrost",
+     "files": 1,
+     "lines": 3,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "constants/constants.go",
+       "line": 7,
+       "quote": "const BlockfrostBaseUrlMainnet = \"https://cardano-mainnet.blockfrost.io/api/v0\""
+      },
+      {
+       "path": "constants/constants.go",
+       "line": 8,
+       "quote": "const BlockfrostBaseUrlPreview = \"https://cardano-preview.blockfrost.io/api/v0\""
+      },
+      {
+       "path": "constants/constants.go",
+       "line": 9,
+       "quote": "const BlockfrostBaseUrlPreprod = \"https://cardano-preprod.blockfrost.io/api/v0\""
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 10,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 21,
+     "examples": [
+      {
+       "path": "docs/conway_governance/committee_methods.md",
+       "line": 77,
+       "quote": "cardano-cli conway governance committee create-hot-key-authorization-certificate \\"
+      },
+      {
+       "path": "docs/conway_governance/committee_methods.md",
+       "line": 125,
+       "quote": "cardano-cli conway governance committee create-cold-key-resignation-certificate \\"
+      },
+      {
+       "path": "docs/conway_governance/drep_methods.md",
+       "line": 108,
+       "quote": "cardano-cli conway governance drep registration-certificate \\"
+      }
+     ]
+    },
+    {
+     "rule": "service:kupo",
+     "files": 13,
+     "lines": 36,
+     "auxLines": 11,
+     "docLines": 10,
+     "examples": [
+      {
+       "path": "backend/ogmios/client.go",
+       "line": 64,
+       "quote": "// KupoClient is the Kupo query surface OgmiosChainContext depends on. Ogmios"
+      },
+      {
+       "path": "backend/ogmios/client.go",
+       "line": 66,
+       "quote": "// context built without a Kupo client reports neither CapabilityUtxos nor"
+      },
+      {
+       "path": "backend/ogmios/client.go",
+       "line": 114,
+       "quote": "// kupoBaseURL validates a Kupo endpoint and returns the base URL to request."
+      }
+     ]
+    },
+    {
+     "rule": "service:ogmios",
+     "files": 21,
+     "lines": 81,
+     "auxLines": 34,
+     "docLines": 33,
+     "examples": [
+      {
+       "path": "apollo.go",
+       "line": 2632,
+       "quote": "// fee (key 2). Strict evaluators (Ogmios, and Blockfrost which proxies it)"
+      },
+      {
+       "path": "backend/blockfrost/blockfrost.go",
+       "line": 346,
+       "quote": "// unsafe for asset-bearing additional UTxOs (Ogmios jsonwsp base16/base64"
+      },
+      {
+       "path": "backend/blockfrost/blockfrost.go",
+       "line": 374,
+       "quote": "// scripts into a large JSON body. Hosted Blockfrost→Ogmios rejects that"
+      }
+     ]
+    },
+    {
+     "rule": "service:utxorpc",
+     "files": 16,
+     "lines": 26,
+     "auxLines": 26,
+     "docLines": 16,
+     "examples": [
+      {
+       "path": "apollo.go",
+       "line": 2677,
+       "quote": "// argument or reject it outright, and backend/utxorpc rejects it, so"
+      },
+      {
+       "path": "backend/utxorpc/doc.go",
+       "line": 1,
+       "quote": "// Package utxorpc implements the Apollo chain backend on top of the UTxO RPC"
+      },
+      {
+       "path": "backend/utxorpc/doc.go",
+       "line": 2,
+       "quote": "// protocol. It prefers the utxorpc.v1beta services and falls back to v1alpha"
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-10-19T16:53:13Z"
    }
   },
   {
@@ -26672,6 +25092,971 @@
    }
   },
   {
+   "id": "yaci-devkit",
+   "repo": "bloxbean/yaci-devkit",
+   "revision": "e67d385799b40aab0992d0b3616dfd8c14ed5ff8",
+   "scan": {
+    "status": "scanned",
+    "files": 650,
+    "skipped": 37
+   },
+   "exposure": "implements",
+   "readiness": "no-evidence",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:segregated-block-body",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 125,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "cardano-cli",
+     "channels": [
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:cardano-cli",
+       "readiness": "upstream",
+       "lines": 10,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "yaci-devkit",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cli-era-command",
+       "readiness": "unassessed",
+       "lines": 3,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:closed-era-list",
+       "readiness": "unassessed",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 10,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 125,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "released",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:node-to-client",
+       "readiness": "unassessed",
+       "lines": 43,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "released",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:node-socket",
+       "readiness": "upstream",
+       "lines": 10,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "released",
+       "lines": 125,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "tracked",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 24,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 125,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "tracked"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "yaci-devkit",
+       "readiness": "in-progress",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 53,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 10,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 125,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 16,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 8,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "blockfrost-backend-ryo",
+       "readiness": "no-evidence",
+       "lines": 10,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "service",
+       "via": "kupo",
+       "readiness": "in-progress",
+       "lines": 81,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "ogmios",
+       "readiness": "in-progress",
+       "lines": 125,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:submit-api",
+       "readiness": "upstream",
+       "lines": 12,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "bloxbean-cardano-client-library",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "evolution-sdk",
+       "readiness": "no-evidence",
+       "lines": 2,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "lucid-evolution",
+       "readiness": "no-evidence",
+       "lines": 1,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "meshjs-mesh-sdk",
+       "readiness": "no-evidence",
+       "lines": 4,
+       "scope": "auxiliary"
+      },
+      {
+       "channel": "dependency",
+       "via": "yaci",
+       "readiness": "in-progress",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "no-evidence"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:bloxbean-cardano-client-library",
+     "files": 1,
+     "lines": 4,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 42,
+       "quote": "exclude group: 'com.bloxbean.cardano', module: 'cardano-client-core'"
+      },
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 44,
+       "quote": "implementation 'com.bloxbean.cardano:cardano-client-lib:0.7.2'"
+      },
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 45,
+       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend:0.7.2'"
+      }
+     ],
+     "pins": [
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 44,
+       "quote": "implementation 'com.bloxbean.cardano:cardano-client-lib:0.7.2'"
+      },
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 45,
+       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend:0.7.2'"
+      },
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 46,
+       "quote": "implementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.7.2'"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:evolution-sdk",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 2,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "e2e-tests/evolution-sdk/package.json",
+       "line": 13,
+       "quote": "\"@evolution-sdk/evolution\": \"0.5.15\""
+      },
+      {
+       "path": "examples/evolution-sdk/package.json",
+       "line": 13,
+       "quote": "\"@evolution-sdk/evolution\": \"^0.5.8\""
+      }
+     ]
+    },
+    {
+     "rule": "dependency:lucid-evolution",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 1,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "e2e-tests/lucid-evo/package.json",
+       "line": 12,
+       "quote": "\"@lucid-evolution/lucid\": \"0.6.5\""
+      }
+     ]
+    },
+    {
+     "rule": "dependency:meshjs-mesh-sdk",
+     "files": 2,
+     "lines": 0,
+     "auxLines": 4,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "e2e-tests/meshjs/package.json",
+       "line": 12,
+       "quote": "\"@meshsdk/core\": \"1.9.1\","
+      },
+      {
+       "path": "e2e-tests/meshjs/package.json",
+       "line": 13,
+       "quote": "\"@meshsdk/core-cst\": \"1.9.1\","
+      },
+      {
+       "path": "e2e-tests/meshjs/package.json",
+       "line": 14,
+       "quote": "\"@meshsdk/common\": \"1.9.1\""
+      }
+     ]
+    },
+    {
+     "rule": "dependency:pycardano",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "e2e-tests/pycardano/requirements.txt",
+       "line": 1,
+       "quote": "pycardano==0.19.2"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:yaci",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 41,
+       "quote": "implementation('com.bloxbean.cardano:yaci:0.4.3') {"
+      }
+     ],
+     "pins": [
+      {
+       "path": "applications/cli/build.gradle",
+       "line": 41,
+       "quote": "implementation('com.bloxbean.cardano:yaci:0.4.3') {"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cli-era-command",
+     "files": 2,
+     "lines": 3,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
+       "line": 11,
+       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address key-gen \\"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
+       "line": 21,
+       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address build \\"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/pool-registration.sh",
+       "line": 13,
+       "quote": "${BIN_FOLDER}/cardano-cli latest stake-pool registration-certificate \\"
+      }
+     ]
+    },
+    {
+     "rule": "marker:closed-era-list",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/yano/YanoService.java",
+       "line": 138,
+       "quote": "String[] genesisFiles = {\"shelley-genesis.json\", \"byron-genesis.json\", \"alonzo-genesis.json\", \"conway-genesis.json\"};"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 25,
+     "lines": 53,
+     "auxLines": 10,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": ".github/scripts/homebrew-formula.sh",
+       "line": 74,
+       "quote": "# yaci.cli.bundled-config-dir is only the default for yaci.cli.plutus-costmodels-path (see application.properties),"
+      },
+      {
+       "path": "Earthfile",
+       "line": 50,
+       "quote": "COPY  config/plutus-costmodels-v10.json /app/yaci-devkit-${tag}/config/"
+      },
+      {
+       "path": "Earthfile",
+       "line": 51,
+       "quote": "COPY  config/plutus-costmodels-v11.json /app/yaci-devkit-${tag}/config/"
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 4,
+     "lines": 8,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/viewer/src/routes/certificates/stake-deregistrations/+page.svelte",
+       "line": 9,
+       "quote": "interface StakeDeregistration {"
+      },
+      {
+       "path": "applications/viewer/src/routes/certificates/stake-deregistrations/+page.svelte",
+       "line": 79,
+       "quote": "{#each data.stakeDeregistrations as deregistration: StakeDeregistration, index}"
+      },
+      {
+       "path": "applications/viewer/src/routes/certificates/stake-registrations/+page.svelte",
+       "line": 9,
+       "quote": "interface StakeRegistration {"
+      }
+     ]
+    },
+    {
+     "rule": "marker:node-to-client",
+     "files": 19,
+     "lines": 43,
+     "auxLines": 4,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 112,
+       "quote": "#   yaci-store-n2c -> haskell-only / companion / yano-primary (N2C local-state-query)"
+      },
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 113,
+       "quote": "#   yaci-store-all -> yano-only (no N2C; derives protocol params from epoch_param)"
+      },
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 115,
+       "quote": "RUN chmod +x /app/store/yaci-store-n2c /app/store/yaci-store-all"
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 29,
+     "lines": 24,
+     "auxLines": 20,
+     "docLines": 8,
+     "examples": [
+      {
+       "path": "applications/cli/config/plutus-costmodels-v10.json",
+       "line": 347,
+       "quote": "\"PlutusV3\": ["
+      },
+      {
+       "path": "applications/cli/config/plutus-costmodels-v11.json",
+       "line": 670,
+       "quote": "\"PlutusV3\": ["
+      },
+      {
+       "path": "applications/cli/docker/plutus-costmodels-v10.json",
+       "line": 347,
+       "quote": "\"PlutusV3\": ["
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 4,
+     "lines": 16,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
+       "line": 18,
+       "quote": "import com.bloxbean.cardano.client.transaction.spec.cert.PoolRegistration;"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
+       "line": 218,
+       "quote": "PoolRegistration poolRegistration = poolKeyGeneratorService.getPoolRegistrationCert(nodeName, writer)"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/peer/PeerService.java",
+       "line": 221,
+       "quote": "String poolId = Bech32.encode(poolRegistration.getOperator(), \"pool\");"
+      }
+     ]
+    },
+    {
+     "rule": "marker:raw-cbor-codec",
+     "files": 1,
+     "lines": 0,
+     "auxLines": 0,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "e2e-tests/pycardano/requirements.txt",
+       "line": 2,
+       "quote": "# cbor2 6.x removed names that cbor2pure 5.8 (a pycardano dependency) imports"
+      },
+      {
+       "path": "e2e-tests/pycardano/requirements.txt",
+       "line": 3,
+       "quote": "cbor2<6"
+      }
+     ]
+    },
+    {
+     "rule": "marker:segregated-block-body",
+     "files": 1,
+     "lines": 9,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
+       "line": 110,
+       "quote": "List<TransactionBody> transactionBodies = block.getTransactionBodies();"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
+       "line": 113,
+       "quote": "transactionBodies.stream().forEach(transactionBody -> {"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/tail/BlockStreamerService.java",
+       "line": 133,
+       "quote": "if (transactionBodies != null)"
+      }
+     ]
+    },
+    {
+     "rule": "service:blockfrost",
+     "files": 4,
+     "lines": 0,
+     "auxLines": 10,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "e2e-tests/meshjs/payment.ts",
+       "line": 1,
+       "quote": "import {BlockfrostProvider, MeshWallet, Transaction} from \"@meshsdk/core\";"
+      },
+      {
+       "path": "e2e-tests/meshjs/payment.ts",
+       "line": 3,
+       "quote": "// Mesh's BlockfrostProvider pointed at Yaci Store's Blockfrost-compatible API"
+      },
+      {
+       "path": "e2e-tests/meshjs/payment.ts",
+       "line": 4,
+       "quote": "const provider = new BlockfrostProvider(process.env.YACI_STORE_URL ?? 'http://localhost:8080/api/v1');"
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 4,
+     "lines": 10,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-cert.sh",
+       "line": 7,
+       "quote": "${BIN_FOLDER}/cardano-cli node issue-op-cert \\"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
+       "line": 7,
+       "quote": "${BIN_FOLDER}/cardano-cli address key-gen \\"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/gen-pool-keys.sh",
+       "line": 11,
+       "quote": "${BIN_FOLDER}/cardano-cli latest stake-address key-gen \\"
+      }
+     ]
+    },
+    {
+     "rule": "service:kupo",
+     "files": 34,
+     "lines": 81,
+     "auxLines": 9,
+     "docLines": 54,
+     "examples": [
+      {
+       "path": ".github/scripts/homebrew-formula.sh",
+       "line": 26,
+       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo\" ;;"
+      },
+      {
+       "path": ".github/scripts/homebrew-formula.sh",
+       "line": 29,
+       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo (beta)\" ;;"
+      },
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 98,
+       "quote": "#Kupo download"
+      }
+     ]
+    },
+    {
+     "rule": "service:node-socket",
+     "files": 10,
+     "lines": 10,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 141,
+       "quote": "ENV CARDANO_NODE_SOCKET_PATH=/clusters/nodes/default/node/node.sock"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/node-2/node.sh",
+       "line": 9,
+       "quote": "--socket-path node.sock \\"
+      },
+      {
+       "path": "applications/cli/src/main/resources/localcluster/templates/devnet/node-3/node.sh",
+       "line": 9,
+       "quote": "--socket-path node.sock \\"
+      }
+     ]
+    },
+    {
+     "rule": "service:ogmios",
+     "files": 42,
+     "lines": 125,
+     "auxLines": 8,
+     "docLines": 66,
+     "examples": [
+      {
+       "path": ".github/scripts/homebrew-formula.sh",
+       "line": 26,
+       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo\" ;;"
+      },
+      {
+       "path": ".github/scripts/homebrew-formula.sh",
+       "line": 29,
+       "quote": "desc=\"Local Cardano devnet with Yaci Store, Yano, Ogmios and Kupo (beta)\" ;;"
+      },
+      {
+       "path": "applications/cli/Earthfile",
+       "line": 94,
+       "quote": "#Ogmios download"
+      }
+     ]
+    },
+    {
+     "rule": "service:submit-api",
+     "files": 13,
+     "lines": 12,
+     "auxLines": 2,
+     "docLines": 1,
+     "examples": [
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/commands/common/DownloadService.java",
+       "line": 93,
+       "quote": "Path cardanoSubmitApi = Path.of(clusterConfig.getCLIBinFolder(), \"cardano-submit-api\");"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/ClusterService.java",
+       "line": 349,
+       "quote": "writer.accept(error(\"You can also manually download and copy cardano-node, cardano-cli, cardano-submit-api \" +"
+      },
+      {
+       "path": "applications/cli/src/main/java/com/bloxbean/cardano/yacicli/localcluster/ClusterStartService.java",
+       "line": 649,
+       "quote": "//Check if cardano-submit-api exists"
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-10-19T11:42:44Z"
+   }
+  },
+  {
    "id": "aiken",
    "repo": "aiken-lang/aiken",
    "revision": "2a0475328be2fc361251be864b825c936fefb63b",
@@ -31385,6 +30770,621 @@
    }
   },
   {
+   "id": "gouroboros",
+   "repo": "blinklabs-io/gouroboros",
+   "revision": "c2cb81f55d3f4c2f38d310185b080dfdabdba1cb",
+   "scan": {
+    "status": "scanned",
+    "files": 977,
+    "skipped": 11
+   },
+   "exposure": "implements",
+   "readiness": "in-progress",
+   "surfaces": [
+    {
+     "surface": "block-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 13,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:segregated-block-body",
+       "readiness": "unassessed",
+       "lines": 180,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 489,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "cardano-cli",
+     "channels": [
+      {
+       "channel": "service",
+       "via": "service:cardano-cli",
+       "readiness": "upstream",
+       "lines": 1,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "consensus-participation",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "era-identity",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:closed-era-list",
+       "readiness": "unassessed",
+       "lines": 9,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "node-to-client-protocol",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:node-to-client",
+       "readiness": "unassessed",
+       "lines": 135,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "service:node-socket",
+       "readiness": "upstream",
+       "lines": 3,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "upstream"
+    },
+    {
+     "surface": "plutus-language",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:plutus-language-enum",
+       "readiness": "unassessed",
+       "lines": 16,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "plutus-script-context",
+     "channels": [
+      {
+       "channel": "dependency",
+       "via": "plutigo",
+       "readiness": "released",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:script-context",
+       "readiness": "unassessed",
+       "lines": 43,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "protocol-parameters",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:cost-models-or-parameters",
+       "readiness": "unassessed",
+       "lines": 185,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "stake-pool-registration",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:pool-registration",
+       "readiness": "unassessed",
+       "lines": 24,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    },
+    {
+     "surface": "transaction-encoding",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      },
+      {
+       "channel": "dependency",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 2,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:legacy-stake-certificate",
+       "readiness": "unassessed",
+       "lines": 5,
+       "scope": "shipped"
+      },
+      {
+       "channel": "marker",
+       "via": "marker:raw-cbor-codec",
+       "readiness": "unassessed",
+       "lines": 13,
+       "scope": "shipped"
+      },
+      {
+       "channel": "service",
+       "via": "utxorpc",
+       "readiness": "in-progress",
+       "lines": 489,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "in-progress"
+    },
+    {
+     "surface": "transaction-rules",
+     "channels": [
+      {
+       "channel": "implements",
+       "via": "gouroboros",
+       "readiness": "released",
+       "lines": 0,
+       "scope": "shipped"
+      }
+     ],
+     "readiness": "released"
+    }
+   ],
+   "hits": [
+    {
+     "rule": "dependency:plutigo",
+     "files": 2,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.7"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 8,
+       "quote": "github.com/blinklabs-io/plutigo v0.9.6"
+      }
+     ]
+    },
+    {
+     "rule": "dependency:utxorpc",
+     "files": 2,
+     "lines": 2,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ],
+     "pins": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "tools/go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      }
+     ]
+    },
+    {
+     "rule": "marker:closed-era-list",
+     "files": 14,
+     "lines": 9,
+     "auxLines": 9,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "ledger/common/common.go",
+       "line": 2616,
+       "quote": "// Redeemers can be either an array (Alonzo-Babbage) or map (Conway+)."
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 178,
+       "quote": "// no protocol version and has no branch, and Alonzo, Babbage and Conway all"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 637,
+       "quote": "// Pre-Conway eras (Alonzo/Babbage transVITime) use `PV1.to` for an"
+      }
+     ]
+    },
+    {
+     "rule": "marker:cost-models-or-parameters",
+     "files": 49,
+     "lines": 185,
+     "auxLines": 191,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 25,
+       "quote": "MaxTxExUnits common.ExUnits"
+      },
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 33,
+       "quote": "e.MaxTxExUnits.Steps,"
+      },
+      {
+       "path": "ledger/alonzo/errors.go",
+       "line": 34,
+       "quote": "e.MaxTxExUnits.Memory,"
+      }
+     ]
+    },
+    {
+     "rule": "marker:legacy-stake-certificate",
+     "files": 5,
+     "lines": 5,
+     "auxLines": 3,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/block_state.go",
+       "line": 801,
+       "quote": "func (b *BlockLedgerState) StakeRegistration("
+      },
+      {
+       "path": "ledger/common/block_state.go",
+       "line": 804,
+       "quote": "return b.base.StakeRegistration(stakeKey)"
+      },
+      {
+       "path": "ledger/common/certs.go",
+       "line": 355,
+       "quote": "StakeRegistration: stakeCred,"
+      }
+     ]
+    },
+    {
+     "rule": "marker:node-to-client",
+     "files": 86,
+     "lines": 135,
+     "auxLines": 384,
+     "docLines": 38,
+     "examples": [
+      {
+       "path": "connection.go",
+       "line": 47,
+       "quote": "\"github.com/blinklabs-io/gouroboros/protocol/localstatequery\""
+      },
+      {
+       "path": "connection.go",
+       "line": 108,
+       "quote": "localStateQuery         *localstatequery.LocalStateQuery"
+      },
+      {
+       "path": "connection.go",
+       "line": 109,
+       "quote": "localStateQueryConfig   *localstatequery.Config"
+      }
+     ]
+    },
+    {
+     "rule": "marker:plutus-language-enum",
+     "files": 31,
+     "lines": 16,
+     "auxLines": 49,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "ledger/alonzo/genesis.go",
+       "line": 56,
+       "quote": "case \"PlutusV3\":"
+      },
+      {
+       "path": "ledger/alonzo/pparams.go",
+       "line": 264,
+       "quote": "case \"PlutusV3\":"
+      },
+      {
+       "path": "ledger/common/common.go",
+       "line": 2814,
+       "quote": "// 0x00 = native script, 0x01 = PlutusV1, 0x02 = PlutusV2, 0x03 = PlutusV3"
+      }
+     ]
+    },
+    {
+     "rule": "marker:pool-registration",
+     "files": 16,
+     "lines": 24,
+     "auxLines": 33,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/certs.go",
+       "line": 1643,
+       "quote": "PoolRegistration: &utxorpc.PoolRegistrationCert{"
+      },
+      {
+       "path": "ledger/common/rewards.go",
+       "line": 89,
+       "quote": "PoolParams map[PoolKeyHash]*PoolRegistrationCertificate"
+      },
+      {
+       "path": "ledger/common/rewards.go",
+       "line": 412,
+       "quote": "poolParams, exists := snapshot.PoolParams[poolID]"
+      }
+     ]
+    },
+    {
+     "rule": "marker:raw-cbor-codec",
+     "files": 18,
+     "lines": 13,
+     "auxLines": 5,
+     "docLines": 2,
+     "examples": [
+      {
+       "path": "cbor/bytestring.go",
+       "line": 21,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      },
+      {
+       "path": "cbor/cbor.go",
+       "line": 18,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      },
+      {
+       "path": "cbor/decode.go",
+       "line": 26,
+       "quote": "_cbor \"github.com/fxamacker/cbor/v2\""
+      }
+     ]
+    },
+    {
+     "rule": "marker:script-context",
+     "files": 22,
+     "lines": 43,
+     "auxLines": 43,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 37,
+       "quote": "type ScriptContext interface {"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 43,
+       "quote": "TxInfo  TxInfo"
+      },
+      {
+       "path": "ledger/common/script/context.go",
+       "line": 52,
+       "quote": "s.TxInfo.ToPlutusData(),"
+      }
+     ]
+    },
+    {
+     "rule": "marker:segregated-block-body",
+     "files": 30,
+     "lines": 180,
+     "auxLines": 150,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "cbor/cardano_diagnostic.go",
+       "line": 83,
+       "quote": "// [header, tx_bodies, tx_witnesses, auxiliary_data_set, invalid_transactions];"
+      },
+      {
+       "path": "cbor/cardano_labels.go",
+       "line": 63,
+       "quote": "\"transaction_bodies\","
+      },
+      {
+       "path": "cbor/cardano_labels.go",
+       "line": 66,
+       "quote": "\"invalid_transactions\","
+      }
+     ]
+    },
+    {
+     "rule": "service:cardano-cli",
+     "files": 1,
+     "lines": 1,
+     "auxLines": 0,
+     "docLines": 0,
+     "examples": [
+      {
+       "path": "protocol/localstatequery/queries.go",
+       "line": 511,
+       "quote": "// is used by cardano-cli query stake-address-info."
+      }
+     ]
+    },
+    {
+     "rule": "service:node-socket",
+     "files": 10,
+     "lines": 3,
+     "auxLines": 12,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 48,
+       "quote": "if [ -S \"$NODE_IPC_DIR/node.socket\" ] &&"
+      },
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 51,
+       "quote": "docker exec cardano-node chmod 0666 /ipc/node.socket"
+      },
+      {
+       "path": ".github/workflows/cardano-node-integration.yml",
+       "line": 60,
+       "quote": "GOUROBOROS_CARDANO_NODE_SOCKET_PATH: /tmp/cardano-node-ipc/node.socket"
+      }
+     ]
+    },
+    {
+     "rule": "service:utxorpc",
+     "files": 55,
+     "lines": 489,
+     "auxLines": 419,
+     "docLines": 3,
+     "examples": [
+      {
+       "path": "go.mod",
+       "line": 14,
+       "quote": "github.com/utxorpc/go-codegen v0.19.2"
+      },
+      {
+       "path": "ledger/allegra/allegra.go",
+       "line": 25,
+       "quote": "utxorpc \"github.com/utxorpc/go-codegen/utxorpc/v1alpha/cardano\""
+      },
+      {
+       "path": "ledger/allegra/allegra.go",
+       "line": 188,
+       "quote": "func (b *AllegraBlock) Utxorpc() (*utxorpc.Block, error) {"
+      }
+     ]
+    }
+   ],
+   "activity": {
+    "archived": false,
+    "pushedAt": "2026-10-20T08:54:03Z"
+   }
+  },
+  {
    "id": "pallas",
    "repo": "txpipe/pallas",
    "revision": "e6c38ac567ee907db6a3cfdbbcaae1b47908d839",
@@ -35479,7 +35479,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35526,7 +35526,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35546,7 +35546,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35600,14 +35600,14 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
+       "via": "plutigo@0.7.1<v0.8.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35620,7 +35620,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
+       "via": "plutigo@0.7.1<v0.8.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35647,7 +35647,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35674,7 +35674,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35701,7 +35701,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -35763,7 +35763,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.5<v0.213.7",
+       "via": "gouroboros@0.212.5<v0.213.0",
        "readiness": "gap",
        "lines": 2,
        "scope": "shipped"
@@ -36158,7 +36158,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36233,7 +36233,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36260,7 +36260,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36391,7 +36391,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36412,7 +36412,7 @@
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.7.1<v0.9.10",
+       "via": "plutigo@0.7.1<v0.8.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36446,7 +36446,7 @@
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.7.1<v0.9.10",
+       "via": "plutigo@0.7.1<v0.8.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36480,7 +36480,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36556,7 +36556,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36611,7 +36611,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -36715,7 +36715,7 @@
       },
       {
        "channel": "dependency",
-       "via": "gouroboros@0.205.4<v0.213.7",
+       "via": "gouroboros@0.205.4<v0.213.0",
        "readiness": "gap",
        "lines": 3,
        "scope": "shipped"
@@ -38600,7 +38600,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38634,7 +38634,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38647,7 +38647,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38687,15 +38687,15 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.8.0<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       },
@@ -38714,8 +38714,8 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.8.0<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       },
@@ -38727,14 +38727,14 @@
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "released"
     },
     {
      "surface": "protocol-parameters",
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38754,7 +38754,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38767,7 +38767,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -38808,7 +38808,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.202.7<v0.213.7",
+       "via": "gouroboros@0.202.7<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39076,7 +39076,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39110,7 +39110,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39123,7 +39123,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39149,15 +39149,15 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       }
@@ -39169,20 +39169,20 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.9.1<v0.9.10",
-       "readiness": "gap",
+       "via": "plutigo",
+       "readiness": "released",
        "lines": 1,
        "scope": "shipped"
       }
      ],
-     "readiness": "gap"
+     "readiness": "released"
     },
     {
      "surface": "protocol-parameters",
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39195,7 +39195,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39208,7 +39208,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39242,7 +39242,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.212.6<v0.213.7",
+       "via": "gouroboros@0.212.6<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -39471,7 +39471,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "pallas@0.32.0<v0.35.1",
+       "via": "pallas@0.32.0<v0.35.1|v1.0.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43337,7 +43337,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43371,7 +43371,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43384,7 +43384,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43417,14 +43417,14 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.7.2<v0.9.10",
+       "via": "plutigo@0.7.2<v0.8.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43437,7 +43437,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.7.2<v0.9.10",
+       "via": "plutigo@0.7.2<v0.8.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43450,7 +43450,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43463,7 +43463,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43483,7 +43483,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -43524,7 +43524,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.208.5<v0.213.7",
+       "via": "gouroboros@0.208.5<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -44828,7 +44828,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "pallas@0.31.0<v0.35.1",
+       "via": "pallas@0.31.0<v0.35.1|v1.0.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "shipped"
@@ -69473,7 +69473,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69535,7 +69535,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69555,7 +69555,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69651,7 +69651,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69665,7 +69665,7 @@
       },
       {
        "channel": "dependency",
-       "via": "plutigo@0.0.25<v0.9.10",
+       "via": "plutigo@0.0.25<v0.8.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69692,7 +69692,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "plutigo@0.0.25<v0.9.10",
+       "via": "plutigo@0.0.25<v0.8.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69712,7 +69712,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69753,7 +69753,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69780,7 +69780,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"
@@ -69849,7 +69849,7 @@
      "channels": [
       {
        "channel": "dependency",
-       "via": "gouroboros@0.159.2<v0.213.7",
+       "via": "gouroboros@0.159.2<v0.213.0",
        "readiness": "gap",
        "lines": 1,
        "scope": "auxiliary"

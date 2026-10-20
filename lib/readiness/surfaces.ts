@@ -289,14 +289,29 @@ function upstreamPin(targets: Map<string, string>, pins: Example[]): { readiness
   return null;
 }
 
-/** A consumer whose constraint cannot reach the release that added a surface's support has a gap on that surface. */
+const sameLine = (a: number[], b: number[]) => (a[0] ?? 0) === (b[0] ?? 0) && ((a[0] ?? 0) > 0 || (a[1] ?? 0) === (b[1] ?? 0));
+
+/**
+ * Whether a constraint can resolve to a release with the support, given the first such release on each release line:
+ * a version at or past the first release of its own line (or past every listed one) has it; a range also reaches any
+ * listed first release it admits.
+ */
+export function reaches(c: Constraint, firsts: number[][]): boolean {
+  if (c.kind === "minimum") return true;
+  const latest = firsts.reduce((m, v) => (compareVersions(v, m) > 0 ? v : m));
+  const has = (v: number[]) => compareVersions(v, latest) >= 0 || firsts.some((n) => sameLine(v, n) && compareVersions(v, n) >= 0);
+  if (has(c.version)) return true;
+  return c.kind !== "exact" && firsts.some((n) => compareVersions(n, c.version) > 0 && admits(c, n));
+}
+
+/** A consumer whose constraint cannot reach a first release with a surface's support has a gap on that surface. */
 function inherited(component: Component, surface: string, examples: Example[]): { readiness: Readiness; via: string } {
   const status = worstStatus(component, surface);
-  const release = component.assessments.find((a) => a.surfaces.includes(surface) && a.releasedIn)?.releasedIn;
-  const needed = release ? VERSION.exec(release.tag)?.[1] : undefined;
-  if (needed) for (const e of examples) {
+  const firsts = component.assessments.find((a) => a.surfaces.includes(surface) && a.firstReleases)?.firstReleases;
+  const needed = firsts?.map((r) => VERSION.exec(r.tag)?.[1]).filter((v): v is string => v !== undefined).map(parts);
+  if (needed?.length) for (const e of examples) {
     const c = readConstraint(e.quote, e.path);
-    if (c && !admits(c, parts(needed))) return { readiness: "gap", via: `${component.id}@${c.version.join(".")}<${release!.tag}` };
+    if (c && !reaches(c, needed)) return { readiness: "gap", via: `${component.id}@${c.version.join(".")}<${firsts!.map((r) => r.tag).join("|")}` };
   }
   return { readiness: status, via: component.id };
 }

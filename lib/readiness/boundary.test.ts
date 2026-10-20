@@ -57,3 +57,18 @@ test("a component is only as ready as its worst surface, and sources are re-read
   assert.deepEqual(await verifyBoundarySources(register, read), []);
   assert.match((await verifyBoundarySources(register, async () => "moved"))[0], /^pallas: txpipe\/pallas@b{40}:n2c.rs:2 does not contain/);
 });
+
+test("first releases accompany a confirmed release and are never empty", () => {
+  const lines = [{ tag: "v0.35.1", date: "2026-05-05" }, { tag: "v1.0.0", date: "2026-05-11" }];
+  const withFirsts = (firsts: unknown) => {
+    const raw = base();
+    raw.components[0].assessments[0].firstReleases = firsts;
+    return raw;
+  };
+  assert.deepEqual(parseBoundaryRegister(withFirsts(lines), changes).components[0].assessments[0].firstReleases, lines);
+  assert.throws(() => parseBoundaryRegister(withFirsts([]), changes), /must not be empty/);
+  const unreleased = withFirsts(lines);
+  Object.assign(unreleased.components[0].assessments[0], { status: "in-progress" });
+  delete unreleased.components[0].assessments[0].releasedIn;
+  assert.throws(() => parseBoundaryRegister(unreleased, changes), /needs releasedIn alongside firstReleases/);
+});

@@ -61,6 +61,31 @@ export interface ClassificationRegister {
   summary: Record<string, number>; tools: ToolClassification[];
 }
 
+/**
+ * Recompute a classification after a boundary or change-register edit, from the recorded revisions and cached scans:
+ * nothing is fetched, so revisions (and lead decisions read at them) stay valid.
+ */
+export function reclassifyCatalog(previous: ClassificationRegister, boundary: BoundaryRegister, changes: ChangeRegister, stateDir: string): ClassificationRegister {
+  const cacheDir = resolve(stateDir, "surface-scans");
+  const tools = previous.tools.map((tool) => {
+    if (tool.scan.status !== "scanned") return classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, { status: tool.scan.status, note: tool.scan.note ?? "" }, boundary, changes);
+    const cache = join(cacheDir, `${tool.revision}-${tool.id}-${RULES_DIGEST.slice(0, 16)}.json`);
+    if (!existsSync(cache)) throw new Error(`No cached scan for ${tool.id} at ${tool.revision} with the current rules; run classify-surfaces`);
+    const scan = JSON.parse(readFileSync(cache, "utf8")) as Scan;
+    return { ...classifyTool({ id: tool.id, repo: tool.repo, revision: tool.revision }, scan, boundary, changes), ...(tool.activity && { activity: tool.activity }) };
+  });
+  return summarize(rankClassifications(tools), boundary, changes);
+}
+
+function summarize(ranked: ToolClassification[], boundary: BoundaryRegister, changes: ChangeRegister): ClassificationRegister {
+  const summary: Record<string, number> = {};
+  for (const t of ranked) summary[t.exposure] = (summary[t.exposure] ?? 0) + 1;
+  return {
+    schemaVersion: 1, generatedAt: new Date().toISOString(), rulesDigest: RULES_DIGEST, changeTarget: changes.target,
+    boundaryRetrieved: boundary.retrieved, summary, tools: ranked,
+  };
+}
+
 export async function classifyCatalog(
   tools: { id: string; repo: string | null }[], boundary: BoundaryRegister, changes: ChangeRegister,
   options: { stateDir: string; concurrency?: number; log?: (line: string) => void },
@@ -112,11 +137,5 @@ export async function classifyCatalog(
     }
   };
   await Promise.all(Array.from({ length: options.concurrency ?? 6 }, work));
-  const ranked = rankClassifications(results);
-  const summary: Record<string, number> = {};
-  for (const t of ranked) summary[t.exposure] = (summary[t.exposure] ?? 0) + 1;
-  return {
-    schemaVersion: 1, generatedAt: new Date().toISOString(), rulesDigest: RULES_DIGEST, changeTarget: changes.target,
-    boundaryRetrieved: boundary.retrieved, summary, tools: ranked,
-  };
+  return summarize(rankClassifications(results), boundary, changes);
 }

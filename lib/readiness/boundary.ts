@@ -23,7 +23,11 @@ export type Status = (typeof STATUSES)[number];
 export interface Tracker { kind: "tracker"; url: string; title: string; state: (typeof TRACKER_STATES)[number]; date: string }
 export type Evidence = ({ kind: "source" } & Citation) | Tracker;
 export interface Release { tag: string; date: string }
-export interface Assessment { surfaces: string[]; status: Status; summary: string; releasedIn?: Release; evidence: Evidence[] }
+/**
+ * `releasedIn` is a release confirmed to contain the support. `firstReleases` is the earliest release on each release
+ * line whose tagged source contains every cited source quote; only it decides whether a consumer's pin is too old.
+ */
+export interface Assessment { surfaces: string[]; status: Status; summary: string; releasedIn?: Release; firstReleases?: Release[]; evidence: Evidence[] }
 export interface Component {
   id: string; repo: string; roles: Role[]; surfaces: string[];
   observed: { branch: string; revision: string; date: string; release: Release | null };
@@ -82,9 +86,13 @@ export function parseBoundaryRegister(raw: unknown, changes: ChangeRegister): Bo
       // An absence is recorded against the observed revision; every other status must point at what it rests on.
       if (status !== "no-evidence" && !found.length) throw new Error(`${at} needs evidence for status ${status}`);
       if ((status === "released" || status === "verified") && a.releasedIn === undefined) throw new Error(`${at} needs releasedIn for status ${status}`);
+      if (a.firstReleases !== undefined && a.releasedIn === undefined) throw new Error(`${at} needs releasedIn alongside firstReleases`);
+      const firsts = a.firstReleases === undefined ? undefined : list(a.firstReleases, `${at}.firstReleases`).map((r, k) => release(r, `${at}.firstReleases[${k}]`));
+      if (firsts && !firsts.length) throw new Error(`${at}.firstReleases must not be empty`);
       return {
         surfaces: subset(a.surfaces, `${at}.surfaces`, new Set(surfaces)), status, summary: text(a.summary, `${at}.summary`),
-        ...(a.releasedIn === undefined ? {} : { releasedIn: release(a.releasedIn, `${at}.releasedIn`) }), evidence: found,
+        ...(a.releasedIn === undefined ? {} : { releasedIn: release(a.releasedIn, `${at}.releasedIn`) }),
+        ...(firsts ? { firstReleases: firsts } : {}), evidence: found,
       };
     });
     const assessed = new Set(assessments.flatMap((a) => a.surfaces));

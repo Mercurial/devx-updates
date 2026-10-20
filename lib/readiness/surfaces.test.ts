@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { parseBoundaryRegister } from "./boundary";
 import { parseChangeRegister } from "./dijkstra";
-import { admits, classifyTool, rankClassifications, readConstraint, RULES, scanSources } from "./surfaces";
+import { admits, classifyTool, rankClassifications, reaches as reachesLine, readConstraint, RULES, scanSources } from "./surfaces";
 
 const changes = parseChangeRegister(JSON.parse(readFileSync("content/readiness/dijkstra/changes.json", "utf8")));
 const boundary = parseBoundaryRegister(JSON.parse(readFileSync("content/readiness/dijkstra/boundary.json", "utf8")), changes);
@@ -80,12 +80,21 @@ test("classification inherits R2 readiness through coupling, not through markers
   assert.equal(reaches(", plutus-tx >= 1.5.0", "a.cabal", "1.71.0.0"), true, "lower bounds are not pins");
   assert.equal(reaches('"pycardano>=0.9.0",', "pyproject.toml", "1.0"), true);
   assert.equal(reaches("<version.ccl>0.4.3</version.ccl>", "pom.xml", "0.7"), false);
+  const lines = [[0, 3, 10], [0, 4, 2]];
+  assert.equal(reachesLine({ kind: "exact", version: [0, 4, 3] }, lines), true, "0.4.3 is past the first release of its own line");
+  assert.equal(reachesLine({ kind: "exact", version: [0, 4, 1] }, lines), false, "0.4.1 is newer than 0.3.10 but on a line without the support");
+  assert.equal(reachesLine({ kind: "exact", version: [0, 3, 4, 1] }, lines), false);
+  assert.equal(reachesLine({ kind: "caret", version: [0, 3, 4] }, lines), true, "a 0.3 caret admits 0.3.10");
+  assert.equal(reachesLine({ kind: "exact", version: [0, 5, 0] }, lines), true, "past every listed line");
+  const yaci = (pin: string) => classifyTool({ id: "y", repo: "o/y", revision: "7".repeat(40) }, scanSources([{ path: "build.gradle", content: `implementation('com.bloxbean.cardano:yaci:${pin}')\n` }]), boundary, changes)
+    .surfaces.find((s) => s.surface === "node-to-client-protocol")!;
+  assert.deepEqual([yaci("0.4.3").readiness, yaci("0.4.1").readiness, yaci("0.4.1").channels[0].via], ["released", "gap", "yaci@0.4.1<v0.3.10|v0.4.2"]);
   const codecs = classifyTool({ id: "codec-user", repo: "o/u", revision: "1".repeat(40) }, scanSources([{ path: "Cargo.toml", content: 'pallas-primitives = "0.32"\n' }]), boundary, changes);
   assert.equal(codecs.surfaces.some((s) => s.surface === "node-to-client-protocol"), false, "codec crates do not carry the mini-protocols");
   assert.equal(scanSources([{ path: "Cargo.toml", content: 'pallas-crypto = "0.30"\npallas-addresses = "0.30"\n' }]).hits.length, 0, "crates outside the changed surfaces");
   const plutus = tool.surfaces.find((s) => s.surface === "plutus-language")!;
   assert.deepEqual(plutus.channels.map((c) => [c.channel, c.via, c.readiness]), [
-    ["dependency", "gouroboros@0.209.0<v0.213.7", "gap"], ["marker", "marker:plutus-language-enum", "unassessed"],
+    ["dependency", "gouroboros@0.209.0<v0.213.0", "gap"], ["marker", "marker:plutus-language-enum", "unassessed"],
   ]);
   assert.equal(plutus.readiness, "gap", "the marker does not override the dependency's readiness");
 
