@@ -8345,6 +8345,1996 @@
      "quote": "// We are adding 0.25 ADA because of the error in Babbage era with minutxo"
     }
    ]
+  },
+  {
+   "tool": "aicone",
+   "revision": "753436d6caea515a6be7e607e2181afc1fa99369",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "SundaeSwap-finance/aicone",
+     "revision": "753436d6caea515a6be7e607e2181afc1fa99369",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"sundaeswap-finance/aicone\""
+    }
+   ]
+  },
+  {
+   "tool": "aiken-linked-list",
+   "revision": "e6e3900b55060a1def649be98dc237190257eac9",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/aiken-linked-list",
+     "revision": "e6e3900b55060a1def649be98dc237190257eac9",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"aiken-lang/aiken-linked-list\""
+    }
+   ]
+  },
+  {
+   "tool": "aiken-stdlib",
+   "revision": "8e43f28e39f5394f9913109a75ad52054ff29c71",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "aiken-lang/stdlib",
+     "revision": "8e43f28e39f5394f9913109a75ad52054ff29c71",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"aiken-lang/stdlib\""
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ctf",
+   "revision": "43de1e4186674f10563f30b29cc2bc1f743cf30d",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "Invariant-0/cardano-ctf",
+     "revision": "43de1e4186674f10563f30b29cc2bc1f743cf30d",
+     "path": "00_hello_world/aiken.toml",
+     "line": 1,
+     "quote": "name = \"ctf/hello_world\""
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ibc-incubator",
+   "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-ibc-incubator",
+     "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+     "path": "cardano/onchain/aiken.toml",
+     "line": 2,
+     "quote": "name = \"cardanofoundation/cardano-ibc\""
+    }
+   ]
+  },
+  {
+   "tool": "epora-wallet",
+   "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "schaier-io/epora-wallet",
+     "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+     "path": "code/smart-contract/aiken.toml",
+     "line": 1,
+     "quote": "name = \"schaier-io/permission-based-wallet\""
+    }
+   ]
+  },
+  {
+   "tool": "hydra",
+   "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "cardano-scaling/hydra",
+     "revision": "1b10c014295bf3e360431b4e0a24629388e50aa2",
+     "path": "hydra-plutus/aiken.toml",
+     "line": 1,
+     "quote": "name = \"hydra/hydra-plutus\""
+    }
+   ]
+  },
+  {
+   "tool": "masumi",
+   "revision": "dd0a1e12e2e9fddba028512355d0eaf7cc85efac",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "masumi-network/masumi-payment-service",
+     "revision": "dd0a1e12e2e9fddba028512355d0eaf7cc85efac",
+     "path": "smart-contracts/payment-v2/aiken.toml",
+     "line": 1,
+     "quote": "name = \"nmkr/masumi-payment\""
+    }
+   ]
+  },
+  {
+   "tool": "merkle-patricia-forestry",
+   "revision": "540dfdbf61f8697c548db460dee1beff78cadb19",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/merkle-patricia-forestry",
+     "revision": "540dfdbf61f8697c548db460dee1beff78cadb19",
+     "path": "on-chain/aiken.toml",
+     "line": 1,
+     "quote": "name = \"aiken-lang/merkle-patricia-forestry\""
+    }
+   ]
+  },
+  {
+   "tool": "meshjs-mesh-sdk",
+   "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "MeshJS/mesh",
+     "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+     "path": "packages/mesh-contract/src/content-ownership/aiken-workspace/aiken.toml",
+     "line": 1,
+     "quote": "name = \"meshjs/content-ownership\""
+    }
+   ]
+  },
+  {
+   "tool": "midgard",
+   "revision": "41284d8974568f47ef35cb96e23acbf1b56894c2",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/midgard",
+     "revision": "41284d8974568f47ef35cb96e23acbf1b56894c2",
+     "path": "onchain/aiken/aiken.toml",
+     "line": 1,
+     "quote": "name = \"al-ft/midgard\""
+    }
+   ]
+  },
+  {
+   "tool": "naumachia",
+   "revision": "fbbd58feb08206fb06037342c06252a284a81967",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "free-honey/naumachia",
+     "revision": "fbbd58feb08206fb06037342c06252a284a81967",
+     "path": "nau-scripts/aiken/mint_nft/aiken.toml",
+     "line": 1,
+     "quote": "name = \"sample-dApps/mint_nft\""
+    }
+   ]
+  },
+  {
+   "tool": "plutus-halo2-verifier-gen",
+   "revision": "b95783e64082185f8cbffcf070df2358bab4275b",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/plutus-halo2-verifier-gen",
+     "revision": "b95783e64082185f8cbffcf070df2358bab4275b",
+     "path": "aiken-verifier/aiken_halo2/aiken.toml",
+     "line": 1,
+     "quote": "name = \"iog/aiken_halo2\""
+    }
+   ]
+  },
+  {
+   "tool": "pyth-lazer-cardano",
+   "revision": "217b5917228b17f015719b27dd616a75ad6bd800",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "pyth-network/pyth-lazer-cardano",
+     "revision": "217b5917228b17f015719b27dd616a75ad6bd800",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"pyth-network/pyth-lazer-cardano\""
+    }
+   ]
+  },
+  {
+   "tool": "vodka",
+   "revision": "1b5f32c1227b18c7580260e4a0c313b05d32db05",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "sidan-lab/vodka",
+     "revision": "1b5f32c1227b18c7580260e4a0c313b05d32db05",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"sidan-lab/vodka\""
+    }
+   ]
+  },
+  {
+   "tool": "zhuli",
+   "revision": "fa25f977ef6a981e09918ea09d7e1d6650879463",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "CardanoSolutions/zhuli",
+     "revision": "fa25f977ef6a981e09918ea09d7e1d6650879463",
+     "path": "aiken.toml",
+     "line": 1,
+     "quote": "name = \"cardanosolutions/proxy-dreps\""
+    }
+   ]
+  },
+  {
+   "tool": "yano",
+   "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yano",
+     "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+     "path": "appchain/onchain/aiken/appchain-anchor/aiken.toml",
+     "line": 1,
+     "quote": "name = \"bloxbean/appchain_anchor\""
+    }
+   ]
+  },
+  {
+   "tool": "bloxbean-cardano-client-library",
+   "revision": "dfd8540d91a17f18a0b93320f9aa020eec43fbdb",
+   "via": "aiken",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The project compiles its own validators to PlutusV3; existing Plutus versions stay valid after the fork, so only PlutusV4 authoring is blocked.",
+   "evidence": [
+    {
+     "repo": "bloxbean/cardano-client-lib",
+     "revision": "dfd8540d91a17f18a0b93320f9aa020eec43fbdb",
+     "path": "annotation-processor/src/it/resources/blueprint/address_check/aiken.toml",
+     "line": 1,
+     "quote": "name = \"ccl/address_check\""
+    }
+   ]
+  },
+  {
+   "tool": "cardano-open-oracle-protocol",
+   "revision": "5f8f97e1b8ba35f60e0dae44d0bd79560c96aacf",
+   "via": "plutarch",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Plutarch to write its own V1-V3 scripts; existing Plutus versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "mlabs-haskell/cardano-open-oracle-protocol",
+     "revision": "5f8f97e1b8ba35f60e0dae44d0bd79560c96aacf",
+     "path": "coop-plutus/coop-plutus.cabal",
+     "line": 103,
+     "quote": ", plutarch"
+    }
+   ]
+  },
+  {
+   "tool": "lambda-buffers",
+   "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+   "via": "plutarch",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Plutarch to write its own V1-V3 scripts; existing Plutus versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "mlabs-haskell/lambda-buffers",
+     "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+     "path": "extras/dev-shells/plutus-haskell/plutus-haskell.cabal",
+     "line": 93,
+     "quote": ", lbf-plutus-plutarch   >=0.1"
+    }
+   ]
+  },
+  {
+   "tool": "midgard",
+   "revision": "41284d8974568f47ef35cb96e23acbf1b56894c2",
+   "via": "plutarch",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Plutarch to write its own V1-V3 scripts; existing Plutus versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/midgard",
+     "revision": "41284d8974568f47ef35cb96e23acbf1b56894c2",
+     "path": "onchain/plutarch/cabal.project",
+     "line": 22,
+     "quote": "src/plutarch-onchain-lib"
+    }
+   ]
+  },
+  {
+   "tool": "plutus-simple-model",
+   "revision": "8474a3e725061afc8f9401596abb2c097d710bc1",
+   "via": "plutarch",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Plutarch to write its own V1-V3 scripts; existing Plutus versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "mlabs-haskell/plutus-simple-model",
+     "revision": "8474a3e725061afc8f9401596abb2c097d710bc1",
+     "path": "cardano-simple/cardano-simple.cabal",
+     "line": 95,
+     "quote": ", plutarch"
+    }
+   ]
+  },
+  {
+   "tool": "bloxbean-cardano-client-library",
+   "revision": "dfd8540d91a17f18a0b93320f9aa020eec43fbdb",
+   "via": "julc",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses JuLC to compile its own PlutusV3 validators; existing versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "bloxbean/cardano-client-lib",
+     "revision": "dfd8540d91a17f18a0b93320f9aa020eec43fbdb",
+     "path": "programmable-token/src/it/julc/build.gradle",
+     "line": 18,
+     "quote": "implementation(\"com.bloxbean.cardano:julc-stdlib:${julcVersion}\") {"
+    }
+   ]
+  },
+  {
+   "tool": "zeroj",
+   "revision": "83609543b82650635403716479ec2fdf018ef106",
+   "via": "julc",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses JuLC to compile its own PlutusV3 validators; existing versions stay valid after the fork.",
+   "evidence": [
+    {
+     "repo": "bloxbean/zeroj",
+     "revision": "83609543b82650635403716479ec2fdf018ef106",
+     "path": "settings.gradle",
+     "line": 20,
+     "quote": "include 'zeroj-onchain-julc'"
+    }
+   ]
+  },
+  {
+   "tool": "yano",
+   "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+   "via": "julc",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "not-reached",
+   "summary": "JuLC is only named in a license note of the build; Yano evaluates scripts through other libraries.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yano",
+     "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+     "path": "app/build.gradle",
+     "line": 538,
+     "quote": "// julc (org.julclang) declares its own MIT license in its POM."
+    }
+   ]
+  },
+  {
+   "tool": "mockfrost",
+   "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+   "via": "opshin",
+   "surfaces": [
+    "plutus-language",
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "The benchmark harness compiles its own validators with OpShin; existing versions stay valid.",
+   "evidence": [
+    {
+     "repo": "OpShin/mockfrost",
+     "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+     "path": "pyproject.toml",
+     "line": 18,
+     "quote": "\"opshin>=0.27.0\","
+    }
+   ]
+  },
+  {
+   "tool": "mockfrost",
+   "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+   "via": "pycardano",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Used for Plutus data types and its own script contexts (V1/V2), not to decode chain transactions.",
+   "evidence": [
+    {
+     "repo": "OpShin/mockfrost",
+     "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+     "path": "plutus_bench/ledger/api_v2.py",
+     "line": 9,
+     "quote": "from pycardano import Datum as Anything, PlutusData"
+    }
+   ]
+  },
+  {
+   "tool": "mockfrost",
+   "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+   "via": "plu-ts",
+   "surfaces": [
+    "plutus-script-context"
+   ],
+   "decision": "not-reached",
+   "summary": "Used for Plutus data types and its own script contexts (V1/V2), not to decode chain transactions.",
+   "evidence": [
+    {
+     "repo": "OpShin/mockfrost",
+     "revision": "bb67fab42236b925a25f1a24f4ebbbdcbde39aa8",
+     "path": "plutus_bench/ledger/api_v2.py",
+     "line": 9,
+     "quote": "from pycardano import Datum as Anything, PlutusData"
+    }
+   ]
+  },
+  {
+   "tool": "hebi",
+   "revision": "c598196f2d20b5a053d1a0dedd7e551d74299cac",
+   "via": "pycardano",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "The compiler uses PyCardano for Plutus data and script wrappers of its own output.",
+   "evidence": [
+    {
+     "repo": "OpShin/hebi",
+     "revision": "c598196f2d20b5a053d1a0dedd7e551d74299cac",
+     "path": "hebi/__main__.py",
+     "line": 10,
+     "quote": "import pycardano"
+    }
+   ]
+  },
+  {
+   "tool": "opshin",
+   "revision": "756a6a102b0bd5778029455719cd6f856ac5d34e",
+   "via": "pycardano",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "The compiler uses PyCardano for Plutus data and script wrappers of its own output.",
+   "evidence": [
+    {
+     "repo": "OpShin/opshin",
+     "revision": "756a6a102b0bd5778029455719cd6f856ac5d34e",
+     "path": "opshin/__main__.py",
+     "line": 22,
+     "quote": "import pycardano"
+    }
+   ]
+  },
+  {
+   "tool": "gin",
+   "revision": "3f27a00d98fb19169394208c69dd4c4a81ceb7ee",
+   "via": "pycardano",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "PyCardano is only a declared dependency; no shipped module decodes chain data with it.",
+   "evidence": [
+    {
+     "repo": "sidan-lab/gin",
+     "revision": "3f27a00d98fb19169394208c69dd4c4a81ceb7ee",
+     "path": "pyproject.toml",
+     "line": 22,
+     "quote": "pycardano = \"^0.12.3\""
+    }
+   ]
+  },
+  {
+   "tool": "lambda-buffers",
+   "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+   "via": "cardano-data-lite",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Only the PureScript runtime's package set pins cardano-data-lite (through CTL); LambdaBuffers generates types, not transactions.",
+   "evidence": [
+    {
+     "repo": "mlabs-haskell/lambda-buffers",
+     "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+     "path": "runtimes/purescript/lbr-plutus/packages.dhall",
+     "line": 22,
+     "quote": ", \"cardano-data-lite\""
+    }
+   ]
+  },
+  {
+   "tool": "lambda-buffers",
+   "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+   "via": "cardano-transaction-lib-ctl",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "not-reached",
+   "summary": "CTL is only in the PureScript runtime's package set.",
+   "evidence": [
+    {
+     "repo": "mlabs-haskell/lambda-buffers",
+     "revision": "1db995cd2646fdef9e0d2587907de52c335dd3c2",
+     "path": "runtimes/purescript/lbr-plutus/packages.dhall",
+     "line": 7,
+     "quote": "{ cardano-transaction-lib ="
+    }
+   ]
+  },
+  {
+   "tool": "cardano-transaction-lib-ctl",
+   "revision": "2ae739437420be191bca87fbe836eb999782b1ef",
+   "via": "cardano-data-lite",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "CTL serializes the transactions it builds with cardano-data-lite and decodes only addresses, UTxOs and witness sets from wallets.",
+   "evidence": [
+    {
+     "repo": "Plutonomicon/cardano-transaction-lib",
+     "revision": "2ae739437420be191bca87fbe836eb999782b1ef",
+     "path": "src/Internal/Wallet/Cip30.purs",
+     "line": 155,
+     "quote": "hexStringToAddress = decodeCbor <=< map wrap <<< hexToByteArray"
+    }
+   ]
+  },
+  {
+   "tool": "amaru",
+   "revision": "81c9ac4ebd3550f84377868f31bd30381deca3c6",
+   "via": "mithril",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Mithril only to download certified snapshots for bootstrap; block decoding afterwards is the tool's own.",
+   "evidence": [
+    {
+     "repo": "pragma-org/amaru",
+     "revision": "81c9ac4ebd3550f84377868f31bd30381deca3c6",
+     "path": "Cargo.toml",
+     "line": 65,
+     "quote": "mithril-client = { version = \"0.14.17\", default-features = false, features = [\"fs\", \"num-integer-backend\", \"rustls-tls\"] }"
+    }
+   ]
+  },
+  {
+   "tool": "daedalus",
+   "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+   "via": "mithril",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Mithril only to download certified snapshots for bootstrap; block decoding afterwards is the tool's own.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/daedalus",
+     "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+     "path": "watchdog/Cargo.toml",
+     "line": 36,
+     "quote": "name = \"mock-mithril-client\""
+    }
+   ]
+  },
+  {
+   "tool": "dolos",
+   "revision": "378b8b0eda64d7ba3364216224155e461fe56cb0",
+   "via": "mithril",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Mithril only to download certified snapshots for bootstrap; block decoding afterwards is the tool's own.",
+   "evidence": [
+    {
+     "repo": "txpipe/dolos",
+     "revision": "378b8b0eda64d7ba3364216224155e461fe56cb0",
+     "path": "crates/mithril/Cargo.toml",
+     "line": 13,
+     "quote": "mithril-client = { version = \"0.14.5\", default-features = false, features = ["
+    }
+   ]
+  },
+  {
+   "tool": "gerolamo",
+   "revision": "0e6421e9069eaf4ab505ca90fff7c3fa7e1833ea",
+   "via": "mithril",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Mithril only to download certified snapshots for bootstrap; block decoding afterwards is the tool's own.",
+   "evidence": [
+    {
+     "repo": "HarmonicLabs/gerolamo",
+     "revision": "0e6421e9069eaf4ab505ca90fff7c3fa7e1833ea",
+     "path": "flake.nix",
+     "line": 42,
+     "quote": "inputs.mithril.packages.${system}.mithril-client-cli"
+    }
+   ]
+  },
+  {
+   "tool": "oura",
+   "revision": "8433b1049b250b1c1ccc174e5ee17d5963effe5c",
+   "via": "mithril",
+   "surfaces": [
+    "block-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses Mithril only to download certified snapshots for bootstrap; block decoding afterwards is the tool's own.",
+   "evidence": [
+    {
+     "repo": "txpipe/oura",
+     "revision": "8433b1049b250b1c1ccc174e5ee17d5963effe5c",
+     "path": "Cargo.toml",
+     "line": 21,
+     "quote": "mithril = [\"mithril-client\"]"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-hw-cli",
+   "revision": "7f77c67d8163465fe2662a3328cb7eac8feb6a89",
+   "via": "cardano-hw-interop-lib",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Parses transaction files with the interop library, which rejects bodies with keys beyond 22.",
+   "evidence": [
+    {
+     "repo": "vacuumlabs/cardano-hw-cli",
+     "revision": "7f77c67d8163465fe2662a3328cb7eac8feb6a89",
+     "path": "src/command-parser/parserConfig.ts",
+     "line": 110,
+     "quote": "type: (path: string) => parseTxFile(path),"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-hw-cli",
+   "revision": "7f77c67d8163465fe2662a3328cb7eac8feb6a89",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Signs transactions built elsewhere (dApp requests or transaction files) on a Ledger; the Ledger transaction model ends at key 22.",
+   "evidence": [
+    {
+     "repo": "vacuumlabs/cardano-hw-cli",
+     "revision": "7f77c67d8163465fe2662a3328cb7eac8feb6a89",
+     "path": "package.json",
+     "line": 44,
+     "quote": "\"@cardano-foundation/ledgerjs-hw-app-cardano\": \"8.0.0-beta\","
+    }
+   ]
+  },
+  {
+   "tool": "cardano-js-sdk",
+   "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Signs transactions built elsewhere (dApp requests or transaction files) on a Ledger: the Ledger key agent signs any body handed to it, including CIP-30 requests in Lace.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/cardano-js-sdk",
+     "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+     "path": "packages/hardware-ledger/src/LedgerKeyAgent.ts",
+     "line": 741,
+     "quote": "async signTransaction("
+    }
+   ]
+  },
+  {
+   "tool": "lace",
+   "revision": "e5da9457ab2ad0656b6819cc1c844fee487d113d",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Signs transactions built elsewhere (dApp requests or transaction files) on a Ledger for CIP-30 dApp requests.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/lace",
+     "revision": "e5da9457ab2ad0656b6819cc1c844fee487d113d",
+     "path": "packages/lib/util-hw/src/mobile/ledger-ble-service.ts",
+     "line": 1,
+     "quote": "import LedgerConnection from '@cardano-foundation/ledgerjs-hw-app-cardano';"
+    }
+   ]
+  },
+  {
+   "tool": "yoroi",
+   "revision": "5f6fb8348df1c486cd8075f80976dbbd75e27641",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Signs transactions built elsewhere (dApp requests or transaction files) on a Ledger for CIP-30 dApp requests.",
+   "evidence": [
+    {
+     "repo": "Emurgo/yoroi",
+     "revision": "5f6fb8348df1c486cd8075f80976dbbd75e27641",
+     "path": "mobile/packages/cardano-wallet/cip30/cip30-ledger.ts",
+     "line": 13,
+     "quote": "} from '@cardano-foundation/ledgerjs-hw-app-cardano'"
+    }
+   ]
+  },
+  {
+   "tool": "nami",
+   "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Signs transactions built elsewhere (dApp requests or transaction files) on a Ledger for CIP-30 dApp requests. The repository is archived.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/nami",
+     "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+     "path": "src/api/extension/index.js",
+     "line": 37,
+     "quote": "import Ada, { HARDENED } from '@cardano-foundation/ledgerjs-hw-app-cardano';"
+    }
+   ]
+  },
+  {
+   "tool": "nami",
+   "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+   "via": "cardano-hw-interop-lib",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes and transforms dApp transactions for hardware signing with the interop library, which rejects bodies with keys beyond 22.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/nami",
+     "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+     "path": "src/api/extension/wallet.js",
+     "line": 5,
+     "quote": "import { decodeTx, encodeTx, transformTx } from 'cardano-hw-interop-lib';"
+    }
+   ]
+  },
+  {
+   "tool": "bursa",
+   "revision": "129d9340ff83afbe151f00e9eaaf7714a0961866",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The web signer hands supplied transactions to a Ledger.",
+   "evidence": [
+    {
+     "repo": "blinklabs-io/bursa",
+     "revision": "129d9340ff83afbe151f00e9eaaf7714a0961866",
+     "path": "ui/web/src/hw/ledger.ts",
+     "line": 13,
+     "quote": "import Ada from \"@cardano-foundation/ledgerjs-hw-app-cardano\";"
+    }
+   ]
+  },
+  {
+   "tool": "adalite",
+   "revision": "e7522c2d84dd5f34f0381e613978577bf28666fd",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "AdaLite signs only transactions it builds itself (no dApp connector), so they carry no Dijkstra-only fields.",
+   "evidence": [
+    {
+     "repo": "vacuumlabs/adalite",
+     "revision": "e7522c2d84dd5f34f0381e613978577bf28666fd",
+     "path": "app/frontend/wallet/shelley/shelley-ledger-crypto-provider.ts",
+     "line": 4,
+     "quote": "import Ledger, * as LedgerTypes from '@cardano-foundation/ledgerjs-hw-app-cardano'"
+    }
+   ]
+  },
+  {
+   "tool": "daedalus",
+   "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+   "via": "ledgerjs-hw-app-cardano",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Daedalus signs only transactions its wallet backend builds.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/daedalus",
+     "revision": "22440487d08fd1d2121394fa80c238852df5ea7d",
+     "path": "source/main/ipc/getHardwareWalletChannel.ts",
+     "line": 5,
+     "quote": "import AppAda, { utils } from '@cardano-foundation/ledgerjs-hw-app-cardano';"
+    }
+   ]
+  },
+  {
+   "tool": "carp",
+   "revision": "61fe5f2034512cb9ef592918e6cb4e833242b16a",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Indexes chain blocks with CML's multi-era decoder, which ends at Conway.",
+   "evidence": [
+    {
+     "repo": "dcSpark/carp",
+     "revision": "61fe5f2034512cb9ef592918e6cb4e833242b16a",
+     "path": "indexer/src/sinks/cardano.rs",
+     "line": 283,
+     "quote": "let multi_block = MultiEraBlock::from_explicit_network_cbor_bytes(&block_payload).unwrap();"
+    }
+   ]
+  },
+  {
+   "tool": "carp",
+   "revision": "61fe5f2034512cb9ef592918e6cb4e833242b16a",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Carp stores what it decodes; it builds no transactions and reads no parameter updates.",
+   "evidence": [
+    {
+     "repo": "dcSpark/carp",
+     "revision": "61fe5f2034512cb9ef592918e6cb4e833242b16a",
+     "path": "indexer/src/sinks/cardano.rs",
+     "line": 283,
+     "quote": "let multi_block = MultiEraBlock::from_explicit_network_cbor_bytes(&block_payload).unwrap();"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ibc-incubator",
+   "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The gateway decodes on-chain transaction bodies it did not build (packet evidence) with CML 6.2.0.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-ibc-incubator",
+     "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+     "path": "cardano/gateway/src/query/services/query.service.ts",
+     "line": 313,
+     "quote": "const body = CML.TransactionBody.from_cbor_hex(evidence.txBodyCborHex);"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ibc-incubator",
+   "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Other CML use builds the gateway's own transactions.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-ibc-incubator",
+     "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+     "path": "cardano/gateway/src/query/services/query.service.ts",
+     "line": 313,
+     "quote": "const body = CML.TransactionBody.from_cbor_hex(evidence.txBodyCborHex);"
+    }
+   ]
+  },
+  {
+   "tool": "lucid-evolution",
+   "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "fromTx decodes any transaction CBOR with the vendored CML, which stops at body key 22.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/lucid-evolution",
+     "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+     "path": "packages/lucid/src/lucid-evolution/LucidEvolution.ts",
+     "line": 223,
+     "quote": "CML.Transaction.from_cbor_hex(tx),"
+    }
+   ]
+  },
+  {
+   "tool": "lucid-evolution",
+   "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Otherwise CML builds Lucid's own transactions.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/lucid-evolution",
+     "revision": "ae579343fe173d33902c76ef76ac80228312428f",
+     "path": "packages/lucid/src/lucid-evolution/LucidEvolution.ts",
+     "line": 223,
+     "quote": "CML.Transaction.from_cbor_hex(tx),"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-js-sdk",
+   "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "CML is used only as a BIP32-Ed25519 crypto strategy.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/cardano-js-sdk",
+     "revision": "48019e49c826ea77d81be0e2d2907f94406f5e04",
+     "path": "packages/crypto/src/strategies/CML.ts",
+     "line": 1,
+     "quote": "import * as CML from '@dcspark/cardano-multiplatform-lib-nodejs';"
+    }
+   ]
+  },
+  {
+   "tool": "naumachia",
+   "revision": "fbbd58feb08206fb06037342c06252a284a81967",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "CML builds Naumachia's own transactions.",
+   "evidence": [
+    {
+     "repo": "free-honey/naumachia",
+     "revision": "fbbd58feb08206fb06037342c06252a284a81967",
+     "path": "Cargo.toml",
+     "line": 57,
+     "quote": "[dependencies.cardano-multiplatform-lib]"
+    }
+   ]
+  },
+  {
+   "tool": "nami",
+   "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+   "via": "cardano-multiplatform-lib-cml",
+   "surfaces": [
+    "block-encoding",
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes dApp-supplied transactions with CML for CIP-30 signing. The repository is archived.",
+   "evidence": [
+    {
+     "repo": "input-output-hk/nami",
+     "revision": "e52e0bdb02eb1ec224db26f48b0192685a30f99e",
+     "path": "src/api/loader.js",
+     "line": 1,
+     "quote": "import * as wasm from '@dcspark/cardano-multiplatform-lib-browser';"
+    }
+   ]
+  },
+  {
+   "tool": "adapools-xyz",
+   "revision": "72e59d841aea70d37038f76eb857570d0df72706",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "schmidko/adapools",
+     "revision": "72e59d841aea70d37038f76eb857570d0df72706",
+     "path": "package.json",
+     "line": 17,
+     "quote": "\"@meshsdk/transaction\": \"^1.9.1\","
+    }
+   ]
+  },
+  {
+   "tool": "cardano-mcp",
+   "revision": "9fe85c6552770915b767c966b3663234b22674e2",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "lidonation/Cardano-mcp",
+     "revision": "9fe85c6552770915b767c966b3663234b22674e2",
+     "path": "package.json",
+     "line": 20,
+     "quote": "\"@meshsdk/core\": \"^1.7.0\","
+    }
+   ]
+  },
+  {
+   "tool": "epora-wallet",
+   "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "schaier-io/epora-wallet",
+     "revision": "8e6fd820d21e901f019af71eec8150400b1e9669",
+     "path": "code/dApp/package.json",
+     "line": 60,
+     "quote": "\"@meshsdk/common\": \"1.9.1\","
+    }
+   ]
+  },
+  {
+   "tool": "masumi",
+   "revision": "dd0a1e12e2e9fddba028512355d0eaf7cc85efac",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "masumi-network/masumi-payment-service",
+     "revision": "dd0a1e12e2e9fddba028512355d0eaf7cc85efac",
+     "path": "frontend/package.json",
+     "line": 24,
+     "quote": "\"@meshsdk/core\": \"1.9.0-beta.96\","
+    }
+   ]
+  },
+  {
+   "tool": "masumi-registry-service",
+   "revision": "3b0ab26f340174acbed0d4eb6afba1bb6697d524",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "masumi-network/masumi-registry-service",
+     "revision": "3b0ab26f340174acbed0d4eb6afba1bb6697d524",
+     "path": "package.json",
+     "line": 37,
+     "quote": "\"@meshsdk/core\": \"1.9.0\","
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ibc-incubator",
+   "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+   "via": "meshjs-mesh-sdk",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-ibc-incubator",
+     "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+     "path": "dapps/ibc-swap/client/package.json",
+     "line": 48,
+     "quote": "\"@meshsdk/common\": \"1.9.1\","
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ctf",
+   "revision": "43de1e4186674f10563f30b29cc2bc1f743cf30d",
+   "via": "lucid-evolution",
+   "surfaces": [
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "Invariant-0/cardano-ctf",
+     "revision": "43de1e4186674f10563f30b29cc2bc1f743cf30d",
+     "path": "package.json",
+     "line": 45,
+     "quote": "\"@lucid-evolution/experimental\": \"^0.0.9\","
+    }
+   ]
+  },
+  {
+   "tool": "create-evolution-app",
+   "revision": "3923081b665890603dd0b924eeecf9fcd05244c7",
+   "via": "lucid-evolution",
+   "surfaces": [
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "Anastasia-Labs/create-evolution-app",
+     "revision": "3923081b665890603dd0b924eeecf9fcd05244c7",
+     "path": "package.json",
+     "line": 14,
+     "quote": "\"@lucid-evolution/lucid\": \"^0.4.24\","
+    }
+   ]
+  },
+  {
+   "tool": "geniusyield-sdk",
+   "revision": "66a6ebcedd64979d02d1bb01c520185af1489f0d",
+   "via": "lucid-evolution",
+   "surfaces": [
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "geniusyield/dex-lucid",
+     "revision": "66a6ebcedd64979d02d1bb01c520185af1489f0d",
+     "path": "package.json",
+     "line": 21,
+     "quote": "\"@lucid-evolution/lucid\": \"^0.3.19\""
+    }
+   ]
+  },
+  {
+   "tool": "cardano-ibc-incubator",
+   "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+   "via": "lucid-evolution",
+   "surfaces": [
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Builds and submits its own Conway-shaped transactions; nothing Dijkstra-only is decoded.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-ibc-incubator",
+     "revision": "5377651afad44901eee18044c6edce58a0e880fa",
+     "path": "cardano/gateway/package.json",
+     "line": 57,
+     "quote": "\"@lucid-evolution/lucid\": \"0.6.5\","
+    }
+   ]
+  },
+  {
+   "tool": "meshjs-mesh-sdk",
+   "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+   "via": "whisky",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The CSL core parses transaction bodies with Whisky, which decodes through CSL (body ends at key 22).",
+   "evidence": [
+    {
+     "repo": "MeshJS/mesh",
+     "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+     "path": "packages/mesh-core-csl/src/parser/index.ts",
+     "line": 1,
+     "quote": "import { js_parse_tx_body, JsVecString } from \"@sidan-lab/whisky-js-nodejs\";"
+    }
+   ]
+  },
+  {
+   "tool": "meshjs-mesh-sdk",
+   "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+   "via": "whisky",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters"
+   ],
+   "decision": "not-reached",
+   "summary": "Other Whisky use serializes Mesh's own transactions.",
+   "evidence": [
+    {
+     "repo": "MeshJS/mesh",
+     "revision": "0e5138cca0de0defcf73106cf035a30233cd5159",
+     "path": "packages/mesh-core-csl/src/deser/csl.ts",
+     "line": 1,
+     "quote": "export * as csl from \"@sidan-lab/whisky-js-nodejs\";"
+    }
+   ]
+  },
+  {
+   "tool": "odatano",
+   "revision": "819009515bf62f4db368371ffda0918cb707540c",
+   "via": "buildooor",
+   "surfaces": [
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "buildooor is an optional builder for ODATANO's own transactions.",
+   "evidence": [
+    {
+     "repo": "ODATANO/ODATANO",
+     "revision": "819009515bf62f4db368371ffda0918cb707540c",
+     "path": ".env.example",
+     "line": 26,
+     "quote": "# Available builders (comma-separated): csl, buildooor"
+    }
+   ]
+  },
+  {
+   "tool": "gerolamo",
+   "revision": "0e6421e9069eaf4ab505ca90fff7c3fa7e1833ea",
+   "via": "buildooor",
+   "surfaces": [
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "buildooor is declared in package.json but no shipped module imports it.",
+   "evidence": [
+    {
+     "repo": "HarmonicLabs/gerolamo",
+     "revision": "0e6421e9069eaf4ab505ca90fff7c3fa7e1833ea",
+     "path": "package.json",
+     "line": 32,
+     "quote": "\"@harmoniclabs/buildooor\": \"^0.1.21\","
+    }
+   ]
+  },
+  {
+   "tool": "cardanosharp-blazor",
+   "revision": "2538aacefbc9e5e7ca0d257cb3e012aa70ef8e66",
+   "via": "cardanosharp",
+   "surfaces": [
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses CardanoSharp for keys, addresses, coin selection and its own transactions; it decodes no chain transactions with it.",
+   "evidence": [
+    {
+     "repo": "CardanoSharp/cardanosharp-blazor",
+     "revision": "2538aacefbc9e5e7ca0d257cb3e012aa70ef8e66",
+     "path": "CardanoSharp.Blazor/CardanoSharp.Blazor.Components/CardanoSharp.Blazor.Components.csproj",
+     "line": 42,
+     "quote": "<PackageReference Include=\"CardanoSharp.Wallet\" Version=\"5.0.3\" />"
+    }
+   ]
+  },
+  {
+   "tool": "cscli",
+   "revision": "fc9171147e40726a86083294f9b940f72c9a8b0d",
+   "via": "cardanosharp",
+   "surfaces": [
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses CardanoSharp for keys, addresses, coin selection and its own transactions; it decodes no chain transactions with it.",
+   "evidence": [
+    {
+     "repo": "CardanoSharp/cscli",
+     "revision": "fc9171147e40726a86083294f9b940f72c9a8b0d",
+     "path": "Src/ConsoleTool/Cscli.ConsoleTool.csproj",
+     "line": 35,
+     "quote": "<PackageReference Include=\"CardanoSharp.Wallet\" Version=\"2.17.0\" />"
+    }
+   ]
+  },
+  {
+   "tool": "nmkr-studio-api",
+   "revision": "5c8f0d18761167611c729e6eae69be67bdd5e981",
+   "via": "cardanosharp",
+   "surfaces": [
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses CardanoSharp for keys, addresses, coin selection and its own transactions; it decodes no chain transactions with it.",
+   "evidence": [
+    {
+     "repo": "nftmakerio/NMKR-Studio",
+     "revision": "5c8f0d18761167611c729e6eae69be67bdd5e981",
+     "path": "NMKR.Shared/NMKR.Shared.csproj",
+     "line": 34,
+     "quote": "<PackageReference Include=\"CardanoSharp.Wallet\" Version=\"5.1.0\" />"
+    }
+   ]
+  },
+  {
+   "tool": "cquisitor",
+   "revision": "99346c2742c1b6c45b84f5f081f5e822833180ff",
+   "via": "cquisitor-lib",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes and validates arbitrary user-supplied transactions with cquisitor-lib.",
+   "evidence": [
+    {
+     "repo": "cardananium/cquisitor",
+     "revision": "99346c2742c1b6c45b84f5f081f5e822833180ff",
+     "path": "src/app/TransactionValidatorContent.tsx",
+     "line": 1303,
+     "quote": "await validateTransactionOnline({"
+    }
+   ]
+  },
+  {
+   "tool": "whisky",
+   "revision": "18b019150e33879d3b2d66e29f0bd92397089bb5",
+   "via": "cquisitor-lib",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "The transaction validator runs cquisitor-lib over transactions it is given.",
+   "evidence": [
+    {
+     "repo": "sidan-lab/whisky",
+     "revision": "18b019150e33879d3b2d66e29f0bd92397089bb5",
+     "path": "packages/whisky-csl/src/utils/validator.rs",
+     "line": 3,
+     "quote": "use cquisitor_lib::validators::validation_result::ValidationResult;"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-client-bindings",
+   "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "transaction-encoding",
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes transactions it did not build with cardano-client-lib, whose body ends at key 22 and languages at V3. (the transaction API takes caller-supplied CBOR).",
+   "evidence": [
+    {
+     "repo": "bloxbean/mesmo",
+     "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
+     "path": "core/src/main/java/com/bloxbean/cardano/mesmo/api/TransactionApi.java",
+     "line": 57,
+     "quote": "Transaction tx = Transaction.deserialize(HexUtil.decodeHexString(txCborHex));"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-rosetta-java",
+   "revision": "517f0fadf73ea2d8757ae5cff6f712df332c6f17",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "transaction-encoding"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes transactions it did not build with cardano-client-lib, whose body ends at key 22 and languages at V3. (construction parse and combine take client-supplied transactions).",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-rosetta-java",
+     "revision": "517f0fadf73ea2d8757ae5cff6f712df332c6f17",
+     "path": "api/src/main/java/org/cardanofoundation/rosetta/api/construction/service/CardanoConstructionServiceImpl.java",
+     "line": 125,
+     "quote": "DataItem dataItem = CborSerializationUtil.deserialize(decodeHexString(encoded));"
+    }
+   ]
+  },
+  {
+   "tool": "julc",
+   "revision": "a39c0fb55f013985e8aafd7dc0d6607f3cbf5e30",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "transaction-encoding",
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes transactions it did not build with cardano-client-lib, whose body ends at key 22 and languages at V3. (the transaction evaluator).",
+   "evidence": [
+    {
+     "repo": "bloxbean/julc",
+     "revision": "a39c0fb55f013985e8aafd7dc0d6607f3cbf5e30",
+     "path": "julc-cardano-client-lib/src/main/java/org/julclang/clientlib/eval/JulcTransactionEvaluator.java",
+     "line": 194,
+     "quote": "Transaction tx = Transaction.deserialize(cbor);"
+    }
+   ]
+  },
+  {
+   "tool": "scalus",
+   "revision": "5e9c749b74872a998876aaa4b1dff790f9620c73",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "transaction-encoding",
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "The Scalus evaluator for cardano-client-lib evaluates transactions in cardano-client-lib's model, which has no V4 language or Dijkstra body keys.",
+   "evidence": [
+    {
+     "repo": "scalus3/scalus",
+     "revision": "5e9c749b74872a998876aaa4b1dff790f9620c73",
+     "path": "bloxbean-cardano-client-lib/src/main/scala/scalus/bloxbean/ScalusTransactionEvaluator.scala",
+     "line": 36,
+     "quote": "class ScalusTransactionEvaluator("
+    }
+   ]
+  },
+  {
+   "tool": "yano",
+   "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "transaction-encoding",
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "Decodes transactions it did not build with cardano-client-lib, whose body ends at key 22 and languages at V3. (submitted transactions are validated with cardano-client-lib's ledger rules).",
+   "evidence": [
+    {
+     "repo": "bloxbean/yano",
+     "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+     "path": "ccl-ledger-rules/src/main/java/com/bloxbean/cardano/client/api/TransactionValidator.java",
+     "line": 40,
+     "quote": "Transaction transaction = Transaction.deserialize(cbor);"
+    }
+   ]
+  },
+  {
+   "tool": "yaci",
+   "revision": "2762a3925559b32be30a7b1e18a342366a62fd70",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "Era detection maps onto cardano-client-lib's Era enum, which ends at Conway.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci",
+     "revision": "2762a3925559b32be30a7b1e18a342366a62fd70",
+     "path": "core/src/main/java/com/bloxbean/cardano/yaci/core/common/EraUtil.java",
+     "line": 34,
+     "quote": "return Era.Conway;"
+    }
+   ]
+  },
+  {
+   "tool": "yaci-store",
+   "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity"
+   ],
+   "decision": "confirmed",
+   "summary": "Era-dependent processing uses cardano-client-lib's Era enum, which ends at Conway.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci-store",
+     "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+     "path": "aggregates/account/src/main/java/com/bloxbean/cardano/yaci/store/account/processor/AccountBalanceProcessor.java",
+     "line": 154,
+     "quote": "if (event.getMetadata().getEra().getValue() < Era.Conway.getValue()) {"
+    }
+   ]
+  },
+  {
+   "tool": "cf-ledger-sync",
+   "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "plutus-language"
+   ],
+   "decision": "confirmed",
+   "summary": "On-chain scripts are mapped to cardano-client-lib's PlutusScript types, which stop at V3.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cf-ledger-sync",
+     "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+     "path": "application/src/main/java/org/cardanofoundation/ledgersync/factory/PlutusScriptFactory.java",
+     "line": 32,
+     "quote": "public Script handle(PlutusScript plutusScript, Tx tx) {"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-client-bindings",
+   "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "bloxbean/mesmo",
+     "revision": "54b8ca747cd66c4a51cf1130bb19b1a7e0b14bd1",
+     "path": "core/build.gradle",
+     "line": 6,
+     "quote": "base.archivesName = 'cardano-client-lib-core'"
+    }
+   ]
+  },
+  {
+   "tool": "cardano-rosetta-java",
+   "revision": "517f0fadf73ea2d8757ae5cff6f712df332c6f17",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cardano-rosetta-java",
+     "revision": "517f0fadf73ea2d8757ae5cff6f712df332c6f17",
+     "path": "api/pom.xml",
+     "line": 175,
+     "quote": "<artifactId>cardano-client-lib</artifactId>"
+    }
+   ]
+  },
+  {
+   "tool": "julc",
+   "revision": "a39c0fb55f013985e8aafd7dc0d6607f3cbf5e30",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "bloxbean/julc",
+     "revision": "a39c0fb55f013985e8aafd7dc0d6607f3cbf5e30",
+     "path": "julc-annotation-processor/build.gradle",
+     "line": 11,
+     "quote": "implementation project(':julc-cardano-client-lib')"
+    }
+   ]
+  },
+  {
+   "tool": "scalus",
+   "revision": "5e9c749b74872a998876aaa4b1dff790f9620c73",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "scalus3/scalus",
+     "revision": "5e9c749b74872a998876aaa4b1dff790f9620c73",
+     "path": "build.sbt",
+     "line": 282,
+     "quote": "`scalus-bloxbean-cardano-client-lib`,"
+    }
+   ]
+  },
+  {
+   "tool": "yano",
+   "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "stake-pool-registration"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yano",
+     "revision": "b511fc862785c26ca52784b85d9925c1c20243b3",
+     "path": "gradle/libs.versions.toml",
+     "line": 3,
+     "quote": "cardano-client-lib = \"0.8.0-pre5\""
+    }
+   ]
+  },
+  {
+   "tool": "yaci",
+   "revision": "2762a3925559b32be30a7b1e18a342366a62fd70",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci",
+     "revision": "2762a3925559b32be30a7b1e18a342366a62fd70",
+     "path": "gradle/libs.versions.toml",
+     "line": 2,
+     "quote": "cardano-client-core = \"com.bloxbean.cardano:cardano-client-core:0.7.2\""
+    }
+   ]
+  },
+  {
+   "tool": "yaci-store",
+   "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci-store",
+     "revision": "97b70ca85b260e11fb10c0226c5e3d717adba07c",
+     "path": "components/common/build.gradle",
+     "line": 10,
+     "quote": "exclude group: \"com.bloxbean.cardano\", module: \"cardano-client-core\""
+    }
+   ]
+  },
+  {
+   "tool": "cf-ledger-sync",
+   "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Its other cardano-client-lib use is addresses, crypto, utilities and building its own transactions.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cf-ledger-sync",
+     "revision": "c93dc4d81de8f6234811e2f0b43929531ec5905a",
+     "path": "aggregates/account/build.gradle",
+     "line": 8,
+     "quote": "exclude group: 'com.bloxbean.cardano', module: 'cardano-client-lib'"
+    }
+   ]
+  },
+  {
+   "tool": "cf-java-rewards-calculation",
+   "revision": "bc49b5f6103c05813cb9c839a99e3f3341e36387",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses cardano-client-lib for utilities, crypto or building its own transactions only.",
+   "evidence": [
+    {
+     "repo": "cardano-foundation/cf-java-rewards-calculation",
+     "revision": "bc49b5f6103c05813cb9c839a99e3f3341e36387",
+     "path": "pom.xml",
+     "line": 66,
+     "quote": "<version.cardano-client-lib>0.4.3</version.cardano-client-lib>"
+    }
+   ]
+  },
+  {
+   "tool": "intelliada",
+   "revision": "b3d3fceaf12a6fc094266b19dfd27dcae2e60cd3",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses cardano-client-lib for utilities, crypto or building its own transactions only.",
+   "evidence": [
+    {
+     "repo": "bloxbean/intelliada",
+     "revision": "b3d3fceaf12a6fc094266b19dfd27dcae2e60cd3",
+     "path": "build.gradle",
+     "line": 55,
+     "quote": "implementation('com.bloxbean.cardano:cardano-client-lib:0.6.2') {"
+    }
+   ]
+  },
+  {
+   "tool": "yaci-devkit",
+   "revision": "e67d385799b40aab0992d0b3616dfd8c14ed5ff8",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses cardano-client-lib for utilities, crypto or building its own transactions only.",
+   "evidence": [
+    {
+     "repo": "bloxbean/yaci-devkit",
+     "revision": "e67d385799b40aab0992d0b3616dfd8c14ed5ff8",
+     "path": "applications/cli/build.gradle",
+     "line": 42,
+     "quote": "exclude group: 'com.bloxbean.cardano', module: 'cardano-client-core'"
+    }
+   ]
+  },
+  {
+   "tool": "zeroj",
+   "revision": "83609543b82650635403716479ec2fdf018ef106",
+   "via": "bloxbean-cardano-client-library",
+   "surfaces": [
+    "era-identity",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "transaction-encoding"
+   ],
+   "decision": "not-reached",
+   "summary": "Uses cardano-client-lib for utilities, crypto or building its own transactions only.",
+   "evidence": [
+    {
+     "repo": "bloxbean/zeroj",
+     "revision": "83609543b82650635403716479ec2fdf018ef106",
+     "path": "zeroj-onchain-julc/build.gradle",
+     "line": 57,
+     "quote": "implementation \"com.bloxbean.cardano:cardano-client-crypto:${rootProject.ext.cclVersion}\""
+    }
+   ]
   }
  ]
 }

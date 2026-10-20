@@ -1,24 +1,7 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T15:37:02.142Z",
+ "generatedAt": "2026-10-20T15:46:12.674Z",
  "bumpReady": [
-  {
-   "tool": "bursa",
-   "pins": [
-    "gouroboros@0.212.5<v0.213.0"
-   ],
-   "steps": [
-    {
-     "package": "gouroboros",
-     "from": "0.212.5",
-     "to": "v0.213.0",
-     "breaking": true
-    }
-   ],
-   "unread": [
-    "ledgerjs-hw-app-cardano"
-   ]
-  },
   {
    "tool": "cardano-node-api",
    "pins": [
@@ -252,14 +235,16 @@
     {
      "tool": "cardano-client-bindings",
      "stillBlockedBy": [
-      "ogmios"
+      "ogmios",
+      "bloxbean-cardano-client-library"
      ]
     },
     {
      "tool": "cardano-ibc-incubator",
      "stillBlockedBy": [
       "kupo",
-      "ogmios"
+      "ogmios",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -267,7 +252,8 @@
      "stillBlockedBy": [
       "cardano-js-sdk (own gap)",
       "cardano-db-sync",
-      "ogmios"
+      "ogmios",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -300,7 +286,8 @@
     {
      "tool": "cquisitor",
      "stillBlockedBy": [
-      "koios"
+      "koios",
+      "cquisitor-lib"
      ]
     },
     {
@@ -344,7 +331,8 @@
      "tool": "lace",
      "stillBlockedBy": [
       "cardano-js-sdk",
-      "ogmios"
+      "ogmios",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -354,7 +342,8 @@
       "scalus",
       "kupo",
       "ogmios",
-      "koios"
+      "koios",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -367,7 +356,10 @@
     {
      "tool": "nami",
      "stillBlockedBy": [
-      "cardano-js-sdk"
+      "cardano-js-sdk",
+      "ledgerjs-hw-app-cardano",
+      "cardano-hw-interop-lib",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -388,7 +380,8 @@
     {
      "tool": "scalus",
      "stillBlockedBy": [
-      "scalus (own gap)"
+      "scalus (own gap)",
+      "bloxbean-cardano-client-library"
      ]
     },
     {
@@ -403,7 +396,8 @@
      "tool": "whisky",
      "stillBlockedBy": [
       "whisky (own gap)",
-      "cardano-serialization-lib-csl"
+      "cardano-serialization-lib-csl",
+      "cquisitor-lib"
      ]
     }
    ],
@@ -537,7 +531,8 @@
     {
      "tool": "cardano-client-bindings",
      "stillBlockedBy": [
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "bloxbean-cardano-client-library"
      ]
     },
     {
@@ -551,7 +546,8 @@
      "tool": "cardano-ibc-incubator",
      "stillBlockedBy": [
       "kupo",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -559,7 +555,8 @@
      "stillBlockedBy": [
       "cardano-js-sdk (own gap)",
       "cardano-db-sync",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -630,7 +627,8 @@
      "tool": "lace",
      "stillBlockedBy": [
       "cardano-js-sdk",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -640,7 +638,8 @@
       "scalus",
       "kupo",
       "blockfrost-backend-ryo",
-      "koios"
+      "koios",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -694,7 +693,8 @@
     {
      "tool": "yaci-store",
      "stillBlockedBy": [
-      "scalus"
+      "scalus",
+      "bloxbean-cardano-client-library"
      ]
     }
    ],
@@ -814,7 +814,8 @@
     {
      "tool": "cquisitor",
      "stillBlockedBy": [
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "cquisitor-lib"
      ]
     },
     {
@@ -862,7 +863,8 @@
       "scalus",
       "kupo",
       "ogmios",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -889,7 +891,8 @@
     {
      "tool": "yoroi",
      "stillBlockedBy": [
-      "cardano-serialization-lib-csl"
+      "cardano-serialization-lib-csl",
+      "ledgerjs-hw-app-cardano"
      ]
     }
    ],
@@ -980,7 +983,8 @@
      "tool": "cardano-ibc-incubator",
      "stillBlockedBy": [
       "ogmios",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -1035,7 +1039,8 @@
       "scalus",
       "ogmios",
       "blockfrost-backend-ryo",
-      "koios"
+      "koios",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
@@ -1123,7 +1128,8 @@
      "stillBlockedBy": [
       "cardano-js-sdk (own gap)",
       "ogmios",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -1182,17 +1188,36 @@
    ]
   },
   {
-   "component": "cardano-serialization-lib-csl",
+   "component": "cardano-wallet",
    "unlocks": [
     {
-     "tool": "cardano-hw-cli",
+     "tool": "cardano-wallet-js",
      "depth": 1,
      "path": [
-      "cardano-serialization-lib-csl",
-      "cardano-hw-cli"
+      "cardano-wallet",
+      "cardano-wallet-js"
      ],
      "bumps": []
     },
+    {
+     "tool": "daedalus",
+     "depth": 1,
+     "path": [
+      "cardano-wallet",
+      "daedalus"
+     ],
+     "bumps": []
+    }
+   ],
+   "partial": [],
+   "downstream": [],
+   "ownGap": [
+    "node-to-client-protocol"
+   ]
+  },
+  {
+   "component": "cardano-serialization-lib-csl",
+   "unlocks": [
     {
      "tool": "csl-mobile-bridge",
      "depth": 1,
@@ -1209,6 +1234,13 @@
      "stillBlockedBy": [
       "kupo",
       "ogmios"
+     ]
+    },
+    {
+     "tool": "cardano-hw-cli",
+     "stillBlockedBy": [
+      "cardano-hw-interop-lib",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
@@ -1242,13 +1274,15 @@
      "tool": "whisky",
      "stillBlockedBy": [
       "whisky (own gap)",
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "cquisitor-lib"
      ]
     },
     {
      "tool": "yoroi",
      "stillBlockedBy": [
-      "koios"
+      "koios",
+      "ledgerjs-hw-app-cardano"
      ]
     }
    ],
@@ -1267,46 +1301,148 @@
    ]
   },
   {
-   "component": "cardano-wallet",
+   "component": "bloxbean-cardano-client-library",
    "unlocks": [
     {
-     "tool": "cardano-wallet-js",
+     "tool": "yaci",
      "depth": 1,
      "path": [
-      "cardano-wallet",
-      "cardano-wallet-js"
-     ],
-     "bumps": []
-    },
-    {
-     "tool": "daedalus",
-     "depth": 1,
-     "path": [
-      "cardano-wallet",
-      "daedalus"
+      "bloxbean-cardano-client-library",
+      "yaci"
      ],
      "bumps": []
     }
    ],
-   "partial": [],
+   "partial": [
+    {
+     "tool": "cardano-client-bindings",
+     "stillBlockedBy": [
+      "blockfrost-backend-ryo",
+      "ogmios"
+     ]
+    },
+    {
+     "tool": "cardano-rosetta-java",
+     "stillBlockedBy": [
+      "cardano-rosetta-java (own gap)"
+     ]
+    },
+    {
+     "tool": "cf-ledger-sync",
+     "stillBlockedBy": [
+      "cf-ledger-sync (own gap)"
+     ]
+    },
+    {
+     "tool": "julc",
+     "stillBlockedBy": [
+      "julc (own gap)"
+     ]
+    },
+    {
+     "tool": "scalus",
+     "stillBlockedBy": [
+      "scalus (own gap)",
+      "blockfrost-backend-ryo"
+     ]
+    },
+    {
+     "tool": "yaci-store",
+     "stillBlockedBy": [
+      "scalus",
+      "ogmios"
+     ]
+    },
+    {
+     "tool": "yano",
+     "stillBlockedBy": [
+      "scalus"
+     ]
+    }
+   ],
+   "downstream": [
+    {
+     "tool": "yaci-bridge",
+     "via": "yaci"
+    },
+    {
+     "tool": "yaci-devkit",
+     "via": "yaci"
+    }
+   ],
+   "ownGap": [
+    "transaction-encoding",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "era-identity"
+   ]
+  },
+  {
+   "component": "ledgerjs-hw-app-cardano",
+   "unlocks": [
+    {
+     "tool": "bursa",
+     "depth": 1,
+     "path": [
+      "ledgerjs-hw-app-cardano",
+      "bursa"
+     ],
+     "bumps": [
+      "gouroboros@0.212.5<v0.213.0"
+     ]
+    }
+   ],
+   "partial": [
+    {
+     "tool": "cardano-hw-cli",
+     "stillBlockedBy": [
+      "cardano-serialization-lib-csl",
+      "cardano-hw-interop-lib"
+     ]
+    },
+    {
+     "tool": "cardano-js-sdk",
+     "stillBlockedBy": [
+      "cardano-js-sdk (own gap)",
+      "cardano-db-sync",
+      "ogmios",
+      "blockfrost-backend-ryo"
+     ]
+    },
+    {
+     "tool": "lace",
+     "stillBlockedBy": [
+      "cardano-js-sdk",
+      "blockfrost-backend-ryo",
+      "ogmios"
+     ]
+    },
+    {
+     "tool": "nami",
+     "stillBlockedBy": [
+      "cardano-js-sdk",
+      "blockfrost-backend-ryo",
+      "cardano-hw-interop-lib",
+      "cardano-multiplatform-lib-cml"
+     ]
+    },
+    {
+     "tool": "yoroi",
+     "stillBlockedBy": [
+      "cardano-serialization-lib-csl",
+      "koios"
+     ]
+    }
+   ],
    "downstream": [],
    "ownGap": [
-    "node-to-client-protocol"
+    "transaction-encoding"
    ]
   },
   {
    "component": "scalus",
-   "unlocks": [
-    {
-     "tool": "yano",
-     "depth": 1,
-     "path": [
-      "scalus",
-      "yano"
-     ],
-     "bumps": []
-    }
-   ],
+   "unlocks": [],
    "partial": [
     {
      "tool": "evolution-sdk",
@@ -1325,20 +1461,29 @@
       "kupo",
       "ogmios",
       "blockfrost-backend-ryo",
-      "koios"
+      "koios",
+      "cardano-multiplatform-lib-cml"
      ]
     },
     {
      "tool": "meshjs-mesh-sdk",
      "stillBlockedBy": [
       "meshjs-mesh-sdk (own gap)",
-      "cardano-js-sdk"
+      "cardano-js-sdk",
+      "whisky"
      ]
     },
     {
      "tool": "yaci-store",
      "stillBlockedBy": [
-      "ogmios"
+      "ogmios",
+      "bloxbean-cardano-client-library"
+     ]
+    },
+    {
+     "tool": "yano",
+     "stillBlockedBy": [
+      "bloxbean-cardano-client-library"
      ]
     }
    ],
@@ -1364,26 +1509,133 @@
      "tool": "lace",
      "stillBlockedBy": [
       "blockfrost-backend-ryo",
-      "ogmios"
+      "ogmios",
+      "ledgerjs-hw-app-cardano"
      ]
     },
     {
      "tool": "meshjs-mesh-sdk",
      "stillBlockedBy": [
       "meshjs-mesh-sdk (own gap)",
-      "scalus"
+      "scalus",
+      "whisky"
      ]
     },
     {
      "tool": "nami",
      "stillBlockedBy": [
-      "blockfrost-backend-ryo"
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano",
+      "cardano-hw-interop-lib",
+      "cardano-multiplatform-lib-cml"
      ]
     }
    ],
    "downstream": [],
    "ownGap": [
     "protocol-parameters"
+   ]
+  },
+  {
+   "component": "cardano-multiplatform-lib-cml",
+   "unlocks": [],
+   "partial": [
+    {
+     "tool": "cardano-ibc-incubator",
+     "stillBlockedBy": [
+      "kupo",
+      "ogmios",
+      "blockfrost-backend-ryo"
+     ]
+    },
+    {
+     "tool": "carp",
+     "stillBlockedBy": [
+      "carp (own gap)"
+     ]
+    },
+    {
+     "tool": "lucid-evolution",
+     "stillBlockedBy": [
+      "lucid-evolution (own gap)",
+      "scalus",
+      "kupo",
+      "ogmios",
+      "blockfrost-backend-ryo",
+      "koios"
+     ]
+    },
+    {
+     "tool": "nami",
+     "stillBlockedBy": [
+      "cardano-js-sdk",
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano",
+      "cardano-hw-interop-lib"
+     ]
+    }
+   ],
+   "downstream": [],
+   "ownGap": [
+    "transaction-encoding",
+    "plutus-language",
+    "protocol-parameters",
+    "stake-pool-registration",
+    "block-encoding",
+    "era-identity"
+   ]
+  },
+  {
+   "component": "cardano-hw-interop-lib",
+   "unlocks": [],
+   "partial": [
+    {
+     "tool": "cardano-hw-cli",
+     "stillBlockedBy": [
+      "cardano-serialization-lib-csl",
+      "ledgerjs-hw-app-cardano"
+     ]
+    },
+    {
+     "tool": "nami",
+     "stillBlockedBy": [
+      "cardano-js-sdk",
+      "blockfrost-backend-ryo",
+      "ledgerjs-hw-app-cardano",
+      "cardano-multiplatform-lib-cml"
+     ]
+    }
+   ],
+   "downstream": [],
+   "ownGap": [
+    "transaction-encoding"
+   ]
+  },
+  {
+   "component": "cquisitor-lib",
+   "unlocks": [],
+   "partial": [
+    {
+     "tool": "cquisitor",
+     "stillBlockedBy": [
+      "blockfrost-backend-ryo",
+      "koios"
+     ]
+    },
+    {
+     "tool": "whisky",
+     "stillBlockedBy": [
+      "whisky (own gap)",
+      "cardano-serialization-lib-csl",
+      "blockfrost-backend-ryo"
+     ]
+    }
+   ],
+   "downstream": [],
+   "ownGap": [
+    "plutus-language",
+    "transaction-encoding",
+    "era-identity"
    ]
   },
   {
@@ -1400,6 +1652,27 @@
    "downstream": [],
    "ownGap": [
     "node-to-client-protocol"
+   ]
+  },
+  {
+   "component": "whisky",
+   "unlocks": [],
+   "partial": [
+    {
+     "tool": "meshjs-mesh-sdk",
+     "stillBlockedBy": [
+      "meshjs-mesh-sdk (own gap)",
+      "scalus",
+      "cardano-js-sdk"
+     ]
+    }
+   ],
+   "downstream": [],
+   "ownGap": [
+    "plutus-language",
+    "protocol-parameters",
+    "era-identity",
+    "transaction-encoding"
    ]
   }
  ],
@@ -1429,7 +1702,6 @@
     "blockfrost-js",
     "blockfrost-python",
     "cab",
-    "cardano-client-bindings",
     "epora-wallet",
     "iris",
     "kogmios",
@@ -1439,12 +1711,11 @@
     "ogmiosdotnet-blockchainevents",
     "xogmios"
    ],
-   "unlocked": 25
+   "unlocked": 24
   },
   {
    "component": "koios",
    "added": [
-    "cquisitor",
     "create-evolution-app",
     "cscli",
     "de-uplc",
@@ -1455,13 +1726,12 @@
     "koios-python",
     "odatano"
    ],
-   "unlocked": 35
+   "unlocked": 33
   },
   {
    "component": "kupo",
    "added": [
     "apollo",
-    "cardano-ibc-incubator",
     "cardano-mcp",
     "cardano-web3-js",
     "chrysalis",
@@ -1472,7 +1742,7 @@
     "sutra",
     "yaci-devkit"
    ],
-   "unlocked": 46
+   "unlocked": 43
   },
   {
    "component": "cardano-db-sync",
@@ -1486,27 +1756,48 @@
     "metis",
     "nmkr-studio-api"
    ],
-   "unlocked": 54
+   "unlocked": 51
   },
   {
    "component": "cardano-serialization-lib-csl",
    "added": [
     "cardano-dev-wallet",
-    "cardano-hw-cli",
     "cardano-rosetta-legacy",
     "csl-mobile-bridge",
     "hydra-sdk",
-    "masumi",
+    "masumi"
+   ],
+   "unlocked": 56
+  },
+  {
+   "component": "ledgerjs-hw-app-cardano",
+   "added": [
+    "bursa",
     "yoroi"
    ],
-   "unlocked": 61
+   "unlocked": 58
   },
   {
    "component": "cardano-js-sdk",
    "added": [
     "blaze",
-    "lace",
-    "nami"
+    "lace"
+   ],
+   "unlocked": 60
+  },
+  {
+   "component": "cardano-wallet",
+   "added": [
+    "cardano-wallet-js",
+    "daedalus"
+   ],
+   "unlocked": 62
+  },
+  {
+   "component": "bloxbean-cardano-client-library",
+   "added": [
+    "cardano-client-bindings",
+    "yaci"
    ],
    "unlocked": 64
   },
@@ -1519,19 +1810,33 @@
    "unlocked": 66
   },
   {
-   "component": "cardano-wallet",
+   "component": "cquisitor-lib",
    "added": [
-    "cardano-wallet-js",
-    "daedalus"
+    "cquisitor"
+   ],
+   "unlocked": 67
+  },
+  {
+   "component": "cardano-hw-interop-lib",
+   "added": [
+    "cardano-hw-cli"
    ],
    "unlocked": 68
+  },
+  {
+   "component": "cardano-multiplatform-lib-cml",
+   "added": [
+    "cardano-ibc-incubator",
+    "nami"
+   ],
+   "unlocked": 70
   },
   {
    "component": "ouroboros-miniprotocols-ts",
    "added": [
     "gerolamo"
    ],
-   "unlocked": 69
+   "unlocked": 71
   }
  ],
  "blockers": [
@@ -1541,16 +1846,10 @@
    "blockers": [],
    "undetermined": [],
    "cleared": [
-    "blockfrost-backend-ryo"
+    "blockfrost-backend-ryo",
+    "ledgerjs-hw-app-cardano"
    ],
-   "unread": [
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "adapools-xyz",
@@ -1568,19 +1867,10 @@
    ],
    "undetermined": [],
    "cleared": [
-    "cardano-db-sync"
+    "cardano-db-sync",
+    "meshjs-mesh-sdk"
    ],
-   "unread": [
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "adastat-api",
@@ -1654,16 +1944,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "aiken",
@@ -1687,32 +1971,20 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "aiken-stdlib",
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "amaru",
@@ -1721,17 +1993,11 @@
    "undetermined": [],
    "cleared": [
     "koios",
+    "mithril",
     "ogmios",
     "pallas"
    ],
-   "unread": [
-    {
-     "via": "mithril",
-     "surfaces": [
-      "block-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "apollo",
@@ -2040,25 +2306,13 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
+    "julc",
     "koios",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "julc",
-     "surfaces": [
-      "plutus-language"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "buildooor",
@@ -2091,6 +2345,13 @@
       "stake-pool-registration"
      ],
      "pin": "gouroboros@0.212.5<v0.213.0"
+    },
+    {
+     "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [
@@ -2106,14 +2367,7 @@
     "gouroboros",
     "plutigo"
    ],
-   "unread": [
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cab",
@@ -2187,25 +2441,23 @@
       "plutus-language",
       "transaction-encoding"
      ]
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding",
+      "plutus-language"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
     "blockfrost-backend-ryo",
+    "bloxbean-cardano-client-library",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cardano-ctf",
@@ -2221,25 +2473,11 @@
    ],
    "undetermined": [],
    "cleared": [
-    "blockfrost-backend-ryo"
+    "aiken",
+    "blockfrost-backend-ryo",
+    "lucid-evolution"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "lucid-evolution",
-     "surfaces": [
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cardano-data-lite",
@@ -2373,24 +2611,25 @@
      "surfaces": [
       "plutus-language"
      ]
-    }
-   ],
-   "undetermined": [],
-   "cleared": [],
-   "unread": [
+    },
     {
      "via": "cardano-hw-interop-lib",
+     "kind": "upstream-fix",
      "surfaces": [
       "transaction-encoding"
      ]
     },
     {
      "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
      "surfaces": [
       "transaction-encoding"
      ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [],
+   "unread": []
   },
   {
    "tool": "cardano-hw-interop-lib",
@@ -2451,6 +2690,13 @@
      "surfaces": [
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "cardano-multiplatform-lib-cml",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [
@@ -2471,49 +2717,17 @@
     }
    ],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
     "cardano-db-sync",
+    "cardano-multiplatform-lib-cml",
     "gouroboros",
     "koios",
+    "lucid-evolution",
+    "meshjs-mesh-sdk",
     "plutigo"
    ],
-   "unread": [
-    {
-     "via": "cardano-multiplatform-lib-cml",
-     "surfaces": [
-      "block-encoding",
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "lucid-evolution",
-     "surfaces": [
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cardano-js-sdk",
@@ -2555,29 +2769,20 @@
       "era-identity",
       "protocol-parameters"
      ]
-    }
-   ],
-   "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "cardano-multiplatform-lib-cml",
-     "surfaces": [
-      "block-encoding",
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
     },
     {
      "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
      "surfaces": [
       "transaction-encoding"
      ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [
+    "cardano-multiplatform-lib-cml"
+   ],
+   "unread": []
   },
   {
    "tool": "cardano-mcp",
@@ -2604,19 +2809,10 @@
    "cleared": [
     "blockfrost-backend-ryo",
     "cardano-serialization-lib-csl",
-    "koios"
+    "koios",
+    "meshjs-mesh-sdk"
    ],
-   "unread": [
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cardano-multiplatform-lib-cml",
@@ -2675,16 +2871,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "plutarch",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "plutarch"
+   ],
+   "unread": []
   },
   {
    "tool": "cardano-rosetta-java",
@@ -2697,22 +2887,20 @@
       "era-identity",
       "transaction-encoding"
      ]
-    }
-   ],
-   "undetermined": [],
-   "cleared": [],
-   "unread": [
+    },
     {
      "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
      "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
       "transaction-encoding"
      ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [
+    "bloxbean-cardano-client-library"
+   ],
+   "unread": []
   },
   {
    "tool": "cardano-rosetta-legacy",
@@ -2825,20 +3013,10 @@
     }
    ],
    "cleared": [
+    "cardano-data-lite",
     "cardano-db-sync"
    ],
-   "unread": [
-    {
-     "via": "cardano-data-lite",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cardano-up",
@@ -3016,16 +3194,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "cardanosharp",
-     "surfaces": [
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "cardanosharp"
+   ],
+   "unread": []
   },
   {
    "tool": "carp",
@@ -3038,25 +3210,23 @@
       "block-encoding",
       "transaction-encoding"
      ]
+    },
+    {
+     "via": "cardano-multiplatform-lib-cml",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "block-encoding",
+      "era-identity",
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
-    "cardano-db-sync"
+    "cardano-db-sync",
+    "cardano-multiplatform-lib-cml"
    ],
-   "unread": [
-    {
-     "via": "cardano-multiplatform-lib-cml",
-     "surfaces": [
-      "block-encoding",
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "catalyst-core",
@@ -3104,20 +3274,10 @@
    ],
    "undetermined": [],
    "cleared": [
+    "bloxbean-cardano-client-library",
     "koios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cf-ledger-sync",
@@ -3138,25 +3298,22 @@
       "node-to-client-protocol"
      ],
      "pin": "yaci@0.3.4.1<v0.3.10|v0.4.2"
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "plutus-language"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
+    "bloxbean-cardano-client-library",
     "cardano-db-sync",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "chrysalis",
@@ -3250,6 +3407,15 @@
      "surfaces": [
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "cquisitor-lib",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "era-identity",
+      "plutus-language",
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
@@ -3257,16 +3423,7 @@
     "blockfrost-backend-ryo",
     "koios"
    ],
-   "unread": [
-    {
-     "via": "cquisitor-lib",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cquisitor-lib",
@@ -3326,18 +3483,10 @@
    ],
    "undetermined": [],
    "cleared": [
-    "koios"
+    "koios",
+    "lucid-evolution"
    ],
-   "unread": [
-    {
-     "via": "lucid-evolution",
-     "surfaces": [
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "cscli",
@@ -3353,17 +3502,10 @@
    ],
    "undetermined": [],
    "cleared": [
+    "cardanosharp",
     "koios"
    ],
-   "unread": [
-    {
-     "via": "cardanosharp",
-     "surfaces": [
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "csl-mobile-bridge",
@@ -3405,22 +3547,11 @@
    ],
    "undetermined": [],
    "cleared": [
-    "cardano-js-sdk"
+    "cardano-js-sdk",
+    "ledgerjs-hw-app-cardano",
+    "mithril"
    ],
-   "unread": [
-    {
-     "via": "mithril",
-     "surfaces": [
-      "block-encoding"
-     ]
-    },
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "dandelion-apis",
@@ -3560,16 +3691,10 @@
     "blockfrost-backend-ryo",
     "cardano-db-sync",
     "kupo",
+    "mithril",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "mithril",
-     "surfaces": [
-      "block-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "elm-cardano",
@@ -3615,28 +3740,13 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
     "koios",
+    "meshjs-mesh-sdk",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "evolution-sdk",
@@ -3730,17 +3840,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "lucid-evolution",
-     "surfaces": [
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "lucid-evolution"
+   ],
+   "unread": []
   },
   {
    "tool": "gerolamo",
@@ -3764,41 +3867,21 @@
    "undetermined": [],
    "cleared": [
     "blockfrost-backend-ryo",
-    "koios"
+    "buildooor",
+    "koios",
+    "mithril"
    ],
-   "unread": [
-    {
-     "via": "mithril",
-     "surfaces": [
-      "block-encoding"
-     ]
-    },
-    {
-     "via": "buildooor",
-     "surfaces": [
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "gin",
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "pycardano",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "pycardano"
+   ],
+   "unread": []
   },
   {
    "tool": "go-cardano-serialization",
@@ -3901,18 +3984,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "pycardano",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "pycardano"
+   ],
+   "unread": []
   },
   {
    "tool": "helios",
@@ -3965,17 +4040,10 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "plutus-plutus-core"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "hydra-sdk",
@@ -4018,20 +4086,10 @@
    ],
    "undetermined": [],
    "cleared": [
-    "blockfrost-backend-ryo"
+    "blockfrost-backend-ryo",
+    "bloxbean-cardano-client-library"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "iris",
@@ -4063,22 +4121,21 @@
      "surfaces": [
       "plutus-language"
      ]
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding",
+      "plutus-language"
+     ]
     }
    ],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "bloxbean-cardano-client-library"
+   ],
+   "unread": []
   },
   {
    "tool": "kogmios",
@@ -4314,20 +4371,20 @@
       "plutus-language",
       "transaction-encoding"
      ]
+    },
+    {
+     "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "lambda-buffers",
@@ -4335,34 +4392,13 @@
    "blockers": [],
    "undetermined": [],
    "cleared": [
+    "cardano-data-lite",
+    "cardano-transaction-lib-ctl",
     "kupo",
-    "ogmios"
+    "ogmios",
+    "plutarch"
    ],
-   "unread": [
-    {
-     "via": "cardano-data-lite",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "cardano-transaction-lib-ctl",
-     "surfaces": [
-      "plutus-language"
-     ]
-    },
-    {
-     "via": "plutarch",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "ledgerjs-hw-app-cardano",
@@ -4461,27 +4497,23 @@
      "surfaces": [
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "cardano-multiplatform-lib-cml",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
     "blockfrost-backend-ryo",
+    "cardano-multiplatform-lib-cml",
     "koios",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "cardano-multiplatform-lib-cml",
-     "surfaces": [
-      "block-encoding",
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "marconi",
@@ -4572,28 +4604,13 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
     "koios",
+    "meshjs-mesh-sdk",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "masumi-registry-service",
@@ -4601,35 +4618,20 @@
    "blockers": [],
    "undetermined": [],
    "cleared": [
-    "blockfrost-backend-ryo"
+    "blockfrost-backend-ryo",
+    "meshjs-mesh-sdk"
    ],
-   "unread": [
-    {
-     "via": "meshjs-mesh-sdk",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "merkle-patricia-forestry",
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "meshjs-mesh-sdk",
@@ -4659,31 +4661,23 @@
      "surfaces": [
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "whisky",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
-    "ogmios"
+    "ogmios",
+    "whisky"
    ],
-   "unread": [
-    {
-     "via": "whisky",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "metis",
@@ -4743,24 +4737,11 @@
    ],
    "undetermined": [],
    "cleared": [
-    "ogmios"
+    "aiken",
+    "ogmios",
+    "plutarch"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "plutarch",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "minswap-sdk",
@@ -4809,32 +4790,12 @@
    "undetermined": [],
    "cleared": [
     "kupo",
-    "ogmios"
+    "ogmios",
+    "opshin",
+    "plu-ts",
+    "pycardano"
    ],
-   "unread": [
-    {
-     "via": "opshin",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "pycardano",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "plu-ts",
-     "surfaces": [
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "mumak",
@@ -4863,15 +4824,24 @@
      "surfaces": [
       "protocol-parameters"
      ]
-    }
-   ],
-   "undetermined": [],
-   "cleared": [
-    "blockfrost-backend-ryo"
-   ],
-   "unread": [
+    },
+    {
+     "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
+    },
+    {
+     "via": "cardano-hw-interop-lib",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
+    },
     {
      "via": "cardano-multiplatform-lib-cml",
+     "kind": "upstream-fix",
      "surfaces": [
       "block-encoding",
       "era-identity",
@@ -4880,20 +4850,13 @@
       "stake-pool-registration",
       "transaction-encoding"
      ]
-    },
-    {
-     "via": "cardano-hw-interop-lib",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [
+    "blockfrost-backend-ryo"
+   ],
+   "unread": []
   },
   {
    "tool": "naumachia",
@@ -4911,28 +4874,11 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
+    "cardano-multiplatform-lib-cml",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "cardano-multiplatform-lib-cml",
-     "surfaces": [
-      "block-encoding",
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "nmkr-studio-api",
@@ -4959,17 +4905,10 @@
    ],
    "undetermined": [],
    "cleared": [
+    "cardanosharp",
     "koios"
    ],
-   "unread": [
-    {
-     "via": "cardanosharp",
-     "surfaces": [
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "odatano",
@@ -5004,18 +4943,11 @@
    "undetermined": [],
    "cleared": [
     "blockfrost-backend-ryo",
+    "buildooor",
     "cardano-db-sync",
     "koios"
    ],
-   "unread": [
-    {
-     "via": "buildooor",
-     "surfaces": [
-      "plutus-language",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "offchain-metadata-tools",
@@ -5112,18 +5044,10 @@
     }
    ],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "pycardano",
-     "surfaces": [
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "pycardano"
+   ],
+   "unread": []
   },
   {
    "tool": "oura",
@@ -5140,15 +5064,10 @@
     }
    ],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "mithril",
-     "surfaces": [
-      "block-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "mithril"
+   ],
+   "unread": []
   },
   {
    "tool": "ouroboros-miniprotocols-ts",
@@ -5242,19 +5161,12 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
     "cardano-serialization-lib-csl",
     "plutus-plutus-core"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "plutus-pioneer-program",
@@ -5280,16 +5192,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "plutarch",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "plutarch"
+   ],
+   "unread": []
   },
   {
    "tool": "purus",
@@ -5354,16 +5260,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "rum",
@@ -5433,25 +5333,23 @@
       "era-identity",
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding",
+      "plutus-language"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
+    "bloxbean-cardano-client-library",
     "koios",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "scrolls",
@@ -5676,16 +5574,10 @@
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "cleared": [
+    "aiken"
+   ],
+   "unread": []
   },
   {
    "tool": "whisky",
@@ -5714,22 +5606,22 @@
      "surfaces": [
       "protocol-parameters"
      ]
-    }
-   ],
-   "undetermined": [],
-   "cleared": [
-    "blockfrost-backend-ryo"
-   ],
-   "unread": [
+    },
     {
      "via": "cquisitor-lib",
+     "kind": "upstream-fix",
      "surfaces": [
       "era-identity",
       "plutus-language",
       "transaction-encoding"
      ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [
+    "blockfrost-backend-ryo"
+   ],
+   "unread": []
   },
   {
    "tool": "xogmios",
@@ -5754,21 +5646,20 @@
   {
    "tool": "yaci",
    "boundary": true,
-   "blockers": [],
-   "undetermined": [],
-   "cleared": [],
-   "unread": [
+   "blockers": [
     {
      "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
      "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
+      "era-identity"
      ]
     }
-   ]
+   ],
+   "undetermined": [],
+   "cleared": [
+    "bloxbean-cardano-client-library"
+   ],
+   "unread": []
   },
   {
    "tool": "yaci-devkit",
@@ -5796,19 +5687,10 @@
     }
    ],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "cleared": [
+    "bloxbean-cardano-client-library"
+   ],
+   "unread": []
   },
   {
    "tool": "yaci-store",
@@ -5829,27 +5711,24 @@
       "transaction-encoding",
       "era-identity"
      ]
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "era-identity"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
     "blockfrost-backend-ryo",
+    "bloxbean-cardano-client-library",
     "cardano-db-sync",
     "koios",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "yano",
@@ -5862,40 +5741,27 @@
       "plutus-script-context",
       "transaction-encoding"
      ]
+    },
+    {
+     "via": "bloxbean-cardano-client-library",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding",
+      "plutus-language"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo",
+    "bloxbean-cardano-client-library",
     "cardano-db-sync",
+    "julc",
     "koios",
     "ogmios"
    ],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    },
-    {
-     "via": "julc",
-     "surfaces": [
-      "plutus-language"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "yoroi",
@@ -5914,45 +5780,31 @@
      "surfaces": [
       "protocol-parameters"
      ]
+    },
+    {
+     "via": "ledgerjs-hw-app-cardano",
+     "kind": "upstream-fix",
+     "surfaces": [
+      "transaction-encoding"
+     ]
     }
    ],
    "undetermined": [],
    "cleared": [
     "koios"
    ],
-   "unread": [
-    {
-     "via": "ledgerjs-hw-app-cardano",
-     "surfaces": [
-      "transaction-encoding"
-     ]
-    }
-   ]
+   "unread": []
   },
   {
    "tool": "zeroj",
    "boundary": false,
    "blockers": [],
    "undetermined": [],
-   "cleared": [],
-   "unread": [
-    {
-     "via": "bloxbean-cardano-client-library",
-     "surfaces": [
-      "era-identity",
-      "plutus-language",
-      "protocol-parameters",
-      "stake-pool-registration",
-      "transaction-encoding"
-     ]
-    },
-    {
-     "via": "julc",
-     "surfaces": [
-      "plutus-language"
-     ]
-    }
-   ]
+   "cleared": [
+    "bloxbean-cardano-client-library",
+    "julc"
+   ],
+   "unread": []
   },
   {
    "tool": "zhuli",
@@ -5968,17 +5820,10 @@
    ],
    "undetermined": [],
    "cleared": [
+    "aiken",
     "blockfrost-backend-ryo"
    ],
-   "unread": [
-    {
-     "via": "aiken",
-     "surfaces": [
-      "plutus-language",
-      "plutus-script-context"
-     ]
-    }
-   ]
+   "unread": []
   }
  ]
 }

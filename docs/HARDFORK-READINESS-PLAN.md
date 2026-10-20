@@ -355,8 +355,23 @@ unlocks 61 tools; adding CSL, Scalus, cardano-js-sdk, cardano-wallet and
 ouroboros-miniprotocols-ts unlocks 81. Six tools have a released upstream fix.
 The unlock report now records a greedy `fixOrder`.
 
-Next: R4 devnet checks for the service layer and the six tools with a
-released fix, and hosted-provider entries in R2 to replace the RYO proxy.
+### R2 completion for libraries and compilers (2026-10-20)
+
+The 35 components without evidence were re-observed and judged by what their
+code enumerates (body keys ending at 22, parameter keys at 33, Plutus languages
+at V3, pool parameters without the BLS key, era tables ending at Conway, V3
+script contexts, Pallas or Yaci versions without Dijkstra block decoding): 33
+are gaps, cncli follows Pallas main (block encoding in progress) and
+ouroboros-network-js stays without evidence. Worst status per component: 47
+gap, 2 no-evidence, 1 tracked, 8 in-progress, 3 released.
+
+The 85 links this added are decided (490 lead entries, 1157 decisions, all
+quotes re-verified); 101 tools have a confirmed gap. The fix order now unlocks
+71 tools across 15 upstream fixes, because more boundary components carry gaps
+of their own. Four tools have a released upstream fix.
+
+Next: R4 devnet checks for the service layer and the four tools with a released
+fix, and hosted-provider entries in R2 to replace the RYO proxy.
 
 ### Implementation log
 
