@@ -315,6 +315,31 @@ Next: add hosted API providers to R2, then start R4 devnet checks with the
 upstream fixes that unlock the most tools (CSL, Scalus, cardano-js-sdk) and the
 bump-ready node-to-client consumers.
 
+### R2 re-observation of the service layer (2026-10-20)
+
+Most undecided links went through components with no verdict (Blockfrost RYO,
+Koios) or an `in-progress` one that hid a stalled release (Ogmios, Kupo,
+db-sync, Kuber). `in-progress` now needs visible work toward the target
+definitions; a release built only against superseded definitions, with no
+branch or pull request toward 11.2, is a `gap`.
+
+- **Blockfrost RYO** (v6.8.1): `/network/eras` looks protocol majors up in a
+  table that ends at 11, so it throws once db-sync records protocol 12; the
+  parameter endpoints select a fixed Conway column list.
+- **Koios** (v1.4.2): the static `era_map` ends at protocol 11 and says it must
+  be updated before a fork; `epoch_params` is Conway-only; submission and
+  evaluation are proxied to an Ogmios v6 instance.
+- **Ogmios, Kupo, db-sync, Kuber**: released against node 11.0.1 libraries;
+  Ogmios and Kuber heads are still their release commits (June and May), and
+  none has a branch or pull request toward 11.2. Adder keeps `in-progress`: a
+  gouroboros 0.213.3 bump is an open pull request.
+
+Worst status per component is now 14 gap, 35 no-evidence, 1 tracked, 8
+in-progress, 3 released. The change leaves 221 tool/dependency/surface gap
+links undecided (Blockfrost RYO 63, Ogmios 59, Koios 37, db-sync 31, Kupo 31).
+Hosted Blockfrost consumers inherit the RYO verdict until hosted providers have
+their own R2 entries.
+
 ### Implementation log
 
 - Planning baseline: documented features, assumptions, architecture, phased acceptance criteria, and manual review assignments. Existing invitation-script edits are outside this work.

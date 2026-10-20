@@ -1,13 +1,14 @@
 {
   "schemaVersion": 1,
-  "retrieved": "2026-10-19",
+  "retrieved": "2026-10-20",
   "method": [
     "Components are catalog tools that implement a surface from changes.json directly: ledger codecs, node-to-client clients, chain indexers and query services, nodes, script toolchains, transaction builders, hardware signing and devnet tooling.",
     "Each repository was cloned at its default-branch head (observed.revision) and searched case-insensitively for Dijkstra; GitHub issues and pull requests mentioning Dijkstra were retrieved the same day.",
     "Node-to-client readiness is whether the client offers V23 (wire value 32791), the only version ouroboros-consensus 5.1.0.1 accepts.",
     "Codec readiness is compared with the target ledger CDDL (cardano-ledger 54e24ba4) after removing comments and whitespace; Haskell consumers are compared through the cardano-ledger-dijkstra version their CHaP index-state or constraints select.",
     "Status is per surface group; a component is only as ready as its worst assessment. no-evidence is never a pass.",
-    "firstReleases names, per release line, the earliest tag whose source contains every cited source quote (for gouroboros ledger types: the earliest tag whose vendored Dijkstra CDDL is identical to the one compared with the target; for plutus-ledger-api: the target component-set version). Consumer pins are judged only against firstReleases."
+    "firstReleases names, per release line, the earliest tag whose source contains every cited source quote (for gouroboros ledger types: the earliest tag whose vendored Dijkstra CDDL is identical to the one compared with the target; for plutus-ledger-api: the target component-set version). Consumer pins are judged only against firstReleases.",
+    "in-progress needs visible work toward the target definitions (a branch, an open pull request, or unreleased code on the default branch). A release built only against superseded Dijkstra definitions, with no such work, is a gap."
   ],
   "components": [
     {
@@ -1554,8 +1555,8 @@
             "protocol-parameters",
             "plutus-language"
           ],
-          "status": "in-progress",
-          "summary": "v7.0.0 ships preliminary Dijkstra and PlutusV4 support built against cardano-node 11.0.1 (CHaP index 2026-05-08, cardano-ledger-dijkstra 0.2.0.1), whose CDDL differs from the target in 454 normalized lines, including the block body and header.",
+          "status": "gap",
+          "summary": "v7.0.0 ships preliminary Dijkstra and PlutusV4 support built against cardano-node 11.0.1 (CHaP index 2026-05-08, cardano-ledger-dijkstra 0.2.0.1), whose CDDL differs from the target in 454 normalized lines, including the block body and header. The default branch is still the v7.0.0 release commit (2026-06-20) and no branch or open pull request targets the 11.2 component set.",
           "evidence": [
             {
               "kind": "source",
@@ -1627,8 +1628,8 @@
             "block-encoding",
             "transaction-encoding"
           ],
-          "status": "in-progress",
-          "summary": "Handles Dijkstra blocks through cardano-node 11.0.1 libraries (cardano-ledger-dijkstra 0.2.0.1), which predate the 11.2 block and header format.",
+          "status": "gap",
+          "summary": "Handles Dijkstra blocks through cardano-node 11.0.1 libraries (cardano-ledger-dijkstra 0.2.0.1), which predate the 11.2 block and header format. The default branch has only test changes since v2.12 and no branch or open pull request targets the 11.2 component set.",
           "evidence": [
             {
               "kind": "source",
@@ -1703,8 +1704,8 @@
             "protocol-parameters",
             "stake-pool-registration"
           ],
-          "status": "in-progress",
-          "summary": "Main has Dijkstra code paths marked TODO(Dijkstra) on libraries from CHaP index 2026-05-03 (cardano-ledger-dijkstra 0.2.0.1); the integration issue is open and schema changes for new fields are not visible.",
+          "status": "gap",
+          "summary": "Main has Dijkstra code paths marked TODO(Dijkstra) on libraries from CHaP index 2026-05-03 (cardano-ledger-dijkstra 0.2.0.1); the integration issue is open and schema changes for new fields are not visible. No branch or open pull request targets the 11.2 component set.",
           "evidence": [
             {
               "kind": "source",
@@ -2144,7 +2145,7 @@
       "observed": {
         "branch": "main",
         "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
-        "date": "2026-09-10",
+        "date": "2026-10-20",
         "release": {
           "tag": "v1.4.2",
           "date": "2026-07-14"
@@ -2163,13 +2164,78 @@
       "assessments": [
         {
           "surfaces": [
-            "era-identity",
-            "transaction-encoding",
+            "era-identity"
+          ],
+          "status": "gap",
+          "summary": "Era names come from a static era_map that ends at protocol 11 and, by its own comment, must be updated before a fork; epochs at protocol 12 get no era and are missing from era_summaries.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "files/grest/rpc/db-scripts/basics.sql",
+              "line": 87,
+              "quote": "-- Since this is a static source that should be updated pre-fork on testnets, and there isnt a programmatic source,"
+            },
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "files/grest/rpc/db-scripts/basics.sql",
+              "line": 112,
+              "quote": "('Voltaire', 'Conway', 11, 0, 'Praos', 'Ouroboros Genesis/Praos', 'Van Rossem HF');"
+            },
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "files/grest/rpc/01_blockchain/era_summaries.sql",
+              "line": 25,
+              "quote": "  FROM grest.era_map AS em"
+            }
+          ]
+        },
+        {
+          "surfaces": [
             "protocol-parameters"
           ],
+          "status": "gap",
+          "summary": "epoch_params returns a fixed Conway column list from db-sync's epoch_param, so Dijkstra parameters are not served.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "files/grest/rpc/epoch/epoch_params.sql",
+              "line": 57,
+              "quote": "  min_fee_ref_script_cost_per_byte double precision"
+            },
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "files/grest/rpc/epoch/epoch_params.sql",
+              "line": 118,
+              "quote": "      ep.min_fee_ref_script_cost_per_byte"
+            }
+          ]
+        },
+        {
+          "surfaces": [
+            "transaction-encoding"
+          ],
           "status": "no-evidence",
-          "summary": "No Dijkstra reference at the observed revision (case-insensitive search of tracked files, lockfiles excluded) and no issue or pull request mentioning Dijkstra.",
-          "evidence": []
+          "summary": "Transaction CBOR comes from db-sync, and submission and evaluation are proxied to an Ogmios v6 instance; this surface follows those services.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "cardano-community/koios-artifacts",
+              "revision": "2e2eb57933e1e2528de5ca36ee961759841cf389",
+              "path": "specs/template.yaml",
+              "line": 67,
+              "quote": "    description: |"
+            }
+          ]
         }
       ]
     },
@@ -2187,10 +2253,10 @@
       "observed": {
         "branch": "master",
         "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
-        "date": "2026-10-16",
+        "date": "2026-10-20",
         "release": {
-          "tag": "v6.8.0",
-          "date": "2026-09-02"
+          "tag": "v6.8.1",
+          "date": "2026-10-16"
         }
       },
       "dependsOn": [
@@ -2202,12 +2268,68 @@
       "assessments": [
         {
           "surfaces": [
-            "era-identity",
-            "transaction-encoding",
+            "era-identity"
+          ],
+          "status": "gap",
+          "summary": "/network/eras looks every protocol major from db-sync's epoch_param up in a table that ends at 11, so the endpoint throws once an epoch with protocol version 12 is recorded.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "blockfrost/blockfrost-backend-ryo",
+              "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
+              "path": "src/constants/genesis.ts",
+              "line": 51,
+              "quote": "    name: 'Conway (intra era hardfork #2)',"
+            },
+            {
+              "kind": "source",
+              "repo": "blockfrost/blockfrost-backend-ryo",
+              "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
+              "path": "src/routes/network/eras.ts",
+              "line": 83,
+              "quote": "          if (PROTOCOL_VERSIONS[epochProto.protocol_major].is_era_hardfork) {"
+            },
+            {
+              "kind": "source",
+              "repo": "blockfrost/blockfrost-backend-ryo",
+              "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
+              "path": "src/sql/network/network_protocols.sql",
+              "line": 3,
+              "quote": "FROM epoch_param"
+            }
+          ]
+        },
+        {
+          "surfaces": [
             "protocol-parameters"
           ],
+          "status": "gap",
+          "summary": "The epoch parameter endpoints select a fixed Conway column list from db-sync's epoch_param, so Dijkstra parameters are not served; db-sync has no columns for them either.",
+          "evidence": [
+            {
+              "kind": "source",
+              "repo": "blockfrost/blockfrost-backend-ryo",
+              "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
+              "path": "src/sql/epochs/epochs_latest_parameters.sql",
+              "line": 66,
+              "quote": "  min_fee_ref_script_cost_per_byte AS \"min_fee_ref_script_cost_per_byte\""
+            },
+            {
+              "kind": "source",
+              "repo": "blockfrost/blockfrost-backend-ryo",
+              "revision": "940589e1c2c290db26f1fc57c173d23827b0661b",
+              "path": "src/sql/epochs/epochs_number_parameters.sql",
+              "line": 66,
+              "quote": "  min_fee_ref_script_cost_per_byte AS \"min_fee_ref_script_cost_per_byte\""
+            }
+          ]
+        },
+        {
+          "surfaces": [
+            "transaction-encoding"
+          ],
           "status": "no-evidence",
-          "summary": "No Dijkstra reference at the observed revision (case-insensitive search of tracked files, lockfiles excluded) and no issue or pull request mentioning Dijkstra.",
+          "summary": "Serves transaction CBOR from db-sync and forwards submissions to the submit API without decoding them itself; this surface follows those services.",
           "evidence": []
         }
       ]
@@ -3168,8 +3290,8 @@
             "cardano-api-haskell",
             "transaction-encoding"
           ],
-          "status": "in-progress",
-          "summary": "Compiles the Dijkstra era constructors of cardano-api 11.0.0.0; the target is cardano-api 11.8.0.0.",
+          "status": "gap",
+          "summary": "Compiles the Dijkstra era constructors of cardano-api 11.0.0.0; the target is cardano-api 11.8.0.0. The default branch is still the v4.2.0 release commit (2026-05-22) and no branch or open pull request targets cardano-api 11.8.",
           "evidence": [
             {
               "kind": "source",

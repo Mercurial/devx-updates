@@ -10,8 +10,9 @@ export const ROLES = [
 /**
  * Ordered from worst to best. `gap` means cited code shows the observed revision cannot work against the
  * target; `no-evidence` means nothing was found, which is never a pass; `tracked` is an acknowledged issue
- * without code; `in-progress` is code on a branch, in an open pull request, merged but unreleased, or
- * released against superseded Dijkstra definitions; `released` is a release that implements the target
+ * without code; `in-progress` is visible work toward the target definitions: code on a branch, in an open pull
+ * request, or merged but unreleased. A release built only against superseded Dijkstra definitions, with no such
+ * work, is a `gap`. `released` is a release that implements the target
  * definitions; `verified` additionally passed a Dijkstra network check (R4).
  */
 export const STATUSES = ["gap", "no-evidence", "tracked", "in-progress", "released", "verified"] as const;

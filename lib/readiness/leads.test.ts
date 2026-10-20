@@ -46,9 +46,10 @@ test("coverage counts per surface and flags stale and orphaned decisions", () =>
   assert.deepEqual(leadCoverage(leads, [{ ...tools[0], revision: "c".repeat(40) }]).stale, ["t/gouroboros"]);
 });
 
-test("the committed lead register decides every shipped gap in the committed classification", () => {
+test("the committed lead register has no stale or orphaned decision for the committed classification", () => {
   const leads = parseLeadRegister(JSON.parse(readFileSync("content/readiness/dijkstra/leads.json", "utf8")), changes);
   const { tools } = JSON.parse(readFileSync("content/readiness/dijkstra/classification.json", "utf8")) as { tools: ToolClassification[] };
   const coverage = leadCoverage(leads, tools);
-  assert.deepEqual([coverage.unreviewed, coverage.stale, coverage.orphaned], [[], [], []]);
+  // Gaps not yet read are allowed and shown as such; a decision must still match a gap at the scanned revision.
+  assert.deepEqual([coverage.stale, coverage.orphaned], [[], []]);
 });

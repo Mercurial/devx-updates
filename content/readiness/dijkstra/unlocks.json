@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-20T10:06:03.270Z",
+ "generatedAt": "2026-10-20T12:15:21.983Z",
  "bumpReady": [
   {
    "tool": "atlas",
@@ -35,21 +35,6 @@
    "ownStatus": "no-evidence"
   },
   {
-   "tool": "kuber",
-   "pins": [
-    "ouroboros-consensus@3.0.1.0<5.1.0.1",
-    "cardano-api@11.0.0.0<11.8.0.0"
-   ],
-   "ownStatus": "in-progress"
-  },
-  {
-   "tool": "kupo",
-   "pins": [
-    "ouroboros-consensus@3.0.1<5.1.0.1"
-   ],
-   "ownStatus": "in-progress"
-  },
-  {
    "tool": "marconi",
    "pins": [
     "cardano-api@8.20<11.8.0.0"
@@ -66,13 +51,6 @@
    "pins": [
     "cardano-api@10.21.0.0<11.8.0.0"
    ]
-  },
-  {
-   "tool": "ogmios",
-   "pins": [
-    "ouroboros-consensus@3.0.1<5.1.0.1"
-   ],
-   "ownStatus": "in-progress"
   },
   {
    "tool": "sc-tools",
@@ -460,6 +438,22 @@
    "cleared": []
   },
   {
+   "tool": "blockfrost-backend-ryo",
+   "boundary": true,
+   "blockers": [
+    {
+     "via": "blockfrost-backend-ryo",
+     "kind": "own-gap",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ],
+   "undetermined": [],
+   "cleared": []
+  },
+  {
    "tool": "blockfrost-js",
    "boundary": false,
    "blockers": [],
@@ -508,6 +502,25 @@
      "surfaces": [
       "plutus-language",
       "protocol-parameters"
+     ]
+    }
+   ],
+   "undetermined": [],
+   "cleared": []
+  },
+  {
+   "tool": "cardano-db-sync",
+   "boundary": true,
+   "blockers": [
+    {
+     "via": "cardano-db-sync",
+     "kind": "own-gap",
+     "surfaces": [
+      "era-identity",
+      "block-encoding",
+      "transaction-encoding",
+      "protocol-parameters",
+      "stake-pool-registration"
      ]
     }
    ],
@@ -938,9 +951,33 @@
    "cleared": []
   },
   {
+   "tool": "koios",
+   "boundary": true,
+   "blockers": [
+    {
+     "via": "koios",
+     "kind": "own-gap",
+     "surfaces": [
+      "era-identity",
+      "protocol-parameters"
+     ]
+    }
+   ],
+   "undetermined": [],
+   "cleared": []
+  },
+  {
    "tool": "kuber",
    "boundary": true,
    "blockers": [
+    {
+     "via": "kuber",
+     "kind": "own-gap",
+     "surfaces": [
+      "cardano-api-haskell",
+      "transaction-encoding"
+     ]
+    },
     {
      "via": "ouroboros-consensus",
      "kind": "own-bump",
@@ -970,6 +1007,15 @@
    "tool": "kupo",
    "boundary": true,
    "blockers": [
+    {
+     "via": "kupo",
+     "kind": "own-gap",
+     "surfaces": [
+      "era-identity",
+      "block-encoding",
+      "transaction-encoding"
+     ]
+    },
     {
      "via": "ouroboros-consensus",
      "kind": "own-bump",
@@ -1156,6 +1202,17 @@
    "tool": "ogmios",
    "boundary": true,
    "blockers": [
+    {
+     "via": "ogmios",
+     "kind": "own-gap",
+     "surfaces": [
+      "era-identity",
+      "block-encoding",
+      "transaction-encoding",
+      "protocol-parameters",
+      "plutus-language"
+     ]
+    },
     {
      "via": "ouroboros-consensus",
      "kind": "own-bump",

@@ -94,19 +94,23 @@ holds the 24 upgrade parameters, including the PlutusV4 cost model as an array.
 ## Boundary register (`boundary.json`)
 
 `boundary.json` records the 61 catalog components that implement a changed
-surface directly, observed at their default-branch heads on 2026-10-19, with a
-status for each surface group: `gap` (cited code cannot work against the
+surface directly, observed at their default-branch heads on 2026-10-19 (Koios,
+Blockfrost RYO, Ogmios, Kupo, db-sync and Kuber re-observed on 2026-10-20), with
+a status for each surface group: `gap` (cited code cannot work against the
 target), `no-evidence` (nothing found; never a pass), `tracked`, `in-progress`,
-`released` and `verified` (R4). A component counts as its worst status. Source
+`released` and `verified` (R4). `in-progress` needs visible work toward the
+target definitions (a branch, an open pull request or unreleased code); a
+release built only against superseded Dijkstra definitions, with no such work,
+is a `gap`. A component counts as its worst status. Source
 evidence is pinned like the change register; issue and pull-request evidence
 records URL, state and date.
 
 | Worst status | Components |
 | --- | --- |
-| gap | cardano-wallet, Adder, ouroboros-miniprotocols-ts (node-to-client); Hydra (stops at the fork); CSL (no PlutusV4); cardano-js-sdk and cardano-c (protocol parameters); Scalus (V4 evaluation) |
-| no-evidence | 37 components, including CML, cardano-client-lib, PyCardano, Oura, Dolos, Mithril, cncli, Koios, Blockfrost RYO, Aiken, OpShin, Helios, Plutarch, Mesh, Lucid Evolution and both hardware-wallet libraries |
+| gap | cardano-wallet, Adder, ouroboros-miniprotocols-ts (node-to-client); Hydra (stops at the fork); CSL (no PlutusV4); cardano-js-sdk and cardano-c (protocol parameters); Scalus (V4 evaluation); Ogmios, Kupo, db-sync and Kuber (released only against superseded definitions, no work toward 11.2); Koios and Blockfrost RYO (era tables end at protocol 11, Conway-only parameters) |
+| no-evidence | 35 components, including CML, cardano-client-lib, PyCardano, Oura, Dolos, Mithril, cncli, Aiken, OpShin, Helios, Plutarch, Mesh, Lucid Evolution and both hardware-wallet libraries |
 | tracked | Apollo |
-| in-progress | Pallas, Yaci, Amaru, Dingo, Ogmios, Kupo, db-sync, yaci-store, UTxO RPC, Blaze, Kuber, Yaci DevKit |
+| in-progress | Pallas, Yaci, Amaru, Dingo, yaci-store, UTxO RPC, Blaze, Yaci DevKit |
 | released | Gouroboros, Plutus, plutigo |
 
 What it shows:
@@ -287,12 +291,12 @@ downstream tools with unconfirmed links (for example Sundae SDK through Blaze,
 cardano-rosetta-java and cf-ledger-sync through yaci-store, GeniusYield SDK
 through Lucid Evolution).
 
-**14 tools are bump-ready**: every confirmed gap has a release with the
-support, so the tool only has to raise its pin: txtop, Bursa, cardano-node-api
-and the IBC incubator (gouroboros v0.213.0); Scrolls (Pallas v0.35.1 or
-v1.0.0); cf-ledger-sync (yaci v0.3.10 or v0.4.2); Marlowe, Marconi, sc-tools,
-Midgard and Atlas (cardano-api 11.8); and Ogmios, Kupo and Kuber, for which the
-bump is a port to the 11.2 component set (their R2 status stays in-progress).
+**11 tools are bump-ready**: every confirmed gap has a release with the
+support: txtop, Bursa, cardano-node-api and the IBC incubator (gouroboros
+v0.213.0); Scrolls (Pallas v0.35.1 or v1.0.0); cf-ledger-sync (yaci v0.3.10 or
+v0.4.2); Marlowe, Marconi, sc-tools, Midgard and Atlas (cardano-api 11.8).
+Ogmios, Kupo and Kuber left this list on 2026-10-20: their own R2 status is now
+a gap, so the port to the 11.2 component set is theirs to do.
 
 ```sh
 node --import tsx scripts/readiness/cli.ts unlocks                                # write unlocks.json and print the summary
