@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import DeferredComparison from "@/components/readiness/DeferredComparison";
 import Dashboard from "@/components/readiness/Dashboard";
@@ -16,7 +17,7 @@ export default function ReadinessPage() {
     <div className="mx-auto max-w-7xl space-y-8 px-4 py-7 sm:px-8">
       <div className="flex flex-wrap items-center justify-between gap-4"><div><p className="mb-2 text-xs uppercase tracking-widest text-muted">Cardano tooling · Evidence snapshot</p><h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">Dependency coverage</h1></div><Nav /></div>
       <p className="max-w-3xl text-muted">Trace the dependencies behind each tool, expose missing evidence, and find shared components to investigate first. Every tool stays in the inventory, even when its source or dependencies cannot yet be resolved.</p>
-      <div className="rounded-xl border border-status-progress/40 bg-status-progress/5 px-5 py-4"><p className="font-semibold">Hardfork readiness is not yet assessed.</p><p className="mt-1 text-sm text-muted">This view measures dependency evidence. Node 11.2 compatibility and transition tests come later. Unknown coverage is never a pass.</p></div>
+      <div className="rounded-xl border border-status-progress/40 bg-status-progress/5 px-5 py-4"><p className="font-semibold">This view measures dependency evidence, not hardfork compatibility.</p><p className="mt-1 text-sm text-muted">Which tools Dijkstra breaks and what each fix unlocks is on the <Link href="/map/dijkstra">Dijkstra readiness</Link> page. Node 11.2 devnet tests come later. Unknown coverage is never a pass.</p></div>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">{[
         [snapshot.tools.length, "Tools accounted for", "Full catalog denominator"],
         [snapshot.tools.filter((t) => t.lastSuccess).length, "Source revisions found", "Artifact mapping still needs review"],

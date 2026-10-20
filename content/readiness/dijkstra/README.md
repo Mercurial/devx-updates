@@ -300,6 +300,13 @@ node --import tsx scripts/readiness/cli.ts unlocks --component scalus,cardano-js
 ``` These are R2 propagation and are assessed with the
 components themselves.
 
+## On the site
+
+`/map/dijkstra` renders these registers at build time: what each fix unlocks,
+the bump-ready tools, every confirmed gap with its quoted lines, and the cited
+changes. Each tool page under `/map/readiness/<id>` has a Dijkstra section with
+its exposure, blockers and lead decisions. A malformed register fails the build.
+
 ## Checking it
 
 ```sh

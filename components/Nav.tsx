@@ -12,6 +12,7 @@ const LINKS: { href: string; label: string }[] = [
   { href: "/map/table", label: "Table" },
   { href: "/map/analysis", label: "Analysis" },
   { href: "/map/readiness", label: "Readiness" },
+  { href: "/map/dijkstra", label: "Dijkstra" },
 ];
 
 // Normalize the trailing slash that `trailingSlash: true` (static export) adds,
