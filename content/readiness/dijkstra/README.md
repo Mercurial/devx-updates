@@ -107,11 +107,20 @@ records URL, state and date.
 
 | Worst status | Components |
 | --- | --- |
-| gap | cardano-wallet, Adder, ouroboros-miniprotocols-ts (node-to-client); Hydra (stops at the fork); CSL (no PlutusV4); cardano-js-sdk and cardano-c (protocol parameters); Scalus (V4 evaluation); Ogmios, Kupo, db-sync and Kuber (released only against superseded definitions, no work toward 11.2); Koios and Blockfrost RYO (era tables end at protocol 11, Conway-only parameters) |
-| no-evidence | 35 components, including CML, cardano-client-lib, PyCardano, Oura, Dolos, Mithril, cncli, Aiken, OpShin, Helios, Plutarch, Mesh, Lucid Evolution and both hardware-wallet libraries |
+| gap | 47, including every ledger codec without Dijkstra work (CML, cardano-client-lib, PyCardano, cardano-data-lite, CardanoSharp, TyphonJS, cometa.js, elm-cardano, Evolution SDK, Mesh, Lucid Evolution, Whisky, buildooor, cquisitor-lib), both hardware-wallet libraries, every script compiler (Aiken, OpShin, Helios, Plutarch, JuLC, plu-ts, uplc-turbo), the Pallas- or Yaci-based indexers without Dijkstra decoding (Oura, Dolos, Mithril, Carp, Scrolls, cf-ledger-sync, Rosetta Java), Cardano GraphQL, Atlas, CTL, and the earlier gaps (cardano-wallet, Adder, ouroboros-miniprotocols-ts, Hydra, CSL, cardano-js-sdk, cardano-c, Scalus, Ogmios, Kupo, db-sync, Kuber, Koios, Blockfrost RYO) |
+| no-evidence | ouroboros-network-js (proposes one caller-chosen version), cncli (consensus participation) |
 | tracked | Apollo |
 | in-progress | Pallas, Yaci, Amaru, Dingo, yaci-store, UTxO RPC, Blaze, Yaci DevKit |
 | released | Gouroboros, Plutus, plutigo |
+
+The 35 components that had no evidence were re-observed at their heads on
+2026-10-20 and judged by what their code enumerates: transaction-body keys
+ending at 22 (Dijkstra adds 23–27 and redefines 14), parameter-update keys
+ending at 33 (Dijkstra adds 34–56), Plutus languages ending at V3, pool
+parameters without the BLS key, era tables ending at Conway, script contexts
+without V4's fields, and Pallas or Yaci versions that cannot decode Dijkstra
+blocks. Transaction rules stay `no-evidence` unless code specific to a rule
+change was found.
 
 What it shows:
 
