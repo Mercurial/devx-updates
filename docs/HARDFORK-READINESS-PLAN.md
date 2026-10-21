@@ -1,6 +1,6 @@
 # Dependency mapping and hardfork readiness
 
-Status: **revised 2026-10-19 — change-first assessment.** The dependency-graph pipeline (phases 1–5) is retained but no longer drives the work; see [Plan revision](#plan-revision-2026-10-19-change-first-assessment). The completed checkpoint through `933f819` was pushed to `origin/hardfork-readiness` at the owner's request. New work remains local until another push is requested.
+Status: **revised 2026-10-19 — change-first assessment; R4 started 2026-10-20.** The dependency-graph pipeline (phases 1–5) is retained but no longer drives the work; see [Plan revision](#plan-revision-2026-10-19-change-first-assessment). `origin/hardfork-readiness` ends at `6614088`; every commit after it (from `d03d9e2` on) is local only. See [Current state and handoff](#current-state-and-handoff-2026-10-21) before resuming.
 
 ## Implementation progress
 
@@ -13,10 +13,10 @@ This checklist records delivered behavior and verification, not just code starte
 - [x] Phase 4: static coverage, tool detail, impact, filters, and exports, verified in a browser.
 - [x] Phase 5: resumable refresh, snapshot comparisons, freshness reporting, and scheduled collection for registered profiles.
 - [ ] Phase 6: target-specific compatibility testing. Gated on the selected hardfork environment and change analysis.
-- [x] R1: Dijkstra change register and surface vocabulary — 19 changes and 2 checked-unchanged areas, 71 verified citations; JSON representations beyond the era commands remain a known limit.
-- [ ] R2: boundary-component register with per-component Dijkstra status — first observation delivered (61 components, 85 evidence items); weekly re-observation and API-provider entries remain.
-- [ ] R3: surface classification of all 269 catalog tools (direct boundary dependencies, service calls, era/format markers) — full scan delivered (227 scanned, 42 without public source) and every inherited gap decided from shipped code (21 tools outside the boundary and 16 boundary components confirmed); unlock report derived.
-- [ ] R4: devnet/testnet verification of boundary components, then representative consumers. First run 2026-10-20 (`devnet.json`).
+- [x] R1: Dijkstra change register and surface vocabulary — 19 changes and 2 checked-unchanged areas, 73 verified citations; `header-version-info` corrected by the devnet (the node still emits the ten-field header). JSON representations beyond the era commands remain a known limit.
+- [ ] R2: boundary-component register with per-component Dijkstra status — 61 components, 189 evidence items, all assessed (worst status: 48 gap, 2 no-evidence, 1 tracked, 8 in-progress, 2 released); weekly re-observation and hosted API-provider entries remain.
+- [ ] R3: surface classification of all 269 catalog tools — full scan (227 scanned, 42 without public source); every inherited gap decided from shipped code (493 lead entries, 1161 decisions, 102 tools with a confirmed gap, none unreviewed); unlock report, fix order and upgrade readings derived.
+- [ ] R4: devnet/testnet verification of boundary components, then representative consumers — first run 2026-10-20 (`devnet.json`: 7 checks, 28 results, 12 failing); service layer with Postgres, Haskell tools and CDDL-following codecs remain.
 - [ ] R5: fix propagation through direct reverse dependencies and maintainer outreach.
 
 ## Plan revision (2026-10-19): change-first assessment
@@ -373,7 +373,7 @@ of their own. Four tools have a released upstream fix.
 Next: R4 devnet checks for the service layer and the four tools with a released
 fix, and hosted-provider entries in R2 to replace the RYO proxy.
 
-#### Checkpoint 2026-10-20: first devnet run (R4)
+### R4 checkpoint (2026-10-20): first devnet run
 
 The integration node `34ae34db` ran a local one-pool devnet: Dijkstra at epoch
 2, then protocol version 12 through two governance hard forks. Seven checks
@@ -401,6 +401,66 @@ unlocks 74 tools across 16 upstream fixes; 2 tools are bump-ready.
 Next: db-sync with Postgres, Blockfrost and Koios on a machine with more disk;
 the Haskell bump-ready tools; and devnet runs of the codecs whose block support
 follows the CDDL header (Pallas main, CML, cardano-js-sdk).
+
+### Current state and handoff (2026-10-21)
+
+The session moves to a machine with more disk. Everything needed is in the
+repository except what is listed under "Not carried over".
+
+**Before resuming:** push `hardfork-readiness` from the old machine. Every
+commit from `d03d9e2` on, including this handoff, sits on top of
+`origin/hardfork-readiness` at `6614088` and exists only locally; without the
+push the new machine starts from the pre-R1 state. `AGENTS.md` has an uncommitted change written by `next dev`
+(its Next.js agent-rules block); keep or drop it.
+
+**Where things stand**
+
+| Register | File | State |
+| --- | --- | --- |
+| R1 changes | `content/readiness/dijkstra/changes.json` | 19 changes, 73 citations, all re-verified |
+| R2 boundary | `boundary.json` | 61 components; gouroboros, Ogmios and Kupo `verified` for V23 only |
+| R3 classification | `classification.json` | 269 tools, reclassified after the devnet |
+| R3 leads | `leads.json` | 1161 decisions, 0 unreviewed, 0 stale |
+| Unlocks | `unlocks.json` | fix order: 16 upstream fixes unlock 74 tools; bump-ready: Marlowe, Marconi |
+| Upgrades | `upgrades.json` | 11 readings (8 own-work, 1 prepared, 2 generic) |
+| R4 devnet | `devnet.json` | 7 checks, 28 results, 12 failing |
+
+All of these pass `check-changes`, `check-boundary`, `check-leads` and
+`check-upgrades` with `--verify-sources`, and `check-devnet`; 148 readiness
+tests pass; `/map/dijkstra` and tool pages were checked in a browser.
+
+**Next, in order**
+
+1. Re-run the recipe on the new machine to confirm it reproduces
+   (`scripts/readiness/devnet/README.md`, steps 1–8; ~2.5 GB). The node
+   artifact is IOG Hydra build 15172667 for `34ae34db`; if 11.2 is tagged by
+   then, compare its revision with `changes.json`'s `target` first.
+2. Service layer (needs ~10 GB more): cardano-db-sync with Postgres against the
+   devnet, then Blockfrost RYO and Koios on top of it. Ogmios v7.0.0 and Kupo
+   v2.12 already fail at the first Dijkstra block; record each as a check in
+   `devnet.json` and cite it from `boundary.json` (kind `devnet`).
+3. Codecs that follow the CDDL header: Pallas main (and cncli, Oura, Dolos
+   through it), CML, cardano-js-sdk. gouroboros shows that following the CDDL
+   header breaks against the node, so each needs a decode run of the node's
+   first Dijkstra block (`probe first-blocks` writes it as hex).
+4. The two bump-ready Haskell tools, Marlowe and Marconi, built against
+   cardano-api 11.8.0.0.
+5. Remaining R2 work: hosted API providers (owner), weekly re-observation.
+6. R5 outreach is the owner's alone: prepare material, never contact
+   maintainers or open issues.
+
+**Not carried over**
+
+- The devnet chain, downloaded binaries and Go caches (session temp
+  directory); `start.sh` recreates a devnet from scratch.
+- The scratch scripts that generated `leads.json` and the earlier R2 batches.
+  The registers are the source of truth: edit them directly, then run
+  `classify-surfaces --reclassify`, `unlocks` and the `check-*` commands
+  (see `docs/READINESS-OPERATIONS.md`). Lead decision rules are recorded in
+  `leads.json`'s `method`, boundary rules in `boundary.json`'s `method`.
+- Readiness clones under `.readiness/` (649 MB, git-ignored): reclassification
+  reuses its scan cache, so a fresh machine re-fetches each tool at its
+  recorded revision on the first `classify-surfaces --reclassify`.
 
 ### Implementation log
 
